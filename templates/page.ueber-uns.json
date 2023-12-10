@@ -298,7 +298,7 @@
         "background_image": "shopify:\/\/shop_images\/neu.jpg",
         "content": "<h2><strong>Kostenfreie Ernährungsberatung: <br\/>Weil jeder Hund einzigartig ist<br\/><\/strong><\/h2><p>Beginne die Reise zu einer besseren Ernährung für deinen Hund mit unserem Online-Fragebogen und erhalte persönliche Menü-Vorschläge. Brauchst du zusätzliche Unterstützung? Wir stehen dir mit einer kostenlosen Ernährungsberatung zur Seite.<\/p>",
         "button_text": "Kostenlose Ernährungsberatung",
-        "button_link": "shopify:\/\/pages\/questionaire",
+        "button_link": "shopify:\/\/pages\/beratung",
         "button2_text": "",
         "button2_link": "",
         "newsletter": "false",
