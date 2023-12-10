@@ -273,7 +273,7 @@
       "caption": "Artikel im Warenkorb",
       "remove_title": "{{ title }} entfernen",
       "note": "Spezielle Bestellanweisungen",
-      "checkout": "Auschecken",
+      "checkout": "Zur Kasse",
       "empty": "Dein Warenkorb ist leer",
       "cart_error": "Beim Aktualisieren deines Warenkorbs ist ein Fehler aufgetreten. Bitte versuche es erneut.",
       "cart_quantity_error_html": "Du kannst deinem Warenkorb nur {{ quantity }} Stück dieses Artikels hinzufügen.",
@@ -506,6 +506,13 @@
       "send_on_label": "Senden am (optional)",
       "expanded": "Formular für den Empfänger des Geschenkgutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Geschenkgutscheins minimiert"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "review": {
+        "checkout_as_guest": "Als Gast zur Kasse"
+      }
     }
   }
 }
