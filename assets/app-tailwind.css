@@ -931,3 +931,8 @@ ul {
 .custom-number-input {
   touch-action: manipulation;
 }
+
+.footer-block__newsletter .footer-block__heading {
+  max-width: 360px;
+  margin-top: 2rem;
+}
