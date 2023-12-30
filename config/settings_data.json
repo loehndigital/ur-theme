@@ -166,6 +166,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "4677439793077996495": {
+        "type": "shopify:\/\/apps\/pixee-multi-facebook-pixels\/blocks\/facebook-pixel\/61bbb1d9-d4be-4d08-879a-ee3ccb59f558",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
