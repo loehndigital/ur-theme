@@ -370,18 +370,18 @@
         "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "Unser Anspruch",
         "heading_alignment": "left",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
