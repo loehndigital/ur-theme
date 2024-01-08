@@ -14,7 +14,8 @@
         "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/comp_x_mobil_10806f6c-c0bb-4352-8bef-ff6ebaea1ce2.jpg",
+            "hero_image": "shopify:\/\/shop_images\/comp1_wide.jpg",
+            "hero_image_mobile": "shopify:\/\/shop_images\/comp_x_mobil_10806f6c-c0bb-4352-8bef-ff6ebaea1ce2.jpg",
             "hero_text": "<h1>Entdecke unser Probierpaket<\/h1><p>Uncle Rusty's verpflichtet sich, natürliche und artgerechte Nahrung zu bieten, die im Einklang mit den Bedürfnissen deines Vierbeiners steht. <br\/><\/p>",
             "button_link": "shopify:\/\/products\/tasterpack",
             "button_label": "Jetzt testen",
