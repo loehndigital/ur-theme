@@ -386,6 +386,110 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "7418837f-c8e2-459d-bd86-d6dcdfe74136": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Gesteigerte Lebensfreude<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Robustes Immunsystem<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Kräftiges, glänzendes Fell<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "46f1010a-5b97-432d-9077-edb5aaaebac2": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Optimierte Gewichtskontrolle<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "dbd18ef9-5398-4b72-b391-be90e9cd172f": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Starke Knochen & Gelenke<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1ac3fa73-7fb1-4ef6-af4e-94aa72915f86": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Ausgeglichene Verdauung<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "4bfe00da-4784-41fd-a074-5780f2988607": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Höhere Energielevel<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "fa86329f-dbb6-4883-8fe6-b2d9b51ce443": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Verbesserte Allergietoleranz<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-1",
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-2",
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-3",
+        "46f1010a-5b97-432d-9077-edb5aaaebac2",
+        "dbd18ef9-5398-4b72-b391-be90e9cd172f",
+        "1ac3fa73-7fb1-4ef6-af4e-94aa72915f86",
+        "4bfe00da-4784-41fd-a074-5780f2988607",
+        "fa86329f-dbb6-4883-8fe6-b2d9b51ce443"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_alignment": "left",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -398,6 +502,7 @@
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
-    "804ea04b-e049-407f-9122-ee5bfe84f669"
+    "804ea04b-e049-407f-9122-ee5bfe84f669",
+    "7418837f-c8e2-459d-bd86-d6dcdfe74136"
   ]
 }
