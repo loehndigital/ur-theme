@@ -474,21 +474,21 @@
         "fa86329f-dbb6-4883-8fe6-b2d9b51ce443"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "Für deinen Hund bedeutet das",
         "heading_alignment": "left",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "none",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
+        "color_scheme": "accent-2",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     }
   },
