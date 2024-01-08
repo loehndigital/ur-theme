@@ -648,6 +648,42 @@
         "theme_mode": "light",
         "desktop_blur": "no-desktop-blur"
       }
+    },
+    "cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18581235859720__cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Unsere Menü-Highlights<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18581235859720__cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jedes Menü ist ein kulinarisches Erlebnis. Handverlesen, natürlich und voller Geschmack. Ob saftiges Rind, zartes Geflügel oder delikater Fisch - für jeden Hund ist etwas dabei. Entdecke jetzt die Vielfalt und gönne deinem Vierbeiner ein Menü, das er lieben wird. Warum warten? Mit nur wenigen Klicks kannst du deinem Hund eine kulinarische Reise direkt nach Hause liefern lassen.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18581235859720__cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5-heading-1",
+        "template--18581235859720__cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 52
+      }
+    },
+    "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
+      "type": "product-swiper",
+      "settings": {
+        "collection": "nassfutter"
+      }
     }
   },
   "order": [
@@ -664,6 +700,8 @@
     "581b83b4-cfcd-4b75-9e66-afcc7d1cfdd6",
     "f1f9bde8-3512-40ee-9fee-69c992b5013e",
     "17047516426d6978c6",
-    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1"
+    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
+    "cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5",
+    "b4180a2c-12e5-4022-93c8-ecbf5b428225"
   ]
 }
