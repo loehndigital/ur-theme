@@ -634,6 +634,20 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
+        "content": "<h1><strong>Jede Mahlzeit zählt: <br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen: <\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch.  Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
+        "button_text": "Mix & Match: Dein Menü",
+        "button_link": "shopify:\/\/pages\/build-a-box",
+        "button2_text": "Ernährungsberatung",
+        "button2_link": "shopify:\/\/pages\/beratung",
+        "newsletter": "false",
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
+      }
     }
   },
   "order": [
@@ -649,6 +663,7 @@
     "97650884-33fc-4e7c-869d-8f9067569932",
     "581b83b4-cfcd-4b75-9e66-afcc7d1cfdd6",
     "f1f9bde8-3512-40ee-9fee-69c992b5013e",
-    "17047516426d6978c6"
+    "17047516426d6978c6",
+    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1"
   ]
 }
