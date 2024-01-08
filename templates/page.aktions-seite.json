@@ -670,6 +670,7 @@
         "template--18581235859720__cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5-heading-1",
         "template--18581235859720__cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5-text-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -681,8 +682,83 @@
     },
     "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
       "type": "product-swiper",
+      "disabled": true,
       "settings": {
         "collection": "nassfutter"
+      }
+    },
+    "a8d90776-1601-4b6e-a71b-5b4e37148a70": {
+      "type": "icon-row",
+      "blocks": {
+        "84866179-e9d4-4ec5-a690-f4fd41aa4c0e": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "9a15e84e-d6c8-4db0-8561-44a53dc20311": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-cooking",
+            "icon_rich_text": "<h3>Nährstoffschonend<br\/>Slow-Cooked<\/h3><h3><\/h3>"
+          }
+        },
+        "a42072a9-f8f7-4fe3-9802-fa9be0a428e5": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        },
+        "e90d7298-f09a-4ab6-8722-7a351141440d": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-fruit-bag",
+            "icon_rich_text": "<h3>Natürliche <br\/>Vitamine<\/h3>"
+          }
+        },
+        "62c72e7f-8499-4fb8-81d5-1e9b6a669297": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "55aa4584-6fce-425b-82ad-f8b44e9dd1d7": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "c2ad6e8d-5e53-47f4-ada7-06d65a90e02c": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "0b53a0f0-37b0-4bf3-8fbd-6fb32275a275": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "84866179-e9d4-4ec5-a690-f4fd41aa4c0e",
+        "9a15e84e-d6c8-4db0-8561-44a53dc20311",
+        "a42072a9-f8f7-4fe3-9802-fa9be0a428e5",
+        "e90d7298-f09a-4ab6-8722-7a351141440d",
+        "62c72e7f-8499-4fb8-81d5-1e9b6a669297",
+        "55aa4584-6fce-425b-82ad-f8b44e9dd1d7",
+        "c2ad6e8d-5e53-47f4-ada7-06d65a90e02c",
+        "0b53a0f0-37b0-4bf3-8fbd-6fb32275a275"
+      ],
+      "settings": {
+        "color_scheme": "background-2"
       }
     }
   },
@@ -702,6 +778,7 @@
     "17047516426d6978c6",
     "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5",
-    "b4180a2c-12e5-4022-93c8-ecbf5b428225"
+    "b4180a2c-12e5-4022-93c8-ecbf5b428225",
+    "a8d90776-1601-4b6e-a71b-5b4e37148a70"
   ]
 }
