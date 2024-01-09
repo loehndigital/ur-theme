@@ -744,6 +744,7 @@
         "template--18581235859720__cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5-heading-1",
         "template--18581235859720__cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5-text-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -755,6 +756,7 @@
     },
     "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
       "type": "product-swiper",
+      "disabled": true,
       "settings": {
         "collection": "nassfutter"
       }
