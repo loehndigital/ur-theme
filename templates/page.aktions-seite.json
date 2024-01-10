@@ -30,6 +30,130 @@
       "settings": {
       }
     },
+    "768a63b1-59d6-41f1-abe2-598806ac7d91": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unser Ernährungsversprechen ",
+            "heading_size": "h1"
+          }
+        },
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei Uncle Rusty's engagieren wir uns leidenschaftlich für die Bereitstellung einer natürlichen und artgerechten Ernährung, die speziell auf die Bedürfnisse deines geliebten Vierbeiners abgestimmt ist. Unser Ansatz zielt darauf ab, das Wohlbefinden und die Vitalität deines Hundes durch sorgfältig ausgewählte, nährstoffreiche Zutaten zu fördern.<\/p>"
+          }
+        },
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-heading-1",
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1",
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "804ea04b-e049-407f-9122-ee5bfe84f669": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Natürliche Kraftquelle",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "Nährstoffe bewahrt",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "Klarheit in jeder Dose",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0": {
+          "type": "column",
+          "settings": {
+            "title": "Herzlich aus Bayern",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-1",
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-2",
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-3",
+        "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0"
+      ],
+      "settings": {
+        "title": "Unser Anspruch",
+        "heading_alignment": "left",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17047516426d6978c6": {
+      "type": "apps",
+      "blocks": {
+        "08fb2e83-0d33-408c-9f90-e82ac1695e35": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "08fb2e83-0d33-408c-9f90-e82ac1695e35"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "46b98696-f663-4732-816d-9b2021134506": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -106,6 +230,20 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 64
+      }
+    },
+    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
+        "content": "<h1><strong>Jede Mahlzeit zählt: <br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen: <\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch.  Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
+        "button_text": "Mix & Match: Dein Menü",
+        "button_link": "shopify:\/\/pages\/build-a-box",
+        "button2_text": "Ernährungsberatung",
+        "button2_link": "shopify:\/\/pages\/beratung",
+        "newsletter": "false",
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8": {
@@ -191,49 +329,6 @@
         "padding_bottom": 36
       }
     },
-    "768a63b1-59d6-41f1-abe2-598806ac7d91": {
-      "type": "rich-text",
-      "blocks": {
-        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Unser Ernährungsversprechen ",
-            "heading_size": "h1"
-          }
-        },
-        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Bei Uncle Rusty's engagieren wir uns leidenschaftlich für die Bereitstellung einer natürlichen und artgerechten Ernährung, die speziell auf die Bedürfnisse deines geliebten Vierbeiners abgestimmt ist. Unser Ansatz zielt darauf ab, das Wohlbefinden und die Vitalität deines Hundes durch sorgfältig ausgewählte, nährstoffreiche Zutaten zu fördern.<\/p>"
-          }
-        },
-        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-heading-1",
-        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1",
-        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
       "type": "full-width-banner",
       "settings": {
@@ -246,70 +341,6 @@
         "newsletter": "true",
         "theme_mode": "dark",
         "desktop_blur": "no-desktop-blur"
-      }
-    },
-    "804ea04b-e049-407f-9122-ee5bfe84f669": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Natürliche Kraftquelle",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "Nährstoffe bewahrt",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-3": {
-          "type": "column",
-          "settings": {
-            "title": "Klarheit in jeder Dose",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0": {
-          "type": "column",
-          "settings": {
-            "title": "Herzlich aus Bayern",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-1",
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-2",
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-3",
-        "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0"
-      ],
-      "settings": {
-        "title": "Unser Anspruch",
-        "heading_alignment": "left",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "7418837f-c8e2-459d-bd86-d6dcdfe74136": {
@@ -618,37 +649,6 @@
         "padding_bottom": 36
       }
     },
-    "17047516426d6978c6": {
-      "type": "apps",
-      "blocks": {
-        "08fb2e83-0d33-408c-9f90-e82ac1695e35": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "08fb2e83-0d33-408c-9f90-e82ac1695e35"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt: <br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen: <\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch.  Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
-        "button_text": "Mix & Match: Dein Menü",
-        "button_link": "shopify:\/\/pages\/build-a-box",
-        "button2_text": "Ernährungsberatung",
-        "button2_link": "shopify:\/\/pages\/beratung",
-        "newsletter": "false",
-        "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
-      }
-    },
     "a8d90776-1601-4b6e-a71b-5b4e37148a70": {
       "type": "icon-row",
       "blocks": {
@@ -723,6 +723,13 @@
         "color_scheme": "background-2"
       }
     },
+    "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
+      "type": "product-swiper",
+      "disabled": true,
+      "settings": {
+        "collection": "nassfutter"
+      }
+    },
     "cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5": {
       "type": "rich-text",
       "blocks": {
@@ -753,32 +760,25 @@
         "padding_top": 64,
         "padding_bottom": 52
       }
-    },
-    "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
-      "type": "product-swiper",
-      "disabled": true,
-      "settings": {
-        "collection": "nassfutter"
-      }
     }
   },
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
+    "768a63b1-59d6-41f1-abe2-598806ac7d91",
+    "804ea04b-e049-407f-9122-ee5bfe84f669",
+    "17047516426d6978c6",
     "46b98696-f663-4732-816d-9b2021134506",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
+    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
-    "768a63b1-59d6-41f1-abe2-598806ac7d91",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
-    "804ea04b-e049-407f-9122-ee5bfe84f669",
     "7418837f-c8e2-459d-bd86-d6dcdfe74136",
     "97650884-33fc-4e7c-869d-8f9067569932",
     "581b83b4-cfcd-4b75-9e66-afcc7d1cfdd6",
     "f1f9bde8-3512-40ee-9fee-69c992b5013e",
-    "17047516426d6978c6",
-    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "a8d90776-1601-4b6e-a71b-5b4e37148a70",
-    "cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5",
-    "b4180a2c-12e5-4022-93c8-ecbf5b428225"
+    "b4180a2c-12e5-4022-93c8-ecbf5b428225",
+    "cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5"
   ]
 }
