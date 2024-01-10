@@ -1079,6 +1079,15 @@
             "richtext": "<p>Wir setzen auf einen hohen Fleischanteil in unseren Menüs, jedoch ist uns ein ausgewogenes Verhältnis von Fleisch zu Kohlenhydraten wichtig. Im Verhältnis von 3:1 ermöglicht dies eine ausgewogene Ernährung, die deinem Hund die nötigen Proteine für eine starke Muskulatur liefert, während die Kohlenhydrate die benötigte Energie für den Tag bereitstellen. So stellen wir sicher, dass dein Hund nicht nur satt, sondern auch gut genährt und energiegeladen ist. <\/p>"
           }
         },
+        "icon_text_qz4Gqy": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-certificate",
+            "icon_text": "Unser Ernährungsversprechen",
+            "show_accordion": true,
+            "richtext": "<p>Bei Uncle Rusty's engagieren wir uns leidenschaftlich für die Bereitstellung einer natürlichen und artgerechten Ernährung, die speziell auf die Bedürfnisse deines geliebten Vierbeiners abgestimmt ist. Unser Ansatz zielt darauf ab, das Wohlbefinden und die Vitalität deines Hundes durch sorgfältig ausgewählte, nährstoffreiche Zutaten zu fördern.<\/p>"
+          }
+        },
         "button_nC4Dzq": {
           "type": "button",
           "settings": {
@@ -1093,6 +1102,7 @@
         "text_9m3cci",
         "icon_text_CkjrNW",
         "icon_text_xcGJaM",
+        "icon_text_qz4Gqy",
         "button_nC4Dzq"
       ],
       "settings": {
