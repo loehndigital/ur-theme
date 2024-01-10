@@ -1061,6 +1061,73 @@
         "padding_top": 36,
         "padding_bottom": 56
       }
+    },
+    "ur_image_with_text_NCwxDW": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "heading_b3EDcy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Geschichte",
+            "heading_size": "h1"
+          }
+        },
+        "text_9m3cci": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir sind ein familiäres, ambitioniertes Unternehmen aus dem malerischen Süden Bayerns, das sich der Bereitstellung von Premium-Hundefutter verschrieben hat. Wir bieten deinem vierbeinigen Freund nur das Beste, denn Uncle Rusty's ist nicht nur eine Marke, sondern eine Herzensangelegenheit.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_CkjrNW": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-dog",
+            "icon_text": "Unsere Reise beginnt...",
+            "show_accordion": true,
+            "richtext": "<p>Alles begann mit Rusty, unserem geliebten Familienhund, der lange Zeit mit ernährungsbedingten Problemen zu kämpfen hatte. Nachdem wir auf unserer Suche nach dem perfekten Futter oft enttäuscht wurden, begann unsere Reise in die Welt der Hundeernährung. Was als persönliche Mission begann, entwickelte sich rasch zu einer größeren Vision: Ein Futter zu schaffen, das nicht nur schmackhaft, sondern auch nährstoffreich und gesund für unseren vierbeinigen Freund ist.<\/p>"
+          }
+        },
+        "icon_text_xcGJaM": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Die richtige Balance...",
+            "show_accordion": true,
+            "richtext": "<p>Wir setzen auf einen hohen Fleischanteil in unseren Menüs, jedoch ist uns ein ausgewogenes Verhältnis von Fleisch zu Kohlenhydraten wichtig. Im Verhältnis von 3:1 ermöglicht dies eine ausgewogene Ernährung, die deinem Hund die nötigen Proteine für eine starke Muskulatur liefert, während die Kohlenhydrate die benötigte Energie für den Tag bereitstellen. So stellen wir sicher, dass dein Hund nicht nur satt, sondern auch gut genährt und energiegeladen ist. <\/p>"
+          }
+        },
+        "button_nC4Dzq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Paket zusammenstellen",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_b3EDcy",
+        "text_9m3cci",
+        "icon_text_CkjrNW",
+        "icon_text_xcGJaM",
+        "button_nC4Dzq"
+      ],
+      "settings": {
+        "height": "adapt",
+        "image_crop": "crop",
+        "rounded_corners": "rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -1081,6 +1148,7 @@
     "multicolumn_eC8zGB",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
-    "related-products"
+    "related-products",
+    "ur_image_with_text_NCwxDW"
   ]
 }
