@@ -719,6 +719,70 @@
         "padding_bottom": 36
       }
     },
+    "multicolumn_p4aU8N": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_U4JidP": {
+          "type": "column",
+          "settings": {
+            "title": "Natürliche Kraftquelle",
+            "text": "<p>Unsere Menüs schöpfen aus der vollen Kraft der Natur. Vitamine in ihrer reinsten Form stärken die Vitalität und das Wohlbefinden deines Hundes. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mwALRX": {
+          "type": "column",
+          "settings": {
+            "title": "Geschmack & Nährstoffe bewahrt",
+            "text": "<p>Durch unser Slow-Cooked Verfahren bleibt der authentische Geschmack erhalten und die essenziellen Vitamine und Mineralstoffe werden geschützt.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LpbnFN": {
+          "type": "column",
+          "settings": {
+            "title": "Klarheit in jeder Dose",
+            "text": "<p>Bei Uncle Rusty's gibt es keine Geheimnisse. Reine, regionale Zutaten ohne versteckte Füllstoffe oder künstliche Zusätze. Einfach ehrliches Hundefutter.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_F8E6Gb": {
+          "type": "column",
+          "settings": {
+            "title": "Herzlich aus Bayern",
+            "text": "<p>Unsere Wurzeln liegen in Bayern, wo wir mit Leidenschaft und Hingabe für deinen Hund kochen. Ein Versprechen von unserer Familie an deinen treuen Begleiter.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_U4JidP",
+        "column_mwALRX",
+        "column_LpbnFN",
+        "column_F8E6Gb"
+      ],
+      "settings": {
+        "title": "Unser Anspruch",
+        "heading_alignment": "left",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -731,6 +795,148 @@
         "newsletter": "false",
         "theme_mode": "light",
         "desktop_blur": "no-desktop-blur"
+      }
+    },
+    "ur_image_with_text_ty9xfT": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "heading_nL8MyB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Philosophie",
+            "heading_size": "h1"
+          }
+        },
+        "text_tWy6YE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir glauben, dass wahre Qualität in den Details liegt. Vom sorgfältigen Auswählen der Zutaten bis zur finalen Zubereitung, bei uns steht Authentizität im Vordergrund. Wir sind stolz darauf, ein Futter zu bieten, das frei von Kompromissen und voller Leidenschaft ist.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_eVKJye": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-success",
+            "icon_text": "Perfekte Grundbasis",
+            "show_accordion": true,
+            "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. <\/p>"
+          }
+        },
+        "icon_text_zrXpi9": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-search",
+            "icon_text": "Flexibel & beratend",
+            "show_accordion": true,
+            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. <\/p>"
+          }
+        },
+        "icon_text_BPxMqH": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-region-color",
+            "icon_text": "Natur pur aus der Region",
+            "show_accordion": true,
+            "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. <\/p>"
+          }
+        },
+        "icon_text_FrpjxY": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Maximale Nährstoffeffizienz",
+            "show_accordion": true,
+            "richtext": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann. <\/p>"
+          }
+        },
+        "button_zLPNp4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Paket zusammenstellen",
+            "button_link": "shopify:\/\/pages\/build-a-box",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nL8MyB",
+        "text_tWy6YE",
+        "icon_text_eVKJye",
+        "icon_text_zrXpi9",
+        "icon_text_BPxMqH",
+        "icon_text_FrpjxY",
+        "button_zLPNp4"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/neu.jpg",
+        "height": "adapt",
+        "image_crop": "crop",
+        "rounded_corners": "rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_eC8zGB": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DjLV7B": {
+          "type": "column",
+          "settings": {
+            "title": "Effiziente Verdauung",
+            "text": "<p>Unsere sorgfältig ausgewählten Premium-Zutaten garantieren eine optimale Nährstoffaufnahme. Durch den Einsatz rein natürlicher Inhaltsstoffe fördern wir eine robuste Darmflora, was wiederum Verdauungsprobleme und Blähungen signifikant reduziert.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jNCmnA": {
+          "type": "column",
+          "settings": {
+            "title": "Vitalität & Wohlbefinden",
+            "text": "<p>Unsere Nahrung bietet eine ausgewogene Mischung essentieller Nährstoffe, die das Immunsystem stärken. Sie unterstützt nicht nur Knochen und Gelenke, sondern auch die Herzfunktion, was zu einer gesteigerten körperlichen Fitness und geistigen Aktivität führt.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JNhaMD": {
+          "type": "column",
+          "settings": {
+            "title": "Langfristige Gesundheit",
+            "text": "<p>Mit unseren Menüs investierst du in die Zukunft deines Hundes. Unsere Nahrung ist darauf ausgerichtet, Krankheiten proaktiv entgegenzuwirken. Die Kombination aus hochwertigen Zutaten und dem Verzicht auf schädliche Zusätze sorgt für ein nachhaltiges Wohlbefinden deines Vierbeiners.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_DjLV7B",
+        "column_jNCmnA",
+        "column_JNhaMD"
+      ],
+      "settings": {
+        "title": "Für deinen Hund bedeutet das",
+        "heading_alignment": "center",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
@@ -855,212 +1061,6 @@
         "padding_top": 36,
         "padding_bottom": 56
       }
-    },
-    "multicolumn_p4aU8N": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_U4JidP": {
-          "type": "column",
-          "settings": {
-            "title": "Natürliche Kraftquelle",
-            "text": "<p>Unsere Menüs schöpfen aus der vollen Kraft der Natur. Vitamine in ihrer reinsten Form stärken die Vitalität und das Wohlbefinden deines Hundes. <\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_mwALRX": {
-          "type": "column",
-          "settings": {
-            "title": "Geschmack & Nährstoffe bewahrt",
-            "text": "<p>Durch unser Slow-Cooked Verfahren bleibt der authentische Geschmack erhalten und die essenziellen Vitamine und Mineralstoffe werden geschützt.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_LpbnFN": {
-          "type": "column",
-          "settings": {
-            "title": "Klarheit in jeder Dose",
-            "text": "<p>Bei Uncle Rusty's gibt es keine Geheimnisse. Reine, regionale Zutaten ohne versteckte Füllstoffe oder künstliche Zusätze. Einfach ehrliches Hundefutter.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_F8E6Gb": {
-          "type": "column",
-          "settings": {
-            "title": "Herzlich aus Bayern",
-            "text": "<p>Unsere Wurzeln liegen in Bayern, wo wir mit Leidenschaft und Hingabe für deinen Hund kochen. Ein Versprechen von unserer Familie an deinen treuen Begleiter.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_U4JidP",
-        "column_mwALRX",
-        "column_LpbnFN",
-        "column_F8E6Gb"
-      ],
-      "settings": {
-        "title": "Unser Anspruch",
-        "heading_alignment": "left",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "ur_image_with_text_ty9xfT": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "heading_nL8MyB": {
-          "type": "heading",
-          "settings": {
-            "heading": "Unsere Philosophie",
-            "heading_size": "h1"
-          }
-        },
-        "text_tWy6YE": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wir glauben, dass wahre Qualität in den Details liegt. Vom sorgfältigen Auswählen der Zutaten bis zur finalen Zubereitung, bei uns steht Authentizität im Vordergrund. Wir sind stolz darauf, ein Futter zu bieten, das frei von Kompromissen und voller Leidenschaft ist.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "icon_text_eVKJye": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-success",
-            "icon_text": "Perfekte Grundbasis",
-            "show_accordion": true,
-            "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. <\/p>"
-          }
-        },
-        "icon_text_zrXpi9": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-search",
-            "icon_text": "Flexibel & beratend",
-            "show_accordion": true,
-            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. <\/p>"
-          }
-        },
-        "icon_text_BPxMqH": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-region-color",
-            "icon_text": "Natur pur aus der Region",
-            "show_accordion": true,
-            "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. <\/p>"
-          }
-        },
-        "icon_text_FrpjxY": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Maximale Nährstoffeffizienz",
-            "show_accordion": true,
-            "richtext": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann. <\/p>"
-          }
-        },
-        "button_zLPNp4": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_nL8MyB",
-        "text_tWy6YE",
-        "icon_text_eVKJye",
-        "icon_text_zrXpi9",
-        "icon_text_BPxMqH",
-        "icon_text_FrpjxY",
-        "button_zLPNp4"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/neu.jpg",
-        "height": "adapt",
-        "image_crop": "crop",
-        "rounded_corners": "rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_eC8zGB": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_DjLV7B": {
-          "type": "column",
-          "settings": {
-            "title": "Effiziente Verdauung",
-            "text": "<p>Unsere sorgfältig ausgewählten Premium-Zutaten garantieren eine optimale Nährstoffaufnahme. Durch den Einsatz rein natürlicher Inhaltsstoffe fördern wir eine robuste Darmflora, was wiederum Verdauungsprobleme und Blähungen signifikant reduziert.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_jNCmnA": {
-          "type": "column",
-          "settings": {
-            "title": "Vitalität & Wohlbefinden",
-            "text": "<p>Unsere Nahrung bietet eine ausgewogene Mischung essentieller Nährstoffe, die das Immunsystem stärken. Sie unterstützt nicht nur Knochen und Gelenke, sondern auch die Herzfunktion, was zu einer gesteigerten körperlichen Fitness und geistigen Aktivität führt.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_JNhaMD": {
-          "type": "column",
-          "settings": {
-            "title": "Langfristige Gesundheit",
-            "text": "<p>Mit unseren Menüs investierst du in die Zukunft deines Hundes. Unsere Nahrung ist darauf ausgerichtet, Krankheiten proaktiv entgegenzuwirken. Die Kombination aus hochwertigen Zutaten und dem Verzicht auf schädliche Zusätze sorgt für ein nachhaltiges Wohlbefinden deines Vierbeiners.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_DjLV7B",
-        "column_jNCmnA",
-        "column_JNhaMD"
-      ],
-      "settings": {
-        "title": "Für deinen Hund bedeutet das",
-        "heading_alignment": "center",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -1075,12 +1075,12 @@
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "4a230144-e97f-4d58-b606-160f3c791e36",
     "c0a79c54-7298-4646-b08d-529fe4870d25",
+    "multicolumn_p4aU8N",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
+    "ur_image_with_text_ty9xfT",
+    "multicolumn_eC8zGB",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
-    "related-products",
-    "multicolumn_p4aU8N",
-    "ur_image_with_text_ty9xfT",
-    "multicolumn_eC8zGB"
+    "related-products"
   ]
 }
