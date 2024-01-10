@@ -933,26 +933,26 @@
         "text_tWy6YE": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Wir glauben, dass wahre Qualität in den Details liegt. Vom sorgfältigen Auswählen der Zutaten bis zur finalen Zubereitung, bei uns steht Authentizität im Vordergrund. Wir sind stolz darauf, ein Futter zu bieten, das frei von Kompromissen und voller Leidenschaft ist.<\/p>",
             "text_style": "body"
           }
         },
         "icon_text_eVKJye": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-3d-model",
-            "icon_text": "Enter your text here",
-            "show_accordion": false,
-            "richtext": "<p>Test Details Accordion <\/p>"
+            "icon_selection": "icon-success",
+            "icon_text": "Perfekte Grundbasis",
+            "show_accordion": true,
+            "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. <\/p>"
           }
         },
         "icon_text_zrXpi9": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-3d-model",
-            "icon_text": "Enter your text here",
-            "show_accordion": false,
-            "richtext": "<p>Test Details Accordion <\/p>"
+            "icon_selection": "icon-search",
+            "icon_text": "Flexibel & beratend",
+            "show_accordion": true,
+            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. <\/p>"
           }
         },
         "icon_text_BPxMqH": {
@@ -996,7 +996,7 @@
         "height": "adapt",
         "image_crop": "crop",
         "rounded_corners": "rounded",
-        "desktop_image_width": "large",
+        "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
