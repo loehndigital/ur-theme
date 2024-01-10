@@ -855,6 +855,70 @@
         "padding_top": 36,
         "padding_bottom": 56
       }
+    },
+    "multicolumn_p4aU8N": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_U4JidP": {
+          "type": "column",
+          "settings": {
+            "title": "Natürliche Kraftquelle",
+            "text": "<p>Unsere Menüs schöpfen aus der vollen Kraft der Natur. Vitamine in ihrer reinsten Form stärken die Vitalität und das Wohlbefinden deines Hundes. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mwALRX": {
+          "type": "column",
+          "settings": {
+            "title": "Geschmack & Nährstoffe bewahrt",
+            "text": "<p>Durch unser Slow-Cooked Verfahren bleibt der authentische Geschmack erhalten und die essenziellen Vitamine und Mineralstoffe werden geschützt.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LpbnFN": {
+          "type": "column",
+          "settings": {
+            "title": "Klarheit in jeder Dose",
+            "text": "<p>Bei Uncle Rusty's gibt es keine Geheimnisse. Reine, regionale Zutaten ohne versteckte Füllstoffe oder künstliche Zusätze. Einfach ehrliches Hundefutter.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_F8E6Gb": {
+          "type": "column",
+          "settings": {
+            "title": "Herzlich aus Bayern",
+            "text": "<p>Unsere Wurzeln liegen in Bayern, wo wir mit Leidenschaft und Hingabe für deinen Hund kochen. Ein Versprechen von unserer Familie an deinen treuen Begleiter.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_U4JidP",
+        "column_mwALRX",
+        "column_LpbnFN",
+        "column_F8E6Gb"
+      ],
+      "settings": {
+        "title": "Unser Anspruch",
+        "heading_alignment": "left",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -872,6 +936,7 @@
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
-    "related-products"
+    "related-products",
+    "multicolumn_p4aU8N"
   ]
 }
