@@ -1065,7 +1065,7 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-dog",
-            "icon_text": "Unsere Reise beginnt...",
+            "icon_text": "Unsere Reise beginnt",
             "show_accordion": true,
             "richtext": "<p>Alles begann mit Rusty, unserem geliebten Familienhund, der lange Zeit mit ernährungsbedingten Problemen zu kämpfen hatte. Nachdem wir auf unserer Suche nach dem perfekten Futter oft enttäuscht wurden, begann unsere Reise in die Welt der Hundeernährung. Was als persönliche Mission begann, entwickelte sich rasch zu einer größeren Vision: Ein Futter zu schaffen, das nicht nur schmackhaft, sondern auch nährstoffreich und gesund für unseren vierbeinigen Freund ist.<\/p>"
           }
@@ -1074,7 +1074,7 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_text": "Die richtige Balance...",
+            "icon_text": "Die richtige Balance",
             "show_accordion": true,
             "richtext": "<p>Wir setzen auf einen hohen Fleischanteil in unseren Menüs, jedoch ist uns ein ausgewogenes Verhältnis von Fleisch zu Kohlenhydraten wichtig. Im Verhältnis von 3:1 ermöglicht dies eine ausgewogene Ernährung, die deinem Hund die nötigen Proteine für eine starke Muskulatur liefert, während die Kohlenhydrate die benötigte Energie für den Tag bereitstellen. So stellen wir sicher, dass dein Hund nicht nur satt, sondern auch gut genährt und energiegeladen ist. <\/p>"
           }
