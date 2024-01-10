@@ -1007,6 +1007,60 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_eC8zGB": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DjLV7B": {
+          "type": "column",
+          "settings": {
+            "title": "Effiziente Verdauung",
+            "text": "<p>Unsere sorgfältig ausgewählten Premium-Zutaten garantieren eine optimale Nährstoffaufnahme. Durch den Einsatz rein natürlicher Inhaltsstoffe fördern wir eine robuste Darmflora, was wiederum Verdauungsprobleme und Blähungen signifikant reduziert.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jNCmnA": {
+          "type": "column",
+          "settings": {
+            "title": "Vitalität & Wohlbefinden",
+            "text": "<p>Unsere Nahrung bietet eine ausgewogene Mischung essentieller Nährstoffe, die das Immunsystem stärken. Sie unterstützt nicht nur Knochen und Gelenke, sondern auch die Herzfunktion, was zu einer gesteigerten körperlichen Fitness und geistigen Aktivität führt.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JNhaMD": {
+          "type": "column",
+          "settings": {
+            "title": "Langfristige Gesundheit",
+            "text": "<p>Mit unseren Menüs investierst du in die Zukunft deines Hundes. Unsere Nahrung ist darauf ausgerichtet, Krankheiten proaktiv entgegenzuwirken. Die Kombination aus hochwertigen Zutaten und dem Verzicht auf schädliche Zusätze sorgt für ein nachhaltiges Wohlbefinden deines Vierbeiners.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_DjLV7B",
+        "column_jNCmnA",
+        "column_JNhaMD"
+      ],
+      "settings": {
+        "title": "Für deinen Hund bedeutet das",
+        "heading_alignment": "center",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -1026,6 +1080,7 @@
     "05f67661-57d3-4393-b235-9279296aa6fd",
     "related-products",
     "multicolumn_p4aU8N",
-    "ur_image_with_text_ty9xfT"
+    "ur_image_with_text_ty9xfT",
+    "multicolumn_eC8zGB"
   ]
 }
