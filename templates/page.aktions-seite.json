@@ -30,6 +30,166 @@
       "settings": {
       }
     },
+    "5ca08cac-f6a9-4fab-b5d8-f4529413f78e": {
+      "type": "collection-list",
+      "blocks": {
+        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nassfutter"
+          }
+        },
+        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hundesnacks"
+          }
+        },
+        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pakete"
+          }
+        }
+      },
+      "block_order": [
+        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-1",
+        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-2",
+        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a8d90776-1601-4b6e-a71b-5b4e37148a70": {
+      "type": "icon-row",
+      "blocks": {
+        "84866179-e9d4-4ec5-a690-f4fd41aa4c0e": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "9a15e84e-d6c8-4db0-8561-44a53dc20311": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-cooking",
+            "icon_rich_text": "<h3>Nährstoffschonend<br\/>Slow-Cooked<\/h3><h3><\/h3>"
+          }
+        },
+        "a42072a9-f8f7-4fe3-9802-fa9be0a428e5": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        },
+        "e90d7298-f09a-4ab6-8722-7a351141440d": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-fruit-bag",
+            "icon_rich_text": "<h3>Natürliche <br\/>Vitamine<\/h3>"
+          }
+        },
+        "62c72e7f-8499-4fb8-81d5-1e9b6a669297": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "55aa4584-6fce-425b-82ad-f8b44e9dd1d7": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "c2ad6e8d-5e53-47f4-ada7-06d65a90e02c": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "0b53a0f0-37b0-4bf3-8fbd-6fb32275a275": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "84866179-e9d4-4ec5-a690-f4fd41aa4c0e",
+        "9a15e84e-d6c8-4db0-8561-44a53dc20311",
+        "a42072a9-f8f7-4fe3-9802-fa9be0a428e5",
+        "e90d7298-f09a-4ab6-8722-7a351141440d",
+        "62c72e7f-8499-4fb8-81d5-1e9b6a669297",
+        "55aa4584-6fce-425b-82ad-f8b44e9dd1d7",
+        "c2ad6e8d-5e53-47f4-ada7-06d65a90e02c",
+        "0b53a0f0-37b0-4bf3-8fbd-6fb32275a275"
+      ],
+      "settings": {
+        "color_scheme": "background-2"
+      }
+    },
+    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
+        "content": "<h1><strong>Jede Mahlzeit zählt: <br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen: <\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch.  Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
+        "button_text": "Mix & Match: Dein Menü",
+        "button_link": "shopify:\/\/pages\/build-a-box",
+        "button2_text": "Ernährungsberatung",
+        "button2_link": "shopify:\/\/pages\/beratung",
+        "newsletter": "false",
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
+      }
+    },
+    "335d088c-6103-46f1-b7c1-6f98419907f9": {
+      "type": "build-a-box",
+      "settings": {
+        "collection": "nassfutter",
+        "additives_collection": "ole",
+        "questionaire_subscription_plan": 689522049319,
+        "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
+        "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
+        "questionaire_button_label": "Button label",
+        "questionaire_button_link": "",
+        "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "17047516426d6978c6": {
+      "type": "apps",
+      "blocks": {
+        "08fb2e83-0d33-408c-9f90-e82ac1695e35": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "08fb2e83-0d33-408c-9f90-e82ac1695e35"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "768a63b1-59d6-41f1-abe2-598806ac7d91": {
       "type": "rich-text",
       "blocks": {
@@ -137,47 +297,88 @@
         "padding_bottom": 36
       }
     },
-    "17047516426d6978c6": {
-      "type": "apps",
-      "blocks": {
-        "08fb2e83-0d33-408c-9f90-e82ac1695e35": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "08fb2e83-0d33-408c-9f90-e82ac1695e35"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "46b98696-f663-4732-816d-9b2021134506": {
+    "97650884-33fc-4e7c-869d-8f9067569932": {
       "type": "ur-image-with-text",
       "blocks": {
-        "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-heading-1": {
+        "493ffee4-a861-450a-9d2e-a41f2da4d035": {
+          "type": "caption",
+          "settings": {
+            "caption": "WARUM UNCLE RUSTY'S",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Die richtige Balance <\/strong>",
+            "heading": "Unsere Philosophie",
             "heading_size": "h1"
           }
         },
-        "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1": {
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Wir setzen auf einen hohen Fleischanteil in unseren Menüs, jedoch ist uns ein ausgewogenes Verhältnis von Fleisch zu Kohlenhydraten wichtig. Im Verhältnis von 3:1 ermöglicht dies eine ausgewogene Ernährung, die deinem Hund die nötigen Proteine für eine starke Muskulatur liefert, während die Kohlenhydrate die benötigte Energie für den Tag bereitstellen. So stellen wir sicher, dass dein Hund nicht nur satt, sondern auch gut genährt und energiegeladen ist. <\/p>",
+            "text": "<p>Wir glauben, dass wahre Qualität in den Details liegt. Vom sorgfältigen Auswählen der Zutaten bis zur finalen Zubereitung, bei uns steht Authentizität im Vordergrund. Wir sind stolz darauf, ein Futter zu bieten, das frei von Kompromissen und voller Leidenschaft ist.<\/p>",
             "text_style": "body"
+          }
+        },
+        "53b4d99e-ea7c-46e4-ae24-a67f5327f6a8": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-success",
+            "icon_text": "Perfekte Grundbasis",
+            "show_accordion": true,
+            "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. <\/p>"
+          }
+        },
+        "2b44ab65-25f6-4427-8e06-4d2f34be2f4f": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-search",
+            "icon_text": "Flexibel & beratend",
+            "show_accordion": true,
+            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. <\/p>"
+          }
+        },
+        "98472a5d-5cb8-4e01-bf21-22b07c755842": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-region-color",
+            "icon_text": "Natur pur aus der Region",
+            "show_accordion": true,
+            "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. <\/p>"
+          }
+        },
+        "ba258b7f-2517-42cd-aafe-cd13ca042163": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Maximale Nährstoffeffizienz",
+            "show_accordion": true,
+            "richtext": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann. <\/p>"
+          }
+        },
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Unsere Werte",
+            "button_link": "shopify:\/\/pages\/unsere-ernahrungsphilosophie",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-heading-1",
-        "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1"
+        "493ffee4-a861-450a-9d2e-a41f2da4d035",
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-heading-1",
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-text-1",
+        "53b4d99e-ea7c-46e4-ae24-a67f5327f6a8",
+        "2b44ab65-25f6-4427-8e06-4d2f34be2f4f",
+        "98472a5d-5cb8-4e01-bf21-22b07c755842",
+        "ba258b7f-2517-42cd-aafe-cd13ca042163",
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Waage_a57e25b0-d943-4f32-bfaa-399d871f2a06.png",
+        "image": "shopify:\/\/shop_images\/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_8c47e262-cd5b-4fed-bbf3-a6eba737d8d5.png",
         "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
@@ -186,11 +387,115 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "background-2",
+        "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 4
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "7418837f-c8e2-459d-bd86-d6dcdfe74136": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Gesteigerte Lebensfreude<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Robustes Immunsystem<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Kräftiges, glänzendes Fell<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "46f1010a-5b97-432d-9077-edb5aaaebac2": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Optimale Gewichtskontrolle<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "dbd18ef9-5398-4b72-b391-be90e9cd172f": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Starke Knochen & Gelenke<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1ac3fa73-7fb1-4ef6-af4e-94aa72915f86": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Ausgeglichene Verdauung<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "4bfe00da-4784-41fd-a074-5780f2988607": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Höhere Energielevel<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "fa86329f-dbb6-4883-8fe6-b2d9b51ce443": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Verbesserte Allergietoleranz<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-1",
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-2",
+        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-3",
+        "46f1010a-5b97-432d-9077-edb5aaaebac2",
+        "dbd18ef9-5398-4b72-b391-be90e9cd172f",
+        "1ac3fa73-7fb1-4ef6-af4e-94aa72915f86",
+        "4bfe00da-4784-41fd-a074-5780f2988607",
+        "fa86329f-dbb6-4883-8fe6-b2d9b51ce443"
+      ],
+      "settings": {
+        "title": "Für deinen Hund bedeutet das",
+        "heading_alignment": "left",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3": {
@@ -230,20 +535,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 64
-      }
-    },
-    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt: <br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen: <\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch.  Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
-        "button_text": "Mix & Match: Dein Menü",
-        "button_link": "shopify:\/\/pages\/build-a-box",
-        "button2_text": "Ernährungsberatung",
-        "button2_link": "shopify:\/\/pages\/beratung",
-        "newsletter": "false",
-        "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
       }
     },
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8": {
@@ -343,221 +634,6 @@
         "desktop_blur": "no-desktop-blur"
       }
     },
-    "7418837f-c8e2-459d-bd86-d6dcdfe74136": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Gesteigerte Lebensfreude<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Robustes Immunsystem<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-3": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Kräftiges, glänzendes Fell<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "46f1010a-5b97-432d-9077-edb5aaaebac2": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Optimierte Gewichtskontrolle<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "dbd18ef9-5398-4b72-b391-be90e9cd172f": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Starke Knochen & Gelenke<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "1ac3fa73-7fb1-4ef6-af4e-94aa72915f86": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Ausgeglichene Verdauung<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "4bfe00da-4784-41fd-a074-5780f2988607": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Höhere Energielevel<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "fa86329f-dbb6-4883-8fe6-b2d9b51ce443": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Verbesserte Allergietoleranz<\/strong>",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-1",
-        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-2",
-        "template--18581235859720__7418837f-c8e2-459d-bd86-d6dcdfe74136-column-3",
-        "46f1010a-5b97-432d-9077-edb5aaaebac2",
-        "dbd18ef9-5398-4b72-b391-be90e9cd172f",
-        "1ac3fa73-7fb1-4ef6-af4e-94aa72915f86",
-        "4bfe00da-4784-41fd-a074-5780f2988607",
-        "fa86329f-dbb6-4883-8fe6-b2d9b51ce443"
-      ],
-      "settings": {
-        "title": "Für deinen Hund bedeutet das",
-        "heading_alignment": "left",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "accent-2",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "97650884-33fc-4e7c-869d-8f9067569932": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "493ffee4-a861-450a-9d2e-a41f2da4d035": {
-          "type": "caption",
-          "settings": {
-            "caption": "WARUM UNCLE RUSTY'S",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Unsere Philosophie",
-            "heading_size": "h1"
-          }
-        },
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wir glauben, dass wahre Qualität in den Details liegt. Vom sorgfältigen Auswählen der Zutaten bis zur finalen Zubereitung, bei uns steht Authentizität im Vordergrund. Wir sind stolz darauf, ein Futter zu bieten, das frei von Kompromissen und voller Leidenschaft ist.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "53b4d99e-ea7c-46e4-ae24-a67f5327f6a8": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-success",
-            "icon_text": "Perfekte Grundbasis",
-            "show_accordion": true,
-            "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. <\/p>"
-          }
-        },
-        "2b44ab65-25f6-4427-8e06-4d2f34be2f4f": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-search",
-            "icon_text": "Flexibel & beratend",
-            "show_accordion": true,
-            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. <\/p>"
-          }
-        },
-        "98472a5d-5cb8-4e01-bf21-22b07c755842": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-region-color",
-            "icon_text": "Natur pur aus der Region",
-            "show_accordion": true,
-            "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. <\/p>"
-          }
-        },
-        "ba258b7f-2517-42cd-aafe-cd13ca042163": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Maximale Nährstoffeffizienz",
-            "show_accordion": true,
-            "richtext": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann. <\/p>"
-          }
-        },
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Unsere Werte",
-            "button_link": "shopify:\/\/pages\/unsere-ernahrungsphilosophie",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "493ffee4-a861-450a-9d2e-a41f2da4d035",
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-heading-1",
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-text-1",
-        "53b4d99e-ea7c-46e4-ae24-a67f5327f6a8",
-        "2b44ab65-25f6-4427-8e06-4d2f34be2f4f",
-        "98472a5d-5cb8-4e01-bf21-22b07c755842",
-        "ba258b7f-2517-42cd-aafe-cd13ca042163",
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-button-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_8c47e262-cd5b-4fed-bbf3-a6eba737d8d5.png",
-        "height": "medium",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "581b83b4-cfcd-4b75-9e66-afcc7d1cfdd6": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/comp2.png",
-        "content": "<h2>Abonniere jetzt unseren Newsletter, <br\/>um keine Rabattaktion zu verpassen!<\/h2>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "true",
-        "theme_mode": "light",
-        "desktop_blur": "desktop-blur"
-      }
-    },
     "f1f9bde8-3512-40ee-9fee-69c992b5013e": {
       "type": "collapsible-content",
       "blocks": {
@@ -649,80 +725,6 @@
         "padding_bottom": 36
       }
     },
-    "a8d90776-1601-4b6e-a71b-5b4e37148a70": {
-      "type": "icon-row",
-      "blocks": {
-        "84866179-e9d4-4ec5-a690-f4fd41aa4c0e": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
-          }
-        },
-        "9a15e84e-d6c8-4db0-8561-44a53dc20311": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-cooking",
-            "icon_rich_text": "<h3>Nährstoffschonend<br\/>Slow-Cooked<\/h3><h3><\/h3>"
-          }
-        },
-        "a42072a9-f8f7-4fe3-9802-fa9be0a428e5": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
-          }
-        },
-        "e90d7298-f09a-4ab6-8722-7a351141440d": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-fruit-bag",
-            "icon_rich_text": "<h3>Natürliche <br\/>Vitamine<\/h3>"
-          }
-        },
-        "62c72e7f-8499-4fb8-81d5-1e9b6a669297": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
-          }
-        },
-        "55aa4584-6fce-425b-82ad-f8b44e9dd1d7": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-sugar-color",
-            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
-          }
-        },
-        "c2ad6e8d-5e53-47f4-ada7-06d65a90e02c": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
-          }
-        },
-        "0b53a0f0-37b0-4bf3-8fbd-6fb32275a275": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
-          }
-        }
-      },
-      "block_order": [
-        "84866179-e9d4-4ec5-a690-f4fd41aa4c0e",
-        "9a15e84e-d6c8-4db0-8561-44a53dc20311",
-        "a42072a9-f8f7-4fe3-9802-fa9be0a428e5",
-        "e90d7298-f09a-4ab6-8722-7a351141440d",
-        "62c72e7f-8499-4fb8-81d5-1e9b6a669297",
-        "55aa4584-6fce-425b-82ad-f8b44e9dd1d7",
-        "c2ad6e8d-5e53-47f4-ada7-06d65a90e02c",
-        "0b53a0f0-37b0-4bf3-8fbd-6fb32275a275"
-      ],
-      "settings": {
-        "color_scheme": "background-2"
-      }
-    },
     "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
       "type": "product-swiper",
       "disabled": true,
@@ -765,19 +767,19 @@
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
+    "5ca08cac-f6a9-4fab-b5d8-f4529413f78e",
+    "a8d90776-1601-4b6e-a71b-5b4e37148a70",
+    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
+    "335d088c-6103-46f1-b7c1-6f98419907f9",
+    "17047516426d6978c6",
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
     "804ea04b-e049-407f-9122-ee5bfe84f669",
-    "17047516426d6978c6",
-    "46b98696-f663-4732-816d-9b2021134506",
+    "97650884-33fc-4e7c-869d-8f9067569932",
+    "7418837f-c8e2-459d-bd86-d6dcdfe74136",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
-    "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
-    "7418837f-c8e2-459d-bd86-d6dcdfe74136",
-    "97650884-33fc-4e7c-869d-8f9067569932",
-    "581b83b4-cfcd-4b75-9e66-afcc7d1cfdd6",
     "f1f9bde8-3512-40ee-9fee-69c992b5013e",
-    "a8d90776-1601-4b6e-a71b-5b4e37148a70",
     "b4180a2c-12e5-4022-93c8-ecbf5b428225",
     "cf60412c-87e3-4a34-9fd1-e2ce0ad99cf5"
   ]
