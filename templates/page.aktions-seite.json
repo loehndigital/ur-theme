@@ -297,6 +297,34 @@
         "padding_bottom": 52
       }
     },
+    "b352879d-09ca-41a1-afb6-79dd8d13b712": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "nassfutter",
+        "products_to_show": 6,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "97650884-33fc-4e7c-869d-8f9067569932": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -537,34 +565,6 @@
         "padding_bottom": 64
       }
     },
-    "b352879d-09ca-41a1-afb6-79dd8d13b712": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Unsere Nassmenüs",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "nassfutter",
-        "products_to_show": 6,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -802,10 +802,10 @@
     "17047516426d6978c6",
     "804ea04b-e049-407f-9122-ee5bfe84f669",
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
+    "b352879d-09ca-41a1-afb6-79dd8d13b712",
     "97650884-33fc-4e7c-869d-8f9067569932",
     "7418837f-c8e2-459d-bd86-d6dcdfe74136",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
-    "b352879d-09ca-41a1-afb6-79dd8d13b712",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
     "f1f9bde8-3512-40ee-9fee-69c992b5013e",
