@@ -190,70 +190,6 @@
         "include_margins": true
       }
     },
-    "804ea04b-e049-407f-9122-ee5bfe84f669": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Natürliche Kraftquelle",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "Nährstoffe bewahrt",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-3": {
-          "type": "column",
-          "settings": {
-            "title": "Klarheit in jeder Dose",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0": {
-          "type": "column",
-          "settings": {
-            "title": "Herzlich aus Bayern",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-1",
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-2",
-        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-3",
-        "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0"
-      ],
-      "settings": {
-        "title": "Unser Anspruch",
-        "heading_alignment": "left",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "768a63b1-59d6-41f1-abe2-598806ac7d91": {
       "type": "rich-text",
       "blocks": {
@@ -297,32 +233,113 @@
         "padding_bottom": 52
       }
     },
-    "b352879d-09ca-41a1-afb6-79dd8d13b712": {
-      "type": "featured-collection",
+    "44c7e7f4-7ddb-4307-a969-15baad4294e2": {
+      "type": "featured-product",
+      "blocks": {
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-title-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-price-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-variant_picker-1": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-quantity_selector-1": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-share-1": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-text-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-title-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-price-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-variant_picker-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-quantity_selector-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-buy_buttons-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-share-1"
+      ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "nassfutter",
-        "products_to_show": 6,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "product": "tasterpack",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "78abf51e-bfee-4d7d-9241-2e01811aabae": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hochwertige Zutaten für Hundegesundheit",
+            "heading_size": "h1"
+          }
+        },
+        "08c049e4-4c25-495b-9ae4-cfb173f2ce96": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In unseren Menüs kombinieren wir hochwertige tierische und pflanzliche Zutaten, die sorgfältig ausgewählt werden, um eine ausgewogene Nährstoffversorgung zu gewährleisten. Mit Zutaten wie Kürbis, Süßkartoffel oder Rote Beete, fördern wir die Verdauung und stärken das Immunsystem deines Hundes, ganz im Einklang mit der Natur. <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "78abf51e-bfee-4d7d-9241-2e01811aabae",
+        "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/dosen_3ce9df46-a2a9-46de-8138-49d49a86a13a.png",
+        "height": "medium",
+        "image_crop": "no-crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 64
       }
     },
     "97650884-33fc-4e7c-869d-8f9067569932": {
@@ -418,6 +435,34 @@
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "b352879d-09ca-41a1-afb6-79dd8d13b712": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "nassfutter",
+        "products_to_show": 6,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -526,45 +571,6 @@
         "padding_bottom": 20
       }
     },
-    "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "78abf51e-bfee-4d7d-9241-2e01811aabae": {
-          "type": "heading",
-          "settings": {
-            "heading": "Hochwertige Zutaten für Hundegesundheit",
-            "heading_size": "h1"
-          }
-        },
-        "08c049e4-4c25-495b-9ae4-cfb173f2ce96": {
-          "type": "text",
-          "settings": {
-            "text": "<p>In unseren Menüs kombinieren wir hochwertige tierische und pflanzliche Zutaten, die sorgfältig ausgewählt werden, um eine ausgewogene Nährstoffversorgung zu gewährleisten. Mit Zutaten wie Kürbis, Süßkartoffel oder Rote Beete, fördern wir die Verdauung und stärken das Immunsystem deines Hundes, ganz im Einklang mit der Natur. <\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "78abf51e-bfee-4d7d-9241-2e01811aabae",
-        "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/dosen_3ce9df46-a2a9-46de-8138-49d49a86a13a.png",
-        "height": "medium",
-        "image_crop": "no-crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 64
-      }
-    },
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -644,6 +650,70 @@
         "color_scheme": "background-2",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "804ea04b-e049-407f-9122-ee5bfe84f669": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Natürliche Kraftquelle",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "Nährstoffe bewahrt",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "Klarheit in jeder Dose",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0": {
+          "type": "column",
+          "settings": {
+            "title": "Herzlich aus Bayern",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-1",
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-2",
+        "template--18581235859720__804ea04b-e049-407f-9122-ee5bfe84f669-column-3",
+        "1fa05dac-4f9c-4961-9499-3e8bd8cf87b0"
+      ],
+      "settings": {
+        "title": "Unser Anspruch",
+        "heading_alignment": "left",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -800,13 +870,14 @@
     "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "335d088c-6103-46f1-b7c1-6f98419907f9",
     "17047516426d6978c6",
-    "804ea04b-e049-407f-9122-ee5bfe84f669",
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
-    "b352879d-09ca-41a1-afb6-79dd8d13b712",
-    "97650884-33fc-4e7c-869d-8f9067569932",
-    "7418837f-c8e2-459d-bd86-d6dcdfe74136",
+    "44c7e7f4-7ddb-4307-a969-15baad4294e2",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
+    "97650884-33fc-4e7c-869d-8f9067569932",
+    "b352879d-09ca-41a1-afb6-79dd8d13b712",
+    "7418837f-c8e2-459d-bd86-d6dcdfe74136",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
+    "804ea04b-e049-407f-9122-ee5bfe84f669",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
     "f1f9bde8-3512-40ee-9fee-69c992b5013e",
     "b4180a2c-12e5-4022-93c8-ecbf5b428225",
