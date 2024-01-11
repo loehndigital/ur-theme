@@ -1098,7 +1098,7 @@
           "type": "button",
           "settings": {
             "button_label": "Paket zusammenstellen",
-            "button_link": "",
+            "button_link": "shopify:\/\/pages\/build-a-box",
             "button_style_secondary": false
           }
         }
