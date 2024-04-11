@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     '.quantity-break-applied',
   );
 
-  let currentPlan = parseInt(window.ur_subscription_plan);
+  let currentPlan = '';
   let quantityBreakTarget = parseInt(window.ur_quantity_break_target);
 
   function getParameterByName(name, url = window.location.href) {
@@ -215,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
         .then((response) => {
           if (!response.ok) {
+            console.log(response)
             throw new Error('Network response was not ok');
           }
           return response.json();
