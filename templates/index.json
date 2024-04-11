@@ -418,14 +418,6 @@
             "background_color": "purple"
           }
         },
-        "e557e6b5-0e34-4396-8fec-3626838441ae": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/products\/leinol",
-            "block_text": "Öle",
-            "background_color": "orange"
-          }
-        },
         "ed261184-7291-4458-8af5-3a6cd7ad665d": {
           "type": "content_block",
           "settings": {
@@ -438,7 +430,6 @@
       "block_order": [
         "96ebf1dd-3bbf-4092-ab6a-3183001942df",
         "349db816-6348-4845-93a1-82e0be56b394",
-        "e557e6b5-0e34-4396-8fec-3626838441ae",
         "ed261184-7291-4458-8af5-3a6cd7ad665d"
       ],
       "settings": {
