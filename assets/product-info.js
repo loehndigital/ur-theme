@@ -129,3 +129,33 @@ if (!customElements.get('product-info')) {
     },
   );
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const heading = document.querySelector('.bsub-widget__sub-details-heading');
+
+  if (heading) {
+      heading.textContent = "Abonnement Info";
+  }
+
+  const details = document.querySelector('.bsub-widget__sub-details-desc');
+  if (details) {
+      details.textContent = "Ihr Abonnement wird automatisch erneuert. Sie können Lieferungen jederzeit überspringen oder Ihr Abonnement flexibel kündigen.";
+  }
+
+  const branding = document.querySelector('.bsub-widget__branding');
+  if (branding) {
+      branding.style.display = 'none';
+  }
+
+  const btn = document.querySelector('.bsub-widget__toggle-details-btn > div');
+  if (btn) {
+      btn.textContent = "Abonnement Info";
+  }
+
+  const policy = document.querySelector('.bsub-widget__policy-link');
+  if (policy) {
+      policy.textContent = 'Abonnement Richtlinien';
+      policy.style.fontSize = 'small';
+  }
+});
