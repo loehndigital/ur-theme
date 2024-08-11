@@ -1,0 +1,88 @@
+#bsub-admin-root .customer-info__header-message,
+#customer-portal-root .customer-info__header-message,
+.bold-subscriptions-customer-portal .customer-info__header-message {
+  color: #000;
+  font-weight: 500;
+}
+
+#bsub-admin-root .customer-info__section,
+#customer-portal-root .customer-info__section,
+.bold-subscriptions-customer-portal .customer-info__section {
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 24px;
+  border: 2px solid #e0d7bd;
+}
+
+#bsub-admin-root .customer-info__header-item h3,
+#bsub-admin-root .customer-info__header-item p,
+#customer-portal-root .customer-info__header-item h3,
+#customer-portal-root .customer-info__header-item p,
+.bold-subscriptions-customer-portal .customer-info__header-item h3,
+.bold-subscriptions-customer-portal .customer-info__header-item p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+#bsub-admin-root .details-section > p,
+#customer-portal-root .details-section > p,
+.bold-subscriptions-customer-portal .details-section > p {
+  color: #464646;
+  font-weight: 500;
+}
+
+#bsub-admin-root .active-subscription,
+#bsub-admin-root .inactive-subscription,
+#customer-portal-root .active-subscription,
+#customer-portal-root .inactive-subscription,
+.bold-subscriptions-customer-portal .active-subscription,
+.bold-subscriptions-customer-portal .inactive-subscription {
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: none;
+  margin-bottom: 1rem;
+  background-color: #ece7d8;
+}
+
+#customer-portal-root .details-section > h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+#bsub-admin-root .edit-text-button,
+#customer-portal-root .edit-text-button,
+.bold-subscriptions-customer-portal .edit-text-button {
+  background: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  border-radius: 99px;
+  font-size: small;
+  font-weight: bold;
+}
+
+#customer-portal-root .details-section .bsub-name-price {
+  margin: 1rem 0rem;
+}
+
+
+#customer-portal-root .bsub-link a {
+    background-color: transparent;
+    color: #000000;
+    text-decoration: underline;
+}
+
+#customer-portal-root .bsub-link a:hover {
+    color: #707070;
+
+}
+#customer-portal-root .subscriptions-container {
+    margin-top: 4rem;
+}
