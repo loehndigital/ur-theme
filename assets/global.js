@@ -1936,7 +1936,7 @@ window.BOLD.subscriptions.config.internationalization = {
         subscriptionDetailsPartiallyFulfilledMessage: 'Eines oder mehrere Produkte sind nicht auf Lager. Wir haben die Bestellung mit dem verfügbaren Produkt(en) erstellt. Wenn die fehlenden Produkte wieder verfügbar sind, werden sie mit der nächsten Bestellung verarbeitet.',
         subscriptionSummaryOrderNowButton: 'Bestell jetzt',
         subscriptionSummarySubscriptionTitle: '{{firstLineItem.title}} - #{{subscription.bold_platform_subscription_id}}',
-        subscriptionSummarySubscriptionTitle_plural: '{{count}} Produktabonnement - #{{subscription.bold_platform_subscription_id}}',
+        subscriptionSummarySubscriptionTitle_plural: '{{count}} Produkte Abo - #{{subscription.bold_platform_subscription_id}}',
         subscriptionSummaryPrepaidLengthHeader: 'Dieses Abonnement hat Produkte mit unterschiedlichen vorausbezahlten Laufzeiten.',
         subscriptionSummaryRenewalMethodHeader: 'Dieses Abonnement enthält Produkte mit unterschiedlichen Verlängerungsmethoden.',
         subscriptionSummaryNextOrderTitle: 'Nächste Bestellung:',
