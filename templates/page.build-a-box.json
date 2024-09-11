@@ -45,13 +45,27 @@
         "collection": "nassfutter",
         "additives_collection": "",
         "questionaire_subscription_plan": 688893919496,
-        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 6 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!<\/p>",
+        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 7 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!<\/p>",
         "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
         "questionaire_button_label": "Ernährungsberatung",
         "questionaire_button_link": "shopify:\/\/pages\/beratung",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "full_width_banner_mHzKC9": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/comp1_1.jpg",
+        "content": "<p>Der Text<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
+        "newsletter": "false",
+        "theme_mode": "dark",
+        "desktop_blur": "desktop-blur"
       }
     },
     "rich_text_JrgidR": {
@@ -73,7 +87,7 @@
         "button_PEX4GW": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -94,6 +108,53 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "ur_image_with_text_p4A4qV": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "heading_DELyEn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_GVALCr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir stehen für naturbelassenes Hundefutter aus ethisch verantwortungsvoller Weidehaltung, schonend zubereitet und frei von künstlichen Zusätzen. So garantieren wir eine gesunde und schmackhafte Ernährung, die auf Nachhaltigkeit und höchste Qualität setzt.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_kkfAKp": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DELyEn",
+        "text_GVALCr",
+        "button_kkfAKp"
+      ],
+      "settings": {
+        "height": "adapt",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn_r4Prxy": {
@@ -146,53 +207,6 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "ur_image_with_text_p4A4qV": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "heading_DELyEn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_GVALCr": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wir stehen für naturbelassenes Hundefutter aus ethisch verantwortungsvoller Weidehaltung, schonend zubereitet und frei von künstlichen Zusätzen. So garantieren wir eine gesunde und schmackhafte Ernährung, die auf Nachhaltigkeit und höchste Qualität setzt.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_kkfAKp": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_DELyEn",
-        "text_GVALCr",
-        "button_kkfAKp"
-      ],
-      "settings": {
-        "height": "adapt",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -318,17 +332,96 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "icon_row_bDgXgn": {
+      "type": "icon-row",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "featured_product_dxWiKM": {
+      "type": "featured-product",
+      "blocks": {
+        "text_QV6E6d": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_CRtkRH": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_Ac6P7F": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_AkX9nP": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_RxWG4f": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_DN4YUj": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_TUzYBY": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_QV6E6d",
+        "title_CRtkRH",
+        "price_Ac6P7F",
+        "variant_picker_AkX9nP",
+        "quantity_selector_RxWG4f",
+        "buy_buttons_DN4YUj",
+        "share_TUzYBY"
+      ],
+      "settings": {
+        "product": "tasterpack",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "hero_slider_WJ9jLG",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
+    "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
-    "multicolumn_r4Prxy",
     "ur_image_with_text_p4A4qV",
+    "multicolumn_r4Prxy",
     "1702222298d12bda40",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
-    "collapsible_content_Jzm6Nw"
+    "collapsible_content_Jzm6Nw",
+    "icon_row_bDgXgn",
+    "featured_product_dxWiKM"
   ]
 }
