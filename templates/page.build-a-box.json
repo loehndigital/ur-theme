@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -6,6 +15,28 @@
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "hero_slider_WJ9jLG": {
+      "type": "hero-slider",
+      "blocks": {
+        "hero_slide_9yGGV4": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify:\/\/shop_images\/comp3_0191_Kopie.jpg",
+            "hero_image_mobile": "shopify:\/\/shop_images\/comp2.png",
+            "hero_text": "<h1>Natürlich. regional. einzigartig.<\/h1><p>Schaffe die ideale Basis für die Gesundheit deines Hundes – ganz natürlich und individuell.<\/p>",
+            "button_link": "",
+            "button_label": "",
+            "theme_mode": "light",
+            "blur": "no-blur"
+          }
+        }
+      },
+      "block_order": [
+        "hero_slide_9yGGV4"
+      ],
+      "settings": {
       }
     },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
@@ -21,6 +52,149 @@
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "rich_text_JrgidR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mjihqp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_dgGn6C": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "button_PEX4GW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mjihqp",
+        "text_dgGn6C",
+        "button_PEX4GW"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_r4Prxy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_h8VyzK": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QLfkDH": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YiQznY": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_h8VyzK",
+        "column_QLfkDH",
+        "column_YiQznY"
+      ],
+      "settings": {
+        "title": "Unser Anspruch",
+        "heading_alignment": "center",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ur_image_with_text_p4A4qV": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "heading_DELyEn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_GVALCr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir stehen für naturbelassenes Hundefutter aus ethisch verantwortungsvoller Weidehaltung, schonend zubereitet und frei von künstlichen Zusätzen. So garantieren wir eine gesunde und schmackhafte Ernährung, die auf Nachhaltigkeit und höchste Qualität setzt.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_kkfAKp": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DELyEn",
+        "text_GVALCr",
+        "button_kkfAKp"
+      ],
+      "settings": {
+        "height": "adapt",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1702222298d12bda40": {
@@ -53,12 +227,108 @@
         "theme_mode": "dark",
         "desktop_blur": "no-desktop-blur"
       }
+    },
+    "collapsible_content_Jzm6Nw": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_KCpmYg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ente mit Karotten & Hirse",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_GDhDjA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_MNBbjp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_xFb3Xe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_3FqqPy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_wbG7LX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ryG4UP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_KCpmYg",
+        "collapsible_row_GDhDjA",
+        "collapsible_row_MNBbjp",
+        "collapsible_row_xFb3Xe",
+        "collapsible_row_3FqqPy",
+        "collapsible_row_wbG7LX",
+        "collapsible_row_ryG4UP"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Unsere Menüs im Detail",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
+    "hero_slider_WJ9jLG",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
+    "rich_text_JrgidR",
+    "multicolumn_r4Prxy",
+    "ur_image_with_text_p4A4qV",
     "1702222298d12bda40",
-    "802ec653-45c7-4db1-a744-3e8f11792f91"
+    "802ec653-45c7-4db1-a744-3e8f11792f91",
+    "collapsible_content_Jzm6Nw"
   ]
 }
