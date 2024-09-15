@@ -111,7 +111,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let singleItemPrice = 0;
     let unitPrice = 0;
 
+    let itemCount = 0;
+
     for (let i = 0; i < itemsToAdd.length; i++) {
+
       const item = itemsToAdd[i];
       const variant = window.ur_subscription_variants[item.id];
       let itemPriceOriginal = variant.price;
@@ -143,7 +146,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (item.collection === 'main') {
         totalQuantity = totalQuantity + parseInt(item.quantity);
       }
+
+  
     }
+
+    console.log("TOTAL QUANTITY: ", totalQuantity);
 
     const quantityBreakCounter = quantityBreakTarget - totalQuantity;
     if (quantityBreakCounter > 0) {
@@ -163,6 +170,8 @@ document.addEventListener('DOMContentLoaded', function () {
       minimumFractionDigits: 2,
     });
 
+    console.log(totalPrice)
+
     if (totalPrice != totalPriceOriginal) {
       priceTotalCompareAtContainer.classList.remove('xhidden');
       priceTotalCompareAtElement.innerHTML = (
@@ -175,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
       priceTotalCompareAtContainer.classList.add('xhidden');
     }
     quantityTotalElement.innerHTML = totalQuantity;
-    singleItemPriceElement.innerHTML = (singleItemPrice / 100).toLocaleString(
+    singleItemPriceElement.innerHTML = (totalPrice / totalQuantity / 100).toLocaleString(
       undefined,
       {
         maximumFractionDigits: 2,
