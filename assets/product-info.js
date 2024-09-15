@@ -140,7 +140,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const details = document.querySelector('.bsub-widget__sub-details-desc');
   if (details) {
-      details.textContent = "Ihr Abonnement wird automatisch erneuert. Sie können Lieferungen jederzeit überspringen oder Ihr Abonnement flexibel kündigen.";
+      const newDiv = document.createElement('div');
+      newDiv.textContent = "Ihr Abonnement wird automatisch erneuert. Sie können Lieferungen jederzeit überspringen oder Ihr Abonnement flexibel kündigen.";
+      newDiv.className = 'bsub-widget__custom-info';
+      details.parentNode.insertBefore(newDiv, details);
   }
 
   const branding = document.querySelector('.bsub-widget__branding');
