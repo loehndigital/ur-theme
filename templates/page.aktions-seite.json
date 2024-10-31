@@ -138,6 +138,23 @@
         "padding_bottom": 36
       }
     },
+    "17047516426d6978c6": {
+      "type": "apps",
+      "blocks": {
+        "08fb2e83-0d33-408c-9f90-e82ac1695e35": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "08fb2e83-0d33-408c-9f90-e82ac1695e35"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "44c7e7f4-7ddb-4307-a969-15baad4294e2": {
       "type": "featured-product",
       "blocks": {
@@ -169,12 +186,12 @@
         "icon_with_text_tiVzhy": {
           "type": "icon-with-text",
           "settings": {
-            "layout": "horizontal",
+            "layout": "vertical",
             "icon_1": "heart",
             "heading_1": "Heading",
-            "icon_2": "return",
+            "icon_2": "map_pin",
             "heading_2": "Heading",
-            "icon_3": "truck",
+            "icon_3": "leaf",
             "heading_3": "Heading"
           }
         },
@@ -221,23 +238,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "17047516426d6978c6": {
-      "type": "apps",
-      "blocks": {
-        "08fb2e83-0d33-408c-9f90-e82ac1695e35": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "08fb2e83-0d33-408c-9f90-e82ac1695e35"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "a8d90776-1601-4b6e-a71b-5b4e37148a70": {
@@ -785,10 +785,10 @@
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
-    "97650884-33fc-4e7c-869d-8f9067569932",
     "44c7e7f4-7ddb-4307-a969-15baad4294e2",
-    "17047516426d6978c6",
+    "97650884-33fc-4e7c-869d-8f9067569932",
     "a8d90776-1601-4b6e-a71b-5b4e37148a70",
+    "17047516426d6978c6",
     "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "335d088c-6103-46f1-b7c1-6f98419907f9",
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
