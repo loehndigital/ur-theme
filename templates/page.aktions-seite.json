@@ -61,8 +61,8 @@
         "text_4fxjXk"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
@@ -76,56 +76,56 @@
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_rich_text": "<h3>Regionale </h3><h3>& Natürliche Zutaten</h3>"
+            "icon_rich_text": "<p><strong>Regionale </strong></p><p><strong>& Natürliche Zutaten</strong></p>"
           }
         },
         "9a15e84e-d6c8-4db0-8561-44a53dc20311": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-cooking",
-            "icon_rich_text": "<h3>Nährstoffschonend<br/>Slow-Cooked</h3><h3></h3>"
+            "icon_rich_text": "<p><strong>Nährstoffschonend<br/>Slow-Cooked</strong></p><h3></h3>"
           }
         },
         "a42072a9-f8f7-4fe3-9802-fa9be0a428e5": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<h3>Hochwertiges</h3><h3>Muskelfleisch</h3>"
+            "icon_rich_text": "<p><strong>Hochwertiges</strong></p><p><strong>Muskelfleisch</strong></p>"
           }
         },
         "e90d7298-f09a-4ab6-8722-7a351141440d": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-fruit-bag",
-            "icon_rich_text": "<h3>Natürliche <br/>Vitamine</h3>"
+            "icon_rich_text": "<p><strong>Natürliche <br/>Vitamine</strong></p>"
           }
         },
         "62c72e7f-8499-4fb8-81d5-1e9b6a669297": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-no-animals-color",
-            "icon_rich_text": "<h3>Keine </h3><h3>Tierversuche</h3>"
+            "icon_rich_text": "<p><strong>Keine </strong></p><p><strong>Tierversuche</strong></p>"
           }
         },
         "55aa4584-6fce-425b-82ad-f8b44e9dd1d7": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-no-sugar-color",
-            "icon_rich_text": "<h3>Ohne Zucker</h3>"
+            "icon_rich_text": "<p><strong>Ohne Zucker</strong></p>"
           }
         },
         "c2ad6e8d-5e53-47f4-ada7-06d65a90e02c": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_rich_text": "<h3>Glutenfrei</h3>"
+            "icon_rich_text": "<p><strong>Glutenfrei</strong></p>"
           }
         },
         "0b53a0f0-37b0-4bf3-8fbd-6fb32275a275": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-no-chemicals-color",
-            "icon_rich_text": "<h3>Keine Zusätze </h3><h3>oder Chemie</h3>"
+            "icon_rich_text": "<p><strong>Keine Zusätze </strong></p><p><strong>oder Chemie</strong></p>"
           }
         }
       },
@@ -141,6 +141,53 @@
       ],
       "settings": {
         "color_scheme": "background-2"
+      }
+    },
+    "ur_image_with_text_F3F3Az": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "heading_KikXWq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_33cTLX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_a844jR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KikXWq",
+        "text_33cTLX",
+        "button_a844jR"
+      ],
+      "settings": {
+        "height": "adapt",
+        "image_crop": "crop",
+        "rounded_corners": "rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "5ca08cac-f6a9-4fab-b5d8-f4529413f78e": {
@@ -868,51 +915,6 @@
       "settings": {
         "collection": "nassfutter"
       }
-    },
-    "image_with_text_U4W4ee": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_kNBi3J": {
-          "type": "heading",
-          "settings": {
-            "heading": "Natürliche Qualität, die Vertrauen schafft",
-            "heading_size": "h1"
-          }
-        },
-        "text_44ThtA": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wir sind überzeugt: Gutes Futter kommt aus gutem Ursprung. Deshalb wählen wir für Uncle Rusty’s nur das Beste – naturbelassene Zutaten, sorgfältig abgestimmte Rezepturen und eine Qualität, die ohne Kompromisse auskommt. Dein Hund spürt den Unterschied – mit jeder Mahlzeit.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_awgJKh": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_kNBi3J",
-        "text_44ThtA",
-        "button_awgJKh"
-      ],
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -920,6 +922,7 @@
     "eac071c2-238f-4670-8009-1d7131150f7d",
     "rich_text_gkftxH",
     "a8d90776-1601-4b6e-a71b-5b4e37148a70",
+    "ur_image_with_text_F3F3Az",
     "5ca08cac-f6a9-4fab-b5d8-f4529413f78e",
     "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "335d088c-6103-46f1-b7c1-6f98419907f9",
@@ -934,7 +937,6 @@
     "804ea04b-e049-407f-9122-ee5bfe84f669",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
     "f1f9bde8-3512-40ee-9fee-69c992b5013e",
-    "b4180a2c-12e5-4022-93c8-ecbf5b428225",
-    "image_with_text_U4W4ee"
+    "b4180a2c-12e5-4022-93c8-ecbf5b428225"
   ]
 }
