@@ -39,34 +39,92 @@
       "settings": {
       }
     },
-    "rich_text_gkftxH": {
-      "type": "rich-text",
+    "97650884-33fc-4e7c-869d-8f9067569932": {
+      "type": "ur-image-with-text",
       "blocks": {
-        "heading_xfDC9H": {
+        "493ffee4-a861-450a-9d2e-a41f2da4d035": {
+          "type": "caption",
+          "settings": {
+            "caption": "WARUM UNCLE RUSTY'S",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Unsere Philosophie",
             "heading_size": "h1"
           }
         },
-        "text_4fxjXk": {
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Uncle Rusty’s ist wie ein gutes Zuhause für deinen Hund – natürlich, offen und voller Fürsorge. Jedes Rezept ist eine Einladung, deinen Hund mit dem Besten aus der Natur zu verwöhnen.</p>"
+            "text": "<p>Wir glauben, dass wahre Qualität in den Details liegt. Vom sorgfältigen Auswählen der Zutaten bis zur finalen Zubereitung, bei uns steht Authentizität im Vordergrund. Wir sind stolz darauf, ein Futter zu bieten, das frei von Kompromissen und voller Leidenschaft ist.</p>",
+            "text_style": "body"
+          }
+        },
+        "53b4d99e-ea7c-46e4-ae24-a67f5327f6a8": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-success",
+            "icon_text": "Perfekte Grundbasis",
+            "show_accordion": true,
+            "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. </p>"
+          }
+        },
+        "2b44ab65-25f6-4427-8e06-4d2f34be2f4f": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-search",
+            "icon_text": "Flexibel & beratend",
+            "show_accordion": true,
+            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. </p>"
+          }
+        },
+        "98472a5d-5cb8-4e01-bf21-22b07c755842": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-region-color",
+            "icon_text": "Natur pur aus der Region",
+            "show_accordion": true,
+            "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. </p>"
+          }
+        },
+        "ba258b7f-2517-42cd-aafe-cd13ca042163": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Maximale Nährstoffeffizienz",
+            "show_accordion": true,
+            "richtext": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann. </p>"
           }
         }
       },
       "block_order": [
-        "heading_xfDC9H",
-        "text_4fxjXk"
+        "493ffee4-a861-450a-9d2e-a41f2da4d035",
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-heading-1",
+        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-text-1",
+        "53b4d99e-ea7c-46e4-ae24-a67f5327f6a8",
+        "2b44ab65-25f6-4427-8e06-4d2f34be2f4f",
+        "98472a5d-5cb8-4e01-bf21-22b07c755842",
+        "ba258b7f-2517-42cd-aafe-cd13ca042163"
       ],
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "image": "shopify://shop_images/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_8c47e262-cd5b-4fed-bbf3-a6eba737d8d5.png",
+        "height": "medium",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "a8d90776-1601-4b6e-a71b-5b4e37148a70": {
@@ -141,53 +199,6 @@
       ],
       "settings": {
         "color_scheme": "background-2"
-      }
-    },
-    "ur_image_with_text_F3F3Az": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "heading_KikXWq": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_33cTLX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_a844jR": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_KikXWq",
-        "text_33cTLX",
-        "button_a844jR"
-      ],
-      "settings": {
-        "height": "adapt",
-        "image_crop": "crop",
-        "rounded_corners": "rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "5ca08cac-f6a9-4fab-b5d8-f4529413f78e": {
@@ -428,129 +439,10 @@
         "padding_bottom": 64
       }
     },
-    "97650884-33fc-4e7c-869d-8f9067569932": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "493ffee4-a861-450a-9d2e-a41f2da4d035": {
-          "type": "caption",
-          "settings": {
-            "caption": "WARUM UNCLE RUSTY'S",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Unsere Philosophie",
-            "heading_size": "h1"
-          }
-        },
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wir glauben, dass wahre Qualität in den Details liegt. Vom sorgfältigen Auswählen der Zutaten bis zur finalen Zubereitung, bei uns steht Authentizität im Vordergrund. Wir sind stolz darauf, ein Futter zu bieten, das frei von Kompromissen und voller Leidenschaft ist.</p>",
-            "text_style": "body"
-          }
-        },
-        "53b4d99e-ea7c-46e4-ae24-a67f5327f6a8": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-success",
-            "icon_text": "Perfekte Grundbasis",
-            "show_accordion": true,
-            "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. </p>"
-          }
-        },
-        "2b44ab65-25f6-4427-8e06-4d2f34be2f4f": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-search",
-            "icon_text": "Flexibel & beratend",
-            "show_accordion": true,
-            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. </p>"
-          }
-        },
-        "98472a5d-5cb8-4e01-bf21-22b07c755842": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-region-color",
-            "icon_text": "Natur pur aus der Region",
-            "show_accordion": true,
-            "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. </p>"
-          }
-        },
-        "ba258b7f-2517-42cd-aafe-cd13ca042163": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Maximale Nährstoffeffizienz",
-            "show_accordion": true,
-            "richtext": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann. </p>"
-          }
-        },
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Unsere Werte",
-            "button_link": "shopify://pages/unsere-ernahrungsphilosophie",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "493ffee4-a861-450a-9d2e-a41f2da4d035",
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-heading-1",
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-text-1",
-        "53b4d99e-ea7c-46e4-ae24-a67f5327f6a8",
-        "2b44ab65-25f6-4427-8e06-4d2f34be2f4f",
-        "98472a5d-5cb8-4e01-bf21-22b07c755842",
-        "ba258b7f-2517-42cd-aafe-cd13ca042163",
-        "template--18581235859720__97650884-33fc-4e7c-869d-8f9067569932-button-1"
-      ],
+    "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
+      "type": "product-swiper",
       "settings": {
-        "image": "shopify://shop_images/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_8c47e262-cd5b-4fed-bbf3-a6eba737d8d5.png",
-        "height": "medium",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "b352879d-09ca-41a1-afb6-79dd8d13b712": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "nassfutter",
-        "products_to_show": 6,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "collection": "nassfutter"
       }
     },
     "7418837f-c8e2-459d-bd86-d6dcdfe74136": {
@@ -908,21 +800,14 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
-      "type": "product-swiper",
-      "disabled": true,
-      "settings": {
-        "collection": "nassfutter"
-      }
     }
   },
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
-    "rich_text_gkftxH",
+    "97650884-33fc-4e7c-869d-8f9067569932",
     "a8d90776-1601-4b6e-a71b-5b4e37148a70",
-    "ur_image_with_text_F3F3Az",
+    "b4180a2c-12e5-4022-93c8-ecbf5b428225",
     "5ca08cac-f6a9-4fab-b5d8-f4529413f78e",
     "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "335d088c-6103-46f1-b7c1-6f98419907f9",
@@ -930,13 +815,10 @@
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
     "44c7e7f4-7ddb-4307-a969-15baad4294e2",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
-    "97650884-33fc-4e7c-869d-8f9067569932",
-    "b352879d-09ca-41a1-afb6-79dd8d13b712",
     "7418837f-c8e2-459d-bd86-d6dcdfe74136",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
     "804ea04b-e049-407f-9122-ee5bfe84f669",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
-    "f1f9bde8-3512-40ee-9fee-69c992b5013e",
-    "b4180a2c-12e5-4022-93c8-ecbf5b428225"
+    "f1f9bde8-3512-40ee-9fee-69c992b5013e"
   ]
 }

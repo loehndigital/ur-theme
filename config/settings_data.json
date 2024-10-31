@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/Uncle-Rustys_Black.svg",
+    "logo": "shopify://shop_images/Uncle-Rustys_Black.svg",
     "logo_width": 190,
-    "favicon": "shopify:\/\/shop_images\/Uncle-Rustys_Paw.svg",
+    "favicon": "shopify://shop_images/Uncle-Rustys_Paw.svg",
     "type_header_font": "montserrat_n4",
     "heading_scale": 100,
     "type_body_font": "montserrat_n4",
@@ -36,7 +45,7 @@
     "card_style": "card",
     "card_image_padding": 0,
     "card_text_alignment": "left",
-    "card_color_scheme": "background-1",
+    "card_color_scheme": "accent-1",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
     "card_corner_radius": 24,
@@ -93,18 +102,18 @@
     "drawer_shadow_horizontal_offset": 0,
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
-    "badge_position": "top right",
+    "badge_position": "top left",
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
-    "brand_image": "shopify:\/\/shop_images\/Uncle-Rustys_Black.png",
-    "social_facebook_link": "https:\/\/www.facebook.com\/unclerustysshop",
-    "social_instagram_link": "https:\/\/www.instagram.com\/unclerustysshop\/",
-    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCn3qYay5ow0ZR_z5RUVKnmw",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@unclerusty.de",
+    "brand_image": "shopify://shop_images/Uncle-Rustys_Black.png",
+    "social_facebook_link": "https://www.facebook.com/unclerustysshop",
+    "social_instagram_link": "https://www.instagram.com/unclerustysshop/",
+    "social_youtube_link": "https://www.youtube.com/channel/UCn3qYay5ow0ZR_z5RUVKnmw",
+    "social_tiktok_link": "https://www.tiktok.com/@unclerusty.de",
     "social_twitter_link": "",
     "social_snapchat_link": "",
-    "social_pinterest_link": "https:\/\/www.pinterest.de\/unclerustysshop",
+    "social_pinterest_link": "https://www.pinterest.de/unclerustysshop",
     "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
@@ -138,13 +147,13 @@
     ],
     "blocks": {
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify://apps/judge-me-product-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {
         }
       },
       "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
           "button_color": "#000000",
@@ -156,25 +165,25 @@
         }
       },
       "5557296251606798448": {
-        "type": "shopify:\/\/apps\/bold-subscriptions\/blocks\/bsub-embed\/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
+        "type": "shopify://apps/bold-subscriptions/blocks/bsub-embed/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
         "disabled": false,
         "settings": {
         }
       },
       "2153490007123654574": {
-        "type": "shopify:\/\/apps\/consentmo-gdpr\/blocks\/gdpr_cookie_consent\/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
         "disabled": false,
         "settings": {
         }
       },
       "4677439793077996495": {
-        "type": "shopify:\/\/apps\/pixee-multi-facebook-pixels\/blocks\/facebook-pixel\/61bbb1d9-d4be-4d08-879a-ee3ccb59f558",
+        "type": "shopify://apps/pixee-multi-facebook-pixels/blocks/facebook-pixel/61bbb1d9-d4be-4d08-879a-ee3ccb59f558",
         "disabled": false,
         "settings": {
         }
       },
       "1513253815146976218": {
-        "type": "shopify:\/\/apps\/omnisend-email-marketing-sms\/blocks\/app-embed\/44704aa2-794f-4c5d-8c8e-039c841158e9",
+        "type": "shopify://apps/omnisend-email-marketing-sms/blocks/app-embed/44704aa2-794f-4c5d-8c8e-039c841158e9",
         "disabled": false,
         "settings": {
         }
