@@ -31,12 +31,108 @@
             "theme_mode": "light",
             "blur": "no-blur"
           }
+        },
+        "hero_slide_jT4tGa": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_text": "<h1>Your Heading Here</h1><p>Your description here.</p>",
+            "button_link": "",
+            "button_label": "Learn More",
+            "theme_mode": "light",
+            "blur": "no-blur"
+          }
         }
       },
       "block_order": [
-        "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1"
+        "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1",
+        "hero_slide_jT4tGa"
       ],
       "settings": {
+      }
+    },
+    "44c7e7f4-7ddb-4307-a969-15baad4294e2": {
+      "type": "featured-product",
+      "blocks": {
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-title-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-price-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "text_dP6Eah": {
+          "type": "text",
+          "settings": {
+            "text": "Du bist auf der Suche nach einer chemiefreien und komplett naturbelassenen Ernährung für Deinen Hund? Dann freut es uns, dass du auf uns aufmerksam geworden bist! Fast wie selbst gekocht sind unsere Menüs nicht nur tierisch lecker, sondern versorgen Deinen Vierbeiner mit hochwertigen Inhaltsstoffen.",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_tiVzhy": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-variant_picker-1": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-quantity_selector-1": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-text-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-title-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-price-1",
+        "text_dP6Eah",
+        "icon_with_text_tiVzhy",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-variant_picker-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-quantity_selector-1",
+        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-buy_buttons-1"
+      ],
+      "settings": {
+        "product": "tasterpack",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "right",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "97650884-33fc-4e7c-869d-8f9067569932": {
@@ -127,6 +223,23 @@
         "padding_bottom": 36
       }
     },
+    "17047516426d6978c6": {
+      "type": "apps",
+      "blocks": {
+        "08fb2e83-0d33-408c-9f90-e82ac1695e35": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "08fb2e83-0d33-408c-9f90-e82ac1695e35"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "a8d90776-1601-4b6e-a71b-5b4e37148a70": {
       "type": "icon-row",
       "blocks": {
@@ -201,46 +314,6 @@
         "color_scheme": "background-2"
       }
     },
-    "5ca08cac-f6a9-4fab-b5d8-f4529413f78e": {
-      "type": "collection-list",
-      "blocks": {
-        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "nassfutter"
-          }
-        },
-        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "hundesnacks"
-          }
-        },
-        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pakete"
-          }
-        }
-      },
-      "block_order": [
-        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-1",
-        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-2",
-        "template--18581235859720__5ca08cac-f6a9-4fab-b5d8-f4529413f78e-featured_collection-3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1": {
       "type": "full-width-banner",
       "settings": {
@@ -268,23 +341,6 @@
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "17047516426d6978c6": {
-      "type": "apps",
-      "blocks": {
-        "08fb2e83-0d33-408c-9f90-e82ac1695e35": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "08fb2e83-0d33-408c-9f90-e82ac1695e35"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "768a63b1-59d6-41f1-abe2-598806ac7d91": {
@@ -330,76 +386,6 @@
         "padding_bottom": 52
       }
     },
-    "44c7e7f4-7ddb-4307-a969-15baad4294e2": {
-      "type": "featured-product",
-      "blocks": {
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-title-1": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-price-1": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-variant_picker-1": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-quantity_selector-1": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-buy_buttons-1": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-share-1": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-text-1",
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-title-1",
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-price-1",
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-variant_picker-1",
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-quantity_selector-1",
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-buy_buttons-1",
-        "template--18581235859720__44c7e7f4-7ddb-4307-a969-15baad4294e2-share-1"
-      ],
-      "settings": {
-        "product": "tasterpack",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -437,12 +423,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 64
-      }
-    },
-    "b4180a2c-12e5-4022-93c8-ecbf5b428225": {
-      "type": "product-swiper",
-      "settings": {
-        "collection": "nassfutter"
       }
     },
     "7418837f-c8e2-459d-bd86-d6dcdfe74136": {
@@ -805,15 +785,13 @@
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
+    "44c7e7f4-7ddb-4307-a969-15baad4294e2",
     "97650884-33fc-4e7c-869d-8f9067569932",
+    "17047516426d6978c6",
     "a8d90776-1601-4b6e-a71b-5b4e37148a70",
-    "b4180a2c-12e5-4022-93c8-ecbf5b428225",
-    "5ca08cac-f6a9-4fab-b5d8-f4529413f78e",
     "6c6b470f-f37f-4fb8-9b5d-888b6b1d75c1",
     "335d088c-6103-46f1-b7c1-6f98419907f9",
-    "17047516426d6978c6",
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
-    "44c7e7f4-7ddb-4307-a969-15baad4294e2",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
     "7418837f-c8e2-459d-bd86-d6dcdfe74136",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
