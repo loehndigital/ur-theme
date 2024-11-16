@@ -268,8 +268,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector('.free-400g-can-count').innerHTML = can400gFreeCount;
     document.querySelector('.free-200g-cookies-count').innerHTML = cookies200gFreeCount;
+
+    applyQuantityBreakCoupons(totalQuantity);
   }
 
+  async function applyQuantityBreakCoupons(totalQuantity) {
+          // Then apply any quantity break discount codes if they exist
+          if (window.ur_promo_breaks && window.ur_promo_breaks.length > 0) {
+            
+            // Sort promo breaks by target value descending to apply highest breaks first
+            const applicableBreaks = window.ur_promo_breaks
+              .filter(promo => promo.target <= totalQuantity)
+              .sort((a, b) => b.target - a.target);
+            
+            for (const promo of applicableBreaks) {
+              if (promo.coupon) {
+                console.log(`Applying coupon: ${promo.coupon} for break target: ${promo.target}`);
+                await fetch(`/discount/${promo.coupon}`);
+              }
+      }
+    }
+  }
 
   //Send Cart Form
   document
@@ -280,23 +299,25 @@ document.addEventListener('DOMContentLoaded', function () {
       
     });
 
-  function handleAddToCart() {
+  async function handleAddToCart() {
     itemsToAdd = getVariantItems();
 
     const data = {
       items: itemsToAdd,
     };
 
-    console.log(data);
-    if(can400gFreeCountAvailable > 0) {
+    // Only check for free cans if we haven't already added cookies
+    if(can400gFreeCountAvailable > 0 && additionalItems.length === 0) {
       handle400gModal.openModal(can400gFreeCountAvailable);
       return;
     }
-
-    if(cookies200gFreeCountAvailable > 0) {
-      //TODO: Open 200g cookies modal
+    
+    // Only check for free cookies if we haven't already added them
+    if(cookies200gFreeCountAvailable > 0 && !additionalItems.some(item => item.isCookie)) {
+      handleCookiesModal.openModal(cookies200gFreeCountAvailable);
+      return;
     }
-    console.log(data);
+
     if(additionalItems.length > 0) {
       for(let i = 0; i < additionalItems.length; i++) {
         data.items.push({
@@ -307,32 +328,42 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
     }
-    console.log(data);
 
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Requested-With': 'XMLHttpRequest',
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          console.log(response)
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        window.location.href = '/cart';
-      })
-      .catch((error) => {
-        console.error(
-          'There has been a problem with your fetch operation: ',
-          error,
-        );
+    try {
+
+
+
+      // Finally add items to cart
+      const response = await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        body: JSON.stringify(data),
       });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      // Force cart update to ensure discounts are visible
+      await fetch('/cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          updates: {},
+        }),
+      });
+
+      // Redirect to cart
+      window.location.href = '/cart';
+
+    } catch (error) {
+      console.error('Error during cart operations:', error);
+    }
   }
 
   function decrement(e) {
@@ -500,6 +531,123 @@ document.addEventListener('DOMContentLoaded', function () {
 
   checkForRecommendation();
 
+  // Add this new cookies modal handler before the existing handle400gModal code
+  const handleCookiesModal = (() => {
+    const modal = document.getElementById('ur-cookies-modal');
+    if (!modal) return;
+
+    const modalCloseBtn = modal.querySelector('.modal-close-btn');
+    const modalApplyBtn = modal.querySelector('.modal-apply-btn');
+    let remainingSelections = 0;
+    
+    // Add counter element after the modal title
+    const counterDiv = document.createElement('div');
+    counterDiv.className = 'xtext-lg xmb-4 xfont-bold';
+    modal.querySelector('h2').after(counterDiv);
+    
+    function updateCounter() {
+      const currentTotal = Array.from(modal.querySelectorAll('.cookies-modal-variant-quantity'))
+        .reduce((sum, input) => sum + parseInt(input.value || 0), 0);
+      const remaining = remainingSelections - currentTotal;
+      
+      counterDiv.textContent = `Noch ${remaining} von ${remainingSelections} Packungen verfügbar`;
+      
+      // Disable/enable increment buttons based on remaining cookies
+      modal.querySelectorAll('.cookies-modal-quantity-btn[data-action="increment"]').forEach(btn => {
+        if (remaining <= 0) {
+          btn.disabled = true;
+          btn.classList.add('xopacity-50', 'xcursor-not-allowed');
+        } else {
+          btn.disabled = false;
+          btn.classList.remove('xopacity-50', 'xcursor-not-allowed');
+        }
+      });
+    }
+    
+    function openModal(freeCookiesCount) {
+      remainingSelections = freeCookiesCount;
+      
+      // Reset all quantities to 0
+      modal.querySelectorAll('.cookies-modal-variant-quantity').forEach(input => {
+        input.value = 0;
+      });
+      
+      updateCounter();
+      modal.classList.remove('xhidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('xhidden');
+      document.body.style.overflow = '';
+    }
+
+    function handleQuantityChange(e) {
+      const btn = e.target;
+      const input = btn.closest('.custom-number-input').querySelector('.cookies-modal-variant-quantity');
+      const currentValue = parseInt(input.value || 0);
+      
+      if (btn.dataset.action === 'increment' && !btn.disabled) {
+        input.value = currentValue + 1;
+      } else if (btn.dataset.action === 'decrement' && currentValue > 0) {
+        input.value = currentValue - 1;
+      }
+      
+      updateCounter();
+    }
+
+    // Event Listeners
+    modalCloseBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    modal.querySelectorAll('.cookies-modal-quantity-btn').forEach(btn => {
+      btn.addEventListener('click', handleQuantityChange);
+    });
+
+    // Also handle direct input changes
+    modal.querySelectorAll('.cookies-modal-variant-quantity').forEach(input => {
+      input.addEventListener('change', () => {
+        const currentTotal = Array.from(modal.querySelectorAll('.cookies-modal-variant-quantity'))
+          .reduce((sum, input) => sum + parseInt(input.value || 0), 0);
+        
+        if (currentTotal > remainingSelections) {
+          input.value = Math.max(0, parseInt(input.value) - (currentTotal - remainingSelections));
+        }
+        
+        updateCounter();
+      });
+    });
+
+    modalApplyBtn.addEventListener('click', () => {
+      console.log('apply btn clicked');
+      const selectedVariants = [];
+      
+      modal.querySelectorAll('.product-item').forEach(product => {
+        const quantity = parseInt(product.querySelector('.cookies-modal-variant-quantity').value || 0);
+        if (quantity > 0) {
+          const variantId = product.querySelector('.variant-id').value;
+          selectedVariants.push({
+            variantId: variantId,
+            quantity: quantity,
+            isCookie: true  // Add this flag to identify cookie items
+          });
+          cookies200gFreeCountAvailable = cookies200gFreeCountAvailable - quantity;
+        }
+      });
+      
+      additionalItems = [...additionalItems, ...selectedVariants];
+      handleAddToCart();
+      closeModal();
+    });
+
+    return { openModal };
+  })();
+
+  // Existing handle400gModal code continues below...
+
   // Free 400g Modal Handler
   const handle400gModal = (() => {
     const modal = document.getElementById('ur-400g-modal');
@@ -603,9 +751,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
       
-      additionalItems = selectedVariants;
-
-      handleAddToCart();
+      additionalItems = [...additionalItems, ...selectedVariants];
+      if (cookies200gFreeCountAvailable < 0) {
+        closeModal();
+        handleCookiesModal.openModal(cookies200gFreeCountAvailable);
+      } else {
+        handleAddToCart();
+        closeModal();
+      }
     });
 
     return { openModal };

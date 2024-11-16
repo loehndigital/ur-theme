@@ -362,7 +362,7 @@
                         data-action='decrement'
                         class='  xh-full  xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none'
                       >
-                        <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>−</span>
+                        <span class='xpx-4 xm-auto xtext-4xl xfont-bold'></span>
                       </button>
                       <input
                         id='quantity_{{ variant.id }}'
@@ -550,6 +550,90 @@
         </div>
       {% endfor %}
     </div>
+    <div class="xmt-8 xflex xjustify-end">
+      <button type="button" class="button button--primary modal-apply-btn">Übernehmen</button>
+    </div>
+  </div>
+</div>
+
+<!-- Replace the existing cookies modal with this updated version -->
+<div id="ur-cookies-modal" class="xfixed xtop-0 xleft-0 xw-full xh-full xbg-black xbg-opacity-50 xhidden xz-50 xflex xitems-center xjustify-center">
+  <div class="xbg-white xrounded-3xl xp-8 xmax-w-4xl xw-full xmax-h-[90vh] xoverflow-y-auto xrelative">
+    <button type="button" class="modal-close-btn xabsolute xtop-4 xright-4 xtext-2xl xfont-bold">&times;</button>
+    <h2 class="xtext-3xl xfont-bold xmb-8">Wähle deine kostenlosen Cookies</h2>
+    
+    {% assign cookies_collection = collections[section.settings.cookies_collection] %}
+    {% if cookies_collection.products.size > 0 %}
+      <div class="modal-collection-select">
+        {% for product in cookies_collection.products %}
+          {%- liquid
+            assign custom_classes_product = ''
+            assign mod2 = forloop.index | modulo: 2
+            if mod2 != 0
+              assign custom_classes_product = custom_classes_product | append: ' xbg-lightbeige second'
+            endif
+          -%}
+
+          <div class="product-item ur-product xp-4 {{ custom_classes_product }} xrounded-3xl xoverflow-hidden last-of-type:xborder-none">
+            <div class="variant ur-variant xflex xgap-4 xitems-center">
+              <div class="variant-img xrounded-lg xoverflow-hidden">
+                {% if product.featured_media != blank %}
+                  <img
+                    class="xw-16 md:xw-auto xobject-contain"
+                    style="height: 65px; max-width: 400px;"
+                    height="100"
+                    width="auto"
+                    loading="lazy"
+                    src="{{ product.featured_media | img_url: 'medium' }}"
+                    alt="{{ product.title | escape }}"
+                  >
+                {% endif %}
+              </div>
+              <div class="variant-info xflex xgap-4 xjustify-between xw-full xitems-center">
+                <h2 class="xfont-bold xtext-3xl xw-full">
+                  {{ product.title | split: ' ' | first }}
+                  <br>
+                  <span class="xfont-bold xtext-xl">
+                    {{- product.title | split: ' ' | slice: 1, 100 | join: ' ' -}}
+                  </span>
+                </h2>
+
+                <input type="hidden" class="variant-id" value="{{ product.first_available_variant.id }}">
+                <div class="custom-number-input xh-20 xw-64">
+                  <div class="xflex xflex-row xh-20 xw-full xrounded-lg xrelative xbg-transparent xmt-1">
+                    <button
+                      type="button"
+                      data-action="decrement"
+                      class="cookies-modal-quantity-btn xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none"
+                    >
+                      <span class="xpx-4 xm-auto xtext-4xl xfont-bold">−</span>
+                    </button>
+                    <input
+                      type="number"
+                      class="cookies-modal-variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full xfont-semibold xtext-md hover:xtext-black focus:xtext-black md:xtext-basecursor-default xflex xitems-center xtext-black xoutline-none {{ custom_classes_product }} xbg-white"
+                      name="custom-input-number"
+                      value="0"
+                      min="0"
+                      max="1"
+                    >
+                    <button
+                      type="button"
+                      data-action="increment"
+                      class="cookies-modal-quantity-btn xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer"
+                    >
+                      <span class="xpx-4 xm-auto xtext-4xl xfont-bold">+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No products found in cookies collection</p>
+    {% endif %}
+    
     <div class="xmt-8 xflex xjustify-end">
       <button type="button" class="button button--primary modal-apply-btn">Übernehmen</button>
     </div>

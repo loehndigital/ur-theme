@@ -1259,6 +1259,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.xtext-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(130 161 135 / var(--tw-text-opacity, 1));
+}
+
+.xtext-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(212 91 57 / var(--tw-text-opacity, 1));
+}
+
 .xline-through {
   text-decoration-line: line-through;
 }
