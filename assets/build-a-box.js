@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let currentPlan = '';
   let quantityBreakTarget = parseInt(window.ur_quantity_break_target);
+  let can400gFreeCount = 0;
+  let cookies200gFreeCount = 0;
 
   function getParameterByName(name, url = window.location.href) {
     let params = new URL(url).searchParams;
@@ -111,10 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let singleItemPrice = 0;
     let unitPrice = 0;
 
-    let itemCount = 0;
-
+    // Calculate totals from items
     for (let i = 0; i < itemsToAdd.length; i++) {
-
       const item = itemsToAdd[i];
       const variant = window.ur_subscription_variants[item.id];
       let itemPriceOriginal = variant.price;
@@ -127,76 +127,139 @@ document.addEventListener('DOMContentLoaded', function () {
         unitPrice = variant.unit_price;
       }
 
-      if (currentPlan) {
-        if (currentPlan != '') {
-          for (let j = 0; j < variant.selling_plan_allocations.length; j++) {
-            const plan = variant.selling_plan_allocations[j];
-            if (plan.selling_plan_id == currentPlan) {
-              itemPrice = plan.price;
-              if (variant.option1 === window.ur_selected_variant_option) {
-                singleItemPrice = plan.price;
-              }
+      if (currentPlan && currentPlan !== '') {
+        for (let j = 0; j < variant.selling_plan_allocations.length; j++) {
+          const plan = variant.selling_plan_allocations[j];
+          if (plan.selling_plan_id == currentPlan) {
+            itemPrice = plan.price;
+            if (variant.option1 === window.ur_selected_variant_option) {
+              singleItemPrice = plan.price;
             }
           }
         }
       }
-      totalPriceOriginal =
-        totalPriceOriginal + itemPriceOriginal * item.quantity;
+      
+      totalPriceOriginal = totalPriceOriginal + itemPriceOriginal * item.quantity;
       totalPrice = totalPrice + itemPrice * item.quantity;
       if (item.collection === 'main') {
         totalQuantity = totalQuantity + parseInt(item.quantity);
       }
-
-  
     }
 
-    console.log("TOTAL QUANTITY: ", totalQuantity);
+    // Handle promo breaks if they exist
+    if (window.ur_promo_breaks && window.ur_promo_breaks.length > 0) {
+      // Sort promo breaks by target value descending
+      const sortedPromoBreaks = [...window.ur_promo_breaks];
+      
+      // Find the next applicable promo break
+      const nextPromoBreak = sortedPromoBreaks.find(promo => promo.target > totalQuantity);
+      const currentPromoBreak = sortedPromoBreaks.find(promo => promo.target <= totalQuantity);
+      const allPrevPromoBreaks = sortedPromoBreaks.filter(promo => promo.target <= totalQuantity);
 
-    const quantityBreakCounter = quantityBreakTarget - totalQuantity;
-    if (quantityBreakCounter > 0) {
-      quantityBreakCounterElement.innerHTML = quantityBreakCounter;
-      const percent = Math.floor((totalQuantity / quantityBreakTarget) * 100);
-      quantityBreakProgressBar.style.width = percent + '%';
-      quantityBreakTargetElement.classList.remove('xhidden');
-      quantityBreakAppliedElement.classList.add('xhidden');
+      // console.log("sortedPromoBreaks", sortedPromoBreaks);
+      // console.log("nextPromoBreak", nextPromoBreak);
+      // console.log("currentPromoBreak", currentPromoBreak);
+      // console.log("allPrevPromoBreaks", allPrevPromoBreaks);
+
+      can400gFreeCount = 0;
+      cookies200gFreeCount = 0;
+      for (let i = 0; i < allPrevPromoBreaks.length; i++) {
+        const promo = allPrevPromoBreaks[i];
+        if (promo.couponType === 'percent_discount' && promo.percentDiscount) {
+          totalPrice = totalPrice - (totalPrice * (promo.percentDiscount / 100));
+        } else if (promo.couponType === '400g_can_free') {
+          can400gFreeCount++;
+        } else if (promo.couponType === '200g_cookies_free') {
+          cookies200gFreeCount++;
+        }
+      }
+
+      if (nextPromoBreak) {
+        // Show progress towards next break
+        const quantityBreakCounter = nextPromoBreak.target - totalQuantity;
+        quantityBreakCounterElement.innerHTML = quantityBreakCounter;
+        const percent = Math.floor((totalQuantity / nextPromoBreak.target) * 100);
+        quantityBreakProgressBar.style.width = percent + '%';
+        quantityBreakTargetElement.classList.remove('xhidden');
+        quantityBreakAppliedElement.classList.add('xhidden');
+        
+        // Update the target text - replace {COUNTER} with actual value
+        console.log(nextPromoBreak.text);
+        console.log(nextPromoBreak);
+        let targetText = nextPromoBreak.text || `Füge ${quantityBreakCounter} Dosen hinzu um weitere 5% zu sparen!`;
+        targetText = targetText.replace('{COUNTER}', quantityBreakCounter);
+        console.log(targetText);
+        
+        const textContainer = document.querySelector('.quantity-break-text');
+        console.log(textContainer);
+        if (textContainer) {
+          textContainer.innerHTML = targetText;
+        }
+      } else if (currentPromoBreak) {
+        // Highest break reached
+        quantityBreakTargetElement.classList.add('xhidden');
+        quantityBreakAppliedElement.classList.remove('xhidden');
+        
+        
+      }
     } else {
-      quantityBreakTargetElement.classList.add('xhidden');
-      quantityBreakAppliedElement.classList.remove('xhidden');
-      totalPrice = totalPrice - totalPrice * 0.05;
+      // Fallback to original behavior if no promo breaks configured
+      const quantityBreakCounter = quantityBreakTarget - totalQuantity;
+      if (quantityBreakCounter > 0) {
+        quantityBreakCounterElement.innerHTML = quantityBreakCounter;
+        const percent = Math.floor((totalQuantity / quantityBreakTarget) * 100);
+        quantityBreakProgressBar.style.width = percent + '%';
+        quantityBreakTargetElement.classList.remove('xhidden');
+        quantityBreakAppliedElement.classList.add('xhidden');
+      } else {
+        quantityBreakTargetElement.classList.add('xhidden');
+        quantityBreakAppliedElement.classList.remove('xhidden');
+        totalPrice = totalPrice - totalPrice * 0.05;
+      }
     }
 
+    // Update display elements
     priceTotalElement.innerHTML = (totalPrice / 100).toLocaleString(undefined, {
       maximumFractionDigits: 2,
       minimumFractionDigits: 2,
     });
 
-    console.log(totalPrice)
-
     if (totalPrice != totalPriceOriginal) {
       priceTotalCompareAtContainer.classList.remove('xhidden');
-      priceTotalCompareAtElement.innerHTML = (
-        totalPriceOriginal / 100
-      ).toLocaleString(undefined, {
+      priceTotalCompareAtElement.innerHTML = (totalPriceOriginal / 100).toLocaleString(undefined, {
         maximumFractionDigits: 2,
         minimumFractionDigits: 2,
       });
     } else {
       priceTotalCompareAtContainer.classList.add('xhidden');
     }
+
     quantityTotalElement.innerHTML = totalQuantity;
-    singleItemPriceElement.innerHTML = (totalPrice / totalQuantity / 100).toLocaleString(
-      undefined,
-      {
-        maximumFractionDigits: 2,
-        minimumFractionDigits: 2,
-      },
-    );
+    singleItemPriceElement.innerHTML = (totalPrice / totalQuantity / 100).toLocaleString(undefined, {
+      maximumFractionDigits: 2,
+      minimumFractionDigits: 2,
+    });
 
     let unitPriceFormat = (unitPrice / 100).toLocaleString(undefined, {
       maximumFractionDigits: 2,
       minimumFractionDigits: 2,
     });
     unitPriceDisplayElement.innerHTML = unitPriceFormat;
+
+    if (can400gFreeCount > 0) {
+      document.querySelector('.free-400g-can').classList.remove('xhidden');
+    } else {
+      document.querySelector('.free-400g-can').classList.add('xhidden');
+    }
+
+    if (cookies200gFreeCount > 0) {
+      document.querySelector('.free-200g-cookies').classList.remove('xhidden');
+    } else {
+      document.querySelector('.free-200g-cookies').classList.add('xhidden');
+    }
+
+    document.querySelector('.free-400g-can-count').innerHTML = can400gFreeCount;
+    document.querySelector('.free-200g-cookies-count').innerHTML = cookies200gFreeCount;
   }
 
 
