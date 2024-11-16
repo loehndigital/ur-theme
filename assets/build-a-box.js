@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let quantityBreakTarget = parseInt(window.ur_quantity_break_target);
   let can400gFreeCount = 0;
   let cookies200gFreeCount = 0;
+  let can400gFreeCountAvailable = 0;
+  let cookies200gFreeCountAvailable = 0;
+  let additionalItems = [];
 
   function getParameterByName(name, url = window.location.href) {
     let params = new URL(url).searchParams;
@@ -81,7 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function getVariantItems() {
-    const variantElements = document.getElementsByClassName('variant');
+    // Only select variants from the main collection, not from the modal
+    const variantElements = document.querySelectorAll('.main-collection-select .variant, .additives-collection-select .variant');
     let itemsToAdd = [];
 
     for (let i = 0; i < variantElements.length; i++) {
@@ -163,14 +167,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
       can400gFreeCount = 0;
       cookies200gFreeCount = 0;
+      can400gFreeCountAvailable = 0;
+      cookies200gFreeCountAvailable = 0;
       for (let i = 0; i < allPrevPromoBreaks.length; i++) {
         const promo = allPrevPromoBreaks[i];
         if (promo.couponType === 'percent_discount' && promo.percentDiscount) {
           totalPrice = totalPrice - (totalPrice * (promo.percentDiscount / 100));
         } else if (promo.couponType === '400g_can_free') {
           can400gFreeCount++;
+          can400gFreeCountAvailable++;
         } else if (promo.couponType === '200g_cookies_free') {
           cookies200gFreeCount++;
+          cookies200gFreeCountAvailable++;
         }
       }
 
@@ -268,40 +276,64 @@ document.addEventListener('DOMContentLoaded', function () {
     .getElementById('add-box-to-cart-form')
     .addEventListener('submit', function (event) {
       event.preventDefault();
-
-      itemsToAdd = getVariantItems();
-
-      const data = {
-        items: itemsToAdd,
-      };
-
-      console.log(data);
-
-      fetch('/cart/add.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest',
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            console.log(response)
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then((data) => {
-          window.location.href = '/cart';
-        })
-        .catch((error) => {
-          console.error(
-            'There has been a problem with your fetch operation: ',
-            error,
-          );
-        });
+      handleAddToCart();
+      
     });
+
+  function handleAddToCart() {
+    itemsToAdd = getVariantItems();
+
+    const data = {
+      items: itemsToAdd,
+    };
+
+    console.log(data);
+    if(can400gFreeCountAvailable > 0) {
+      handle400gModal.openModal(can400gFreeCountAvailable);
+      return;
+    }
+
+    if(cookies200gFreeCountAvailable > 0) {
+      //TODO: Open 200g cookies modal
+    }
+    console.log(data);
+    if(additionalItems.length > 0) {
+      for(let i = 0; i < additionalItems.length; i++) {
+        data.items.push({
+          id: additionalItems[i].variantId,
+          quantity: additionalItems[i].quantity,
+          selling_plan: '',
+          collection: '',
+        });
+      }
+    }
+    console.log(data);
+
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          console.log(response)
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        window.location.href = '/cart';
+      })
+      .catch((error) => {
+        console.error(
+          'There has been a problem with your fetch operation: ',
+          error,
+        );
+      });
+  }
 
   function decrement(e) {
     const btn = e.target.parentNode.parentElement.querySelector(
@@ -467,4 +499,117 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   checkForRecommendation();
+
+  // Free 400g Modal Handler
+  const handle400gModal = (() => {
+    const modal = document.getElementById('ur-400g-modal');
+    if (!modal) return;
+
+    const modalCloseBtn = modal.querySelector('.modal-close-btn');
+    const modalApplyBtn = modal.querySelector('.modal-apply-btn');
+    let remainingSelections = 0;
+    
+    // Add counter element after the modal title
+    const counterDiv = document.createElement('div');
+    counterDiv.className = 'xtext-lg xmb-4 xfont-bold';
+    modal.querySelector('h2').after(counterDiv);
+    
+    function updateCounter() {
+      const currentTotal = Array.from(modal.querySelectorAll('.modal-variant-quantity'))
+        .reduce((sum, input) => sum + parseInt(input.value || 0), 0);
+      const remaining = remainingSelections - currentTotal;
+      
+      counterDiv.textContent = `Noch ${remaining} von ${remainingSelections} Dosen verfügbar`;
+      
+      // Disable/enable increment buttons based on remaining cans
+      modal.querySelectorAll('.modal-quantity-btn[data-action="increment"]').forEach(btn => {
+        if (remaining <= 0) {
+          btn.disabled = true;
+          btn.classList.add('xopacity-50', 'xcursor-not-allowed');
+        } else {
+          btn.disabled = false;
+          btn.classList.remove('xopacity-50', 'xcursor-not-allowed');
+        }
+      });
+    }
+    
+    function openModal(freeCansCount) {
+      remainingSelections = freeCansCount;
+      
+      // Reset all quantities to 0
+      modal.querySelectorAll('.modal-variant-quantity').forEach(input => {
+        input.value = 0;
+      });
+      
+      updateCounter();
+      modal.classList.remove('xhidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('xhidden');
+      document.body.style.overflow = '';
+    }
+
+    function handleQuantityChange(e) {
+      const btn = e.target;
+      const input = btn.closest('.custom-number-input').querySelector('.modal-variant-quantity');
+      const currentValue = parseInt(input.value || 0);
+      
+      if (btn.dataset.action === 'increment' && !btn.disabled) {
+        input.value = currentValue + 1;
+      } else if (btn.dataset.action === 'decrement' && currentValue > 0) {
+        input.value = currentValue - 1;
+      }
+      
+      updateCounter();
+    }
+
+    // Event Listeners
+    modalCloseBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    modal.querySelectorAll('.modal-quantity-btn').forEach(btn => {
+      btn.addEventListener('click', handleQuantityChange);
+    });
+
+    // Also handle direct input changes
+    modal.querySelectorAll('.modal-variant-quantity').forEach(input => {
+      input.addEventListener('change', () => {
+        const currentTotal = Array.from(modal.querySelectorAll('.modal-variant-quantity'))
+          .reduce((sum, input) => sum + parseInt(input.value || 0), 0);
+        
+        if (currentTotal > remainingSelections) {
+          input.value = Math.max(0, parseInt(input.value) - (currentTotal - remainingSelections));
+        }
+        
+        updateCounter();
+      });
+    });
+
+    modalApplyBtn.addEventListener('click', () => {
+      const selectedVariants = [];
+      modal.querySelectorAll('.ur-variant').forEach(variant => {
+        const quantity = parseInt(variant.querySelector('.modal-variant-quantity').value || 0);
+        if (quantity > 0) {
+          selectedVariants.push({
+            variantId: variant.querySelector('.variant-id').value,
+            quantity: quantity
+          });
+          can400gFreeCountAvailable = can400gFreeCountAvailable - quantity;
+        }
+      });
+      
+      additionalItems = selectedVariants;
+
+      handleAddToCart();
+    });
+
+    return { openModal };
+  })();
+
+
 });

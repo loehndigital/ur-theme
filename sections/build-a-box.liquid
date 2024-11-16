@@ -244,11 +244,10 @@
                     </div>
                   </div>
                   <script>
-                    // With the above scripts loaded, you can call `tippy()` with a CSS
-                    // selector and a `content` prop:
                     document.addEventListener('DOMContentLoaded', function () {
+                      const content = `{{content_information | metafield_tag }}`;
                       tippy('.variant-info-{{variant.id}}', {
-                        content: '{{content_information | metafield_tag }}',
+                        content: content,
                         allowHTML: true,
                         interactive: true,
                         theme: 'unclerustys',
@@ -466,6 +465,97 @@
   </form>
 </div>
 
+<!-- Modal markup - outside the page-width div -->
+<div id="ur-400g-modal" class="xfixed xtop-0 xleft-0 xw-full xh-full xbg-black xbg-opacity-50 xhidden xz-50 xflex xitems-center xjustify-center">
+  <div class="xbg-white xrounded-3xl xp-8 xmax-w-4xl xw-full xmax-h-[90vh] xoverflow-y-auto xrelative">
+    <button type="button" class="modal-close-btn xabsolute xtop-4 xright-4 xtext-2xl xfont-bold">&times;</button>
+    <h2 class="xtext-3xl xfont-bold xmb-8">Wähle deine kostenlosen 400g Dosen</h2>
+    <div class="modal-collection-select">
+      {% for product in collection.products %}
+        {%- liquid
+          assign custom_classes_product = ''
+          assign mod2 = forloop.index | modulo: 2
+          if mod2 != 0
+            assign custom_classes_product = custom_classes_product | append: ' xbg-lightbeige second'
+          endif
+        -%}
+
+        <div class="product-item ur-product xp-4 {{ custom_classes_product }} xrounded-3xl xoverflow-hidden last-of-type:xborder-none">
+          {% for variant in product.variants %}
+            {% if variant.option2 == 'Einzeln' and variant.option1 == '400g' %}
+              <div class="variant ur-variant xflex xgap-4 xitems-center">
+                <div class="variant-img xrounded-lg xoverflow-hidden">
+                  {% if variant.image != null %}
+                    <img
+                      class="xw-16 md:xw-auto xobject-contain"
+                      style="height: 65px; max-width: 400px;"
+                      height="100"
+                      width="auto"
+                      loading="lazy"
+                      src="{{ variant.image.src | img_url: 'medium' }}"
+                      alt="{{ variant.image.alt | escape }}"
+                    >
+                  {% else %}
+                    <img
+                      class="xw-16 md:xw-auto xobject-contain"
+                      style="height: 65px; max-width: 400px;"
+                      height="100"
+                      width="auto"
+                      loading="lazy"
+                      src="{{ product.featured_image | img_url: 'medium' }}"
+                      alt="{{ product.title | escape }}"
+                    >
+                  {% endif %}
+                </div>
+                <div class="variant-info xflex xgap-4 xjustify-between xw-full xitems-center">
+                  <h2 class="xfont-bold xtext-3xl xw-full">
+                    {{ product.title | split: ' ' | first }}
+                    <br>
+                    <span class="xfont-bold xtext-xl">
+                      {{- product.title | split: ' ' | slice: 1, 100 | join: ' ' -}}
+                    </span>
+                  </h2>
+
+                  <input type="hidden" class="variant-id" value="{{ variant.id }}">
+                  <div class="custom-number-input xh-20 xw-64">
+                    <div class="xflex xflex-row xh-20 xw-full xrounded-lg xrelative xbg-transparent xmt-1">
+                      <button
+                        type="button"
+                        data-action="decrement"
+                        class="modal-quantity-btn xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none"
+                      >
+                        <span class="xpx-4 xm-auto xtext-4xl xfont-bold">−</span>
+                      </button>
+                      <input
+                        type="number"
+                        class="modal-variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full xfont-semibold xtext-md hover:xtext-black focus:xtext-black md:xtext-basecursor-default xflex xitems-center xtext-black xoutline-none {{ custom_classes_product }} xbg-white"
+                        name="custom-input-number"
+                        value="0"
+                        min="0"
+                        max="1"
+                      >
+                      <button
+                        type="button"
+                        data-action="increment"
+                        class="modal-quantity-btn xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer"
+                      >
+                        <span class="xpx-4 xm-auto xtext-4xl xfont-bold">+</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="xmt-8 xflex xjustify-end">
+      <button type="button" class="button button--primary modal-apply-btn">Übernehmen</button>
+    </div>
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "Uncle Rustys Build a Box",
@@ -481,6 +571,11 @@
       "type": "collection",
       "id": "additives_collection",
       "label": "Additives Collection"
+    },
+    {
+      "type": "collection",
+      "id": "cookies_collection",
+      "label": "Cookies Collection"
     },
     {
       "type": "number",
