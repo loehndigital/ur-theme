@@ -3,6 +3,7 @@
 <link rel='stylesheet' type='text/css' href='{{ 'swiper-bundle.min.css' | asset_url }}'>
 <script src='{{ 'popper.min.js' | asset_url }}' defer></script>
 <script src='{{ 'tippy-bundle.umd.js' | asset_url }}' defer></script>
+<script src='{{ 'js-confetti.browser.js' | asset_url }}' defer></script>
 {% comment %} TODO {% endcomment %}
 
 {% assign collection = collections[section.settings.collection] %}
@@ -24,9 +25,19 @@
   }
 {%- endstyle -%}
 
+<style>
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+  
+  .loading-spinner {
+    animation: spinner 0.6s linear infinite;
+  }
+</style>
+
 <div class='page-width section-{{ section.id }}-padding page-width-desktop scroll-trigger animate--slide-in xmt-8 xmb-8 xflex xgap-16 xflex-col md:xflex-row'>
   <div class='ur-product-images xrelative md:xmt-32'>
-    <div class='!xsticky xtop-0'>
+    <div class='!xsticky xtop-24'>
       <div class='swiper ur-bab-swiper '>
         <div class='swiper-wrapper'>
           {% for product in collection.products %}
@@ -98,7 +109,7 @@
           {% assign text_key = 'promo_break_' | append: i | append: '_text' %}
           {% assign coupon_key = 'promo_break_' | append: i | append: '_coupon' %}
           {% assign coupon_type_key = 'promo_break_' | append: i | append: '_coupon_type' %}
-          {% assign percent_discount_key = 'promo_break_' | append: i | append: '_percent_discount' %}
+          {% assign amount_key = 'promo_break_' | append: i | append: '_amount' %}
           
           {% if section.settings[target_key] != blank %}
             {
@@ -106,7 +117,7 @@
               target: {{ section.settings[target_key] | json }},
               coupon: {{ section.settings[coupon_key] | json }},
               couponType: {{ section.settings[coupon_type_key] | json }},
-              percentDiscount: {{ section.settings[percent_discount_key] | json }}
+              amount: {{ section.settings[amount_key] | json }}
             }{% unless forloop.last %},{% endunless %}
           {% endif %}
         {% endfor %}
@@ -441,18 +452,18 @@
           <div class='price-display xtext-5xl xfont-black xtext-black'>
             <span class='price-total '>0.00</span><span>€</span>
             <div class='price-display-compare xhidden xinline-block xtext-3xl xtext-beige-900 xline-through'>
-              <span class='price-compare-at'>0.00</span><span>€</span>
+              <span class='price-compare-at'>0.00</span><span>€</span> <div class='price-discount-amount xml-4 xtext-green-600 xfont-bold'>-<span class='price-discount-amount-count'>0</span>%</div>
             </div>
           </div>
-          <div class='xtext-right' style='font-size: 1.2rem;'>
+          <div class='xtext-right xw-full  ' style='font-size: 1.2rem;'>
             <div><span class='total-quantity-couunt xfont-bold'>2</span><span> Dosen</span></div>
             <div>
               <span class='single-item-price-count xfont-bold'>4.05</span><span class='xfont-bold'> €</span
               ><span> pro Dose</span>
             </div>
-            <div class='xflex xgap-1 xflex-col xfont-bold xtext-lg'>
-              <div class='free-400g-can xhidden xtext-lg'>+<span class='free-400g-can-count'>0</span>x 400g Dose gratis</div>
-              <div class='free-200g-cookies xhidden xtext-lg'>+<span class='free-200g-cookies-count'>0</span>x 200g Cookies gratis</div>
+            <div class='xflex xgap-1 xflex-col xfont-bold xtext-lg xw-full xmt-2'>
+              <div class='free-400g-can xhidden xtext-lg'><span class="free-400g-can-anim">+<span class='free-400g-can-count'>0</span>x</span> 400g Dose gratis</div>
+              <div class='free-200g-cookies xhidden xtext-lg'><span class="free-200g-cookies-anim">+<span class='free-200g-cookies-count'>0</span>x</span> 200g Cookies gratis</div>
             </div>
           </div>
         </div>
@@ -463,6 +474,17 @@
       </div>
     </div>
   </form>
+
+  <!-- Loading Modal -->
+  <div id="ur-loading-modal" class="xfixed xtop-0 xleft-0 xw-full xh-full xbg-black xbg-opacity-50 xhidden xz-50 xflex xitems-center xjustify-center">
+    <div class="xbg-white xrounded-3xl xp-8 xmax-w-md xw-full xtext-center">
+      <div class="xflex xflex-col xitems-center xgap-4">
+        <!-- Loading Spinner -->
+        <div class="loading-spinner !xblock xw-16 xh-16 xborder-4 xborder-beige-300 xborder-t-black xrounded-full"></div>
+        <p class="xtext-xl xfont-bold loading-text">Applying Discounts...</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Modal markup - outside the page-width div -->
@@ -522,7 +544,7 @@
                       <button
                         type="button"
                         data-action="decrement"
-                        class="modal-quantity-btn xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none"
+                        class="modal-quantity-btn disabled:xopacity-50 disabled:xcursor-not-allowed xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none"
                       >
                         <span class="xpx-4 xm-auto xtext-4xl xfont-bold">−</span>
                       </button>
@@ -537,7 +559,7 @@
                       <button
                         type="button"
                         data-action="increment"
-                        class="modal-quantity-btn xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer"
+                        class="modal-quantity-btn disabled:xopacity-50 disabled:xcursor-not-allowed xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer"
                       >
                         <span class="xpx-4 xm-auto xtext-4xl xfont-bold">+</span>
                       </button>
@@ -733,8 +755,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_1_percent_discount",
-      "label": "Promo Break 1 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_1_amount",
+      "label": "Promo Break 1 Amount"
     },
     {
       "type": "text",
@@ -773,8 +795,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_2_percent_discount",
-      "label": "Promo Break 2 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_2_amount",
+      "label": "Promo Break 2 Amount"
     },
     {
       "type": "text",
@@ -813,8 +835,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_3_percent_discount",
-      "label": "Promo Break 3 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_3_amount",
+      "label": "Promo Break 3 Amount"
     },
     {
       "type": "text",
@@ -853,8 +875,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_4_percent_discount",
-      "label": "Promo Break 4 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_4_amount",
+      "label": "Promo Break 4 Amount"
     },
     {
       "type": "text",
@@ -893,8 +915,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_5_percent_discount",
-      "label": "Promo Break 5 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_5_amount",
+      "label": "Promo Break 5 Amount"
     },
     {
       "type": "text",
@@ -933,8 +955,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_6_percent_discount",
-      "label": "Promo Break 6 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_6_amount",
+      "label": "Promo Break 6 Amount"
     },
     {
       "type": "text",
@@ -973,8 +995,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_7_percent_discount",
-      "label": "Promo Break 7 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_7_amount",
+      "label": "Promo Break 7 Amount"
     },
     {
       "type": "text",
@@ -1013,8 +1035,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_8_percent_discount",
-      "label": "Promo Break 8 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_8_amount",
+      "label": "Promo Break 8 Amount"
     },
     {
       "type": "text",
@@ -1053,8 +1075,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_9_percent_discount",
-      "label": "Promo Break 9 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_9_amount",
+      "label": "Promo Break 9 Amount"
     },
     {
       "type": "text",
@@ -1093,8 +1115,8 @@
     },
     {
       "type": "number",
-      "id": "promo_break_10_percent_discount",
-      "label": "Promo Break 10 Percent Discount (Only for type Percent Discount)"
+      "id": "promo_break_10_amount",
+      "label": "Promo Break 10 Amount"
     },
     {
       "type": "range",

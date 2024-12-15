@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -36,20 +27,70 @@
       "block_order": [
         "hero_slide_9yGGV4"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
         "collection": "nassfutter",
         "additives_collection": "",
+        "cookies_collection": "hundesnacks",
         "questionaire_subscription_plan": 688893919496,
         "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 7 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!<\/p>",
         "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
         "questionaire_button_label": "Ernährungsberatung",
         "questionaire_button_link": "shopify:\/\/pages\/beratung",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
+        "promo_break_1_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x 400g Dose gratis!",
+        "promo_break_1_target": 6,
+        "promo_break_1_coupon": "BB_PROMO-1-XAYN",
+        "promo_break_1_coupon_type": "400g_can_free",
+        "promo_break_1_amount": 1,
+        "promo_break_2_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x 400g Dose gratis!",
+        "promo_break_2_target": 12,
+        "promo_break_2_coupon": "BB_PROMO-2-CDNF",
+        "promo_break_2_coupon_type": "400g_can_free",
+        "promo_break_2_amount": 1,
+        "promo_break_3_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x Kekse gratis!",
+        "promo_break_3_target": 18,
+        "promo_break_3_coupon": "BB_PROMO-3-DEGK",
+        "promo_break_3_coupon_type": "200g_cookies_free",
+        "promo_break_3_amount": 1,
+        "promo_break_4_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x 400g Dose gratis!",
+        "promo_break_4_target": 24,
+        "promo_break_4_coupon": "BB_PROMO-4-LOJU",
+        "promo_break_4_coupon_type": "400g_can_free",
+        "promo_break_4_amount": 1,
+        "promo_break_5_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x 400g Dose gratis!",
+        "promo_break_5_target": 30,
+        "promo_break_5_coupon": "BB_PROMO-5-ODIU",
+        "promo_break_5_coupon_type": "400g_can_free",
+        "promo_break_5_amount": 1,
+        "promo_break_6_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x Kekse gratis!",
+        "promo_break_6_target": 36,
+        "promo_break_6_coupon": "36",
+        "promo_break_6_coupon_type": "200g_cookies_free",
+        "promo_break_6_amount": 1,
+        "promo_break_7_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x 400g Dose gratis!",
+        "promo_break_7_target": 42,
+        "promo_break_7_coupon": "BB_PROMO-7-TQWI",
+        "promo_break_7_coupon_type": "400g_can_free",
+        "promo_break_7_amount": 1,
+        "promo_break_8_text": "Füge {COUNTER} Dose hinzu und erhalte 5% Rabatt!",
+        "promo_break_8_target": 48,
+        "promo_break_8_coupon": "BB_PROMO-7-TQWI",
+        "promo_break_8_coupon_type": "percent_discount",
+        "promo_break_8_amount": 5,
+        "promo_break_9_text": "Füge {COUNTER} Dosen hinzu und erhalte 3x 400g Dose gratis!",
+        "promo_break_9_target": 54,
+        "promo_break_9_coupon": "BB_PROMO-9-DFJU",
+        "promo_break_9_coupon_type": "400g_can_free",
+        "promo_break_9_amount": 3,
+        "promo_break_10_text": "Füge {COUNTER} Dose hinzu und erhalte 10% Rabatt!",
+        "promo_break_10_target": 60,
+        "promo_break_10_coupon": "BB_PROMO-9-DFJU",
+        "promo_break_10_coupon_type": "percent_discount",
+        "promo_break_10_amount": 10,
         "padding_top": 20,
         "padding_bottom": 20
       }

@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   const priceTotalCompareAtElement =
     document.querySelector('.price-compare-at');
+  const priceDiscountAmountElement = document.querySelector('.price-discount-amount');
+  const priceDiscountAmountCountElement = document.querySelector('.price-discount-amount-count');
   const quantityTotalElement = document.querySelector('.total-quantity-couunt');
   const singleItemPriceElement = document.querySelector(
     '.single-item-price-count',
@@ -33,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let can400gFreeCountAvailable = 0;
   let cookies200gFreeCountAvailable = 0;
   let additionalItems = [];
+  let currentDiscount = 0;
+
+  const loadingModal = document.getElementById('ur-loading-modal');
 
   function getParameterByName(name, url = window.location.href) {
     let params = new URL(url).searchParams;
@@ -122,9 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const item = itemsToAdd[i];
       const variant = window.ur_subscription_variants[item.id];
       let itemPriceOriginal = variant.price;
-      if (variant.compare_at_price) {
-        itemPriceOriginal = variant.compare_at_price;
-      }
       let itemPrice = itemPriceOriginal;
       if (variant.option1 === window.ur_selected_variant_option) {
         singleItemPrice = itemPrice;
@@ -171,16 +173,17 @@ document.addEventListener('DOMContentLoaded', function () {
       cookies200gFreeCountAvailable = 0;
       for (let i = 0; i < allPrevPromoBreaks.length; i++) {
         const promo = allPrevPromoBreaks[i];
-        if (promo.couponType === 'percent_discount' && promo.percentDiscount) {
-          totalPrice = totalPrice - (totalPrice * (promo.percentDiscount / 100));
+        if (promo.couponType === 'percent_discount' && promo.amount) {
+          totalPrice = totalPrice - (totalPrice * (promo.amount / 100));
+          currentDiscount = promo.amount;
         } else if (promo.couponType === '400g_can_free') {
-          can400gFreeCount++;
-          can400gFreeCountAvailable++;
+          can400gFreeCount = can400gFreeCount + promo.amount;
+          can400gFreeCountAvailable = can400gFreeCountAvailable + promo.amount;
         } else if (promo.couponType === '200g_cookies_free') {
-          cookies200gFreeCount++;
-          cookies200gFreeCountAvailable++;
+          cookies200gFreeCount = cookies200gFreeCount + promo.amount;
+          cookies200gFreeCountAvailable = cookies200gFreeCountAvailable + promo.amount;
         }
-      }
+      } 
 
       if (nextPromoBreak) {
         // Show progress towards next break
@@ -254,8 +257,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     unitPriceDisplayElement.innerHTML = unitPriceFormat;
 
+    if(parseInt(priceDiscountAmountCountElement.innerHTML) < currentDiscount) {
+      const jsConfetti = new JSConfetti()
+      jsConfetti.addConfetti({
+        confettiRadius: 5,
+        confettiNumber: 180,
+      })
+      priceDiscountAmountElement.animate([
+        { transform: 'scale(1.5) translateY(-5px) translateX(10px)', offset: 0.15 },
+        { transform: 'scale(1) translateY(0px) translateX(0px)', offset: 1 }
+      ], {
+        duration: 1000,
+        iterations: 1,
+        fill: 'forwards',
+        easing: 'ease-in-out'
+      });
+    }
+
+    priceDiscountAmountCountElement.innerHTML = currentDiscount;
+
     if (can400gFreeCount > 0) {
       document.querySelector('.free-400g-can').classList.remove('xhidden');
+
     } else {
       document.querySelector('.free-400g-can').classList.add('xhidden');
     }
@@ -266,28 +289,70 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.free-200g-cookies').classList.add('xhidden');
     }
 
+    if(parseInt(document.querySelector('.free-400g-can-count').innerHTML) < can400gFreeCount) {
+      const jsConfetti = new JSConfetti()
+      jsConfetti.addConfetti({
+        confettiRadius: 5,
+        confettiNumber: 180,
+      })
+      document.querySelector('.free-400g-can-anim').animate(
+        [
+          { transform: 'scale(2.5) translateY(-5px) translateX(-10px)', offset: 0.15 },
+          { transform: 'scale(1) translateY(0px) translateX(0px)', offset: 1 }
+        ], {
+          duration: 1000,
+          iterations: 1,
+          fill: 'forwards',
+          easing: 'ease-in-out'
+        }
+      );
+    }
     document.querySelector('.free-400g-can-count').innerHTML = can400gFreeCount;
+
+
+    if(parseInt(document.querySelector('.free-200g-cookies-count').innerHTML) < cookies200gFreeCount) {
+      const jsConfetti = new JSConfetti()
+      jsConfetti.addConfetti({
+        confettiRadius: 5,
+        confettiNumber: 180,
+      })
+      document.querySelector('.free-200g-cookies-anim').animate(
+        [
+          { transform: 'scale(2.5) translateY(-5px) translateX(-10px)', offset: 0.15 },
+          { transform: 'scale(1) translateY(0px) translateX(0px)', offset: 1 }
+        ], {
+          duration: 1000,
+          iterations: 1,
+          fill: 'forwards',
+          easing: 'ease-in-out'
+        }
+      );
+    }
     document.querySelector('.free-200g-cookies-count').innerHTML = cookies200gFreeCount;
 
-    applyQuantityBreakCoupons(totalQuantity);
+
   }
 
   async function applyQuantityBreakCoupons(totalQuantity) {
-          // Then apply any quantity break discount codes if they exist
-          if (window.ur_promo_breaks && window.ur_promo_breaks.length > 0) {
-            
-            // Sort promo breaks by target value descending to apply highest breaks first
-            const applicableBreaks = window.ur_promo_breaks
-              .filter(promo => promo.target <= totalQuantity)
-              .sort((a, b) => b.target - a.target);
-            
-            for (const promo of applicableBreaks) {
-              if (promo.coupon) {
-                console.log(`Applying coupon: ${promo.coupon} for break target: ${promo.target}`);
-                await fetch(`/discount/${promo.coupon}`);
-              }
-      }
+    if (!window.ur_promo_breaks || window.ur_promo_breaks.length === 0) return;
+
+    // Sort promo breaks by target value descending to apply highest breaks first
+    const applicableBreaks = window.ur_promo_breaks
+      .filter(promo => promo.target <= totalQuantity && promo.coupon)
+      .sort((a, b) => b.target - a.target);
+    
+    // Get the highest applicable coupon
+    const highestBreak = applicableBreaks[0];
+    
+    // If we have a new highest break that's different from what's currently applied
+    if (highestBreak) {
+      console.log(`Applying highest coupon: ${highestBreak.coupon} for break target: ${highestBreak.target}`);
+
+      // Apply the new highest coupon
+      await fetch(`/discount/${highestBreak.coupon}`);
+   
     }
+    
   }
 
   //Send Cart Form
@@ -300,6 +365,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   async function handleAddToCart() {
+    loadingModal.classList.remove('xhidden');
     itemsToAdd = getVariantItems();
 
     const data = {
@@ -317,7 +383,7 @@ document.addEventListener('DOMContentLoaded', function () {
       handleCookiesModal.openModal(cookies200gFreeCountAvailable);
       return;
     }
-
+    console.log("additionalItems", additionalItems);
     if(additionalItems.length > 0) {
       for(let i = 0; i < additionalItems.length; i++) {
         data.items.push({
@@ -328,11 +394,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
     }
-
+    console.log("data", data);
     try {
-
-
-
       // Finally add items to cart
       const response = await fetch('/cart/add.js', {
         method: 'POST',
@@ -344,8 +407,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       if (!response.ok) {
+        console.log("response", response);
         throw new Error('Network response was not ok');
       }
+
+      const totalQuantity = itemsToAdd.reduce((sum, item) => sum + parseInt(item.quantity), 0);
+      applyQuantityBreakCoupons(totalQuantity);
 
       // Force cart update to ensure discounts are visible
       await fetch('/cart/update.js', {
@@ -357,6 +424,10 @@ document.addEventListener('DOMContentLoaded', function () {
           updates: {},
         }),
       });
+
+      loadingModal.querySelector('.loading-text').innerHTML = 'redirecting to cart...';
+      
+
 
       // Redirect to cart
       window.location.href = '/cart';
@@ -583,15 +654,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function handleQuantityChange(e) {
-      const btn = e.target;
-      const input = btn.closest('.custom-number-input').querySelector('.cookies-modal-variant-quantity');
-      const currentValue = parseInt(input.value || 0);
+      // const btn = e.target;
+      // const input = btn.closest('.custom-number-input').querySelector('.cookies-modal-variant-quantity');
+      // const currentValue = parseInt(input.value || 0);
       
-      if (btn.dataset.action === 'increment' && !btn.disabled) {
-        input.value = currentValue + 1;
-      } else if (btn.dataset.action === 'decrement' && currentValue > 0) {
-        input.value = currentValue - 1;
-      }
+      // if (btn.dataset.action === 'increment' && !btn.disabled) {
+      //   input.value = currentValue + 1;
+      // } else if (btn.dataset.action === 'decrement' && currentValue > 0) {
+      //   input.value = currentValue - 1;
+      // }
       
       updateCounter();
     }
@@ -673,13 +744,12 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.querySelectorAll('.modal-quantity-btn[data-action="increment"]').forEach(btn => {
         if (remaining <= 0) {
           btn.disabled = true;
-          btn.classList.add('xopacity-50', 'xcursor-not-allowed');
         } else {
           btn.disabled = false;
-          btn.classList.remove('xopacity-50', 'xcursor-not-allowed');
         }
       });
     }
+
     
     function openModal(freeCansCount) {
       remainingSelections = freeCansCount;
@@ -700,15 +770,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function handleQuantityChange(e) {
-      const btn = e.target;
-      const input = btn.closest('.custom-number-input').querySelector('.modal-variant-quantity');
-      const currentValue = parseInt(input.value || 0);
-      
-      if (btn.dataset.action === 'increment' && !btn.disabled) {
-        input.value = currentValue + 1;
-      } else if (btn.dataset.action === 'decrement' && currentValue > 0) {
-        input.value = currentValue - 1;
-      }
+      // console.log("handleQuantityChange");
+      // console.log(e);
+      // const btn = e.target;
+      // const input = btn.closest('.custom-number-input').querySelector('.modal-variant-quantity');
+      // // if (btn.dataset.action === 'increment' && !btn.disabled) {
+      // //   input.value = parseInt(input.value) + 1;
+      // // } else if (btn.dataset.action === 'decrement' && parseInt(input.value) > 0) {
+      // //   input.value = parseInt(input.value) - 1;
+      // // }
       
       updateCounter();
     }
