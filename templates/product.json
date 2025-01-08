@@ -330,39 +330,62 @@
         "include_margins": true
       }
     },
-    "image_with_text_3YiD8B": {
-      "type": "image-with-text",
+    "ur_image_with_text_C6GbQL": {
+      "type": "ur-image-with-text",
       "blocks": {
-        "heading_xKKQKT": {
+        "heading_VPMk49": {
           "type": "heading",
           "settings": {
-            "heading": "Die Zutaten im Überblick",
+            "heading": "Image with text",
             "heading_size": "h1"
           }
         },
-        "text_fRLKYN": {
+        "text_nhbJpz": {
           "type": "text",
           "settings": {
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         },
-        "button_KfyErh": {
-          "type": "button",
+        "icon_text_XBjNXz": {
+          "type": "icon-text",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "icon_selection": "icon-3d-model",
+            "icon_text": "Fleisch von der Ente",
+            "show_accordion": false,
+            "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.</p>"
+          }
+        },
+        "icon_text_h6eM3n": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-3d-model",
+            "icon_text": "Enter your text here",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion </p>"
+          }
+        },
+        "icon_text_pFTTYR": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-3d-model",
+            "icon_text": "Enter your text here",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion </p>"
           }
         }
       },
       "block_order": [
-        "heading_xKKQKT",
-        "text_fRLKYN",
-        "button_KfyErh"
+        "heading_VPMk49",
+        "text_nhbJpz",
+        "icon_text_XBjNXz",
+        "icon_text_h6eM3n",
+        "icon_text_pFTTYR"
       ],
       "settings": {
         "height": "adapt",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -510,7 +533,7 @@
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
-    "image_with_text_3YiD8B",
+    "ur_image_with_text_C6GbQL",
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
