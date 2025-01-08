@@ -192,6 +192,7 @@
       "block_order": [
         "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-text-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -207,7 +208,7 @@
         "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Hausmannkost",
             "heading_size": "h1"
           }
         },
@@ -260,7 +261,7 @@
             "icon_selection": "icon-dog",
             "icon_text": "Fütterungsempfehlung ",
             "show_accordion": true,
-            "richtext": "<p>Fütterungsempfehlung pro Tag: <br/>Bis 5 kg 200g | Bis 15 kg 600g | Bis 25 kg 800g | Bis 35 kg 1000g<br/> <br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br/><br/><strong>Zubereitung </strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br/><br/><strong>Fütterung & Lagerung: </strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>"
+            "richtext": "<p>Fütterungsempfehlung pro Tag: <br/>Bis 5 kg 200g | Bis 20 kg 600g | Bis 30 kg 800g | ab 35 kg 1000g<br/> <br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br/><br/><strong>Zubereitung </strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br/><br/><strong>Fütterung & Lagerung: </strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>"
           }
         },
         "a88c0156-c93d-4ca6-86d1-4430d0d99fb9": {
@@ -304,19 +305,15 @@
       "type": "full-width-banner",
       "settings": {
         "background_image": "shopify://shop_images/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Der Uncle Rusty's Mix</strong></h1><p><em>Stelle das ideale Paket zusammen:</em><br/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!</p>",
-        "button_text": "Mix & Match: Dein Menu",
-        "button_link": "shopify://pages/build-a-box",
-        "button2_text": "Ernährungsberatung",
-        "button2_link": "shopify://pages/beratung",
+        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile der Ente</strong></h1><p><em>Stelle das ideale Paket zusammen:</em><br/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!</p>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
         "newsletter": "false",
         "theme_mode": "light",
         "desktop_blur": "no-desktop-blur"
       }
-    },
-    "2a3817f0-35d4-412a-9480-f252f79f2a2d": {
-      "type": "product-contents",
-      "settings": {}
     },
     "1694596722fbd3b4b2": {
       "type": "apps",
@@ -332,6 +329,55 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "image_with_text_3YiD8B": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xKKQKT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die Zutaten im Überblick",
+            "heading_size": "h1"
+          }
+        },
+        "text_fRLKYN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_KfyErh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xKKQKT",
+        "text_fRLKYN",
+        "button_KfyErh"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2a3817f0-35d4-412a-9480-f252f79f2a2d": {
+      "type": "product-contents",
+      "settings": {}
     },
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
       "type": "full-width-banner",
@@ -463,8 +509,9 @@
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
-    "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "1694596722fbd3b4b2",
+    "image_with_text_3YiD8B",
+    "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
     "related-products"
