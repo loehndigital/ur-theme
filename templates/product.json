@@ -351,7 +351,7 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-3d-model",
-            "icon_text": "Fleisch von der Ente",
+            "icon_text": "Ente",
             "show_accordion": false,
             "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.</p>"
           }
@@ -360,18 +360,18 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-3d-model",
-            "icon_text": "Enter your text here",
+            "icon_text": "Karotten",
             "show_accordion": false,
-            "richtext": "<p>Test Details Accordion </p>"
+            "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt</p>"
           }
         },
         "icon_text_pFTTYR": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-3d-model",
-            "icon_text": "Enter your text here",
-            "show_accordion": false,
-            "richtext": "<p>Test Details Accordion </p>"
+            "icon_text": "Hirse",
+            "show_accordion": true,
+            "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.</p>"
           }
         }
       },
