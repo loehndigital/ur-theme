@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }),
       });
 
-      loadingModal.querySelector('.loading-text').innerHTML = 'redirecting to cart...';
+      loadingModal.querySelector('.loading-text').innerHTML = 'Redirecting to cart...';
       
 
 
