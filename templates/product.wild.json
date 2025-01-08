@@ -383,16 +383,25 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_text": "Ente",
+            "icon_text": "Wild",
             "show_accordion": true,
             "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.</p>"
+          }
+        },
+        "icon_text_YNTUDk": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Rind",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion </p>"
           }
         },
         "icon_text_h6eM3n": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_text": "Karotten",
+            "icon_text": "Süßkartoffeln",
             "show_accordion": true,
             "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt</p>"
           }
@@ -401,7 +410,7 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Hirse",
+            "icon_text": "Zucchini",
             "show_accordion": true,
             "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.</p>"
           }
@@ -411,6 +420,7 @@
         "heading_VPMk49",
         "text_nhbJpz",
         "icon_text_XBjNXz",
+        "icon_text_YNTUDk",
         "icon_text_h6eM3n",
         "icon_text_pFTTYR"
       ],
