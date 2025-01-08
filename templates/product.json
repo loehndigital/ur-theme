@@ -134,7 +134,49 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 36
+      }
+    },
+    "icon_row_RbbQDB": {
+      "type": "icon-row",
+      "blocks": {
+        "icon_text_block_eeAwUk": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<p>65% Fleischanteil für eine artgerechte Ernährung.</p>"
+          }
+        },
+        "icon_text_block_mkaAP6": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-fruit-bag",
+            "icon_rich_text": "<p>10% Karotten und 10% Hirse ergänzen das Menü</p>"
+          }
+        },
+        "icon_text_block_4GMfMB": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-cooking",
+            "icon_rich_text": "<p>Schonend im Slow-Cooking Verfahren zubereitet.</p>"
+          }
+        },
+        "icon_text_block_rUJHEr": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-region-color",
+            "icon_rich_text": "<p>Mit Liebe im Süden von Bayern hergestellt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_block_eeAwUk",
+        "icon_text_block_mkaAP6",
+        "icon_text_block_4GMfMB",
+        "icon_text_block_rUJHEr"
+      ],
+      "settings": {
+        "color_scheme": "background-2"
       }
     },
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6": {
@@ -418,6 +460,7 @@
   },
   "order": [
     "main",
+    "icon_row_RbbQDB",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
