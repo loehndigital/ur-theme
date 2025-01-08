@@ -521,6 +521,20 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "full_width_banner_88Jzex": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify://shop_images/comp1_1.jpg",
+        "content": "<h1>Test Text</h1>",
+        "button_text": "Button Text",
+        "button_link": "",
+        "button2_text": "Button Text",
+        "button2_link": "",
+        "newsletter": "false",
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
+      }
     }
   },
   "order": [
@@ -533,6 +547,7 @@
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "related-products",
     "ur_image_with_text_C6GbQL",
-    "05f67661-57d3-4393-b235-9279296aa6fd"
+    "05f67661-57d3-4393-b235-9279296aa6fd",
+    "full_width_banner_88Jzex"
   ]
 }
