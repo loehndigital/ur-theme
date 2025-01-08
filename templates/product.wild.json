@@ -265,15 +265,6 @@
             "richtext": ""
           }
         },
-        "ef4aaf30-6b17-476f-9115-3d7260b17585": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-dog",
-            "icon_text": "Fütterungsempfehlung ",
-            "show_accordion": true,
-            "richtext": ""
-          }
-        },
         "a88c0156-c93d-4ca6-86d1-4430d0d99fb9": {
           "type": "icon-text",
           "settings": {
@@ -291,7 +282,6 @@
         "12606def-b33b-4e93-ae9d-4bdcffdbc21e",
         "53631e27-d0ef-4248-925c-d004a9c0f2bf",
         "bf6d932a-9b51-4d16-9a8e-75149f41df50",
-        "ef4aaf30-6b17-476f-9115-3d7260b17585",
         "a88c0156-c93d-4ca6-86d1-4430d0d99fb9"
       ],
       "settings": {
@@ -315,7 +305,7 @@
       "type": "full-width-banner",
       "settings": {
         "background_image": "shopify://shop_images/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile der Ente</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 65 % hochwertigem Entenfleisch und sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
+        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile von Wild</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 60 % hochwertigem Wild- und Rindfleisch sowie sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
