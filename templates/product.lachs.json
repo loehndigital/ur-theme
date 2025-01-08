@@ -383,7 +383,7 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_text": "Ente",
+            "icon_text": "Lachs",
             "show_accordion": true,
             "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.</p>"
           }
@@ -392,7 +392,7 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_text": "Karotten",
+            "icon_text": "Kürbis",
             "show_accordion": true,
             "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt</p>"
           }
@@ -401,9 +401,18 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Hirse",
+            "icon_text": "Haferkleie",
             "show_accordion": true,
             "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.</p>"
+          }
+        },
+        "icon_text_MR7hJH": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Apfel",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion </p>"
           }
         }
       },
@@ -412,7 +421,8 @@
         "text_nhbJpz",
         "icon_text_XBjNXz",
         "icon_text_h6eM3n",
-        "icon_text_pFTTYR"
+        "icon_text_pFTTYR",
+        "icon_text_MR7hJH"
       ],
       "settings": {
         "image": "shopify://shop_images/NB_Quadrat4.png",
