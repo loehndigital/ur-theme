@@ -95,7 +95,7 @@
           "settings": {
             "heading": "Zutaten",
             "icon": "serving_dish",
-            "content": "{{ product.metafields.custom.content_information | metafield_tag }}",
+            "content": "<p>{{ product.metafields.custom.content_information | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -144,14 +144,14 @@
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<p>65% Fleischanteil für eine artgerechte Ernährung.</p>"
+            "icon_rich_text": "<p>58% Fleischanteil für eine artgerechte Ernährung.</p>"
           }
         },
         "icon_text_block_mkaAP6": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-fruit-bag",
-            "icon_rich_text": "<p>10% Karotten und 10% Hirse ergänzen das Menü</p>"
+            "icon_rich_text": "<p>11% Kartoffeln und 11% Karotten ergänzen das Menü</p>"
           }
         },
         "icon_text_block_4GMfMB": {
@@ -215,7 +215,7 @@
         "text_qYagip": {
           "type": "text",
           "settings": {
-            "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Ente, Karotten und Hirse </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
+            "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Rind, Kartoffeln und Karotten </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
             "text_style": "body"
           }
         },
@@ -305,7 +305,7 @@
       "type": "full-width-banner",
       "settings": {
         "background_image": "shopify://shop_images/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile der Ente</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 65 % hochwertigem Entenfleisch und sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
+        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile der Ente</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit kanpp 60% hochwertigem Rindfleisch und sorgsam ausgewählten Beilagen wie Kartoffeln und Karotten schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
