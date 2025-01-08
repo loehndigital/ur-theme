@@ -144,14 +144,14 @@
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<p>65% Fleischanteil für eine artgerechte Ernährung.</p>"
+            "icon_rich_text": "<p>60% Fleischanteil für eine artgerechte Ernährung.</p>"
           }
         },
         "icon_text_block_mkaAP6": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-fruit-bag",
-            "icon_rich_text": "<p>10% Karotten und 10% Hirse ergänzen das Menü</p>"
+            "icon_rich_text": "<p>13% Süßkartoffeln und 10% Zucchini ergänzen das Menü</p>"
           }
         },
         "icon_text_block_4GMfMB": {
