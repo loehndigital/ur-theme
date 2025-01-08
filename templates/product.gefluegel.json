@@ -107,6 +107,15 @@
             "content": "{{ product.metafields.custom.analyse | metafield_tag }}",
             "page": ""
           }
+        },
+        "collapsible_tab_cyx6PL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fütterungsempfehlung",
+            "icon": "check_mark",
+            "content": "<p>Fütterungsempfehlung pro Tag: <br/>Bis 5 kg 200g | Bis 20 kg 600g | Bis 30 kg 800g | ab 35 kg 1000g<br/> <br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br/><br/><strong>Zubereitung </strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br/><br/><strong>Fütterung & Lagerung: </strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -120,7 +129,8 @@
         "buy_buttons",
         "collapsible-row-1",
         "collapsible-row-0",
-        "collapsible-row-2"
+        "collapsible-row-2",
+        "collapsible_tab_cyx6PL"
       ],
       "settings": {
         "enable_sticky_info": true,
