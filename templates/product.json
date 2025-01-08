@@ -526,7 +526,7 @@
       "type": "full-width-banner",
       "settings": {
         "background_image": "shopify://shop_images/comp1_1.jpg",
-        "content": "<h1>Test Text</h1>",
+        "content": "<h1><strong>Unentschlossen? Teste unser Probierpaket!</strong></h1><p>Du willst erst herausfinden, welche Sorten dein Hund liebt? Mit unserem Probierpaket kannst du alle 7 Sorten ausprobieren – inklusive spannender Infos zu Uncle Rusty's. Perfekt für neugierige Nasen und für Hundehalter, die sich sicher sein wollen.</p>",
         "button_text": "Button Text",
         "button_link": "",
         "button2_text": "Button Text",
