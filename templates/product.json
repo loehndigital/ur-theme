@@ -533,7 +533,7 @@
         "button2_link": "",
         "newsletter": "false",
         "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
+        "desktop_blur": "desktop-blur"
       }
     }
   },
