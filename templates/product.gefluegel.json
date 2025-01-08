@@ -144,14 +144,14 @@
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<p>65% Fleischanteil für eine artgerechte Ernährung.</p>"
+            "icon_rich_text": "<p>63% Fleischanteil für eine artgerechte Ernährung.</p>"
           }
         },
         "icon_text_block_mkaAP6": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-fruit-bag",
-            "icon_rich_text": "<p>10% Karotten und 10% Hirse ergänzen das Menü</p>"
+            "icon_rich_text": "<p>10% Kürbis und 7% Amaranth ergänzen das Menü</p>"
           }
         },
         "icon_text_block_4GMfMB": {
@@ -215,7 +215,7 @@
         "text_qYagip": {
           "type": "text",
           "settings": {
-            "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Ente, Karotten und Hirse </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
+            "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Huhn, Kürbis und Amaranth </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
             "text_style": "body"
           }
         },
