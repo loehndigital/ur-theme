@@ -182,13 +182,6 @@
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6": {
       "type": "rich-text",
       "blocks": {
-        "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ product.title }}",
-            "heading_size": "h1"
-          }
-        },
         "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-text-1": {
           "type": "text",
           "settings": {
@@ -197,7 +190,6 @@
         }
       },
       "block_order": [
-        "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-heading-1",
         "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-text-1"
       ],
       "settings": {
@@ -205,26 +197,8 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "2a3817f0-35d4-412a-9480-f252f79f2a2d": {
-      "type": "product-contents",
-      "settings": {}
-    },
-    "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify://shop_images/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Der Uncle Rusty's Mix</strong></h1><p><em>Stelle das ideale Paket zusammen:</em><br/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!</p>",
-        "button_text": "Mix & Match: Dein Menu",
-        "button_link": "shopify://pages/build-a-box",
-        "button2_text": "Ernährungsberatung",
-        "button2_link": "shopify://pages/beratung",
-        "newsletter": "false",
-        "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f": {
@@ -232,10 +206,16 @@
       "blocks": {
         "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-heading-1": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "Image with text",
             "heading_size": "h1"
+          }
+        },
+        "text_qYagip": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der <strong>kraftvolle Energieschub </strong>mit Ente, Karotten und Bio-Hirse. Mit frischem Fleisch und naturbelassenen Zutaten. Ein Genuss für jeden Vierbeiner. Eignet sich gut für alle Hunde. Der glutenfreie Snack für Deinen Hund!</p>",
+            "text_style": "body"
           }
         },
         "d5f5d2c9-0acd-470c-b116-554653a901f6": {
@@ -295,6 +275,7 @@
       },
       "block_order": [
         "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-heading-1",
+        "text_qYagip",
         "d5f5d2c9-0acd-470c-b116-554653a901f6",
         "12606def-b33b-4e93-ae9d-4bdcffdbc21e",
         "53631e27-d0ef-4248-925c-d004a9c0f2bf",
@@ -308,16 +289,34 @@
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify://shop_images/Comp_4_v2.jpg",
+        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Der Uncle Rusty's Mix</strong></h1><p><em>Stelle das ideale Paket zusammen:</em><br/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!</p>",
+        "button_text": "Mix & Match: Dein Menu",
+        "button_link": "shopify://pages/build-a-box",
+        "button2_text": "Ernährungsberatung",
+        "button2_link": "shopify://pages/beratung",
+        "newsletter": "false",
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
+      }
+    },
+    "2a3817f0-35d4-412a-9480-f252f79f2a2d": {
+      "type": "product-contents",
+      "settings": {}
     },
     "1694596722fbd3b4b2": {
       "type": "apps",
@@ -462,9 +461,9 @@
     "main",
     "icon_row_RbbQDB",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
-    "2a3817f0-35d4-412a-9480-f252f79f2a2d",
-    "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "6f8d87d4-68f0-4838-ad20-2060fed3a859",
+    "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
