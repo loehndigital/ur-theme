@@ -415,7 +415,8 @@
         "icon_text_pFTTYR"
       ],
       "settings": {
-        "height": "adapt",
+        "image": "shopify://shop_images/NB_Quadrat4.png",
+        "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
