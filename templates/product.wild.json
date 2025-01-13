@@ -385,7 +385,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Wild",
             "show_accordion": true,
-            "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.</p>"
+            "richtext": "<p>Wild ist eine besonders fettarme und hochwertige Proteinquelle, die ideal für ernährungssensible Hunde geeignet ist. Es liefert wertvolle Nährstoffe wie Eisen und B-Vitamine, die die Vitalität und das Immunsystem fördern.</p>"
           }
         },
         "icon_text_YNTUDk": {
@@ -393,8 +393,8 @@
           "settings": {
             "icon_selection": "icon-meat-color",
             "icon_text": "Rind",
-            "show_accordion": false,
-            "richtext": "<p>Test Details Accordion </p>"
+            "show_accordion": true,
+            "richtext": "<p>Das enthaltene Rindfleisch ergänzt das magere Wildfleisch perfekt. Es liefert zusätzliches Protein sowie wertvolle Nährstoffe wie Eisen und Zink für eine ausgewogene Ernährung.</p>"
           }
         },
         "icon_text_h6eM3n": {
@@ -403,7 +403,7 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Süßkartoffeln",
             "show_accordion": true,
-            "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt</p>"
+            "richtext": "<p>Süßkartoffeln sind eine natürliche Quelle für komplexe Kohlenhydrate, die langanhaltende Energie liefern. Sie enthalten wertvolle Ballaststoffe sowie Vitamine wie Vitamin A und fördern eine gesunde Verdauung.</p>"
           }
         },
         "icon_text_pFTTYR": {
@@ -412,7 +412,7 @@
             "icon_selection": "icon-no-gluten-color",
             "icon_text": "Zucchini",
             "show_accordion": true,
-            "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.</p>"
+            "richtext": "<p>Zucchini ist kalorienarm und reich an Ballaststoffen, die eine gesunde Verdauung unterstützen. Zudem liefert sie wichtige Vitamine wie Vitamin C und fördert die Hydration deines Hundes.</p>"
           }
         }
       },
