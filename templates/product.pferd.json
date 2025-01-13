@@ -394,7 +394,7 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Karotten",
             "show_accordion": true,
-            "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt</p>"
+            "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt.</p>"
           }
         },
         "icon_text_pFTTYR": {
@@ -403,7 +403,7 @@
             "icon_selection": "icon-no-gluten-color",
             "icon_text": "Quinoa",
             "show_accordion": true,
-            "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.</p>"
+            "richtext": "<p>Quinoa ist eine wertvolle pflanzliche Proteinquelle und liefert essenzielle Aminosäuren, die zur Muskelbildung beitragen. Zudem ist es reich an Ballaststoffen und unterstützt eine gesunde Verdauung sowie eine ausgewogene Ernährung.</p>"
           }
         }
       },
