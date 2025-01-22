@@ -107,6 +107,15 @@
             "content": "{{ product.metafields.custom.analyse | metafield_tag }}",
             "page": ""
           }
+        },
+        "collapsible_tab_WiikCc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fütterungsempfehlung",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -120,7 +129,8 @@
         "buy_buttons",
         "collapsible-row-1",
         "collapsible-row-0",
-        "collapsible-row-2"
+        "collapsible-row-2",
+        "collapsible_tab_WiikCc"
       ],
       "settings": {
         "enable_sticky_info": true,
