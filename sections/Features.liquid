@@ -6,7 +6,7 @@
       "type": "text",
       "id": "heading",
       "label": "Überschrift",
-      "default": "Gemacht für alle, die Qualität ernst nehmen."
+      "default": "Gemacht für Hunde, die Qualität lieben."
     }
   ],
   "blocks": [
@@ -16,15 +16,15 @@
       "settings": [
         {
           "type": "text",
-          "id": "icon",
-          "label": "Icon (Emoji oder SVG HTML)",
-          "default": "✅"
+          "id": "icon_svg",
+          "label": "SVG Icon (HTML)",
+          "default": "<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='10' stroke='#000' fill='none'/></svg>"
         },
         {
           "type": "text",
           "id": "text",
           "label": "Beschreibung",
-          "default": "Beschreibung des Features hier eingeben"
+          "default": "Feature Beschreibung hier"
         }
       ]
     }
@@ -52,40 +52,4 @@
 }
 {% endschema %}
 
-<div class="feature-section-wrapper">
-  <div class="page-width">
-    <h2 class="feature-heading">{{ section.settings.heading }}</h2>
-    <div class="features-grid">
-      {% for block in section.blocks %}
-        <div class="feature-item">
-          <div class="feature-icon">{{ block.settings.icon }}</div>
-          <div class="feature-text">{{ block.settings.text }}</div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-<style>
-.feature-section-wrapper {
-  padding: 60px 0;
-  background-color: #f9fafb;
-}
-
-.page-width {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.feature-heading {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap:
+<div class="features
