@@ -343,6 +343,24 @@
       "settings": {
         "color_scheme": ""
       }
+    },
+    "vergleichstabelle_TwExww": {
+      "type": "Vergleichstabelle",
+      "name": "Vergleichstabelle",
+      "settings": {
+        "ueberschrift_text": "Vergleich unserer Produkte",
+        "ueberschrift_alignment": "center",
+        "ueberschrift_size": 28,
+        "text_alignment": "left",
+        "produktname_size": 16,
+        "vergleichstext_size": 16,
+        "abstand_vergleichspunkte": 18,
+        "bild_breite": 180,
+        "vergleichsbild_links": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
+        "vergleichsbild_rechts": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
+        "produktname_links": "Standardprodukt",
+        "produktname_rechts": "Naru Produkt"
+      }
     }
   },
   "order": [
@@ -356,6 +374,7 @@
     "1702222298d12bda40",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
-    "icon_row_bDgXgn"
+    "icon_row_bDgXgn",
+    "vergleichstabelle_TwExww"
   ]
 }
