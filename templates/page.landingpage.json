@@ -38,6 +38,139 @@
       ],
       "settings": {}
     },
+    "rich_text_3mPDGQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yAnmFq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_CD9bTh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yAnmFq",
+        "text_CD9bTh"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "vergleichstabelle_TwExww": {
+      "type": "Vergleichstabelle",
+      "blocks": {
+        "feature_JCDnTb": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": false,
+            "text_rechts": "",
+            "icon_rechts": true
+          }
+        },
+        "feature_bUG4Yf": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": false,
+            "text_rechts": "",
+            "icon_rechts": true
+          }
+        },
+        "feature_xr7QPK": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": false,
+            "text_rechts": "",
+            "icon_rechts": true
+          }
+        },
+        "feature_h6dz3L": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": false,
+            "text_rechts": "",
+            "icon_rechts": true
+          }
+        },
+        "feature_7XVc4x": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": false,
+            "text_rechts": "",
+            "icon_rechts": true
+          }
+        },
+        "feature_XHTGKF": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": false,
+            "text_rechts": "",
+            "icon_rechts": true
+          }
+        },
+        "feature_NGNweQ": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": false,
+            "text_rechts": "",
+            "icon_rechts": true
+          }
+        },
+        "feature_3RyLtX": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": false,
+            "text_rechts": "",
+            "icon_rechts": true
+          }
+        }
+      },
+      "block_order": [
+        "feature_JCDnTb",
+        "feature_bUG4Yf",
+        "feature_xr7QPK",
+        "feature_h6dz3L",
+        "feature_7XVc4x",
+        "feature_XHTGKF",
+        "feature_NGNweQ",
+        "feature_3RyLtX"
+      ],
+      "name": "Vergleichstabelle",
+      "settings": {
+        "ueberschrift_text": "Was Uncle Rusty's von herkömmlichem Futter unterscheidet?",
+        "ueberschrift_alignment": "left",
+        "ueberschrift_size": 28,
+        "text_alignment": "left",
+        "produktname_size": 16,
+        "vergleichstext_size": 16,
+        "abstand_vergleichspunkte": 18,
+        "bild_breite": 180,
+        "vergleichsbild_links": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
+        "vergleichsbild_rechts": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
+        "produktname_links": "Herkömmliches Hundefutter",
+        "produktname_rechts": "Uncle Rust's Hundenahrung"
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -343,29 +476,13 @@
       "settings": {
         "color_scheme": ""
       }
-    },
-    "vergleichstabelle_TwExww": {
-      "type": "Vergleichstabelle",
-      "name": "Vergleichstabelle",
-      "settings": {
-        "ueberschrift_text": "Vergleich unserer Produkte",
-        "ueberschrift_alignment": "center",
-        "ueberschrift_size": 28,
-        "text_alignment": "left",
-        "produktname_size": 16,
-        "vergleichstext_size": 16,
-        "abstand_vergleichspunkte": 18,
-        "bild_breite": 180,
-        "vergleichsbild_links": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
-        "vergleichsbild_rechts": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
-        "produktname_links": "Standardprodukt",
-        "produktname_rechts": "Naru Produkt"
-      }
     }
   },
   "order": [
     "main",
     "hero_slider_WJ9jLG",
+    "rich_text_3mPDGQ",
+    "vergleichstabelle_TwExww",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
@@ -374,7 +491,6 @@
     "1702222298d12bda40",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
-    "icon_row_bDgXgn",
-    "vergleichstabelle_TwExww"
+    "icon_row_bDgXgn"
   ]
 }
