@@ -1,0 +1,176 @@
+<div class="custom-comparison">
+  <div class="page-width">
+    <h2
+      class="vergleichs-ueberschrift rich-text__heading h1"
+      style="text-align: {{ section.settings.ueberschrift_alignment }};"
+    >
+      {{ section.settings.ueberschrift_text }}
+    </h2>
+
+    <div class="vergleich-wrapper">
+      <!-- Linke Spalte -->
+      <div class="vergleich-spalte standardprodukt" style="text-align: {{ section.settings.text_alignment }};">
+        {% if section.settings.vergleichsbild_links %}
+          <img
+            src="{{ section.settings.vergleichsbild_links | image_url: width: 300 }}"
+            alt="Standardprodukt"
+            class="vergleichsbild"
+            style="max-width: {{ section.settings.bild_breite }}px;"
+          >
+        {% endif %}
+        <p class="produktname" style="font-size: {{ section.settings.produktname_size }}px;">
+          {{ section.settings.produktname_links }}
+        </p>
+
+        <ul class="vergleichsliste">
+          {% for block in section.blocks %}
+            <li style="font-size: {{ section.settings.vergleichstext_size }}px; margin-bottom: {{ section.settings.abstand_vergleichspunkte }}px;">
+              {% if block.settings.icon_links %}
+                <span class="icon">✔</span>
+              {% else %}
+                <span class="icon negativ">✘</span>
+              {% endif %}
+              <span class="text">{{ block.settings.text_links }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Rechte Spalte -->
+      <div class="vergleich-spalte naru-produkt" style="text-align: {{ section.settings.text_alignment }};">
+        {% if section.settings.vergleichsbild_rechts %}
+          <img
+            src="{{ section.settings.vergleichsbild_rechts | image_url: width: 300 }}"
+            alt="Naru Produkt"
+            class="vergleichsbild"
+            style="max-width: {{ section.settings.bild_breite }}px;"
+          >
+        {% endif %}
+        <p class="produktname" style="font-size: {{ section.settings.produktname_size }}px;">
+          {{ section.settings.produktname_rechts }}
+        </p>
+
+        <ul class="vergleichsliste">
+          {% for block in section.blocks %}
+            <li style="font-size: {{ section.settings.vergleichstext_size }}px; margin-bottom: {{ section.settings.abstand_vergleichspunkte }}px;">
+              {% if block.settings.icon_rechts %}
+                <span class="icon">✔</span>
+              {% else %}
+                <span class="icon negativ">✘</span>
+              {% endif %}
+              <span class="text">{{ block.settings.text_rechts }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .custom-comparison {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .vergleich-wrapper {
+    display: flex;
+    flex-direction: row-reverse !important;
+    gap: 2rem;
+
+  }
+  .vergleich-spalte {
+    flex: 1;
+    padding: 2rem;
+  }
+  .naru-produkt {
+    background-color: #f3f8f5;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .vergleichsbild {
+    display: block;
+    margin: 0 auto 1rem auto;
+    height: auto;
+  }
+  .produktname {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .vergleichsliste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .vergleichsliste li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .icon {
+    font-size: 20px;
+    color: #007a4c;
+    flex-shrink: 0;
+  }
+  .icon.negativ {
+    color: #d83c3c;
+  }
+
+  .vergleichs-ueberschrift {
+    margin-bottom: 3rem !important;
+  }
+  @media screen and (max-width: 768px) {
+    .vergleichsbild {
+      max-width: 100% !important;
+    }
+
+    .produktname {
+        max-width: 80%;
+    }
+
+    .vergleich-spalte {
+    flex: 1;
+    padding: 2rem;
+    max-width: 48%;
+  }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Vergleichstabelle",
+  "settings": [
+    { "type": "text", "id": "ueberschrift_text", "label": "Überschrift", "default": "Vergleich unserer Produkte" },
+    { "type": "select", "id": "ueberschrift_alignment", "label": "Ausrichtung der Überschrift", "options": [ { "value": "left", "label": "Links" }, { "value": "center", "label": "Zentriert" }, { "value": "right", "label": "Rechts" } ], "default": "center" },
+    { "type": "range", "id": "ueberschrift_size", "label": "Größe der Überschrift", "min": 16, "max": 48, "step": 1, "default": 28 },
+    { "type": "select", "id": "text_alignment", "label": "Textausrichtung", "options": [ { "value": "left", "label": "Links" }, { "value": "center", "label": "Zentriert" }, { "value": "right", "label": "Rechts" } ], "default": "left" },
+    { "type": "range", "id": "produktname_size", "label": "Größe Produktnamen", "min": 12, "max": 28, "step": 1, "default": 16 },
+    { "type": "range", "id": "vergleichstext_size", "label": "Größe Vergleichstexte", "min": 12, "max": 24, "step": 1, "default": 16 },
+    { "type": "range", "id": "abstand_vergleichspunkte", "label": "Abstand Vergleichspunkte", "min": 4, "max": 40, "step": 1, "default": 18 },
+    { "type": "range", "id": "bild_breite", "label": "Bildbreite (px)", "min": 100, "max": 400, "step": 10, "default": 180 },
+    { "type": "image_picker", "id": "vergleichsbild_links", "label": "Bild links" },
+    { "type": "image_picker", "id": "vergleichsbild_rechts", "label": "Bild rechts" },
+    { "type": "text", "id": "produktname_links", "label": "Produktname links", "default": "Standardprodukt" },
+    { "type": "text", "id": "produktname_rechts", "label": "Produktname rechts", "default": "Naru Produkt" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Vergleichspunkt",
+      "settings": [
+        { "type": "text", "id": "text_links", "label": "Text links" },
+        { "type": "checkbox", "id": "icon_links", "label": "Haken links", "default": true },
+        { "type": "text", "id": "text_rechts", "label": "Text rechts" },
+        { "type": "checkbox", "id": "icon_rechts", "label": "Haken rechts", "default": false }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vergleichstabelle",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
