@@ -1,53 +1,78 @@
-<!-- sections/feature-list.liquid -->
-<div class="bg-gray-100 py-10 px-4 md:px-8 lg:px-16">
-  <h2 class="text-center font-semibold text-2xl mb-8">Gemacht für alle, die Ernährung ernst nehmen.</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-    {% for block in section.blocks %}
-      <div class="flex items-center gap-4">
-        <div class="w-8 h-8">
-          {{ block.settings.icon_svg | raw }}
-        </div>
-        <span>{{ block.settings.text }}</span>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
 {% schema %}
 {
   "name": "Features Tabelle",
   "settings": [],
-  "blocks": [
-    {
-      "type": "feature",
-      "name": "Feature",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "icon_svg",
-          "label": "SVG Icon",
-          "default": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'/></svg>"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Feature Text",
-          "default": "Hochwertiges Fleisch aus regionaler Haltung"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
-      "name": "Features Tabelle",
-      "category": "Text"
+      "name": "Features Tabelle"
     }
   ]
 }
 {% endschema %}
 
+<div class="py-12 bg-gray-50">
+  <div class="page-width">
+    <h2 class="text-center text-2xl font-semibold mb-8">
+      Gemacht für Hunde, die nur das Beste verdienen.
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
+
+
+      {% for feature in features %}
+      <div class="flex items-center">
+        <span class="text-2xl mr-3">{{ feature.icon }}</span>
+        <p class="text-gray-800">{{ feature.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% stylesheet %}
+.page-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+.grid {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.gap-y-4 {
+  row-gap: 1rem;
+}
+.gap-x-8 {
+  column-gap: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.text-gray-800 {
+  color: #374151;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
 {% endstylesheet %}
 
 {% javascript %}
