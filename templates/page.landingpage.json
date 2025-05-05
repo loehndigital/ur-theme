@@ -337,6 +337,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_6DgEez": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Lamm mit Rote Beete, Haferkleie und Apfel",
+        "product_description": "Beschreibungstext hier einfügen",
+        "product_image": "shopify://shop_images/lamm_800g_v2.png",
+        "image_position": "right",
+        "background_color": "#9fbcc5",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -655,6 +668,7 @@
     "highlight_product_TnH9XC",
     "highlight_product_gkLCzx",
     "highlight_product_QgccCq",
+    "highlight_product_6DgEez",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
