@@ -16,69 +16,30 @@
     },
     {
       "type": "checkbox",
-      "id": "custom_bg",
-      "label": "Hintergrundfarbe aktivieren",
+      "id": "boxed_content",
+      "label": "Weiße Box mit Schatten (Kachel)",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "center_content",
+      "label": "Gesamten Inhalt zentrieren",
       "default": true
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "Hintergrundfarbe wählen",
+      "label": "Hintergrundfarbe der Section",
       "default": "#f5f5f5"
-    },
-    {
-      "type": "checkbox",
-      "id": "solid_background",
-      "label": "Inhalt farbig hinterlegen",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "rounded_box",
-      "label": "Abgerundeter Kasten",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "center_content",
-      "label": "Inhalte im Container zentrieren",
-      "default": false
     },
     {
       "type": "range",
       "id": "section_padding",
-      "label": "Innenabstand oben/unten",
+      "label": "Padding oben/unten",
       "default": 50,
       "min": 0,
       "max": 100,
       "step": 10
-    },
-    {
-      "type": "range",
-      "id": "spacer_top",
-      "label": "Außenabstand oben (Margin)",
-      "default": 0,
-      "min": 0,
-      "max": 100,
-      "step": 10
-    },
-    {
-      "type": "range",
-      "id": "spacer_bottom",
-      "label": "Außenabstand unten (Margin)",
-      "default": 0,
-      "min": 0,
-      "max": 100,
-      "step": 10
-    },
-    {
-      "type": "range",
-      "id": "inner_padding_x",
-      "label": "Innenabstand links/rechts",
-      "default": 20,
-      "min": 0,
-      "max": 100,
-      "step": 5
     },
     {
       "type": "range",
@@ -93,17 +54,6 @@
       "type": "select",
       "id": "text_align_desktop",
       "label": "Textausrichtung (Desktop)",
-      "default": "left",
-      "options": [
-        { "value": "left", "label": "Links" },
-        { "value": "center", "label": "Zentriert" },
-        { "value": "right", "label": "Rechts" }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "text_align_mobile",
-      "label": "Textausrichtung (Mobil)",
       "default": "left",
       "options": [
         { "value": "left", "label": "Links" },
@@ -148,38 +98,32 @@
 {% endschema %}
 
 <div
-  class="
-    features-wrapper
+  class="features-wrapper
     {% if section.settings.full_width %} full-width{% endif %}
-    {% if section.settings.rounded_box %} rounded{% endif %}
-    {% if section.settings.solid_background %} solid-bg{% endif %}
-    align-desktop-{{ section.settings.text_align_desktop }}
-    align-mobile-{{ section.settings.text_align_mobile }}"
+    align-desktop-{{ section.settings.text_align_desktop }}"
   style="
-    margin-top: {{ section.settings.spacer_top }}px;
-    margin-bottom: {{ section.settings.spacer_bottom }}px;
-    background-color: {% if section.settings.custom_bg %}{{ section.settings.bg_color }}{% else %}transparent{% endif %};
+    background-color: {{ section.settings.bg_color }};
     padding-top: {{ section.settings.section_padding }}px;
     padding-bottom: {{ section.settings.section_padding }}px;
   "
 >
-  <div class="features-container{% if section.settings.center_content %} center-content{% endif %}" style="
-    max-width: {{ section.settings.text_max_width }}px;
-    padding-left: {{ section.settings.inner_padding_x }}px;
-    padding-right: {{ section.settings.inner_padding_x }}px;
-  ">
-    <h2 class="features-heading">{{ section.settings.heading }}</h2>
-    <div class="features-grid">
-      {% for block in section.blocks %}
-        <div class="feature-item">
-          <div class="feature-icon">
-            {{ block.settings.icon_svg }}
+  <div class="features-container
+    {% if section.settings.center_content %} center-content{% endif %}
+  " style="max-width: {{ section.settings.text_max_width }}px;">
+    <div class="features-inner{% if section.settings.boxed_content %} boxed{% endif %}">
+      <h2 class="features-heading">{{ section.settings.heading }}</h2>
+      <div class="features-grid">
+        {% for block in section.blocks %}
+          <div class="feature-item">
+            <div class="feature-icon">
+              {{ block.settings.icon_svg }}
+            </div>
+            <div class="feature-text">
+              {{ block.settings.text }}
+            </div>
           </div>
-          <div class="feature-text">
-            {{ block.settings.text }}
-          </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
@@ -187,17 +131,13 @@
 <style>
 .features-wrapper {
   font-family: Helvetica, Arial, sans-serif;
-  transition: all 0.3s ease;
-}
-
-.features-wrapper.rounded {
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.features-wrapper.full-width .features-container {
-  max-width: none;
   width: 100%;
+}
+
+.features-container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .features-container.center-content {
@@ -206,8 +146,12 @@
   align-items: center;
 }
 
-.features-wrapper.solid-bg {
-  background-color: rgba(255, 255, 255, 0.6);
+.features-inner.boxed {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .features-heading {
@@ -216,20 +160,17 @@
   margin-bottom: 40px;
 }
 
-/* Grid */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 40px;
 }
 
-/* Feature Items */
 .feature-item {
   display: flex;
   align-items: center;
 }
 
-/* Icon */
 .feature-icon svg {
   width: 28px;
   height: 28px;
@@ -238,37 +179,26 @@
   color: #333;
 }
 
-/* Text */
 .feature-text {
   font-size: 16px;
   color: #333;
 }
 
-/* Responsive */
+/* Textausrichtung */
+.align-desktop-left .features-container {
+  text-align: left;
+}
+.align-desktop-center .features-container {
+  text-align: center;
+}
+.align-desktop-right .features-container {
+  text-align: right;
+}
+
+/* Mobil */
 @media (max-width: 768px) {
   .features-grid {
     grid-template-columns: 1fr;
-  }
-  .features-wrapper.align-mobile-center .features-container {
-    text-align: center;
-  }
-  .features-wrapper.align-mobile-left .features-container {
-    text-align: left;
-  }
-  .features-wrapper.align-mobile-right .features-container {
-    text-align: right;
-  }
-}
-
-@media (min-width: 769px) {
-  .features-wrapper.align-desktop-center .features-container {
-    text-align: center;
-  }
-  .features-wrapper.align-desktop-left .features-container {
-    text-align: left;
-  }
-  .features-wrapper.align-desktop-right .features-container {
-    text-align: right;
   }
 }
 </style>
