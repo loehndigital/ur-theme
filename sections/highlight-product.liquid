@@ -2,23 +2,8 @@
 {
   "name": "UR Produktbalken",
   "tag": "section",
-  "class": "section-product-highlight",
+  "class": "section",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "product_image",
-      "label": "Produktbild"
-    },
-    {
-      "type": "select",
-      "id": "image_position",
-      "label": "Bildposition",
-      "default": "right",
-      "options": [
-        { "label": "Links", "value": "left" },
-        { "label": "Rechts", "value": "right" }
-      ]
-    },
     {
       "type": "text",
       "id": "product_title",
@@ -32,20 +17,35 @@
       "default": "Beschreibungstext hier einfügen"
     },
     {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Produktbild"
+    },
+    {
+      "type": "radio",
+      "id": "image_position",
+      "label": "Bildposition",
+      "options": [
+        { "label": "Links", "value": "left" },
+        { "label": "Rechts", "value": "right" }
+      ],
+      "default": "right"
+    },
+    {
       "type": "color",
       "id": "background_color",
       "label": "Hintergrundfarbe (Sortenfarbe)",
-      "default": "#D95B27"
+      "default": "#D5B827"
     },
     {
-      "type": "select",
+      "type": "radio",
       "id": "text_color_mode",
       "label": "Textfarbe",
-      "default": "light",
       "options": [
-        { "label": "Hell (weiß)", "value": "light" },
-        { "label": "Dunkel (schwarz)", "value": "dark" }
-      ]
+        { "label": "Hell", "value": "light" },
+        { "label": "Dunkel", "value": "dark" }
+      ],
+      "default": "light"
     },
     {
       "type": "range",
@@ -53,106 +53,120 @@
       "label": "Außenabstand (oben/unten)",
       "min": 0,
       "max": 80,
-      "step": 1,
+      "step": 5,
       "unit": "px",
       "default": 30
     }
   ],
   "presets": [
     {
-      "name": "UR Produktbalken",
-      "category": "Uncle Rusty's"
+      "name": "UR Produktbalken"
     }
   ]
 }
 {% endschema %}
 
-{% style %}
-  .section-product-highlight {
-    background-color: {{ section.settings.background_color }};
-    padding-top: {{ section.settings.padding_vertical | default: 30 }}px;
-    padding-bottom: {{ section.settings.padding_vertical | default: 30 }}px;
-  }
+{% stylesheet %}
+.highlight-wrapper {
+  padding-top: {{ section.settings.padding_vertical }}px;
+  padding-bottom: {{ section.settings.padding_vertical }}px;
+}
 
+.highlight-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: {{ section.settings.background_color }};
+  border-radius: 16px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.highlight-left,
+.highlight-right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.highlight-right img,
+.highlight-left img {
+  max-height: 120px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.text-light .highlight-content {
+  color: #fff;
+}
+.text-dark .highlight-content {
+  color: #000;
+}
+
+.highlight-content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.highlight-content details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 4px;
+  list-style: none;
+}
+
+.highlight-content details[open] summary:after {
+  content: "▲";
+  margin-left: 6px;
+}
+.highlight-content details summary:after {
+  content: "▼";
+  margin-left: 6px;
+}
+
+@media (max-width: 768px) {
   .highlight-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .highlight-right,
+  .highlight-left {
     align-items: center;
-    justify-content: space-between;
-    flex-direction: {% if section.settings.image_position == 'left' %}row-reverse{% else %}row{% endif %};
-    border-radius: 16px;
-    padding: 24px;
   }
+}
+{% endstylesheet %}
 
-  .highlight-content {
-    flex: 1;
-  }
+<div class="highlight-wrapper {{ section.settings.text_color_mode | prepend: 'text-' }}">
+  <div class="highlight-container {% if section.settings.image_position == 'left' %}highlight-left{% else %}highlight-right{% endif %}">
+    
+    {% if section.settings.image_position == 'left' %}
+      {% if section.settings.product_image %}
+        <div class="highlight-image">
+          <img src="{{ section.settings.product_image | image_url: width: 400 }}" alt="{{ section.settings.product_title }}">
+        </div>
+      {% endif %}
+    {% endif %}
 
-  .highlight-content h3 {
-    margin: 0 0 10px;
-    font-size: 20px;
-    font-weight: 700;
-  }
-
-  .highlight-content details summary {
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 6px;
-  }
-
-  .highlight-content details[open] summary::after {
-    content: "▲";
-    margin-left: 6px;
-  }
-
-  .highlight-content summary::after {
-    content: "▼";
-    margin-left: 6px;
-  }
-
-  .text-light .highlight-content,
-  .text-light h3,
-  .text-light summary {
-    color: #fff;
-  }
-
-  .text-dark .highlight-content,
-  .text-dark h3,
-  .text-dark summary {
-    color: #000;
-  }
-
-  .highlight-image img {
-    max-height: 160px;
-    width: auto;
-    border-radius: 10px;
-  }
-
-  @media (max-width: 768px) {
-    .highlight-container {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .highlight-image img {
-      margin-top: 16px;
-    }
-  }
-{% endstyle %}
-
-<div class="highlight-container {% if section.settings.text_color_mode == 'light' %}text-light{% else %}text-dark{% endif %}">
-  <div class="highlight-content">
-    <h3>{{ section.settings.product_title }}</h3>
-    <details>
-      <summary>Mehr erfahren</summary>
-      <p>{{ section.settings.product_description }}</p>
-    </details>
-  </div>
-  {% if section.settings.product_image %}
-    <div class="highlight-image">
-      <img src="{{ section.settings.product_image | image_url: width: 300 }}" alt="{{ section.settings.product_title }}">
+    <div class="highlight-content">
+      <h3>{{ section.settings.product_title }}</h3>
+      <details>
+        <summary>Mehr erfahren</summary>
+        <p>{{ section.settings.product_description }}</p>
+      </details>
     </div>
-  {% endif %}
+
+    {% if section.settings.image_position == 'right' %}
+      {% if section.settings.product_image %}
+        <div class="highlight-image">
+          <img src="{{ section.settings.product_image | image_url: width: 400 }}" alt="{{ section.settings.product_title }}">
+        </div>
+      {% endif %}
+    {% endif %}
+
+  </div>
 </div>
