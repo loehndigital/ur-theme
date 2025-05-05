@@ -217,6 +217,113 @@
         "produktname_rechts": "Uncle Rust's Hundenahrung"
       }
     },
+    "features_QgMU8P": {
+      "type": "Features",
+      "blocks": {
+        "feature_TGgArA": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_nUjGAB": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_Q3PXDr": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_EPD4mB": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_xLNCid": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_3pLa6J": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_8PeMLJ": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_e4pPhY": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_Lcn3wV": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_EnM4by": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_nLVKaE": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        },
+        "feature_AEFKz3": {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
+            "text": "Feature Beschreibung hier"
+          }
+        }
+      },
+      "block_order": [
+        "feature_TGgArA",
+        "feature_nUjGAB",
+        "feature_Q3PXDr",
+        "feature_EPD4mB",
+        "feature_xLNCid",
+        "feature_3pLa6J",
+        "feature_8PeMLJ",
+        "feature_e4pPhY",
+        "feature_Lcn3wV",
+        "feature_EnM4by",
+        "feature_nLVKaE",
+        "feature_AEFKz3"
+      ],
+      "name": "Features Tabelle",
+      "settings": {
+        "heading": "Gemacht für Hunde, die Qualität lieben."
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -531,6 +638,7 @@
     "1746432726ef4be35b",
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
+    "features_QgMU8P",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
