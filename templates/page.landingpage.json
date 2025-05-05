@@ -289,7 +289,12 @@
       ],
       "name": "Features Tabelle",
       "settings": {
-        "heading": "Gemacht für Hunde, die Qualität lieben."
+        "heading": "Gemacht für Hunde, die Qualität lieben.",
+        "full_width": false,
+        "custom_bg": true,
+        "bg_color": "#ece7d8",
+        "rounded_box": true,
+        "section_padding": 50
       }
     },
     "quick_cta_8T69fY": {
