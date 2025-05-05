@@ -34,6 +34,26 @@
       "id": "background_color",
       "label": "Hintergrundfarbe (Sortenfarbe)",
       "default": "#D95B27"
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Textfarbe",
+      "default": "light",
+      "options": [
+        { "value": "light", "label": "Weiß" },
+        { "value": "dark", "label": "Schwarz" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "vertical_padding",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Innenabstand (Padding oben/unten)",
+      "default": 40
     }
   ],
   "presets": [
@@ -45,88 +65,117 @@
 }
 {% endschema %}
 
-<div class="highlight-bar" style="background-color: {{ section.settings.background_color }};">
-  <div class="highlight-inner highlight-{{ section.settings.image_position }}">
-    {% if section.settings.image_position == 'left' %}
-      <div class="highlight-image">
-        {% if section.settings.product_image %}
-          <img src="{{ section.settings.product_image | image_url }}" alt="{{ section.settings.product_title }}">
-        {% endif %}
-      </div>
-    {% endif %}
+<div class="highlight-bar-wrapper">
+  <div class="highlight-bar text-{{ section.settings.text_color }}" style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.vertical_padding }}px; padding-bottom: {{ section.settings.vertical_padding }}px;">
+    <div class="highlight-inner highlight-{{ section.settings.image_position }}">
+      {% if section.settings.image_position == 'left' %}
+        <div class="highlight-image">
+          {% if section.settings.product_image %}
+            <img src="{{ section.settings.product_image | image_url }}" alt="{{ section.settings.product_title }}">
+          {% endif %}
+        </div>
+      {% endif %}
 
-    <div class="highlight-content">
-      <h3>{{ section.settings.product_title }}</h3>
-      <details>
-        <summary>Mehr erfahren</summary>
-        <p>{{ section.settings.product_description }}</p>
-      </details>
+      <div class="highlight-content">
+        <h3 class="highlight-title">{{ section.settings.product_title }}</h3>
+        <details>
+          <summary>Mehr erfahren</summary>
+          <p>{{ section.settings.product_description }}</p>
+        </details>
+      </div>
+
+      {% if section.settings.image_position == 'right' %}
+        <div class="highlight-image">
+          {% if section.settings.product_image %}
+            <img src="{{ section.settings.product_image | image_url }}" alt="{{ section.settings.product_title }}">
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
-
-    {% if section.settings.image_position == 'right' %}
-      <div class="highlight-image">
-        {% if section.settings.product_image %}
-          <img src="{{ section.settings.product_image | image_url }}" alt="{{ section.settings.product_title }}">
-        {% endif %}
-      </div>
-    {% endif %}
   </div>
 </div>
 
 <style>
-.highlight-bar {
-  padding: 40px 20px;
-  border-radius: 20px;
-  margin-bottom: 40px;
-  color: white;
+.highlight-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
 }
-
+.highlight-bar {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
 .highlight-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
   gap: 30px;
 }
-
 .highlight-left .highlight-image {
   order: 0;
 }
-
 .highlight-right .highlight-image {
   order: 2;
 }
-
 .highlight-image img {
-  max-width: 200px;
+  max-width: 180px;
   border-radius: 10px;
 }
-
 .highlight-content {
   flex: 1;
-  min-width: 280px;
+  min-width: 260px;
 }
-
-.highlight-content h3 {
+.highlight-title {
   font-size: 24px;
   margin-bottom: 10px;
 }
-
 .highlight-content details summary {
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 8px;
 }
-
 .highlight-content details[open] summary::after {
   content: "▲";
   margin-left: 6px;
 }
-
 .highlight-content summary::after {
   content: "▼";
   margin-left: 6px;
+}
+.text-light {
+  color: #fff;
+}
+.text-dark {
+  color: #000;
+}
+.text-light .highlight-title,
+.text-light summary,
+.text-light p {
+  color: #fff;
+}
+.text-dark .highlight-title,
+.text-dark summary,
+.text-dark p {
+  color: #000;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  .highlight-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .highlight-content {
+    order: 2;
+  }
+  .highlight-image {
+    order: 1;
+  }
 }
 </style>
