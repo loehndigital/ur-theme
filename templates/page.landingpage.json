@@ -307,7 +307,8 @@
         "product_title": "Produktname hier eingeben",
         "product_description": "Beschreibungstext hier einfügen",
         "background_color": "#d95b27",
-        "text_color": "light"
+        "text_color": "light",
+        "bar_height": 120
       }
     },
     "quick_cta_8T69fY": {
