@@ -7,6 +7,12 @@
       "id": "heading",
       "label": "Überschrift",
       "default": "Gemacht für Hunde, die Qualität lieben."
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Vollbreite aktivieren",
+      "default": false
     }
   ],
   "blocks": [
@@ -36,15 +42,6 @@
       "blocks": [
         {"type": "feature"},
         {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"},
         {"type": "feature"}
       ]
     }
@@ -52,7 +49,7 @@
 }
 {% endschema %}
 
-<div class="features-wrapper">
+<div class="features-wrapper {% if section.settings.full_width %}full-width{% endif %}">
   <div class="features-container">
     <h2 class="features-heading">{{ section.settings.heading }}</h2>
     <div class="features-grid">
@@ -75,6 +72,12 @@
   padding: 50px 20px;
   background-color: #f5f5f5;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+.features-wrapper.full-width .features-container {
+  max-width: none;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .features-container {

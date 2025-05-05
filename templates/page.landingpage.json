@@ -292,6 +292,17 @@
         "heading": "Gemacht für Hunde, die Qualität lieben."
       }
     },
+    "quick_cta_8T69fY": {
+      "type": "quick-cta",
+      "name": "UR Quick CTA",
+      "settings": {
+        "text_color": "beige",
+        "background_color": "orange",
+        "cta_text": "<h2>Headline</h2><p>Test Text</p>",
+        "button_text": "",
+        "button_url": ""
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -607,6 +618,7 @@
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
     "features_QgMU8P",
+    "quick_cta_8T69fY",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
