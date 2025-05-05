@@ -1,9 +1,6 @@
-
 {% schema %}
 {
   "name": "UR Produktbalken",
-  "tag": "section",
-  "class": "section section-product-highlight",
   "settings": [
     {
       "type": "text",
@@ -26,15 +23,15 @@
       "label": "Bildposition",
       "default": "right",
       "options": [
-        { "value": "left", "label": "Links" },
-        { "value": "right", "label": "Rechts" }
+        { "label": "Links", "value": "left" },
+        { "label": "Rechts", "value": "right" }
       ]
     },
     {
       "type": "color",
       "id": "background_color",
-      "label": "Hintergrundfarbe (Sortenfarbe)",
-      "default": "#f5f5f5"
+      "label": "Hintergrundfarbe",
+      "default": "#f6f6f6"
     },
     {
       "type": "select",
@@ -42,91 +39,152 @@
       "label": "Textfarbe",
       "default": "light",
       "options": [
-        { "value": "light", "label": "Hell (weiß)" },
-        { "value": "dark", "label": "Dunkel (schwarz)" }
+        { "label": "Hell (weiß)", "value": "light" },
+        { "label": "Dunkel (schwarz)", "value": "dark" }
       ]
     },
     {
       "type": "range",
       "id": "padding_vertical",
-      "label": "Innenabstand (oben/unten)",
       "min": 0,
       "max": 80,
       "step": 4,
       "unit": "px",
-      "default": 20
+      "label": "Innenabstand oben/unten",
+      "default": 24
     }
   ],
   "presets": [
     {
-      "name": "UR Produktbalken"
+      "name": "UR Produktbalken",
+      "category": "Uncle Rusty's"
     }
   ]
 }
 {% endschema %}
 
 <style>
-  .text-light .highlight-content,
-  .text-light h3,
-  .text-light summary {
-    color: #fff;
+  .section-product-highlight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
-  .text-dark .highlight-content,
-  .text-dark h3,
-  .text-dark summary {
-    color: #000;
+  .product-highlight-inner {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .highlight-left {
+    flex-direction: row-reverse;
+  }
+
+  .highlight-right {
+    flex-direction: row;
+  }
+
+  .highlight-content {
+    flex: 1;
+  }
+
+  .highlight-image {
+    max-width: 120px;
   }
 
   .highlight-image img {
-    max-height: 100px;
+    max-height: 120px;
     border-radius: 8px;
   }
 
-  @media (max-width: 768px) {
-    .product-highlight-inner {
-      flex-direction: column;
-      text-align: center;
-    }
+  .text-light .highlight-content h3,
+  .text-light .highlight-content summary {
+    color: #fff;
+  }
 
-    .highlight-image {
-      margin-top: 12px;
-    }
+  .text-dark .highlight-content h3,
+  .text-dark .highlight-content summary {
+    color: #000;
   }
 
   summary {
     cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
   }
 
-  details[open] summary:after {
-    content: "▲";
-    margin-left: 6px;
+  summary svg {
+    height: 12px;
+    width: 12px;
+    transition: transform 0.3s ease;
   }
 
-  details summary:after {
-    content: "▼";
-    margin-left: 6px;
+  details[open] summary svg {
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 768px) {
+    .section-product-highlight {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .product-highlight-inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .highlight-image {
+      margin-top: 16px;
+    }
   }
 </style>
 
-{% assign layout_class = section.settings.image_position %}
-{% assign text_class = section.settings.text_color_mode %}
+{% assign layout_class = '' %}
+{% if section.settings.image_position == 'left' %}
+  {% assign layout_class = 'highlight-left' %}
+{% else %}
+  {% assign layout_class = 'highlight-right' %}
+{% endif %}
 
-<div class="section-product-highlight {{ layout_class }} {% if text_class == 'light' %}text-light{% else %}text-dark{% endif %}"
-     style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_vertical }}px; padding-bottom: {{ section.settings.padding_vertical }}px;">
+{% assign text_class = '' %}
+{% if section.settings.text_color_mode == 'light' %}
+  {% assign text_class = 'text-light' %}
+{% else %}
+  {% assign text_class = 'text-dark' %}
+{% endif %}
+
+<div
+  class="section-product-highlight {{ layout_class }} {{ text_class }}"
+  style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_vertical }}px; padding-bottom: {{ section.settings.padding_vertical }}px;"
+>
   <div class="product-highlight-inner">
     <div class="highlight-content">
       <h3>{{ section.settings.product_title }}</h3>
       <details>
-        <summary>Mehr erfahren</summary>
+        <summary>
+          Mehr erfahren
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5.7 7.5L10 12.5l4.3-5H5.7z"/>
+          </svg>
+        </summary>
         <p>{{ section.settings.product_description }}</p>
       </details>
     </div>
+
     {% if section.settings.product_image %}
       <div class="highlight-image">
-        <img src="{{ section.settings.product_image | img_url: 'medium' }}" alt="{{ section.settings.product_title }}">
+        <img
+          src="{{ section.settings.product_image | img_url: 'medium' }}"
+          alt="{{ section.settings.product_title }}"
+        >
       </div>
     {% endif %}
   </div>
