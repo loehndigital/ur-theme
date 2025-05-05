@@ -13,6 +13,33 @@
       "id": "full_width",
       "label": "Vollbreite aktivieren",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_bg",
+      "label": "Hintergrundfarbe aktivieren",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Hintergrundfarbe wählen",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded_box",
+      "label": "Abgerundeter Kasten (wie unten)",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Innenabstand (Padding oben/unten)",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 10
     }
   ],
   "blocks": [
@@ -40,16 +67,28 @@
       "name": "Features Tabelle",
       "category": "Text",
       "blocks": [
-        {"type": "feature"},
-        {"type": "feature"},
-        {"type": "feature"}
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
       ]
     }
   ]
 }
 {% endschema %}
 
-<div class="features-wrapper {% if section.settings.full_width %}full-width{% endif %}">
+<div
+  class="features-wrapper {% if section.settings.full_width %}full-width{% endif %} {% if section.settings.rounded_box %}rounded{% endif %}"
+  style="
+    {% if section.settings.custom_bg %}
+      background-color: {{ section.settings.bg_color }};
+    {% else %}
+      background-color: transparent;
+    {% endif %}
+    padding-top: {{ section.settings.section_padding }}px;
+    padding-bottom: {{ section.settings.section_padding }}px;
+  "
+>
   <div class="features-container">
     <h2 class="features-heading">{{ section.settings.heading }}</h2>
     <div class="features-grid">
@@ -69,9 +108,12 @@
 
 <style>
 .features-wrapper {
-  padding: 50px 20px;
-  background-color: #f5f5f5;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+.features-wrapper.rounded {
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .features-wrapper.full-width .features-container {
@@ -116,7 +158,7 @@
   color: #333;
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .features-grid {
     grid-template-columns: 1fr;
   }
