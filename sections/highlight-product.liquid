@@ -1,93 +1,122 @@
-{% style %}
-  .section-product-highlight {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    border-radius: 16px;
-    padding: 0 24px;
-    margin: 0 auto;
-    max-width: 1200px;
+
+{% schema %}
+{
+  "name": "UR Produktbalken",
+  "tag": "section",
+  "class": "section section-product-highlight",
+  "settings": [
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Sortenname"
+    },
+    {
+      "type": "textarea",
+      "id": "product_description",
+      "label": "Sortenbeschreibung"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Produktbild"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Bildposition",
+      "default": "right",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Hintergrundfarbe (Sortenfarbe)",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "select",
+      "id": "text_color_mode",
+      "label": "Textfarbe",
+      "default": "light",
+      "options": [
+        { "value": "light", "label": "Hell (weiß)" },
+        { "value": "dark", "label": "Dunkel (schwarz)" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Innenabstand (oben/unten)",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Produktbalken"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .text-light .highlight-content,
+  .text-light h3,
+  .text-light summary {
+    color: #fff;
   }
 
-  .product-highlight-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .highlight-left {
-    flex-direction: row;
-  }
-
-  .highlight-right {
-    flex-direction: row-reverse;
-  }
-
-  .highlight-content h3 {
-    margin: 0;
-  }
-
-  summary {
-    list-style: none;
-    cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  summary::after {
-    content: "▼";
-    font-size: 12px;
-  }
-
-  details[open] summary::after {
-    transform: rotate(180deg);
+  .text-dark .highlight-content,
+  .text-dark h3,
+  .text-dark summary {
+    color: #000;
   }
 
   .highlight-image img {
-    max-height: 120px;
-    border-radius: 10px;
+    max-height: 100px;
+    border-radius: 8px;
   }
 
   @media (max-width: 768px) {
-    .section-product-highlight {
+    .product-highlight-inner {
       flex-direction: column;
       text-align: center;
     }
 
-    .product-highlight-inner {
-      flex-direction: column;
-    }
-
     .highlight-image {
-      margin-top: 16px;
+      margin-top: 12px;
     }
   }
 
-  .text-light .highlight-content h3,
-  .text-light .highlight-content summary,
-  .text-light .highlight-content p {
-    color: #fff;
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 8px;
   }
 
-  .text-dark .highlight-content h3,
-  .text-dark .highlight-content summary,
-  .text-dark .highlight-content p {
-    color: #000;
+  details[open] summary:after {
+    content: "▲";
+    margin-left: 6px;
   }
-{% endstyle %}
+
+  details summary:after {
+    content: "▼";
+    margin-left: 6px;
+  }
+</style>
 
 {% assign layout_class = section.settings.image_position %}
 {% assign text_class = section.settings.text_color_mode %}
 
-<div
-  class="section-product-highlight {{ layout_class }} {% if text_class == 'light' %}text-light{% else %}text-dark{% endif %}"
-  style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_vertical }}px; padding-bottom: {{ section.settings.padding_vertical }}px;"
->
-  <div class="product-highlight-inner {{ layout_class }}">
+<div class="section-product-highlight {{ layout_class }} {% if text_class == 'light' %}text-light{% else %}text-dark{% endif %}"
+     style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_vertical }}px; padding-bottom: {{ section.settings.padding_vertical }}px;">
+  <div class="product-highlight-inner">
     <div class="highlight-content">
       <h3>{{ section.settings.product_title }}</h3>
       <details>
