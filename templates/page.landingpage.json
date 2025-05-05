@@ -291,16 +291,12 @@
       "settings": {
         "heading": "Gemacht für Hunde, die Qualität lieben.",
         "full_width": false,
-        "custom_bg": true,
-        "bg_color": "#ece7d8",
-        "rounded_box": true,
         "boxed_content": true,
         "center_content": true,
+        "bg_color": "#f2eee3",
         "section_padding": 50,
-        "inner_padding_x": 80,
         "text_max_width": 1000,
-        "text_align_desktop": "center",
-        "text_align_mobile": "center"
+        "text_align_desktop": "center"
       }
     },
     "quick_cta_8T69fY": {
