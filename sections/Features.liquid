@@ -35,11 +35,33 @@
     {
       "type": "range",
       "id": "section_padding",
-      "label": "Innenabstand (Padding oben/unten)",
+      "label": "Innenabstand oben/unten",
       "default": 50,
       "min": 0,
       "max": 100,
       "step": 10
+    },
+    {
+      "type": "select",
+      "id": "text_align_desktop",
+      "label": "Textausrichtung (Desktop)",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Zentriert" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_align_mobile",
+      "label": "Textausrichtung (Mobil)",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Zentriert" },
+        { "value": "right", "label": "Rechts" }
+      ]
     }
   ],
   "blocks": [
@@ -78,7 +100,11 @@
 {% endschema %}
 
 <div
-  class="features-wrapper {% if section.settings.full_width %}full-width{% endif %} {% if section.settings.rounded_box %}rounded{% endif %}"
+  class="features-wrapper
+    {% if section.settings.full_width %} full-width {% endif %}
+    {% if section.settings.rounded_box %} rounded {% endif %}
+    align-desktop-{{ section.settings.text_align_desktop }}
+    align-mobile-{{ section.settings.text_align_mobile }}"
   style="
     {% if section.settings.custom_bg %}
       background-color: {{ section.settings.bg_color }};
@@ -125,26 +151,29 @@
 .features-container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .features-heading {
   font-size: 26px;
   font-weight: 500;
-  text-align: center;
   margin-bottom: 40px;
 }
 
+/* Grid */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 40px;
 }
 
+/* Items */
 .feature-item {
   display: flex;
   align-items: center;
 }
 
+/* Icon */
 .feature-icon svg {
   width: 28px;
   height: 28px;
@@ -153,14 +182,38 @@
   color: #333;
 }
 
+/* Text */
 .feature-text {
   font-size: 16px;
   color: #333;
 }
 
-@media (max-width: 600px) {
+/* Responsive grid */
+@media (max-width: 768px) {
   .features-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Text alignment (desktop + mobile) */
+.align-desktop-left .features-container {
+  text-align: left;
+}
+.align-desktop-center .features-container {
+  text-align: center;
+}
+.align-desktop-right .features-container {
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .align-mobile-left .features-container {
+    text-align: left;
+  }
+  .align-mobile-center .features-container {
+    text-align: center;
+  }
+  .align-mobile-right .features-container {
+    text-align: right;
   }
 }
 </style>
