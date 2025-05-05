@@ -290,7 +290,7 @@
       "name": "Features Tabelle",
       "settings": {
         "heading": "Gemacht für Hunde, die Qualität lieben.",
-        "full_width": false,
+        "full_width": true,
         "boxed_content": true,
         "center_content": true,
         "bg_color": "#f2eee3",
