@@ -411,6 +411,7 @@
         },
         "variant_picker_pfea3W": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button"
           }
@@ -425,12 +426,6 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "share_TEWRhy": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
@@ -439,8 +434,7 @@
         "price_aRm9DC",
         "variant_picker_pfea3W",
         "quantity_selector_nA69Bz",
-        "buy_buttons_TczBrT",
-        "share_TEWRhy"
+        "buy_buttons_TczBrT"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
