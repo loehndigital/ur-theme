@@ -1,21 +1,23 @@
 {% schema %}
 {
   "name": "UR Produktbalken",
+  "tag": "section",
+  "class": "section-product-highlight",
   "settings": [
-    {
-      "type": "select",
-      "id": "image_position",
-      "label": "Bildposition",
-      "default": "left",
-      "options": [
-        { "value": "left", "label": "Links" },
-        { "value": "right", "label": "Rechts" }
-      ]
-    },
     {
       "type": "image_picker",
       "id": "product_image",
       "label": "Produktbild"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Bildposition",
+      "default": "right",
+      "options": [
+        { "label": "Links", "value": "left" },
+        { "label": "Rechts", "value": "right" }
+      ]
     },
     {
       "type": "text",
@@ -37,151 +39,120 @@
     },
     {
       "type": "select",
-      "id": "text_color",
+      "id": "text_color_mode",
       "label": "Textfarbe",
       "default": "light",
       "options": [
-        { "value": "light", "label": "Weiß" },
-        { "value": "dark", "label": "Schwarz" }
+        { "label": "Hell (weiß)", "value": "light" },
+        { "label": "Dunkel (schwarz)", "value": "dark" }
       ]
     },
     {
       "type": "range",
-      "id": "bar_height",
-      "min": 100,
-      "max": 400,
-      "step": 10,
+      "id": "padding_vertical",
+      "label": "Außenabstand (oben/unten)",
+      "min": 0,
+      "max": 80,
+      "step": 1,
       "unit": "px",
-      "label": "Gesamthöhe des Balkens",
-      "default": 180
+      "default": 30
     }
   ],
   "presets": [
     {
       "name": "UR Produktbalken",
-      "category": "Uncle Rustys"
+      "category": "Uncle Rusty's"
     }
   ]
 }
 {% endschema %}
 
-<div class="highlight-bar-wrapper">
-  <div
-    class="highlight-bar text-{{ section.settings.text_color }}"
-    style="background-color: {{ section.settings.background_color }}; height: {{ section.settings.bar_height }}px;"
-  >
-    <div class="highlight-inner highlight-{{ section.settings.image_position }}">
-      {% if section.settings.image_position == 'left' %}
-        <div class="highlight-image">
-          {% if section.settings.product_image %}
-            <img src="{{ section.settings.product_image | image_url }}" alt="{{ section.settings.product_title }}">
-          {% endif %}
-        </div>
-      {% endif %}
+{% style %}
+  .section-product-highlight {
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_vertical | default: 30 }}px;
+    padding-bottom: {{ section.settings.padding_vertical | default: 30 }}px;
+  }
 
-      <div class="highlight-content">
-        <h3 class="highlight-title">{{ section.settings.product_title }}</h3>
-        <details>
-          <summary>Mehr erfahren</summary>
-          <p>{{ section.settings.product_description }}</p>
-        </details>
-      </div>
-
-      {% if section.settings.image_position == 'right' %}
-        <div class="highlight-image">
-          {% if section.settings.product_image %}
-            <img src="{{ section.settings.product_image | image_url }}" alt="{{ section.settings.product_title }}">
-          {% endif %}
-        </div>
-      {% endif %}
-    </div>
-  </div>
-</div>
-
-<style>
-.highlight-bar-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-}
-.highlight-bar {
-  width: 100%;
-  max-width: 1000px;
-  border-radius: 20px;
-  padding: 20px 40px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.highlight-inner {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  height: 100%;
-}
-.highlight-left .highlight-image {
-  order: 0;
-}
-.highlight-right .highlight-image {
-  order: 2;
-}
-.highlight-image img {
-  max-height: 100%;
-  max-width: 140px;
-  border-radius: 10px;
-  object-fit: contain;
-}
-.highlight-content {
-  flex: 1;
-  min-width: 260px;
-  overflow: hidden;
-}
-.highlight-title {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.highlight-content details summary {
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.highlight-content details[open] summary::after {
-  content: "▲";
-  margin-left: 6px;
-}
-.highlight-content summary::after {
-  content: "▼";
-  margin-left: 6px;
-}
-.text-light .highlight-title,
-.text-light summary,
-.text-light p {
-  color: #fff;
-}
-.text-dark .highlight-title,
-.text-dark summary,
-.text-dark p {
-  color: #000;
-}
-
-/* Mobile */
-@media(max-width: 768px) {
-  .highlight-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .highlight-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: {% if section.settings.image_position == 'left' %}row-reverse{% else %}row{% endif %};
+    border-radius: 16px;
+    padding: 24px;
   }
+
   .highlight-content {
-    order: 2;
+    flex: 1;
   }
-  .highlight-image {
-    order: 1;
+
+  .highlight-content h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 700;
   }
-  .highlight-bar {
-    height: auto !important;
-    padding: 30px 20px;
+
+  .highlight-content details summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 6px;
   }
-}
-</style>
+
+  .highlight-content details[open] summary::after {
+    content: "▲";
+    margin-left: 6px;
+  }
+
+  .highlight-content summary::after {
+    content: "▼";
+    margin-left: 6px;
+  }
+
+  .text-light .highlight-content,
+  .text-light h3,
+  .text-light summary {
+    color: #fff;
+  }
+
+  .text-dark .highlight-content,
+  .text-dark h3,
+  .text-dark summary {
+    color: #000;
+  }
+
+  .highlight-image img {
+    max-height: 160px;
+    width: auto;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .highlight-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .highlight-image img {
+      margin-top: 16px;
+    }
+  }
+{% endstyle %}
+
+<div class="highlight-container {% if section.settings.text_color_mode == 'light' %}text-light{% else %}text-dark{% endif %}">
+  <div class="highlight-content">
+    <h3>{{ section.settings.product_title }}</h3>
+    <details>
+      <summary>Mehr erfahren</summary>
+      <p>{{ section.settings.product_description }}</p>
+    </details>
+  </div>
+  {% if section.settings.product_image %}
+    <div class="highlight-image">
+      <img src="{{ section.settings.product_image | image_url: width: 300 }}" alt="{{ section.settings.product_title }}">
+    </div>
+  {% endif %}
+</div>
