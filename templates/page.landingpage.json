@@ -324,6 +324,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_QgccCq": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Lachs mit Kürbis, Haferkleie und Apfel",
+        "product_description": "Beschreibungstext hier einfügen",
+        "product_image": "shopify://shop_images/lachs_800g_b5aaa181-332a-4a41-8f5c-cb0a7d734d11.png",
+        "image_position": "right",
+        "background_color": "#daafa2",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -641,6 +654,7 @@
     "features_QgMU8P",
     "highlight_product_TnH9XC",
     "highlight_product_gkLCzx",
+    "highlight_product_QgccCq",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
