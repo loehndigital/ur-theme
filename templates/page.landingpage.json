@@ -311,15 +311,17 @@
         "bar_height": 120
       }
     },
-    "quick_cta_8T69fY": {
-      "type": "quick-cta",
-      "name": "UR Quick CTA",
+    "highlight_product_rhPDQe": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
       "settings": {
-        "text_color": "beige",
-        "background_color": "red",
-        "cta_text": "<h2>Headline</h2><p>Test Text</p>",
-        "button_text": "",
-        "button_url": ""
+        "image_position": "right",
+        "product_image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
+        "product_title": "Ente mit Karotten und Hirse",
+        "product_description": "Beschreibungstext hier einfügen",
+        "background_color": "#d6b36f",
+        "text_color": "light",
+        "bar_height": 120
       }
     },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
@@ -638,7 +640,7 @@
     "vergleichstabelle_TwExww",
     "features_QgMU8P",
     "highlight_product_TnH9XC",
-    "quick_cta_8T69fY",
+    "highlight_product_rhPDQe",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
