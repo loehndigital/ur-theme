@@ -47,13 +47,13 @@
     },
     {
       "type": "range",
-      "id": "vertical_padding",
-      "min": 20,
-      "max": 100,
-      "step": 5,
+      "id": "bar_height",
+      "min": 100,
+      "max": 400,
+      "step": 10,
       "unit": "px",
-      "label": "Innenabstand (Padding oben/unten)",
-      "default": 40
+      "label": "Gesamthöhe des Balkens",
+      "default": 180
     }
   ],
   "presets": [
@@ -66,7 +66,10 @@
 {% endschema %}
 
 <div class="highlight-bar-wrapper">
-  <div class="highlight-bar text-{{ section.settings.text_color }}" style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.vertical_padding }}px; padding-bottom: {{ section.settings.vertical_padding }}px;">
+  <div
+    class="highlight-bar text-{{ section.settings.text_color }}"
+    style="background-color: {{ section.settings.background_color }}; height: {{ section.settings.bar_height }}px;"
+  >
     <div class="highlight-inner highlight-{{ section.settings.image_position }}">
       {% if section.settings.image_position == 'left' %}
         <div class="highlight-image">
@@ -105,16 +108,17 @@
   width: 100%;
   max-width: 1000px;
   border-radius: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 20px 40px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .highlight-inner {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  height: 100%;
 }
 .highlight-left .highlight-image {
   order: 0;
@@ -123,15 +127,18 @@
   order: 2;
 }
 .highlight-image img {
-  max-width: 180px;
+  max-height: 100%;
+  max-width: 140px;
   border-radius: 10px;
+  object-fit: contain;
 }
 .highlight-content {
   flex: 1;
   min-width: 260px;
+  overflow: hidden;
 }
 .highlight-title {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 .highlight-content details summary {
@@ -146,12 +153,6 @@
 .highlight-content summary::after {
   content: "▼";
   margin-left: 6px;
-}
-.text-light {
-  color: #fff;
-}
-.text-dark {
-  color: #000;
 }
 .text-light .highlight-title,
 .text-light summary,
@@ -170,12 +171,17 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 20px;
   }
   .highlight-content {
     order: 2;
   }
   .highlight-image {
     order: 1;
+  }
+  .highlight-bar {
+    height: auto !important;
+    padding: 30px 20px;
   }
 }
 </style>
