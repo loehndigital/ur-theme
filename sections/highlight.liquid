@@ -1,6 +1,125 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Highlight Produktbalken",
+  "settings": [
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Bildposition",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Produktbild"
+    },
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Sortenname",
+      "default": "Ente mit Karotten"
+    },
+    {
+      "type": "textarea",
+      "id": "product_description",
+      "label": "Sortenbeschreibung"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Hintergrundfarbe (Sortenfarbe)",
+      "default": "#D95B27"
+    }
+  ]
+}
 {% endschema %}
+
+<div class="highlight-bar" style="background-color: {{ section.settings.background_color }};">
+  <div class="highlight-inner highlight-{{ section.settings.image_position }}">
+    {% if section.settings.image_position == 'left' %}
+      <div class="highlight-image">
+        {% if section.settings.product_image %}
+          <img src="{{ section.settings.product_image | image_url }}" alt="{{ section.settings.product_title }}">
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="highlight-content">
+      <h3>{{ section.settings.product_title }}</h3>
+      <details>
+        <summary>Mehr erfahren</summary>
+        <p>{{ section.settings.product_description }}</p>
+      </details>
+    </div>
+
+    {% if section.settings.image_position == 'right' %}
+      <div class="highlight-image">
+        {% if section.settings.product_image %}
+          <img src="{{ section.settings.product_image | image_url }}" alt="{{ section.settings.product_title }}">
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+.highlight-bar {
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.highlight-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.highlight-left .highlight-image {
+  order: 0;
+}
+
+.highlight-right .highlight-image {
+  order: 2;
+}
+
+.highlight-image img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.highlight-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.highlight-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.highlight-content details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.highlight-content details[open] summary::after {
+  content: "▲";
+  margin-left: 6px;
+}
+
+.highlight-content summary::after {
+  content: "▼";
+  margin-left: 6px;
+}
+</style>
