@@ -311,19 +311,6 @@
         "padding_vertical": 20
       }
     },
-    "highlight_product_rhPDQe": {
-      "type": "highlight-product",
-      "name": "UR Produktbalken",
-      "settings": {
-        "product_title": "Ente mit Karotten und Hirse",
-        "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
-        "image_position": "right",
-        "background_color": "#d6b36f",
-        "text_color_mode": "light",
-        "padding_vertical": 40
-      }
-    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -640,7 +627,6 @@
     "vergleichstabelle_TwExww",
     "features_QgMU8P",
     "highlight_product_TnH9XC",
-    "highlight_product_rhPDQe",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
