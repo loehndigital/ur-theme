@@ -275,34 +275,6 @@
             "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
             "text": "Feature Beschreibung hier"
           }
-        },
-        "feature_Lcn3wV": {
-          "type": "feature",
-          "settings": {
-            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
-            "text": "Feature Beschreibung hier"
-          }
-        },
-        "feature_EnM4by": {
-          "type": "feature",
-          "settings": {
-            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
-            "text": "Feature Beschreibung hier"
-          }
-        },
-        "feature_nLVKaE": {
-          "type": "feature",
-          "settings": {
-            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
-            "text": "Feature Beschreibung hier"
-          }
-        },
-        "feature_AEFKz3": {
-          "type": "feature",
-          "settings": {
-            "icon_svg": "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#000\" fill=\"none\"></circle></svg>",
-            "text": "Feature Beschreibung hier"
-          }
         }
       },
       "block_order": [
@@ -313,11 +285,7 @@
         "feature_xLNCid",
         "feature_3pLa6J",
         "feature_8PeMLJ",
-        "feature_e4pPhY",
-        "feature_Lcn3wV",
-        "feature_EnM4by",
-        "feature_nLVKaE",
-        "feature_AEFKz3"
+        "feature_e4pPhY"
       ],
       "name": "Features Tabelle",
       "settings": {
