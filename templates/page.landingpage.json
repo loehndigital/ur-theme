@@ -84,6 +84,37 @@
         "include_margins": true
       }
     },
+    "rich_text_kpjUct": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UWAJXQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_pFXyWC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UWAJXQ",
+        "text_pFXyWC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "vergleichstabelle_TwExww": {
       "type": "Vergleichstabelle",
       "blocks": {
@@ -498,6 +529,7 @@
     "hero_slider_WJ9jLG",
     "rich_text_3mPDGQ",
     "1746432726ef4be35b",
+    "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
