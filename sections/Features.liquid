@@ -22,21 +22,6 @@
     },
     {
       "type": "checkbox",
-      "id": "custom_box_width",
-      "label": "Individuelle Breite für weiße Box aktivieren",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "box_width",
-      "label": "Breite der weißen Box (px)",
-      "default": 960,
-      "min": 600,
-      "max": 1400,
-      "step": 40
-    },
-    {
-      "type": "checkbox",
       "id": "center_content",
       "label": "Gesamten Inhalt zentrieren",
       "default": true
@@ -55,15 +40,6 @@
       "min": 0,
       "max": 100,
       "step": 10
-    },
-    {
-      "type": "range",
-      "id": "text_max_width",
-      "label": "Maximale Breite des Inhalts (px)",
-      "default": 1000,
-      "min": 400,
-      "max": 1400,
-      "step": 50
     },
     {
       "type": "select",
@@ -122,14 +98,8 @@
     padding-bottom: {{ section.settings.section_padding }}px;
   "
 >
-  <div class="features-container
-    {% if section.settings.center_content %} center-content{% endif %}
-  " style="max-width: {{ section.settings.text_max_width }}px;">
-    <div class="features-inner{% if section.settings.boxed_content %} boxed{% endif %}"
-      {% if section.settings.custom_box_width %}
-        style="max-width: {{ section.settings.box_width }}px; margin: 0 auto;"
-      {% endif %}
-    >
+  <div class="features-container {% if section.settings.center_content %} center-content{% endif %}">
+    <div class="features-inner{% if section.settings.boxed_content %} boxed{% endif %}" style="max-width: var(--width-content, 1200px); margin: 0 auto;">
       <h2 class="features-heading">{{ section.settings.heading }}</h2>
       <div class="features-grid">
         {% for block in section.blocks %}
@@ -154,7 +124,7 @@
 }
 
 .features-container {
-  margin: 0 auto;
+  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
 }
