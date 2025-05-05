@@ -389,8 +389,78 @@
         "padding_vertical": 20
       }
     },
+    "featured_product_DLJYB3": {
+      "type": "featured-product",
+      "blocks": {
+        "text_H8WcET": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_piUkgB": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_aRm9DC": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_pfea3W": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_nA69Bz": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_TczBrT": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_TEWRhy": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_H8WcET",
+        "title_piUkgB",
+        "price_aRm9DC",
+        "variant_picker_pfea3W",
+        "quantity_selector_nA69Bz",
+        "buy_buttons_TczBrT",
+        "share_TEWRhy"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "tasterpack",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
+      "disabled": true,
       "settings": {
         "collection": "nassfutter",
         "additives_collection": "",
@@ -711,6 +781,7 @@
     "highlight_product_yGffdL",
     "highlight_product_mHHMDr",
     "highlight_product_HmajQH",
+    "featured_product_DLJYB3",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
