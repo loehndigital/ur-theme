@@ -298,6 +298,17 @@
         "text_align_desktop": "left"
       }
     },
+    "highlight_product_TnH9XC": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "image_position": "right",
+        "product_image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
+        "product_title": "Produktname hier eingeben",
+        "product_description": "Beschreibungstext hier einfügen",
+        "background_color": "#D95B27"
+      }
+    },
     "quick_cta_8T69fY": {
       "type": "quick-cta",
       "name": "UR Quick CTA",
@@ -624,6 +635,7 @@
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
     "features_QgMU8P",
+    "highlight_product_TnH9XC",
     "quick_cta_8T69fY",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
