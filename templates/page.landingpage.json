@@ -632,14 +632,20 @@
     "1702222298d12bda40": {
       "type": "apps",
       "blocks": {
+        "judge_me_reviews_all_reviews_page_BiHJAf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "2df67da2-3787-42ca-af3b-1a0e3d478f49": {
           "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {
             "maxwidth": 1080
           }
         }
       },
       "block_order": [
+        "judge_me_reviews_all_reviews_page_BiHJAf",
         "2df67da2-3787-42ca-af3b-1a0e3d478f49"
       ],
       "settings": {
