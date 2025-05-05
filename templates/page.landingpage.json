@@ -294,7 +294,9 @@
         "custom_bg": true,
         "bg_color": "#ece7d8",
         "rounded_box": true,
-        "section_padding": 50
+        "section_padding": 50,
+        "text_align_desktop": "center",
+        "text_align_mobile": "center"
       }
     },
     "quick_cta_8T69fY": {
@@ -302,7 +304,7 @@
       "name": "UR Quick CTA",
       "settings": {
         "text_color": "beige",
-        "background_color": "orange",
+        "background_color": "red",
         "cta_text": "<h2>Headline</h2><p>Test Text</p>",
         "button_text": "",
         "button_url": ""
