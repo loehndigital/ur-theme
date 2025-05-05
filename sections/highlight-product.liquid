@@ -2,7 +2,6 @@
 {
   "name": "UR Produktbalken",
   "tag": "section",
-  "class": "section-product-highlight-wrapper",
   "settings": [
     {
       "type": "text",
@@ -25,37 +24,37 @@
       "type": "select",
       "id": "image_position",
       "label": "Bildposition",
+      "default": "right",
       "options": [
         { "value": "left", "label": "Links" },
         { "value": "right", "label": "Rechts" }
-      ],
-      "default": "right"
+      ]
     },
     {
       "type": "color",
       "id": "background_color",
       "label": "Hintergrundfarbe (Sortenfarbe)",
-      "default": "#D5B827"
+      "default": "#D6B36F"
     },
     {
       "type": "select",
       "id": "text_color_mode",
       "label": "Textfarbe",
+      "default": "light",
       "options": [
         { "value": "light", "label": "Hell (weiß)" },
         { "value": "dark", "label": "Dunkel (schwarz)" }
-      ],
-      "default": "light"
+      ]
     },
     {
       "type": "range",
       "id": "padding_vertical",
-      "min": 10,
-      "max": 100,
-      "step": 10,
+      "min": 0,
+      "max": 80,
+      "step": 4,
       "unit": "px",
       "label": "Innenabstand (oben/unten)",
-      "default": 40
+      "default": 20
     }
   ],
   "presets": [
@@ -68,104 +67,65 @@
 
 {% style %}
 .section-product-highlight {
-  max-width: 1160px;
+  max-width: 1140px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+.product-highlight-box {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-radius: 18px;
-  padding-left: 24px;
-  padding-right: 24px;
-  gap: 20px;
-  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: {{ section.settings.background_color }};
+  padding-top: {{ section.settings.padding_vertical }}px;
+  padding-bottom: {{ section.settings.padding_vertical }}px;
+  border-radius: 16px;
+  gap: 32px;
 }
-
-.highlight-container {
-  display: flex;
-  width: 100%;
-  padding-top: {{ section.settings.padding_vertical | default: 40 }}px;
-  padding-bottom: {{ section.settings.padding_vertical | default: 40 }}px;
-  border-radius: 18px;
+.product-highlight-inner.text-light {
+  color: #fff;
 }
-
-.highlight-left .section-product-highlight {
-  flex-direction: row-reverse;
+.product-highlight-inner.text-dark {
+  color: #000;
 }
-
-.highlight-right .section-product-highlight {
-  flex-direction: row;
-}
-
 .highlight-content {
   flex: 1;
 }
-
-.highlight-content h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.highlight-content details summary {
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 4px;
-  position: relative;
-}
-
-.highlight-content details[open] summary:after {
-  content: "▲";
-  position: absolute;
-  right: -18px;
-}
-
-.highlight-content details summary:after {
-  content: "▼";
-  position: absolute;
-  right: -18px;
-}
-
-.text-light .highlight-content {
-  color: #fff;
-}
-
-.text-dark .highlight-content {
-  color: #000;
-}
-
 .highlight-image img {
-  max-height: 120px;
+  max-height: 100px;
   border-radius: 8px;
 }
-
 @media (max-width: 768px) {
-  .section-product-highlight {
-    flex-direction: column;
+  .product-highlight-box {
+    flex-direction: column !important;
     text-align: center;
   }
-
   .highlight-image img {
     margin-top: 16px;
   }
 }
 {% endstyle %}
 
-<div 
-  class="highlight-container {% if section.settings.image_position == 'left' %}highlight-left{% else %}highlight-right{% endif %} {% if section.settings.text_color_mode == 'light' %}text-light{% else %}text-dark{% endif %}"
-  style="background-color: {{ section.settings.background_color }};"
->
-  <div class="section-product-highlight">
-    <div class="highlight-content">
-      <h3>{{ section.settings.product_title }}</h3>
-      <details>
-        <summary>Mehr erfahren</summary>
-        <p>{{ section.settings.product_description }}</p>
-      </details>
-    </div>
-    {% if section.settings.product_image %}
-      <div class="highlight-image">
-        <img src="{{ section.settings.product_image | image_url: width: 300 }}" alt="Produktbild">
+{% assign layout_class = section.settings.image_position %}
+{% assign text_class = section.settings.text_color_mode %}
+
+<div class="section-product-highlight">
+  <div class="product-highlight-box">
+    <div class="product-highlight-inner {% if text_class == 'light' %}text-light{% else %}text-dark{% endif %} {% if layout_class == 'left' %}highlight-left{% else %}highlight-right{% endif %}">
+      <div class="highlight-content">
+        <h3>{{ section.settings.product_title }}</h3>
+        <details>
+          <summary>
+            Mehr erfahren
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5.2 7.5L10 12.3l4.8-4.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </summary>
+          <p>{{ section.settings.product_description }}</p>
+        </details>
       </div>
-    {% endif %}
+      {% if section.settings.product_image %}
+        <div class="highlight-image">
+          <img src="{{ section.settings.product_image | img_url: 'medium' }}" alt="{{ section.settings.product_title }}">
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>
