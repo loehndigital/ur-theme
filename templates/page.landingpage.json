@@ -350,6 +350,45 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_yGffdL": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Pferd mit Karotte und Quinoa",
+        "product_description": "Beschreibungstext hier einfügen",
+        "product_image": "shopify://shop_images/pferd_800g_c40c9051-5c62-4353-b295-13c1e25cc264.png",
+        "image_position": "right",
+        "background_color": "#b4aec2",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
+    "highlight_product_mHHMDr": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Rind mit Kartoffeln und Karotten",
+        "product_description": "Beschreibungstext hier einfügen",
+        "product_image": "shopify://shop_images/rind_800g_9701a81b-c8aa-4e09-8ba7-4f3b6851f0a5.png",
+        "image_position": "right",
+        "background_color": "#ce6637",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
+    "highlight_product_HmajQH": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Wild mit Süßkartoffeln und Zucchini",
+        "product_description": "Beschreibungstext hier einfügen",
+        "product_image": "shopify://shop_images/wild_800g_58fe7a12-1637-44b4-bd51-52d066f68ed7.png",
+        "image_position": "right",
+        "background_color": "#7ba283",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -669,6 +708,9 @@
     "highlight_product_gkLCzx",
     "highlight_product_QgccCq",
     "highlight_product_6DgEez",
+    "highlight_product_yGffdL",
+    "highlight_product_mHHMDr",
+    "highlight_product_HmajQH",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
