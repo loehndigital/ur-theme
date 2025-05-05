@@ -161,31 +161,33 @@
   {% assign text_class = 'text-dark' %}
 {% endif %}
 
-<div
-  class="section-product-highlight {{ layout_class }} {{ text_class }}"
-  style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_vertical }}px; padding-bottom: {{ section.settings.padding_vertical }}px;"
->
-  <div class="product-highlight-inner">
-    <div class="highlight-content">
-      <h3>{{ section.settings.product_title }}</h3>
-      <details>
-        <summary>
-          Mehr erfahren
-          <svg viewBox="0 0 20 20" fill="currentColor">
-            <path d="M5.7 7.5L10 12.5l4.3-5H5.7z"/>
-          </svg>
-        </summary>
-        <p>{{ section.settings.product_description }}</p>
-      </details>
-    </div>
-
-    {% if section.settings.product_image %}
-      <div class="highlight-image">
-        <img
-          src="{{ section.settings.product_image | img_url: 'medium' }}"
-          alt="{{ section.settings.product_title }}"
-        >
+<div class="page-width">
+  <div
+    class="section-product-highlight {{ layout_class }} {{ text_class }}"
+    style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_vertical }}px; padding-bottom: {{ section.settings.padding_vertical }}px;"
+  >
+    <div class="product-highlight-inner">
+      <div class="highlight-content">
+        <h3>{{ section.settings.product_title }}</h3>
+        <details>
+          <summary>
+            Mehr erfahren
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M5.7 7.5L10 12.5l4.3-5H5.7z"/>
+            </svg>
+          </summary>
+          <p>{{ section.settings.product_description }}</p>
+        </details>
       </div>
-    {% endif %}
+
+      {% if section.settings.product_image %}
+        <div class="highlight-image">
+          <img
+            src="{{ section.settings.product_image | img_url: 'medium' }}"
+            alt="{{ section.settings.product_title }}"
+          >
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>
