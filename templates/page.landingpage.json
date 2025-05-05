@@ -311,6 +311,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_gkLCzx": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Geflügel mit Kürbis und Amaranth",
+        "product_description": "Beschreibungstext hier einfügen",
+        "product_image": "shopify://shop_images/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
+        "image_position": "right",
+        "background_color": "#d0b968",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -627,6 +640,7 @@
     "vergleichstabelle_TwExww",
     "features_QgMU8P",
     "highlight_product_TnH9XC",
+    "highlight_product_gkLCzx",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "full_width_banner_mHzKC9",
     "rich_text_JrgidR",
