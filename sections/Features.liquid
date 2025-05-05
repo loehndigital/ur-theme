@@ -83,7 +83,7 @@
       "name": "Feature",
       "settings": [
         {
-          "type": "html",
+          "type": "textarea",
           "id": "icon_svg",
           "label": "SVG Icon (HTML)",
           "default": "<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='10' stroke='#000' fill='none'/></svg>"
@@ -125,7 +125,11 @@
   <div class="features-container
     {% if section.settings.center_content %} center-content{% endif %}
   " style="max-width: {{ section.settings.text_max_width }}px;">
-    <div class="features-inner{% if section.settings.boxed_content %} boxed{% endif %}" {% if section.settings.custom_box_width %}style="max-width: {{ section.settings.box_width }}px; margin: 0 auto;"{% endif %}>
+    <div class="features-inner{% if section.settings.boxed_content %} boxed{% endif %}"
+      {% if section.settings.custom_box_width %}
+        style="max-width: {{ section.settings.box_width }}px; margin: 0 auto;"
+      {% endif %}
+    >
       <h2 class="features-heading">{{ section.settings.heading }}</h2>
       <div class="features-grid">
         {% for block in section.blocks %}
