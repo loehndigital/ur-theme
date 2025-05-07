@@ -652,6 +652,54 @@
         "include_margins": true
       }
     },
+    "image_banner_RfRG3H": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_dXWPnD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Probierstas probierpaket eh",
+            "heading_size": "h1"
+          }
+        },
+        "text_7HMmCA": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_yWKLVC": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Jetzt testen",
+            "button_link_1": "shopify://products/tasterpack",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dXWPnD",
+        "text_7HMmCA",
+        "buttons_yWKLVC"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -788,6 +836,7 @@
     "ur_image_with_text_p4A4qV",
     "multicolumn_r4Prxy",
     "1702222298d12bda40",
+    "image_banner_RfRG3H",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
