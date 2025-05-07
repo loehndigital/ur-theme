@@ -468,64 +468,6 @@
         "padding_bottom": 20
       }
     },
-    "full_width_banner_mHzKC9": {
-      "type": "full-width-banner",
-      "disabled": true,
-      "settings": {
-        "background_image": "shopify://shop_images/comp1_1.jpg",
-        "content": "<p>Der Text</p>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "false",
-        "theme_mode": "dark",
-        "desktop_blur": "desktop-blur"
-      }
-    },
-    "rich_text_JrgidR": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_mjihqp": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_dgGn6C": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_PEX4GW": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_mjihqp",
-        "text_dgGn6C",
-        "button_PEX4GW"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "ur_image_with_text_p4A4qV": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -570,61 +512,6 @@
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_r4Prxy": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_h8VyzK": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_QLfkDH": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_YiQznY": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_h8VyzK",
-        "column_QLfkDH",
-        "column_YiQznY"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Unser Anspruch",
-        "heading_alignment": "center",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -762,10 +649,7 @@
     "highlight_product_HmajQH",
     "featured_product_DLJYB3",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
-    "full_width_banner_mHzKC9",
-    "rich_text_JrgidR",
     "ur_image_with_text_p4A4qV",
-    "multicolumn_r4Prxy",
     "1702222298d12bda40",
     "hero_slider_RqPLDN",
     "ur_image_with_text_BbWgCG",
