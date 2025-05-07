@@ -674,6 +674,55 @@
       "name": "UR Hero Slider",
       "settings": {}
     },
+    "ur_image_with_text_BbWgCG": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "heading_QU7CBE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_LrQdPp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_TtQgy8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QU7CBE",
+        "text_LrQdPp",
+        "button_TtQgy8"
+      ],
+      "name": "UR Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/ProbierpaketREnder-min_1.jpg",
+        "height": "adapt",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -686,98 +735,6 @@
         "newsletter": "true",
         "theme_mode": "dark",
         "desktop_blur": "no-desktop-blur"
-      }
-    },
-    "collapsible_content_Jzm6Nw": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_KCpmYg": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Ente mit Karotten & Hirse",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_GDhDjA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_MNBbjp": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_xFb3Xe": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_3FqqPy": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_wbG7LX": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_ryG4UP": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_KCpmYg",
-        "collapsible_row_GDhDjA",
-        "collapsible_row_MNBbjp",
-        "collapsible_row_xFb3Xe",
-        "collapsible_row_3FqqPy",
-        "collapsible_row_wbG7LX",
-        "collapsible_row_ryG4UP"
-      ],
-      "disabled": true,
-      "settings": {
-        "caption": "",
-        "heading": "Unsere Menüs im Detail",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "row",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_first",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "icon_row_bDgXgn": {
@@ -811,8 +768,8 @@
     "multicolumn_r4Prxy",
     "1702222298d12bda40",
     "hero_slider_RqPLDN",
+    "ur_image_with_text_BbWgCG",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
-    "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
   ]
 }
