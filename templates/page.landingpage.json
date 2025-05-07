@@ -610,6 +610,68 @@
         "padding_bottom": 36
       }
     },
+    "collapsible_content_8Ctycq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_KTqhjk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_atgwwi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Gtkywa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_nzhBjg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_KTqhjk",
+        "collapsible_row_atgwwi",
+        "collapsible_row_Gtkywa",
+        "collapsible_row_nzhBjg"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Du hast noch Fragen?",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -653,6 +715,7 @@
     "1702222298d12bda40",
     "hero_slider_RqPLDN",
     "ur_image_with_text_BbWgCG",
+    "collapsible_content_8Ctycq",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "icon_row_bDgXgn"
   ]
