@@ -12,12 +12,9 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
+        "rating_reDJiQ": {
+          "type": "rating",
+          "settings": {}
         },
         "title": {
           "type": "title",
@@ -81,10 +78,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "rating_reDJiQ": {
-          "type": "rating",
-          "settings": {}
-        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
@@ -114,7 +107,7 @@
         }
       },
       "block_order": [
-        "vendor",
+        "rating_reDJiQ",
         "title",
         "caption",
         "price",
@@ -122,7 +115,6 @@
         "quantity_selector",
         "bsub-widget",
         "buy_buttons",
-        "rating_reDJiQ",
         "collapsible-row-1",
         "collapsible-row-0",
         "collapsible-row-2"
