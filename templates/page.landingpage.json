@@ -217,6 +217,23 @@
         "produktname_rechts": "Uncle Rust's Hundenahrung"
       }
     },
+    "174716101986516015": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_yFHLyi": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_yFHLyi"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "features_QgMU8P": {
       "type": "Features",
       "blocks": {
@@ -730,6 +747,7 @@
     "1746432726ef4be35b",
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
+    "174716101986516015",
     "features_QgMU8P",
     "highlight_product_TnH9XC",
     "highlight_product_gkLCzx",
