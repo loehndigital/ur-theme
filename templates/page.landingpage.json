@@ -90,9 +90,9 @@
         "feature_JCDnTb": {
           "type": "feature",
           "settings": {
-            "text_links": "Transparente Zutatenliste ohne Tricks",
+            "text_links": "Undurchsichtige Deklaration und Tricks",
             "icon_links": false,
-            "text_rechts": "Transparente Zutatenliste ohne Tricks",
+            "text_rechts": "100 % Deklaration aller Zutaten",
             "icon_rechts": true
           }
         },
