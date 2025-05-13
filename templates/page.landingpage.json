@@ -186,9 +186,9 @@
         "feature_XHTGKF": {
           "type": "feature",
           "settings": {
-            "text_links": "Führt häufig zu Juckreiz, Blähungen & Co.",
+            "text_links": "Führt oft zu Blähungen, Juckreiz & Verdauungsstress",
             "icon_links": false,
-            "text_rechts": "Unterstützt Verdauung & Immunsystem",
+            "text_rechts": "Unterstützt Verdauung, Fell, Abwehr & Immunsystem",
             "icon_rechts": true
           }
         },
