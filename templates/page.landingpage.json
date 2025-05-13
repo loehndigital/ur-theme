@@ -684,7 +684,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "Du hast noch Fragen?",
+        "heading": "Du hast noch Fragen? Wir haben die Antwort:",
         "heading_size": "h1",
         "heading_alignment": "left",
         "layout": "row",
