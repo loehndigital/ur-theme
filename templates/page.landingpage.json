@@ -467,7 +467,7 @@
           "settings": {
             "hero_image": "shopify://shop_images/probierpaket-landschaft-min.jpg",
             "hero_image_mobile": "shopify://shop_images/probierpaket-landschaft-mobile-2-min.jpg",
-            "hero_text": "<h1>Your Heading Here</h1><p>Your description here.</p>",
+            "hero_text": "<h1>Stell dir dein Wunschpaket selbst zusammen</h1><p>Your description here.</p>",
             "button_link": "",
             "button_label": "Learn More",
             "theme_mode": "light",
