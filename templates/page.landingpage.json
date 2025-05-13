@@ -90,27 +90,27 @@
         "feature_JCDnTb": {
           "type": "feature",
           "settings": {
-            "text_links": "",
+            "text_links": "Transparente Zutatenliste ohne Tricks",
             "icon_links": false,
-            "text_rechts": "",
+            "text_rechts": "Transparente Zutatenliste ohne Tricks",
             "icon_rechts": true
           }
         },
         "feature_bUG4Yf": {
           "type": "feature",
           "settings": {
-            "text_links": "",
+            "text_links": "Industriell verarbeitet und überhitzt",
             "icon_links": false,
-            "text_rechts": "",
+            "text_rechts": "Schonende Zubereitung in eigener Herstellung",
             "icon_rechts": true
           }
         },
         "feature_xr7QPK": {
           "type": "feature",
           "settings": {
-            "text_links": "",
+            "text_links": "Günstige Massenware von überall",
             "icon_links": false,
-            "text_rechts": "",
+            "text_rechts": "Zutaten aus regionalem Anbau",
             "icon_rechts": true
           }
         },
@@ -119,7 +119,7 @@
           "settings": {
             "text_links": "",
             "icon_links": false,
-            "text_rechts": "",
+            "text_rechts": "Kein Industriefutter sondern echte Handarbeit",
             "icon_rechts": true
           }
         },
@@ -350,7 +350,7 @@
         "heading_A8Q4H8": {
           "type": "heading",
           "settings": {
-            "heading": "Unsere Rezepturen im Überblick",
+            "heading": "Jede Sorte ein Lieblingsrezept",
             "heading_size": "h1"
           }
         }
