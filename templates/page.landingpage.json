@@ -599,7 +599,7 @@
         "collapsible_row_Gtkywa": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Ist das Futter auch für Allergiker geeignet?",
             "icon": "none",
             "row_content": "<p><strong>Ja, absolut.</strong> Viele unserer Sorten sind bewusst allergenarm konzipiert. Du kannst uns jederzeit kontaktieren. Am besten vorab per Mail mit Infos zu bestehenden Allergien oder Krankheiten. Unsere Expert:innen setzen sich dann mit dir in Verbindung und finden gemeinsam mit dir die passende Lösung. Ohne Verkaufsdruck, ohne leere Versprechen.</p>",
             "page": ""
@@ -608,8 +608,62 @@
         "collapsible_row_nzhBjg": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Was, wenn mein Hund es nicht mag?",
             "icon": "none",
+            "row_content": "<p><strong>Wir kümmern uns. </strong>Neue Texturen und natürliche Zutaten ohne Lockstoffe sind für viele Hunde zunächst ungewohnt. Oft hilft es schon, das Futter leicht zu erwärmen - z. B. im Ofen bei 100 °C für wenige Minuten. Das intensiviert den Duft und macht es attraktiver.<br/><br/>Sollte dein Hund es wirklich nicht fressen, genügt eine kurze Mail. Wir nehmen ungeöffnete Dosen zurück - unkompliziert und kostenlos. Du bekommst ein Rücksendeetikett und kannst das Paket dem DHL-Boten einfach mitgeben.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_XeiKzL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ist das nicht teurer als mein aktuelles Futter?",
+            "icon": "none",
+            "row_content": "<p><strong>Nicht wirklich - im Gegenteil. </strong>Bei einem 15 kg Hund liegst du bei etwa 2,02 € am Tag. Und im Vergleich zu vielen Premium-Marken mit ähnlicher Qualität sind wir sogar preiswerter. Unsere Menüs enthalten keine unnötigen Füllstoffe oder 30% Wasser. Das bedeutet: weniger Volumen, mehr Nährstoffe, geringerer Verbrauch. Andere strecken, wir verdichten.<br/><br/>So spart man langfristig sogar. Besonders wenn man Tierarztkosten durch bessere Ernährung vermeiden kann.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CnxpXV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann ich die Sorten einfach wechseln?",
+            "icon": "none",
+            "row_content": "<p><strong>Ja! Und genau das empfehlen wir sogar. </strong>Unsere Sorten sind so entwickelt, dass du problemlos durchwechseln kannst. Am besten fütterst du über die Woche verteilt <strong>drei Mal rotes Fleisch</strong> (z. B. Rind, Wild, Lamm oder Pferd), <strong>drei Mal helles Fleisc</strong>h (Geflügel oder Ente) und <strong>einmal Lachs</strong>. So entsteht auf natürliche Weise eine ausgewogene Nährstoffversorgung – ganz ohne synthetische Zusätze.</p><p>Wichtig ist auch die Regelmäßigkeit: Feste Fütterungszeiten helfen deinem Hund, sich sicher und wohl zu fühlen. Routine bringt Ruhe in den Alltag und sorgt dafür, dass Verdauung, Energie und Verhalten in Balance bleiben. Wir empfehlen zwei Mahlzeiten pro Tag - morgens und abends - und eine Sorte pro Tag. So kommt dein Hund nicht durcheinander und das Futter wirkt, wie es soll. Wenn du Fragen hast, sind wir natürlich für dich da.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_me6tKq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie viel sollte ich füttern?",
+            "icon": "none",
+            "row_content": "<p>Als Richtwert empfehlen wir:</p><p>5 kg Hund → 200 g täglich</p><p>15 kg Hund → 400 g täglich</p><p>20 kg Hund → 600 g täglich</p><p>25 kg Hund → 800 g täglich</p><p>Wir empfehlen zwei Mahlzeiten am Tag. Nutze auch unser <strong>Beratungstool auf der Website</strong>, um die passende Futtermenge zu berechnen - inklusive Menüvorschlag. Und wenn du unsicher bist: Wir helfen gern persönlich.</p><p><strong>Ungeöffnet sind unsere Menüs mindestens 18 Monate haltbar. </strong>Wir produzieren ohne künstliche Konservierung, dafür in kleinen Chargen mit hohem Frischfleischanteil. Nach dem Öffnen sollten die Menüs innerhalb von 2 Tagen verbraucht und im Kühlschrank aufbewahrt werden. Am besten immer lichtgeschützt lagern – auch ungeöffnete Dosen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ahApRr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p><strong>Eine Familie mit einem Hund namens Rusty und einer Idee, die größer wurde als geplant. </strong>Rusty kam in unser Leben und stellte alles auf den Kopf. Wir wollten das Beste für ihn, also begannen wir, selbst zu kochen. Mit der Zeit entstand daraus ein Futter, das nicht nur für Rusty, sondern auch für andere Hunde perfekt funktionierte. Freunde fragten nach, Bekannte bestellten mit, irgendwann wurden es so viele, dass wir entschieden: Lass uns das richtig machen.</p><p>Heute ist Uncle Rusty’s eine kleine, unabhängige Marke aus dem Süden Bayerns. Ohne Investoren, ohne Konzernstruktur, ohne künstliches Marketing. Wir entwickeln unsere Rezepturen selbst, arbeiten mit Ernährungsexpert und Tierärzten zusammen und machen wirklich alles selbst - von der Verpackung bis zur Website. Warum? Weil wir daran glauben, dass ehrliches Hundefutter kein Luxus sein sollte. Sondern ein Grundrecht für jeden Hund.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QyCPkK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_FcDyxE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -619,7 +673,13 @@
         "collapsible_row_KTqhjk",
         "collapsible_row_atgwwi",
         "collapsible_row_Gtkywa",
-        "collapsible_row_nzhBjg"
+        "collapsible_row_nzhBjg",
+        "collapsible_row_XeiKzL",
+        "collapsible_row_CnxpXV",
+        "collapsible_row_me6tKq",
+        "collapsible_row_ahApRr",
+        "collapsible_row_QyCPkK",
+        "collapsible_row_FcDyxE"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
