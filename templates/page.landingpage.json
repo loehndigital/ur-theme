@@ -25,7 +25,7 @@
           "settings": {
             "hero_image": "shopify://shop_images/comp3_0191_Kopie.jpg",
             "hero_image_mobile": "shopify://shop_images/comp2.png",
-            "hero_text": "<h1>Natürlich. regional. einzigartig.</h1><p>Schaffe die ideale Basis für die Gesundheit deines Hundes – ganz natürlich und individuell.</p>",
+            "hero_text": "<h1>Ein gutes Leben beginnt im Napf.</h1><p>Natürlich. Artgerecht. Mit Liebe gekocht. Entscheide dich bewusst für ein besseres Leben deines Hundes. </p><ol><li><br/>✓ Hausmannskost aus regionalen Zutaten<br/>✓ Von Experten entwickelt & empfohlen<br/>✓ Frei von allem, was nicht reingehört</li></ol>",
             "button_link": "",
             "button_label": "",
             "theme_mode": "light",
@@ -183,7 +183,7 @@
         "vergleichsbild_links": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
         "vergleichsbild_rechts": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
         "produktname_links": "Herkömmliches Hundefutter",
-        "produktname_rechts": "Uncle Rust's Hundenahrung"
+        "produktname_rechts": "Uncle Rusty's"
       }
     },
     "features_QgMU8P": {
@@ -487,7 +487,7 @@
         "collection": "nassfutter",
         "additives_collection": "",
         "questionaire_subscription_plan": 688893919496,
-        "instruction_text": "<p>Wähle deine Lieblingssorten, sichere dir Staffelrabatte und entdecke, was deinem Hund am besten bekommt. Mit unserem Mix & Match Prinzip bestimmst du, was in die Box kommt – ganz ohne Risiko. Jetzt Paket zusammenstellen und sparen!</p>",
+        "instruction_text": "<p>Du kennst deinen Hund am besten. Deshalb kannst du bei uns selbst entscheiden, welche Sorten du kombinieren möchtest. Egal ob du testen oder direkt mehr holen willst. Unsere Staffelpreise belohnen dich. Du bestimmst. Wir liefern. Und dein Hund wird es lieben.</p>",
         "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?</p>",
         "questionaire_button_label": "Ernährungsberatung",
         "questionaire_button_link": "shopify://pages/beratung",
