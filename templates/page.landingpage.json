@@ -123,7 +123,7 @@
         "feature_7XVc4x": {
           "type": "feature",
           "settings": {
-            "text_links": "Nebenerzeugnisse & Massentierhaltung",
+            "text_links": "Tiermehl & Abfälle aus Massentierhaltung",
             "icon_links": false,
             "text_rechts": "Muskelfleisch aus artgerechter Haltung",
             "icon_rechts": true
@@ -204,9 +204,9 @@
         "feature_PhQiHh": {
           "type": "feature",
           "settings": {
-            "text_links": "Weizen, Zucker & künstliche Zusätze üblich",
+            "text_links": "Künstliche Aromen, Füllstoffe & Lockstoffe",
             "icon_links": false,
-            "text_rechts": "Ohne Weizen, Zucker, Füllstoffe oder künstliche Zusätze",
+            "text_rechts": "Frei von Weizen, Zucker & Zusätzen",
             "icon_rechts": true
           }
         },
