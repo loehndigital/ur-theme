@@ -581,18 +581,18 @@
         "collapsible_row_KTqhjk": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Braucht mein Hund zusätzlich Vitamine oder Zusätze?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p><strong>Nicht zwingend.</strong> Wenn du regelmäßig zwischen den Sorten wechselst, ist dein Hund rundum versorgt. Ganz ohne synthetische Zusätze. Wir empfehlen: <strong>3x</strong> pro Woche <strong>rotes Fleisch </strong>(Wild, Rind, Pferd oder Lamm), <strong>3x helles Fleisch</strong> (Geflügel oder Ente) und <strong>1x Lachs</strong>. So ist der Bedarf abgedeckt. Ergänzend kannst du ein hochwertiges Öl hinzufügen.<br/><br/>Solltest du aufgrund von Allergien nur eine Sorte füttern können, empfehlen wir ein natürliches Vitamin-Komplettpräparat und ein gutes Öl dazu. Bei Unsicherheiten helfen wir dir kostenlos und erstellen auf Wunsch einen individuellen Ergänzungsplan – ohne Stress, ohne Zusatzkosten.</p>",
             "page": ""
           }
         },
         "collapsible_row_atgwwi": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Wie stelle ich am besten auf Uncle Rusty's um?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p><strong>Von Rohfütterung:</strong> Du kannst direkt wechseln – ohne Eingewöhnung.<br/><br/><strong>Von Nassfutter:</strong> Der Umstieg ist meist problemlos.<br/><br/><strong>Von Trockenfutter:</strong> Starte mit einem Löffel Uncle Rusty's am ersten Tag und erhöhe die Menge langsam. Unsere 400 g Dosen sind ideal für die Umgewöhnung. Geöffnete Dosen halten bis zu 3 Tage im Kühlschrank.<br/><br/>Beobachte deinen Hund in der Übergangszeit. Wir stehen dir bei Fragen gerne zur Seite.</p>",
             "page": ""
           }
         },
@@ -601,7 +601,7 @@
           "settings": {
             "heading": "Collapsible row",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p><strong>Ja, absolut.</strong> Viele unserer Sorten sind bewusst allergenarm konzipiert. Du kannst uns jederzeit kontaktieren. Am besten vorab per Mail mit Infos zu bestehenden Allergien oder Krankheiten. Unsere Expert:innen setzen sich dann mit dir in Verbindung und finden gemeinsam mit dir die passende Lösung. Ohne Verkaufsdruck, ohne leere Versprechen.</p>",
             "page": ""
           }
         },
