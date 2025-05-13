@@ -217,6 +217,68 @@
         "produktname_rechts": "Uncle Rust's Hundenahrung"
       }
     },
+    "featured_product_WRH7Xi": {
+      "type": "featured-product",
+      "blocks": {
+        "text_LHzMFq": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_gmemfH": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_KRFRzG": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_FLVdmw": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_H4nMcW": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_iLhBpX": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "text_LHzMFq",
+        "title_gmemfH",
+        "price_KRFRzG",
+        "variant_picker_FLVdmw",
+        "quantity_selector_H4nMcW",
+        "buy_buttons_iLhBpX"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "tasterpack",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "174716101986516015": {
       "type": "apps",
       "blocks": {
@@ -404,69 +466,6 @@
         "background_color": "#7ba283",
         "text_color_mode": "light",
         "padding_vertical": 20
-      }
-    },
-    "featured_product_DLJYB3": {
-      "type": "featured-product",
-      "blocks": {
-        "text_H8WcET": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_piUkgB": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_aRm9DC": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_pfea3W": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector_nA69Bz": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_TczBrT": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        }
-      },
-      "block_order": [
-        "text_H8WcET",
-        "title_piUkgB",
-        "price_aRm9DC",
-        "variant_picker_pfea3W",
-        "quantity_selector_nA69Bz",
-        "buy_buttons_TczBrT"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "tasterpack",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
@@ -747,6 +746,7 @@
     "1746432726ef4be35b",
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
+    "featured_product_WRH7Xi",
     "174716101986516015",
     "features_QgMU8P",
     "highlight_product_TnH9XC",
@@ -756,7 +756,6 @@
     "highlight_product_yGffdL",
     "highlight_product_mHHMDr",
     "highlight_product_HmajQH",
-    "featured_product_DLJYB3",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "ur_image_with_text_p4A4qV",
     "1702222298d12bda40",
