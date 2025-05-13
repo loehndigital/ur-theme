@@ -78,7 +78,7 @@
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -235,7 +235,7 @@
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "tasterpack",
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "secondary_background": false,
         "media_size": "medium",
         "constrain_to_viewport": true,
@@ -714,9 +714,9 @@
     "1746432726ef4be35b",
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
+    "features_QgMU8P",
     "featured_product_WRH7Xi",
     "174716101986516015",
-    "features_QgMU8P",
     "highlight_product_TnH9XC",
     "highlight_product_gkLCzx",
     "highlight_product_QgccCq",
