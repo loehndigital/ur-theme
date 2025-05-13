@@ -644,8 +644,8 @@
         "collapsible_row_ahApRr": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
+            "heading": "Wer steckt hinter Uncle Rusty’s?",
+            "icon": "none",
             "row_content": "<p><strong>Eine Familie mit einem Hund namens Rusty und einer Idee, die größer wurde als geplant. </strong>Rusty kam in unser Leben und stellte alles auf den Kopf. Wir wollten das Beste für ihn, also begannen wir, selbst zu kochen. Mit der Zeit entstand daraus ein Futter, das nicht nur für Rusty, sondern auch für andere Hunde perfekt funktionierte. Freunde fragten nach, Bekannte bestellten mit, irgendwann wurden es so viele, dass wir entschieden: Lass uns das richtig machen.</p><p>Heute ist Uncle Rusty’s eine kleine, unabhängige Marke aus dem Süden Bayerns. Ohne Investoren, ohne Konzernstruktur, ohne künstliches Marketing. Wir entwickeln unsere Rezepturen selbst, arbeiten mit Ernährungsexpert und Tierärzten zusammen und machen wirklich alles selbst - von der Verpackung bis zur Website. Warum? Weil wir daran glauben, dass ehrliches Hundefutter kein Luxus sein sollte. Sondern ein Grundrecht für jeden Hund.</p>",
             "page": ""
           }
@@ -653,9 +653,9 @@
         "collapsible_row_QyCPkK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Wie läuft die Lieferung und brauche ich ein Abo?",
+            "icon": "none",
+            "row_content": "<p><strong>Ganz einfach, ganz flexibel – und ganz ohne Verpflichtung. </strong>Du wählst aus, was du brauchst, legst deine Wunschmenüs in den Warenkorb und entscheidest, ob du einmalig bestellst oder ein Abo nutzen möchtest. Wenn du das Abo wählst, kannst du es jederzeit anpassen, pausieren oder beenden. Direkt im Kundenkonto oder per Mail. Ohne versteckte Bedingungen, ohne Haken. Einfach eine Erinnerung weniger im Alltag - und bis zu 20 % günstiger.</p><p>Wir versenden klimafreundlich mit DHL, in der Regel innerhalb von 1–3 Werktagen. Ab einem Warenwert von 29 € ist der Versand kostenlos. Beim Probierpaket sowieso. Auch der Versand ist bei uns durchdacht - plastikfrei, stabil und schnell bei dir.</p>",
             "page": ""
           }
         },
