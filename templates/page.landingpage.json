@@ -114,9 +114,18 @@
         "feature_JCDnTb": {
           "type": "feature",
           "settings": {
-            "text_links": "Intransparente Inhaltsangaben",
+            "text_links": "Intransparente Angaben & Etikettentricks",
             "icon_links": false,
             "text_rechts": "100 % Deklaration aller Zutaten",
+            "icon_rechts": true
+          }
+        },
+        "feature_7XVc4x": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Nebenerzeugnisse & Massentierhaltung",
+            "icon_links": false,
+            "text_rechts": "Muskelfleisch aus artgerechter Haltung",
             "icon_rechts": true
           }
         },
@@ -129,6 +138,33 @@
             "icon_rechts": true
           }
         },
+        "feature_NGNweQ": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Unausgewogene Rezepturen",
+            "icon_links": false,
+            "text_rechts": "Individuell abgestimmte Nährstoffe",
+            "icon_rechts": true
+          }
+        },
+        "feature_3RyLtX": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Künstlich aufgepeppt",
+            "icon_links": false,
+            "text_rechts": "Ohne Zucker, Weizen, künstliche Zusätze",
+            "icon_rechts": true
+          }
+        },
+        "feature_XHTGKF": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Häufige Unverträglichkeiten & Beschwerden",
+            "icon_links": false,
+            "text_rechts": "Fördert Verdauung & stärkt das Immunsystem",
+            "icon_rechts": true
+          }
+        },
         "feature_xr7QPK": {
           "type": "feature",
           "settings": {
@@ -138,57 +174,21 @@
             "icon_rechts": true
           }
         },
-        "feature_h6dz3L": {
-          "type": "feature",
-          "settings": {
-            "text_links": "",
-            "icon_links": false,
-            "text_rechts": "Kein Industriefutter sondern echte Handarbeit",
-            "icon_rechts": true
-          }
-        },
-        "feature_7XVc4x": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Oft minderwertige Nebenerzeugnisse",
-            "icon_links": false,
-            "text_rechts": "Muskelfleisch aus artgerechter Haltung",
-            "icon_rechts": true
-          }
-        },
-        "feature_XHTGKF": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Importe aus dem Ausland",
-            "icon_links": false,
-            "text_rechts": "In Deutschland hergestellt",
-            "icon_rechts": true
-          }
-        },
-        "feature_NGNweQ": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Mangelnde Nährstoffbalance, oft unausgewogen",
-            "icon_links": false,
-            "text_rechts": "Individuell abgestimmte Nährstoffe",
-            "icon_rechts": true
-          }
-        },
-        "feature_3RyLtX": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Massenabfertigung statt Rezept",
-            "icon_links": false,
-            "text_rechts": "Mit echten Lieblingsrezepten",
-            "icon_rechts": true
-          }
-        },
         "feature_TLDHtR": {
           "type": "feature",
           "settings": {
             "text_links": "Begünstigt Blähungen, Juckreiz & Durchfall",
             "icon_links": false,
             "text_rechts": "Fördert gesunde Verdauung & Immunsystem",
+            "icon_rechts": true
+          }
+        },
+        "feature_6yY3ar": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Kein Konzept zur langfristigen Gesundheit",
+            "icon_links": false,
+            "text_rechts": "Reduziert Risiko für Übergewicht & Krankheiten",
             "icon_rechts": true
           }
         },
@@ -219,15 +219,6 @@
             "icon_rechts": true
           }
         },
-        "feature_aLxmk6": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Kühlpflichtige oder sperrige Verpackungen",
-            "icon_links": false,
-            "text_rechts": "Dosenform - perfekt für Reisen, keine Kühlung nötig",
-            "icon_rechts": true
-          }
-        },
         "feature_Qk3q4i": {
           "type": "feature",
           "settings": {
@@ -245,34 +236,23 @@
             "text_rechts": "Von einer Familie mit Hund – kein Konzern",
             "icon_rechts": true
           }
-        },
-        "feature_6yY3ar": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Kein Konzept zur langfristigen Gesundheit",
-            "icon_links": false,
-            "text_rechts": "Reduziert Risiko für Übergewicht & Krankheiten",
-            "icon_rechts": true
-          }
         }
       },
       "block_order": [
         "feature_JCDnTb",
-        "feature_bUG4Yf",
-        "feature_xr7QPK",
-        "feature_h6dz3L",
         "feature_7XVc4x",
-        "feature_XHTGKF",
+        "feature_bUG4Yf",
         "feature_NGNweQ",
         "feature_3RyLtX",
+        "feature_XHTGKF",
+        "feature_xr7QPK",
         "feature_TLDHtR",
+        "feature_6yY3ar",
         "feature_TFQnEN",
         "feature_PhQiHh",
         "feature_qaEjiV",
-        "feature_aLxmk6",
         "feature_Qk3q4i",
-        "feature_pbUbet",
-        "feature_6yY3ar"
+        "feature_pbUbet"
       ],
       "name": "Vergleichstabelle",
       "settings": {
