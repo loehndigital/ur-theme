@@ -186,23 +186,6 @@
         "produktname_rechts": "Uncle Rust's Hundenahrung"
       }
     },
-    "174716101986516015": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_featured_carousel_yFHLyi": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_featured_carousel_yFHLyi"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "features_QgMU8P": {
       "type": "Features",
       "blocks": {
@@ -282,6 +265,23 @@
         "bg_color": "#ece7d8",
         "section_padding": 50,
         "text_align_desktop": "left"
+      }
+    },
+    "174716101986516015": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_yFHLyi": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_yFHLyi"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "featured_product_WRH7Xi": {
@@ -452,70 +452,6 @@
         "padding_vertical": 20
       }
     },
-    "82172ece-4d52-4326-8d4d-6c644a0d4924": {
-      "type": "build-a-box",
-      "disabled": true,
-      "settings": {
-        "collection": "nassfutter",
-        "additives_collection": "",
-        "questionaire_subscription_plan": 688893919496,
-        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 7 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!</p>",
-        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?</p>",
-        "questionaire_button_label": "Ernährungsberatung",
-        "questionaire_button_link": "shopify://pages/beratung",
-        "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "ur_image_with_text_p4A4qV": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "heading_DELyEn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_GVALCr": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wir stehen für naturbelassenes Hundefutter aus ethisch verantwortungsvoller Weidehaltung, schonend zubereitet und frei von künstlichen Zusätzen. So garantieren wir eine gesunde und schmackhafte Ernährung, die auf Nachhaltigkeit und höchste Qualität setzt.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_kkfAKp": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_DELyEn",
-        "text_GVALCr",
-        "button_kkfAKp"
-      ],
-      "disabled": true,
-      "settings": {
-        "height": "adapt",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "hero_slider_RqPLDN": {
       "type": "hero-slider",
       "blocks": {
@@ -538,20 +474,19 @@
       "name": "UR Hero Slider",
       "settings": {}
     },
-    "build_a_box_RrfKMK": {
+    "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
-      "name": "Uncle Rustys Build a Box",
       "settings": {
         "collection": "nassfutter",
         "additives_collection": "",
-        "questionaire_subscription_plan": 689522049319,
-        "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
-        "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
-        "questionaire_button_label": "Button label",
-        "questionaire_button_link": "",
+        "questionaire_subscription_plan": 688893919496,
+        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 7 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!</p>",
+        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?</p>",
+        "questionaire_button_label": "Ernährungsberatung",
+        "questionaire_button_link": "shopify://pages/beratung",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "collapsible_content_8Ctycq": {
@@ -637,7 +572,6 @@
     "1746432726ef4be35b",
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
-    "174716101986516015",
     "features_QgMU8P",
     "featured_product_WRH7Xi",
     "1702222298d12bda40",
@@ -648,10 +582,9 @@
     "highlight_product_yGffdL",
     "highlight_product_mHHMDr",
     "highlight_product_HmajQH",
-    "82172ece-4d52-4326-8d4d-6c644a0d4924",
-    "ur_image_with_text_p4A4qV",
     "hero_slider_RqPLDN",
-    "build_a_box_RrfKMK",
+    "82172ece-4d52-4326-8d4d-6c644a0d4924",
+    "174716101986516015",
     "collapsible_content_8Ctycq",
     "802ec653-45c7-4db1-a744-3e8f11792f91"
   ]
