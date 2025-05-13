@@ -114,9 +114,9 @@
         "feature_JCDnTb": {
           "type": "feature",
           "settings": {
-            "text_links": "Intransparente Angaben & Etikettentricks",
+            "text_links": "Intransparente Angaben & Etikettentricks überall",
             "icon_links": false,
-            "text_rechts": "100 % Deklaration aller Zutaten",
+            "text_rechts": "100 % Deklaration aller Zutaten, glasklar & ehrlich",
             "icon_rechts": true
           }
         },
@@ -195,7 +195,7 @@
         "feature_6yY3ar": {
           "type": "feature",
           "settings": {
-            "text_links": "Günstig im Regal, teuer beim Tierarzt",
+            "text_links": "Günstig im Regal, teuer durch Tierarztbesuche",
             "icon_links": false,
             "text_rechts": "Ab 2,49 € pro Tag - Qualität statt Folgekosten",
             "icon_rechts": true
@@ -204,7 +204,7 @@
         "feature_Qk3q4i": {
           "type": "feature",
           "settings": {
-            "text_links": "Massenproduktion ohne Herz",
+            "text_links": "Massenproduktion ohne Herz, Sorgfalt oder Nähe",
             "icon_links": false,
             "text_rechts": "Kleine Chargen aus Bayern. Frisch & ehrlich",
             "icon_rechts": true
