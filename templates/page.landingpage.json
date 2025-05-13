@@ -38,37 +38,6 @@
       ],
       "settings": {}
     },
-    "rich_text_3mPDGQ": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_yAnmFq": {
-          "type": "heading",
-          "settings": {
-            "heading": "Nur für kurze Zeit: Jetzt zum Einführungspreis sichern",
-            "heading_size": "h2"
-          }
-        },
-        "text_CD9bTh": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_yAnmFq",
-        "text_CD9bTh"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "1746432726ef4be35b": {
       "type": "apps",
       "blocks": {
@@ -203,7 +172,7 @@
       ],
       "name": "Vergleichstabelle",
       "settings": {
-        "ueberschrift_text": "Was Uncle Rusty's von herkömmlichem Futter unterscheidet?",
+        "ueberschrift_text": "Was Uncle Rusty's besonders macht?",
         "ueberschrift_alignment": "left",
         "ueberschrift_size": 28,
         "text_alignment": "left",
@@ -742,7 +711,6 @@
   "order": [
     "main",
     "hero_slider_WJ9jLG",
-    "rich_text_3mPDGQ",
     "1746432726ef4be35b",
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
