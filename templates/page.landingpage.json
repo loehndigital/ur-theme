@@ -168,9 +168,9 @@
         "feature_NGNweQ": {
           "type": "feature",
           "settings": {
-            "text_links": "",
+            "text_links": "Mangelnde Nährstoffbalance, oft unausgewogen",
             "icon_links": false,
-            "text_rechts": "",
+            "text_rechts": "Individuell abgestimmte Nährstoffe",
             "icon_rechts": true
           }
         },
@@ -180,6 +180,78 @@
             "text_links": "Massenabfertigung statt Rezept",
             "icon_links": false,
             "text_rechts": "Mit echten Lieblingsrezepten",
+            "icon_rechts": true
+          }
+        },
+        "feature_TLDHtR": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Begünstigt Blähungen, Juckreiz & Durchfall",
+            "icon_links": false,
+            "text_rechts": "Fördert gesunde Verdauung & Immunsystem",
+            "icon_rechts": true
+          }
+        },
+        "feature_TFQnEN": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Billigprotein, minderwertige Fettquellen",
+            "icon_links": false,
+            "text_rechts": "Hochwertige Proteine & gesunde Fette für Energie",
+            "icon_rechts": true
+          }
+        },
+        "feature_PhQiHh": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Weizen, Zucker & künstliche Zusätze üblich",
+            "icon_links": false,
+            "text_rechts": "Ohne Weizen, Zucker, Füllstoffe oder künstliche Zusätze",
+            "icon_rechts": true
+          }
+        },
+        "feature_qaEjiV": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Versteckte Kosten durch spätere Tierarztbesuche",
+            "icon_links": false,
+            "text_rechts": "Ab 2,49 € pro Tag für einen 15-kg-Hund",
+            "icon_rechts": true
+          }
+        },
+        "feature_aLxmk6": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Kühlpflichtige oder sperrige Verpackungen",
+            "icon_links": false,
+            "text_rechts": "Dosenform - perfekt für Reisen, keine Kühlung nötig",
+            "icon_rechts": true
+          }
+        },
+        "feature_Qk3q4i": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Massenproduktion – Qualität leidet",
+            "icon_links": false,
+            "text_rechts": "Hergestellt in kleinen Chargen in Bayern",
+            "icon_rechts": true
+          }
+        },
+        "feature_pbUbet": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Großkonzerne ohne Bezug zu Hunden",
+            "icon_links": false,
+            "text_rechts": "Von einer Familie mit Hund – kein Konzern",
+            "icon_rechts": true
+          }
+        },
+        "feature_6yY3ar": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Kein Konzept zur langfristigen Gesundheit",
+            "icon_links": false,
+            "text_rechts": "Reduziert Risiko für Übergewicht & Krankheiten",
             "icon_rechts": true
           }
         }
@@ -192,7 +264,15 @@
         "feature_7XVc4x",
         "feature_XHTGKF",
         "feature_NGNweQ",
-        "feature_3RyLtX"
+        "feature_3RyLtX",
+        "feature_TLDHtR",
+        "feature_TFQnEN",
+        "feature_PhQiHh",
+        "feature_qaEjiV",
+        "feature_aLxmk6",
+        "feature_Qk3q4i",
+        "feature_pbUbet",
+        "feature_6yY3ar"
       ],
       "name": "Vergleichstabelle",
       "settings": {
