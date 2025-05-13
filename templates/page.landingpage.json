@@ -294,13 +294,6 @@
     "featured_product_WRH7Xi": {
       "type": "featured-product",
       "blocks": {
-        "text_LHzMFq": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title_gmemfH": {
           "type": "title",
           "settings": {
@@ -311,10 +304,16 @@
           "type": "price",
           "settings": {}
         },
-        "variant_picker_FLVdmw": {
-          "type": "variant_picker",
+        "icon_with_text_pWHndX": {
+          "type": "icon-with-text",
           "settings": {
-            "picker_type": "button"
+            "layout": "vertical",
+            "icon_1": "heart",
+            "heading_1": "Versandbereit in 24h – bei dir in 2–3 Tagen.",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
           }
         },
         "quantity_selector_H4nMcW": {
@@ -330,10 +329,9 @@
         }
       },
       "block_order": [
-        "text_LHzMFq",
         "title_gmemfH",
         "price_KRFRzG",
-        "variant_picker_FLVdmw",
+        "icon_with_text_pWHndX",
         "quantity_selector_H4nMcW",
         "buy_buttons_iLhBpX"
       ],
@@ -409,7 +407,7 @@
       "type": "highlight-product",
       "name": "UR Produktbalken",
       "settings": {
-        "product_title": "Geflügel mit Kürbis und Amaranth: Leicht. Gut für den Magen. Unheimlich beliebt.",
+        "product_title": "Geflügel mit Kürbis und Amaranth: Mageres Fleisch trifft Powerkorn",
         "product_description": "Beschreibungstext hier einfügen",
         "product_image": "shopify://shop_images/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
         "image_position": "right",
