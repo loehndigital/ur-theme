@@ -156,15 +156,6 @@
             "icon_rechts": true
           }
         },
-        "feature_PhQiHh": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Künstliche Aromen, Füllstoffe & Lockstoffe",
-            "icon_links": false,
-            "text_rechts": "Frei von Weizen, Zucker & Zusätzen",
-            "icon_rechts": true
-          }
-        },
         "feature_3RyLtX": {
           "type": "feature",
           "settings": {
@@ -174,30 +165,30 @@
             "icon_rechts": true
           }
         },
-        "feature_XHTGKF": {
+        "feature_PhQiHh": {
           "type": "feature",
           "settings": {
-            "text_links": "Häufige Unverträglichkeiten & Beschwerden",
+            "text_links": "Künstliche Aromen, Füllstoffe & Lockstoffe",
             "icon_links": false,
-            "text_rechts": "Fördert Verdauung & stärkt das Immunsystem",
+            "text_rechts": "Frei von Weizen, Zucker & Zusätzen",
             "icon_rechts": true
           }
         },
-        "feature_TLDHtR": {
+        "feature_XHTGKF": {
           "type": "feature",
           "settings": {
-            "text_links": "Begünstigt Blähungen, Juckreiz & Durchfall",
+            "text_links": "Führt häufig zu Juckreiz, Blähungen & Co.",
             "icon_links": false,
-            "text_rechts": "Fördert gesunde Verdauung & Immunsystem",
+            "text_rechts": "Unterstützt Verdauung & Immunsystem",
             "icon_rechts": true
           }
         },
         "feature_6yY3ar": {
           "type": "feature",
           "settings": {
-            "text_links": "Kein Konzept zur langfristigen Gesundheit",
+            "text_links": "Günstig im Regal, teuer beim Tierarzt",
             "icon_links": false,
-            "text_rechts": "Reduziert Risiko für Übergewicht & Krankheiten",
+            "text_rechts": "Ab 2,49 € pro Tag - Qualität statt Folgekosten",
             "icon_rechts": true
           }
         },
@@ -244,10 +235,9 @@
         "feature_xr7QPK",
         "feature_bUG4Yf",
         "feature_NGNweQ",
-        "feature_PhQiHh",
         "feature_3RyLtX",
+        "feature_PhQiHh",
         "feature_XHTGKF",
-        "feature_TLDHtR",
         "feature_6yY3ar",
         "feature_TFQnEN",
         "feature_qaEjiV",
