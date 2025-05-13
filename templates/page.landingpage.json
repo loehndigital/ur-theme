@@ -156,21 +156,30 @@
             "icon_rechts": true
           }
         },
-        "feature_3RyLtX": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Künstlich aufgepeppt - oft verschmäht",
-            "icon_links": false,
-            "text_rechts": "Hohe Akzeptanz auch bei mäkeligen Hunden",
-            "icon_rechts": true
-          }
-        },
         "feature_PhQiHh": {
           "type": "feature",
           "settings": {
             "text_links": "Künstliche Aromen, Füllstoffe & Lockstoffe",
             "icon_links": false,
             "text_rechts": "Frei von Weizen, Zucker & Zusätzen",
+            "icon_rechts": true
+          }
+        },
+        "feature_TFQnEN": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Billigprotein, minderwertige Fettquellen",
+            "icon_links": false,
+            "text_rechts": "Hochwertige Proteine & Fette für Energie",
+            "icon_rechts": true
+          }
+        },
+        "feature_3RyLtX": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Künstlich aufgepeppt - oft verschmäht",
+            "icon_links": false,
+            "text_rechts": "Hohe Akzeptanz auch bei mäkeligen Hunden",
             "icon_rechts": true
           }
         },
@@ -209,15 +218,6 @@
             "text_rechts": "Familiengeführt von Hundemenschen",
             "icon_rechts": true
           }
-        },
-        "feature_TFQnEN": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Billigprotein, minderwertige Fettquellen",
-            "icon_links": false,
-            "text_rechts": "Hochwertige Proteine & Fette für Energie",
-            "icon_rechts": true
-          }
         }
       },
       "block_order": [
@@ -226,13 +226,13 @@
         "feature_xr7QPK",
         "feature_bUG4Yf",
         "feature_NGNweQ",
-        "feature_3RyLtX",
         "feature_PhQiHh",
+        "feature_TFQnEN",
+        "feature_3RyLtX",
         "feature_XHTGKF",
         "feature_6yY3ar",
         "feature_Qk3q4i",
-        "feature_qaEjiV",
-        "feature_TFQnEN"
+        "feature_qaEjiV"
       ],
       "name": "Vergleichstabelle",
       "settings": {
