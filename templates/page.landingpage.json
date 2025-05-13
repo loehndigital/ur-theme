@@ -344,6 +344,30 @@
         "include_margins": true
       }
     },
+    "rich_text_bdynjC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A8Q4H8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Rezepturen im Detail",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_A8Q4H8"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
     "highlight_product_TnH9XC": {
       "type": "highlight-product",
       "name": "UR Produktbalken",
@@ -575,6 +599,7 @@
     "features_QgMU8P",
     "featured_product_WRH7Xi",
     "1702222298d12bda40",
+    "rich_text_bdynjC",
     "highlight_product_TnH9XC",
     "highlight_product_gkLCzx",
     "highlight_product_QgccCq",
