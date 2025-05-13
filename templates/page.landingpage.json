@@ -90,7 +90,7 @@
         "feature_JCDnTb": {
           "type": "feature",
           "settings": {
-            "text_links": "Undurchsichtige Deklaration und Tricks",
+            "text_links": "Intransparente Inhaltsangaben",
             "icon_links": false,
             "text_rechts": "100 % Deklaration aller Zutaten",
             "icon_rechts": true
@@ -108,9 +108,9 @@
         "feature_xr7QPK": {
           "type": "feature",
           "settings": {
-            "text_links": "Günstige Massenware von überall",
+            "text_links": "Zutaten aus Massentierhaltung oder Ausland",
             "icon_links": false,
-            "text_rechts": "Zutaten aus regionalem Anbau",
+            "text_rechts": "Regionale Zutaten aus dem Voralpenland",
             "icon_rechts": true
           }
         },
@@ -126,18 +126,18 @@
         "feature_7XVc4x": {
           "type": "feature",
           "settings": {
-            "text_links": "",
+            "text_links": "Oft minderwertige Nebenerzeugnisse",
             "icon_links": false,
-            "text_rechts": "",
+            "text_rechts": "Muskelfleisch aus artgerechter Haltung",
             "icon_rechts": true
           }
         },
         "feature_XHTGKF": {
           "type": "feature",
           "settings": {
-            "text_links": "",
+            "text_links": "Importe aus dem Ausland",
             "icon_links": false,
-            "text_rechts": "",
+            "text_rechts": "In Deutschland hergestellt",
             "icon_rechts": true
           }
         },
