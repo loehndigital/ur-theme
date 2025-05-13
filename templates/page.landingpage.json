@@ -129,6 +129,15 @@
             "icon_rechts": true
           }
         },
+        "feature_xr7QPK": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Billigimporte ohne Qualitätskontrolle",
+            "icon_links": false,
+            "text_rechts": "Regionale Zutaten aus dem Voralpenland",
+            "icon_rechts": true
+          }
+        },
         "feature_bUG4Yf": {
           "type": "feature",
           "settings": {
@@ -141,18 +150,27 @@
         "feature_NGNweQ": {
           "type": "feature",
           "settings": {
-            "text_links": "Unausgewogene Rezepturen",
+            "text_links": "Planlose Einheitsrezepte ohne Balance",
             "icon_links": false,
-            "text_rechts": "Individuell abgestimmte Nährstoffe",
+            "text_rechts": "Individuell abgestimmt für echte Vitalität",
+            "icon_rechts": true
+          }
+        },
+        "feature_PhQiHh": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Künstliche Aromen, Füllstoffe & Lockstoffe",
+            "icon_links": false,
+            "text_rechts": "Frei von Weizen, Zucker & Zusätzen",
             "icon_rechts": true
           }
         },
         "feature_3RyLtX": {
           "type": "feature",
           "settings": {
-            "text_links": "Künstlich aufgepeppt",
+            "text_links": "Künstlich aufgepeppt - oft verschmäht",
             "icon_links": false,
-            "text_rechts": "Ohne Zucker, Weizen, künstliche Zusätze",
+            "text_rechts": "Hohe Akzeptanz auch bei mäkeligen Hunden",
             "icon_rechts": true
           }
         },
@@ -162,15 +180,6 @@
             "text_links": "Häufige Unverträglichkeiten & Beschwerden",
             "icon_links": false,
             "text_rechts": "Fördert Verdauung & stärkt das Immunsystem",
-            "icon_rechts": true
-          }
-        },
-        "feature_xr7QPK": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Zutaten aus Massentierhaltung oder Ausland",
-            "icon_links": false,
-            "text_rechts": "Regionale Zutaten aus dem Voralpenland",
             "icon_rechts": true
           }
         },
@@ -198,15 +207,6 @@
             "text_links": "Billigprotein, minderwertige Fettquellen",
             "icon_links": false,
             "text_rechts": "Hochwertige Proteine & gesunde Fette für Energie",
-            "icon_rechts": true
-          }
-        },
-        "feature_PhQiHh": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Künstliche Aromen, Füllstoffe & Lockstoffe",
-            "icon_links": false,
-            "text_rechts": "Frei von Weizen, Zucker & Zusätzen",
             "icon_rechts": true
           }
         },
@@ -241,15 +241,15 @@
       "block_order": [
         "feature_JCDnTb",
         "feature_7XVc4x",
+        "feature_xr7QPK",
         "feature_bUG4Yf",
         "feature_NGNweQ",
+        "feature_PhQiHh",
         "feature_3RyLtX",
         "feature_XHTGKF",
-        "feature_xr7QPK",
         "feature_TLDHtR",
         "feature_6yY3ar",
         "feature_TFQnEN",
-        "feature_PhQiHh",
         "feature_qaEjiV",
         "feature_Qk3q4i",
         "feature_pbUbet"
