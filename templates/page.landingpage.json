@@ -192,39 +192,30 @@
             "icon_rechts": true
           }
         },
-        "feature_TFQnEN": {
+        "feature_Qk3q4i": {
           "type": "feature",
           "settings": {
-            "text_links": "Billigprotein, minderwertige Fettquellen",
+            "text_links": "Massenproduktion ohne Herz",
             "icon_links": false,
-            "text_rechts": "Hochwertige Proteine & gesunde Fette für Energie",
+            "text_rechts": "Kleine Chargen aus Bayern. Frisch & ehrlich",
             "icon_rechts": true
           }
         },
         "feature_qaEjiV": {
           "type": "feature",
           "settings": {
-            "text_links": "Versteckte Kosten durch spätere Tierarztbesuche",
+            "text_links": "Konzernware ohne Bezug zur Realität",
             "icon_links": false,
-            "text_rechts": "Ab 2,49 € pro Tag für einen 15-kg-Hund",
+            "text_rechts": "Familiengeführt von Hundemenschen",
             "icon_rechts": true
           }
         },
-        "feature_Qk3q4i": {
+        "feature_TFQnEN": {
           "type": "feature",
           "settings": {
-            "text_links": "Massenproduktion – Qualität leidet",
+            "text_links": "Billigprotein, minderwertige Fettquellen",
             "icon_links": false,
-            "text_rechts": "Hergestellt in kleinen Chargen in Bayern",
-            "icon_rechts": true
-          }
-        },
-        "feature_pbUbet": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Großkonzerne ohne Bezug zu Hunden",
-            "icon_links": false,
-            "text_rechts": "Von einer Familie mit Hund – kein Konzern",
+            "text_rechts": "Hochwertige Proteine & Fette für Energie",
             "icon_rechts": true
           }
         }
@@ -239,10 +230,9 @@
         "feature_PhQiHh",
         "feature_XHTGKF",
         "feature_6yY3ar",
-        "feature_TFQnEN",
-        "feature_qaEjiV",
         "feature_Qk3q4i",
-        "feature_pbUbet"
+        "feature_qaEjiV",
+        "feature_TFQnEN"
       ],
       "name": "Vergleichstabelle",
       "settings": {
