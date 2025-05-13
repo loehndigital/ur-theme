@@ -279,7 +279,7 @@
         "full_width": false,
         "boxed_content": true,
         "center_content": true,
-        "bg_color": "#f2eee3",
+        "bg_color": "#ece7d8",
         "section_padding": 50,
         "text_align_desktop": "left"
       }
@@ -333,7 +333,7 @@
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "tasterpack",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "secondary_background": false,
         "media_size": "medium",
         "constrain_to_viewport": true,
