@@ -662,9 +662,9 @@
         "collapsible_row_FcDyxE": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Was unterscheidet euch von anderen Marken?",
+            "icon": "none",
+            "row_content": "<p><strong>Vielleicht am meisten: Wir meinen es wirklich so. </strong>Uncle Rusty’s ist kein Produkt, das von einer Agentur entwickelt wurde. Es ist aus dem echten Leben entstanden. Weil wir selbst frustriert waren von Intransparenz, aufgeblähten Versprechen und den immer gleichen Zutatenlisten. Weil wir selbst gesehen haben, wie Hunde unter falscher Ernährung leiden und wie schnell sie aufblühen, wenn man’s richtig macht.</p><p>Wir haben keine Investoren, keine Pflicht zur Marge, keine Budgetabteilung, die vorgibt, was ins Futter darf. Wir machen das, weil wir überzeugt sind. Weil wir durch jeden Kundenkontakt besser werden. Weil wir auf jede Mail antworten. Und weil wir glauben, dass Ehrlichkeit das einzige Geschäftsmodell ist, das auf Dauer funktioniert.<br/><br/>Uncle Rusty’s ist mehr als Futter. Es ist ein kleiner Gegenentwurf zu einer Welt, in der der Napf oft das letzte ist, worüber sich Gedanken gemacht wird</p>",
             "page": ""
           }
         }
