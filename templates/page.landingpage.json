@@ -114,7 +114,7 @@
         "feature_JCDnTb": {
           "type": "feature",
           "settings": {
-            "text_links": "Intransparente Angaben & Etikettentricks überall",
+            "text_links": "Intransparente Inhaltsangaben & Etikettentricks überall",
             "icon_links": false,
             "text_rechts": "100 % Deklaration aller Zutaten, glasklar & ehrlich",
             "icon_rechts": true
@@ -132,7 +132,7 @@
         "feature_xr7QPK": {
           "type": "feature",
           "settings": {
-            "text_links": "Billigimporte ohne Qualitätskontrolle",
+            "text_links": "Billigimporte ohne jegliche Qualitätskontrolle",
             "icon_links": false,
             "text_rechts": "Regionale Zutaten aus dem Voralpenland",
             "icon_rechts": true
@@ -141,9 +141,9 @@
         "feature_bUG4Yf": {
           "type": "feature",
           "settings": {
-            "text_links": "Industriell verarbeitet und überhitzt",
+            "text_links": "Industriell überhitzt & verarbeitet im Akkord",
             "icon_links": false,
-            "text_rechts": "Schonendes Slow-Cooking Verfahren",
+            "text_rechts": "Schonend gegart im nährstoffreichen Slow-Cooking",
             "icon_rechts": true
           }
         },
@@ -152,7 +152,7 @@
           "settings": {
             "text_links": "Planlose Einheitsrezepte ohne Balance",
             "icon_links": false,
-            "text_rechts": "Individuell abgestimmt für echte Vitalität",
+            "text_rechts": "Nährstoffbalance für Vitalität, Energie & Gesundheit",
             "icon_rechts": true
           }
         },
