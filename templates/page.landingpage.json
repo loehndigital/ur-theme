@@ -66,7 +66,7 @@
         "text_pFXyWC": {
           "type": "text",
           "settings": {
-            "text": "<p>Juckreiz, Durchfall, ständiges Schmatzen? Viele Hunde leiden still, oft wegen ungeeigneter Inhaltsstoffe. Uncle Rusty's wurde entwickelt, um genau das zu vermeiden. Natürlich, verträglich, ehrlich. Unsere Community sieht die Veränderung schon nach wenigen Tagen.</p>"
+            "text": "<p>Juckreiz, Durchfall, ständiges Schmatzen? Viele Hunde leiden still, oft wegen ungeeigneter Inhaltsstoffe. Kein Wunder – der Hundefuttermarkt ist undurchsichtig. Deshalb haben wir Uncle Rusty's entwickelt. Unser Ansatz? Alles klar deklariert. Prozentgenau aufgeschlüsselt. Ohne verstecken. Ohne beschönigen. Einfach ehrliche Hausmannskost. </p>"
           }
         }
       },
@@ -153,9 +153,9 @@
         "feature_3RyLtX": {
           "type": "feature",
           "settings": {
-            "text_links": "",
+            "text_links": "Massenabfertigung statt Rezept",
             "icon_links": false,
-            "text_rechts": "",
+            "text_rechts": "Mit echten Lieblingsrezepten",
             "icon_rechts": true
           }
         }
@@ -398,7 +398,7 @@
       "type": "highlight-product",
       "name": "UR Produktbalken",
       "settings": {
-        "product_title": "Lachs mit Kürbis, Haferkleie und Apfel",
+        "product_title": "Lachs mit Kürbis, Haferkleie und Apfel: Omega-Power aus dem Wasser",
         "product_description": "Beschreibungstext hier einfügen",
         "product_image": "shopify://shop_images/lachs_800g_b5aaa181-332a-4a41-8f5c-cb0a7d734d11.png",
         "image_position": "right",
@@ -411,7 +411,7 @@
       "type": "highlight-product",
       "name": "UR Produktbalken",
       "settings": {
-        "product_title": "Lamm mit Rote Beete, Haferkleie und Apfel: Sanft zur Verdauung, Geschmack.",
+        "product_title": "Lamm mit Rote Beete, Haferkleie und Apfel: Sanfte Kraft für den Bauch",
         "product_description": "Beschreibungstext hier einfügen",
         "product_image": "shopify://shop_images/lamm_800g_v2.png",
         "image_position": "right",
