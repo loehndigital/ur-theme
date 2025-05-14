@@ -54,28 +54,29 @@
         <div class="vergleich-card" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
           <div class="vorteil-text">{{ block.settings.text_links }}</div>
           <div class="icon-row">
+
+            <!-- Spalte 1 -->
             <div class="icon-label">
               {% if section.settings.vergleichsbild_links %}
-                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 80 }}" alt="{{ section.settings.produktname_links }}" class="vergleichsbild-mobile">
+                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 60 }}" alt="{{ section.settings.produktname_links }}" class="vergleichsbild-mobile">
               {% endif %}
               <span class="icon-title">{{ section.settings.produktname_links }}</span>
-              {% if block.settings.icon_links %}
-                <span class="icon check">✔️</span>
-              {% else %}
-                <span class="icon cross">❌</span>
-              {% endif %}
+              <span class="icon {% if block.settings.icon_links %}check{% else %}cross{% endif %}">
+                {% if block.settings.icon_links %}✔️{% else %}❌{% endif %}
+              </span>
             </div>
+
+            <!-- Spalte 2 -->
             <div class="icon-label">
               {% if section.settings.vergleichsbild_rechts %}
-                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 80 }}" alt="{{ section.settings.produktname_rechts }}" class="vergleichsbild-mobile">
+                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 60 }}" alt="{{ section.settings.produktname_rechts }}" class="vergleichsbild-mobile">
               {% endif %}
               <span class="icon-title">{{ section.settings.produktname_rechts }}</span>
-              {% if block.settings.icon_rechts %}
-                <span class="icon check">✔️</span>
-              {% else %}
-                <span class="icon cross">❌</span>
-              {% endif %}
+              <span class="icon {% if block.settings.icon_rechts %}check{% else %}cross{% endif %}">
+                {% if block.settings.icon_rechts %}✔️{% else %}❌{% endif %}
+              </span>
             </div>
+
           </div>
         </div>
       {% endfor %}
@@ -159,35 +160,43 @@
     padding: 16px;
     margin-bottom: 16px;
     border-radius: 6px;
+    background: #fff;
   }
 
   .vorteil-text {
     font-weight: 600;
     margin-bottom: 12px;
+    text-align: center;
   }
 
   .icon-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 12px;
+    text-align: center;
   }
 
   .icon-label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    font-size: 14px;
+    flex: 1;
+    gap: 6px;
   }
 
   .icon-title {
     font-weight: 500;
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 20px;
   }
 
   .vergleichsbild-mobile {
-    margin: 0 auto 4px auto;
     display: block;
-    max-height: 60px;
-    width: auto;
+    max-height: 50px;
+    margin: 0 auto;
   }
 
   @media screen and (max-width: 768px) {
