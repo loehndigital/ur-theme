@@ -253,35 +253,37 @@
     "vergleichstabelle_2_8cxTgf": {
       "type": "vergleichstabelle-2",
       "blocks": {
-        "point_mA3w36": {
-          "type": "point",
+        "feature_rdFMNB": {
+          "type": "feature",
           "settings": {
-            "text": "",
-            "left_check": false,
-            "right_check": false
+            "text_links": "Familiengeführt von Hundemenschen",
+            "icon_links": true,
+            "icon_rechts": false
           }
         },
-        "point_QQhpBP": {
-          "type": "point",
+        "feature_7V7YtQ": {
+          "type": "feature",
           "settings": {
-            "text": "",
-            "left_check": false,
-            "right_check": false
+            "text_links": "Familiengeführt von Hundemenschen",
+            "icon_links": true,
+            "icon_rechts": false
           }
         }
       },
       "block_order": [
-        "point_mA3w36",
-        "point_QQhpBP"
+        "feature_rdFMNB",
+        "feature_7V7YtQ"
       ],
       "name": "Vergleich – Just Russel Stil",
       "settings": {
-        "heading": "Was unser Futter besonders macht",
-        "img_left": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
-        "label_left": "Uncle Rusty's",
-        "label_right": "Herkömmliches Futter",
-        "row_bg_color": "#fcf0e5",
-        "bg_color": "#fefdf7"
+        "ueberschrift_text": "Was unser Futter besonders macht",
+        "ueberschrift_alignment": "center",
+        "vergleichsbild_links": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
+        "vergleichsbild_rechts": "shopify://shop_images/Rundum-Sorglos-Sensitiv.jpg",
+        "produktname_links": "Uncle Rusty's",
+        "produktname_rechts": "Herkömmliches Futter",
+        "bg_color": "#fefdf7",
+        "zebra_color": "#fcefe5"
       }
     },
     "features_QgMU8P": {
