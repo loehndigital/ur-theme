@@ -29,18 +29,10 @@
             <tr class="vergleichs-row {% cycle 'zebra-row', '' %}" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
               <td class="vorteil">{{ block.settings.text_links }}</td>
               <td class="icon-cell">
-                {% if block.settings.icon_links %}
-                  <span class="icon check">✔️</span>
-                {% else %}
-                  <span class="icon cross">❌</span>
-                {% endif %}
+                {% if block.settings.icon_links %}<span class="icon check">✔️</span>{% else %}<span class="icon cross">❌</span>{% endif %}
               </td>
               <td class="icon-cell">
-                {% if block.settings.icon_rechts %}
-                  <span class="icon check">✔️</span>
-                {% else %}
-                  <span class="icon cross">❌</span>
-                {% endif %}
+                {% if block.settings.icon_rechts %}<span class="icon check">✔️</span>{% else %}<span class="icon cross">❌</span>{% endif %}
               </td>
             </tr>
           {% endfor %}
@@ -53,30 +45,25 @@
       {% for block in section.blocks %}
         <div class="vergleich-card" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
           <div class="vorteil-text">{{ block.settings.text_links }}</div>
-          <div class="icon-row">
-
-            <!-- Spalte 1 -->
-            <div class="icon-label">
+          <div class="vergleich-card-row">
+            <div class="vergleich-card-col">
               {% if section.settings.vergleichsbild_links %}
-                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 60 }}" alt="{{ section.settings.produktname_links }}" class="vergleichsbild-mobile">
+                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 60 }}" class="vergleichsbild-mobile" alt="{{ section.settings.produktname_links }}">
               {% endif %}
-              <span class="icon-title">{{ section.settings.produktname_links }}</span>
+              <div class="produktname">{{ section.settings.produktname_links }}</div>
               <span class="icon {% if block.settings.icon_links %}check{% else %}cross{% endif %}">
                 {% if block.settings.icon_links %}✔️{% else %}❌{% endif %}
               </span>
             </div>
-
-            <!-- Spalte 2 -->
-            <div class="icon-label">
+            <div class="vergleich-card-col">
               {% if section.settings.vergleichsbild_rechts %}
-                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 60 }}" alt="{{ section.settings.produktname_rechts }}" class="vergleichsbild-mobile">
+                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 60 }}" class="vergleichsbild-mobile" alt="{{ section.settings.produktname_rechts }}">
               {% endif %}
-              <span class="icon-title">{{ section.settings.produktname_rechts }}</span>
+              <div class="produktname">{{ section.settings.produktname_rechts }}</div>
               <span class="icon {% if block.settings.icon_rechts %}check{% else %}cross{% endif %}">
                 {% if block.settings.icon_rechts %}✔️{% else %}❌{% endif %}
               </span>
             </div>
-
           </div>
         </div>
       {% endfor %}
@@ -85,233 +72,69 @@
 </div>
 
 <style>
-  .vergleichstabelle-new {
-    padding: 60px 0;
+  .table-desktop { display: table; }
+  .table-mobile { display: none; }
+
+  @media screen and (max-width: 768px) {
+    .table-desktop { display: none; }
+    .table-mobile { display: block; }
   }
 
-  .vergleichs-ueberschrift {
-    margin-bottom: 3rem;
-    font-size: 32px;
-  }
-
-  .table-wrapper {
-    overflow-x: auto;
-  }
-
-  .vergleichstabelle {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-  }
-
-  .sticky-header {
-    position: sticky;
-    top: 0;
-    background-color: {{ section.settings.bg_color }};
-    z-index: 10;
-  }
-
-  .produkte-row th {
-    text-align: center;
-    padding: 16px;
-    vertical-align: bottom;
-  }
-
-  .vergleichsbild {
-    margin: 0 auto 8px auto;
-    height: auto;
-    max-height: 100px;
-  }
-
-  .produktname {
-    font-weight: 600;
-    font-size: 16px;
-  }
-
-  .vergleichs-row td {
-    padding: 16px;
-    font-size: 16px;
-    vertical-align: middle;
-  }
-
-  .icon-cell {
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .icon.check {
-    color: #2e7d32;
-  }
-
-  .icon.cross {
-    color: #c62828;
-  }
-
-  .vorteil {
-    font-weight: 500;
-    width: 50%;
-  }
-
-  .table-mobile {
-    display: none;
-  }
-
-  .vergleich-card {
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 6px;
-    background: #fff;
-  }
-
-  .vorteil-text {
-    font-weight: 600;
-    margin-bottom: 12px;
-    text-align: center;
-  }
-
-  .icon-row {
+  .vergleich-card-row {
     display: flex;
-    justify-content: space-around;
-    gap: 12px;
-    text-align: center;
+    justify-content: space-between;
+    gap: 10px;
   }
 
-  .icon-label {
+  .vergleich-card-col {
+    flex: 1;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex: 1;
     gap: 6px;
   }
 
-  .icon-title {
-    font-weight: 500;
-    font-size: 14px;
-  }
-
-  .icon {
-    font-size: 20px;
-  }
-
   .vergleichsbild-mobile {
-    display: block;
-    max-height: 50px;
+    max-height: 40px;
     margin: 0 auto;
   }
 
-  @media screen and (max-width: 768px) {
-    .table-desktop {
-      display: none;
-    }
-    .table-mobile {
-      display: block;
-    }
-  }
+  .icon.check { color: #2e7d32; font-size: 20px; }
+  .icon.cross { color: #c62828; font-size: 20px; }
 </style>
 
 {% schema %}
 {
   "name": "Vergleichstabelle NEW",
   "settings": [
-    {
-      "type": "text",
-      "id": "ueberschrift_text",
-      "label": "Überschrift",
-      "default": "Was unser Futter besonders macht"
-    },
-    {
-      "type": "select",
-      "id": "ueberschrift_alignment",
-      "label": "Ausrichtung der Überschrift",
-      "options": [
-        { "value": "left", "label": "Links" },
-        { "value": "center", "label": "Zentriert" },
-        { "value": "right", "label": "Rechts" }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "image_picker",
-      "id": "vergleichsbild_links",
-      "label": "Bild links"
-    },
-    {
-      "type": "image_picker",
-      "id": "vergleichsbild_rechts",
-      "label": "Bild rechts"
-    },
-    {
-      "type": "text",
-      "id": "produktname_links",
-      "label": "Produktname links",
-      "default": "Uncle Rusty's"
-    },
-    {
-      "type": "text",
-      "id": "produktname_rechts",
-      "label": "Produktname rechts",
-      "default": "Herkömmliches Futter"
-    },
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Hintergrundfarbe der Sektion",
-      "default": "#fefdf7"
-    },
-    {
-      "type": "color",
-      "id": "zebra_color",
-      "label": "Hintergrundfarbe (abwechselnde Zeilen)",
-      "default": "#fcefe5"
-    }
+    { "type": "text", "id": "ueberschrift_text", "label": "Überschrift", "default": "Was unser Futter besonders macht" },
+    { "type": "select", "id": "ueberschrift_alignment", "label": "Ausrichtung der Überschrift", "options": [
+      { "value": "left", "label": "Links" },
+      { "value": "center", "label": "Zentriert" },
+      { "value": "right", "label": "Rechts" }
+    ], "default": "center" },
+    { "type": "image_picker", "id": "vergleichsbild_links", "label": "Bild links" },
+    { "type": "image_picker", "id": "vergleichsbild_rechts", "label": "Bild rechts" },
+    { "type": "text", "id": "produktname_links", "label": "Produktname links", "default": "Uncle Rusty's" },
+    { "type": "text", "id": "produktname_rechts", "label": "Produktname rechts", "default": "Herkömmliches Futter" },
+    { "type": "color", "id": "bg_color", "label": "Hintergrundfarbe der Sektion", "default": "#fefdf7" },
+    { "type": "color", "id": "zebra_color", "label": "Hintergrundfarbe (abwechselnde Zeilen)", "default": "#fcefe5" }
   ],
   "blocks": [
     {
       "type": "feature",
       "name": "Vergleichspunkt",
       "settings": [
-        {
-          "type": "text",
-          "id": "text_links",
-          "label": "Vergleichspunkt (Beschreibung)"
-        },
-        {
-          "type": "checkbox",
-          "id": "icon_links",
-          "label": "Haken links",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "icon_rechts",
-          "label": "Haken rechts",
-          "default": false
-        }
+        { "type": "text", "id": "text_links", "label": "Vergleichspunkt (Beschreibung)" },
+        { "type": "checkbox", "id": "icon_links", "label": "Haken links", "default": true },
+        { "type": "checkbox", "id": "icon_rechts", "label": "Haken rechts", "default": false }
       ]
     }
   ],
   "presets": [
     {
       "name": "Vergleichstabelle NEW",
-      "category": "Custom",
-      "blocks": [
-        {
-          "type": "feature",
-          "settings": {
-            "text_links": "100 % Deklaration aller Zutaten",
-            "icon_links": true,
-            "icon_rechts": false
-          }
-        },
-        {
-          "type": "feature",
-          "settings": {
-            "text_links": "Muskel- statt Tiermehl",
-            "icon_links": true,
-            "icon_rechts": false
-          }
-        }
-      ]
+      "category": "Custom"
     }
   ]
 }
