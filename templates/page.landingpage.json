@@ -253,44 +253,35 @@
     "vergleichstabelle_2_8cxTgf": {
       "type": "vergleichstabelle-2",
       "blocks": {
-        "feature_jJNwCH": {
-          "type": "feature",
+        "row_TAPttB": {
+          "type": "row",
           "settings": {
-            "text": "sdfasdf",
+            "text_label": "Muskelfleisch aus artgerechter Haltung",
             "icon_left": true,
             "icon_right": false
           }
         },
-        "feature_czKJVr": {
-          "type": "feature",
+        "row_UCTaJR": {
+          "type": "row",
           "settings": {
-            "text": "asdfasdf",
+            "text_label": "Regionale Zutaten aus dem Voralpenland",
             "icon_left": true,
             "icon_right": false
           }
         },
-        "feature_DNM9EJ": {
-          "type": "feature",
+        "row_Ckp6qr": {
+          "type": "row",
           "settings": {
-            "text": "",
-            "icon_left": true,
-            "icon_right": false
-          }
-        },
-        "feature_HtBJY6": {
-          "type": "feature",
-          "settings": {
-            "text": "",
+            "text_label": "Schonend gegart im nährstoffreichen Slow-Cooking",
             "icon_left": true,
             "icon_right": false
           }
         }
       },
       "block_order": [
-        "feature_jJNwCH",
-        "feature_czKJVr",
-        "feature_DNM9EJ",
-        "feature_HtBJY6"
+        "row_TAPttB",
+        "row_UCTaJR",
+        "row_Ckp6qr"
       ],
       "name": "Vergleich – Just Russel Stil",
       "settings": {
@@ -299,8 +290,8 @@
         "heading_size": 28,
         "image_left": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
         "image_right": "shopify://shop_images/Rundum-Sorglos-Sensitiv.jpg",
-        "product_left": "Uncle Rusty's",
-        "product_right": "Herkömmliches Futter",
+        "productname_left": "Uncle Rusty's",
+        "productname_right": "Herkömmliches Futter",
         "bg_color": "#fefdf7",
         "row_bg_color": "#fcf0e5"
       }
