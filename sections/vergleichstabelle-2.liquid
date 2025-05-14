@@ -4,62 +4,26 @@
       {{ section.settings.ueberschrift_text }}
     </h2>
 
-    <!-- Desktop Tabelle -->
-    <div class="table-wrapper table-desktop">
-      <table class="vergleichstabelle">
-        <thead class="produkte-row sticky-header">
-          <tr>
-            <th></th>
-            <th class="produkt-header">
-              {% if section.settings.vergleichsbild_links %}
-                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 120 }}" alt="Produkt 1" class="vergleichsbild">
-              {% endif %}
-              <div class="produktname">{{ section.settings.produktname_links }}</div>
-            </th>
-            <th class="produkt-header">
-              {% if section.settings.vergleichsbild_rechts %}
-                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 120 }}" alt="Produkt 2" class="vergleichsbild">
-              {% endif %}
-              <div class="produktname">{{ section.settings.produktname_rechts }}</div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for block in section.blocks %}
-            <tr class="vergleichs-row {% cycle 'zebra-row', '' %}" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
-              <td class="vorteil">{{ block.settings.text_links }}</td>
-              <td class="icon-cell">
-                {% if block.settings.icon_links %}<span class="icon check">✔️</span>{% else %}<span class="icon cross">❌</span>{% endif %}
-              </td>
-              <td class="icon-cell">
-                {% if block.settings.icon_rechts %}<span class="icon check">✔️</span>{% else %}<span class="icon cross">❌</span>{% endif %}
-              </td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Mobile Cards -->
-    <div class="table-mobile">
+    <!-- Vergleichseinträge -->
+    <div class="vergleich-eintraege">
       {% for block in section.blocks %}
-        <div class="vergleich-card" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
-          <div class="vorteil-text">{{ block.settings.text_links }}</div>
-          <div class="vergleich-card-row">
-            <div class="vergleich-card-col">
+        <div class="vergleich-zeile" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
+          <div class="vergleich-text">{{ block.settings.text_links }}</div>
+          <div class="vergleich-produkte">
+            <div class="vergleich-item">
               {% if section.settings.vergleichsbild_links %}
-                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 60 }}" class="vergleichsbild-mobile" alt="{{ section.settings.produktname_links }}">
+                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 60 }}" alt="{{ section.settings.produktname_links }}" class="vergleichsbild-mobile">
               {% endif %}
-              <div class="produktname">{{ section.settings.produktname_links }}</div>
+              <span class="vergleich-produktname">{{ section.settings.produktname_links }}</span>
               <span class="icon {% if block.settings.icon_links %}check{% else %}cross{% endif %}">
                 {% if block.settings.icon_links %}✔️{% else %}❌{% endif %}
               </span>
             </div>
-            <div class="vergleich-card-col">
+            <div class="vergleich-item">
               {% if section.settings.vergleichsbild_rechts %}
-                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 60 }}" class="vergleichsbild-mobile" alt="{{ section.settings.produktname_rechts }}">
+                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 60 }}" alt="{{ section.settings.produktname_rechts }}" class="vergleichsbild-mobile">
               {% endif %}
-              <div class="produktname">{{ section.settings.produktname_rechts }}</div>
+              <span class="vergleich-produktname">{{ section.settings.produktname_rechts }}</span>
               <span class="icon {% if block.settings.icon_rechts %}check{% else %}cross{% endif %}">
                 {% if block.settings.icon_rechts %}✔️{% else %}❌{% endif %}
               </span>
@@ -72,35 +36,64 @@
 </div>
 
 <style>
-  .table-desktop { display: table; }
-  .table-mobile { display: none; }
+.vergleichs-ueberschrift {
+  margin-bottom: 2rem;
+  font-size: 28px;
+  text-align: center;
+}
 
-  @media screen and (max-width: 768px) {
-    .table-desktop { display: none; }
-    .table-mobile { display: block; }
-  }
+.vergleich-eintraege {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-  .vergleich-card-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
+.vergleich-zeile {
+  padding: 16px;
+  border-radius: 8px;
+}
 
-  .vergleich-card-col {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+.vergleich-text {
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
 
-  .vergleichsbild-mobile {
-    max-height: 40px;
-    margin: 0 auto;
-  }
+.vergleich-produkte {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  text-align: center;
+}
 
-  .icon.check { color: #2e7d32; font-size: 20px; }
-  .icon.cross { color: #c62828; font-size: 20px; }
+.vergleich-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.vergleich-produktname {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.icon.check {
+  color: #2e7d32;
+  font-size: 20px;
+}
+
+.icon.cross {
+  color: #c62828;
+  font-size: 20px;
+}
+
+.vergleichsbild-mobile {
+  display: block;
+  max-height: 40px;
+  margin: 0 auto;
+}
 </style>
 
 {% schema %}
