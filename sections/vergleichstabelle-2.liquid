@@ -1,0 +1,241 @@
+<div class="custom-comparison just-russel-style">
+  <div class="page-width">
+    <h2 class="vergleichs-ueberschrift rich-text__heading h1" style="text-align: {{ section.settings.ueberschrift_alignment }};">
+      {{ section.settings.ueberschrift_text }}
+    </h2>
+
+    <table class="vergleichstabelle">
+      <thead>
+        <tr class="produkte-row">
+          <th></th>
+          <th class="produkt-header">
+            {% if section.settings.vergleichsbild_links %}
+              <img src="{{ section.settings.vergleichsbild_links | image_url: width: 120 }}" alt="Produkt 1" class="vergleichsbild">
+            {% endif %}
+            <div class="produktname">{{ section.settings.produktname_links }}</div>
+          </th>
+          <th class="produkt-header">
+            {% if section.settings.vergleichsbild_rechts %}
+              <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 120 }}" alt="Produkt 2" class="vergleichsbild">
+            {% endif %}
+            <div class="produktname">{{ section.settings.produktname_rechts }}</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for block in section.blocks %}
+          <tr class="vergleichs-row {% cycle 'bg-light', '' %}">
+            <td class="vorteil">{{ block.settings.text_links }}</td>
+            <td class="icon-cell">
+              {% if block.settings.icon_links %}
+                <span class="icon check">✔️</span>
+              {% else %}
+                <span class="icon cross">❌</span>
+              {% endif %}
+            </td>
+            <td class="icon-cell">
+              {% if block.settings.icon_rechts %}
+                <span class="icon check">✔️</span>
+              {% else %}
+                <span class="icon cross">❌</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .just-russel-style {
+    padding: 60px 0;
+    background-color: #fefdf7;
+  }
+
+  .vergleichs-ueberschrift {
+    margin-bottom: 3rem;
+    font-size: 32px;
+  }
+
+  .vergleichstabelle {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .produkte-row th {
+    text-align: center;
+    padding: 16px;
+    vertical-align: bottom;
+  }
+
+  .vergleichsbild {
+    margin: 0 auto 8px auto;
+    height: auto;
+    max-height: 100px;
+  }
+
+  .produktname {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .vergleichs-row {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .vergleichs-row td {
+    padding: 16px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .bg-light {
+    background-color: #fcefe5;
+  }
+
+  .icon-cell {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .icon.check {
+    color: #2e7d32;
+  }
+
+  .icon.cross {
+    color: #c62828;
+  }
+
+  .vorteil {
+    font-weight: 500;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .vergleichstabelle,
+    .vergleichstabelle thead,
+    .vergleichstabelle tbody,
+    .vergleichstabelle th,
+    .vergleichstabelle td,
+    .vergleichstabelle tr {
+      display: block;
+    }
+
+    .produkte-row {
+      display: none;
+    }
+
+    .vergleichs-row {
+      margin-bottom: 20px;
+    }
+
+    .vergleichs-row td {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+    }
+
+    .vorteil {
+      width: 100%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Vergleichstabelle Naru",
+  "settings": [
+    {
+      "type": "text",
+      "id": "ueberschrift_text",
+      "label": "Überschrift",
+      "default": "Was unser Futter besonders macht"
+    },
+    {
+      "type": "select",
+      "id": "ueberschrift_alignment",
+      "label": "Ausrichtung der Überschrift",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Zentriert" },
+        { "value": "right", "label": "Rechts" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "image_picker",
+      "id": "vergleichsbild_links",
+      "label": "Bild links"
+    },
+    {
+      "type": "image_picker",
+      "id": "vergleichsbild_rechts",
+      "label": "Bild rechts"
+    },
+    {
+      "type": "text",
+      "id": "produktname_links",
+      "label": "Produktname links",
+      "default": "Uncle Rusty's"
+    },
+    {
+      "type": "text",
+      "id": "produktname_rechts",
+      "label": "Produktname rechts",
+      "default": "Herkömmliches Futter"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Vergleichspunkt",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_links",
+          "label": "Vergleichspunkt (Beschreibung)"
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_links",
+          "label": "Haken links",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_rechts",
+          "label": "Haken rechts",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vergleich – Just Russel Stil",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "text_links": "100 % Deklaration aller Zutaten, glasklar & ehrlich",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text_links": "Muskel- statt Tiermehl, echte Qualität",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
