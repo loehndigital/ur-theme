@@ -55,6 +55,9 @@
           <div class="vorteil-text">{{ block.settings.text_links }}</div>
           <div class="icon-row">
             <div class="icon-label">
+              {% if section.settings.vergleichsbild_links %}
+                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 80 }}" alt="{{ section.settings.produktname_links }}" class="vergleichsbild-mobile">
+              {% endif %}
               <span class="icon-title">{{ section.settings.produktname_links }}</span>
               {% if block.settings.icon_links %}
                 <span class="icon check">✔️</span>
@@ -63,6 +66,9 @@
               {% endif %}
             </div>
             <div class="icon-label">
+              {% if section.settings.vergleichsbild_rechts %}
+                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 80 }}" alt="{{ section.settings.produktname_rechts }}" class="vergleichsbild-mobile">
+              {% endif %}
               <span class="icon-title">{{ section.settings.produktname_rechts }}</span>
               {% if block.settings.icon_rechts %}
                 <span class="icon check">✔️</span>
@@ -175,6 +181,13 @@
 
   .icon-title {
     font-weight: 500;
+  }
+
+  .vergleichsbild-mobile {
+    margin: 0 auto 4px auto;
+    display: block;
+    max-height: 60px;
+    width: auto;
   }
 
   @media screen and (max-width: 768px) {
