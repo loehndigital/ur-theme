@@ -1,12 +1,12 @@
-<div class="custom-comparison just-russel-style">
+<div class="custom-comparison vergleichstabelle-new" style="background-color: {{ section.settings.bg_color }};">
   <div class="page-width">
     <h2 class="vergleichs-ueberschrift rich-text__heading h1" style="text-align: {{ section.settings.ueberschrift_alignment }};">
       {{ section.settings.ueberschrift_text }}
     </h2>
 
     <table class="vergleichstabelle">
-      <thead>
-        <tr class="produkte-row">
+      <thead class="produkte-row">
+        <tr>
           <th></th>
           <th class="produkt-header">
             {% if section.settings.vergleichsbild_links %}
@@ -24,7 +24,7 @@
       </thead>
       <tbody>
         {% for block in section.blocks %}
-          <tr class="vergleichs-row {% cycle 'bg-light', '' %}">
+          <tr class="vergleichs-row {% cycle 'zebra-row', '' %}" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
             <td class="vorteil">{{ block.settings.text_links }}</td>
             <td class="icon-cell">
               {% if block.settings.icon_links %}
@@ -48,9 +48,8 @@
 </div>
 
 <style>
-  .just-russel-style {
+  .vergleichstabelle-new {
     padding: 60px 0;
-    background-color: #fefdf7;
   }
 
   .vergleichs-ueberschrift {
@@ -81,18 +80,10 @@
     font-size: 16px;
   }
 
-  .vergleichs-row {
-    border-bottom: 1px solid #ddd;
-  }
-
   .vergleichs-row td {
     padding: 16px;
     font-size: 16px;
     vertical-align: middle;
-  }
-
-  .bg-light {
-    background-color: #fcefe5;
   }
 
   .icon-cell {
@@ -132,21 +123,23 @@
     }
 
     .vergleichs-row td {
-      text-align: left;
       display: flex;
       justify-content: space-between;
       padding: 12px;
+      font-size: 16px;
+      background-color: inherit !important;
     }
 
     .vorteil {
       width: 100%;
+      font-weight: 500;
     }
   }
 </style>
 
 {% schema %}
 {
-  "name": "Vergleichstabelle Naru",
+  "name": "Vergleichstabelle NEW",
   "settings": [
     {
       "type": "text",
@@ -186,6 +179,18 @@
       "id": "produktname_rechts",
       "label": "Produktname rechts",
       "default": "Herkömmliches Futter"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Hintergrundfarbe der Sektion",
+      "default": "#fefdf7"
+    },
+    {
+      "type": "color",
+      "id": "zebra_color",
+      "label": "Hintergrundfarbe (abwechselnde Zeilen)",
+      "default": "#fcefe5"
     }
   ],
   "blocks": [
@@ -215,13 +220,13 @@
   ],
   "presets": [
     {
-      "name": "Vergleich – Just Russel Stil",
+      "name": "Vergleichstabelle NEW",
       "category": "Custom",
       "blocks": [
         {
           "type": "feature",
           "settings": {
-            "text_links": "100 % Deklaration aller Zutaten, glasklar & ehrlich",
+            "text_links": "100 % Deklaration aller Zutaten",
             "icon_links": true,
             "icon_rechts": false
           }
@@ -229,7 +234,7 @@
         {
           "type": "feature",
           "settings": {
-            "text_links": "Muskel- statt Tiermehl, echte Qualität",
+            "text_links": "Muskel- statt Tiermehl",
             "icon_links": true,
             "icon_rechts": false
           }
