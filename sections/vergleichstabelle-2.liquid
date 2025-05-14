@@ -1,142 +1,187 @@
-<div class="custom-comparison vergleichstabelle-new" style="background-color: {{ section.settings.bg_color }};">
+{% style %}
+.vergleichstabelle-section {
+  padding: 60px 0;
+  background-color: {{ section.settings.bg_color }};
+}
+.vergleichstabelle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  gap: 30px;
+}
+.vergleichstabelle-header img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+.vergleichstabelle-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 15px 0;
+  align-items: center;
+  background-color: transparent;
+}
+.vergleichstabelle-row:nth-child(even) {
+  background-color: {{ section.settings.row_bg_color }};
+}
+.vergleichstabelle-col {
+  font-size: 16px;
+  padding: 0 10px;
+}
+.vergleichstabelle-col.icon {
+  font-size: 20px;
+}
+.icon-true {
+  color: #007a4c;
+}
+.icon-false {
+  color: #d83c3c;
+}
+@media screen and (max-width: 768px) {
+  .vergleichstabelle {
+    display: block;
+  }
+  .vergleichstabelle-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  .vergleichstabelle-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding: 10px 0;
+  }
+  .vergleichstabelle-col.title {
+    grid-column: span 2;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
+{% endstyle %}
+
+<section class="vergleichstabelle-section">
   <div class="page-width">
-    <h2 class="vergleichs-ueberschrift rich-text__heading h1" style="text-align: {{ section.settings.ueberschrift_alignment }};">
-      {{ section.settings.ueberschrift_text }}
+    <h2 class="h1" style="text-align: {{ section.settings.heading_alignment }}; font-size: {{ section.settings.heading_size }}px;">
+      {{ section.settings.heading_text }}
     </h2>
 
-    <!-- Produktbilder und Namen (einmal oben) -->
-    <div class="vergleich-produkt-header">
-      <div class="vergleich-produkt">
-        {% if section.settings.vergleichsbild_links %}
-          <img src="{{ section.settings.vergleichsbild_links | image_url: width: 60 }}" alt="{{ section.settings.produktname_links }}">
+    <div class="vergleichstabelle-header">
+      <div>
+        {% if section.settings.image_left %}
+          <img src="{{ section.settings.image_left | image_url }}" alt="{{ section.settings.product_left }}">
         {% endif %}
-        <span class="produktname">{{ section.settings.produktname_links }}</span>
+        <p><strong>{{ section.settings.product_left }}</strong></p>
       </div>
-      <div class="vergleich-produkt">
-        {% if section.settings.vergleichsbild_rechts %}
-          <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 60 }}" alt="{{ section.settings.produktname_rechts }}">
+      <div></div>
+      <div>
+        {% if section.settings.image_right %}
+          <img src="{{ section.settings.image_right | image_url }}" alt="{{ section.settings.product_right }}">
         {% endif %}
-        <span class="produktname">{{ section.settings.produktname_rechts }}</span>
+        <p><strong>{{ section.settings.product_right }}</strong></p>
       </div>
     </div>
 
-    <!-- Vergleichspunkte -->
-    <div class="vergleich-eintraege">
-      {% for block in section.blocks %}
-        <div class="vergleich-zeile" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
-          <div class="vergleich-text">{{ block.settings.text_links }}</div>
-          <div class="vergleich-produkte">
-            <div class="vergleich-item">
-              <span class="icon {% if block.settings.icon_links %}check{% else %}cross{% endif %}">
-                {% if block.settings.icon_links %}✔️{% else %}❌{% endif %}
-              </span>
-            </div>
-            <div class="vergleich-item">
-              <span class="icon {% if block.settings.icon_rechts %}check{% else %}cross{% endif %}">
-                {% if block.settings.icon_rechts %}✔️{% else %}❌{% endif %}
-              </span>
-            </div>
-          </div>
+    {% for block in section.blocks %}
+      <div class="vergleichstabelle-row">
+        <div class="vergleichstabelle-col icon">
+          {% if block.settings.icon_left %}<span class="icon-true">✔</span>{% else %}<span class="icon-false">✘</span>{% endif %}
         </div>
-      {% endfor %}
-    </div>
+        <div class="vergleichstabelle-col title">{{ block.settings.text }}</div>
+        <div class="vergleichstabelle-col icon">
+          {% if block.settings.icon_right %}<span class="icon-true">✔</span>{% else %}<span class="icon-false">✘</span>{% endif %}
+        </div>
+      </div>
+    {% endfor %}
   </div>
-</div>
-
-<style>
-.vergleichs-ueberschrift {
-  margin-bottom: 2rem;
-  font-size: 28px;
-  text-align: center;
-}
-
-.vergleich-produkt-header {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1rem;
-  gap: 20px;
-}
-
-.vergleich-produkt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-.produktname {
-  font-weight: 600;
-  font-size: 14px;
-  margin-top: 4px;
-}
-
-.vergleich-eintraege {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.vergleich-zeile {
-  padding: 16px;
-  border-radius: 8px;
-}
-
-.vergleich-text {
-  font-weight: bold;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.vergleich-produkte {
-  display: flex;
-  justify-content: space-around;
-  gap: 12px;
-  text-align: center;
-}
-
-.vergleich-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-.icon.check {
-  color: #2e7d32;
-  font-size: 20px;
-}
-
-.icon.cross {
-  color: #c62828;
-  font-size: 20px;
-}
-</style>
+</section>
 
 {% schema %}
 {
   "name": "Vergleichstabelle NEW",
   "settings": [
-    { "type": "text", "id": "ueberschrift_text", "label": "Überschrift", "default": "Was unser Futter besonders macht" },
-    { "type": "select", "id": "ueberschrift_alignment", "label": "Ausrichtung der Überschrift", "options": [
-      { "value": "left", "label": "Links" },
-      { "value": "center", "label": "Zentriert" },
-      { "value": "right", "label": "Rechts" }
-    ], "default": "center" },
-    { "type": "image_picker", "id": "vergleichsbild_links", "label": "Bild links" },
-    { "type": "image_picker", "id": "vergleichsbild_rechts", "label": "Bild rechts" },
-    { "type": "text", "id": "produktname_links", "label": "Produktname links", "default": "Uncle Rusty's" },
-    { "type": "text", "id": "produktname_rechts", "label": "Produktname rechts", "default": "Herkömmliches Futter" },
-    { "type": "color", "id": "bg_color", "label": "Hintergrundfarbe der Sektion", "default": "#fefdf7" },
-    { "type": "color", "id": "zebra_color", "label": "Hintergrundfarbe (abwechselnde Zeilen)", "default": "#fcefe5" }
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Überschrift",
+      "default": "Was unser Futter besonders macht"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Ausrichtung der Überschrift",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Zentriert" },
+        { "value": "right", "label": "Rechts" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Größe der Überschrift",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "default": 28
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Bild links"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Bild rechts"
+    },
+    {
+      "type": "text",
+      "id": "product_left",
+      "label": "Produktname links",
+      "default": "Uncle Rusty's"
+    },
+    {
+      "type": "text",
+      "id": "product_right",
+      "label": "Produktname rechts",
+      "default": "Herkömmliches Futter"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Hintergrundfarbe der Sektion",
+      "default": "#FEFDF7"
+    },
+    {
+      "type": "color",
+      "id": "row_bg_color",
+      "label": "Hintergrundfarbe (abwechselnde Zeilen)",
+      "default": "#FCF0E5"
+    }
   ],
   "blocks": [
     {
       "type": "feature",
       "name": "Vergleichspunkt",
       "settings": [
-        { "type": "text", "id": "text_links", "label": "Vergleichspunkt (Beschreibung)" },
-        { "type": "checkbox", "id": "icon_links", "label": "Haken links", "default": true },
-        { "type": "checkbox", "id": "icon_rechts", "label": "Haken rechts", "default": false }
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Vergleichspunkt (Beschreibung)"
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_left",
+          "label": "Haken links",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_right",
+          "label": "Haken rechts",
+          "default": false
+        }
       ]
     }
   ],
