@@ -348,12 +348,57 @@
           "type": "icon-with-text",
           "settings": {
             "layout": "vertical",
-            "icon_1": "heart",
-            "heading_1": "Versandbereit in 24h – bei dir in 2–3 Tagen.",
-            "icon_2": "return",
-            "heading_2": "Heading",
-            "icon_3": "truck",
-            "heading_3": "Heading"
+            "icon_1": "none",
+            "heading_1": "<strong>Dein Einstieg in eine gesunde Ernährung</strong>",
+            "icon_2": "none",
+            "heading_2": "",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
+        "text_mm4iG8": {
+          "type": "text",
+          "settings": {
+            "text": "7 Sorten. 1 Box. 0 Risiko.",
+            "text_style": "body"
+          }
+        },
+        "text_Hr9Hr6": {
+          "type": "text",
+          "settings": {
+            "text": "Jetzt mit 100 g Hundekeksen gratis und Kostenlosem Versand ab der ersten Bestellung",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_EwncUF": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "none",
+            "heading_1": "Finde heraus, was deinem Hund wirklich schmeckt",
+            "icon_2": "none",
+            "heading_2": "",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
+        "text_kHF7qD": {
+          "type": "text",
+          "settings": {
+            "text": "Ob Rind, Wild, Ente oder Lachs – du bekommst alle Sorten zum Testen. Schonend verarbeitet. 100 % natürlich. Hergestellt im Voralpenland.",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_WW9da6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "none",
+            "heading_1": "Sicher testen - oder Geld zurück",
+            "icon_2": "none",
+            "heading_2": "",
+            "icon_3": "none",
+            "heading_3": ""
           }
         },
         "quantity_selector_H4nMcW": {
@@ -372,6 +417,11 @@
         "title_gmemfH",
         "price_KRFRzG",
         "icon_with_text_pWHndX",
+        "text_mm4iG8",
+        "text_Hr9Hr6",
+        "icon_with_text_EwncUF",
+        "text_kHF7qD",
+        "icon_with_text_WW9da6",
         "quantity_selector_H4nMcW",
         "buy_buttons_iLhBpX"
       ],
@@ -389,6 +439,49 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "icon_row_rbAiFd": {
+      "type": "icon-row",
+      "blocks": {
+        "image_text_block_YkhJXN": {
+          "type": "image-text-block",
+          "settings": {
+            "image_height": 65,
+            "image_rich_text": "<p>Describe your image here.</p>"
+          }
+        },
+        "image_text_block_wFhLca": {
+          "type": "image-text-block",
+          "settings": {
+            "image_height": 65,
+            "image_rich_text": "<p>Describe your image here.</p>"
+          }
+        },
+        "image_text_block_ctnKeM": {
+          "type": "image-text-block",
+          "settings": {
+            "image_height": 65,
+            "image_rich_text": "<p>Describe your image here.</p>"
+          }
+        },
+        "image_text_block_XCpJUb": {
+          "type": "image-text-block",
+          "settings": {
+            "image_height": 65,
+            "image_rich_text": "<p>Describe your image here.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_text_block_YkhJXN",
+        "image_text_block_wFhLca",
+        "image_text_block_ctnKeM",
+        "image_text_block_XCpJUb"
+      ],
+      "name": "UR Icon Row",
+      "settings": {
+        "color_scheme": ""
       }
     },
     "1702222298d12bda40": {
@@ -721,6 +814,7 @@
     "vergleichstabelle_TwExww",
     "features_QgMU8P",
     "featured_product_WRH7Xi",
+    "icon_row_rbAiFd",
     "1702222298d12bda40",
     "rich_text_bdynjC",
     "highlight_product_TnH9XC",
