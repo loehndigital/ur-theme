@@ -1,121 +1,129 @@
-{% style %}
-.vergleichstabelle-jr {
+<style>
+.vergleichstabelle {
   width: 100%;
-  padding: 3rem 1rem;
-  background-color: {{ section.settings.bg_color }};
+  display: table;
+  border-spacing: 0 10px;
 }
-.vergleichstabelle-jr h2 {
-  text-align: {{ section.settings.heading_alignment }};
-  font-size: {{ section.settings.heading_size }}px;
-  margin-bottom: 2rem;
+
+.vergleichstabelle-row {
+  display: table-row;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
 }
-.vergleichstabelle-jr .tabelle {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-.vergleichstabelle-jr .tabelle thead {
-  position: sticky;
-  top: 0;
-  background-color: {{ section.settings.bg_color }};
-  z-index: 10;
-}
-.vergleichstabelle-jr .tabelle th,
-.vergleichstabelle-jr .tabelle td {
+
+.vergleichstabelle-header {
+  font-weight: bold;
+  font-size: 24px;
   text-align: center;
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 20px 0;
 }
-.vergleichstabelle-jr .tabelle th:first-child,
-.vergleichstabelle-jr .tabelle td:first-child {
+
+.vergleichstabelle-cell {
+  display: table-cell;
+  padding: 12px 16px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.vergleichstabelle-row:nth-child(even) {
+  background-color: {{ settings.row_bg_color }};
+  border-radius: 12px;
+}
+
+.vergleichstabelle-cell:first-child {
   text-align: left;
 }
-.vergleichstabelle-jr .row-alt {
-  background-color: {{ section.settings.row_bg_color }};
-}
-.vergleichstabelle-jr .icon-check {
-  color: #0f834c;
+
+.vergleichstabelle-check {
+  color: #2F855A;
   font-size: 20px;
 }
-.vergleichstabelle-jr .icon-x {
-  color: #d93025;
+
+.vergleichstabelle-cross {
+  color: #E53E3E;
   font-size: 20px;
 }
-.vergleichstabelle-jr img {
-  max-height: 60px;
-  object-fit: contain;
+
+.vergleichstabelle-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto 24px;
+  max-width: 400px;
 }
+
+.vergleichstabelle-images img {
+  max-width: 80px;
+  height: auto;
+}
+
 @media screen and (max-width: 768px) {
-  .vergleichstabelle-jr .tabelle th,
-  .vergleichstabelle-jr .tabelle td {
-    font-size: 0.9rem;
-    padding: 0.5rem;
+  .vergleichstabelle {
+    display: block;
+  }
+  .vergleichstabelle-row,
+  .vergleichstabelle-cell {
+    display: block;
+    width: 100%;
+  }
+  .vergleichstabelle-images {
+    flex-direction: row;
+    gap: 24px;
   }
 }
-{% endstyle %}
+</style>
 
-<section class="vergleichstabelle-jr">
-  <h2>{{ section.settings.heading_text }}</h2>
+<div class="vergleichstabelle-wrapper" style="background-color: {{ settings.bg_color }}; padding: 40px 0;">
+  <div class="vergleichstabelle-header">{{ settings.heading_text }}</div>
 
-  <table class="tabelle">
-    <thead>
-      <tr>
-        <th></th>
-        <th>
-          {% if section.settings.image_left != blank %}
-            <img src="{{ section.settings.image_left | image_url: width: 100 }}" alt="Produkt links">
+  <div class="vergleichstabelle-images">
+    <div>
+      {% if settings.image_left != blank %}
+        <img src="{{ settings.image_left | img_url: '150x' }}" alt="{{ settings.productname_left }}">
+        <div style="text-align: center;">{{ settings.productname_left }}</div>
+      {% endif %}
+    </div>
+    <div>
+      {% if settings.image_right != blank %}
+        <img src="{{ settings.image_right | img_url: '150x' }}" alt="{{ settings.productname_right }}">
+        <div style="text-align: center;">{{ settings.productname_right }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="vergleichstabelle">
+    {% for block in section.blocks %}
+      <div class="vergleichstabelle-row">
+        <div class="vergleichstabelle-cell">{{ block.settings.text_label }}</div>
+        <div class="vergleichstabelle-cell">
+          {% if block.settings.icon_left %}
+            <span class="vergleichstabelle-check">✔</span>
+          {% else %}
+            <span class="vergleichstabelle-cross">✘</span>
           {% endif %}
-          <div>{{ section.settings.productname_left }}</div>
-        </th>
-        <th>
-          {% if section.settings.image_right != blank %}
-            <img src="{{ section.settings.image_right | image_url: width: 100 }}" alt="Produkt rechts">
+        </div>
+        <div class="vergleichstabelle-cell">
+          {% if block.settings.icon_right %}
+            <span class="vergleichstabelle-check">✔</span>
+          {% else %}
+            <span class="vergleichstabelle-cross">✘</span>
           {% endif %}
-          <div>{{ section.settings.productname_right }}</div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for block in section.blocks %}
-        <tr class="{% cycle '', 'row-alt' %}">
-          <td>{{ block.settings.text_label }}</td>
-          <td>{% if block.settings.icon_left %}<span class="icon-check">✔</span>{% else %}<span class="icon-x">✘</span>{% endif %}</td>
-          <td>{% if block.settings.icon_right %}<span class="icon-check">✔</span>{% else %}<span class="icon-x">✘</span>{% endif %}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</section>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
 
 {% schema %}
 {
-  "name": "Vergleichstabelle JR",
+  "name": "Vergleich Rusty",
   "settings": [
     {
       "type": "text",
       "id": "heading_text",
       "label": "Überschrift",
       "default": "Was unser Futter besonders macht"
-    },
-    {
-      "type": "select",
-      "id": "heading_alignment",
-      "label": "Ausrichtung der Überschrift",
-      "options": [
-        { "value": "left", "label": "Links" },
-        { "value": "center", "label": "Zentriert" },
-        { "value": "right", "label": "Rechts" }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "range",
-      "id": "heading_size",
-      "label": "Größe der Überschrift",
-      "min": 18,
-      "max": 48,
-      "step": 1,
-      "default": 28
     },
     {
       "type": "image_picker",
@@ -179,7 +187,7 @@
   ],
   "presets": [
     {
-      "name": "Vergleichstabelle JR",
+      "name": "Vergleich Rusty",
       "category": "Custom"
     }
   ]
