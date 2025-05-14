@@ -256,33 +256,33 @@
         "feature_jJNwCH": {
           "type": "feature",
           "settings": {
-            "text_links": "100 % Deklaration aller Zutaten, glasklar & ehrlich",
-            "icon_links": true,
-            "icon_rechts": false
+            "text": "",
+            "icon_left": true,
+            "icon_right": false
           }
         },
         "feature_czKJVr": {
           "type": "feature",
           "settings": {
-            "text_links": "Muskel- statt Tiermehl, echte Qualität",
-            "icon_links": true,
-            "icon_rechts": false
+            "text": "",
+            "icon_left": true,
+            "icon_right": false
           }
         },
         "feature_DNM9EJ": {
           "type": "feature",
           "settings": {
-            "text_links": "",
-            "icon_links": true,
-            "icon_rechts": false
+            "text": "",
+            "icon_left": true,
+            "icon_right": false
           }
         },
         "feature_HtBJY6": {
           "type": "feature",
           "settings": {
-            "text_links": "",
-            "icon_links": true,
-            "icon_rechts": false
+            "text": "",
+            "icon_left": true,
+            "icon_right": false
           }
         }
       },
@@ -294,12 +294,15 @@
       ],
       "name": "Vergleich – Just Russel Stil",
       "settings": {
-        "ueberschrift_text": "Was unser Futter besonders macht",
-        "ueberschrift_alignment": "center",
-        "vergleichsbild_links": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
-        "vergleichsbild_rechts": "shopify://shop_images/Rundum-Sorglos-Sensitiv.jpg",
-        "produktname_links": "Uncle Rusty's",
-        "produktname_rechts": "Herkömmliches Futter"
+        "heading_text": "Was unser Futter besonders macht",
+        "heading_alignment": "center",
+        "heading_size": 28,
+        "image_left": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
+        "image_right": "shopify://shop_images/Rundum-Sorglos-Sensitiv.jpg",
+        "product_left": "Uncle Rusty's",
+        "product_right": "Herkömmliches Futter",
+        "bg_color": "#fefdf7",
+        "row_bg_color": "#fcf0e5"
       }
     },
     "features_QgMU8P": {
