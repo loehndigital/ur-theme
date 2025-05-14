@@ -1,5 +1,4 @@
 {% stylesheet %}
-/* --- Vergleichstabelle Styles --- */
 .vergleichtabelle-container {
   padding: 40px 20px;
   background-color: {{ section.settings.bg_color }};
@@ -14,19 +13,18 @@
 
 .vergleichtabelle-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 12px;
+  display: grid;
+  row-gap: 12px;
 }
 
 .vergleichtabelle-row {
   background-color: {{ section.settings.row_bg_color }};
   border-radius: 12px;
+  padding: 14px 20px;
   display: grid;
   grid-template-columns: 1fr 50px 50px;
   align-items: center;
-  padding: 14px 20px;
   font-size: 16px;
-  font-weight: 400;
 }
 
 .vergleichtabelle-row:nth-child(even) {
@@ -38,8 +36,8 @@
   grid-template-columns: 1fr 50px 50px;
   align-items: center;
   font-weight: bold;
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .vergleichtabelle-head img {
@@ -53,18 +51,11 @@
 }
 
 @media (max-width: 768px) {
-  .vergleichtabelle-head {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
+  .vergleichtabelle-head,
   .vergleichtabelle-row {
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .vergleichtabelle-check {
-    text-align: right;
+    text-align: left;
+    padding: 14px 10px;
   }
 }
 {% endstylesheet %}
@@ -87,12 +78,8 @@
   {% for block in section.blocks %}
     <div class="vergleichtabelle-row">
       <div>{{ block.settings.text_label }}</div>
-      <div class="vergleichtabelle-check">
-        {% if block.settings.icon_left %}✔️{% endif %}
-      </div>
-      <div class="vergleichtabelle-check">
-        {% if block.settings.icon_right %}❌{% endif %}
-      </div>
+      <div class="vergleichtabelle-check">{% if block.settings.icon_left %}✔️{% endif %}</div>
+      <div class="vergleichtabelle-check">{% if block.settings.icon_right %}✔️{% endif %}</div>
     </div>
   {% endfor %}
 </section>
