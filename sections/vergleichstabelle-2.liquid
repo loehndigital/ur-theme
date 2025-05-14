@@ -1,129 +1,131 @@
-<style>
-.vergleichstabelle {
-  width: 100%;
-  display: table;
-  border-spacing: 0 10px;
+{% stylesheet %}
+/* --- Vergleichstabelle Styles --- */
+.vergleichtabelle-container {
+  padding: 40px 20px;
+  background-color: {{ section.settings.bg_color }};
 }
 
-.vergleichstabelle-row {
-  display: table-row;
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.vergleichstabelle-header {
+.vergleichtabelle-title {
+  text-align: {{ section.settings.heading_alignment }};
+  font-size: {{ section.settings.heading_size }}px;
   font-weight: bold;
-  font-size: 24px;
-  text-align: center;
-  padding: 20px 0;
+  margin-bottom: 30px;
 }
 
-.vergleichstabelle-cell {
-  display: table-cell;
-  padding: 12px 16px;
-  vertical-align: middle;
-  text-align: center;
+.vergleichtabelle-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
 }
 
-.vergleichstabelle-row:nth-child(even) {
-  background-color: {{ settings.row_bg_color }};
+.vergleichtabelle-row {
+  background-color: {{ section.settings.row_bg_color }};
   border-radius: 12px;
-}
-
-.vergleichstabelle-cell:first-child {
-  text-align: left;
-}
-
-.vergleichstabelle-check {
-  color: #2F855A;
-  font-size: 20px;
-}
-
-.vergleichstabelle-cross {
-  color: #E53E3E;
-  font-size: 20px;
-}
-
-.vergleichstabelle-images {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 50px 50px;
   align-items: center;
-  margin: 0 auto 24px;
-  max-width: 400px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.vergleichstabelle-images img {
-  max-width: 80px;
-  height: auto;
+.vergleichtabelle-row:nth-child(even) {
+  background-color: {{ section.settings.row_alt_bg_color }};
 }
 
-@media screen and (max-width: 768px) {
-  .vergleichstabelle {
-    display: block;
+.vergleichtabelle-head {
+  display: grid;
+  grid-template-columns: 1fr 50px 50px;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.vergleichtabelle-head img {
+  max-height: 50px;
+  object-fit: contain;
+}
+
+.vergleichtabelle-check {
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .vergleichtabelle-head {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
-  .vergleichstabelle-row,
-  .vergleichstabelle-cell {
-    display: block;
-    width: 100%;
+
+  .vergleichtabelle-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
-  .vergleichstabelle-images {
-    flex-direction: row;
-    gap: 24px;
+
+  .vergleichtabelle-check {
+    text-align: right;
   }
 }
-</style>
+{% endstylesheet %}
 
-<div class="vergleichstabelle-wrapper" style="background-color: {{ settings.bg_color }}; padding: 40px 0;">
-  <div class="vergleichstabelle-header">{{ settings.heading_text }}</div>
+<section class="vergleichtabelle-container">
+  <h2 class="vergleichtabelle-title">{{ section.settings.heading_text }}</h2>
 
-  <div class="vergleichstabelle-images">
+  <div class="vergleichtabelle-head">
+    <div></div>
     <div>
-      {% if settings.image_left != blank %}
-        <img src="{{ settings.image_left | img_url: '150x' }}" alt="{{ settings.productname_left }}">
-        <div style="text-align: center;">{{ settings.productname_left }}</div>
-      {% endif %}
+      <img src="{{ section.settings.image_left | image_url }}" alt="{{ section.settings.product_left }}">
+      <div>{{ section.settings.product_left }}</div>
     </div>
     <div>
-      {% if settings.image_right != blank %}
-        <img src="{{ settings.image_right | img_url: '150x' }}" alt="{{ settings.productname_right }}">
-        <div style="text-align: center;">{{ settings.productname_right }}</div>
-      {% endif %}
+      <img src="{{ section.settings.image_right | image_url }}" alt="{{ section.settings.product_right }}">
+      <div>{{ section.settings.product_right }}</div>
     </div>
   </div>
 
-  <div class="vergleichstabelle">
-    {% for block in section.blocks %}
-      <div class="vergleichstabelle-row">
-        <div class="vergleichstabelle-cell">{{ block.settings.text_label }}</div>
-        <div class="vergleichstabelle-cell">
-          {% if block.settings.icon_left %}
-            <span class="vergleichstabelle-check">✔</span>
-          {% else %}
-            <span class="vergleichstabelle-cross">✘</span>
-          {% endif %}
-        </div>
-        <div class="vergleichstabelle-cell">
-          {% if block.settings.icon_right %}
-            <span class="vergleichstabelle-check">✔</span>
-          {% else %}
-            <span class="vergleichstabelle-cross">✘</span>
-          {% endif %}
-        </div>
+  {% for block in section.blocks %}
+    <div class="vergleichtabelle-row">
+      <div>{{ block.settings.text_label }}</div>
+      <div class="vergleichtabelle-check">
+        {% if block.settings.icon_left %}✔️{% endif %}
       </div>
-    {% endfor %}
-  </div>
-</div>
+      <div class="vergleichtabelle-check">
+        {% if block.settings.icon_right %}❌{% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</section>
 
 {% schema %}
 {
-  "name": "Vergleich Rusty",
+  "name": "Vergleichstabelle",
   "settings": [
     {
       "type": "text",
       "id": "heading_text",
       "label": "Überschrift",
       "default": "Was unser Futter besonders macht"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Ausrichtung der Überschrift",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Zentriert" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Größe der Überschrift",
+      "min": 18,
+      "max": 42,
+      "step": 1,
+      "default": 28
     },
     {
       "type": "image_picker",
@@ -137,13 +139,13 @@
     },
     {
       "type": "text",
-      "id": "productname_left",
+      "id": "product_left",
       "label": "Produktname links",
       "default": "Uncle Rusty's"
     },
     {
       "type": "text",
-      "id": "productname_right",
+      "id": "product_right",
       "label": "Produktname rechts",
       "default": "Herkömmliches Futter"
     },
@@ -156,19 +158,26 @@
     {
       "type": "color",
       "id": "row_bg_color",
+      "label": "Hintergrundfarbe Zeile",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "row_alt_bg_color",
       "label": "Hintergrundfarbe (abwechselnde Zeilen)",
       "default": "#FCF0E5"
     }
   ],
   "blocks": [
     {
-      "type": "row",
+      "type": "feature",
       "name": "Vergleichspunkt",
       "settings": [
         {
           "type": "text",
           "id": "text_label",
-          "label": "Vergleichspunkt (Beschreibung)"
+          "label": "Vergleichspunkt (Beschreibung)",
+          "default": "Muskel statt Tiermehl"
         },
         {
           "type": "checkbox",
@@ -187,7 +196,7 @@
   ],
   "presets": [
     {
-      "name": "Vergleich Rusty",
+      "name": "Vergleichstabelle",
       "category": "Custom"
     }
   ]
