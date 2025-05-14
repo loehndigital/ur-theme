@@ -1,180 +1,67 @@
-{% stylesheet %}
-.vergleichtabelle-container {
-  padding: 40px 20px;
-  background-color: {{ section.settings.bg_color }};
-}
-
-.vergleichtabelle-title {
-  text-align: {{ section.settings.heading_alignment }};
-  font-size: {{ section.settings.heading_size }}px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.vergleichtabelle-table {
-  width: 100%;
-  display: grid;
-  row-gap: 12px;
-}
-
-.vergleichtabelle-row {
-  background-color: {{ section.settings.row_bg_color }};
-  border-radius: 12px;
-  padding: 14px 20px;
-  display: grid;
-  grid-template-columns: 1fr 50px 50px;
-  align-items: center;
-  font-size: 16px;
-}
-
-.vergleichtabelle-row:nth-child(even) {
-  background-color: {{ section.settings.row_alt_bg_color }};
-}
-
-.vergleichtabelle-head {
-  display: grid;
-  grid-template-columns: 1fr 50px 50px;
-  align-items: center;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.vergleichtabelle-head img {
-  max-height: 50px;
-  object-fit: contain;
-}
-
-.vergleichtabelle-check {
-  font-size: 20px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .vergleichtabelle-head,
-  .vergleichtabelle-row {
-    grid-template-columns: 1fr 1fr;
-    text-align: left;
-    padding: 14px 10px;
-  }
-}
-{% endstylesheet %}
-
-<section class="vergleichtabelle-container">
-  <h2 class="vergleichtabelle-title">{{ section.settings.heading_text }}</h2>
-
-  <div class="vergleichtabelle-head">
-    <div></div>
-    <div>
-      <img src="{{ section.settings.image_left | image_url }}" alt="{{ section.settings.product_left }}">
-      <div>{{ section.settings.product_left }}</div>
-    </div>
-    <div>
-      <img src="{{ section.settings.image_right | image_url }}" alt="{{ section.settings.product_right }}">
-      <div>{{ section.settings.product_right }}</div>
-    </div>
-  </div>
-
-  {% for block in section.blocks %}
-    <div class="vergleichtabelle-row">
-      <div>{{ block.settings.text_label }}</div>
-      <div class="vergleichtabelle-check">{% if block.settings.icon_left %}✔️{% endif %}</div>
-      <div class="vergleichtabelle-check">{% if block.settings.icon_right %}✔️{% endif %}</div>
-    </div>
-  {% endfor %}
-</section>
-
 {% schema %}
 {
-  "name": "Vergleichstabelle",
+  "name": "Vergleich",
   "settings": [
     {
       "type": "text",
-      "id": "heading_text",
+      "id": "heading",
       "label": "Überschrift",
       "default": "Was unser Futter besonders macht"
     },
     {
-      "type": "select",
-      "id": "heading_alignment",
-      "label": "Ausrichtung der Überschrift",
-      "default": "center",
-      "options": [
-        { "value": "left", "label": "Links" },
-        { "value": "center", "label": "Zentriert" },
-        { "value": "right", "label": "Rechts" }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "heading_size",
-      "label": "Größe der Überschrift",
-      "min": 18,
-      "max": 42,
-      "step": 1,
-      "default": 28
-    },
-    {
       "type": "image_picker",
-      "id": "image_left",
+      "id": "img_left",
       "label": "Bild links"
     },
     {
       "type": "image_picker",
-      "id": "image_right",
+      "id": "img_right",
       "label": "Bild rechts"
     },
     {
       "type": "text",
-      "id": "product_left",
+      "id": "label_left",
       "label": "Produktname links",
       "default": "Uncle Rusty's"
     },
     {
       "type": "text",
-      "id": "product_right",
+      "id": "label_right",
       "label": "Produktname rechts",
       "default": "Herkömmliches Futter"
+    },
+    {
+      "type": "color",
+      "id": "row_bg_color",
+      "label": "Hintergrundfarbe (abwechselnde Zeilen)",
+      "default": "#FCF0E5"
     },
     {
       "type": "color",
       "id": "bg_color",
       "label": "Hintergrundfarbe der Sektion",
       "default": "#FEFDF7"
-    },
-    {
-      "type": "color",
-      "id": "row_bg_color",
-      "label": "Hintergrundfarbe Zeile",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "row_alt_bg_color",
-      "label": "Hintergrundfarbe (abwechselnde Zeilen)",
-      "default": "#FCF0E5"
     }
   ],
   "blocks": [
     {
-      "type": "feature",
+      "type": "point",
       "name": "Vergleichspunkt",
       "settings": [
         {
           "type": "text",
-          "id": "text_label",
-          "label": "Vergleichspunkt (Beschreibung)",
-          "default": "Muskel statt Tiermehl"
+          "id": "text",
+          "label": "Vergleichspunkt (Beschreibung)"
         },
         {
           "type": "checkbox",
-          "id": "icon_left",
+          "id": "left_check",
           "label": "Haken links",
-          "default": true
+          "default": false
         },
         {
           "type": "checkbox",
-          "id": "icon_right",
+          "id": "right_check",
           "label": "Haken rechts",
           "default": false
         }
@@ -183,9 +70,92 @@
   ],
   "presets": [
     {
-      "name": "Vergleichstabelle",
+      "name": "Vergleich",
       "category": "Custom"
     }
   ]
 }
 {% endschema %}
+
+{% stylesheet %}
+<style>
+.vergleichstabelle {
+  background-color: {{ section.settings.bg_color }};
+  padding: 40px 20px;
+}
+
+.vergleichstabelle h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.vergleichstabelle-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vergleichstabelle-table th,
+.vergleichstabelle-table td {
+  padding: 14px;
+  text-align: center;
+}
+
+.vergleichstabelle-table tbody tr:nth-child(even) {
+  background-color: {{ section.settings.row_bg_color }};
+  border-radius: 12px;
+}
+
+.vergleichstabelle-table td:first-child,
+.vergleichstabelle-table td:last-child {
+  width: 20%;
+}
+
+.vergleichstabelle-table .label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .vergleichstabelle-table td,
+  .vergleichstabelle-table th {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+</style>
+{% endstylesheet %}
+
+<div class="vergleichstabelle">
+  <h2>{{ section.settings.heading }}</h2>
+
+  <table class="vergleichstabelle-table">
+    <thead>
+      <tr>
+        <th>
+          {% if section.settings.img_left != blank %}
+            <img src="{{ section.settings.img_left | image_url: width: 100 }}" alt="{{ section.settings.label_left }}" style="max-width: 80px;"><br>
+          {% endif %}
+          <span class="label">{{ section.settings.label_left }}</span>
+        </th>
+        <th></th>
+        <th>
+          {% if section.settings.img_right != blank %}
+            <img src="{{ section.settings.img_right | image_url: width: 100 }}" alt="{{ section.settings.label_right }}" style="max-width: 80px;"><br>
+          {% endif %}
+          <span class="label">{{ section.settings.label_right }}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for block in section.blocks %}
+        <tr>
+          <td>{% if block.settings.left_check %}✔️{% endif %}</td>
+          <td>{{ block.settings.text }}</td>
+          <td>{% if block.settings.right_check %}✔️{% endif %}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
