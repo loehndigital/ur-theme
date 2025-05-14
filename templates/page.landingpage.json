@@ -250,6 +250,58 @@
         "produktname_rechts": "Uncle Rusty's"
       }
     },
+    "vergleichstabelle_2_8cxTgf": {
+      "type": "vergleichstabelle-2",
+      "blocks": {
+        "feature_jJNwCH": {
+          "type": "feature",
+          "settings": {
+            "text_links": "100 % Deklaration aller Zutaten, glasklar & ehrlich",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_czKJVr": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Muskel- statt Tiermehl, echte Qualität",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_DNM9EJ": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_HtBJY6": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        }
+      },
+      "block_order": [
+        "feature_jJNwCH",
+        "feature_czKJVr",
+        "feature_DNM9EJ",
+        "feature_HtBJY6"
+      ],
+      "name": "Vergleich – Just Russel Stil",
+      "settings": {
+        "ueberschrift_text": "Was unser Futter besonders macht",
+        "ueberschrift_alignment": "center",
+        "vergleichsbild_links": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
+        "vergleichsbild_rechts": "shopify://shop_images/Rundum-Sorglos-Sensitiv.jpg",
+        "produktname_links": "Uncle Rusty's",
+        "produktname_rechts": "Herkömmliches Futter"
+      }
+    },
     "features_QgMU8P": {
       "type": "Features",
       "blocks": {
@@ -812,6 +864,7 @@
     "1746432726ef4be35b",
     "rich_text_kpjUct",
     "vergleichstabelle_TwExww",
+    "vergleichstabelle_2_8cxTgf",
     "features_QgMU8P",
     "featured_product_WRH7Xi",
     "icon_row_rbAiFd",
