@@ -4,12 +4,12 @@
       {{ section.settings.ueberschrift_text }}
     </h2>
 
-    <!-- Desktop Tabelle -->
-    <div class="table-wrapper table-desktop">
+    <!-- Responsive Table Design for both Desktop and Mobile -->
+    <div class="table-wrapper">
       <table class="vergleichstabelle">
         <thead class="produkte-row sticky-header">
           <tr>
-            <th></th>
+            <th class="feature-header">Eigenschaften</th>
             <th class="produkt-header">
               {% if section.settings.vergleichsbild_links %}
                 <img src="{{ section.settings.vergleichsbild_links | image_url: width: 120 }}" alt="Produkt 1" class="vergleichsbild">
@@ -28,18 +28,18 @@
           {% for block in section.blocks %}
             <tr class="vergleichs-row {% cycle 'zebra-row', '' %}" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
               <td class="vorteil">{{ block.settings.text_links }}</td>
-              <td class="icon-cell">
+              <td class="icon-cell" data-label="{{ section.settings.produktname_links }}">
                 {% if block.settings.icon_links %}
-                  <span class="icon check">✔️</span>
+                  <span class="icon check"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
                 {% else %}
-                  <span class="icon cross">❌</span>
+                  <span class="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
                 {% endif %}
               </td>
-              <td class="icon-cell">
+              <td class="icon-cell" data-label="{{ section.settings.produktname_rechts }}">
                 {% if block.settings.icon_rechts %}
-                  <span class="icon check">✔️</span>
+                  <span class="icon check"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8f71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
                 {% else %}
-                  <span class="icon cross">❌</span>
+                  <span class="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
                 {% endif %}
               </td>
             </tr>
@@ -47,60 +47,30 @@
         </tbody>
       </table>
     </div>
-
-    <!-- Mobile Cards -->
-    <div class="table-mobile">
-      {% for block in section.blocks %}
-        <div class="vergleich-card" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
-          <div class="vorteil-text">{{ block.settings.text_links }}</div>
-          <div class="icon-row">
-            <div class="icon-label">
-              {% if section.settings.vergleichsbild_links %}
-                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 80 }}" alt="{{ section.settings.produktname_links }}" class="vergleichsbild-mobile">
-              {% endif %}
-              <span class="icon-title">{{ section.settings.produktname_links }}</span>
-              {% if block.settings.icon_links %}
-                <span class="icon check">✔️</span>
-              {% else %}
-                <span class="icon cross">❌</span>
-              {% endif %}
-            </div>
-            <div class="icon-label">
-              {% if section.settings.vergleichsbild_rechts %}
-                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 80 }}" alt="{{ section.settings.produktname_rechts }}" class="vergleichsbild-mobile">
-              {% endif %}
-              <span class="icon-title">{{ section.settings.produktname_rechts }}</span>
-              {% if block.settings.icon_rechts %}
-                <span class="icon check">✔️</span>
-              {% else %}
-                <span class="icon cross">❌</span>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
   </div>
 </div>
 
 <style>
   .vergleichstabelle-new {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .vergleichs-ueberschrift {
-    margin-bottom: 3rem;
-    font-size: 32px;
+    margin-bottom: 2rem;
+    font-size: 28px;
   }
 
   .table-wrapper {
     overflow-x: auto;
+    margin-bottom: 20px;
   }
 
   .vergleichstabelle {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .sticky-header {
@@ -110,16 +80,39 @@
     z-index: 10;
   }
 
+  .produkte-row th:first-child {
+    text-align: left;
+  }
+
+
   .produkte-row th {
     text-align: center;
-    padding: 16px;
+    padding: 16px 12px;
     vertical-align: bottom;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .icon.check,
+  .icon.cross {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feature-header {
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
   }
 
   .vergleichsbild {
     margin: 0 auto 8px auto;
     height: auto;
     max-height: 100px;
+    width: auto;
+    display: block;
   }
 
   .produktname {
@@ -128,7 +121,7 @@
   }
 
   .vergleichs-row td {
-    padding: 16px;
+    padding: 14px 12px;
     font-size: 16px;
     vertical-align: middle;
   }
@@ -148,54 +141,80 @@
 
   .vorteil {
     font-weight: 500;
-    width: 50%;
   }
 
-  .table-mobile {
-    display: none;
+  .zebra-row {
+    background-color: {{ section.settings.zebra_color }};
   }
 
-  .vergleich-card {
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 6px;
-  }
-
-  .vorteil-text {
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-
-  .icon-row {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .icon-label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    font-size: 14px;
-  }
-
-  .icon-title {
-    font-weight: 500;
-  }
-
-  .vergleichsbild-mobile {
-    margin: 0 auto 4px auto;
-    display: block;
-    max-height: 60px;
-    width: auto;
-  }
-
+  /* Responsive styles */
   @media screen and (max-width: 768px) {
-    .table-desktop {
-      display: none;
+    .vergleichstabelle-new {
+      padding: 30px 0;
     }
-    .table-mobile {
-      display: block;
+    
+    .vergleichs-ueberschrift {
+      font-size: 24px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .vergleichstabelle {
+      border-radius: 6px;
+      table-layout: fixed;
+    }
+    
+    .feature-header {
+      width: 48%;
+      font-size: 14px;
+    }
+    
+    .produkt-header {
+      width: 26%;
+    }
+    
+    .vergleichsbild {
+      max-height: 70px;
+    }
+    
+    .vergleichs-row td {
+      padding: 12px 8px;
+      font-size: 14px;
+    }
+    
+    .vorteil {
+      font-size: 14px;
+    }
+    
+    .produktname {
+      font-size: 14px;
+    }
+  }
+  
+  /* Very small mobile styles */
+  @media screen and (max-width: 480px) {
+    .feature-header {
+      width: 46%;
+    }
+    
+    .produkt-header {
+      width: 27%;
+    }
+    
+    .vergleichsbild {
+      max-height: 60px;
+    }
+    
+    .produktname {
+      font-size: 13px;
+    }
+    
+    .vergleichs-row td {
+      padding: 10px 6px;
+      font-size: 13px;
+    }
+    
+    .icon-cell {
+      font-size: 16px;
     }
   }
 </style>
@@ -283,7 +302,7 @@
   ],
   "presets": [
     {
-      "name": "Vergleichstabelle NEW",
+      "name": "Vergleichstabelle Responsive",
       "category": "Custom",
       "blocks": [
         {
