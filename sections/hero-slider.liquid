@@ -1,4 +1,4 @@
-<div class='hero-container'>
+<div class='hero-container {% if section.blocks.size == 1 %}single-slide-hero{% endif %}'>
   <div class='swiper ur-hero-swiper '>
     <div class='swiper-wrapper'>
       {% for block in section.blocks %}
@@ -35,7 +35,7 @@
             >
           {% endif %}
           <div class='hero-slide-content page-width xw-full xh-full xflex xflex-col xjustify-center'>
-            <div class='richtext {% if block.settings.theme_mode == 'dark' %}!xtext-gray-900{% else %}!xtext-beige-200 beige{% endif %}   xmb-40 richtext-hero'>
+            <div class='richtext {% if block.settings.theme_mode == 'dark' %}!xtext-gray-900{% else %}!xtext-beige-200 beige{% endif %}   xmb-40 richtext-hero' style='max-width: {{ block.settings.richtext_max_width }}px;'>
               {{ block.settings.hero_text }}
               <a
                 href='{{ block.settings.button_link }}'
@@ -62,6 +62,16 @@
     </svg>
   </div>
 </div>
+
+{% if section.blocks.size == 1 %}
+<style>
+  .hero-container.single-slide-hero .swiper-pagination,
+  .hero-container.single-slide-hero .swiper-button-prev,
+  .hero-container.single-slide-hero .swiper-button-next {
+    display: none !important; /* Use !important to ensure override if other styles are present */
+  }
+</style>
+{% endif %}
 
 {% javascript %}
   document.addEventListener('DOMContentLoaded', (event) => {
@@ -107,6 +117,16 @@
           "id": "hero_text",
           "label": "Rich Text Content",
           "default": "<h1>Your Heading Here</h1><p>Your description here.</p>"
+        },
+        {
+          "type": "range",
+          "id": "richtext_max_width",
+          "min": 200,
+          "max": 1000,
+          "step": 10,
+          "unit": "px",
+          "label": "Richtext Max Width",
+          "default": 450
         },
         {
           "type": "url",
