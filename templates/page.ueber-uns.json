@@ -26,8 +26,7 @@
       "block_order": [
         "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "46b98696-f663-4732-816d-9b2021134506": {
       "type": "ur-image-with-text",
@@ -389,8 +388,7 @@
       "blocks": {
         "49acadb9-68fb-4df6-a059-4810c81f0de8": {
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_text\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "settings": {}
         },
         "fbaa2c77-a5fd-4298-93b1-e1fb3a1d5c31": {
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
@@ -441,9 +439,7 @@
         "template--18562674131208__1458de64-4bc4-4f7a-80e0-58bd8d8e49c6-text-1",
         "template--18562674131208__1458de64-4bc4-4f7a-80e0-58bd8d8e49c6-buttons-1"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "image": "shopify:\/\/shop_images\/comp2.png",
         "image_overlay_opacity": 0,

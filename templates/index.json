@@ -43,8 +43,7 @@
         "c9a19ac3-ae3f-438f-bc8e-62e83fcddfae",
         "ca9378e3-b3fb-4caf-910c-45c8755a8e86"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076": {
       "type": "slideshow",
@@ -228,9 +227,7 @@
         "ae16ad4d-ab1c-4c05-82e8-10f04ef874f5",
         "dea814d0-8e28-4694-9ddc-7138b9b4c3ef"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "background-2"
       }
@@ -432,8 +429,7 @@
         "349db816-6348-4845-93a1-82e0be56b394",
         "ed261184-7291-4458-8af5-3a6cd7ad665d"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
       "type": "multicolumn",
@@ -885,8 +881,7 @@
         "60eb449e-fecb-437b-aafa-8ef447145639"
       ],
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
       "type": "icon-row",
