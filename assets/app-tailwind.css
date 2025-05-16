@@ -456,6 +456,11 @@ details[open] summary ~ * {
   word-break: break-word;
 }
 
+.icon-text-container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .icon-text-container summary {
   font-family: 'Rooney';
   font-weight: 600;

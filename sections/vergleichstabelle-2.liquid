@@ -1,0 +1,309 @@
+<div class="custom-comparison vergleichstabelle-new" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <h2 class="vergleichs-ueberschrift rich-text__heading h1" style="text-align: {{ section.settings.ueberschrift_alignment }};">
+      {{ section.settings.ueberschrift_text }}
+    </h2>
+
+    <!-- Desktop Tabelle -->
+    <div class="table-wrapper table-desktop">
+      <table class="vergleichstabelle">
+        <thead class="produkte-row sticky-header">
+          <tr>
+            <th></th>
+            <th class="produkt-header">
+              {% if section.settings.vergleichsbild_links %}
+                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 120 }}" alt="Produkt 1" class="vergleichsbild">
+              {% endif %}
+              <div class="produktname">{{ section.settings.produktname_links }}</div>
+            </th>
+            <th class="produkt-header">
+              {% if section.settings.vergleichsbild_rechts %}
+                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 120 }}" alt="Produkt 2" class="vergleichsbild">
+              {% endif %}
+              <div class="produktname">{{ section.settings.produktname_rechts }}</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for block in section.blocks %}
+            <tr class="vergleichs-row {% cycle 'zebra-row', '' %}" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
+              <td class="vorteil">{{ block.settings.text_links }}</td>
+              <td class="icon-cell">
+                {% if block.settings.icon_links %}
+                  <span class="icon check">✔️</span>
+                {% else %}
+                  <span class="icon cross">❌</span>
+                {% endif %}
+              </td>
+              <td class="icon-cell">
+                {% if block.settings.icon_rechts %}
+                  <span class="icon check">✔️</span>
+                {% else %}
+                  <span class="icon cross">❌</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile Cards -->
+    <div class="table-mobile">
+      {% for block in section.blocks %}
+        <div class="vergleich-card" style="background-color: {% cycle section.settings.zebra_color, 'transparent' %};">
+          <div class="vorteil-text">{{ block.settings.text_links }}</div>
+          <div class="icon-row">
+            <div class="icon-label">
+              {% if section.settings.vergleichsbild_links %}
+                <img src="{{ section.settings.vergleichsbild_links | image_url: width: 80 }}" alt="{{ section.settings.produktname_links }}" class="vergleichsbild-mobile">
+              {% endif %}
+              <span class="icon-title">{{ section.settings.produktname_links }}</span>
+              {% if block.settings.icon_links %}
+                <span class="icon check">✔️</span>
+              {% else %}
+                <span class="icon cross">❌</span>
+              {% endif %}
+            </div>
+            <div class="icon-label">
+              {% if section.settings.vergleichsbild_rechts %}
+                <img src="{{ section.settings.vergleichsbild_rechts | image_url: width: 80 }}" alt="{{ section.settings.produktname_rechts }}" class="vergleichsbild-mobile">
+              {% endif %}
+              <span class="icon-title">{{ section.settings.produktname_rechts }}</span>
+              {% if block.settings.icon_rechts %}
+                <span class="icon check">✔️</span>
+              {% else %}
+                <span class="icon cross">❌</span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .vergleichstabelle-new {
+    padding: 60px 0;
+  }
+
+  .vergleichs-ueberschrift {
+    margin-bottom: 3rem;
+    font-size: 32px;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .vergleichstabelle {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: {{ section.settings.bg_color }};
+    z-index: 10;
+  }
+
+  .produkte-row th {
+    text-align: center;
+    padding: 16px;
+    vertical-align: bottom;
+  }
+
+  .vergleichsbild {
+    margin: 0 auto 8px auto;
+    height: auto;
+    max-height: 100px;
+  }
+
+  .produktname {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .vergleichs-row td {
+    padding: 16px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .icon-cell {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .icon.check {
+    color: #2e7d32;
+  }
+
+  .icon.cross {
+    color: #c62828;
+  }
+
+  .vorteil {
+    font-weight: 500;
+    width: 50%;
+  }
+
+  .table-mobile {
+    display: none;
+  }
+
+  .vergleich-card {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+  }
+
+  .vorteil-text {
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .icon-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+  }
+
+  .icon-title {
+    font-weight: 500;
+  }
+
+  .vergleichsbild-mobile {
+    margin: 0 auto 4px auto;
+    display: block;
+    max-height: 60px;
+    width: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .table-desktop {
+      display: none;
+    }
+    .table-mobile {
+      display: block;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Vergleichstabelle NEW",
+  "settings": [
+    {
+      "type": "text",
+      "id": "ueberschrift_text",
+      "label": "Überschrift",
+      "default": "Was unser Futter besonders macht"
+    },
+    {
+      "type": "select",
+      "id": "ueberschrift_alignment",
+      "label": "Ausrichtung der Überschrift",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Zentriert" },
+        { "value": "right", "label": "Rechts" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "image_picker",
+      "id": "vergleichsbild_links",
+      "label": "Bild links"
+    },
+    {
+      "type": "image_picker",
+      "id": "vergleichsbild_rechts",
+      "label": "Bild rechts"
+    },
+    {
+      "type": "text",
+      "id": "produktname_links",
+      "label": "Produktname links",
+      "default": "Uncle Rusty's"
+    },
+    {
+      "type": "text",
+      "id": "produktname_rechts",
+      "label": "Produktname rechts",
+      "default": "Herkömmliches Futter"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Hintergrundfarbe der Sektion",
+      "default": "#fefdf7"
+    },
+    {
+      "type": "color",
+      "id": "zebra_color",
+      "label": "Hintergrundfarbe (abwechselnde Zeilen)",
+      "default": "#fcefe5"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Vergleichspunkt",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_links",
+          "label": "Vergleichspunkt (Beschreibung)"
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_links",
+          "label": "Haken links",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_rechts",
+          "label": "Haken rechts",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vergleichstabelle NEW",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "text_links": "100 % Deklaration aller Zutaten",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text_links": "Muskel- statt Tiermehl",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

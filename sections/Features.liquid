@@ -1,0 +1,191 @@
+{% schema %}
+{
+  "name": "Features Tabelle",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Gemacht für Hunde, die Qualität lieben."
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Vollbreite aktivieren",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "boxed_content",
+      "label": "Weiße Box mit Schatten (Kachel)",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "center_content",
+      "label": "Gesamten Inhalt zentrieren",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Hintergrundfarbe der Section",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Padding oben/unten",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 10
+    },
+    {
+      "type": "select",
+      "id": "text_align_desktop",
+      "label": "Textausrichtung (Desktop)",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Zentriert" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "SVG Icon (HTML)",
+          "default": "<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='10' stroke='#000' fill='none'/></svg>"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Beschreibung",
+          "default": "Feature Beschreibung hier"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features Tabelle",
+      "category": "Text",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div
+  class="features-wrapper
+    {% if section.settings.full_width %} full-width{% endif %}
+    align-desktop-{{ section.settings.text_align_desktop }}"
+  style="
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.section_padding }}px;
+    padding-bottom: {{ section.settings.section_padding }}px;
+  "
+>
+  <div class="features-container {% if section.settings.center_content %} center-content{% endif %}">
+    <div class="features-inner{% if section.settings.boxed_content %} boxed{% endif %}" style="max-width: var(--width-content, 1200px); margin: 0 auto;">
+      <h2 class="features-heading">{{ section.settings.heading }}</h2>
+      <div class="features-grid">
+        {% for block in section.blocks %}
+          <div class="feature-item">
+            <div class="feature-icon">
+              {{ block.settings.icon_svg }}
+            </div>
+            <div class="feature-text">
+              {{ block.settings.text }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.features-wrapper {
+  font-family: Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+.features-container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.features-container.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-inner.boxed {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.features-heading {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon svg {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  fill: currentColor;
+  color: #333;
+}
+
+.feature-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.align-desktop-left .features-container {
+  text-align: left;
+}
+.align-desktop-center .features-container {
+  text-align: center;
+}
+.align-desktop-right .features-container {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

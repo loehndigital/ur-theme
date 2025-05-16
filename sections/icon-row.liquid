@@ -1,129 +1,153 @@
 <section class='icon-row-section xpy-32  color-{{ section.settings.color_scheme }}'>
   <div class='container page-width xgrid xgrid-cols-2 md:xgrid-cols-4 xgap-16 md:xgap-32'>
     {% for block in section.blocks %}
-      <div
-        class='icon-text-block xflex xflex-col xjustify-center'
-        {{ block.shopify_attributes }}
-      >
-        <div class='icon xtext-center'>
-          {% case block.settings.icon_selection %}
-            {% when 'icon-3d-model' %}
-              {% render 'icon-3d-model' %}
-            {% when 'icon-fruit-bag' %}
-              {% render 'icon-fruit-bag' %}
-            {% when 'icon-cooking' %}
-              {% render 'icon-cooking' %}
-            {% when 'icon-accordion' %}
-              {% render 'icon-accordion' %}
-            {% when 'icon-account' %}
-              {% render 'icon-account' %}
-            {% when 'icon-arrow' %}
-              {% render 'icon-arrow' %}
-            {% when 'icon-caret' %}
-              {% render 'icon-caret' %}
-            {% when 'icon-cart-empty' %}
-              {% render 'icon-cart-empty' %}
-            {% when 'icon-cart' %}
-              {% render 'icon-cart' %}
-            {% when 'icon-checkmark' %}
-              {% render 'icon-checkmark' %}
-            {% when 'icon-clipboard' %}
-              {% render 'icon-clipboard' %}
-            {% when 'icon-close-small' %}
-              {% render 'icon-close-small' %}
-            {% when 'icon-close' %}
-              {% render 'icon-close' %}
-            {% when 'icon-discount' %}
-              {% render 'icon-discount' %}
-            {% when 'icon-error' %}
-              {% render 'icon-error' %}
-            {% when 'icon-facebook' %}
-              {% render 'icon-facebook' %}
-            {% when 'icon-filter' %}
-              {% render 'icon-filter' %}
-            {% when 'icon-hamburger' %}
-              {% render 'icon-hamburger' %}
-            {% when 'icon-info' %}
-              {% render 'icon-info' %}
-            {% when 'icon-instagram' %}
-              {% render 'icon-instagram' %}
-            {% when 'icon-meat-color' %}
-              {% render 'icon-meat-color' %}
-            {% when 'icon-meat' %}
-              {% render 'icon-meat' %}
-            {% when 'icon-minus' %}
-              {% render 'icon-minus' %}
-            {% when 'icon-no-animals-color' %}
-              {% render 'icon-no-animals-color' %}
-            {% when 'icon-no-animals' %}
-              {% render 'icon-no-animals' %}
-            {% when 'icon-no-chemicals-color' %}
-              {% render 'icon-no-chemicals-color' %}
-            {% when 'icon-no-chemicals' %}
-              {% render 'icon-no-chemicals' %}
-            {% when 'icon-no-gluten-color' %}
-              {% render 'icon-no-gluten-color' %}
-            {% when 'icon-no-gluten' %}
-              {% render 'icon-no-gluten' %}
-            {% when 'icon-no-sugar-color' %}
-              {% render 'icon-no-sugar-color' %}
-            {% when 'icon-no-sugar' %}
-              {% render 'icon-no-sugar' %}
-            {% when 'icon-organic-color' %}
-              {% render 'icon-organic-color' %}
-            {% when 'icon-organic' %}
-              {% render 'icon-organic' %}
-            {% when 'icon-padlock' %}
-              {% render 'icon-padlock' %}
-            {% when 'icon-pause' %}
-              {% render 'icon-pause' %}
-            {% when 'icon-pinterest' %}
-              {% render 'icon-pinterest' %}
-            {% when 'icon-play' %}
-              {% render 'icon-play' %}
-            {% when 'icon-plus' %}
-              {% render 'icon-plus' %}
-            {% when 'icon-region-color' %}
-              {% render 'icon-region-color' %}
-            {% when 'icon-region' %}
-              {% render 'icon-region' %}
-            {% when 'icon-remove' %}
-              {% render 'icon-remove' %}
-            {% when 'icon-search' %}
-              {% render 'icon-search' %}
-            {% when 'icon-share' %}
-              {% render 'icon-share' %}
-            {% when 'icon-snapchat' %}
-              {% render 'icon-snapchat' %}
-            {% when 'icon-success' %}
-              {% render 'icon-success' %}
-            {% when 'icon-tick' %}
-              {% render 'icon-tick' %}
-            {% when 'icon-tiktok' %}
-              {% render 'icon-tiktok' %}
-            {% when 'icon-tumblr' %}
-              {% render 'icon-tumblr' %}
-            {% when 'icon-twitter' %}
-              {% render 'icon-twitter' %}
-            {% when 'icon-unavailable' %}
-              {% render 'icon-unavailable' %}
-            {% when 'icon-vimeo' %}
-              {% render 'icon-vimeo' %}
-            {% when 'icon-with-text' %}
-              {% render 'icon-with-text' %}
-            {% when 'icon-youtube' %}
-              {% render 'icon-youtube' %}
-            {% when 'icon-zoom' %}
-              {% render 'icon-zoom' %}
-            {%- else -%}
-              <!-- Default action if no icon matches -->
-              <p>No Icon Selected</p>
-          {% endcase %}
-        </div>
-        <div class='icon-description xtext-center'>
-          {{ block.settings.icon_rich_text }}
-        </div>
-      </div>
+      {% case block.type %}
+        {% when 'icon-text-block' %}
+          <div
+            class='icon-text-block xflex xflex-col xjustify-center'
+            {{ block.shopify_attributes }}
+          >
+            <div class='icon xtext-center'>
+              {% case block.settings.icon_selection %}
+                {% when 'icon-3d-model' %}
+                  {% render 'icon-3d-model' %}
+                {% when 'icon-fruit-bag' %}
+                  {% render 'icon-fruit-bag' %}
+                {% when 'icon-cooking' %}
+                  {% render 'icon-cooking' %}
+                {% when 'icon-accordion' %}
+                  {% render 'icon-accordion' %}
+                {% when 'icon-account' %}
+                  {% render 'icon-account' %}
+                {% when 'icon-arrow' %}
+                  {% render 'icon-arrow' %}
+                {% when 'icon-caret' %}
+                  {% render 'icon-caret' %}
+                {% when 'icon-cart-empty' %}
+                  {% render 'icon-cart-empty' %}
+                {% when 'icon-cart' %}
+                  {% render 'icon-cart' %}
+                {% when 'icon-checkmark' %}
+                  {% render 'icon-checkmark' %}
+                {% when 'icon-clipboard' %}
+                  {% render 'icon-clipboard' %}
+                {% when 'icon-close-small' %}
+                  {% render 'icon-close-small' %}
+                {% when 'icon-close' %}
+                  {% render 'icon-close' %}
+                {% when 'icon-discount' %}
+                  {% render 'icon-discount' %}
+                {% when 'icon-error' %}
+                  {% render 'icon-error' %}
+                {% when 'icon-facebook' %}
+                  {% render 'icon-facebook' %}
+                {% when 'icon-filter' %}
+                  {% render 'icon-filter' %}
+                {% when 'icon-hamburger' %}
+                  {% render 'icon-hamburger' %}
+                {% when 'icon-info' %}
+                  {% render 'icon-info' %}
+                {% when 'icon-instagram' %}
+                  {% render 'icon-instagram' %}
+                {% when 'icon-meat-color' %}
+                  {% render 'icon-meat-color' %}
+                {% when 'icon-meat' %}
+                  {% render 'icon-meat' %}
+                {% when 'icon-minus' %}
+                  {% render 'icon-minus' %}
+                {% when 'icon-no-animals-color' %}
+                  {% render 'icon-no-animals-color' %}
+                {% when 'icon-no-animals' %}
+                  {% render 'icon-no-animals' %}
+                {% when 'icon-no-chemicals-color' %}
+                  {% render 'icon-no-chemicals-color' %}
+                {% when 'icon-no-chemicals' %}
+                  {% render 'icon-no-chemicals' %}
+                {% when 'icon-no-gluten-color' %}
+                  {% render 'icon-no-gluten-color' %}
+                {% when 'icon-no-gluten' %}
+                  {% render 'icon-no-gluten' %}
+                {% when 'icon-no-sugar-color' %}
+                  {% render 'icon-no-sugar-color' %}
+                {% when 'icon-no-sugar' %}
+                  {% render 'icon-no-sugar' %}
+                {% when 'icon-organic-color' %}
+                  {% render 'icon-organic-color' %}
+                {% when 'icon-organic' %}
+                  {% render 'icon-organic' %}
+                {% when 'icon-padlock' %}
+                  {% render 'icon-padlock' %}
+                {% when 'icon-pause' %}
+                  {% render 'icon-pause' %}
+                {% when 'icon-pinterest' %}
+                  {% render 'icon-pinterest' %}
+                {% when 'icon-play' %}
+                  {% render 'icon-play' %}
+                {% when 'icon-plus' %}
+                  {% render 'icon-plus' %}
+                {% when 'icon-region-color' %}
+                  {% render 'icon-region-color' %}
+                {% when 'icon-region' %}
+                  {% render 'icon-region' %}
+                {% when 'icon-remove' %}
+                  {% render 'icon-remove' %}
+                {% when 'icon-search' %}
+                  {% render 'icon-search' %}
+                {% when 'icon-share' %}
+                  {% render 'icon-share' %}
+                {% when 'icon-snapchat' %}
+                  {% render 'icon-snapchat' %}
+                {% when 'icon-success' %}
+                  {% render 'icon-success' %}
+                {% when 'icon-tick' %}
+                  {% render 'icon-tick' %}
+                {% when 'icon-tiktok' %}
+                  {% render 'icon-tiktok' %}
+                {% when 'icon-tumblr' %}
+                  {% render 'icon-tumblr' %}
+                {% when 'icon-twitter' %}
+                  {% render 'icon-twitter' %}
+                {% when 'icon-unavailable' %}
+                  {% render 'icon-unavailable' %}
+                {% when 'icon-vimeo' %}
+                  {% render 'icon-vimeo' %}
+                {% when 'icon-with-text' %}
+                  {% render 'icon-with-text' %}
+                {% when 'icon-youtube' %}
+                  {% render 'icon-youtube' %}
+                {% when 'icon-zoom' %}
+                  {% render 'icon-zoom' %}
+                {%- else -%}
+                  <!-- Default action if no icon matches -->
+                  <p>No Icon Selected</p>
+              {% endcase %}
+            </div>
+            <div class='icon-description xtext-center'>
+              {{ block.settings.icon_rich_text }}
+            </div>
+          </div>
+        {% when 'image-text-block' %}
+          <div class='icon-text-block xflex xflex-col xjustify-center' {{ block.shopify_attributes }}>
+            <div class='image xtext-center' style="margin-bottom: 2rem;">
+              {%- if block.settings.image != blank -%}
+                <img 
+                  src="{{ block.settings.image | image_url: width: 350 }}"
+                  alt=""
+                  loading="lazy"
+                  class="mx-auto"
+                  style="max-height: {{ block.settings.image_height }}px; object-fit: contain;"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                >
+              {%- else -%}
+                {{ "image" | placeholder_svg_tag: "placeholder-svg xw-24 xh-24 mx-auto" }}
+              {%- endif -%}
+            </div>
+            <div class='icon-description xtext-center'>
+              {{ block.settings.image_rich_text }}
+            </div>
+          </div>
+      {% endcase %}
     {% endfor %}
   </div>
 </section>
@@ -147,7 +171,7 @@
         {
           "type": "select",
           "id": "icon_selection",
-          "label": "Select an Icon",
+          "label": "Select an Icon", 
           "options": [
             {
               "value": "icon-3d-model",
@@ -375,13 +399,40 @@
           "default": "<p>Describe your icon here.</p>"
         }
       ]
+    },
+    {
+      "type": "image-text-block",
+      "name": "Image & Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_height",
+          "min": 50,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "label": "Image Height",
+          "default": 65
+        },
+        {
+          "type": "richtext",
+          "id": "image_rich_text",
+          "label": "Image Description",
+          "default": "<p>Describe your image here.</p>"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "UR Icon Row",
-      "category": "Custom"
+      "name": "UR Icon Row"
     }
-  ] // Adjust this number based on how many blocks you want to allow
+  ]
 }
+
 {% endschema %}

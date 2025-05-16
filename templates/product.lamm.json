@@ -107,6 +107,15 @@
             "content": "{{ product.metafields.custom.analyse | metafield_tag }}",
             "page": ""
           }
+        },
+        "collapsible_tab_giqc4A": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fütterungsempfehlung",
+            "icon": "check_mark",
+            "content": "<p>Fütterungsempfehlung pro Tag: <br/>Bis 5 kg 200g | Bis 20 kg 600g | Bis 30 kg 800g | ab 35 kg 1000g<br/> <br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br/><br/><strong>Zubereitung </strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br/><br/><strong>Fütterung & Lagerung: </strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -120,7 +129,8 @@
         "buy_buttons",
         "collapsible-row-1",
         "collapsible-row-0",
-        "collapsible-row-2"
+        "collapsible-row-2",
+        "collapsible_tab_giqc4A"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -144,14 +154,14 @@
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<p>65% Fleischanteil für eine artgerechte Ernährung.</p>"
+            "icon_rich_text": "<p>55% Fleischanteil für eine artgerechte Ernährung.</p>"
           }
         },
         "icon_text_block_mkaAP6": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-fruit-bag",
-            "icon_rich_text": "<p>10% Karotten und 10% Hirse ergänzen das Menü</p>"
+            "icon_rich_text": "<p>15% Rote Beete, 10% Haferkleie und 8% Apfel ergänzend dazu.</p>"
           }
         },
         "icon_text_block_4GMfMB": {
@@ -208,14 +218,14 @@
         "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Hausmannkost aus dem bayerischem Voralpenland.",
+            "heading": "Hausmannskost aus dem bayerischem Voralpenland.",
             "heading_size": "h1"
           }
         },
         "text_qYagip": {
           "type": "text",
           "settings": {
-            "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Ente, Karotten und Hirse </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
+            "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Lamm, Rote Beete, Haferkleie und Apfel </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
             "text_style": "body"
           }
         },
@@ -255,15 +265,6 @@
             "richtext": ""
           }
         },
-        "ef4aaf30-6b17-476f-9115-3d7260b17585": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-dog",
-            "icon_text": "Fütterungsempfehlung ",
-            "show_accordion": true,
-            "richtext": "<p>Fütterungsempfehlung pro Tag: <br/>Bis 5 kg 200g | Bis 20 kg 600g | Bis 30 kg 800g | ab 35 kg 1000g<br/> <br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br/><br/><strong>Zubereitung </strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br/><br/><strong>Fütterung & Lagerung: </strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>"
-          }
-        },
         "a88c0156-c93d-4ca6-86d1-4430d0d99fb9": {
           "type": "icon-text",
           "settings": {
@@ -281,7 +282,6 @@
         "12606def-b33b-4e93-ae9d-4bdcffdbc21e",
         "53631e27-d0ef-4248-925c-d004a9c0f2bf",
         "bf6d932a-9b51-4d16-9a8e-75149f41df50",
-        "ef4aaf30-6b17-476f-9115-3d7260b17585",
         "a88c0156-c93d-4ca6-86d1-4430d0d99fb9"
       ],
       "settings": {
@@ -305,7 +305,7 @@
       "type": "full-width-banner",
       "settings": {
         "background_image": "shopify://shop_images/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile der Ente</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 65 % hochwertigem Entenfleisch und sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
+        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile vom Lamm</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 55 % hochwertigem Lammfleisch und sorgsam ausgewählten Beilagen wie Rote beete, Haferkleie und Apfel schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
@@ -383,27 +383,36 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_text": "Ente",
+            "icon_text": "Lamm",
             "show_accordion": true,
-            "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.</p>"
+            "richtext": "<p>hwertige Proteinquelle, die leicht verdaulich ist und wichtige Nährstoffe wie Zink und Eisen liefert. Es unterstützt die Muskelbildung und fördert eine ausgewogene Ernährung.</p>"
           }
         },
         "icon_text_h6eM3n": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_text": "Karotten",
+            "icon_text": "Rote Beete",
             "show_accordion": true,
-            "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt</p>"
+            "richtext": "<p>Rote Beete ist reich an natürlichen Antioxidantien und unterstützt durch ihren hohen Gehalt an Eisen und Folsäure die Blutbildung. Zudem fördert sie eine gesunde Verdauung und stärkt das Immunsystem.</p>"
           }
         },
         "icon_text_pFTTYR": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Hirse",
+            "icon_text": "Haferkleie",
             "show_accordion": true,
-            "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.</p>"
+            "richtext": "<p>Haferkleie ist reich an Ballaststoffen und unterstützt eine gesunde Verdauung sowie eine ausgewogene Darmflora. Zusätzlich liefert sie wichtige Vitamine und Mineralstoffe, die zur allgemeinen Vitalität beitragen.</p>"
+          }
+        },
+        "icon_text_7RVC8W": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Apfel",
+            "show_accordion": true,
+            "richtext": "<p>Der Apfel liefert natürliche Vitamine und Antioxidantien, die das Immunsystem stärken und die Zellen schützen. Zudem fördert sein hoher Gehalt an Ballaststoffen eine gesunde Verdauung.</p>"
           }
         }
       },
@@ -412,7 +421,8 @@
         "text_nhbJpz",
         "icon_text_XBjNXz",
         "icon_text_h6eM3n",
-        "icon_text_pFTTYR"
+        "icon_text_pFTTYR",
+        "icon_text_7RVC8W"
       ],
       "settings": {
         "image": "shopify://shop_images/NB_Quadrat4.png",

@@ -2667,3 +2667,8 @@ ul {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
+.icon-text-container {
+  flex-direction: column;
+  align-items: flex-start;
+}

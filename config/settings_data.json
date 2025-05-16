@@ -20,7 +20,7 @@
     "spacing_sections": 32,
     "spacing_grid_horizontal": 32,
     "spacing_grid_vertical": 32,
-    "animations_reveal_on_scroll": true,
+    "animations_reveal_on_scroll": false,
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 24,
@@ -142,15 +142,12 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-product-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
@@ -167,26 +164,22 @@
       "5557296251606798448": {
         "type": "shopify://apps/bold-subscriptions/blocks/bsub-embed/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "2153490007123654574": {
         "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "4677439793077996495": {
         "type": "shopify://apps/pixee-multi-facebook-pixels/blocks/facebook-pixel/61bbb1d9-d4be-4d08-879a-ee3ccb59f558",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "1513253815146976218": {
         "type": "shopify://apps/omnisend-email-marketing-sms/blocks/app-embed/44704aa2-794f-4c5d-8c8e-039c841158e9",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
