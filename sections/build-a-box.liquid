@@ -3,6 +3,7 @@
 <link rel='stylesheet' type='text/css' href='{{ 'swiper-bundle.min.css' | asset_url }}'>
 <script src='{{ 'popper.min.js' | asset_url }}' defer></script>
 <script src='{{ 'tippy-bundle.umd.js' | asset_url }}' defer></script>
+<script src='{{ 'js-confetti.browser.js' | asset_url }}' defer></script>
 {% comment %} TODO {% endcomment %}
 
 {% assign collection = collections[section.settings.collection] %}
@@ -24,9 +25,19 @@
   }
 {%- endstyle -%}
 
+<style>
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+  
+  .loading-spinner {
+    animation: spinner 0.6s linear infinite;
+  }
+</style>
+
 <div class='page-width section-{{ section.id }}-padding page-width-desktop scroll-trigger animate--slide-in xmt-8 xmb-8 xflex xgap-16 xflex-col md:xflex-row'>
   <div class='ur-product-images xrelative md:xmt-32'>
-    <div class='!xsticky xtop-0'>
+    <div class='!xsticky xtop-24'>
       <div class='swiper ur-bab-swiper '>
         <div class='swiper-wrapper'>
           {% for product in collection.products %}
@@ -90,6 +101,27 @@
       window.ur_subscription_plan = {{ subscriptionPlan }};
       window.ur_selected_variant_option = '800g';
       window.ur_quantity_break_target = 24;
+      
+      // Add promo breaks data
+      window.ur_promo_breaks = [
+        {% for i in (1..10) %}
+          {% assign target_key = 'promo_break_' | append: i | append: '_target' %}
+          {% assign text_key = 'promo_break_' | append: i | append: '_text' %}
+          {% assign coupon_key = 'promo_break_' | append: i | append: '_coupon' %}
+          {% assign coupon_type_key = 'promo_break_' | append: i | append: '_coupon_type' %}
+          {% assign amount_key = 'promo_break_' | append: i | append: '_amount' %}
+          
+          {% if section.settings[target_key] != blank %}
+            {
+              text: {{ section.settings[text_key] | json }},
+              target: {{ section.settings[target_key] | json }},
+              coupon: {{ section.settings[coupon_key] | json }},
+              couponType: {{ section.settings[coupon_type_key] | json }},
+              amount: {{ section.settings[amount_key] | json }}
+            }{% unless forloop.last %},{% endunless %}
+          {% endif %}
+        {% endfor %}
+      ];
     </script>
 
     <div class='xmb-8'>
@@ -223,11 +255,10 @@
                     </div>
                   </div>
                   <script>
-                    // With the above scripts loaded, you can call `tippy()` with a CSS
-                    // selector and a `content` prop:
                     document.addEventListener('DOMContentLoaded', function () {
+                      const content = `{{content_information | metafield_tag }}`;
                       tippy('.variant-info-{{variant.id}}', {
-                        content: '{{content_information | metafield_tag }}',
+                        content: content,
                         allowHTML: true,
                         interactive: true,
                         theme: 'unclerustys',
@@ -342,7 +373,7 @@
                         data-action='decrement'
                         class='  xh-full  xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none'
                       >
-                        <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>−</span>
+                        <span class='xpx-4 xm-auto xtext-4xl xfont-bold'></span>
                       </button>
                       <input
                         id='quantity_{{ variant.id }}'
@@ -398,14 +429,15 @@
         <div class='xbg-green-600 xtext-white xrounded-full xtext-sm xp-2 xpx-4'>Spare 10%!</div>
       </div>
     </div>
-
     <div class='ur-form-footer xbg-white xmt-8 xrounded-3xl xoverflow-clip'>
       <div
         class='quantity-break-target xbg-orange-600 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center xrelative'
         style='font-size: 1.3rem;'
       >
-        Füge <span class='quantity-break-counter xfont-black' style='font-size: 1.5rem;'>22</span> Dosen hinzu um
-        weitere 5% zu sparen!
+        <div class="quantity-break-text">
+          Füge <span class='quantity-break-counter xfont-black' style='font-size: 1.5rem;'>22</span> Dosen hinzu um
+          weitere 5% zu sparen!
+        </div>
         <div class='quantity-break-progress-container xabsolute xbottom-0 xleft-0 xh-2 xw-full'>
           <div class='quantity-break-progress-bar xbg-green-600 xh-2 !xblock xtransition-all' style='width: 8%;'></div>
         </div>
@@ -420,14 +452,18 @@
           <div class='price-display xtext-5xl xfont-black xtext-black'>
             <span class='price-total '>0.00</span><span>€</span>
             <div class='price-display-compare xhidden xinline-block xtext-3xl xtext-beige-900 xline-through'>
-              <span class='price-compare-at'>0.00</span><span>€</span>
+              <span class='price-compare-at'>0.00</span><span>€</span> <div class='price-discount-amount xml-4 xtext-green-600 xfont-bold'>-<span class='price-discount-amount-count'>0</span>%</div>
             </div>
           </div>
-          <div class='xtext-right' style='font-size: 1.2rem;'>
+          <div class='xtext-right xw-full  ' style='font-size: 1.2rem;'>
             <div><span class='total-quantity-couunt xfont-bold'>2</span><span> Dosen</span></div>
             <div>
               <span class='single-item-price-count xfont-bold'>4.05</span><span class='xfont-bold'> €</span
               ><span> pro Dose</span>
+            </div>
+            <div class='xflex xgap-1 xflex-col xfont-bold xtext-lg xw-full xmt-2'>
+              <div class='free-400g-can xhidden xtext-lg'><span class="free-400g-can-anim">+<span class='free-400g-can-count'>0</span>x</span> 400g Dose gratis</div>
+              <div class='free-200g-cookies xhidden xtext-lg'><span class="free-200g-cookies-anim">+<span class='free-200g-cookies-count'>0</span>x</span> Hundekekse gratis</div>
             </div>
           </div>
         </div>
@@ -438,6 +474,192 @@
       </div>
     </div>
   </form>
+
+  <!-- Loading Modal -->
+  <div id="ur-loading-modal" class="xfixed xtop-0 xleft-0 xw-full xh-full xbg-black xbg-opacity-50 xhidden xz-50 xflex xitems-center xjustify-center">
+    <div class="xbg-white xrounded-3xl xp-8 xmax-w-md xw-full xtext-center">
+      <div class="xflex xflex-col xitems-center xgap-4">
+        <!-- Loading Spinner -->
+        <div class="loading-spinner !xblock xw-16 xh-16 xborder-4 xborder-beige-300 xborder-t-black xrounded-full"></div>
+        <p class="xtext-xl xfont-bold loading-text">Applying discounts...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal markup - outside the page-width div -->
+<div id="ur-400g-modal" class="xfixed xtop-0 xleft-0 xw-full xh-full xbg-black xbg-opacity-50 xhidden xz-50 xflex xitems-center xjustify-center">
+  <div class="xbg-white xrounded-3xl xp-8 xmax-w-4xl xw-full xmax-h-[90vh] xoverflow-y-auto xrelative">
+    <button type="button" class="modal-close-btn xabsolute xtop-4 xright-4 xtext-2xl xfont-bold" style="display: none;">&times;</button>
+    <h2 class="xtext-3xl xfont-bold xmb-8">Wähle deine kostenlosen 400g Dosen</h2>
+    <div class="modal-collection-select">
+      {% for product in collection.products %}
+        {%- liquid
+          assign custom_classes_product = ''
+          assign mod2 = forloop.index | modulo: 2
+          if mod2 != 0
+            assign custom_classes_product = custom_classes_product | append: ' xbg-lightbeige second'
+          endif
+        -%}
+
+        <div class="product-item ur-product xp-4 {{ custom_classes_product }} xrounded-3xl xoverflow-hidden last-of-type:xborder-none">
+          {% for variant in product.variants %}
+            {% if variant.option2 == 'Einzeln' and variant.option1 == '400g' %}
+              <div class="variant ur-variant xflex xgap-4 xitems-center">
+                <div class="variant-img xrounded-lg xoverflow-hidden">
+                  {% if variant.image != null %}
+                    <img
+                      class="xw-16 md:xw-auto xobject-contain"
+                      style="height: 65px; max-width: 400px;"
+                      height="100"
+                      width="auto"
+                      loading="lazy"
+                      src="{{ variant.image.src | img_url: 'medium' }}"
+                      alt="{{ variant.image.alt | escape }}"
+                    >
+                  {% else %}
+                    <img
+                      class="xw-16 md:xw-auto xobject-contain"
+                      style="height: 65px; max-width: 400px;"
+                      height="100"
+                      width="auto"
+                      loading="lazy"
+                      src="{{ product.featured_image | img_url: 'medium' }}"
+                      alt="{{ product.title | escape }}"
+                    >
+                  {% endif %}
+                </div>
+                <div class="variant-info xflex xgap-4 xjustify-between xw-full xitems-center">
+                  <h2 class="xfont-bold xtext-3xl xw-full">
+                    {{ product.title | split: ' ' | first }}
+                    <br>
+                    <span class="xfont-bold xtext-xl">
+                      {{- product.title | split: ' ' | slice: 1, 100 | join: ' ' -}}
+                    </span>
+                  </h2>
+
+                  <input type="hidden" class="variant-id" value="{{ variant.id }}">
+                  <div class="custom-number-input xh-20 xw-64">
+                    <div class="xflex xflex-row xh-20 xw-full xrounded-lg xrelative xbg-transparent xmt-1">
+                      <button
+                        type="button"
+                        data-action="decrement"
+                        class="modal-quantity-btn disabled:xopacity-50 disabled:xcursor-not-allowed xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none"
+                      >
+                        <span class="xpx-4 xm-auto xtext-4xl xfont-bold">−</span>
+                      </button>
+                      <input
+                        type="number"
+                        class="modal-variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full xfont-semibold xtext-md hover:xtext-black focus:xtext-black md:xtext-basecursor-default xflex xitems-center xtext-black xoutline-none {{ custom_classes_product }} xbg-white"
+                        name="custom-input-number"
+                        value="0"
+                        min="0"
+                        max="1"
+                      >
+                      <button
+                        type="button"
+                        data-action="increment"
+                        class="modal-quantity-btn disabled:xopacity-50 disabled:xcursor-not-allowed xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer"
+                      >
+                        <span class="xpx-4 xm-auto xtext-4xl xfont-bold">+</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="xmt-8 xflex xjustify-end">
+      <button type="button" class="button button--primary modal-apply-btn">Übernehmen</button>
+    </div>
+  </div>
+</div>
+
+<!-- Replace the existing cookies modal with this updated version -->
+<div id="ur-cookies-modal" class="xfixed xtop-0 xleft-0 xw-full xh-full xbg-black xbg-opacity-50 xhidden xz-50 xflex xitems-center xjustify-center">
+  <div class="xbg-white xrounded-3xl xp-8 xmax-w-4xl xw-full xmax-h-[90vh] xoverflow-y-auto xrelative">
+    <button type="button" class="modal-close-btn xabsolute xtop-4 xright-4 xtext-2xl xfont-bold">&times;</button>
+    <h2 class="xtext-3xl xfont-bold xmb-8">Wähle deine kostenlosen Cookies</h2>
+    
+    {% assign cookies_collection = collections[section.settings.cookies_collection] %}
+    {% if cookies_collection.products.size > 0 %}
+      <div class="modal-collection-select">
+        {% for product in cookies_collection.products %}
+          {%- liquid
+            assign custom_classes_product = ''
+            assign mod2 = forloop.index | modulo: 2
+            if mod2 != 0
+              assign custom_classes_product = custom_classes_product | append: ' xbg-lightbeige second'
+            endif
+          -%}
+
+          <div class="product-item ur-product xp-4 {{ custom_classes_product }} xrounded-3xl xoverflow-hidden last-of-type:xborder-none">
+            <div class="variant ur-variant xflex xgap-4 xitems-center">
+              <div class="variant-img xrounded-lg xoverflow-hidden">
+                {% if product.featured_media != blank %}
+                  <img
+                    class="xw-16 md:xw-auto xobject-contain"
+                    style="height: 65px; max-width: 400px;"
+                    height="100"
+                    width="auto"
+                    loading="lazy"
+                    src="{{ product.featured_media | img_url: 'medium' }}"
+                    alt="{{ product.title | escape }}"
+                  >
+                {% endif %}
+              </div>
+              <div class="variant-info xflex xgap-4 xjustify-between xw-full xitems-center">
+                <h2 class="xfont-bold xtext-3xl xw-full">
+                  {{ product.title | split: ' ' | first }}
+                  <br>
+                  <span class="xfont-bold xtext-xl">
+                    {{- product.title | split: ' ' | slice: 1, 100 | join: ' ' -}}
+                  </span>
+                </h2>
+
+                <input type="hidden" class="variant-id" value="{{ product.first_available_variant.id }}">
+                <div class="custom-number-input xh-20 xw-64">
+                  <div class="xflex xflex-row xh-20 xw-full xrounded-lg xrelative xbg-transparent xmt-1">
+                    <button
+                      type="button"
+                      data-action="decrement"
+                      class="cookies-modal-quantity-btn xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none"
+                    >
+                      <span class="xpx-4 xm-auto xtext-4xl xfont-bold">−</span>
+                    </button>
+                    <input
+                      type="number"
+                      class="cookies-modal-variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full xfont-semibold xtext-md hover:xtext-black focus:xtext-black md:xtext-basecursor-default xflex xitems-center xtext-black xoutline-none {{ custom_classes_product }} xbg-white"
+                      name="custom-input-number"
+                      value="0"
+                      min="0"
+                      max="1"
+                    >
+                    <button
+                      type="button"
+                      data-action="increment"
+                      class="cookies-modal-quantity-btn xh-full xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer"
+                    >
+                      <span class="xpx-4 xm-auto xtext-4xl xfont-bold">+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No products found in cookies collection</p>
+    {% endif %}
+    
+    <div class="xmt-8 xflex xjustify-end">
+      <button type="button" class="button button--primary modal-apply-btn">Übernehmen</button>
+    </div>
+  </div>
 </div>
 
 {% schema %}
@@ -455,6 +677,11 @@
       "type": "collection",
       "id": "additives_collection",
       "label": "Additives Collection"
+    },
+    {
+      "type": "collection",
+      "id": "cookies_collection",
+      "label": "Cookies Collection"
     },
     {
       "type": "number",
@@ -490,6 +717,406 @@
       "id": "below_price_info",
       "label": "Below Price Info",
       "default": "inkl. MwSt., zzgl. Versandkosten"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_1_text",
+      "label": "Promo Break 1 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_1_target",
+      "label": "Promo Break 1 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_1_coupon",
+      "label": "Promo Break 1 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_1_coupon_type",
+      "label": "Promo Break 1 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_1_amount",
+      "label": "Promo Break 1 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_2_text",
+      "label": "Promo Break 2 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_2_target",
+      "label": "Promo Break 2 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_2_coupon",
+      "label": "Promo Break 2 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_2_coupon_type",
+      "label": "Promo Break 2 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_2_amount",
+      "label": "Promo Break 2 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_3_text",
+      "label": "Promo Break 3 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_3_target",
+      "label": "Promo Break 3 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_3_coupon",
+      "label": "Promo Break 3 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_3_coupon_type",
+      "label": "Promo Break 3 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_3_amount",
+      "label": "Promo Break 3 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_4_text",
+      "label": "Promo Break 4 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_4_target",
+      "label": "Promo Break 4 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_4_coupon",
+      "label": "Promo Break 4 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_4_coupon_type",
+      "label": "Promo Break 4 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_4_amount",
+      "label": "Promo Break 4 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_5_text",
+      "label": "Promo Break 5 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_5_target",
+      "label": "Promo Break 5 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_5_coupon",
+      "label": "Promo Break 5 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_5_coupon_type",
+      "label": "Promo Break 5 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_5_amount",
+      "label": "Promo Break 5 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_6_text",
+      "label": "Promo Break 6 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_6_target",
+      "label": "Promo Break 6 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_6_coupon",
+      "label": "Promo Break 6 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_6_coupon_type",
+      "label": "Promo Break 6 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_6_amount",
+      "label": "Promo Break 6 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_7_text",
+      "label": "Promo Break 7 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_7_target",
+      "label": "Promo Break 7 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_7_coupon",
+      "label": "Promo Break 7 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_7_coupon_type",
+      "label": "Promo Break 7 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_7_amount",
+      "label": "Promo Break 7 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_8_text",
+      "label": "Promo Break 8 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_8_target",
+      "label": "Promo Break 8 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_8_coupon",
+      "label": "Promo Break 8 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_8_coupon_type",
+      "label": "Promo Break 8 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_8_amount",
+      "label": "Promo Break 8 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_9_text",
+      "label": "Promo Break 9 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_9_target",
+      "label": "Promo Break 9 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_9_coupon",
+      "label": "Promo Break 9 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_9_coupon_type",
+      "label": "Promo Break 9 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_9_amount",
+      "label": "Promo Break 9 Amount"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_10_text",
+      "label": "Promo Break 10 Text"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_10_target",
+      "label": "Promo Break 10 Target"
+    },
+    {
+      "type": "text",
+      "id": "promo_break_10_coupon",
+      "label": "Promo Break 10 Coupon"
+    },
+    {
+      "type": "select",
+      "id": "promo_break_10_coupon_type",
+      "label": "Promo Break 10 Coupon Type",
+      "options": [
+        {
+          "value": "400g_can_free",
+          "label": "400g Can Free"
+        },
+        {
+          "value": "200g_cookies_free",
+          "label": "200g Cookies Free"
+        },
+        {
+          "value": "percent_discount",
+          "label": "Percent Discount"
+        }
+      ],
+      "default": "400g_can_free"
+    },
+    {
+      "type": "number",
+      "id": "promo_break_10_amount",
+      "label": "Promo Break 10 Amount"
     },
     {
       "type": "range",

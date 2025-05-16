@@ -3585,3 +3585,9 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+.price-discount-amount,
+.free-200g-cookies-anim,
+.free-400g-can-anim {
+  display: inline-block;
+}
