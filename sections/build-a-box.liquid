@@ -207,7 +207,7 @@
                 </div>
                 <div class='variant-info xflex xgap-4 xjustify-between xw-full xitems-center'>
                   <h2 class='xfont-bold xtext-3xl  xw-full'>
-                    {{ product.title | split: ' ' | first }}
+                    {{ product.title | split: ' ' | first | remove_last: ':' }}
                     <svg
                       class='variant-info-{{variant.id}} xmt-2 xopacity-30 hover:xopacity-60 xcursor-pointer xtransition-all xinline-block xfloat-right xmt-1'
                       xmlns='http://www.w3.org/2000/svg'
@@ -357,7 +357,7 @@
                 <div class='variant-info xflex xgap-4 xjustify-between xw-full xitems-center'>
                   <div>
                     <h2 class='xfont-bold xtext-3xl'>
-                      {{ product.title | split: ' ' | first }}
+                      {{ product.title | split: ' ' | first | remove_last: ':' }}
                     </h2>
                     <span class='xfont-bold xtext-xl '>
                       {{- product.title | split: ' ' | slice: 1, 100 | join: ' ' -}}
@@ -531,7 +531,7 @@
                 </div>
                 <div class="variant-info xflex xgap-4 xjustify-between xw-full xitems-center">
                   <h2 class="xfont-bold xtext-3xl xw-full">
-                    {{ product.title | split: ' ' | first }}
+                    {{ product.title | split: ' ' | first | remove_last: ':' }}
                     <br>
                     <span class="xfont-bold xtext-xl">
                       {{- product.title | split: ' ' | slice: 1, 100 | join: ' ' -}}
@@ -581,7 +581,7 @@
 <!-- Replace the existing cookies modal with this updated version -->
 <div id="ur-cookies-modal" class="xfixed xtop-0 xleft-0 xw-full xh-full xbg-black xbg-opacity-50 xhidden xz-50 xflex xitems-center xjustify-center">
   <div class="xbg-white xrounded-3xl xp-8 xmax-w-4xl xw-full xmax-h-[90vh] xoverflow-y-auto xrelative">
-    <button type="button" class="modal-close-btn xabsolute xtop-4 xright-4 xtext-2xl xfont-bold">&times;</button>
+    <button type="button" class="modal-close-btn xabsolute xtop-4 xright-4 xtext-2xl xfont-bold" style="display: none;">&times;</button>
     <h2 class="xtext-3xl xfont-bold xmb-8">Wähle deine kostenlosen Cookies</h2>
     
     {% assign cookies_collection = collections[section.settings.cookies_collection] %}
@@ -613,7 +613,7 @@
               </div>
               <div class="variant-info xflex xgap-4 xjustify-between xw-full xitems-center">
                 <h2 class="xfont-bold xtext-3xl xw-full">
-                  {{ product.title | split: ' ' | first }}
+                  {{ product.title | split: ' ' | first | remove_last: ':' }}
                   <br>
                   <span class="xfont-bold xtext-xl">
                     {{- product.title | split: ' ' | slice: 1, 100 | join: ' ' -}}
