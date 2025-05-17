@@ -365,12 +365,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   async function handleAddToCart() {
-    loadingModal.classList.remove('xhidden');
     itemsToAdd = getVariantItems();
 
-    const data = {
-      items: itemsToAdd,
-    };
+    // const data = {
+    //   items: itemsToAdd,
+    // };
 
     // Only check for free cans if we haven't already added cookies
     if(can400gFreeCountAvailable > 0 && additionalItems.length === 0) {
@@ -383,18 +382,25 @@ document.addEventListener('DOMContentLoaded', function () {
       handleCookiesModal.openModal(cookies200gFreeCountAvailable);
       return;
     }
-    console.log("additionalItems", additionalItems);
+
+    // If we've passed the free item checks, NOW show the loading modal and proceed to add to cart
+    loadingModal.classList.remove('xhidden'); 
+
+    const data = {
+      items: itemsToAdd,
+    };
+
     if(additionalItems.length > 0) {
       for(let i = 0; i < additionalItems.length; i++) {
         data.items.push({
           id: additionalItems[i].variantId,
           quantity: additionalItems[i].quantity,
-          selling_plan: '',
-          collection: '',
+          selling_plan: '', // Assuming free items don't have selling plans
+          collection: '', // Assuming collection isn't relevant for free items here, or set appropriately if needed
         });
       }
     }
-    console.log("data", data);
+
     try {
       // Finally add items to cart
       const response = await fetch('/cart/add.js', {
