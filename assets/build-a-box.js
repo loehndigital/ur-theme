@@ -505,24 +505,26 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function setVariantOption(clickedOption) {
-    const products = document.querySelectorAll('.ur-product:not(.additive)');
+    // Scope products to the main selection area to avoid affecting modals
+    const products = document.querySelectorAll('.main-collection-select .ur-product:not(.additive)');
     for (let k = 0; k < products.length; k++) {
       const product = products[k];
       const variants = product.getElementsByClassName('ur-variant');
-      console.log(product)
       let highestQuantity = 0;
       for (let l = 0; l < variants.length; l++) {
         const variant = variants[l];
-        const quantity = variant.querySelector('.variant-quantity').value;
-        if (quantity > highestQuantity) {
-          highestQuantity = quantity;
+        const quantityInput = variant.querySelector('.variant-quantity');
+        if (quantityInput) {
+          const quantityValue = parseInt(quantityInput.value, 10);
+          if (!isNaN(quantityValue) && quantityValue > highestQuantity) {
+            highestQuantity = quantityValue;
+          }
         }
       }
 
       for (let l = 0; l < variants.length; l++) {
         const variant = variants[l];
         const quantityElement = variant.querySelector('.variant-quantity');
-        console.log(variant.getAttribute('data-option'));
         if (variant.getAttribute('data-option') === clickedOption) {
           variant.classList.remove('xhidden');
           if (quantityElement) {
@@ -717,8 +719,6 @@ document.addEventListener('DOMContentLoaded', function () {
     return { openModal };
   })();
 
-  // Existing handle400gModal code continues below...
-
   // Free 400g Modal Handler
   const handle400gModal = (() => {
     const modal = document.getElementById('ur-400g-modal');
@@ -757,6 +757,11 @@ document.addEventListener('DOMContentLoaded', function () {
       // Reset all quantities to 0
       modal.querySelectorAll('.modal-variant-quantity').forEach(input => {
         input.value = 0;
+      });
+
+      // Ensure all 400g variants within this modal are visible
+      modal.querySelectorAll('.variant.ur-variant').forEach(variantElement => {
+        variantElement.classList.remove('xhidden');
       });
       
       updateCounter();
@@ -811,24 +816,25 @@ document.addEventListener('DOMContentLoaded', function () {
     modalApplyBtn.addEventListener('click', () => {
       const selectedVariants = [];
       modal.querySelectorAll('.ur-variant').forEach(variant => {
-        const quantity = parseInt(variant.querySelector('.modal-variant-quantity').value || 0);
-        if (quantity > 0) {
-          selectedVariants.push({
-            variantId: variant.querySelector('.variant-id').value,
-            quantity: quantity
-          });
-          can400gFreeCountAvailable = can400gFreeCountAvailable - quantity;
+        const quantityInput = variant.querySelector('.modal-variant-quantity');
+        const variantIdInput = variant.querySelector('.variant-id');
+
+        if (quantityInput && variantIdInput) {
+            const quantity = parseInt(quantityInput.value || 0);
+            if (quantity > 0) {
+              selectedVariants.push({
+                variantId: variantIdInput.value,
+                quantity: quantity
+              });
+              can400gFreeCountAvailable -= quantity; // Update the available count
+            }
         }
       });
       
       additionalItems = [...additionalItems, ...selectedVariants];
-      if (cookies200gFreeCountAvailable < 0) {
-        closeModal();
-        handleCookiesModal.openModal(cookies200gFreeCountAvailable);
-      } else {
-        handleAddToCart();
-        closeModal();
-      }
+      
+      closeModal(); // Close the 400g modal
+      handleAddToCart(); // Call main handler to decide next step (cookies modal or add to cart)
     });
 
     return { openModal };
