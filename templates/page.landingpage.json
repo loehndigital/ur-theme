@@ -109,149 +109,6 @@
         "padding_bottom": 52
       }
     },
-    "vergleichstabelle_TwExww": {
-      "type": "Vergleichstabelle",
-      "blocks": {
-        "feature_JCDnTb": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Intransparente Inhaltsangaben & Etikettentricks",
-            "icon_links": false,
-            "text_rechts": "100 % Deklaration aller Zutaten, glasklar & ehrlich",
-            "icon_rechts": true
-          }
-        },
-        "feature_7XVc4x": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Tiermehl & Abfälle aus Massentierhaltung",
-            "icon_links": false,
-            "text_rechts": "Muskelfleisch aus artgerechter Haltung",
-            "icon_rechts": true
-          }
-        },
-        "feature_xr7QPK": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Billigimporte ohne jegliche Qualitätskontrolle",
-            "icon_links": false,
-            "text_rechts": "Regionale Zutaten aus dem Voralpenland",
-            "icon_rechts": true
-          }
-        },
-        "feature_bUG4Yf": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Industriell überhitzt & verarbeitet im Akkord",
-            "icon_links": false,
-            "text_rechts": "Schonend gegart im nährstoffreichen Slow-Cooking",
-            "icon_rechts": true
-          }
-        },
-        "feature_NGNweQ": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Planlose Einheitsrezepte ohne Balance",
-            "icon_links": false,
-            "text_rechts": "Nährstoffbalance für Vitalität, Energie & Gesundheit",
-            "icon_rechts": true
-          }
-        },
-        "feature_PhQiHh": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Künstliche Aromen, Füllstoffe & Lockstoffe",
-            "icon_links": false,
-            "text_rechts": "Frei von Weizen, Zucker & Zusätzen",
-            "icon_rechts": true
-          }
-        },
-        "feature_TFQnEN": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Billigprotein, minderwertige Fettquellen",
-            "icon_links": false,
-            "text_rechts": "Hochwertige Proteine & Fette für Energie",
-            "icon_rechts": true
-          }
-        },
-        "feature_3RyLtX": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Künstlich aufgepeppt - oft verschmäht",
-            "icon_links": false,
-            "text_rechts": "Hohe Akzeptanz selbst bei sensiblen Essern & Mäklern",
-            "icon_rechts": true
-          }
-        },
-        "feature_XHTGKF": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Führt oft zu Blähungen, Juckreiz & Verdauungsstress",
-            "icon_links": false,
-            "text_rechts": "Unterstützt Verdauung, Fell, Abwehr & Immunsystem",
-            "icon_rechts": true
-          }
-        },
-        "feature_6yY3ar": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Günstig im Regal, teuer durch Tierarztbesuche",
-            "icon_links": false,
-            "text_rechts": "Ab 2,02 € pro Tag bei 15 kg Hund - Qualität statt Folgekosten",
-            "icon_rechts": true
-          }
-        },
-        "feature_Qk3q4i": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Massenproduktion ohne Herz, Sorgfalt oder Nähe",
-            "icon_links": false,
-            "text_rechts": "Kleine Chargen aus Bayern, frisch & voller Sorgfalt",
-            "icon_rechts": true
-          }
-        },
-        "feature_qaEjiV": {
-          "type": "feature",
-          "settings": {
-            "text_links": "Konzernware ohne Bezug zur Realität",
-            "icon_links": false,
-            "text_rechts": "Familiengeführt von Hundemenschen",
-            "icon_rechts": true
-          }
-        }
-      },
-      "block_order": [
-        "feature_JCDnTb",
-        "feature_7XVc4x",
-        "feature_xr7QPK",
-        "feature_bUG4Yf",
-        "feature_NGNweQ",
-        "feature_PhQiHh",
-        "feature_TFQnEN",
-        "feature_3RyLtX",
-        "feature_XHTGKF",
-        "feature_6yY3ar",
-        "feature_Qk3q4i",
-        "feature_qaEjiV"
-      ],
-      "disabled": true,
-      "name": "Vergleichstabelle",
-      "settings": {
-        "ueberschrift_text": "Was Uncle Rusty's besonders macht?",
-        "ueberschrift_alignment": "left",
-        "ueberschrift_size": 28,
-        "text_alignment": "left",
-        "produktname_size": 16,
-        "vergleichstext_size": 16,
-        "abstand_vergleichspunkte": 18,
-        "bild_breite": 180,
-        "vergleichsbild_links": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
-        "vergleichsbild_rechts": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
-        "produktname_links": "Herkömmliches Hundefutter",
-        "produktname_rechts": "Uncle Rusty's"
-      }
-    },
     "vergleichstabelle_2_8cxTgf": {
       "type": "vergleichstabelle-2",
       "blocks": {
@@ -361,12 +218,12 @@
       "name": "Vergleich – Just Russel Stil",
       "settings": {
         "ueberschrift_text": "Was unser Futter besonders macht",
-        "ueberschrift_alignment": "center",
+        "ueberschrift_alignment": "left",
         "vergleichsbild_links": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
         "vergleichsbild_rechts": "shopify://shop_images/Rundum-Sorglos-Sensitiv.jpg",
         "produktname_links": "Uncle Rusty's",
         "produktname_rechts": "Supermarkt",
-        "bg_color": "#fefdf7",
+        "bg_color": "#f2eee3",
         "zebra_color": "#ece7d8"
       }
     },
@@ -931,6 +788,149 @@
         "newsletter": "true",
         "theme_mode": "dark",
         "desktop_blur": "no-desktop-blur"
+      }
+    },
+    "vergleichstabelle_TwExww": {
+      "type": "Vergleichstabelle",
+      "blocks": {
+        "feature_JCDnTb": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Intransparente Inhaltsangaben & Etikettentricks",
+            "icon_links": false,
+            "text_rechts": "100 % Deklaration aller Zutaten, glasklar & ehrlich",
+            "icon_rechts": true
+          }
+        },
+        "feature_7XVc4x": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Tiermehl & Abfälle aus Massentierhaltung",
+            "icon_links": false,
+            "text_rechts": "Muskelfleisch aus artgerechter Haltung",
+            "icon_rechts": true
+          }
+        },
+        "feature_xr7QPK": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Billigimporte ohne jegliche Qualitätskontrolle",
+            "icon_links": false,
+            "text_rechts": "Regionale Zutaten aus dem Voralpenland",
+            "icon_rechts": true
+          }
+        },
+        "feature_bUG4Yf": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Industriell überhitzt & verarbeitet im Akkord",
+            "icon_links": false,
+            "text_rechts": "Schonend gegart im nährstoffreichen Slow-Cooking",
+            "icon_rechts": true
+          }
+        },
+        "feature_NGNweQ": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Planlose Einheitsrezepte ohne Balance",
+            "icon_links": false,
+            "text_rechts": "Nährstoffbalance für Vitalität, Energie & Gesundheit",
+            "icon_rechts": true
+          }
+        },
+        "feature_PhQiHh": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Künstliche Aromen, Füllstoffe & Lockstoffe",
+            "icon_links": false,
+            "text_rechts": "Frei von Weizen, Zucker & Zusätzen",
+            "icon_rechts": true
+          }
+        },
+        "feature_TFQnEN": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Billigprotein, minderwertige Fettquellen",
+            "icon_links": false,
+            "text_rechts": "Hochwertige Proteine & Fette für Energie",
+            "icon_rechts": true
+          }
+        },
+        "feature_3RyLtX": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Künstlich aufgepeppt - oft verschmäht",
+            "icon_links": false,
+            "text_rechts": "Hohe Akzeptanz selbst bei sensiblen Essern & Mäklern",
+            "icon_rechts": true
+          }
+        },
+        "feature_XHTGKF": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Führt oft zu Blähungen, Juckreiz & Verdauungsstress",
+            "icon_links": false,
+            "text_rechts": "Unterstützt Verdauung, Fell, Abwehr & Immunsystem",
+            "icon_rechts": true
+          }
+        },
+        "feature_6yY3ar": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Günstig im Regal, teuer durch Tierarztbesuche",
+            "icon_links": false,
+            "text_rechts": "Ab 2,02 € pro Tag bei 15 kg Hund - Qualität statt Folgekosten",
+            "icon_rechts": true
+          }
+        },
+        "feature_Qk3q4i": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Massenproduktion ohne Herz, Sorgfalt oder Nähe",
+            "icon_links": false,
+            "text_rechts": "Kleine Chargen aus Bayern, frisch & voller Sorgfalt",
+            "icon_rechts": true
+          }
+        },
+        "feature_qaEjiV": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Konzernware ohne Bezug zur Realität",
+            "icon_links": false,
+            "text_rechts": "Familiengeführt von Hundemenschen",
+            "icon_rechts": true
+          }
+        }
+      },
+      "block_order": [
+        "feature_JCDnTb",
+        "feature_7XVc4x",
+        "feature_xr7QPK",
+        "feature_bUG4Yf",
+        "feature_NGNweQ",
+        "feature_PhQiHh",
+        "feature_TFQnEN",
+        "feature_3RyLtX",
+        "feature_XHTGKF",
+        "feature_6yY3ar",
+        "feature_Qk3q4i",
+        "feature_qaEjiV"
+      ],
+      "disabled": true,
+      "name": "Vergleichstabelle",
+      "settings": {
+        "ueberschrift_text": "Was Uncle Rusty's besonders macht?",
+        "ueberschrift_alignment": "left",
+        "ueberschrift_size": 28,
+        "text_alignment": "left",
+        "produktname_size": 16,
+        "vergleichstext_size": 16,
+        "abstand_vergleichspunkte": 18,
+        "bild_breite": 180,
+        "vergleichsbild_links": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
+        "vergleichsbild_rechts": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
+        "produktname_links": "Herkömmliches Hundefutter",
+        "produktname_rechts": "Uncle Rusty's"
       }
     }
   },
