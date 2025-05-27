@@ -560,49 +560,6 @@
         "padding_bottom": 36
       }
     },
-    "icon_row_rbAiFd": {
-      "type": "icon-row",
-      "blocks": {
-        "image_text_block_YkhJXN": {
-          "type": "image-text-block",
-          "settings": {
-            "image_height": 65,
-            "image_rich_text": "<p>Describe your image here.</p>"
-          }
-        },
-        "image_text_block_wFhLca": {
-          "type": "image-text-block",
-          "settings": {
-            "image_height": 65,
-            "image_rich_text": "<p>Describe your image here.</p>"
-          }
-        },
-        "image_text_block_ctnKeM": {
-          "type": "image-text-block",
-          "settings": {
-            "image_height": 65,
-            "image_rich_text": "<p>Describe your image here.</p>"
-          }
-        },
-        "image_text_block_XCpJUb": {
-          "type": "image-text-block",
-          "settings": {
-            "image_height": 65,
-            "image_rich_text": "<p>Describe your image here.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "image_text_block_YkhJXN",
-        "image_text_block_wFhLca",
-        "image_text_block_ctnKeM",
-        "image_text_block_XCpJUb"
-      ],
-      "name": "UR Icon Row",
-      "settings": {
-        "color_scheme": ""
-      }
-    },
     "1702222298d12bda40": {
       "type": "apps",
       "blocks": {
@@ -741,12 +698,12 @@
           "settings": {
             "hero_image": "shopify://shop_images/probierpaket-landschaft-min.jpg",
             "hero_image_mobile": "shopify://shop_images/probierpaket-landschaft-mobile-2-min.jpg",
-            "hero_text": "<h1>Stell dir dein Wunschpaket selbst zusammen</h1><p>W</p>",
-            "richtext_max_width": 450,
+            "hero_text": "<h1>Deine Futterbox. Dein Geschmack. Deine Aktion.</h1><p>Wähle einfach deine Lieblingssorten, kombiniere nach Lust und Laune – und sichere dir dabei unser exklusives Aktionspaket:<br/><br/>🎁 <strong>Bis zu 8 Dosen gratis</strong>, <strong>2 Packungen Hundekekse geschenkt</strong><br/>💰 <strong>+ 10 % Rabatt auf deine gesamte Bestellung</strong></p><p></p>",
+            "richtext_max_width": 550,
             "button_link": "",
             "button_label": "",
             "theme_mode": "light",
-            "blur": "no-blur"
+            "blur": "blur"
           }
         }
       },
@@ -986,8 +943,10 @@
     "vergleichstabelle_2_8cxTgf",
     "features_QgMU8P",
     "featured_product_WRH7Xi",
-    "icon_row_rbAiFd",
     "1702222298d12bda40",
+    "hero_slider_RqPLDN",
+    "82172ece-4d52-4326-8d4d-6c644a0d4924",
+    "174716101986516015",
     "rich_text_bdynjC",
     "highlight_product_TnH9XC",
     "highlight_product_gkLCzx",
@@ -996,9 +955,6 @@
     "highlight_product_yGffdL",
     "highlight_product_mHHMDr",
     "highlight_product_HmajQH",
-    "hero_slider_RqPLDN",
-    "82172ece-4d52-4326-8d4d-6c644a0d4924",
-    "174716101986516015",
     "collapsible_content_8Ctycq",
     "802ec653-45c7-4db1-a744-3e8f11792f91"
   ]
