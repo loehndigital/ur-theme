@@ -447,7 +447,7 @@
         "hero_slide_BwHcnK": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify://shop_images/probierpaket-landschaft-min.jpg",
+            "hero_image": "shopify://shop_images/probierpaket-landschaft-min-min.jpg",
             "hero_image_mobile": "shopify://shop_images/probierpaket-landschaft-mobile-2-min.jpg",
             "hero_text": "<h1>Deine Futterbox. Dein Geschmack. Deine Aktion.</h1><p>Wähle einfach deine Lieblingssorten, kombiniere nach Lust und Laune – und sichere dir dabei unser exklusives Aktionspaket:<br/><br/>🎁 <strong>Bis zu 8 Dosen gratis</strong>, <strong>2 Packungen Hundekekse geschenkt</strong><br/>💰 <strong>+ 10 % Rabatt auf deine gesamte Bestellung</strong></p><p></p>",
             "richtext_max_width": 550,
