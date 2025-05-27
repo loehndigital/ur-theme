@@ -200,6 +200,14 @@
             "icon_links": true,
             "icon_rechts": false
           }
+        },
+        "feature_3bMtBQ": {
+          "type": "feature",
+          "settings": {
+            "text_links": "",
+            "icon_links": true,
+            "icon_rechts": false
+          }
         }
       },
       "block_order": [
@@ -213,14 +221,15 @@
         "feature_tdfq3D",
         "feature_Fg3Qg3",
         "feature_tGb8VB",
-        "feature_jWzfzE"
+        "feature_jWzfzE",
+        "feature_3bMtBQ"
       ],
       "name": "Vergleich – Just Russel Stil",
       "settings": {
         "ueberschrift_text": "Was unser Futter besonders macht",
         "ueberschrift_alignment": "left",
-        "vergleichsbild_links": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
-        "vergleichsbild_rechts": "shopify://shop_images/Rundum-Sorglos-Sensitiv.jpg",
+        "vergleichsbild_links": "shopify://shop_images/UR-Dosen.png",
+        "vergleichsbild_rechts": "shopify://shop_images/Basic-Hundefutter.png",
         "produktname_links": "Uncle Rusty's",
         "produktname_rechts": "Supermarkt",
         "bg_color": "#f2eee3",
