@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,9 +23,10 @@
         "hero_slide_9yGGV4": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/comp3_0191_Kopie.jpg",
-            "hero_image_mobile": "shopify:\/\/shop_images\/comp2.png",
-            "hero_text": "<h1>Ein gutes Leben beginnt im Napf.<\/h1><p>Natürlich. Artgerecht. Mit Liebe gekocht. Entscheide dich bewusst für ein besseres Leben deines Hundes. <\/p><ol><li><br\/>✓ Hausmannskost aus regionalen Zutaten<br\/>✓ Von Experten entwickelt & empfohlen<br\/>✓ Frei von allem, was nicht reingehört<\/li><\/ol>",
+            "hero_image": "shopify://shop_images/comp3_0191_Kopie.jpg",
+            "hero_image_mobile": "shopify://shop_images/comp2.png",
+            "hero_text": "<h1>Ein gutes Leben beginnt im Napf.</h1><p>Natürlich. Artgerecht. Mit Liebe gekocht. Entscheide dich bewusst für ein besseres Leben deines Hundes. </p><ol><li><br/>✓ Hausmannskost aus regionalen Zutaten<br/>✓ Von Experten entwickelt & empfohlen<br/>✓ Frei von allem, was nicht reingehört</li></ol>",
+            "richtext_max_width": 450,
             "button_link": "",
             "button_label": "",
             "theme_mode": "light",
@@ -35,7 +45,7 @@
         "heading_hXFyr3": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Echte Meinungen. Echte Ergebnisse. Echte Liebe.<\/em>",
+            "heading": "<em>Echte Meinungen. Echte Ergebnisse. Echte Liebe.</em>",
             "heading_size": "h2"
           }
         }
@@ -57,7 +67,7 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_all_reviews_text_PGg8LW": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_text\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         }
       },
@@ -81,7 +91,7 @@
         "text_pFXyWC": {
           "type": "text",
           "settings": {
-            "text": "<p>Juckreiz, Durchfall, ständiges Schmatzen? Viele Hunde leiden still, oft wegen ungeeigneter Inhaltsstoffe. Kein Wunder – der Hundefuttermarkt ist undurchsichtig. Deshalb haben wir Uncle Rusty's entwickelt. Unser Ansatz? Alles klar deklariert. Prozentgenau aufgeschlüsselt. Ohne verstecken. Ohne beschönigen. Einfach ehrliche Hausmannskost. <\/p>"
+            "text": "<p>Juckreiz, Durchfall, ständiges Schmatzen? Viele Hunde leiden still, oft wegen ungeeigneter Inhaltsstoffe. Kein Wunder – der Hundefuttermarkt ist undurchsichtig. Deshalb haben wir Uncle Rusty's entwickelt. Unser Ansatz? Alles klar deklariert. Prozentgenau aufgeschlüsselt. Ohne verstecken. Ohne beschönigen. Einfach ehrliche Hausmannskost. </p>"
           }
         }
       },
@@ -235,8 +245,8 @@
         "vergleichstext_size": 16,
         "abstand_vergleichspunkte": 18,
         "bild_breite": 180,
-        "vergleichsbild_links": "shopify:\/\/shop_images\/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
-        "vergleichsbild_rechts": "shopify:\/\/shop_images\/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
+        "vergleichsbild_links": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
+        "vergleichsbild_rechts": "shopify://shop_images/rundum_powerup_e97b6e45-8984-4b8a-abb5-67db79d747b9.png",
         "produktname_links": "Herkömmliches Hundefutter",
         "produktname_rechts": "Uncle Rusty's"
       }
@@ -247,7 +257,7 @@
         "feature_rdFMNB": {
           "type": "feature",
           "settings": {
-            "text_links": "Familiengeführt von Hundemenschen",
+            "text_links": "Glasklare Zutatenliste: 100 % deklariert, keine Tricks",
             "icon_links": true,
             "icon_rechts": false
           }
@@ -255,7 +265,80 @@
         "feature_7V7YtQ": {
           "type": "feature",
           "settings": {
-            "text_links": "Familiengeführt von Hundemenschen",
+            "text_links": "Muskelfleisch aus artgerechter Haltung statt Abfällen",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_r483qd": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Zutaten aus Bayern & Umgebung. Frisch, regional, ehrlich",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_nhYz9X": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "text_links": "Schonendes Slow-Cooking für maximale Nährstoffe",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_BJzVDM": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Optimale Nährstoffbalance abgestimmt auf Energie, Gesundheit & Vitalität",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_grV7jQ": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Frei von Weizen, Zucker, Füllstoffen, Lockstoffen & synthetischen Vitaminen",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_NbmRy3": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Hochwertige Proteine & Fette für starke Muskeln & Energie",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_tdfq3D": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Besonders hohe Akzeptanz auch bei sensiblen Hunden",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_Fg3Qg3": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Unterstützt Verdauung, Fell, Abwehrkräfte & Immunsystem",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_tGb8VB": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Kleine Chargen mit Sorgfalt gekocht. Kein Industriefutter",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_jWzfzE": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Familiengeführt von Hundemenschen mit Herz und Verstand",
             "icon_links": true,
             "icon_rechts": false
           }
@@ -263,16 +346,25 @@
       },
       "block_order": [
         "feature_rdFMNB",
-        "feature_7V7YtQ"
+        "feature_7V7YtQ",
+        "feature_r483qd",
+        "feature_nhYz9X",
+        "feature_BJzVDM",
+        "feature_grV7jQ",
+        "feature_NbmRy3",
+        "feature_tdfq3D",
+        "feature_Fg3Qg3",
+        "feature_tGb8VB",
+        "feature_jWzfzE"
       ],
       "name": "Vergleich – Just Russel Stil",
       "settings": {
         "ueberschrift_text": "Was unser Futter besonders macht",
         "ueberschrift_alignment": "center",
-        "vergleichsbild_links": "shopify:\/\/shop_images\/Rundum-Sorglos-PowerUp.jpg",
-        "vergleichsbild_rechts": "shopify:\/\/shop_images\/Rundum-Sorglos-Sensitiv.jpg",
+        "vergleichsbild_links": "shopify://shop_images/Rundum-Sorglos-PowerUp.jpg",
+        "vergleichsbild_rechts": "shopify://shop_images/Rundum-Sorglos-Sensitiv.jpg",
         "produktname_links": "Uncle Rusty's",
-        "produktname_rechts": "Herkömmliches Futter",
+        "produktname_rechts": "Supermarkt",
         "bg_color": "#fefdf7",
         "zebra_color": "#fcefe5"
       }
@@ -283,56 +375,56 @@
         "feature_TGgArA": {
           "type": "feature",
           "settings": {
-            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"><\/path>\n<\/svg>",
+            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"></path>\n</svg>",
             "text": "Individuell kombinierbar: Wähle Sorten, die zu deinem Hund passen - mit oder ohne Abo, kein Zwang."
           }
         },
         "feature_nUjGAB": {
           "type": "feature",
           "settings": {
-            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"><\/path>\n<\/svg>",
+            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"></path>\n</svg>",
             "text": "Perfekt für unterwegs: Dank haltbarer Dosenform ohne Kühlung, ideal auf Reisen oder im Büro."
           }
         },
         "feature_EPD4mB": {
           "type": "feature",
           "settings": {
-            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"><\/path>\n<\/svg>",
+            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"></path>\n</svg>",
             "text": "Einfach in der Anwendung: Aufmachen, rauslöffeln, fertig. Kein Mischen, kein Abwiegen."
           }
         },
         "feature_Q3PXDr": {
           "type": "feature",
           "settings": {
-            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"><\/path>\n<\/svg>",
+            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"></path>\n</svg>",
             "text": "Volle Nährstoffabdeckung ganz ohne Zusätze: Durch Sortenvielfalt wird der Bedarf natürlich gedeckt."
           }
         },
         "feature_xLNCid": {
           "type": "feature",
           "settings": {
-            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"><\/path>\n<\/svg>",
+            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"></path>\n</svg>",
             "text": "Mehr Lebensqualität im Alltag: Weniger Sorgen um Verdauung, Allergien oder Appetitlosigkeit."
           }
         },
         "feature_3pLa6J": {
           "type": "feature",
           "settings": {
-            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"><\/path>\n<\/svg>",
+            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"></path>\n</svg>",
             "text": "Sichtbare Veränderung nach wenigen Tagen: Besseres Fell, weniger Geruch, mehr Energie."
           }
         },
         "feature_8PeMLJ": {
           "type": "feature",
           "settings": {
-            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"><\/path>\n<\/svg>",
+            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"></path>\n</svg>",
             "text": "Mit echtem Ernährungs-Know-how entwickelt: Keine Marketingformel sondern Futter nach Prinzip."
           }
         },
         "feature_e4pPhY": {
           "type": "feature",
           "settings": {
-            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"><\/path>\n<\/svg>",
+            "icon_svg": "<svg class=\"w-6 h-6 text-gray-800 dark:text-white\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" viewbox=\"0 0 24 24\">\n  <path fill-rule=\"evenodd\" d=\"M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z\" clip-rule=\"evenodd\"></path>\n</svg>",
             "text": "Für jedes Alter geeignet: Vom jungen Wirbelwind bis zum grauen Schnauzer. Alle Sorten sind altersunabhängig fütterbar."
           }
         }
@@ -376,7 +468,7 @@
           "settings": {
             "layout": "vertical",
             "icon_1": "none",
-            "heading_1": "<strong>Dein Einstieg in eine gesunde Ernährung<\/strong>",
+            "heading_1": "<strong>Dein Einstieg in eine gesunde Ernährung</strong>",
             "icon_2": "none",
             "heading_2": "",
             "icon_3": "none",
@@ -475,28 +567,28 @@
           "type": "image-text-block",
           "settings": {
             "image_height": 65,
-            "image_rich_text": "<p>Describe your image here.<\/p>"
+            "image_rich_text": "<p>Describe your image here.</p>"
           }
         },
         "image_text_block_wFhLca": {
           "type": "image-text-block",
           "settings": {
             "image_height": 65,
-            "image_rich_text": "<p>Describe your image here.<\/p>"
+            "image_rich_text": "<p>Describe your image here.</p>"
           }
         },
         "image_text_block_ctnKeM": {
           "type": "image-text-block",
           "settings": {
             "image_height": 65,
-            "image_rich_text": "<p>Describe your image here.<\/p>"
+            "image_rich_text": "<p>Describe your image here.</p>"
           }
         },
         "image_text_block_XCpJUb": {
           "type": "image-text-block",
           "settings": {
             "image_height": 65,
-            "image_rich_text": "<p>Describe your image here.<\/p>"
+            "image_rich_text": "<p>Describe your image here.</p>"
           }
         }
       },
@@ -515,7 +607,7 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_all_reviews_page_BiHJAf": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_page\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         }
       },
@@ -556,7 +648,7 @@
       "settings": {
         "product_title": "Ente mit Karotten und Hirse: Zart. Verträglich. Voller Nährstoffe.",
         "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify:\/\/shop_images\/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
+        "product_image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
         "image_position": "right",
         "background_color": "#d6b36f",
         "text_color_mode": "light",
@@ -569,7 +661,7 @@
       "settings": {
         "product_title": "Geflügel mit Kürbis und Amaranth: Mageres Fleisch trifft Powerkorn",
         "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify:\/\/shop_images\/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
+        "product_image": "shopify://shop_images/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
         "image_position": "right",
         "background_color": "#d0b968",
         "text_color_mode": "light",
@@ -582,7 +674,7 @@
       "settings": {
         "product_title": "Lachs mit Kürbis, Haferkleie und Apfel: Omega-Power aus dem Wasser",
         "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify:\/\/shop_images\/lachs_800g_b5aaa181-332a-4a41-8f5c-cb0a7d734d11.png",
+        "product_image": "shopify://shop_images/lachs_800g_b5aaa181-332a-4a41-8f5c-cb0a7d734d11.png",
         "image_position": "right",
         "background_color": "#daafa2",
         "text_color_mode": "light",
@@ -595,7 +687,7 @@
       "settings": {
         "product_title": "Lamm mit Rote Beete, Haferkleie und Apfel: Sanfte Kraft für den Bauch",
         "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify:\/\/shop_images\/lamm_800g_v2.png",
+        "product_image": "shopify://shop_images/lamm_800g_v2.png",
         "image_position": "right",
         "background_color": "#9fbcc5",
         "text_color_mode": "light",
@@ -608,7 +700,7 @@
       "settings": {
         "product_title": "Pferd mit Karotte und Quinoa: Hypoallergen. Reduziert. Rein.",
         "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify:\/\/shop_images\/pferd_800g_c40c9051-5c62-4353-b295-13c1e25cc264.png",
+        "product_image": "shopify://shop_images/pferd_800g_c40c9051-5c62-4353-b295-13c1e25cc264.png",
         "image_position": "right",
         "background_color": "#b4aec2",
         "text_color_mode": "light",
@@ -621,7 +713,7 @@
       "settings": {
         "product_title": "Rind mit Kartoffeln und Karotten: Rustikal, wie bei Oma. Nur für Hunde.",
         "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify:\/\/shop_images\/rind_800g_9701a81b-c8aa-4e09-8ba7-4f3b6851f0a5.png",
+        "product_image": "shopify://shop_images/rind_800g_9701a81b-c8aa-4e09-8ba7-4f3b6851f0a5.png",
         "image_position": "right",
         "background_color": "#ce6637",
         "text_color_mode": "light",
@@ -634,7 +726,7 @@
       "settings": {
         "product_title": "Wild mit Süßkartoffeln und Zucchini: Kraftvoll, ursprünglich, pur.",
         "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify:\/\/shop_images\/wild_800g_58fe7a12-1637-44b4-bd51-52d066f68ed7.png",
+        "product_image": "shopify://shop_images/wild_800g_58fe7a12-1637-44b4-bd51-52d066f68ed7.png",
         "image_position": "right",
         "background_color": "#7ba283",
         "text_color_mode": "light",
@@ -647,9 +739,10 @@
         "hero_slide_BwHcnK": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/probierpaket-landschaft-min.jpg",
-            "hero_image_mobile": "shopify:\/\/shop_images\/probierpaket-landschaft-mobile-2-min.jpg",
-            "hero_text": "<h1>Stell dir dein Wunschpaket selbst zusammen<\/h1><p>W<\/p>",
+            "hero_image": "shopify://shop_images/probierpaket-landschaft-min.jpg",
+            "hero_image_mobile": "shopify://shop_images/probierpaket-landschaft-mobile-2-min.jpg",
+            "hero_text": "<h1>Stell dir dein Wunschpaket selbst zusammen</h1><p>W</p>",
+            "richtext_max_width": 450,
             "button_link": "",
             "button_label": "",
             "theme_mode": "light",
@@ -670,10 +763,10 @@
         "additives_collection": "",
         "cookies_collection": "hundesnacks-6-sorten",
         "questionaire_subscription_plan": 688893919496,
-        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 7 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!<\/p>",
-        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
+        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 7 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!</p>",
+        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?</p>",
         "questionaire_button_label": "Ernährungsberatung",
-        "questionaire_button_link": "shopify:\/\/pages\/beratung",
+        "questionaire_button_link": "shopify://pages/beratung",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
         "promo_break_1_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x 400g Dose gratis!",
         "promo_break_1_target": 6,
@@ -733,7 +826,7 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_featured_carousel_yFHLyi": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "maxwidth": 1080
           }
@@ -754,7 +847,7 @@
           "settings": {
             "heading": "Braucht mein Hund zusätzlich Vitamine oder Zusätze?",
             "icon": "none",
-            "row_content": "<p><strong>Nicht zwingend.<\/strong> Wenn du regelmäßig zwischen den Sorten wechselst, ist dein Hund rundum versorgt. Ganz ohne synthetische Zusätze. Wir empfehlen: <strong>3x<\/strong> pro Woche <strong>rotes Fleisch <\/strong>(Wild, Rind, Pferd oder Lamm), <strong>3x helles Fleisch<\/strong> (Geflügel oder Ente) und <strong>1x Lachs<\/strong>. So ist der Bedarf abgedeckt. Ergänzend kannst du ein hochwertiges Öl hinzufügen.<br\/><br\/>Solltest du aufgrund von Allergien nur eine Sorte füttern können, empfehlen wir ein natürliches Vitamin-Komplettpräparat und ein gutes Öl dazu. Bei Unsicherheiten helfen wir dir kostenlos und erstellen auf Wunsch einen individuellen Ergänzungsplan – ohne Stress, ohne Zusatzkosten.<\/p>",
+            "row_content": "<p><strong>Nicht zwingend.</strong> Wenn du regelmäßig zwischen den Sorten wechselst, ist dein Hund rundum versorgt. Ganz ohne synthetische Zusätze. Wir empfehlen: <strong>3x</strong> pro Woche <strong>rotes Fleisch </strong>(Wild, Rind, Pferd oder Lamm), <strong>3x helles Fleisch</strong> (Geflügel oder Ente) und <strong>1x Lachs</strong>. So ist der Bedarf abgedeckt. Ergänzend kannst du ein hochwertiges Öl hinzufügen.<br/><br/>Solltest du aufgrund von Allergien nur eine Sorte füttern können, empfehlen wir ein natürliches Vitamin-Komplettpräparat und ein gutes Öl dazu. Bei Unsicherheiten helfen wir dir kostenlos und erstellen auf Wunsch einen individuellen Ergänzungsplan – ohne Stress, ohne Zusatzkosten.</p>",
             "page": ""
           }
         },
@@ -763,7 +856,7 @@
           "settings": {
             "heading": "Wie stelle ich am besten auf Uncle Rusty's um?",
             "icon": "none",
-            "row_content": "<p><strong>Von Rohfütterung:<\/strong> Du kannst direkt wechseln – ohne Eingewöhnung.<br\/><br\/><strong>Von Nassfutter:<\/strong> Der Umstieg ist meist problemlos.<br\/><br\/><strong>Von Trockenfutter:<\/strong> Starte mit einem Löffel Uncle Rusty's am ersten Tag und erhöhe die Menge langsam. Unsere 400 g Dosen sind ideal für die Umgewöhnung. Geöffnete Dosen halten bis zu 3 Tage im Kühlschrank.<br\/><br\/>Beobachte deinen Hund in der Übergangszeit. Wir stehen dir bei Fragen gerne zur Seite.<\/p>",
+            "row_content": "<p><strong>Von Rohfütterung:</strong> Du kannst direkt wechseln – ohne Eingewöhnung.<br/><br/><strong>Von Nassfutter:</strong> Der Umstieg ist meist problemlos.<br/><br/><strong>Von Trockenfutter:</strong> Starte mit einem Löffel Uncle Rusty's am ersten Tag und erhöhe die Menge langsam. Unsere 400 g Dosen sind ideal für die Umgewöhnung. Geöffnete Dosen halten bis zu 3 Tage im Kühlschrank.<br/><br/>Beobachte deinen Hund in der Übergangszeit. Wir stehen dir bei Fragen gerne zur Seite.</p>",
             "page": ""
           }
         },
@@ -772,7 +865,7 @@
           "settings": {
             "heading": "Ist das Futter auch für Allergiker geeignet?",
             "icon": "none",
-            "row_content": "<p><strong>Ja, absolut.<\/strong> Viele unserer Sorten sind bewusst allergenarm konzipiert. Du kannst uns jederzeit kontaktieren. Am besten vorab per Mail mit Infos zu bestehenden Allergien oder Krankheiten. Unsere Expert:innen setzen sich dann mit dir in Verbindung und finden gemeinsam mit dir die passende Lösung. Ohne Verkaufsdruck, ohne leere Versprechen.<\/p>",
+            "row_content": "<p><strong>Ja, absolut.</strong> Viele unserer Sorten sind bewusst allergenarm konzipiert. Du kannst uns jederzeit kontaktieren. Am besten vorab per Mail mit Infos zu bestehenden Allergien oder Krankheiten. Unsere Expert:innen setzen sich dann mit dir in Verbindung und finden gemeinsam mit dir die passende Lösung. Ohne Verkaufsdruck, ohne leere Versprechen.</p>",
             "page": ""
           }
         },
@@ -781,7 +874,7 @@
           "settings": {
             "heading": "Was, wenn mein Hund es nicht mag?",
             "icon": "none",
-            "row_content": "<p><strong>Wir kümmern uns. <\/strong>Neue Texturen und natürliche Zutaten ohne Lockstoffe sind für viele Hunde zunächst ungewohnt. Oft hilft es schon, das Futter leicht zu erwärmen - z. B. im Ofen bei 100 °C für wenige Minuten. Das intensiviert den Duft und macht es attraktiver.<br\/><br\/>Sollte dein Hund es wirklich nicht fressen, genügt eine kurze Mail. Wir nehmen ungeöffnete Dosen zurück - unkompliziert und kostenlos. Du bekommst ein Rücksendeetikett und kannst das Paket dem DHL-Boten einfach mitgeben.<\/p>",
+            "row_content": "<p><strong>Wir kümmern uns. </strong>Neue Texturen und natürliche Zutaten ohne Lockstoffe sind für viele Hunde zunächst ungewohnt. Oft hilft es schon, das Futter leicht zu erwärmen - z. B. im Ofen bei 100 °C für wenige Minuten. Das intensiviert den Duft und macht es attraktiver.<br/><br/>Sollte dein Hund es wirklich nicht fressen, genügt eine kurze Mail. Wir nehmen ungeöffnete Dosen zurück - unkompliziert und kostenlos. Du bekommst ein Rücksendeetikett und kannst das Paket dem DHL-Boten einfach mitgeben.</p>",
             "page": ""
           }
         },
@@ -790,7 +883,7 @@
           "settings": {
             "heading": "Ist das nicht teurer als mein aktuelles Futter?",
             "icon": "none",
-            "row_content": "<p><strong>Nicht wirklich - im Gegenteil. <\/strong>Bei einem 15 kg Hund liegst du bei etwa 2,02 € am Tag. Und im Vergleich zu vielen Premium-Marken mit ähnlicher Qualität sind wir sogar preiswerter. Unsere Menüs enthalten keine unnötigen Füllstoffe oder 30% Wasser. Das bedeutet: weniger Volumen, mehr Nährstoffe, geringerer Verbrauch. Andere strecken, wir verdichten.<br\/><br\/>So spart man langfristig sogar. Besonders wenn man Tierarztkosten durch bessere Ernährung vermeiden kann.<\/p>",
+            "row_content": "<p><strong>Nicht wirklich - im Gegenteil. </strong>Bei einem 15 kg Hund liegst du bei etwa 2,02 € am Tag. Und im Vergleich zu vielen Premium-Marken mit ähnlicher Qualität sind wir sogar preiswerter. Unsere Menüs enthalten keine unnötigen Füllstoffe oder 30% Wasser. Das bedeutet: weniger Volumen, mehr Nährstoffe, geringerer Verbrauch. Andere strecken, wir verdichten.<br/><br/>So spart man langfristig sogar. Besonders wenn man Tierarztkosten durch bessere Ernährung vermeiden kann.</p>",
             "page": ""
           }
         },
@@ -799,7 +892,7 @@
           "settings": {
             "heading": "Kann ich die Sorten einfach wechseln?",
             "icon": "none",
-            "row_content": "<p><strong>Ja! Und genau das empfehlen wir sogar. <\/strong>Unsere Sorten sind so entwickelt, dass du problemlos durchwechseln kannst. Am besten fütterst du über die Woche verteilt <strong>drei Mal rotes Fleisch<\/strong> (z. B. Rind, Wild, Lamm oder Pferd), <strong>drei Mal helles Fleisc<\/strong>h (Geflügel oder Ente) und <strong>einmal Lachs<\/strong>. So entsteht auf natürliche Weise eine ausgewogene Nährstoffversorgung – ganz ohne synthetische Zusätze.<\/p><p>Wichtig ist auch die Regelmäßigkeit: Feste Fütterungszeiten helfen deinem Hund, sich sicher und wohl zu fühlen. Routine bringt Ruhe in den Alltag und sorgt dafür, dass Verdauung, Energie und Verhalten in Balance bleiben. Wir empfehlen zwei Mahlzeiten pro Tag - morgens und abends - und eine Sorte pro Tag. So kommt dein Hund nicht durcheinander und das Futter wirkt, wie es soll. Wenn du Fragen hast, sind wir natürlich für dich da.<\/p>",
+            "row_content": "<p><strong>Ja! Und genau das empfehlen wir sogar. </strong>Unsere Sorten sind so entwickelt, dass du problemlos durchwechseln kannst. Am besten fütterst du über die Woche verteilt <strong>drei Mal rotes Fleisch</strong> (z. B. Rind, Wild, Lamm oder Pferd), <strong>drei Mal helles Fleisc</strong>h (Geflügel oder Ente) und <strong>einmal Lachs</strong>. So entsteht auf natürliche Weise eine ausgewogene Nährstoffversorgung – ganz ohne synthetische Zusätze.</p><p>Wichtig ist auch die Regelmäßigkeit: Feste Fütterungszeiten helfen deinem Hund, sich sicher und wohl zu fühlen. Routine bringt Ruhe in den Alltag und sorgt dafür, dass Verdauung, Energie und Verhalten in Balance bleiben. Wir empfehlen zwei Mahlzeiten pro Tag - morgens und abends - und eine Sorte pro Tag. So kommt dein Hund nicht durcheinander und das Futter wirkt, wie es soll. Wenn du Fragen hast, sind wir natürlich für dich da.</p>",
             "page": ""
           }
         },
@@ -808,7 +901,7 @@
           "settings": {
             "heading": "Wie viel sollte ich füttern?",
             "icon": "none",
-            "row_content": "<p>Als Richtwert empfehlen wir:<\/p><p>5 kg Hund → 200 g täglich<\/p><p>15 kg Hund → 400 g täglich<\/p><p>20 kg Hund → 600 g täglich<\/p><p>25 kg Hund → 800 g täglich<\/p><p>Wir empfehlen zwei Mahlzeiten am Tag. Nutze auch unser <strong>Beratungstool auf der Website<\/strong>, um die passende Futtermenge zu berechnen - inklusive Menüvorschlag. Und wenn du unsicher bist: Wir helfen gern persönlich.<\/p><p><strong>Ungeöffnet sind unsere Menüs mindestens 18 Monate haltbar. <\/strong>Wir produzieren ohne künstliche Konservierung, dafür in kleinen Chargen mit hohem Frischfleischanteil. Nach dem Öffnen sollten die Menüs innerhalb von 2 Tagen verbraucht und im Kühlschrank aufbewahrt werden. Am besten immer lichtgeschützt lagern – auch ungeöffnete Dosen.<\/p>",
+            "row_content": "<p>Als Richtwert empfehlen wir:</p><p>5 kg Hund → 200 g täglich</p><p>15 kg Hund → 400 g täglich</p><p>20 kg Hund → 600 g täglich</p><p>25 kg Hund → 800 g täglich</p><p>Wir empfehlen zwei Mahlzeiten am Tag. Nutze auch unser <strong>Beratungstool auf der Website</strong>, um die passende Futtermenge zu berechnen - inklusive Menüvorschlag. Und wenn du unsicher bist: Wir helfen gern persönlich.</p><p><strong>Ungeöffnet sind unsere Menüs mindestens 18 Monate haltbar. </strong>Wir produzieren ohne künstliche Konservierung, dafür in kleinen Chargen mit hohem Frischfleischanteil. Nach dem Öffnen sollten die Menüs innerhalb von 2 Tagen verbraucht und im Kühlschrank aufbewahrt werden. Am besten immer lichtgeschützt lagern – auch ungeöffnete Dosen.</p>",
             "page": ""
           }
         },
@@ -817,7 +910,7 @@
           "settings": {
             "heading": "Wer steckt hinter Uncle Rusty’s?",
             "icon": "none",
-            "row_content": "<p><strong>Eine Familie mit einem Hund namens Rusty und einer Idee, die größer wurde als geplant. <\/strong>Rusty kam in unser Leben und stellte alles auf den Kopf. Wir wollten das Beste für ihn, also begannen wir, selbst zu kochen. Mit der Zeit entstand daraus ein Futter, das nicht nur für Rusty, sondern auch für andere Hunde perfekt funktionierte. Freunde fragten nach, Bekannte bestellten mit, irgendwann wurden es so viele, dass wir entschieden: Lass uns das richtig machen.<\/p><p>Heute ist Uncle Rusty’s eine kleine, unabhängige Marke aus dem Süden Bayerns. Ohne Investoren, ohne Konzernstruktur, ohne künstliches Marketing. Wir entwickeln unsere Rezepturen selbst, arbeiten mit Ernährungsexpert und Tierärzten zusammen und machen wirklich alles selbst - von der Verpackung bis zur Website. Warum? Weil wir daran glauben, dass ehrliches Hundefutter kein Luxus sein sollte. Sondern ein Grundrecht für jeden Hund.<\/p>",
+            "row_content": "<p><strong>Eine Familie mit einem Hund namens Rusty und einer Idee, die größer wurde als geplant. </strong>Rusty kam in unser Leben und stellte alles auf den Kopf. Wir wollten das Beste für ihn, also begannen wir, selbst zu kochen. Mit der Zeit entstand daraus ein Futter, das nicht nur für Rusty, sondern auch für andere Hunde perfekt funktionierte. Freunde fragten nach, Bekannte bestellten mit, irgendwann wurden es so viele, dass wir entschieden: Lass uns das richtig machen.</p><p>Heute ist Uncle Rusty’s eine kleine, unabhängige Marke aus dem Süden Bayerns. Ohne Investoren, ohne Konzernstruktur, ohne künstliches Marketing. Wir entwickeln unsere Rezepturen selbst, arbeiten mit Ernährungsexpert und Tierärzten zusammen und machen wirklich alles selbst - von der Verpackung bis zur Website. Warum? Weil wir daran glauben, dass ehrliches Hundefutter kein Luxus sein sollte. Sondern ein Grundrecht für jeden Hund.</p>",
             "page": ""
           }
         },
@@ -826,7 +919,7 @@
           "settings": {
             "heading": "Wie läuft die Lieferung und brauche ich ein Abo?",
             "icon": "none",
-            "row_content": "<p><strong>Ganz einfach, ganz flexibel – und ganz ohne Verpflichtung. <\/strong>Du wählst aus, was du brauchst, legst deine Wunschmenüs in den Warenkorb und entscheidest, ob du einmalig bestellst oder ein Abo nutzen möchtest. Wenn du das Abo wählst, kannst du es jederzeit anpassen, pausieren oder beenden. Direkt im Kundenkonto oder per Mail. Ohne versteckte Bedingungen, ohne Haken. Einfach eine Erinnerung weniger im Alltag - und bis zu 20 % günstiger.<\/p><p>Wir versenden klimafreundlich mit DHL, in der Regel innerhalb von 1–3 Werktagen. Ab einem Warenwert von 29 € ist der Versand kostenlos. Beim Probierpaket sowieso. Auch der Versand ist bei uns durchdacht - plastikfrei, stabil und schnell bei dir.<\/p>",
+            "row_content": "<p><strong>Ganz einfach, ganz flexibel – und ganz ohne Verpflichtung. </strong>Du wählst aus, was du brauchst, legst deine Wunschmenüs in den Warenkorb und entscheidest, ob du einmalig bestellst oder ein Abo nutzen möchtest. Wenn du das Abo wählst, kannst du es jederzeit anpassen, pausieren oder beenden. Direkt im Kundenkonto oder per Mail. Ohne versteckte Bedingungen, ohne Haken. Einfach eine Erinnerung weniger im Alltag - und bis zu 20 % günstiger.</p><p>Wir versenden klimafreundlich mit DHL, in der Regel innerhalb von 1–3 Werktagen. Ab einem Warenwert von 29 € ist der Versand kostenlos. Beim Probierpaket sowieso. Auch der Versand ist bei uns durchdacht - plastikfrei, stabil und schnell bei dir.</p>",
             "page": ""
           }
         },
@@ -835,7 +928,7 @@
           "settings": {
             "heading": "Was unterscheidet euch von anderen Marken?",
             "icon": "none",
-            "row_content": "<p><strong>Vielleicht am meisten: Wir meinen es wirklich so. <\/strong>Uncle Rusty’s ist kein Produkt, das von einer Agentur entwickelt wurde. Es ist aus dem echten Leben entstanden. Weil wir selbst frustriert waren von Intransparenz, aufgeblähten Versprechen und den immer gleichen Zutatenlisten. Weil wir selbst gesehen haben, wie Hunde unter falscher Ernährung leiden und wie schnell sie aufblühen, wenn man’s richtig macht.<\/p><p>Wir haben keine Investoren, keine Pflicht zur Marge, keine Budgetabteilung, die vorgibt, was ins Futter darf. Wir machen das, weil wir überzeugt sind. Weil wir durch jeden Kundenkontakt besser werden. Weil wir auf jede Mail antworten. Und weil wir glauben, dass Ehrlichkeit das einzige Geschäftsmodell ist, das auf Dauer funktioniert.<br\/><br\/>Uncle Rusty’s ist mehr als Futter. Es ist ein kleiner Gegenentwurf zu einer Welt, in der der Napf oft das letzte ist, worüber sich Gedanken gemacht wird<\/p>",
+            "row_content": "<p><strong>Vielleicht am meisten: Wir meinen es wirklich so. </strong>Uncle Rusty’s ist kein Produkt, das von einer Agentur entwickelt wurde. Es ist aus dem echten Leben entstanden. Weil wir selbst frustriert waren von Intransparenz, aufgeblähten Versprechen und den immer gleichen Zutatenlisten. Weil wir selbst gesehen haben, wie Hunde unter falscher Ernährung leiden und wie schnell sie aufblühen, wenn man’s richtig macht.</p><p>Wir haben keine Investoren, keine Pflicht zur Marge, keine Budgetabteilung, die vorgibt, was ins Futter darf. Wir machen das, weil wir überzeugt sind. Weil wir durch jeden Kundenkontakt besser werden. Weil wir auf jede Mail antworten. Und weil wir glauben, dass Ehrlichkeit das einzige Geschäftsmodell ist, das auf Dauer funktioniert.<br/><br/>Uncle Rusty’s ist mehr als Futter. Es ist ein kleiner Gegenentwurf zu einer Welt, in der der Napf oft das letzte ist, worüber sich Gedanken gemacht wird</p>",
             "page": ""
           }
         }
@@ -871,8 +964,8 @@
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
-        "content": "<h2>Abonniere jetzt unseren Newsletter, <br\/>um keine Rabattaktion zu verpassen!<\/h2>",
+        "background_image": "shopify://shop_images/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
+        "content": "<h2>Abonniere jetzt unseren Newsletter, <br/>um keine Rabattaktion zu verpassen!</h2>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
