@@ -66,6 +66,12 @@
         },
         {
           "type": "text",
+          "id": "headline",
+          "label": "Headline",
+          "default": "Feature Headline"
+        },
+        {
+          "type": "text",
           "id": "text",
           "label": "Beschreibung",
           "default": "Feature Beschreibung hier"
@@ -107,8 +113,9 @@
             <div class="feature-icon">
               {{ block.settings.icon_svg }}
             </div>
-            <div class="feature-text">
-              {{ block.settings.text }}
+            <div class="feature-content">
+              <div class="feature-headline">{{ block.settings.headline }}</div>
+              <div class="feature-text">{{ block.settings.text }}</div>
             </div>
           </div>
         {% endfor %}
@@ -157,7 +164,7 @@
 
 .feature-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .feature-icon svg {
@@ -166,6 +173,18 @@
   margin-right: 15px;
   fill: currentColor;
   color: #333;
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-headline {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #111;
 }
 
 .feature-text {
