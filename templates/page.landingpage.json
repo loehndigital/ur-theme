@@ -575,121 +575,6 @@
         "include_margins": true
       }
     },
-    "rich_text_bdynjC": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_A8Q4H8": {
-          "type": "heading",
-          "settings": {
-            "heading": "Jede Sorte ein Lieblingsrezept",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_A8Q4H8"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 36
-      }
-    },
-    "highlight_product_TnH9XC": {
-      "type": "highlight-product",
-      "name": "UR Produktbalken",
-      "settings": {
-        "product_title": "Ente mit Karotten und Hirse: Zart. Verträglich. Voller Nährstoffe.",
-        "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
-        "image_position": "right",
-        "background_color": "#d6b36f",
-        "text_color_mode": "light",
-        "padding_vertical": 20
-      }
-    },
-    "highlight_product_gkLCzx": {
-      "type": "highlight-product",
-      "name": "UR Produktbalken",
-      "settings": {
-        "product_title": "Geflügel mit Kürbis und Amaranth: Mageres Fleisch trifft Powerkorn",
-        "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify://shop_images/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
-        "image_position": "right",
-        "background_color": "#d0b968",
-        "text_color_mode": "light",
-        "padding_vertical": 20
-      }
-    },
-    "highlight_product_QgccCq": {
-      "type": "highlight-product",
-      "name": "UR Produktbalken",
-      "settings": {
-        "product_title": "Lachs mit Kürbis, Haferkleie und Apfel: Omega-Power aus dem Wasser",
-        "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify://shop_images/lachs_800g_b5aaa181-332a-4a41-8f5c-cb0a7d734d11.png",
-        "image_position": "right",
-        "background_color": "#daafa2",
-        "text_color_mode": "light",
-        "padding_vertical": 20
-      }
-    },
-    "highlight_product_6DgEez": {
-      "type": "highlight-product",
-      "name": "UR Produktbalken",
-      "settings": {
-        "product_title": "Lamm mit Rote Beete, Haferkleie und Apfel: Sanfte Kraft für den Bauch",
-        "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify://shop_images/lamm_800g_v2.png",
-        "image_position": "right",
-        "background_color": "#9fbcc5",
-        "text_color_mode": "light",
-        "padding_vertical": 20
-      }
-    },
-    "highlight_product_yGffdL": {
-      "type": "highlight-product",
-      "name": "UR Produktbalken",
-      "settings": {
-        "product_title": "Pferd mit Karotte und Quinoa: Hypoallergen. Reduziert. Rein.",
-        "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify://shop_images/pferd_800g_c40c9051-5c62-4353-b295-13c1e25cc264.png",
-        "image_position": "right",
-        "background_color": "#b4aec2",
-        "text_color_mode": "light",
-        "padding_vertical": 20
-      }
-    },
-    "highlight_product_mHHMDr": {
-      "type": "highlight-product",
-      "name": "UR Produktbalken",
-      "settings": {
-        "product_title": "Rind mit Kartoffeln und Karotten: Rustikal, wie bei Oma. Nur für Hunde.",
-        "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify://shop_images/rind_800g_9701a81b-c8aa-4e09-8ba7-4f3b6851f0a5.png",
-        "image_position": "right",
-        "background_color": "#ce6637",
-        "text_color_mode": "light",
-        "padding_vertical": 20
-      }
-    },
-    "highlight_product_HmajQH": {
-      "type": "highlight-product",
-      "name": "UR Produktbalken",
-      "settings": {
-        "product_title": "Wild mit Süßkartoffeln und Zucchini: Kraftvoll, ursprünglich, pur.",
-        "product_description": "Beschreibungstext hier einfügen",
-        "product_image": "shopify://shop_images/wild_800g_58fe7a12-1637-44b4-bd51-52d066f68ed7.png",
-        "image_position": "right",
-        "background_color": "#7ba283",
-        "text_color_mode": "light",
-        "padding_vertical": 20
-      }
-    },
     "hero_slider_RqPLDN": {
       "type": "hero-slider",
       "blocks": {
@@ -794,6 +679,121 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "rich_text_bdynjC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A8Q4H8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jede Sorte ein Lieblingsrezept",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_A8Q4H8"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "highlight_product_TnH9XC": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Ente mit Karotten und Hirse: Zart. Verträglich. Voller Nährstoffe.",
+        "product_description": "50 % Muskelfleisch von der Ente, 10 % Entenhälse, 5 % Entenherzen - kombiniert mit 10 % Karotten, 10 % Hirse und 15 % kräftiger Fleischbrühe. Ein fein abgestimmtes Rezept für echte Feinschmecker.",
+        "product_image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
+        "image_position": "right",
+        "background_color": "#d6b36f",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
+    "highlight_product_gkLCzx": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Geflügel mit Kürbis und Amaranth: Mageres Fleisch trifft Powerkorn",
+        "product_description": "63 % feinstes Hühnerfleisch: mit zartem Muskelfleisch, nährstoffreicher Leber, Herz & Magen. Dazu 10 % Kürbis, 7 % Bio-Amaranth und 20 % kräftige Fleischbrühe.\nLeicht verdaulich und ideal für aktive Genießer und empfindliche Mägen",
+        "product_image": "shopify://shop_images/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
+        "image_position": "right",
+        "background_color": "#d0b968",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
+    "highlight_product_QgccCq": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Lachs mit Kürbis, Haferkleie und Apfel: Omega-Power aus dem Wasser",
+        "product_description": "50 % Lachs - die frische Kraft aus dem Wasser, 15 % Kürbis, 12 % Haferkleie, 8 % Apfel, 0,47 % Algenkalk und 14,53 % Fleischbrühe.\nIdeal für Haut, Fell und eine Extraportion Omega-3.",
+        "product_image": "shopify://shop_images/lachs_800g_b5aaa181-332a-4a41-8f5c-cb0a7d734d11.png",
+        "image_position": "right",
+        "background_color": "#daafa2",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
+    "highlight_product_6DgEez": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Lamm mit Rote Beete, Haferkleie und Apfel: Sanfte Kraft für den Bauch",
+        "product_description": "40 % zartes Muskelfleisch vom Lamm, dazu 5 % Lunge, 5 % Herz, 5 % Leber, 15 % Rote Beete, 10 % Haferkleie, 8 % Apfel und 12 % Fleischbrühe. Ein ausgewogenes Rezept mit natürlichem Eisen & wertvollen Ballaststoffen.",
+        "product_image": "shopify://shop_images/lamm_800g_v2.png",
+        "image_position": "right",
+        "background_color": "#9fbcc5",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
+    "highlight_product_yGffdL": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Pferd mit Karotte und Quinoa: Hypoallergen. Reduziert. Rein.",
+        "product_description": "40 % zartes Muskelfleisch vom Pferd, dazu 6 % Herz, 6 % Lunge, 5 % Leber, 16 % Karotte, 8 % Quinoa, 0,37 % Algenkalk und 18,63 % Fleischbrühe. Puristisch, hypoallergen & besonders verträglich: Ideal für sensible Hunde und Ausschlussdiäten.",
+        "product_image": "shopify://shop_images/pferd_800g_c40c9051-5c62-4353-b295-13c1e25cc264.png",
+        "image_position": "right",
+        "background_color": "#b4aec2",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
+    "highlight_product_mHHMDr": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Rind mit Kartoffeln und Karotten: Rustikal, wie bei Oma. Nur für Hunde.",
+        "product_description": "40 % zartes Muskelfleisch vom Rind, dazu 7 % Herz, 7 % Lunge, 4 % Leber, 11 % Kartoffeln, 11 % Karotten, 0,47 % Algenkalk und 19,53 % Fleischbrühe.\nHerzhaft, sättigend & voller Energie: Ein kräftiges Menü für aktive Hunde mit Geschmack.",
+        "product_image": "shopify://shop_images/rind_800g_9701a81b-c8aa-4e09-8ba7-4f3b6851f0a5.png",
+        "image_position": "right",
+        "background_color": "#ce6637",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
+    "highlight_product_HmajQH": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Wild mit Süßkartoffeln und Zucchini: Kraftvoll, ursprünglich, pur.",
+        "product_description": "20 % zartes Muskelfleisch vom Reh und Hirsch, dazu 10 % Lunge & Luftröhre, 5 % Leber, 15 % Muskelfleisch vom Rind, 5 % Herz, 5 % Lunge, 13 % Süßkartoffeln, 10 % Zucchini, 0,29 % Algenkalk und 16,71 % Fleischbrühe. Ein fein abgestimmter Mix aus Wild & Rind.",
+        "product_image": "shopify://shop_images/wild_800g_58fe7a12-1637-44b4-bd51-52d066f68ed7.png",
+        "image_position": "right",
+        "background_color": "#7ba283",
+        "text_color_mode": "light",
+        "padding_vertical": 20
       }
     },
     "collapsible_content_8Ctycq": {
