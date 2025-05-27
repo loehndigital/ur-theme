@@ -200,14 +200,6 @@
             "icon_links": true,
             "icon_rechts": false
           }
-        },
-        "feature_3bMtBQ": {
-          "type": "feature",
-          "settings": {
-            "text_links": "",
-            "icon_links": true,
-            "icon_rechts": false
-          }
         }
       },
       "block_order": [
@@ -221,8 +213,7 @@
         "feature_tdfq3D",
         "feature_Fg3Qg3",
         "feature_tGb8VB",
-        "feature_jWzfzE",
-        "feature_3bMtBQ"
+        "feature_jWzfzE"
       ],
       "name": "Vergleich – Just Russel Stil",
       "settings": {
