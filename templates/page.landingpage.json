@@ -235,6 +235,7 @@
         "feature_Qk3q4i",
         "feature_qaEjiV"
       ],
+      "disabled": true,
       "name": "Vergleichstabelle",
       "settings": {
         "ueberschrift_text": "Was Uncle Rusty's besonders macht?",
@@ -939,7 +940,6 @@
     "rich_text_gfNiBL",
     "1746432726ef4be35b",
     "rich_text_kpjUct",
-    "vergleichstabelle_TwExww",
     "vergleichstabelle_2_8cxTgf",
     "features_QgMU8P",
     "featured_product_WRH7Xi",
@@ -956,6 +956,7 @@
     "highlight_product_mHHMDr",
     "highlight_product_HmajQH",
     "collapsible_content_8Ctycq",
-    "802ec653-45c7-4db1-a744-3e8f11792f91"
+    "802ec653-45c7-4db1-a744-3e8f11792f91",
+    "vergleichstabelle_TwExww"
   ]
 }
