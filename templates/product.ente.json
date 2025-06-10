@@ -289,6 +289,38 @@
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_Epy7tG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LgQ4Br": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die Zutaten im Überblick",
+            "heading_size": "h1"
+          }
+        },
+        "text_7kVM3m": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LgQ4Br",
+        "text_7kVM3m"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -673,6 +705,7 @@
     "icon_row_RbbQDB",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "rich_text_Epy7tG",
     "highlight_product_hYcf7H",
     "highlight_product_CPWfJ4",
     "highlight_product_qW63DB",
