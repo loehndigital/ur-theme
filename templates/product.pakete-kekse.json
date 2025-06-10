@@ -12,8 +12,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "judge_me_reviews_preview_badge_8PHNed": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -55,13 +60,23 @@
             "header_text": "Bestelloptionen",
             "one_time_text": "Einmalige Lieferung",
             "recurring_text": "Monatliche Lieferung",
+            "prepaid_recurring_text": "Prepaid Subscribe and Save",
             "discount_summary_text": "(Spare {discount})",
             "discount_summary_plural_text": "(Spare bis zu {discount})",
             "frequency_header": "Alle 4 Wochen",
             "frequency_text": "Lieferung",
+            "prepaid_checkbox_label_text": "Prepay for subscription",
             "billing_frequency_header": "Rechungsinterval",
             "billing_frequency_text": "Jede {count} Bestellung",
-            "prepaid_total_text": "Dir werden heute {price} in Rechnung gestellt"
+            "delivery_frequency_discount_text": "({discount} off)",
+            "billing_frequency_discount_text": "({discount} off)",
+            "prepaid_total_text": "Dir werden heute {price} in Rechnung gestellt",
+            "prepaid_continue_as_prepaid_text": "Prepaid order will auto-renew after {count} orders",
+            "prepaid_continue_as_standard_text": "Becomes a regular subscription after {count} orders",
+            "convertible_header": "Converts to",
+            "eligible_for_subscription_header": "Eligible for Subscription",
+            "initial_dynamic_discount_text": "Save {initial_percent_discount}% ({initial_fixed_discount})",
+            "subsequent_dynamic_discounts_text": "{subsequent_percent_discount}% ({subsequent_fixed_discount}) after {order_count} order(s)"
           }
         },
         "buy_buttons": {
@@ -109,6 +124,7 @@
         }
       },
       "block_order": [
+        "judge_me_reviews_preview_badge_8PHNed",
         "vendor",
         "title",
         "caption",
