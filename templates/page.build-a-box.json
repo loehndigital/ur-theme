@@ -192,6 +192,20 @@
         "include_margins": true
       }
     },
+    "full_width_banner_rP8Rni": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify://shop_images/Comp_4_v2.jpg",
+        "content": "<h1><strong>Erfahre was unser Futter besonders macht?</strong></h1><p></p>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
+        "newsletter": "false",
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
+      }
+    },
     "vergleichstabelle_2_bqfnYU": {
       "type": "vergleichstabelle-2",
       "blocks": {
@@ -758,6 +772,7 @@
     "rich_text_3cefM9",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "1702222298d12bda40",
+    "full_width_banner_rP8Rni",
     "vergleichstabelle_2_bqfnYU",
     "rich_text_wAeczU",
     "highlight_product_RVVMbi",
