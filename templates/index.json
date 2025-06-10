@@ -34,7 +34,7 @@
             "richtext_max_width": 450,
             "button_link": "shopify://collections/all",
             "button_label": "Jetzt entdecken",
-            "theme_mode": "dark",
+            "theme_mode": "light",
             "blur": "no-blur"
           }
         },
