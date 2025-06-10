@@ -605,89 +605,6 @@
         "theme_mode": "light",
         "desktop_blur": "desktop-blur"
       }
-    },
-    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify://shop_images/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
-        "content": "<h1><strong>10€ Rabatt auf Deine nächste Bestellung</strong></h1><p>Hol dir deinen 10 EUR* Rabatt Coupon ganz einfach jetzt und abonniere uneren Newsletter für Updates und Informationen zum Hund. <br/><em>* Einlösbar ab einem Einkaufswert von € 49,-</em><br/></p>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "true",
-        "theme_mode": "dark",
-        "desktop_blur": "no-desktop-blur"
-      }
-    },
-    "ur_image_with_text_C6GbQL": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "heading_VPMk49": {
-          "type": "heading",
-          "settings": {
-            "heading": "Die Zutaten im Überblick",
-            "heading_size": "h1"
-          }
-        },
-        "text_nhbJpz": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Natürlich und durchdacht: Unsere Zutaten machen den Unterschied. Jede Komponente bringt ihre Stärken mit und sorgt für eine gesunde und schmackhafte Mahlzeit.</p>",
-            "text_style": "body"
-          }
-        },
-        "icon_text_XBjNXz": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Ente",
-            "show_accordion": true,
-            "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.</p>"
-          }
-        },
-        "icon_text_h6eM3n": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Karotten",
-            "show_accordion": true,
-            "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt.</p>"
-          }
-        },
-        "icon_text_pFTTYR": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Hirse",
-            "show_accordion": true,
-            "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_VPMk49",
-        "text_nhbJpz",
-        "icon_text_XBjNXz",
-        "icon_text_h6eM3n",
-        "icon_text_pFTTYR"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/NB_Quadrat4.png",
-        "height": "medium",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -704,8 +621,6 @@
     "vergleichstabelle_2_wYjf7q",
     "related-products",
     "05f67661-57d3-4393-b235-9279296aa6fd",
-    "full_width_banner_88Jzex",
-    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
-    "ur_image_with_text_C6GbQL"
+    "full_width_banner_88Jzex"
   ]
 }
