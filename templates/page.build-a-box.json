@@ -386,6 +386,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_KTpGGn": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Pferd mit Karotte und Quinoa: Hypoallergen. Reduziert. Rein.",
+        "product_description": "40 % zartes Muskelfleisch vom Pferd, dazu 6 % Herz, 6 % Lunge, 5 % Leber, 16 % Karotte, 8 % Quinoa, 0,37 % Algenkalk und 18,63 % Fleischbrühe. Puristisch, hypoallergen & besonders verträglich: Ideal für sensible Hunde und Ausschlussdiäten.",
+        "product_image": "shopify://shop_images/pferd_800g_c40c9051-5c62-4353-b295-13c1e25cc264.png",
+        "image_position": "right",
+        "background_color": "#b4aec2",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -514,6 +527,7 @@
     "highlight_product_wEELjn",
     "highlight_product_GR9pUH",
     "highlight_product_6DTQmb",
+    "highlight_product_KTpGGn",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
