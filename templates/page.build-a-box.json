@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,9 +23,10 @@
         "hero_slide_9yGGV4": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/comp3_0191_Kopie.jpg",
-            "hero_image_mobile": "shopify:\/\/shop_images\/comp2.png",
-            "hero_text": "<h1>Natürlich. regional. einzigartig.<\/h1><p>Schaffe die ideale Basis für die Gesundheit deines Hundes – ganz natürlich und individuell.<\/p>",
+            "hero_image": "shopify://shop_images/comp3_0191_Kopie.jpg",
+            "hero_image_mobile": "shopify://shop_images/comp2.png",
+            "hero_text": "<h1>Natürlich. regional. einzigartig.</h1><p>Schaffe die ideale Basis für die Gesundheit deines Hundes – ganz natürlich und individuell.</p>",
+            "richtext_max_width": 450,
             "button_link": "",
             "button_label": "",
             "theme_mode": "light",
@@ -29,6 +39,12 @@
       ],
       "settings": {}
     },
+    "174956369024e4f9cd": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -36,10 +52,10 @@
         "additives_collection": "",
         "cookies_collection": "hundesnacks-6-sorten",
         "questionaire_subscription_plan": 688893919496,
-        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 7 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!<\/p>",
-        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
+        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 7 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!</p>",
+        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?</p>",
         "questionaire_button_label": "Ernährungsberatung",
-        "questionaire_button_link": "shopify:\/\/pages\/beratung",
+        "questionaire_button_link": "shopify://pages/beratung",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
         "promo_break_1_text": "Füge {COUNTER} Dosen hinzu und erhalte 1x 400g Dose gratis!",
         "promo_break_1_target": 6,
@@ -95,172 +111,11 @@
         "padding_bottom": 20
       }
     },
-    "full_width_banner_mHzKC9": {
-      "type": "full-width-banner",
-      "disabled": true,
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/comp1_1.jpg",
-        "content": "<p>Der Text<\/p>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "false",
-        "theme_mode": "dark",
-        "desktop_blur": "desktop-blur"
-      }
-    },
-    "rich_text_JrgidR": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_mjihqp": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_dgGn6C": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "button_PEX4GW": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_mjihqp",
-        "text_dgGn6C",
-        "button_PEX4GW"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "ur_image_with_text_p4A4qV": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "heading_DELyEn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_GVALCr": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wir stehen für naturbelassenes Hundefutter aus ethisch verantwortungsvoller Weidehaltung, schonend zubereitet und frei von künstlichen Zusätzen. So garantieren wir eine gesunde und schmackhafte Ernährung, die auf Nachhaltigkeit und höchste Qualität setzt.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_kkfAKp": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_DELyEn",
-        "text_GVALCr",
-        "button_kkfAKp"
-      ],
-      "disabled": true,
-      "settings": {
-        "height": "adapt",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_r4Prxy": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_h8VyzK": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_QLfkDH": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_YiQznY": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_h8VyzK",
-        "column_QLfkDH",
-        "column_YiQznY"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Unser Anspruch",
-        "heading_alignment": "center",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "1702222298d12bda40": {
       "type": "apps",
       "blocks": {
         "2df67da2-3787-42ca-af3b-1a0e3d478f49": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "maxwidth": 1080
           }
@@ -276,8 +131,8 @@
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
-        "content": "<h2>Abonniere jetzt unseren Newsletter, <br\/>um keine Rabattaktion zu verpassen!<\/h2>",
+        "background_image": "shopify://shop_images/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
+        "content": "<h2>Abonniere jetzt unseren Newsletter, <br/>um keine Rabattaktion zu verpassen!</h2>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
@@ -390,11 +245,8 @@
   "order": [
     "main",
     "hero_slider_WJ9jLG",
+    "174956369024e4f9cd",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
-    "full_width_banner_mHzKC9",
-    "rich_text_JrgidR",
-    "ur_image_with_text_p4A4qV",
-    "multicolumn_r4Prxy",
     "1702222298d12bda40",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
