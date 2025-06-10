@@ -373,6 +373,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_6DTQmb": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Lamm mit Rote Beete, Haferkleie und Apfel: Sanfte Kraft für den Bauch",
+        "product_description": "40 % zartes Muskelfleisch vom Lamm, dazu 5 % Lunge, 5 % Herz, 5 % Leber, 15 % Rote Beete, 10 % Haferkleie, 8 % Apfel und 12 % Fleischbrühe. Ein ausgewogenes Rezept mit natürlichem Eisen & wertvollen Ballaststoffen.",
+        "product_image": "shopify://shop_images/lamm_800g_v2.png",
+        "image_position": "right",
+        "background_color": "#9fbcc5",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -500,6 +513,7 @@
     "highlight_product_RVVMbi",
     "highlight_product_wEELjn",
     "highlight_product_GR9pUH",
+    "highlight_product_6DTQmb",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
