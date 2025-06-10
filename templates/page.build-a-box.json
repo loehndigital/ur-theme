@@ -360,6 +360,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_GR9pUH": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Lachs mit Kürbis, Haferkleie und Apfel: Omega-Power aus dem Wasser",
+        "product_description": "50 % Lachs - die frische Kraft aus dem Wasser, 15 % Kürbis, 12 % Haferkleie, 8 % Apfel, 0,47 % Algenkalk und 14,53 % Fleischbrühe.\nIdeal für Haut, Fell und eine Extraportion Omega-3.",
+        "product_image": "shopify://shop_images/lachs_800g_b5aaa181-332a-4a41-8f5c-cb0a7d734d11.png",
+        "image_position": "right",
+        "background_color": "#daafa2",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -486,6 +499,7 @@
     "rich_text_wAeczU",
     "highlight_product_RVVMbi",
     "highlight_product_wEELjn",
+    "highlight_product_GR9pUH",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
