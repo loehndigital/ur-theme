@@ -335,7 +335,7 @@
           "type": "hero-slide",
           "settings": {
             "hero_image": "shopify://shop_images/Comp_4.jpg",
-            "hero_text": "<h1>Deine Futterbox. Dein Geschmack. Deine Aktion.</h1><p>Wähle einfach deine Lieblingssorten, kombiniere nach Lust und Laune – und sichere dir dabei unser exklusives Aktionspaket:<br/><br/>🎁 <strong>Bis zu 8 Dosen gratis</strong>, <strong>2 Packungen Hundekekse geschenkt</strong><br/>💰 <strong>+ 10 % Rabatt auf deine gesamte Bestellung</strong></p><p></p>",
+            "hero_text": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile der Ente</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 65 % hochwertigem Entenfleisch und sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
             "richtext_max_width": 550,
             "button_link": "",
             "button_label": "",
