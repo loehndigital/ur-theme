@@ -51,9 +51,9 @@
           "settings": {
             "layout": "vertical",
             "icon_1": "heart",
-            "heading_1": "Premium Hundenahrung aus dem Süden von Bayern",
+            "heading_1": "Premium Hundenahrung aus </br>dem Süden von Bayern",
             "icon_2": "return",
-            "heading_2": "Versandbereit in 24h </br>bei dir in 2-3 Tagen",
+            "heading_2": "Versandbereit in 24h bei dir in 2-3 Tagen",
             "icon_3": "none",
             "heading_3": ""
           }
@@ -342,6 +342,124 @@
         "desktop_blur": "no-desktop-blur"
       }
     },
+    "vergleichstabelle_2_wYjf7q": {
+      "type": "vergleichstabelle-2",
+      "blocks": {
+        "feature_hUExeB": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Glasklare Zutatenliste: 100 % deklariert, keine Tricks",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_infjeY": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Muskelfleisch aus artgerechter Haltung statt Abfällen",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_gXUPKq": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Zutaten aus Bayern & Umgebung. Frisch, regional, ehrlich",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_zqT9QN": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "text_links": "Schonendes Slow-Cooking für maximale Nährstoffe",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_8JmFwi": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Optimale Nährstoffbalance abgestimmt auf Energie, Gesundheit & Vitalität",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_M7BGzp": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Frei von Weizen, Zucker, Füllstoffen, Lockstoffen & synthetischen Vitaminen",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_34VXYC": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Hochwertige Proteine & Fette für starke Muskeln & Energie",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_nNjigV": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Besonders hohe Akzeptanz auch bei sensiblen Hunden",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_6gC4Lr": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Unterstützt Verdauung, Fell, Abwehrkräfte & Immunsystem",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_hz4HEY": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Kleine Chargen mit Sorgfalt gekocht. Kein Industriefutter",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_cEQLQf": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Familiengeführt von Hundemenschen mit Herz und Verstand",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        }
+      },
+      "block_order": [
+        "feature_hUExeB",
+        "feature_infjeY",
+        "feature_gXUPKq",
+        "feature_zqT9QN",
+        "feature_8JmFwi",
+        "feature_M7BGzp",
+        "feature_34VXYC",
+        "feature_nNjigV",
+        "feature_6gC4Lr",
+        "feature_hz4HEY",
+        "feature_cEQLQf"
+      ],
+      "name": "Vergleich – Just Russel Stil",
+      "settings": {
+        "ueberschrift_text": "Was unser Futter besonders macht",
+        "ueberschrift_alignment": "left",
+        "vergleichsbild_links": "shopify://shop_images/UR-Dosen.png",
+        "vergleichsbild_rechts": "shopify://shop_images/Basic-Hundefutter.png",
+        "produktname_links": "Uncle Rusty's",
+        "produktname_rechts": "Supermarkt",
+        "bg_color": "#f2eee3",
+        "zebra_color": "#ece7d8"
+      }
+    },
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
       "type": "full-width-banner",
       "settings": {
@@ -559,6 +677,7 @@
     "highlight_product_CPWfJ4",
     "highlight_product_qW63DB",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
+    "vergleichstabelle_2_wYjf7q",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "related-products",
     "ur_image_with_text_C6GbQL",
