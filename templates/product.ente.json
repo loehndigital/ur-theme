@@ -339,6 +339,16 @@
         "padding_vertical": 24
       }
     },
+    "custom_liquid_fxFdti": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "hero_slider_xXWAUq": {
       "type": "hero-slider",
       "blocks": {
@@ -627,6 +637,7 @@
     "highlight_product_hYcf7H",
     "highlight_product_CPWfJ4",
     "highlight_product_qW63DB",
+    "custom_liquid_fxFdti",
     "hero_slider_xXWAUq",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "vergleichstabelle_2_wYjf7q",
