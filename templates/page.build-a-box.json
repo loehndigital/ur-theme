@@ -412,6 +412,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_tJYHcT": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Wild mit Süßkartoffeln und Zucchini: Kraftvoll, ursprünglich, pur.",
+        "product_description": "20 % zartes Muskelfleisch vom Reh und Hirsch, dazu 10 % Lunge & Luftröhre, 5 % Leber, 15 % Muskelfleisch vom Rind, 5 % Herz, 5 % Lunge, 13 % Süßkartoffeln, 10 % Zucchini, 0,29 % Algenkalk und 16,71 % Fleischbrühe. Ein fein abgestimmter Mix aus Wild & Rind.",
+        "product_image": "shopify://shop_images/wild_800g_58fe7a12-1637-44b4-bd51-52d066f68ed7.png",
+        "image_position": "right",
+        "background_color": "#7ba283",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -542,6 +555,7 @@
     "highlight_product_6DTQmb",
     "highlight_product_KTpGGn",
     "highlight_product_myXChL",
+    "highlight_product_tJYHcT",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
