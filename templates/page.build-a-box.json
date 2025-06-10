@@ -399,6 +399,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_myXChL": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Rind mit Kartoffeln und Karotten: Rustikal, wie bei Oma. Nur für Hunde.",
+        "product_description": "40 % zartes Muskelfleisch vom Rind, dazu 7 % Herz, 7 % Lunge, 4 % Leber, 11 % Kartoffeln, 11 % Karotten, 0,47 % Algenkalk und 19,53 % Fleischbrühe.\nHerzhaft, sättigend & voller Energie: Ein kräftiges Menü für aktive Hunde mit Geschmack.",
+        "product_image": "shopify://shop_images/rind_800g_9701a81b-c8aa-4e09-8ba7-4f3b6851f0a5.png",
+        "image_position": "right",
+        "background_color": "#ce6637",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -528,6 +541,7 @@
     "highlight_product_GR9pUH",
     "highlight_product_6DTQmb",
     "highlight_product_KTpGGn",
+    "highlight_product_myXChL",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
