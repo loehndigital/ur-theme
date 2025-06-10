@@ -78,6 +78,37 @@
         "include_margins": true
       }
     },
+    "rich_text_3cefM9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WD8gbK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jeder Hund ist einzigartig. </br>Stelle Dir jetzt ein individuelles Paket zusammen.",
+            "heading_size": "h2"
+          }
+        },
+        "text_xexaDT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WD8gbK",
+        "text_xexaDT"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "82172ece-4d52-4326-8d4d-6c644a0d4924": {
       "type": "build-a-box",
       "settings": {
@@ -280,6 +311,7 @@
     "hero_slider_WJ9jLG",
     "rich_text_EyFpWz",
     "174956400621289c62",
+    "rich_text_3cefM9",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "1702222298d12bda40",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
