@@ -334,6 +334,19 @@
         "padding_bottom": 36
       }
     },
+    "highlight_product_RVVMbi": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Ente mit Karotten und Hirse: Zart. Verträglich. Voller Nährstoffe.",
+        "product_description": "50 % Muskelfleisch von der Ente, 10 % Entenhälse, 5 % Entenherzen - kombiniert mit 10 % Karotten, 10 % Hirse und 15 % kräftiger Fleischbrühe. Ein fein abgestimmtes Rezept für echte Feinschmecker.",
+        "product_image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
+        "image_position": "right",
+        "background_color": "#d6b36f",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -458,6 +471,7 @@
     "1702222298d12bda40",
     "vergleichstabelle_2_bqfnYU",
     "rich_text_wAeczU",
+    "highlight_product_RVVMbi",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
