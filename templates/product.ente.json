@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -36,7 +45,7 @@
           "settings": {}
         },
         "bsub-widget": {
-          "type": "shopify:\/\/apps\/bold-subscriptions\/blocks\/bsub-widget-block\/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
+          "type": "shopify://apps/bold-subscriptions/blocks/bsub-widget-block/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
           "settings": {
             "default_subscribe": false,
             "primary_color": "#211c0e",
@@ -104,7 +113,7 @@
           "settings": {
             "heading": "Fütterungsempfehlung",
             "icon": "check_mark",
-            "content": "",
+            "content": "<p>Fütterungsempfehlung pro Tag: <br/>Bis 5 kg 200g | Bis 20 kg 600g | Bis 30 kg 800g | ab 35 kg 1000g<br/> <br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br/><br/><strong>Zubereitung </strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br/><br/><strong>Fütterung & Lagerung: </strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>",
             "page": ""
           }
         }
@@ -145,28 +154,28 @@
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<p>65% Fleischanteil für eine artgerechte Ernährung.<\/p>"
+            "icon_rich_text": "<p>65% Fleischanteil für eine artgerechte Ernährung.</p>"
           }
         },
         "icon_text_block_mkaAP6": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-fruit-bag",
-            "icon_rich_text": "<p>10% Karotten und 10% Hirse ergänzen das Menü<\/p>"
+            "icon_rich_text": "<p>10% Karotten und 10% Hirse ergänzen das Menü</p>"
           }
         },
         "icon_text_block_4GMfMB": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-cooking",
-            "icon_rich_text": "<p>Schonend im Slow-Cooking Verfahren zubereitet.<\/p>"
+            "icon_rich_text": "<p>Schonend im Slow-Cooking Verfahren zubereitet.</p>"
           }
         },
         "icon_text_block_rUJHEr": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-region-color",
-            "icon_rich_text": "<p>Mit Liebe im Süden von Bayern hergestellt.<\/p>"
+            "icon_rich_text": "<p>Mit Liebe im Süden von Bayern hergestellt.</p>"
           }
         }
       },
@@ -216,7 +225,7 @@
         "text_qYagip": {
           "type": "text",
           "settings": {
-            "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Ente, Karotten und Hirse <\/strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.<\/p>",
+            "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Ente, Karotten und Hirse </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
             "text_style": "body"
           }
         },
@@ -235,7 +244,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Frisches Muskelfleisch und nahrhafte Innereien ",
             "show_accordion": false,
-            "richtext": "<p> <\/p>"
+            "richtext": "<p> </p>"
           }
         },
         "53631e27-d0ef-4248-925c-d004a9c0f2bf": {
@@ -262,7 +271,7 @@
             "icon_selection": "icon-dog",
             "icon_text": "Fütterungsempfehlung ",
             "show_accordion": true,
-            "richtext": "<p>Fütterungsempfehlung pro Tag: <br\/>Bis 5 kg 200g | Bis 20 kg 600g | Bis 30 kg 800g | ab 35 kg 1000g<br\/> <br\/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br\/><br\/><strong>Zubereitung <\/strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br\/><br\/><strong>Fütterung & Lagerung: <\/strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. <\/p>"
+            "richtext": "<p>Fütterungsempfehlung pro Tag: <br/>Bis 5 kg 200g | Bis 20 kg 600g | Bis 30 kg 800g | ab 35 kg 1000g<br/> <br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br/><br/><strong>Zubereitung </strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br/><br/><strong>Fütterung & Lagerung: </strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>"
           }
         },
         "a88c0156-c93d-4ca6-86d1-4430d0d99fb9": {
@@ -271,7 +280,7 @@
             "icon_selection": "icon-lightbulb",
             "icon_text": "Unser Tipp",
             "show_accordion": true,
-            "richtext": "<p>Wechsle die Sorten von Uncle Rusty’s regelmäßig durch. Damit ist der Bedarf Deines Hundes abgedeckt. Der Wechsel der Sorten ist wichtig, da dem Hund dadurch unter anderem verschiedene Vitamine und Proteinquellen zugeführt werden. (Beispiel: die Zugabe von Jod kann durch die Fütterung – 1 pro Woche das Lachsmenü automatisch gemacht werden). Unabhängig von der Futterart und Marke empfehlen wir die Zugabe (in regelmäßigen Abständen) <br\/><br\/>z.B.: Seealgenmehl (für Fell und Schilddrüsenfunktion)<br\/>Grünlippmuschelpulver (für Herz, Knorpeln, Gelenke) <br\/>Leinöl (für Fell, Haut, Stoffwechsel und Verdauung) <br\/>Dorschlebertran (für Knochenbau, Wachstumsfördernd, Konstitution, Fell) <br\/><br\/>Bitte beachte die richtige Dosierung der Produkte! - Der Gehalt ausgewählter Nährstoffe unseres Tierfutters wird regelmäßig von einem unabhängigen und anerkannten Labor geprüft, um den hohen Qualitätsstandard zu sichern. <\/p>"
+            "richtext": "<p>Wechsle die Sorten von Uncle Rusty’s regelmäßig durch. Damit ist der Bedarf Deines Hundes abgedeckt. Der Wechsel der Sorten ist wichtig, da dem Hund dadurch unter anderem verschiedene Vitamine und Proteinquellen zugeführt werden. (Beispiel: die Zugabe von Jod kann durch die Fütterung – 1 pro Woche das Lachsmenü automatisch gemacht werden). Unabhängig von der Futterart und Marke empfehlen wir die Zugabe (in regelmäßigen Abständen) <br/><br/>z.B.: Seealgenmehl (für Fell und Schilddrüsenfunktion)<br/>Grünlippmuschelpulver (für Herz, Knorpeln, Gelenke) <br/>Leinöl (für Fell, Haut, Stoffwechsel und Verdauung) <br/>Dorschlebertran (für Knochenbau, Wachstumsfördernd, Konstitution, Fell) <br/><br/>Bitte beachte die richtige Dosierung der Produkte! - Der Gehalt ausgewählter Nährstoffe unseres Tierfutters wird regelmäßig von einem unabhängigen und anerkannten Labor geprüft, um den hohen Qualitätsstandard zu sichern. </p>"
           }
         }
       },
@@ -286,7 +295,7 @@
         "a88c0156-c93d-4ca6-86d1-4430d0d99fb9"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
+        "image": "shopify://shop_images/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
         "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
@@ -305,8 +314,8 @@
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br\/>Die Vorteile der Ente<\/strong><\/h1><p><em>Hol dir die optimale Ernhärung heim:<\/em><br\/>Mit 65 % hochwertigem Entenfleisch und sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.<\/p>",
+        "background_image": "shopify://shop_images/Comp_4_v2.jpg",
+        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile der Ente</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 65 % hochwertigem Entenfleisch und sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
@@ -320,7 +329,7 @@
       "type": "apps",
       "blocks": {
         "4e0e223b-8191-412f-80a7-a090f143b0c9": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         }
       },
@@ -334,8 +343,8 @@
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
-        "content": "<h1><strong>10€ Rabatt auf Deine nächste Bestellung<\/strong><\/h1><p>Hol dir deinen 10 EUR* Rabatt Coupon ganz einfach jetzt und abonniere uneren Newsletter für Updates und Informationen zum Hund. <br\/><em>* Einlösbar ab einem Einkaufswert von € 49,-<\/em><br\/><\/p>",
+        "background_image": "shopify://shop_images/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
+        "content": "<h1><strong>10€ Rabatt auf Deine nächste Bestellung</strong></h1><p>Hol dir deinen 10 EUR* Rabatt Coupon ganz einfach jetzt und abonniere uneren Newsletter für Updates und Informationen zum Hund. <br/><em>* Einlösbar ab einem Einkaufswert von € 49,-</em><br/></p>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
@@ -376,7 +385,7 @@
         "text_nhbJpz": {
           "type": "text",
           "settings": {
-            "text": "<p>Natürlich und durchdacht: Unsere Zutaten machen den Unterschied. Jede Komponente bringt ihre Stärken mit und sorgt für eine gesunde und schmackhafte Mahlzeit.<\/p>",
+            "text": "<p>Natürlich und durchdacht: Unsere Zutaten machen den Unterschied. Jede Komponente bringt ihre Stärken mit und sorgt für eine gesunde und schmackhafte Mahlzeit.</p>",
             "text_style": "body"
           }
         },
@@ -386,7 +395,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Ente",
             "show_accordion": true,
-            "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.<\/p>"
+            "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.</p>"
           }
         },
         "icon_text_h6eM3n": {
@@ -395,7 +404,7 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Karotten",
             "show_accordion": true,
-            "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt.<\/p>"
+            "richtext": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt.</p>"
           }
         },
         "icon_text_pFTTYR": {
@@ -404,7 +413,7 @@
             "icon_selection": "icon-no-gluten-color",
             "icon_text": "Hirse",
             "show_accordion": true,
-            "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.<\/p>"
+            "richtext": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.</p>"
           }
         }
       },
@@ -416,7 +425,7 @@
         "icon_text_pFTTYR"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/NB_Quadrat4.png",
+        "image": "shopify://shop_images/NB_Quadrat4.png",
         "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
@@ -440,7 +449,7 @@
           "settings": {
             "heading": "Wie stelle ich auf Uncle Rusty’s um?",
             "icon": "none",
-            "row_content": "<p><strong>Rohfleischfütterung zu Uncle Rusty's:<\/strong> Wenn du bereits Rohfleisch fütterst, kannst du nahtlos zu Uncle Rusty's Menüs wechseln, ohne eine Um- oder Eingewöhnungsphase einzulegen.<\/p><p><\/p><p><strong>Nassfutter zu Uncle Rusty's:<\/strong> Wenn dein Hund bereits Nassfutter bekommt, achte darauf, welches Nassfutter zuvor gefüttert wurde. Ein direkter Wechsel von Nassfutter zu Uncle Rusty's ist meist unproblematisch.<\/p><p><\/p><p><strong>Trockenfutter zu Uncle Rusty's:<\/strong> Wenn dein Hund bisher Trockenfutter erhalten hat, empfehlen wir einen schrittweisen Umstieg auf Nassfutter oder Uncle Rusty's Menüs. Beginne mit einem Löffel Nassfutter am ersten Tag und erhöhe die Menge allmählich. Dies hilft deinem Hund, sich an die neue Ernährung zu gewöhnen. Beachte, dass du aufgrund der begrenzten Haltbarkeit von Nassfutter möglicherweise nicht die gesamte Dose an einem Tag verfüttern kannst. Unsere 400-Gramm Dosen eignen sich gut für den Umstieg, da sie eine angemessene Portionsgröße bieten. Geöffnete Menüs sind im Kühlschrank bis zu 3 Tage haltbar.<\/p><p><\/p><p>Der richtige Übergang hängt von den individuellen Vorlieben und Bedürfnissen deines Hundes ab. Beobachte sein Verhalten und passe die Umstellung entsprechend an. Bei Fragen oder Unsicherheiten stehen wir gerne zur Verfügung.<\/p>",
+            "row_content": "<p><strong>Rohfleischfütterung zu Uncle Rusty's:</strong> Wenn du bereits Rohfleisch fütterst, kannst du nahtlos zu Uncle Rusty's Menüs wechseln, ohne eine Um- oder Eingewöhnungsphase einzulegen.</p><p></p><p><strong>Nassfutter zu Uncle Rusty's:</strong> Wenn dein Hund bereits Nassfutter bekommt, achte darauf, welches Nassfutter zuvor gefüttert wurde. Ein direkter Wechsel von Nassfutter zu Uncle Rusty's ist meist unproblematisch.</p><p></p><p><strong>Trockenfutter zu Uncle Rusty's:</strong> Wenn dein Hund bisher Trockenfutter erhalten hat, empfehlen wir einen schrittweisen Umstieg auf Nassfutter oder Uncle Rusty's Menüs. Beginne mit einem Löffel Nassfutter am ersten Tag und erhöhe die Menge allmählich. Dies hilft deinem Hund, sich an die neue Ernährung zu gewöhnen. Beachte, dass du aufgrund der begrenzten Haltbarkeit von Nassfutter möglicherweise nicht die gesamte Dose an einem Tag verfüttern kannst. Unsere 400-Gramm Dosen eignen sich gut für den Umstieg, da sie eine angemessene Portionsgröße bieten. Geöffnete Menüs sind im Kühlschrank bis zu 3 Tage haltbar.</p><p></p><p>Der richtige Übergang hängt von den individuellen Vorlieben und Bedürfnissen deines Hundes ab. Beobachte sein Verhalten und passe die Umstellung entsprechend an. Bei Fragen oder Unsicherheiten stehen wir gerne zur Verfügung.</p>",
             "page": ""
           }
         },
@@ -449,7 +458,7 @@
           "settings": {
             "heading": "Ist Uncle Rusty’s für meinen Hund geeignet?",
             "icon": "none",
-            "row_content": "<p>Uncle Rusty's Menüs sind für eine breite Palette von Hunden geeignet und bieten Anpassungsmöglichkeiten, Ergänzungen und Individualisierungen.<\/p><p><\/p><p>Unsere Rezepturen zeichnen sich durch minimale Zutaten pro Tag und maximale Vielfalt pro Woche aus. Dies ermöglicht es, die Ernährung an die individuellen Bedürfnisse deines Hundes anzupassen.<\/p><p><\/p><p><strong>Für alle Altersgruppen:<\/strong> Unsere Menüs sind sowohl für junge Hunde, ausgewachsene Hunde als auch Senioren geeignet. Wir haben die Rezepturen sorgfältig entwickelt, um sicherzustellen, dass sie die Nährstoffbedürfnisse in verschiedenen Lebensphasen erfüllen.<\/p><p><\/p><p><strong>Spezielle Empfehlungen:<\/strong> Bei jungen Hunden empfehlen wir, die Ernährung mit einer Calcium-Quelle zu ergänzen, um das Wachstum und die Knochengesundheit zu unterstützen. Unsere Ernährungsexperten stehen zur Verfügung, um individuelle Bedürfnisse zu berücksichtigen und maßgeschneiderte Ernährungspläne für deinen Hund zu erstellen.<\/p><p><\/p><p>Wir verstehen, dass jeder Hund einzigartig ist, und deshalb bieten wir eine persönliche Beratung an. Unser Team steht dir gerne zur Verfügung, um individuelle Ernährungspläne für deinen Hund zu erstellen und spezifische Bedürfnisse zu berücksichtigen. Dein Hund verdient nur das Beste, und wir sind hier, um sicherzustellen, dass er es bekommt. Zögere nicht, uns bei Fragen oder für weitere Informationen zu kontaktieren.<\/p>",
+            "row_content": "<p>Uncle Rusty's Menüs sind für eine breite Palette von Hunden geeignet und bieten Anpassungsmöglichkeiten, Ergänzungen und Individualisierungen.</p><p></p><p>Unsere Rezepturen zeichnen sich durch minimale Zutaten pro Tag und maximale Vielfalt pro Woche aus. Dies ermöglicht es, die Ernährung an die individuellen Bedürfnisse deines Hundes anzupassen.</p><p></p><p><strong>Für alle Altersgruppen:</strong> Unsere Menüs sind sowohl für junge Hunde, ausgewachsene Hunde als auch Senioren geeignet. Wir haben die Rezepturen sorgfältig entwickelt, um sicherzustellen, dass sie die Nährstoffbedürfnisse in verschiedenen Lebensphasen erfüllen.</p><p></p><p><strong>Spezielle Empfehlungen:</strong> Bei jungen Hunden empfehlen wir, die Ernährung mit einer Calcium-Quelle zu ergänzen, um das Wachstum und die Knochengesundheit zu unterstützen. Unsere Ernährungsexperten stehen zur Verfügung, um individuelle Bedürfnisse zu berücksichtigen und maßgeschneiderte Ernährungspläne für deinen Hund zu erstellen.</p><p></p><p>Wir verstehen, dass jeder Hund einzigartig ist, und deshalb bieten wir eine persönliche Beratung an. Unser Team steht dir gerne zur Verfügung, um individuelle Ernährungspläne für deinen Hund zu erstellen und spezifische Bedürfnisse zu berücksichtigen. Dein Hund verdient nur das Beste, und wir sind hier, um sicherzustellen, dass er es bekommt. Zögere nicht, uns bei Fragen oder für weitere Informationen zu kontaktieren.</p>",
             "page": ""
           }
         },
@@ -458,7 +467,7 @@
           "settings": {
             "heading": "Was, wenn mein Hund Allergien oder spezielle Bedürfnisse hat?",
             "icon": "none",
-            "row_content": "<p>Bei Uncle Rusty's verstehen wir, dass jeder Hund einzigartig ist und spezielle Bedürfnisse haben kann, einschließlich Allergien. Unsere Menüs sind so konzipiert, dass sie eine breite Palette von Bedürfnissen abdecken können.<\/p><p><\/p><p><strong>Allergien:<\/strong> Wenn dein Hund Allergien hat, solltest du die Inhaltsstoffe auf unseren Etiketten sorgfältig überprüfen, um sicherzustellen, dass sie für deinen Hund sicher sind. Unsere Menüs sind frei von vielen häufigen Allergenen wie Getreide, künstlichen Zusatzstoffen und Füllstoffen. Wir bieten auch eine Vielzahl von Fleischsorten an, um Allergien zu berücksichtigen.<\/p><p><\/p><p><strong>Spezielle Bedürfnisse:<\/strong> Wenn dein Hund spezielle Ernährungsbedürfnisse hat, wie z. B. Gewichtsmanagement, Gelenkgesundheit oder Verdauungsprobleme, stehen wir dir gerne zur Seite. Unsere Ernährungsexperten können individuelle Ernährungspläne erstellen, die auf die Bedürfnisse deines Hundes zugeschnitten sind.<\/p><p><\/p><p><strong>Beratung:<\/strong> Auf unserer Homepage bieten wir ein praktisches Beratungstool an. Klicke einfach auf \"Beratung\", beantworte einige Fragen zu deinem Hund, seinen Vorlieben und besonderen Bedürfnissen, und du erhältst maßgeschneiderte Menüvorschläge inklusive Mengenangabe. Dieses Tool soll dir dabei helfen, die bestmögliche Ernährung für deinen Hund auszuwählen.<\/p><p><\/p><p>Wir unterstützen dich gerne und arbeiten mit deinem Tierarzt zusammen, um sicherzustellen, dass dein Hund die bestmögliche Ernährung erhält und sein Wohlbefinden gefördert wird. Bei Fragen oder Bedenken stehen wir dir jederzeit zur Verfügung.<\/p>",
+            "row_content": "<p>Bei Uncle Rusty's verstehen wir, dass jeder Hund einzigartig ist und spezielle Bedürfnisse haben kann, einschließlich Allergien. Unsere Menüs sind so konzipiert, dass sie eine breite Palette von Bedürfnissen abdecken können.</p><p></p><p><strong>Allergien:</strong> Wenn dein Hund Allergien hat, solltest du die Inhaltsstoffe auf unseren Etiketten sorgfältig überprüfen, um sicherzustellen, dass sie für deinen Hund sicher sind. Unsere Menüs sind frei von vielen häufigen Allergenen wie Getreide, künstlichen Zusatzstoffen und Füllstoffen. Wir bieten auch eine Vielzahl von Fleischsorten an, um Allergien zu berücksichtigen.</p><p></p><p><strong>Spezielle Bedürfnisse:</strong> Wenn dein Hund spezielle Ernährungsbedürfnisse hat, wie z. B. Gewichtsmanagement, Gelenkgesundheit oder Verdauungsprobleme, stehen wir dir gerne zur Seite. Unsere Ernährungsexperten können individuelle Ernährungspläne erstellen, die auf die Bedürfnisse deines Hundes zugeschnitten sind.</p><p></p><p><strong>Beratung:</strong> Auf unserer Homepage bieten wir ein praktisches Beratungstool an. Klicke einfach auf \"Beratung\", beantworte einige Fragen zu deinem Hund, seinen Vorlieben und besonderen Bedürfnissen, und du erhältst maßgeschneiderte Menüvorschläge inklusive Mengenangabe. Dieses Tool soll dir dabei helfen, die bestmögliche Ernährung für deinen Hund auszuwählen.</p><p></p><p>Wir unterstützen dich gerne und arbeiten mit deinem Tierarzt zusammen, um sicherzustellen, dass dein Hund die bestmögliche Ernährung erhält und sein Wohlbefinden gefördert wird. Bei Fragen oder Bedenken stehen wir dir jederzeit zur Verfügung.</p>",
             "page": ""
           }
         },
@@ -467,7 +476,7 @@
           "settings": {
             "heading": "Muss ich etwas ergänzen, wenn ich Uncle Rusty’s füttere?",
             "icon": "none",
-            "row_content": "<p>Die Menüs von Uncle Rusty's sind so konzipiert, dass sie eine ausgewogene Ernährung bieten. Wenn du unsere Menüs im Wechsel fütterst, wird der Bedarf deines Hundes gut abgedeckt. Der Wechsel zwischen verschiedenen Sorten ist wichtig, da dies deinem Hund verschiedene Vitamine und Proteinquellen zuführt.<\/p><p><\/p><p>Wir empfehlen, verschiedene Sorten unserer Menüs zu füttern, um eine Vielfalt an Vitaminen und Proteinquellen sicherzustellen. Hierzu empfehlen wir, wenn möglich, pro Woche 3x helles Fleisch (z.B. Geflügel, Ente), 3x rotes Fleisch (z.B. Wild, Rind, Pferd) sowie 1x Lachs zu geben.<\/p><p><\/p><p>Abgesehen von der Futterart und Marke können bestimmte Ergänzungen von Vorteil sein. Hier sind einige Optionen:<\/p><p><\/p><p><strong>Leinöl:<\/strong> Leinöl kann das Fell und die Haut deines Hundes verbessern, den Stoffwechsel unterstützen und die Verdauung fördern. Achte auf die richtige Dosierung.<\/p><p><\/p><p><strong>Dorschlebertran:<\/strong> Dieses Nahrungsergänzungsmittel ist reich an Omega-3-Fettsäuren und Vitamin D. Es kann den Knochenbau, das Wachstum, die Konstitution und das Fell deines Hundes positiv beeinflussen. Beachte die empfohlene Dosierung.<\/p><p><\/p><p><strong>Seealgenmehl:<\/strong> Seealgenmehl ist eine natürliche Quelle von Mineralien und Spurenelementen. Es kann die Fellgesundheit und die Schilddrüsenfunktion unterstützen.<\/p><p><\/p><p><strong>Grünlippmuschelpulver:<\/strong> Dieses Pulver kann zur Herzgesundheit, zur Erhaltung von Knorpel und Gelenken beitragen. Es ist besonders für Hunde mit Gelenkproblemen relevant.<\/p><p><\/p><p>Es ist wichtig, die richtige Dosierung dieser Produkte einzuhalten. Bei Fragen zur Dosierung oder zur Auswahl von Ergänzungen stehen wir gerne zur Verfügung. Wir sind hier, um sicherzustellen, dass die Ernährung deines Hundes optimal ist und er ein glückliches, gesundes Leben führen kann.<\/p>",
+            "row_content": "<p>Die Menüs von Uncle Rusty's sind so konzipiert, dass sie eine ausgewogene Ernährung bieten. Wenn du unsere Menüs im Wechsel fütterst, wird der Bedarf deines Hundes gut abgedeckt. Der Wechsel zwischen verschiedenen Sorten ist wichtig, da dies deinem Hund verschiedene Vitamine und Proteinquellen zuführt.</p><p></p><p>Wir empfehlen, verschiedene Sorten unserer Menüs zu füttern, um eine Vielfalt an Vitaminen und Proteinquellen sicherzustellen. Hierzu empfehlen wir, wenn möglich, pro Woche 3x helles Fleisch (z.B. Geflügel, Ente), 3x rotes Fleisch (z.B. Wild, Rind, Pferd) sowie 1x Lachs zu geben.</p><p></p><p>Abgesehen von der Futterart und Marke können bestimmte Ergänzungen von Vorteil sein. Hier sind einige Optionen:</p><p></p><p><strong>Leinöl:</strong> Leinöl kann das Fell und die Haut deines Hundes verbessern, den Stoffwechsel unterstützen und die Verdauung fördern. Achte auf die richtige Dosierung.</p><p></p><p><strong>Dorschlebertran:</strong> Dieses Nahrungsergänzungsmittel ist reich an Omega-3-Fettsäuren und Vitamin D. Es kann den Knochenbau, das Wachstum, die Konstitution und das Fell deines Hundes positiv beeinflussen. Beachte die empfohlene Dosierung.</p><p></p><p><strong>Seealgenmehl:</strong> Seealgenmehl ist eine natürliche Quelle von Mineralien und Spurenelementen. Es kann die Fellgesundheit und die Schilddrüsenfunktion unterstützen.</p><p></p><p><strong>Grünlippmuschelpulver:</strong> Dieses Pulver kann zur Herzgesundheit, zur Erhaltung von Knorpel und Gelenken beitragen. Es ist besonders für Hunde mit Gelenkproblemen relevant.</p><p></p><p>Es ist wichtig, die richtige Dosierung dieser Produkte einzuhalten. Bei Fragen zur Dosierung oder zur Auswahl von Ergänzungen stehen wir gerne zur Verfügung. Wir sind hier, um sicherzustellen, dass die Ernährung deines Hundes optimal ist und er ein glückliches, gesundes Leben führen kann.</p>",
             "page": ""
           }
         },
@@ -476,7 +485,7 @@
           "settings": {
             "heading": "Wie oft und wie viel Futter sollte mein Hund täglich bekommen?",
             "icon": "none",
-            "row_content": "<p>Die richtige Menge an Futter für deinen Hund hängt von verschiedenen Faktoren ab, einschließlich seiner Größe, Aktivitätslevel und individuellen Bedürfnisse. Wir möchten sicherstellen, dass dein Hund die optimale Menge an Nahrung erhält.<\/p><p><\/p><p><strong>Unser Beratungstool:<\/strong> Auf unserer Homepage steht ein hilfreiches Beratungstool zur Verfügung. Du kannst es unter \"Beratung\" finden. Mit diesem Tool kannst du die individuelle Tagesmenge an Futter für deinen Hund berechnen und erhältst sogar Menüvorschläge, die auf seine Bedürfnisse zugeschnitten sind. Dies erleichtert die Fütterungsplanung erheblich.<\/p><p><\/p><p><strong>Allgemeine Empfehlung:<\/strong> Als grobe Richtlinie empfehlen wir die folgenden Tagesmengen:<\/p><p><\/p><p>5 kg Hund: 200 Gramm täglich<\/p><p>15 kg Hund: 600 Gramm täglich<\/p><p>25 kg Hund: 800 Gramm täglich<\/p><p>35 kg Hund: 1000 Gramm täglich<\/p><p><\/p><p>Es ist wichtig zu beachten, dass dies allgemeine Empfehlungen sind. Die individuelle Bedarf deines Hundes kann variieren. Wir empfehlen, die Fütterung auf 2 Mahlzeiten pro Tag aufzuteilen und ausreichend Zeit zwischen den Fütterungen zu lassen. Dadurch wird die Verdauung deines Hundes unterstützt und er kann die Nahrung besser nutzen.<\/p><p><\/p><p>Bitte verwende unser Beratungstool, um eine genauere Schätzung für deinen Hund zu erhalten. Wir möchten sicherstellen, dass dein Hund die bestmögliche Ernährung erhält, um gesund und glücklich zu sein. Bei weiteren Fragen stehen wir dir gerne zur Verfügung.<\/p>",
+            "row_content": "<p>Die richtige Menge an Futter für deinen Hund hängt von verschiedenen Faktoren ab, einschließlich seiner Größe, Aktivitätslevel und individuellen Bedürfnisse. Wir möchten sicherstellen, dass dein Hund die optimale Menge an Nahrung erhält.</p><p></p><p><strong>Unser Beratungstool:</strong> Auf unserer Homepage steht ein hilfreiches Beratungstool zur Verfügung. Du kannst es unter \"Beratung\" finden. Mit diesem Tool kannst du die individuelle Tagesmenge an Futter für deinen Hund berechnen und erhältst sogar Menüvorschläge, die auf seine Bedürfnisse zugeschnitten sind. Dies erleichtert die Fütterungsplanung erheblich.</p><p></p><p><strong>Allgemeine Empfehlung:</strong> Als grobe Richtlinie empfehlen wir die folgenden Tagesmengen:</p><p></p><p>5 kg Hund: 200 Gramm täglich</p><p>15 kg Hund: 600 Gramm täglich</p><p>25 kg Hund: 800 Gramm täglich</p><p>35 kg Hund: 1000 Gramm täglich</p><p></p><p>Es ist wichtig zu beachten, dass dies allgemeine Empfehlungen sind. Die individuelle Bedarf deines Hundes kann variieren. Wir empfehlen, die Fütterung auf 2 Mahlzeiten pro Tag aufzuteilen und ausreichend Zeit zwischen den Fütterungen zu lassen. Dadurch wird die Verdauung deines Hundes unterstützt und er kann die Nahrung besser nutzen.</p><p></p><p>Bitte verwende unser Beratungstool, um eine genauere Schätzung für deinen Hund zu erhalten. Wir möchten sicherstellen, dass dein Hund die bestmögliche Ernährung erhält, um gesund und glücklich zu sein. Bei weiteren Fragen stehen wir dir gerne zur Verfügung.</p>",
             "page": ""
           }
         },
@@ -485,7 +494,7 @@
           "settings": {
             "heading": "Wie stelle ich das ideale Menü zusammen?",
             "icon": "none",
-            "row_content": "<p>Das Zusammenstellen des idealen Menüs für deinen Hund ist bei Uncle Rusty's ganz einfach und flexibel. Wir möchten sicherstellen, dass du die bestmögliche Auswahl für deinen pelzigen Begleiter triffst.<\/p><p><\/p><p><strong>Nutze unser Build-A-Box Tool:<\/strong> Auf unserer Homepage bieten wir ein praktisches \"Build-A-Box\" Tool an. Hier kannst du ganz bequem ein Paket zusammenstellen, das perfekt zu den Vorlieben und Bedürfnissen deines Hundes passt. Du kannst zwischen Einmalbestellungen und Abonnements wählen. Dies ermöglicht dir nicht nur die besten Paketdeals, sondern auch die Gewissheit, immer die besten Preise zu erhalten.<\/p><p><\/p><p><strong>Empfehlung:<\/strong> Eine bewährte Empfehlung für ein ausgewogenes Menü ist, über die Woche hinweg 3x helles Fleisch (z. B. Geflügel, Ente), 3x rotes Fleisch (z. B. Wild, Rind, Pferd) und 1x Lachs zu füttern. Diese Vielfalt an Proteinen und Omega-3-Fettsäuren bietet eine optimale Ernährung für deinen Hund. Es ist wichtig zu beachten, dass der Wechsel der Sorten deinem Hund verschiedene Vitamine und Proteinquellen liefert.<\/p><p><\/p><p>Wir möchten betonen, dass unser \"Build-A-Box\" Tool eine großartige Möglichkeit ist, das ideale Menü für deinen Hund zusammenzustellen. Es ermöglicht dir Flexibilität und eine breite Auswahl an hochwertigen Menüs. Bei Fragen oder Bedenken stehen wir dir gerne zur Verfügung, um sicherzustellen, dass dein Hund die bestmögliche Ernährung erhält.<\/p>",
+            "row_content": "<p>Das Zusammenstellen des idealen Menüs für deinen Hund ist bei Uncle Rusty's ganz einfach und flexibel. Wir möchten sicherstellen, dass du die bestmögliche Auswahl für deinen pelzigen Begleiter triffst.</p><p></p><p><strong>Nutze unser Build-A-Box Tool:</strong> Auf unserer Homepage bieten wir ein praktisches \"Build-A-Box\" Tool an. Hier kannst du ganz bequem ein Paket zusammenstellen, das perfekt zu den Vorlieben und Bedürfnissen deines Hundes passt. Du kannst zwischen Einmalbestellungen und Abonnements wählen. Dies ermöglicht dir nicht nur die besten Paketdeals, sondern auch die Gewissheit, immer die besten Preise zu erhalten.</p><p></p><p><strong>Empfehlung:</strong> Eine bewährte Empfehlung für ein ausgewogenes Menü ist, über die Woche hinweg 3x helles Fleisch (z. B. Geflügel, Ente), 3x rotes Fleisch (z. B. Wild, Rind, Pferd) und 1x Lachs zu füttern. Diese Vielfalt an Proteinen und Omega-3-Fettsäuren bietet eine optimale Ernährung für deinen Hund. Es ist wichtig zu beachten, dass der Wechsel der Sorten deinem Hund verschiedene Vitamine und Proteinquellen liefert.</p><p></p><p>Wir möchten betonen, dass unser \"Build-A-Box\" Tool eine großartige Möglichkeit ist, das ideale Menü für deinen Hund zusammenzustellen. Es ermöglicht dir Flexibilität und eine breite Auswahl an hochwertigen Menüs. Bei Fragen oder Bedenken stehen wir dir gerne zur Verfügung, um sicherzustellen, dass dein Hund die bestmögliche Ernährung erhält.</p>",
             "page": ""
           }
         },
@@ -494,7 +503,7 @@
           "settings": {
             "heading": "Wer steht hinter Uncle Rusty’s?",
             "icon": "none",
-            "row_content": "<p>Hinter Uncle Rusty's stehen wir, eine engagierte Gruppe von Hundeliebhabern und Experten in der Ernährung. Wir sind ein regionales Unternehmen und stolz darauf, kein großer Konzern zu sein. Bei uns ist der persönliche Kontakt zu unseren Kunden und die Nähe zur Gemeinschaft von großer Bedeutung.<\/p><p><\/p><p><strong>Unsere Geschichte:<\/strong> Unsere Geschichte beginnt mit unserem geliebten Familienhund Rusty, der uns inspirierte, eine bessere Nahrungsoption für Hunde zu schaffen. Seitdem haben wir die Werte von Natürlichkeit, Regionalität und Nachhaltigkeit in den Mittelpunkt unserer Marke gestellt.<\/p><p><\/p><p><strong>Familiengeführtes Unternehmen:<\/strong> Wir sind ein Familienunternehmen mit einer tiefen Leidenschaft für Hunde und hochwertige Ernährung. Diese Leidenschaft spiegelt sich in jedem Aspekt unseres Unternehmens wider, von der Auswahl der Zutaten bis zur Produktion.<\/p><p><\/p><p><strong>Regionale Verbundenheit:<\/strong> Unsere enge Verbindung zur Region Bayern zeigt sich in unserer Wahl von Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Wir setzen auf kurze Lieferketten und unterstützen ethische Standards, um die besten Zutaten für unsere Produkte zu gewährleisten.<\/p><p><\/p><p><strong>Kundennähe:<\/strong> Wir schätzen die Beziehung zu unseren Kunden und stehen in ständigem Austausch. Deine Fragen und Anliegen sind uns wichtig, und wir sind stets bereit, dir zu helfen und deine Bedürfnisse zu verstehen.<\/p><p><\/p><p>Bei Uncle Rusty's sind wir mehr als nur ein Unternehmen - wir sind eine Familie, die sich um das Wohl deines Hundes kümmert. Wir sind stolz darauf, hochwertige, natürliche und ehrliche Nahrung für Hunde anzubieten und freuen uns, Teil deines Abenteuers mit deinem treuen Begleiter zu sein. Wenn du weitere Fragen hast oder mehr über uns erfahren möchtest, zögere nicht, uns zu kontaktieren. Wir sind immer für dich da.<br\/><\/p>",
+            "row_content": "<p>Hinter Uncle Rusty's stehen wir, eine engagierte Gruppe von Hundeliebhabern und Experten in der Ernährung. Wir sind ein regionales Unternehmen und stolz darauf, kein großer Konzern zu sein. Bei uns ist der persönliche Kontakt zu unseren Kunden und die Nähe zur Gemeinschaft von großer Bedeutung.</p><p></p><p><strong>Unsere Geschichte:</strong> Unsere Geschichte beginnt mit unserem geliebten Familienhund Rusty, der uns inspirierte, eine bessere Nahrungsoption für Hunde zu schaffen. Seitdem haben wir die Werte von Natürlichkeit, Regionalität und Nachhaltigkeit in den Mittelpunkt unserer Marke gestellt.</p><p></p><p><strong>Familiengeführtes Unternehmen:</strong> Wir sind ein Familienunternehmen mit einer tiefen Leidenschaft für Hunde und hochwertige Ernährung. Diese Leidenschaft spiegelt sich in jedem Aspekt unseres Unternehmens wider, von der Auswahl der Zutaten bis zur Produktion.</p><p></p><p><strong>Regionale Verbundenheit:</strong> Unsere enge Verbindung zur Region Bayern zeigt sich in unserer Wahl von Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Wir setzen auf kurze Lieferketten und unterstützen ethische Standards, um die besten Zutaten für unsere Produkte zu gewährleisten.</p><p></p><p><strong>Kundennähe:</strong> Wir schätzen die Beziehung zu unseren Kunden und stehen in ständigem Austausch. Deine Fragen und Anliegen sind uns wichtig, und wir sind stets bereit, dir zu helfen und deine Bedürfnisse zu verstehen.</p><p></p><p>Bei Uncle Rusty's sind wir mehr als nur ein Unternehmen - wir sind eine Familie, die sich um das Wohl deines Hundes kümmert. Wir sind stolz darauf, hochwertige, natürliche und ehrliche Nahrung für Hunde anzubieten und freuen uns, Teil deines Abenteuers mit deinem treuen Begleiter zu sein. Wenn du weitere Fragen hast oder mehr über uns erfahren möchtest, zögere nicht, uns zu kontaktieren. Wir sind immer für dich da.<br/></p>",
             "page": ""
           }
         }
@@ -526,10 +535,10 @@
     "full_width_banner_88Jzex": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/comp1_1.jpg",
-        "content": "<h1><strong>Unentschlossen? Teste unser Probierpaket!<\/strong><\/h1><p>Du willst erst herausfinden, welche Sorten dein Hund liebt? Mit unserem Probierpaket kannst du alle 7 Sorten ausprobieren – inklusive spannender Infos zu Uncle Rusty's. Perfekt für neugierige Nasen und für Hundehalter, die sich sicher sein wollen.<\/p>",
+        "background_image": "shopify://shop_images/comp1_1.jpg",
+        "content": "<h1><strong>Unentschlossen? Teste unser Probierpaket!</strong></h1><p>Du willst erst herausfinden, welche Sorten dein Hund liebt? Mit unserem Probierpaket kannst du alle 7 Sorten ausprobieren – inklusive spannender Infos zu Uncle Rusty's. Perfekt für neugierige Nasen und für Hundehalter, die sich sicher sein wollen.</p>",
         "button_text": "Probierbox",
-        "button_link": "shopify:\/\/pages\/beratung",
+        "button_link": "shopify://pages/beratung",
         "button2_text": "Futterrechner",
         "button2_link": "",
         "newsletter": "false",
