@@ -34,6 +34,16 @@
           "type": "price",
           "settings": {}
         },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
         "icon_with_text_hFdfWV": {
           "type": "icon-with-text",
           "settings": {
@@ -99,16 +109,6 @@
             "page": ""
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "bsub-widget": {
           "type": "shopify://apps/bold-subscriptions/blocks/bsub-widget-block/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
           "settings": {
@@ -152,14 +152,14 @@
         "title",
         "caption",
         "price",
+        "variant_picker",
+        "quantity_selector",
         "icon_with_text_hFdfWV",
         "icon_with_text_riFmkV",
         "collapsible-row-1",
         "collapsible-row-0",
         "collapsible-row-2",
         "collapsible_tab_WiikCc",
-        "variant_picker",
-        "quantity_selector",
         "bsub-widget",
         "buy_buttons"
       ],
