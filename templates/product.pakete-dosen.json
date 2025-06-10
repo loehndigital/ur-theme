@@ -12,8 +12,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "judge_me_reviews_preview_badge_cBhcD9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "rating_reDJiQ": {
           "type": "rating",
+          "disabled": true,
           "settings": {}
         },
         "title": {
@@ -107,6 +112,7 @@
         }
       },
       "block_order": [
+        "judge_me_reviews_preview_badge_cBhcD9",
         "rating_reDJiQ",
         "title",
         "caption",
