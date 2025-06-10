@@ -483,20 +483,6 @@
         "zebra_color": "#ece7d8"
       }
     },
-    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify://shop_images/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
-        "content": "<h1><strong>10€ Rabatt auf Deine nächste Bestellung</strong></h1><p>Hol dir deinen 10 EUR* Rabatt Coupon ganz einfach jetzt und abonniere uneren Newsletter für Updates und Informationen zum Hund. <br/><em>* Einlösbar ab einem Einkaufswert von € 49,-</em><br/></p>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "true",
-        "theme_mode": "dark",
-        "desktop_blur": "no-desktop-blur"
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -513,6 +499,20 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 56
+      }
+    },
+    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify://shop_images/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
+        "content": "<h1><strong>10€ Rabatt auf Deine nächste Bestellung</strong></h1><p>Hol dir deinen 10 EUR* Rabatt Coupon ganz einfach jetzt und abonniere uneren Newsletter für Updates und Informationen zum Hund. <br/><em>* Einlösbar ab einem Einkaufswert von € 49,-</em><br/></p>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
+        "newsletter": "true",
+        "theme_mode": "dark",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "ur_image_with_text_C6GbQL": {
@@ -702,10 +702,10 @@
     "hero_slider_xXWAUq",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "vergleichstabelle_2_wYjf7q",
-    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "related-products",
-    "ur_image_with_text_C6GbQL",
     "05f67661-57d3-4393-b235-9279296aa6fd",
+    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
+    "ur_image_with_text_C6GbQL",
     "full_width_banner_88Jzex"
   ]
 }
