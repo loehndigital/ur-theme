@@ -278,7 +278,7 @@
       "settings": {
         "image": "shopify://shop_images/Ente-min_368efc38-396e-4a04-948a-976f92134920.png",
         "height": "medium",
-        "image_crop": "crop",
+        "image_crop": "no-crop",
         "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
         "layout": "text_first",
