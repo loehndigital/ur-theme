@@ -310,6 +310,30 @@
         "zebra_color": "#ece7d8"
       }
     },
+    "rich_text_wAeczU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gx9cRK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jede Sorte ein Lieblingsrezept",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gx9cRK"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -433,6 +457,7 @@
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "1702222298d12bda40",
     "vergleichstabelle_2_bqfnYU",
+    "rich_text_wAeczU",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
