@@ -34,6 +34,30 @@
           "type": "price",
           "settings": {}
         },
+        "icon_with_text_hFdfWV": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "map_pin",
+            "heading_1": "Frisches Muskelfleisch </br>und nahrhafte Innereien",
+            "icon_2": "return",
+            "heading_2": "Bestes Obst und Gemüse </br>aus der Region",
+            "icon_3": "truck",
+            "heading_3": "Natur Pur: Vollwertig, ohne </br>Chemie & prozentgenau deklariert"
+          }
+        },
+        "icon_with_text_riFmkV": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "heart",
+            "heading_1": "Premium Hundenahrung aus dem Süden von Bayern",
+            "icon_2": "return",
+            "heading_2": "Versandbereit in 24h </br>bei dir in 2-3 Tagen",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -123,6 +147,8 @@
         "title",
         "caption",
         "price",
+        "icon_with_text_hFdfWV",
+        "icon_with_text_riFmkV",
         "variant_picker",
         "quantity_selector",
         "bsub-widget",
@@ -145,6 +171,21 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "1694596722fbd3b4b2": {
+      "type": "apps",
+      "blocks": {
+        "4e0e223b-8191-412f-80a7-a090f143b0c9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "4e0e223b-8191-412f-80a7-a090f143b0c9"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "icon_row_RbbQDB": {
@@ -228,74 +269,14 @@
             "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Ente, Karotten und Hirse </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
             "text_style": "body"
           }
-        },
-        "d5f5d2c9-0acd-470c-b116-554653a901f6": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-lederhosen",
-            "icon_text": "Premium Hundenahrung aus dem Süden von Bayern ",
-            "show_accordion": false,
-            "richtext": ""
-          }
-        },
-        "12606def-b33b-4e93-ae9d-4bdcffdbc21e": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Frisches Muskelfleisch und nahrhafte Innereien ",
-            "show_accordion": false,
-            "richtext": "<p> </p>"
-          }
-        },
-        "53631e27-d0ef-4248-925c-d004a9c0f2bf": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-region-color",
-            "icon_text": "Bestes Obst und Gemüse aus der Region ",
-            "show_accordion": false,
-            "richtext": ""
-          }
-        },
-        "bf6d932a-9b51-4d16-9a8e-75149f41df50": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Naturrein, vollwertig, ohne Chemie | Natur Pur ",
-            "show_accordion": false,
-            "richtext": ""
-          }
-        },
-        "ef4aaf30-6b17-476f-9115-3d7260b17585": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-dog",
-            "icon_text": "Fütterungsempfehlung ",
-            "show_accordion": true,
-            "richtext": "<p>Fütterungsempfehlung pro Tag: <br/>Bis 5 kg 200g | Bis 20 kg 600g | Bis 30 kg 800g | ab 35 kg 1000g<br/> <br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br/><br/><strong>Zubereitung </strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br/><br/><strong>Fütterung & Lagerung: </strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>"
-          }
-        },
-        "a88c0156-c93d-4ca6-86d1-4430d0d99fb9": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-lightbulb",
-            "icon_text": "Unser Tipp",
-            "show_accordion": true,
-            "richtext": "<p>Wechsle die Sorten von Uncle Rusty’s regelmäßig durch. Damit ist der Bedarf Deines Hundes abgedeckt. Der Wechsel der Sorten ist wichtig, da dem Hund dadurch unter anderem verschiedene Vitamine und Proteinquellen zugeführt werden. (Beispiel: die Zugabe von Jod kann durch die Fütterung – 1 pro Woche das Lachsmenü automatisch gemacht werden). Unabhängig von der Futterart und Marke empfehlen wir die Zugabe (in regelmäßigen Abständen) <br/><br/>z.B.: Seealgenmehl (für Fell und Schilddrüsenfunktion)<br/>Grünlippmuschelpulver (für Herz, Knorpeln, Gelenke) <br/>Leinöl (für Fell, Haut, Stoffwechsel und Verdauung) <br/>Dorschlebertran (für Knochenbau, Wachstumsfördernd, Konstitution, Fell) <br/><br/>Bitte beachte die richtige Dosierung der Produkte! - Der Gehalt ausgewählter Nährstoffe unseres Tierfutters wird regelmäßig von einem unabhängigen und anerkannten Labor geprüft, um den hohen Qualitätsstandard zu sichern. </p>"
-          }
         }
       },
       "block_order": [
         "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-heading-1",
-        "text_qYagip",
-        "d5f5d2c9-0acd-470c-b116-554653a901f6",
-        "12606def-b33b-4e93-ae9d-4bdcffdbc21e",
-        "53631e27-d0ef-4248-925c-d004a9c0f2bf",
-        "bf6d932a-9b51-4d16-9a8e-75149f41df50",
-        "ef4aaf30-6b17-476f-9115-3d7260b17585",
-        "a88c0156-c93d-4ca6-86d1-4430d0d99fb9"
+        "text_qYagip"
       ],
       "settings": {
-        "image": "shopify://shop_images/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
+        "image": "shopify://shop_images/Ente-min_368efc38-396e-4a04-948a-976f92134920.png",
         "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
@@ -311,6 +292,42 @@
         "padding_bottom": 36
       }
     },
+    "highlight_product_hYcf7H": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Ente",
+        "product_description": "Die Reichhaltigkeit an Mineralstoffen sorgt für positive Auswirkungen auf die Muskulatur und das Nervensystem. Erwähnenswert ist zudem der hohe Magnesiumanteil der Ente.",
+        "image_position": "right",
+        "background_color": "#fd6767",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_CPWfJ4": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Karotte",
+        "product_description": "Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt.",
+        "image_position": "right",
+        "background_color": "#ffa815",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_qW63DB": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Hirse",
+        "product_description": "Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.",
+        "image_position": "right",
+        "background_color": "#dace07",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -323,21 +340,6 @@
         "newsletter": "false",
         "theme_mode": "light",
         "desktop_blur": "no-desktop-blur"
-      }
-    },
-    "1694596722fbd3b4b2": {
-      "type": "apps",
-      "blocks": {
-        "4e0e223b-8191-412f-80a7-a090f143b0c9": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "4e0e223b-8191-412f-80a7-a090f143b0c9"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
@@ -549,11 +551,14 @@
   },
   "order": [
     "main",
+    "1694596722fbd3b4b2",
     "icon_row_RbbQDB",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "highlight_product_hYcf7H",
+    "highlight_product_CPWfJ4",
+    "highlight_product_qW63DB",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
-    "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "related-products",
     "ur_image_with_text_C6GbQL",
