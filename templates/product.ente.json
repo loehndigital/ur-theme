@@ -63,6 +63,24 @@
             "heading_3": ""
           }
         },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Inhaltsstoffe",
+            "icon": "serving_dish",
+            "content": "{{ product.metafields.custom.content_information | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Analytische Bestandteile",
+            "icon": "plant",
+            "content": "{{ product.metafields.custom.analyse | metafield_tag }}",
+            "page": ""
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -119,24 +137,6 @@
             "page": ""
           }
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Zutaten",
-            "icon": "serving_dish",
-            "content": "{{ product.metafields.custom.content_information | metafield_tag }}",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Vitamine, Mengen- & Spurenelemente",
-            "icon": "plant",
-            "content": "{{ product.metafields.custom.analyse | metafield_tag }}",
-            "page": ""
-          }
-        },
         "collapsible_tab_WiikCc": {
           "type": "collapsible_tab",
           "settings": {
@@ -154,13 +154,13 @@
         "price",
         "icon_with_text_hFdfWV",
         "icon_with_text_riFmkV",
+        "collapsible-row-0",
+        "collapsible-row-2",
         "variant_picker",
         "quantity_selector",
         "bsub-widget",
         "buy_buttons",
         "collapsible-row-1",
-        "collapsible-row-0",
-        "collapsible-row-2",
         "collapsible_tab_WiikCc"
       ],
       "settings": {
