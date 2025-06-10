@@ -509,7 +509,7 @@
         "full_width": false,
         "boxed_content": true,
         "center_content": true,
-        "bg_color": "#ece7d8",
+        "bg_color": "#f2eee3",
         "section_padding": 50,
         "text_align_desktop": "left"
       }
