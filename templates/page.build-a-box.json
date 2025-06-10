@@ -90,9 +90,8 @@
         },
         "text_xexaDT": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Juckreiz, Durchfall, ständiges Schmatzen? Viele Hunde leiden still, oft wegen ungeeigneter Inhaltsstoffe. Kein Wunder: Der Hundefuttermarkt ist undurchsichtig. Deshalb haben wir Uncle Rusty's entwickelt. Unser Ansatz? Alles klar deklariert. Prozentgenau aufgeschlüsselt. Ohne verstecken. Ohne beschönigen. Einfach ehrliche Hausmannskost.</p>"
           }
         }
       },
