@@ -347,6 +347,19 @@
         "padding_vertical": 20
       }
     },
+    "highlight_product_wEELjn": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Geflügel mit Kürbis und Amaranth: Mageres Fleisch trifft Powerkorn",
+        "product_description": "63 % feinstes Hühnerfleisch: mit zartem Muskelfleisch, nährstoffreicher Leber, Herz & Magen. Dazu 10 % Kürbis, 7 % Bio-Amaranth und 20 % kräftige Fleischbrühe.\nLeicht verdaulich und ideal für aktive Genießer und empfindliche Mägen",
+        "product_image": "shopify://shop_images/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
+        "image_position": "right",
+        "background_color": "#d0b968",
+        "text_color_mode": "light",
+        "padding_vertical": 20
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -472,6 +485,7 @@
     "vergleichstabelle_2_bqfnYU",
     "rich_text_wAeczU",
     "highlight_product_RVVMbi",
+    "highlight_product_wEELjn",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
