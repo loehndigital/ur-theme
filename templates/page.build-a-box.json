@@ -39,8 +39,41 @@
       ],
       "settings": {}
     },
-    "174956369024e4f9cd": {
+    "rich_text_EyFpWz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_t74PNR": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Echte Meinungen. Echte Ergebnisse. Echte Liebe.</em>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_t74PNR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "174956400621289c62": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_text_BRa7eQ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_text_BRa7eQ"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -245,7 +278,8 @@
   "order": [
     "main",
     "hero_slider_WJ9jLG",
-    "174956369024e4f9cd",
+    "rich_text_EyFpWz",
+    "174956400621289c62",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "1702222298d12bda40",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
