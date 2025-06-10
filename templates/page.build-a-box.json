@@ -192,6 +192,124 @@
         "include_margins": true
       }
     },
+    "vergleichstabelle_2_bqfnYU": {
+      "type": "vergleichstabelle-2",
+      "blocks": {
+        "feature_zWPFnF": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Glasklare Zutatenliste: 100 % deklariert, keine Tricks",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_pEi6Dr": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Muskelfleisch aus artgerechter Haltung statt Abfällen",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_7rAH6t": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Zutaten aus Bayern & Umgebung. Frisch, regional, ehrlich",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_FzjUHe": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "text_links": "Schonendes Slow-Cooking für maximale Nährstoffe",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_wXDrdG": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Optimale Nährstoffbalance abgestimmt auf Energie, Gesundheit & Vitalität",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_LcRyHj": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Frei von Weizen, Zucker, Füllstoffen, Lockstoffen & synthetischen Vitaminen",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_W46tpD": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Hochwertige Proteine & Fette für starke Muskeln & Energie",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_yetRLq": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Besonders hohe Akzeptanz auch bei sensiblen Hunden",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_FBjUze": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Unterstützt Verdauung, Fell, Abwehrkräfte & Immunsystem",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_qyhWm8": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Kleine Chargen mit Sorgfalt gekocht. Kein Industriefutter",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_F4b3Ce": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Familiengeführt von Hundemenschen mit Herz und Verstand",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        }
+      },
+      "block_order": [
+        "feature_zWPFnF",
+        "feature_pEi6Dr",
+        "feature_7rAH6t",
+        "feature_FzjUHe",
+        "feature_wXDrdG",
+        "feature_LcRyHj",
+        "feature_W46tpD",
+        "feature_yetRLq",
+        "feature_FBjUze",
+        "feature_qyhWm8",
+        "feature_F4b3Ce"
+      ],
+      "name": "Vergleich – Just Russel Stil",
+      "settings": {
+        "ueberschrift_text": "Was unser Futter besonders macht",
+        "ueberschrift_alignment": "left",
+        "vergleichsbild_links": "shopify://shop_images/UR-Dosen.png",
+        "vergleichsbild_rechts": "shopify://shop_images/Basic-Hundefutter.png",
+        "produktname_links": "Uncle Rusty's",
+        "produktname_rechts": "Supermarkt",
+        "bg_color": "#f2eee3",
+        "zebra_color": "#ece7d8"
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -314,6 +432,7 @@
     "rich_text_3cefM9",
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "1702222298d12bda40",
+    "vergleichstabelle_2_bqfnYU",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
