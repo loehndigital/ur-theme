@@ -514,6 +514,128 @@
         "text_align_desktop": "left"
       }
     },
+    "collapsible_content_CPBNnM": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BwgrJk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Braucht mein Hund zusätzlich Vitamine oder Zusätze?",
+            "icon": "none",
+            "row_content": "<p><strong>Nicht zwingend.</strong> Wenn du regelmäßig zwischen den Sorten wechselst, ist dein Hund rundum versorgt. Ganz ohne synthetische Zusätze. Wir empfehlen: <strong>3x</strong> pro Woche <strong>rotes Fleisch </strong>(Wild, Rind, Pferd oder Lamm), <strong>3x helles Fleisch</strong> (Geflügel oder Ente) und <strong>1x Lachs</strong>. So ist der Bedarf abgedeckt. Ergänzend kannst du ein hochwertiges Öl hinzufügen.<br/><br/>Solltest du aufgrund von Allergien nur eine Sorte füttern können, empfehlen wir ein natürliches Vitamin-Komplettpräparat und ein gutes Öl dazu. Bei Unsicherheiten helfen wir dir kostenlos und erstellen auf Wunsch einen individuellen Ergänzungsplan – ohne Stress, ohne Zusatzkosten.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3CpJf9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie stelle ich am besten auf Uncle Rusty's um?",
+            "icon": "none",
+            "row_content": "<p><strong>Von Rohfütterung:</strong> Du kannst direkt wechseln – ohne Eingewöhnung.<br/><br/><strong>Von Nassfutter:</strong> Der Umstieg ist meist problemlos.<br/><br/><strong>Von Trockenfutter:</strong> Starte mit einem Löffel Uncle Rusty's am ersten Tag und erhöhe die Menge langsam. Unsere 400 g Dosen sind ideal für die Umgewöhnung. Geöffnete Dosen halten bis zu 3 Tage im Kühlschrank.<br/><br/>Beobachte deinen Hund in der Übergangszeit. Wir stehen dir bei Fragen gerne zur Seite.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FrzwHN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ist das Futter auch für Allergiker geeignet?",
+            "icon": "none",
+            "row_content": "<p><strong>Ja, absolut.</strong> Viele unserer Sorten sind bewusst allergenarm konzipiert. Du kannst uns jederzeit kontaktieren. Am besten vorab per Mail mit Infos zu bestehenden Allergien oder Krankheiten. Unsere Expert:innen setzen sich dann mit dir in Verbindung und finden gemeinsam mit dir die passende Lösung. Ohne Verkaufsdruck, ohne leere Versprechen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NcKEEM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was, wenn mein Hund es nicht mag?",
+            "icon": "none",
+            "row_content": "<p><strong>Wir kümmern uns. </strong>Neue Texturen und natürliche Zutaten ohne Lockstoffe sind für viele Hunde zunächst ungewohnt. Oft hilft es schon, das Futter leicht zu erwärmen - z. B. im Ofen bei 100 °C für wenige Minuten. Das intensiviert den Duft und macht es attraktiver.<br/><br/>Sollte dein Hund es wirklich nicht fressen, genügt eine kurze Mail. Wir nehmen ungeöffnete Dosen zurück - unkompliziert und kostenlos. Du bekommst ein Rücksendeetikett und kannst das Paket dem DHL-Boten einfach mitgeben.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HYkRXg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ist das nicht teurer als mein aktuelles Futter?",
+            "icon": "none",
+            "row_content": "<p><strong>Nicht wirklich - im Gegenteil. </strong>Bei einem 15 kg Hund liegst du bei etwa 2,02 € am Tag. Und im Vergleich zu vielen Premium-Marken mit ähnlicher Qualität sind wir sogar preiswerter. Unsere Menüs enthalten keine unnötigen Füllstoffe oder 30% Wasser. Das bedeutet: weniger Volumen, mehr Nährstoffe, geringerer Verbrauch. Andere strecken, wir verdichten.<br/><br/>So spart man langfristig sogar. Besonders wenn man Tierarztkosten durch bessere Ernährung vermeiden kann.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Drenkk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann ich die Sorten einfach wechseln?",
+            "icon": "none",
+            "row_content": "<p><strong>Ja! Und genau das empfehlen wir sogar. </strong>Unsere Sorten sind so entwickelt, dass du problemlos durchwechseln kannst. Am besten fütterst du über die Woche verteilt <strong>drei Mal rotes Fleisch</strong> (z. B. Rind, Wild, Lamm oder Pferd), <strong>drei Mal helles Fleisc</strong>h (Geflügel oder Ente) und <strong>einmal Lachs</strong>. So entsteht auf natürliche Weise eine ausgewogene Nährstoffversorgung – ganz ohne synthetische Zusätze.</p><p>Wichtig ist auch die Regelmäßigkeit: Feste Fütterungszeiten helfen deinem Hund, sich sicher und wohl zu fühlen. Routine bringt Ruhe in den Alltag und sorgt dafür, dass Verdauung, Energie und Verhalten in Balance bleiben. Wir empfehlen zwei Mahlzeiten pro Tag - morgens und abends - und eine Sorte pro Tag. So kommt dein Hund nicht durcheinander und das Futter wirkt, wie es soll. Wenn du Fragen hast, sind wir natürlich für dich da.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PJyApx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie viel sollte ich füttern?",
+            "icon": "none",
+            "row_content": "<p>Als Richtwert empfehlen wir:</p><p>5 kg Hund → 200 g täglich</p><p>15 kg Hund → 400 g täglich</p><p>20 kg Hund → 600 g täglich</p><p>25 kg Hund → 800 g täglich</p><p>Wir empfehlen zwei Mahlzeiten am Tag. Nutze auch unser <strong>Beratungstool auf der Website</strong>, um die passende Futtermenge zu berechnen - inklusive Menüvorschlag. Und wenn du unsicher bist: Wir helfen gern persönlich.</p><p><strong>Ungeöffnet sind unsere Menüs mindestens 18 Monate haltbar. </strong>Wir produzieren ohne künstliche Konservierung, dafür in kleinen Chargen mit hohem Frischfleischanteil. Nach dem Öffnen sollten die Menüs innerhalb von 2 Tagen verbraucht und im Kühlschrank aufbewahrt werden. Am besten immer lichtgeschützt lagern – auch ungeöffnete Dosen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cPxnMw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wer steckt hinter Uncle Rusty’s?",
+            "icon": "none",
+            "row_content": "<p><strong>Eine Familie mit einem Hund namens Rusty und einer Idee, die größer wurde als geplant. </strong>Rusty kam in unser Leben und stellte alles auf den Kopf. Wir wollten das Beste für ihn, also begannen wir, selbst zu kochen. Mit der Zeit entstand daraus ein Futter, das nicht nur für Rusty, sondern auch für andere Hunde perfekt funktionierte. Freunde fragten nach, Bekannte bestellten mit, irgendwann wurden es so viele, dass wir entschieden: Lass uns das richtig machen.</p><p>Heute ist Uncle Rusty’s eine kleine, unabhängige Marke aus dem Süden Bayerns. Ohne Investoren, ohne Konzernstruktur, ohne künstliches Marketing. Wir entwickeln unsere Rezepturen selbst, arbeiten mit Ernährungsexpert und Tierärzten zusammen und machen wirklich alles selbst - von der Verpackung bis zur Website. Warum? Weil wir daran glauben, dass ehrliches Hundefutter kein Luxus sein sollte. Sondern ein Grundrecht für jeden Hund.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QWb68K": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie läuft die Lieferung und brauche ich ein Abo?",
+            "icon": "none",
+            "row_content": "<p><strong>Ganz einfach, ganz flexibel – und ganz ohne Verpflichtung. </strong>Du wählst aus, was du brauchst, legst deine Wunschmenüs in den Warenkorb und entscheidest, ob du einmalig bestellst oder ein Abo nutzen möchtest. Wenn du das Abo wählst, kannst du es jederzeit anpassen, pausieren oder beenden. Direkt im Kundenkonto oder per Mail. Ohne versteckte Bedingungen, ohne Haken. Einfach eine Erinnerung weniger im Alltag - und bis zu 20 % günstiger.</p><p>Wir versenden klimafreundlich mit DHL, in der Regel innerhalb von 1–3 Werktagen. Ab einem Warenwert von 29 € ist der Versand kostenlos. Beim Probierpaket sowieso. Auch der Versand ist bei uns durchdacht - plastikfrei, stabil und schnell bei dir.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xUbkEM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was unterscheidet euch von anderen Marken?",
+            "icon": "none",
+            "row_content": "<p><strong>Vielleicht am meisten: Wir meinen es wirklich so. </strong>Uncle Rusty’s ist kein Produkt, das von einer Agentur entwickelt wurde. Es ist aus dem echten Leben entstanden. Weil wir selbst frustriert waren von Intransparenz, aufgeblähten Versprechen und den immer gleichen Zutatenlisten. Weil wir selbst gesehen haben, wie Hunde unter falscher Ernährung leiden und wie schnell sie aufblühen, wenn man’s richtig macht.</p><p>Wir haben keine Investoren, keine Pflicht zur Marge, keine Budgetabteilung, die vorgibt, was ins Futter darf. Wir machen das, weil wir überzeugt sind. Weil wir durch jeden Kundenkontakt besser werden. Weil wir auf jede Mail antworten. Und weil wir glauben, dass Ehrlichkeit das einzige Geschäftsmodell ist, das auf Dauer funktioniert.<br/><br/>Uncle Rusty’s ist mehr als Futter. Es ist ein kleiner Gegenentwurf zu einer Welt, in der der Napf oft das letzte ist, worüber sich Gedanken gemacht wird</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BwgrJk",
+        "collapsible_row_3CpJf9",
+        "collapsible_row_FrzwHN",
+        "collapsible_row_NcKEEM",
+        "collapsible_row_HYkRXg",
+        "collapsible_row_Drenkk",
+        "collapsible_row_PJyApx",
+        "collapsible_row_cPxnMw",
+        "collapsible_row_QWb68K",
+        "collapsible_row_xUbkEM"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Du hast noch Fragen? Wir haben die Antwort:",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 16,
+        "padding_bottom": 36
+      }
+    },
     "802ec653-45c7-4db1-a744-3e8f11792f91": {
       "type": "full-width-banner",
       "settings": {
@@ -646,6 +768,7 @@
     "highlight_product_myXChL",
     "highlight_product_tJYHcT",
     "features_MVx7jx",
+    "collapsible_content_CPBNnM",
     "802ec653-45c7-4db1-a744-3e8f11792f91",
     "collapsible_content_Jzm6Nw",
     "icon_row_bDgXgn"
