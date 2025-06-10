@@ -328,8 +328,31 @@
         "padding_vertical": 24
       }
     },
+    "hero_slider_xXWAUq": {
+      "type": "hero-slider",
+      "blocks": {
+        "hero_slide_AM8bPX": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify://shop_images/Comp_4.jpg",
+            "hero_text": "<h1>Deine Futterbox. Dein Geschmack. Deine Aktion.</h1><p>Wähle einfach deine Lieblingssorten, kombiniere nach Lust und Laune – und sichere dir dabei unser exklusives Aktionspaket:<br/><br/>🎁 <strong>Bis zu 8 Dosen gratis</strong>, <strong>2 Packungen Hundekekse geschenkt</strong><br/>💰 <strong>+ 10 % Rabatt auf deine gesamte Bestellung</strong></p><p></p>",
+            "richtext_max_width": 550,
+            "button_link": "",
+            "button_label": "",
+            "theme_mode": "light",
+            "blur": "blur"
+          }
+        }
+      },
+      "block_order": [
+        "hero_slide_AM8bPX"
+      ],
+      "name": "UR Hero Slider",
+      "settings": {}
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
+      "disabled": true,
       "settings": {
         "background_image": "shopify://shop_images/Comp_4_v2.jpg",
         "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile der Ente</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 65 % hochwertigem Entenfleisch und sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
@@ -676,6 +699,7 @@
     "highlight_product_hYcf7H",
     "highlight_product_CPWfJ4",
     "highlight_product_qW63DB",
+    "hero_slider_xXWAUq",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "vergleichstabelle_2_wYjf7q",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
