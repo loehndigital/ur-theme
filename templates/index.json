@@ -35,7 +35,7 @@
             "button_link": "shopify://collections/all",
             "button_label": "Jetzt entdecken",
             "theme_mode": "dark",
-            "blur": "blur"
+            "blur": "no-blur"
           }
         },
         "ca9378e3-b3fb-4caf-910c-45c8755a8e86": {
