@@ -29,7 +29,7 @@
           "type": "hero-slide",
           "settings": {
             "hero_image": "shopify://shop_images/Comp-1-wide-min.jpg",
-            "hero_image_mobile": "shopify://shop_images/Comp-1-mobile-2-min.jpg",
+            "hero_image_mobile": "shopify://shop_images/Comp-1-mobile-3-min.jpg",
             "hero_text": "<h1>Mehr als nur<br/>ein Hundefutter</h1><p>Ausgewählte, regionale Zutaten <br/>- sorgfältig verarbeitet. <br/>Weil Qualität in jedem Bissen zählt.</p>",
             "richtext_max_width": 450,
             "button_link": "shopify://collections/all",
