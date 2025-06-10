@@ -194,6 +194,7 @@
     },
     "full_width_banner_rP8Rni": {
       "type": "full-width-banner",
+      "disabled": true,
       "settings": {
         "background_image": "shopify://shop_images/Comp_4_v2.jpg",
         "content": "<h1><strong>Was unser Futter besonders macht?</strong></h1><p><em>Stelle das ideale Paket zusammen: </em><br/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch.  Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!</p>",
@@ -205,6 +206,29 @@
         "theme_mode": "light",
         "desktop_blur": "no-desktop-blur"
       }
+    },
+    "hero_slider_h83eb4": {
+      "type": "hero-slider",
+      "blocks": {
+        "hero_slide_LxPntg": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify://shop_images/probierpaket-landschaft-min-min.jpg",
+            "hero_image_mobile": "shopify://shop_images/probierpaket-landschaft-mobile-2-min.jpg",
+            "hero_text": "<h1>Deine Futterbox. Dein Geschmack. Deine Aktion.</h1><p>Wähle einfach deine Lieblingssorten, kombiniere nach Lust und Laune – und sichere dir dabei unser exklusives Aktionspaket:<br/><br/>🎁 <strong>Bis zu 8 Dosen gratis</strong>, <strong>2 Packungen Hundekekse geschenkt</strong><br/>💰 <strong>+ 10 % Rabatt auf deine gesamte Bestellung</strong></p><p></p>",
+            "richtext_max_width": 550,
+            "button_link": "",
+            "button_label": "",
+            "theme_mode": "light",
+            "blur": "blur"
+          }
+        }
+      },
+      "block_order": [
+        "hero_slide_LxPntg"
+      ],
+      "name": "UR Hero Slider",
+      "settings": {}
     },
     "vergleichstabelle_2_bqfnYU": {
       "type": "vergleichstabelle-2",
@@ -312,6 +336,7 @@
         "feature_qyhWm8",
         "feature_F4b3Ce"
       ],
+      "custom_css": [],
       "name": "Vergleich – Just Russel Stil",
       "settings": {
         "ueberschrift_text": "",
@@ -773,6 +798,7 @@
     "82172ece-4d52-4326-8d4d-6c644a0d4924",
     "1702222298d12bda40",
     "full_width_banner_rP8Rni",
+    "hero_slider_h83eb4",
     "vergleichstabelle_2_bqfnYU",
     "rich_text_wAeczU",
     "highlight_product_RVVMbi",
