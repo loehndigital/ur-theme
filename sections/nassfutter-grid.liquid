@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Produkt Slider Grid",
+  "name": "Produkt Slider Grid FINAL",
   "settings": [],
   "blocks": [
     {
@@ -9,7 +9,6 @@
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Produktbild" },
         { "type": "text", "id": "title", "label": "Titel" },
-        { "type": "textarea", "id": "description", "label": "Beschreibung" },
         { "type": "textarea", "id": "usp1", "label": "USP 1" },
         { "type": "textarea", "id": "usp2", "label": "USP 2" },
         { "type": "textarea", "id": "usp3", "label": "USP 3" },
@@ -20,157 +19,125 @@
       ]
     }
   ],
-  "presets": [{ "name": "Produkt Slider Grid" }]
+  "presets": [{ "name": "Produkt Slider Grid FINAL" }]
 }
 {% endschema %}
 
-<div class="product-slider-wrapper">
-  <div class="swiper productSwiper">
-    <div class="swiper-wrapper">
-      {% for block in section.blocks %}
-        <div class="swiper-slide">
-          <div class="card">
-            <div class="card-image">
-              <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
-            </div>
-            <div class="card-text">
-              <h3>{{ block.settings.title }}</h3>
-              <ul>
-                {% if block.settings.usp1 != blank %}<li>{{ block.settings.usp1 }}</li>{% endif %}
-                {% if block.settings.usp2 != blank %}<li>{{ block.settings.usp2 }}</li>{% endif %}
-                {% if block.settings.usp3 != blank %}<li>{{ block.settings.usp3 }}</li>{% endif %}
-                {% if block.settings.usp4 != blank %}<li>{{ block.settings.usp4 }}</li>{% endif %}
-              </ul>
-              <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
-              <details>
-                <summary>Zusammensetzung</summary>
-                <p>{{ block.settings.zusammensetzung }}</p>
-              </details>
-              <details>
-                <summary>Vitamine & Spurenelemente</summary>
-                <p>{{ block.settings.vitamine }}</p>
-              </details>
-            </div>
-          </div>
+<div class="carousel-container">
+  <div class="carousel-track">
+    {% for block in section.blocks %}
+    <div class="carousel-item">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
         </div>
-      {% endfor %}
+        <div class="card-text">
+          <h3>{{ block.settings.title }}</h3>
+          <ul>
+            {% if block.settings.usp1 != blank %}<li>{{ block.settings.usp1 }}</li>{% endif %}
+            {% if block.settings.usp2 != blank %}<li>{{ block.settings.usp2 }}</li>{% endif %}
+            {% if block.settings.usp3 != blank %}<li>{{ block.settings.usp3 }}</li>{% endif %}
+            {% if block.settings.usp4 != blank %}<li>{{ block.settings.usp4 }}</li>{% endif %}
+          </ul>
+          <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
+          <details>
+            <summary>Zusammensetzung</summary>
+            <p>{{ block.settings.zusammensetzung }}</p>
+          </details>
+          <details>
+            <summary>Vitamine & Spurenelemente</summary>
+            <p>{{ block.settings.vitamine }}</p>
+          </details>
+        </div>
+      </div>
     </div>
-
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    {% endfor %}
   </div>
 </div>
 
 <style>
-  .product-slider-wrapper {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;
-    overflow: hidden;
-    position: relative;
-  }
+.carousel-container {
+  overflow-x: auto;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 1400px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
 
-  .swiper-wrapper {
-    display: flex;
-  }
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  padding: 0 20px;
+  scroll-snap-align: start;
+}
 
-  .swiper-slide {
-    flex-shrink: 0;
-    width: auto !important;
-  }
+.carousel-item {
+  flex: 0 0 auto;
+  width: 320px;
+  scroll-snap-align: start;
+}
 
-  .card {
-    width: 320px;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-    padding: 25px 20px;
-    margin: 10px 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  padding: 25px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-  }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
 
-  .card-image img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
+.card-image img {
+  width: 100%;
+  height: auto;
+}
 
-  .card:hover .card-image img {
-    transform: scale(1.05);
-  }
+.card-text h3 {
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: center;
+}
 
-  .card-text h3 {
-    font-size: 20px;
-    margin: 15px 0;
-  }
+.card-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
 
-  .card-text ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 15px 0;
-  }
+.card-text ul li::before {
+  content: '✔️ ';
+}
 
-  .card-text ul li::before {
-    content: '✔️ ';
-  }
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin: 20px auto;
+  transition: background 0.3s ease;
+  width: fit-content;
+}
 
-  .button {
-    display: inline-block;
-    background: #000;
-    color: #fff;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    margin: 20px 0;
-    transition: background 0.3s ease;
-  }
+.button:hover {
+  background: #333;
+}
 
-  .button:hover {
-    background: #333;
-  }
-
-  details summary {
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-  }
+details summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.productSwiper', {
-      loop: false,
-      speed: 700,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-      grabCursor: true,
-      centeredSlides: false,
-      freeMode: {
-        enabled: true,
-        momentum: true,
-        momentumRatio: 1.1
-      },
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        768: { spaceBetween: 30 },
-        1024: { spaceBetween: 40 }
-      }
-    });
-  });
-</script>
