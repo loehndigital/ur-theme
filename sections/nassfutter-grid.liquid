@@ -67,6 +67,11 @@
     padding: 0 20px;
   }
 
+  .swiper-slide {
+    width: auto !important;
+    flex-shrink: 0;
+  }
+
   .card {
     background: #fff;
     border-radius: 20px;
@@ -77,6 +82,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   .card-image img {
@@ -121,7 +128,7 @@
     new Swiper('.productSwiper', {
       loop: false,
       speed: 500,
-      slidesPerView: 3,
+      slidesPerView: 'auto',
       spaceBetween: 30,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -133,11 +140,11 @@
           spaceBetween: 10
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 'auto',
           spaceBetween: 20
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 'auto',
           spaceBetween: 30
         }
       }
