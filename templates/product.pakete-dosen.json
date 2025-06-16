@@ -51,6 +51,20 @@
             "heading_3": "Natur Pur: Vollwertig, ohne Chemie & prozentgenau deklariert"
           }
         },
+        "icon_with_text_rJeDtH": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "heart",
+            "image_1": "shopify://shop_images/Herstellung-min.png",
+            "heading_1": "Premium Hundenahrung aus dem Süden von Bayern",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Transport-min.png",
+            "heading_2": "Versandbereit in 24h bei dir in 2-3 Tagen",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -133,6 +147,7 @@
         "caption",
         "price",
         "icon_with_text_6gd9JB",
+        "icon_with_text_rJeDtH",
         "variant_picker",
         "quantity_selector",
         "bsub-widget",
