@@ -302,11 +302,120 @@
     },
     "nassfutter_grid_84cBg3": {
       "type": "nassfutter-grid",
+      "blocks": {
+        "product_slide_mNT7jH": {
+          "type": "product_slide",
+          "settings": {
+            "image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
+            "title": "Ente mit Karotte & Hirse",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        },
+        "product_slide_CD3pYe": {
+          "type": "product_slide",
+          "settings": {
+            "image": "shopify://shop_images/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
+            "title": "Geflügel mit Kürbis und Amaranth",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        },
+        "product_slide_RUWjKx": {
+          "type": "product_slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        },
+        "product_slide_BHmQ88": {
+          "type": "product_slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        },
+        "product_slide_GgUeDm": {
+          "type": "product_slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        },
+        "product_slide_X66pmQ": {
+          "type": "product_slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        },
+        "product_slide_Wbyjyq": {
+          "type": "product_slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_slide_mNT7jH",
+        "product_slide_CD3pYe",
+        "product_slide_RUWjKx",
+        "product_slide_BHmQ88",
+        "product_slide_GgUeDm",
+        "product_slide_X66pmQ",
+        "product_slide_Wbyjyq"
+      ],
       "disabled": true,
       "name": "Nassfutter Produktgrid",
-      "settings": {
-        "collection": "nassfutter"
-      }
+      "settings": {}
     },
     "25963718-e156-41f4-ba24-b0f5179def60": {
       "type": "ur-image-with-text",
