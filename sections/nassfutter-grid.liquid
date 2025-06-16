@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Produkt Slider",
+  "name": "Produkt Slider Grid",
   "settings": [],
   "blocks": [
     {
@@ -20,22 +20,21 @@
       ]
     }
   ],
-  "presets": [{ "name": "Produkt Slider" }]
+  "presets": [{ "name": "Produkt Slider Grid" }]
 }
 {% endschema %}
 
-<div class="swiper productSwiper">
-  <div class="swiper-wrapper">
-    {% for block in section.blocks %}
-      <div class="swiper-slide">
-        <div class="slide-content">
-          <div class="slide-inner">
-            <div class="product-image">
+<div class="product-slider-grid">
+  <div class="swiper productSwiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
               <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
             </div>
-            <div class="product-text">
-              <h2>{{ block.settings.title }}</h2>
-              <p>{{ block.settings.description }}</p>
+            <div class="card-text">
+              <h3>{{ block.settings.title }}</h3>
               <ul>
                 <li>{{ block.settings.usp1 }}</li>
                 <li>{{ block.settings.usp2 }}</li>
@@ -43,76 +42,64 @@
                 <li>{{ block.settings.usp4 }}</li>
               </ul>
               <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
-
               <details>
                 <summary>Zusammensetzung</summary>
                 <p>{{ block.settings.zusammensetzung }}</p>
               </details>
               <details>
-                <summary>Vitamine, Mengen- & Spurenelemente</summary>
+                <summary>Vitamine & Spurenelemente</summary>
                 <p>{{ block.settings.vitamine }}</p>
               </details>
             </div>
           </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
 </div>
 
 <style>
-  .swiper {
-    max-width: 1400px;
+  .product-slider-grid {
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
   }
 
-  .swiper-slide {
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    padding: 20px;
+    text-align: center;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .slide-content {
+  .card-image img {
     width: 100%;
-    max-width: 1200px;
-    padding: 60px 0;
+    height: auto;
   }
 
-  .slide-inner {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
+  .card-text h3 {
+    font-size: 20px;
+    margin: 15px 0;
   }
 
-  .product-image img {
-    width: 300px;
-  }
-
-  .product-text {
-    max-width: 500px;
-  }
-
-  .product-text h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .product-text ul {
+  .card-text ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
   }
 
-  .product-text ul li::before {
+  .card-text ul li::before {
     content: '✔️ ';
   }
 
-  .product-text a.button {
+  .button {
     display: inline-block;
     background: #000;
     color: #fff;
@@ -127,27 +114,32 @@
     cursor: pointer;
     margin-top: 10px;
   }
-
-  @media (max-width: 768px) {
-    .slide-inner {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .product-image img {
-      width: 220px;
-    }
-  }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.productSwiper', {
-      loop: true,
-      speed: 600,
+      loop: false,
+      speed: 500,
+      slidesPerView: 3,
+      spaceBetween: 30,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
       }
     });
   });
