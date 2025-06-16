@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Produkt Slider Premium",
+  "name": "Produkt Slider",
   "settings": [],
   "blocks": [
     {
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "presets": [{ "name": "Produkt Slider Premium" }]
+  "presets": [{ "name": "Produkt Slider Premium Final" }]
 }
 {% endschema %}
 
@@ -29,7 +29,7 @@
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
         <div class="swiper-slide">
-          <div class="product-slide-container">
+          <div class="slide-inner">
             <div class="product-image">
               <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
             </div>
@@ -58,14 +58,14 @@
       {% endfor %}
     </div>
 
-    <!-- Navigation Buttons -->
+    <!-- Navigation -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
 </div>
 
 <style>
-  .product-slide-container {
+  .slide-inner {
     display: flex;
     gap: 40px;
     align-items: center;
@@ -114,7 +114,7 @@
   }
 
   @media (max-width: 768px) {
-    .product-slide-container {
+    .slide-inner {
       flex-direction: column;
       text-align: center;
       padding: 40px 0;
@@ -130,7 +130,6 @@
     new Swiper('.productSwiper', {
       loop: true,
       speed: 600,
-      spaceBetween: 40,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
