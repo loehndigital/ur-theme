@@ -474,6 +474,20 @@
         "padding_bottom": 56
       }
     },
+    "full_width_banner_cmVkif": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify://shop_images/probierpaket-landschaft-min-min.jpg",
+        "content": "<h1><strong>Unentschlossen? Teste unser Probierpaket!</strong></h1><p>Du willst erst herausfinden, welche Sorten dein Hund liebt? Mit unserem Probierpaket kannst du alle 7 Sorten ausprobieren – inklusive spannender Infos zu Uncle Rusty's. Perfekt für neugierige Nasen und für Hundehalter, die sich sicher sein wollen.</p>",
+        "button_text": "Probierbox",
+        "button_link": "shopify://pages/beratung",
+        "button2_text": "Futterrechner",
+        "button2_link": "",
+        "newsletter": "false",
+        "theme_mode": "light",
+        "desktop_blur": "desktop-blur"
+      }
+    },
     "05f67661-57d3-4393-b235-9279296aa6fd": {
       "type": "collapsible-content",
       "blocks": {
@@ -564,20 +578,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "full_width_banner_88Jzex": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify://shop_images/comp1_1.jpg",
-        "content": "<h1><strong>Unentschlossen? Teste unser Probierpaket!</strong></h1><p>Du willst erst herausfinden, welche Sorten dein Hund liebt? Mit unserem Probierpaket kannst du alle 7 Sorten ausprobieren – inklusive spannender Infos zu Uncle Rusty's. Perfekt für neugierige Nasen und für Hundehalter, die sich sicher sein wollen.</p>",
-        "button_text": "Probierbox",
-        "button_link": "shopify://pages/beratung",
-        "button2_text": "Futterrechner",
-        "button2_link": "",
-        "newsletter": "false",
-        "theme_mode": "light",
-        "desktop_blur": "desktop-blur"
-      }
     }
   },
   "order": [
@@ -591,7 +591,7 @@
     "hero_slider_Dx6XWP",
     "vergleichstabelle_2_YHBzPz",
     "related-products",
-    "05f67661-57d3-4393-b235-9279296aa6fd",
-    "full_width_banner_88Jzex"
+    "full_width_banner_cmVkif",
+    "05f67661-57d3-4393-b235-9279296aa6fd"
   ]
 }
