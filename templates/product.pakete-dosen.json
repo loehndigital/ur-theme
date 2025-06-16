@@ -302,6 +302,7 @@
     },
     "nassfutter_grid_84cBg3": {
       "type": "nassfutter-grid",
+      "disabled": true,
       "name": "Nassfutter Produktgrid",
       "settings": {
         "collection": "nassfutter"
