@@ -280,6 +280,42 @@
         "padding_bottom": 36
       }
     },
+    "highlight_product_azwmGR": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Pferd",
+        "product_description": "Pferd ist eine besonders magere und hypoallergene Proteinquelle, die sich ideal für sensible Hunde eignet. Es liefert wichtige Mineralstoffe wie Eisen und Zink und unterstützt so die Vitalität und den Muskelaufbau.",
+        "image_position": "right",
+        "background_color": "#b5afc3",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_kEFUAV": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Karotte",
+        "product_description": "Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt.",
+        "image_position": "right",
+        "background_color": "#ffa816",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_YrzeVd": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Quinoa",
+        "product_description": "Quinoa ist eine wertvolle pflanzliche Proteinquelle und liefert essenzielle Aminosäuren, die zur Muskelbildung beitragen. Zudem ist es reich an Ballaststoffen und unterstützt eine gesunde Verdauung sowie eine ausgewogene Ernährung.",
+        "image_position": "right",
+        "background_color": "#fd6767",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -521,6 +557,9 @@
     "apps_WXxFib",
     "icon_row_RbbQDB",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "highlight_product_azwmGR",
+    "highlight_product_kEFUAV",
+    "highlight_product_YrzeVd",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
