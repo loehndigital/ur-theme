@@ -39,6 +39,21 @@
           "type": "price",
           "settings": {}
         },
+        "icon_with_text_GVT8fT": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "map_pin",
+            "image_1": "shopify://shop_images/Meat-min.png",
+            "heading_1": "Frisches Muskelfleisch und nahrhafte Innereien",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Vitamine-min.png",
+            "heading_2": "Bestes Obst und Gemüse aus der Region",
+            "icon_3": "truck",
+            "image_3": "shopify://shop_images/Regional-min.png",
+            "heading_3": "Natur Pur: Vollwertig, ohne Chemie & prozentgenau deklariert"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -129,6 +144,7 @@
         "title",
         "caption",
         "price",
+        "icon_with_text_GVT8fT",
         "variant_picker",
         "quantity_selector",
         "bsub-widget",
