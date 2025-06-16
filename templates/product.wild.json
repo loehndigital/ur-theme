@@ -350,33 +350,122 @@
       "name": "UR Hero Slider",
       "settings": {}
     },
-    "1694596722fbd3b4b2": {
-      "type": "apps",
+    "vergleichstabelle_2_DFa6jt": {
+      "type": "vergleichstabelle-2",
       "blocks": {
-        "4e0e223b-8191-412f-80a7-a090f143b0c9": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+        "feature_D9XbJ3": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Glasklare Zutatenliste: 100 % deklariert, keine Tricks",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_Xhndci": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Muskelfleisch aus artgerechter Haltung statt Abfällen",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_DJEfRR": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Zutaten aus Bayern & Umgebung. Frisch, regional, ehrlich",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_yGdqmg": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "text_links": "Schonendes Slow-Cooking für maximale Nährstoffe",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_qUrRU6": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Optimale Nährstoffbalance abgestimmt auf Energie, Gesundheit & Vitalität",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_AKbTzJ": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Frei von Weizen, Zucker, Füllstoffen, Lockstoffen & synthetischen Vitaminen",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_M8QieP": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Hochwertige Proteine & Fette für starke Muskeln & Energie",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_kBbJyk": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Besonders hohe Akzeptanz auch bei sensiblen Hunden",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_niHPry": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Unterstützt Verdauung, Fell, Abwehrkräfte & Immunsystem",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_9TMwwW": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Kleine Chargen mit Sorgfalt gekocht. Kein Industriefutter",
+            "icon_links": true,
+            "icon_rechts": false
+          }
+        },
+        "feature_dmUcFF": {
+          "type": "feature",
+          "settings": {
+            "text_links": "Familiengeführt von Hundemenschen mit Herz und Verstand",
+            "icon_links": true,
+            "icon_rechts": false
+          }
         }
       },
       "block_order": [
-        "4e0e223b-8191-412f-80a7-a090f143b0c9"
+        "feature_D9XbJ3",
+        "feature_Xhndci",
+        "feature_DJEfRR",
+        "feature_yGdqmg",
+        "feature_qUrRU6",
+        "feature_AKbTzJ",
+        "feature_M8QieP",
+        "feature_kBbJyk",
+        "feature_niHPry",
+        "feature_9TMwwW",
+        "feature_dmUcFF"
       ],
+      "name": "Vergleich – Just Russel Stil",
       "settings": {
-        "include_margins": true
-      }
-    },
-    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify://shop_images/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
-        "content": "<h1><strong>10€ Rabatt auf Deine nächste Bestellung</strong></h1><p>Hol dir deinen 10 EUR* Rabatt Coupon ganz einfach jetzt und abonniere uneren Newsletter für Updates und Informationen zum Hund. <br/><em>* Einlösbar ab einem Einkaufswert von € 49,-</em><br/></p>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "true",
-        "theme_mode": "dark",
-        "desktop_blur": "no-desktop-blur"
+        "ueberschrift_text": "",
+        "ueberschrift_alignment": "left",
+        "vergleichsbild_links": "shopify://shop_images/UR-Dosen.png",
+        "vergleichsbild_rechts": "shopify://shop_images/Basic-Hundefutter.png",
+        "produktname_links": "Uncle Rusty's",
+        "produktname_rechts": "Supermarkt",
+        "bg_color": "#f2eee3",
+        "zebra_color": "#ece7d8"
       }
     },
     "related-products": {
@@ -395,85 +484,6 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 56
-      }
-    },
-    "ur_image_with_text_C6GbQL": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "heading_VPMk49": {
-          "type": "heading",
-          "settings": {
-            "heading": "Die Zutaten im Überblick",
-            "heading_size": "h1"
-          }
-        },
-        "text_nhbJpz": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Natürlich und durchdacht: Unsere Zutaten machen den Unterschied. Jede Komponente bringt ihre Stärken mit und sorgt für eine gesunde und schmackhafte Mahlzeit.</p>",
-            "text_style": "body"
-          }
-        },
-        "icon_text_XBjNXz": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Wild",
-            "show_accordion": true,
-            "richtext": "<p>Wild ist eine besonders fettarme und hochwertige Proteinquelle, die ideal für ernährungssensible Hunde geeignet ist. Es liefert wertvolle Nährstoffe wie Eisen und B-Vitamine, die die Vitalität und das Immunsystem fördern.</p>"
-          }
-        },
-        "icon_text_YNTUDk": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Rind",
-            "show_accordion": true,
-            "richtext": "<p>Das enthaltene Rindfleisch ergänzt das magere Wildfleisch perfekt. Es liefert zusätzliches Protein sowie wertvolle Nährstoffe wie Eisen und Zink für eine ausgewogene Ernährung.</p>"
-          }
-        },
-        "icon_text_h6eM3n": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Süßkartoffeln",
-            "show_accordion": true,
-            "richtext": "<p>Süßkartoffeln sind eine natürliche Quelle für komplexe Kohlenhydrate, die langanhaltende Energie liefern. Sie enthalten wertvolle Ballaststoffe sowie Vitamine wie Vitamin A und fördern eine gesunde Verdauung.</p>"
-          }
-        },
-        "icon_text_pFTTYR": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Zucchini",
-            "show_accordion": true,
-            "richtext": "<p>Zucchini ist kalorienarm und reich an Ballaststoffen, die eine gesunde Verdauung unterstützen. Zudem liefert sie wichtige Vitamine wie Vitamin C und fördert die Hydration deines Hundes.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_VPMk49",
-        "text_nhbJpz",
-        "icon_text_XBjNXz",
-        "icon_text_YNTUDk",
-        "icon_text_h6eM3n",
-        "icon_text_pFTTYR"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/NB_Quadrat4.png",
-        "height": "medium",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "05f67661-57d3-4393-b235-9279296aa6fd": {
@@ -592,10 +602,8 @@
     "highlight_product_aWFqHQ",
     "highlight_product_qHA3mp",
     "hero_slider_eaCxkD",
-    "1694596722fbd3b4b2",
-    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
+    "vergleichstabelle_2_DFa6jt",
     "related-products",
-    "ur_image_with_text_C6GbQL",
     "05f67661-57d3-4393-b235-9279296aa6fd",
     "full_width_banner_88Jzex"
   ]
