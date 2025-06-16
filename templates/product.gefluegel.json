@@ -447,35 +447,6 @@
         "zebra_color": "#ece7d8"
       }
     },
-    "1694596722fbd3b4b2": {
-      "type": "apps",
-      "blocks": {
-        "4e0e223b-8191-412f-80a7-a090f143b0c9": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "4e0e223b-8191-412f-80a7-a090f143b0c9"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify://shop_images/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
-        "content": "<h1><strong>10€ Rabatt auf Deine nächste Bestellung</strong></h1><p>Hol dir deinen 10 EUR* Rabatt Coupon ganz einfach jetzt und abonniere uneren Newsletter für Updates und Informationen zum Hund. <br/><em>* Einlösbar ab einem Einkaufswert von € 49,-</em><br/></p>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "true",
-        "theme_mode": "dark",
-        "desktop_blur": "no-desktop-blur"
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -492,75 +463,6 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 56
-      }
-    },
-    "ur_image_with_text_C6GbQL": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "heading_VPMk49": {
-          "type": "heading",
-          "settings": {
-            "heading": "Die Zutaten im Überblick",
-            "heading_size": "h1"
-          }
-        },
-        "text_nhbJpz": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Natürlich und durchdacht: Unsere Zutaten machen den Unterschied. Jede Komponente bringt ihre Stärken mit und sorgt für eine gesunde und schmackhafte Mahlzeit.</p>",
-            "text_style": "body"
-          }
-        },
-        "icon_text_XBjNXz": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Huhn",
-            "show_accordion": true,
-            "richtext": "<p>Die Reichhaltigkeit an Mineralstoffen unterstützt die Vitalität und sorgt für eine ausgewogene Ernährung. Erwähnenswert ist zudem der hohe Anteil an leicht verdaulichem Protein im frischen Huhn.</p>"
-          }
-        },
-        "icon_text_h6eM3n": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Kürbis",
-            "show_accordion": true,
-            "richtext": "<p>Der im Kürbis enthaltene Beta-Carotin und Vitamin A stärkt das Immunsystem und schützt die Zellen vor oxidativem Stress. Darüber hinaus fördert er eine ausgewogene Mikronährstoffversorgung.</p>"
-          }
-        },
-        "icon_text_pFTTYR": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Amaranth",
-            "show_accordion": true,
-            "richtext": "<p>Amaranth versorgt deinen Hund mit hochwertigen Kohlenhydraten und Ballaststoffen, die eine gesunde Verdauung unterstützen. Außerdem punktet es mit einer außergewöhnlichen Fülle an Nährstoffen, darunter essenzielle Vitamine und Mineralstoffe.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_VPMk49",
-        "text_nhbJpz",
-        "icon_text_XBjNXz",
-        "icon_text_h6eM3n",
-        "icon_text_pFTTYR"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/NB_Quadrat4.png",
-        "height": "medium",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "05f67661-57d3-4393-b235-9279296aa6fd": {
@@ -679,10 +581,7 @@
     "highlight_product_CJpK8i",
     "hero_slider_9ahVPb",
     "vergleichstabelle_2_EnpdEL",
-    "1694596722fbd3b4b2",
-    "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "related-products",
-    "ur_image_with_text_C6GbQL",
     "05f67661-57d3-4393-b235-9279296aa6fd",
     "full_width_banner_88Jzex"
   ]
