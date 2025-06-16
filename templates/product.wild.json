@@ -328,19 +328,27 @@
         "padding_vertical": 24
       }
     },
-    "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify://shop_images/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile von Wild</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 60 % hochwertigem Wild- und Rindfleisch sowie sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "false",
-        "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
-      }
+    "hero_slider_eaCxkD": {
+      "type": "hero-slider",
+      "blocks": {
+        "hero_slide_dnmg3g": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify://shop_images/Comp_4.jpg",
+            "hero_text": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile von Wild</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 60 % hochwertigem Wild- und Rindfleisch sowie sorgsam ausgewählten Beilagen wie Karotten und Hirse schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
+            "richtext_max_width": 550,
+            "button_link": "",
+            "button_label": "",
+            "theme_mode": "light",
+            "blur": "blur"
+          }
+        }
+      },
+      "block_order": [
+        "hero_slide_dnmg3g"
+      ],
+      "name": "UR Hero Slider",
+      "settings": {}
     },
     "1694596722fbd3b4b2": {
       "type": "apps",
@@ -583,7 +591,7 @@
     "highlight_product_B7jmr4",
     "highlight_product_aWFqHQ",
     "highlight_product_qHA3mp",
-    "6f8d87d4-68f0-4838-ad20-2060fed3a859",
+    "hero_slider_eaCxkD",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "related-products",
