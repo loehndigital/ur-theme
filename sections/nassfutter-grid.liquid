@@ -70,6 +70,8 @@
   .swiper-slide {
     width: auto !important;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .card {
@@ -82,8 +84,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 350px;
-    margin: 0 auto;
+    width: 350px;
   }
 
   .card-image img {
@@ -136,16 +137,16 @@
       },
       breakpoints: {
         0: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        },
-        768: {
           slidesPerView: 'auto',
           spaceBetween: 20
         },
-        1024: {
+        768: {
           slidesPerView: 'auto',
           spaceBetween: 30
+        },
+        1024: {
+          slidesPerView: 'auto',
+          spaceBetween: 40
         }
       }
     });
