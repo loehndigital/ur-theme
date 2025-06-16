@@ -345,12 +345,27 @@
             "zusammensetzung": "",
             "vitamine": ""
           }
+        },
+        "slide_kbjmGf": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
         }
       },
       "block_order": [
         "slide_cAkMjd",
         "slide_bC8UaB",
-        "slide_bdnC8J"
+        "slide_bdnC8J",
+        "slide_kbjmGf"
       ],
       "disabled": true,
       "name": "Nassfutter Produktgrid",
