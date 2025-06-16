@@ -36,10 +36,10 @@
             <div class="card-text">
               <h3>{{ block.settings.title }}</h3>
               <ul>
-                <li>{{ block.settings.usp1 }}</li>
-                <li>{{ block.settings.usp2 }}</li>
-                <li>{{ block.settings.usp3 }}</li>
-                <li>{{ block.settings.usp4 }}</li>
+                {% if block.settings.usp1 != blank %}<li>{{ block.settings.usp1 }}</li>{% endif %}
+                {% if block.settings.usp2 != blank %}<li>{{ block.settings.usp2 }}</li>{% endif %}
+                {% if block.settings.usp3 != blank %}<li>{{ block.settings.usp3 }}</li>{% endif %}
+                {% if block.settings.usp4 != blank %}<li>{{ block.settings.usp4 }}</li>{% endif %}
               </ul>
               <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
               <details>
@@ -74,11 +74,13 @@
   }
 
   .swiper-slide {
-    width: 350px !important;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .card {
+    width: 320px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -131,20 +133,19 @@
     new Swiper('.productSwiper', {
       loop: false,
       speed: 500,
-      slidesPerView: 'auto',
+      slidesPerView: 1.2,
       spaceBetween: 20,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        0: {
-          spaceBetween: 20
-        },
         768: {
+          slidesPerView: 2.5,
           spaceBetween: 30
         },
         1024: {
+          slidesPerView: 3.5,
           spaceBetween: 40
         }
       }
