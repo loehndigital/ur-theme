@@ -359,13 +359,58 @@
             "zusammensetzung": "",
             "vitamine": ""
           }
+        },
+        "slide_NdVUWD": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        },
+        "slide_nJqHye": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
+        },
+        "slide_DryE6U": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "description": "",
+            "usp1": "",
+            "usp2": "",
+            "usp3": "",
+            "usp4": "",
+            "product_link": "",
+            "zusammensetzung": "",
+            "vitamine": ""
+          }
         }
       },
       "block_order": [
         "slide_cAkMjd",
         "slide_bC8UaB",
         "slide_bdnC8J",
-        "slide_kbjmGf"
+        "slide_kbjmGf",
+        "slide_NdVUWD",
+        "slide_nJqHye",
+        "slide_DryE6U"
       ],
       "disabled": true,
       "name": "Nassfutter Produktgrid",
