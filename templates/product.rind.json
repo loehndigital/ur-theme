@@ -280,6 +280,42 @@
         "padding_bottom": 36
       }
     },
+    "highlight_product_6GhD67": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Rind",
+        "product_description": "Rind ist eine ausgezeichnete Quelle für hochwertiges Protein und liefert essenzielle Nährstoffe wie Eisen und Zink. Es unterstützt die Muskelbildung, stärkt das Immunsystem und sorgt für eine ausgewogene Ernährung.",
+        "image_position": "right",
+        "background_color": "#e47044",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_Bwc7PK": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Kartoffeln",
+        "product_description": "Kartoffeln sind eine bekömmliche Kohlenhydratquelle, die deinem Hund langanhaltende Energie liefert. Sie sind reich an Vitaminen wie Vitamin C und B6 und unterstützen eine gesunde Verdauung.",
+        "image_position": "right",
+        "background_color": "#c29169",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_XgQrMj": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Karotten",
+        "product_description": "Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt.",
+        "image_position": "right",
+        "background_color": "#ffa815",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -521,6 +557,9 @@
     "apps_CQhJMm",
     "icon_row_RbbQDB",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "highlight_product_6GhD67",
+    "highlight_product_Bwc7PK",
+    "highlight_product_XgQrMj",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
