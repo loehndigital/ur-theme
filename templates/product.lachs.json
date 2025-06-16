@@ -280,6 +280,54 @@
         "padding_bottom": 36
       }
     },
+    "highlight_product_BLW6hz": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Lachs",
+        "product_description": "Lachs ist eine ausgezeichnete Quelle für hochwertige Proteine und wertvolle Omega-3-Fettsäuren, die die Gesundheit von Haut und Fell fördern. Darüber hinaus unterstützt er das Immunsystem und trägt zu einer optimalen Versorgung mit essenziellen Nährstoffen bei.",
+        "image_position": "right",
+        "background_color": "#e9beb4",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_GqYWjK": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Kürbis",
+        "product_description": "Der im Kürbis enthaltene Beta-Carotin und Vitamin A stärkt das Immunsystem und schützt die Zellen vor oxidativem Stress. Darüber hinaus fördert er eine ausgewogene Mikronährstoffversorgung.",
+        "image_position": "right",
+        "background_color": "#ffa815",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_q7NQpk": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Haferkleie",
+        "product_description": "Haferkleie ist reich an Ballaststoffen und unterstützt eine gesunde Verdauung sowie eine ausgewogene Darmflora. Zusätzlich liefert sie wichtige Vitamine und Mineralstoffe, die zur allgemeinen Vitalität beitragen.",
+        "image_position": "right",
+        "background_color": "#fdd967",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_n4EtJn": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Apfel",
+        "product_description": "Der Apfel liefert natürliche Vitamine und Antioxidantien, die das Immunsystem stärken und die Zellen schützen. Zudem fördert sein hoher Gehalt an Ballaststoffen eine gesunde Verdauung.",
+        "image_position": "right",
+        "background_color": "#fc2929",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -531,6 +579,10 @@
     "apps_eiyURd",
     "icon_row_RbbQDB",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "highlight_product_BLW6hz",
+    "highlight_product_GqYWjK",
+    "highlight_product_q7NQpk",
+    "highlight_product_n4EtJn",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
