@@ -328,19 +328,27 @@
         "padding_vertical": 24
       }
     },
-    "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify://shop_images/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile vom Lamm</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 55 % hochwertigem Lammfleisch und sorgsam ausgewählten Beilagen wie Rote beete, Haferkleie und Apfel schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "false",
-        "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
-      }
+    "hero_slider_FNpdmr": {
+      "type": "hero-slider",
+      "blocks": {
+        "hero_slide_gHx9tE": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify://shop_images/Comp_4.jpg",
+            "hero_text": "<h1><strong>Jede Mahlzeit zählt:<br/>Die Vorteile vom Lamm</strong></h1><p><em>Hol dir die optimale Ernhärung heim:</em><br/>Mit 55 % hochwertigem Lammfleisch und sorgsam ausgewählten Beilagen wie Rote beete, Haferkleie und Apfel schöpfen wir aus der Kraft der Natur. Jede Dose ist ein Stück Heimat – weil deine Fellnase das Beste verdient.</p>",
+            "richtext_max_width": 550,
+            "button_link": "",
+            "button_label": "",
+            "theme_mode": "light",
+            "blur": "blur"
+          }
+        }
+      },
+      "block_order": [
+        "hero_slide_gHx9tE"
+      ],
+      "name": "UR Hero Slider",
+      "settings": {}
     },
     "1694596722fbd3b4b2": {
       "type": "apps",
@@ -583,7 +591,7 @@
     "highlight_product_Em6TB9",
     "highlight_product_a9axnw",
     "highlight_product_dwmgNf",
-    "6f8d87d4-68f0-4838-ad20-2060fed3a859",
+    "hero_slider_FNpdmr",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "related-products",
