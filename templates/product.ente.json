@@ -288,7 +288,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/UR-Ente-Teller-min.png",
-        "height": "medium",
+        "height": "adapt",
         "image_crop": "no-crop",
         "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
