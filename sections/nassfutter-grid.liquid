@@ -55,6 +55,7 @@
         </div>
       {% endfor %}
     </div>
+
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
@@ -75,25 +76,36 @@
 
   .swiper-slide {
     flex-shrink: 0;
-    display: flex;
-    justify-content: center;
+    width: auto !important;
   }
 
   .card {
     width: 320px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    padding: 25px 20px;
+    margin: 10px 0;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
   }
 
   .card-image img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover .card-image img {
+    transform: scale(1.05);
   }
 
   .card-text h3 {
@@ -119,6 +131,11 @@
     border-radius: 50px;
     text-decoration: none;
     margin: 20px 0;
+    transition: background 0.3s ease;
+  }
+
+  .button:hover {
+    background: #333;
   }
 
   details summary {
@@ -132,22 +149,27 @@
   document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.productSwiper', {
       loop: false,
-      speed: 500,
-      slidesPerView: 1.2,
+      speed: 700,
+      slidesPerView: 'auto',
       spaceBetween: 20,
+      grabCursor: true,
+      centeredSlides: false,
+      freeMode: {
+        enabled: true,
+        momentum: true,
+        momentumRatio: 1.1
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: true
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 30
-        },
-        1024: {
-          slidesPerView: 3.5,
-          spaceBetween: 40
-        }
+        768: { spaceBetween: 30 },
+        1024: { spaceBetween: 40 }
       }
     });
   });
