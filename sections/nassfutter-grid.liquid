@@ -1,64 +1,115 @@
 {% schema %}
 {
-  "name": "Nassfutter Grid",
-  "settings": [
+  "name": "Produkt-Slider",
+  "max_blocks": 10,
+  "settings": [],
+  "blocks": [
     {
-      "type": "collection",
-      "id": "collection",
-      "label": "Kollektion auswählen"
+      "type": "product_slide",
+      "name": "Produkt-Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Produktbild"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titel"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Kurzbeschreibung"
+        },
+        {
+          "type": "textarea",
+          "id": "usp1",
+          "label": "USP 1"
+        },
+        {
+          "type": "textarea",
+          "id": "usp2",
+          "label": "USP 2"
+        },
+        {
+          "type": "textarea",
+          "id": "usp3",
+          "label": "USP 3"
+        },
+        {
+          "type": "textarea",
+          "id": "usp4",
+          "label": "USP 4"
+        },
+        {
+          "type": "url",
+          "id": "product_link",
+          "label": "Produktlink"
+        },
+        {
+          "type": "textarea",
+          "id": "zusammensetzung",
+          "label": "Zusammensetzung"
+        },
+        {
+          "type": "textarea",
+          "id": "vitamine",
+          "label": "Vitamine & Spurenelemente"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Nassfutter Produktgrid"
+      "name": "Produkt-Slider"
     }
   ]
 }
 {% endschema %}
 
 {% stylesheet %}
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.slider-container {
+  display: flex;
+  overflow-x: auto;
   gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
 }
 
-@media (min-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.product-card {
+.product-slide {
+  min-width: 300px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 20px;
   text-align: center;
+  scroll-snap-align: start;
 }
 
-.product-card img {
+.product-slide img {
   max-width: 150px;
   margin: 0 auto 15px;
 }
 
-.product-card h2 {
+.product-slide h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.product-card ul {
+.product-slide ul {
   list-style: none;
   padding: 0;
   margin-bottom: 15px;
   text-align: left;
 }
 
-.product-card ul li::before {
+.product-slide ul li::before {
   content: '✔️ ';
 }
 
-.product-card a.button {
+.product-slide a.button {
   display: inline-block;
   background: #000;
   color: #fff;
@@ -74,32 +125,32 @@ details summary {
 }
 {% endstylesheet %}
 
-<div class="product-grid">
-  {% if section.settings.collection %}
-    {% for product in collections[section.settings.collection].products %}
-      <div class="product-card">
-        <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title }}">
-        <h2>{{ product.title }}</h2>
-        <p>Kraftvoller Energieschub für Deinen Hund</p>
-        <ul>
-          <li>Frisches Fleisch</li>
-          <li>Gemüse & Nährstoffe</li>
-          <li>Glutenfrei & für alle Hunde</li>
-          <li>100% Natürlich & Regional</li>
-        </ul>
-        <a href="{{ product.url }}" class="button">Zum Produkt</a>
+<div class="slider-container">
+  {% for block in section.blocks %}
+    <div class="product-slide">
+      {% if block.settings.image %}
+        <img src="{{ block.settings.image | img_url: '300x300' }}" alt="{{ block.settings.title }}">
+      {% endif %}
+      <h2>{{ block.settings.title }}</h2>
+      <p>{{ block.settings.description }}</p>
+      <ul>
+        <li>{{ block.settings.usp1 }}</li>
+        <li>{{ block.settings.usp2 }}</li>
+        <li>{{ block.settings.usp3 }}</li>
+        <li>{{ block.settings.usp4 }}</li>
+      </ul>
+      {% if block.settings.product_link != blank %}
+        <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
+      {% endif %}
 
-        <details>
-          <summary>Zusammensetzung</summary>
-          <p>Hier steht die Zusammensetzung.</p>
-        </details>
-        <details>
-          <summary>Vitamine, Mengen- & Spurenelemente</summary>
-          <p>Hier steht der Vitamininhalt.</p>
-        </details>
-      </div>
-    {% endfor %}
-  {% else %}
-    <p>Bitte eine Kollektion auswählen.</p>
-  {% endif %}
+      <details>
+        <summary>Zusammensetzung</summary>
+        <p>{{ block.settings.zusammensetzung }}</p>
+      </details>
+      <details>
+        <summary>Vitamine, Mengen- & Spurenelemente</summary>
+        <p>{{ block.settings.vitamine }}</p>
+      </details>
+    </div>
+  {% endfor %}
 </div>
