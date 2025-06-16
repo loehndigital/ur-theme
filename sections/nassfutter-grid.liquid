@@ -1,156 +1,140 @@
 {% schema %}
 {
-  "name": "Produkt-Slider",
-  "max_blocks": 10,
+  "name": "Produkt Slider",
   "settings": [],
   "blocks": [
     {
-      "type": "product_slide",
-      "name": "Produkt-Slide",
+      "type": "slide",
+      "name": "Slide",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Produktbild"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Titel"
-        },
-        {
-          "type": "textarea",
-          "id": "description",
-          "label": "Kurzbeschreibung"
-        },
-        {
-          "type": "textarea",
-          "id": "usp1",
-          "label": "USP 1"
-        },
-        {
-          "type": "textarea",
-          "id": "usp2",
-          "label": "USP 2"
-        },
-        {
-          "type": "textarea",
-          "id": "usp3",
-          "label": "USP 3"
-        },
-        {
-          "type": "textarea",
-          "id": "usp4",
-          "label": "USP 4"
-        },
-        {
-          "type": "url",
-          "id": "product_link",
-          "label": "Produktlink"
-        },
-        {
-          "type": "textarea",
-          "id": "zusammensetzung",
-          "label": "Zusammensetzung"
-        },
-        {
-          "type": "textarea",
-          "id": "vitamine",
-          "label": "Vitamine & Spurenelemente"
-        }
+        { "type": "image_picker", "id": "image", "label": "Produktbild" },
+        { "type": "text", "id": "title", "label": "Titel" },
+        { "type": "textarea", "id": "description", "label": "Beschreibung" },
+        { "type": "textarea", "id": "usp1", "label": "USP 1" },
+        { "type": "textarea", "id": "usp2", "label": "USP 2" },
+        { "type": "textarea", "id": "usp3", "label": "USP 3" },
+        { "type": "textarea", "id": "usp4", "label": "USP 4" },
+        { "type": "url", "id": "product_link", "label": "Produktlink" },
+        { "type": "textarea", "id": "zusammensetzung", "label": "Zusammensetzung" },
+        { "type": "textarea", "id": "vitamine", "label": "Vitamine & Spurenelemente" }
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "Produkt-Slider"
-    }
-  ]
+  "presets": [{ "name": "Produkt Slider" }]
 }
 {% endschema %}
 
-{% stylesheet %}
-.slider-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 20px;
-  scroll-snap-type: x mandatory;
-}
+<div class="swiper productSwiper">
+  <div class="swiper-wrapper">
 
-.product-slide {
-  min-width: 300px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  text-align: center;
-  scroll-snap-align: start;
-}
+    {% for block in section.blocks %}
+      <div class="swiper-slide">
+        <div class="product-slide-container">
+          <div class="product-image">
+            <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
+          </div>
+          <div class="product-text">
+            <h2>{{ block.settings.title }}</h2>
+            <p>{{ block.settings.description }}</p>
+            <ul>
+              <li>{{ block.settings.usp1 }}</li>
+              <li>{{ block.settings.usp2 }}</li>
+              <li>{{ block.settings.usp3 }}</li>
+              <li>{{ block.settings.usp4 }}</li>
+            </ul>
+            <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
 
-.product-slide img {
-  max-width: 150px;
-  margin: 0 auto 15px;
-}
+            <details>
+              <summary>Zusammensetzung</summary>
+              <p>{{ block.settings.zusammensetzung }}</p>
+            </details>
+            <details>
+              <summary>Vitamine, Mengen- & Spurenelemente</summary>
+              <p>{{ block.settings.vitamine }}</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
 
-.product-slide h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+  </div>
 
-.product-slide ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.product-slide ul li::before {
-  content: '✔️ ';
-}
-
-.product-slide a.button {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-}
-
-details summary {
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
-}
-{% endstylesheet %}
-
-<div class="slider-container">
-  {% for block in section.blocks %}
-    <div class="product-slide">
-      {% if block.settings.image %}
-        <img src="{{ block.settings.image | img_url: '300x300' }}" alt="{{ block.settings.title }}">
-      {% endif %}
-      <h2>{{ block.settings.title }}</h2>
-      <p>{{ block.settings.description }}</p>
-      <ul>
-        <li>{{ block.settings.usp1 }}</li>
-        <li>{{ block.settings.usp2 }}</li>
-        <li>{{ block.settings.usp3 }}</li>
-        <li>{{ block.settings.usp4 }}</li>
-      </ul>
-      {% if block.settings.product_link != blank %}
-        <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
-      {% endif %}
-
-      <details>
-        <summary>Zusammensetzung</summary>
-        <p>{{ block.settings.zusammensetzung }}</p>
-      </details>
-      <details>
-        <summary>Vitamine, Mengen- & Spurenelemente</summary>
-        <p>{{ block.settings.vitamine }}</p>
-      </details>
-    </div>
-  {% endfor %}
+  <!-- Navigation Buttons -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
+
+<style>
+  .product-slide-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .product-image img {
+    width: 300px;
+  }
+
+  .product-text {
+    max-width: 500px;
+  }
+
+  .product-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .product-text ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .product-text ul li::before {
+    content: '✔️ ';
+  }
+
+  .product-text a.button {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 20px 0;
+  }
+
+  details summary {
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .product-slide-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    .product-image img {
+      width: 200px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.productSwiper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true
+    });
+  });
+</script>
