@@ -1,0 +1,105 @@
+{% schema %}
+{
+  "name": "Nassfutter Grid",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Kollektion auswählen"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nassfutter Produktgrid"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 150px;
+  margin: 0 auto 15px;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.product-card ul li::before {
+  content: '✔️ ';
+}
+
+.product-card a.button {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+details summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+{% endstylesheet %}
+
+<div class="product-grid">
+  {% if section.settings.collection %}
+    {% for product in collections[section.settings.collection].products %}
+      <div class="product-card">
+        <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title }}">
+        <h2>{{ product.title }}</h2>
+        <p>Kraftvoller Energieschub für Deinen Hund</p>
+        <ul>
+          <li>Frisches Fleisch</li>
+          <li>Gemüse & Nährstoffe</li>
+          <li>Glutenfrei & für alle Hunde</li>
+          <li>100% Natürlich & Regional</li>
+        </ul>
+        <a href="{{ product.url }}" class="button">Zum Produkt</a>
+
+        <details>
+          <summary>Zusammensetzung</summary>
+          <p>Hier steht die Zusammensetzung.</p>
+        </details>
+        <details>
+          <summary>Vitamine, Mengen- & Spurenelemente</summary>
+          <p>Hier steht der Vitamininhalt.</p>
+        </details>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>Bitte eine Kollektion auswählen.</p>
+  {% endif %}
+</div>
