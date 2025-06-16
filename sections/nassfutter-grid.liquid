@@ -24,7 +24,7 @@
 }
 {% endschema %}
 
-<div class="product-slider-grid">
+<div class="product-slider-wrapper">
   <div class="swiper productSwiper">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
@@ -61,21 +61,21 @@
 </div>
 
 <style>
-  .product-slider-grid {
+  .product-slider-wrapper {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow: hidden;
+    position: relative;
   }
 
   .swiper-wrapper {
-    display: flex !important;
+    display: flex;
   }
 
   .swiper-slide {
     width: 350px !important;
     flex-shrink: 0;
-    display: flex;
-    justify-content: center;
   }
 
   .card {
@@ -83,7 +83,6 @@
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
     padding: 20px;
-    text-align: center;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -132,7 +131,8 @@
     new Swiper('.productSwiper', {
       loop: false,
       speed: 500,
-      spaceBetween: 30,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
