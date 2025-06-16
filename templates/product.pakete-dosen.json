@@ -300,6 +300,13 @@
         "padding_bottom": 0
       }
     },
+    "nassfutter_grid_84cBg3": {
+      "type": "nassfutter-grid",
+      "name": "Nassfutter Produktgrid",
+      "settings": {
+        "collection": "nassfutter"
+      }
+    },
     "25963718-e156-41f4-ba24-b0f5179def60": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -1194,6 +1201,7 @@
     "1524c9a4-f315-47a6-adbc-31e43082bbc0",
     "1694596722fbd3b4b2",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
+    "nassfutter_grid_84cBg3",
     "25963718-e156-41f4-ba24-b0f5179def60",
     "97b93f31-c4fa-46cc-bbae-c27bd4ec3b18",
     "6d0925c9-8ace-4364-ac10-6283f37b258f",
