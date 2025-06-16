@@ -241,29 +241,6 @@
         "color_scheme": "background-2"
       }
     },
-    "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6": {
-      "type": "rich-text",
-      "blocks": {
-        "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.product_description | metafield_tag }}"
-          }
-        }
-      },
-      "block_order": [
-        "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-text-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -280,66 +257,16 @@
             "text": "<p>Natürlich. Hochwertig. Echt. Unser Nassfutter vereint traditionelle Rezepturen mit modernem Anspruch.<strong> Wild, Rind, Süßkartoffeln und Zucchini </strong>– mehr braucht es nicht, um deinem Hund das Beste zu bieten. Jede Zutat hat ihren Platz, jeder Bissen ein Grund zur Freude.</p>",
             "text_style": "body"
           }
-        },
-        "d5f5d2c9-0acd-470c-b116-554653a901f6": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-lederhosen",
-            "icon_text": "Premium Hundenahrung aus dem Süden von Bayern ",
-            "show_accordion": false,
-            "richtext": ""
-          }
-        },
-        "12606def-b33b-4e93-ae9d-4bdcffdbc21e": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_text": "Frisches Muskelfleisch und nahrhafte Innereien ",
-            "show_accordion": false,
-            "richtext": "<p> </p>"
-          }
-        },
-        "53631e27-d0ef-4248-925c-d004a9c0f2bf": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-region-color",
-            "icon_text": "Bestes Obst und Gemüse aus der Region ",
-            "show_accordion": false,
-            "richtext": ""
-          }
-        },
-        "bf6d932a-9b51-4d16-9a8e-75149f41df50": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Naturrein, vollwertig, ohne Chemie | Natur Pur ",
-            "show_accordion": false,
-            "richtext": ""
-          }
-        },
-        "a88c0156-c93d-4ca6-86d1-4430d0d99fb9": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-lightbulb",
-            "icon_text": "Unser Tipp",
-            "show_accordion": true,
-            "richtext": "<p>Wechsle die Sorten von Uncle Rusty’s regelmäßig durch. Damit ist der Bedarf Deines Hundes abgedeckt. Der Wechsel der Sorten ist wichtig, da dem Hund dadurch unter anderem verschiedene Vitamine und Proteinquellen zugeführt werden. (Beispiel: die Zugabe von Jod kann durch die Fütterung – 1 pro Woche das Lachsmenü automatisch gemacht werden). Unabhängig von der Futterart und Marke empfehlen wir die Zugabe (in regelmäßigen Abständen) <br/><br/>z.B.: Seealgenmehl (für Fell und Schilddrüsenfunktion)<br/>Grünlippmuschelpulver (für Herz, Knorpeln, Gelenke) <br/>Leinöl (für Fell, Haut, Stoffwechsel und Verdauung) <br/>Dorschlebertran (für Knochenbau, Wachstumsfördernd, Konstitution, Fell) <br/><br/>Bitte beachte die richtige Dosierung der Produkte! - Der Gehalt ausgewählter Nährstoffe unseres Tierfutters wird regelmäßig von einem unabhängigen und anerkannten Labor geprüft, um den hohen Qualitätsstandard zu sichern. </p>"
-          }
         }
       },
       "block_order": [
         "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-heading-1",
-        "text_qYagip",
-        "d5f5d2c9-0acd-470c-b116-554653a901f6",
-        "12606def-b33b-4e93-ae9d-4bdcffdbc21e",
-        "53631e27-d0ef-4248-925c-d004a9c0f2bf",
-        "bf6d932a-9b51-4d16-9a8e-75149f41df50",
-        "a88c0156-c93d-4ca6-86d1-4430d0d99fb9"
+        "text_qYagip"
       ],
       "settings": {
-        "image": "shopify://shop_images/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
-        "height": "medium",
-        "image_crop": "crop",
+        "image": "shopify://shop_images/Wild-min_6bd1e2d3-0727-454d-bce8-a3d3010b82e2.png",
+        "height": "adapt",
+        "image_crop": "no-crop",
         "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -603,7 +530,6 @@
     "main",
     "apps_Y9k4Ux",
     "icon_row_RbbQDB",
-    "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
