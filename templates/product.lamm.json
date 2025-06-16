@@ -280,6 +280,54 @@
         "padding_bottom": 36
       }
     },
+    "highlight_product_RmYdMj": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Lamm",
+        "product_description": "Hochwertige Proteinquelle, die leicht verdaulich ist und wichtige Nährstoffe wie Zink und Eisen liefert. Es unterstützt die Muskelbildung und fördert eine ausgewogene Ernährung.",
+        "image_position": "right",
+        "background_color": "#9fbcc5",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_Em6TB9": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Rote Beete",
+        "product_description": "Rote Beete ist reich an natürlichen Antioxidantien und unterstützt durch ihren hohen Gehalt an Eisen und Folsäure die Blutbildung. Zudem fördert sie eine gesunde Verdauung und stärkt das Immunsystem.",
+        "image_position": "right",
+        "background_color": "#fd6767",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_a9axnw": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Haferkleie",
+        "product_description": "Haferkleie ist reich an Ballaststoffen und unterstützt eine gesunde Verdauung sowie eine ausgewogene Darmflora. Zusätzlich liefert sie wichtige Vitamine und Mineralstoffe, die zur allgemeinen Vitalität beitragen.",
+        "image_position": "right",
+        "background_color": "#f4d162",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_dwmgNf": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Apfel",
+        "product_description": "Der Apfel liefert natürliche Vitamine und Antioxidantien, die das Immunsystem stärken und die Zellen schützen. Zudem fördert sein hoher Gehalt an Ballaststoffen eine gesunde Verdauung.",
+        "image_position": "right",
+        "background_color": "#fc2929",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -531,6 +579,10 @@
     "apps_i8KJET",
     "icon_row_RbbQDB",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "highlight_product_RmYdMj",
+    "highlight_product_Em6TB9",
+    "highlight_product_a9axnw",
+    "highlight_product_dwmgNf",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
