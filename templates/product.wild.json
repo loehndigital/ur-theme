@@ -280,6 +280,54 @@
         "padding_bottom": 36
       }
     },
+    "highlight_product_zfhUzL": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Wild",
+        "product_description": "Wild ist eine besonders fettarme und hochwertige Proteinquelle, die ideal für ernährungssensible Hunde geeignet ist. Es liefert wertvolle Nährstoffe wie Eisen und B-Vitamine, die die Vitalität und das Immunsystem fördern.",
+        "image_position": "right",
+        "background_color": "#85a58c",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_B7jmr4": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Rind",
+        "product_description": "Das enthaltene Rindfleisch ergänzt das magere Wildfleisch perfekt. Es liefert zusätzliches Protein sowie wertvolle Nährstoffe wie Eisen und Zink für eine ausgewogene Ernährung.",
+        "image_position": "right",
+        "background_color": "#e47044",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_aWFqHQ": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Süßkartoffeln",
+        "product_description": "Süßkartoffeln sind eine natürliche Quelle für komplexe Kohlenhydrate, die langanhaltende Energie liefern. Sie enthalten wertvolle Ballaststoffe sowie Vitamine wie Vitamin A und fördern eine gesunde Verdauung.",
+        "image_position": "right",
+        "background_color": "#c29169",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_qHA3mp": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Zucchini",
+        "product_description": "Zucchini ist kalorienarm und reich an Ballaststoffen, die eine gesunde Verdauung unterstützen. Zudem liefert sie wichtige Vitamine wie Vitamin C und fördert die Hydration deines Hundes.",
+        "image_position": "right",
+        "background_color": "#499c57",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -531,6 +579,10 @@
     "apps_Y9k4Ux",
     "icon_row_RbbQDB",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "highlight_product_zfhUzL",
+    "highlight_product_B7jmr4",
+    "highlight_product_aWFqHQ",
+    "highlight_product_qHA3mp",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
