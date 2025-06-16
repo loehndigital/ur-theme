@@ -307,92 +307,98 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/ente_800g_71e258e6-6d48-4310-bd42-e903fe6eeb1b.png",
-            "title": "Enbtet",
-            "usp1": "sdfsdf",
-            "usp2": "sdfsdf",
-            "usp3": "sdfsdf",
-            "usp4": "sdfsf",
-            "product_link": "",
-            "zusammensetzung": "sdfsdf",
-            "vitamine": ""
+            "title": "Ente mit Karotte & Hirse",
+            "usp1": "65 % Entenfleisch – extra proteinreich.",
+            "usp2": "Ohne Zusätze – 100 % natürlich.",
+            "usp3": "Mit Bio-Hirse & Karotte – sanft zum Magen.",
+            "usp4": "",
+            "product_link": "shopify://products/entenmenu-abo",
+            "zusammensetzung": "50% Muskelfleisch von der Ente, 10% Entenhälse, 5% Entenherzen, 10% Karotten, 10% Hirse\n\nDas Entenmenü enthält 15% Fleischbrühe",
+            "vitamine": "12,70% Rohprotein; 6,80% Rohfett; 2,60% Rohasche; 0,40% Rohfaser; 69,50% Feuchtigkeit; 0,78% Calcium; 0,54% Phosphor\nVitamine im natürlichen Anteil"
           }
         },
         "slide_bC8UaB": {
           "type": "slide",
           "settings": {
-            "title": "",
-            "usp1": "",
-            "usp2": "",
-            "usp3": "",
+            "image": "shopify://shop_images/gefluegel_800g_bc802476-bd04-440b-ba46-50f0495eca93.png",
+            "title": "Geflügel mit Kürbis & Amaranth",
+            "usp1": "63 % Geflügel – extra proteinreich.",
+            "usp2": "Kürbis & Amaranth – sanft zum Magen.",
+            "usp3": "Ohne Gluten & künstliche Zusätze.",
             "usp4": "",
-            "product_link": "",
-            "zusammensetzung": "",
-            "vitamine": ""
+            "product_link": "shopify://products/geflugelmenu-abo",
+            "zusammensetzung": "63% Fleisch vom Huhn (38% Muskelfleisch, 10% Herz, 10% Mägen, 5% Leber), 10% Kürbis, 7% Bio-Amaranth\n\nDas Geflügelmenü enthält 20% Fleischbrühe",
+            "vitamine": "11,60% Rohprotein; 3,00% Rohfett; 2,80% Rohasche; 1,00% Rohfaser; 75,10% Feuchtigkeit; 0,53% Calcium; 0,39% Phosphor\nVitamine im natürlichen Anteil"
           }
         },
         "slide_bdnC8J": {
           "type": "slide",
           "settings": {
-            "title": "",
-            "usp1": "",
-            "usp2": "",
-            "usp3": "",
+            "image": "shopify://shop_images/lachs_800g_b5aaa181-332a-4a41-8f5c-cb0a7d734d11.png",
+            "title": "Lachs mit Kürbis, Haferkleie & Apfel",
+            "usp1": "60 % Wildlachs – reich an Omega-3.",
+            "usp2": "Mit Kürbis für sanfte Verdauung.",
+            "usp3": "Haferkleie als natürliche Ballaststoffquelle.",
             "usp4": "",
-            "product_link": "",
-            "zusammensetzung": "",
-            "vitamine": ""
+            "product_link": "shopify://products/lachsmenu-abo",
+            "zusammensetzung": "50% Muskelfleisch vom Lachs, 15% Kürbis, 12% Haferkleie, 8% Apfel, 0,47% Algenkalk\n\nDas Lachsmenü enthält 14,53% Fleischbrühe",
+            "vitamine": "12,10% Rohprotein; 13,50% Rohfett; 1,30% Rohasche; 0,40% Rohfaser; 60,80% Feuchtigkeit; 0,27% Calcium; 0,21% Phosphor \nVitamine im natürlichen Anteil"
           }
         },
         "slide_kbjmGf": {
           "type": "slide",
           "settings": {
-            "title": "",
-            "usp1": "",
-            "usp2": "",
-            "usp3": "",
+            "image": "shopify://shop_images/lamm_800g_v2.png",
+            "title": "Lamm mit Rote Beete, Haferkleie & Apfel",
+            "usp1": "55 % Lammfleisch als zarte Eiweißquelle.",
+            "usp2": "Rote Beete – liefert wertvolle Nährstoffe.",
+            "usp3": "Apfel – für Vitamine & Frische.",
             "usp4": "",
-            "product_link": "",
-            "zusammensetzung": "",
-            "vitamine": ""
+            "product_link": "shopify://products/lamm",
+            "zusammensetzung": "55 % Fleisch vom Lamm (40% Muskelfleisch, 5% Lunge, 5% Herz, 5% Leber), 15% Rote Beete,\n10% Haferkleie, 8% Apfel\n\nEnthält 12 % Fleischbrühe.",
+            "vitamine": "10,40% Rohprotein; 8,70% Rohfett; 3,00% Rohasche; 0,60% Rohfaser; 68,20% Feuchtigkeit; 1,32% Calcium; 0,72% Phosphor\n\nVitamine im natürlichen Anteil"
           }
         },
         "slide_NdVUWD": {
           "type": "slide",
           "settings": {
-            "title": "",
-            "usp1": "",
-            "usp2": "",
-            "usp3": "",
+            "image": "shopify://shop_images/pferd_800g_c40c9051-5c62-4353-b295-13c1e25cc264.png",
+            "title": "Pferd mit Karotte & Quinoa",
+            "usp1": "57 % Pferdefleisch – pure, hypoallergene Proteinquelle.",
+            "usp2": "Quinoa – ballaststoffreich & gut verträglich.",
+            "usp3": "Algenkalk – unterstützt den Knochenbau.",
             "usp4": "",
-            "product_link": "",
-            "zusammensetzung": "",
-            "vitamine": ""
+            "product_link": "shopify://products/pferd-mit-karotte-und-quinoa",
+            "zusammensetzung": "57% Fleisch vom Pferd (40% Muskelfleisch, 6% Herz, 6% Lunge, 5% Leber), 16% Karotte, 8% Quinoa. 0,37% zur optimalen Calcium-Versorgung.\n\nDas Pferdemenü enthält 18,63% Fleischbrühe.",
+            "vitamine": "12,10% Rohprotein; 2,20% Rohfett; 1,60% Rohasche; 0,80% Rohfaser; 75,90% Feuchtigkeit; 0,17% Calcium; 0,13% Phosphor\nVitamine im natürlichen Anteil"
           }
         },
         "slide_nJqHye": {
           "type": "slide",
           "settings": {
-            "title": "",
-            "usp1": "",
-            "usp2": "",
-            "usp3": "",
+            "image": "shopify://shop_images/rind_800g_9701a81b-c8aa-4e09-8ba7-4f3b6851f0a5.png",
+            "title": "Rind mit Kartoffeln & Karotten",
+            "usp1": "58 % Rindfleisch – kräftiges Muskelfleisch.",
+            "usp2": "Kartoffeln – liefern Energie & sättigen.",
+            "usp3": "Karotten – natürliche Vitaminquelle.",
             "usp4": "",
-            "product_link": "",
-            "zusammensetzung": "",
-            "vitamine": ""
+            "product_link": "shopify://products/rindermenu-abo",
+            "zusammensetzung": "58% Fleisch vom Rind (40% Muskelfleisch, 7% Herz, 7% Lunge, 4% Leber), 11% Kartoffeln, 11% Karotten, 0,47% Algenkalk\n\nDas Rindermenü enthält 19,53% Fleischbrühe",
+            "vitamine": "10,40% Rohprotein; 4,50% Rohfett; 1,40% Rohasche; 0,50% Rohfaser; 79,20% Feuchtigkeit; 0,21% Calcium; 0,11% Phosphor\nVitamine im natürlichen Anteil"
           }
         },
         "slide_DryE6U": {
           "type": "slide",
           "settings": {
-            "title": "",
-            "usp1": "",
-            "usp2": "",
-            "usp3": "",
+            "image": "shopify://shop_images/wild_800g_58fe7a12-1637-44b4-bd51-52d066f68ed7.png",
+            "title": "Wild mit Süßkartoffeln & Zucchini",
+            "usp1": "60 % Reh & Hirsch – fettarmes Wildprotein.",
+            "usp2": "25 % Rind – ergänzt Eisen & Zink‑Power.",
+            "usp3": "Süßkartoffeln – liefern Ballaststoffe & Energie.",
             "usp4": "",
-            "product_link": "",
-            "zusammensetzung": "",
-            "vitamine": ""
+            "product_link": "shopify://products/wildmenu-abo",
+            "zusammensetzung": "35% Fleisch vom Reh und Hirsch (20% Muskelfleisch, 10% Lunge und Luftröhre, 5% Leber), 25% Fleisch vom Rind (15% Muskelfleisch, 5% Herz, 5% Lunge), 13% Süßkartoffeln, 10% Zucchini, 0,29% Algenkalk\n\nDas Wildmenü enthält 16,71% Fleischbrühe",
+            "vitamine": "9,70% Rohprotein; 5,40% Rohfett; 1,20% Rohasche; 1,00% Rohfaser; 80,20% Feuchtigkeit; 0,13% Calcium; 0,10% Phosphor \nVitamine im natürlichen Anteil"
           }
         }
       },
@@ -405,7 +411,6 @@
         "slide_nJqHye",
         "slide_DryE6U"
       ],
-      "disabled": true,
       "name": "Nassfutter Produktgrid",
       "settings": {}
     },
