@@ -184,6 +184,21 @@
         "padding_bottom": 36
       }
     },
+    "apps_CQhJMm": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_RiNwRF": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_RiNwRF"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "icon_row_RbbQDB": {
       "type": "icon-row",
       "blocks": {
@@ -576,6 +591,7 @@
   },
   "order": [
     "main",
+    "apps_CQhJMm",
     "icon_row_RbbQDB",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
