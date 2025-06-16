@@ -28,29 +28,31 @@
   <div class="swiper-wrapper">
     {% for block in section.blocks %}
       <div class="swiper-slide">
-        <div class="slide-inner">
-          <div class="product-image">
-            <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
-          </div>
-          <div class="product-text">
-            <h2>{{ block.settings.title }}</h2>
-            <p>{{ block.settings.description }}</p>
-            <ul>
-              <li>{{ block.settings.usp1 }}</li>
-              <li>{{ block.settings.usp2 }}</li>
-              <li>{{ block.settings.usp3 }}</li>
-              <li>{{ block.settings.usp4 }}</li>
-            </ul>
-            <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <div class="product-image">
+              <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
+            </div>
+            <div class="product-text">
+              <h2>{{ block.settings.title }}</h2>
+              <p>{{ block.settings.description }}</p>
+              <ul>
+                <li>{{ block.settings.usp1 }}</li>
+                <li>{{ block.settings.usp2 }}</li>
+                <li>{{ block.settings.usp3 }}</li>
+                <li>{{ block.settings.usp4 }}</li>
+              </ul>
+              <a href="{{ block.settings.product_link }}" class="button">Zum Produkt</a>
 
-            <details>
-              <summary>Zusammensetzung</summary>
-              <p>{{ block.settings.zusammensetzung }}</p>
-            </details>
-            <details>
-              <summary>Vitamine, Mengen- & Spurenelemente</summary>
-              <p>{{ block.settings.vitamine }}</p>
-            </details>
+              <details>
+                <summary>Zusammensetzung</summary>
+                <p>{{ block.settings.zusammensetzung }}</p>
+              </details>
+              <details>
+                <summary>Vitamine, Mengen- & Spurenelemente</summary>
+                <p>{{ block.settings.vitamine }}</p>
+              </details>
+            </div>
           </div>
         </div>
       </div>
@@ -63,13 +65,20 @@
 
 <style>
   .swiper {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
   }
 
   .swiper-slide {
-    width: auto !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slide-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 60px 0;
   }
 
   .slide-inner {
@@ -77,7 +86,6 @@
     gap: 40px;
     align-items: center;
     justify-content: center;
-    padding: 60px 0;
   }
 
   .product-image img {
@@ -124,8 +132,8 @@
     .slide-inner {
       flex-direction: column;
       text-align: center;
-      padding: 40px 0;
     }
+
     .product-image img {
       width: 220px;
     }
@@ -137,8 +145,6 @@
     new Swiper('.productSwiper', {
       loop: true,
       speed: 600,
-      centeredSlides: true,
-      slidesPerView: 'auto',
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
