@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Uncle Rusty ULTRA PRO V5",
+  "name": "Uncle Rusty Slider FINAL",
   "settings": [],
   "blocks": [
     {
@@ -9,153 +9,158 @@
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Produktbild" },
         { "type": "text", "id": "title", "label": "Titel" },
-        { "type": "text", "id": "usp1", "label": "USP 1" },
-        { "type": "text", "id": "usp2", "label": "USP 2" },
-        { "type": "text", "id": "usp3", "label": "USP 3" },
-        { "type": "text", "id": "usp4", "label": "USP 4" },
+        { "type": "textarea", "id": "usp1", "label": "USP 1" },
+        { "type": "textarea", "id": "usp2", "label": "USP 2" },
+        { "type": "textarea", "id": "usp3", "label": "USP 3" },
+        { "type": "textarea", "id": "usp4", "label": "USP 4" },
         { "type": "url", "id": "product_link", "label": "Produktlink" },
         { "type": "textarea", "id": "zusammensetzung", "label": "Zusammensetzung" },
         { "type": "textarea", "id": "vitamine", "label": "Vitamine & Spurenelemente" }
       ]
     }
   ],
-  "presets": [
-    { "name": "Uncle Rusty ULTRA PRO V5" }
-  ]
+  "presets": [{ "name": "Uncle Rusty Slider FINAL" }]
 }
 {% endschema %}
 
-<div class="uncle-rusty-ultra-pro-v5">
-  <div class="swiper rustySwiper">
-    <div class="swiper-wrapper">
-      {% for block in section.blocks %}
-        <div class="swiper-slide">
-          <div class="slide-card">
-            <div class="slide-image">
-              {% if block.settings.image %}
-                <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
-              {% endif %}
-            </div>
-            <div class="slide-content">
-              <h3>{{ block.settings.title }}</h3>
-              <ul>
-                {% if block.settings.usp1 %}<li>{{ block.settings.usp1 }}</li>{% endif %}
-                {% if block.settings.usp2 %}<li>{{ block.settings.usp2 }}</li>{% endif %}
-                {% if block.settings.usp3 %}<li>{{ block.settings.usp3 }}</li>{% endif %}
-                {% if block.settings.usp4 %}<li>{{ block.settings.usp4 }}</li>{% endif %}
-              </ul>
-              {% if block.settings.product_link %}
-                <a href="{{ block.settings.product_link }}" class="product-button">Zum Produkt</a>
-              {% endif %}
-              {% if block.settings.zusammensetzung %}
-              <details><summary>Zusammensetzung</summary><p>{{ block.settings.zusammensetzung }}</p></details>
-              {% endif %}
-              {% if block.settings.vitamine %}
-              <details><summary>Vitamine & Spurenelemente</summary><p>{{ block.settings.vitamine }}</p></details>
-              {% endif %}
-            </div>
+<div class="rusty-carousel-wrapper">
+  <div class="rusty-carousel-track">
+    {% for block in section.blocks %}
+      <div class="rusty-slide">
+        <div class="rusty-card">
+          <div class="rusty-card-image">
+            <img src="{{ block.settings.image | img_url: '500x500' }}" alt="{{ block.settings.title }}">
+          </div>
+          <div class="rusty-card-text">
+            <h3>{{ block.settings.title }}</h3>
+            <ul>
+              {% if block.settings.usp1 != blank %}<li>{{ block.settings.usp1 }}</li>{% endif %}
+              {% if block.settings.usp2 != blank %}<li>{{ block.settings.usp2 }}</li>{% endif %}
+              {% if block.settings.usp3 != blank %}<li>{{ block.settings.usp3 }}</li>{% endif %}
+              {% if block.settings.usp4 != blank %}<li>{{ block.settings.usp4 }}</li>{% endif %}
+            </ul>
+            <a href="{{ block.settings.product_link }}" class="rusty-button">Zum Produkt</a>
+            <details>
+              <summary>Zusammensetzung</summary>
+              <p>{{ block.settings.zusammensetzung }}</p>
+            </details>
+            <details>
+              <summary>Vitamine & Spurenelemente</summary>
+              <p>{{ block.settings.vitamine }}</p>
+            </details>
           </div>
         </div>
-      {% endfor %}
-    </div>
-
-    <!-- Optional Navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+      </div>
+    {% endfor %}
   </div>
-
-  <!-- Swiper CSS + JS via CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
-
-  <style>
-    .uncle-rusty-ultra-pro-v5 {
-      padding: 60px 20px;
-      background: #faf6eb;
-      max-width: 1440px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-    .swiper-wrapper {
-      display: flex;
-      align-items: stretch;
-    }
-    .swiper-slide {
-      width: auto !important;
-    }
-    .slide-card {
-      width: 320px;
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .slide-image img {
-      width: 100%;
-      height: auto;
-    }
-    .slide-content h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 15px 0;
-      text-align: center;
-    }
-    .slide-content ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 15px 0;
-      text-align: center;
-    }
-    .slide-content ul li::before {
-      content: '✔ ';
-    }
-    .product-button {
-      display: block;
-      background: #000;
-      color: #fff;
-      padding: 14px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      margin: 20px auto;
-      text-align: center;
-      font-weight: 600;
-    }
-    details summary {
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 12px;
-      text-align: center;
-    }
-    .swiper-button-next, .swiper-button-prev {
-      color: #000;
-    }
-  </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      new Swiper('.rustySwiper', {
-        loop: true,
-        speed: 600,
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        centeredSlides: false,
-        grabCursor: true,
-        autoplay: {
-          delay: 3500,
-          disableOnInteraction: false
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        breakpoints: {
-          768: { spaceBetween: 40 },
-          1024: { spaceBetween: 50 }
-        }
-      });
-    });
-  </script>
 </div>
+
+<style>
+
+:root {
+  --rusty-primary: #000000;
+  --rusty-background: #faf6eb;
+  --rusty-card-bg: #ffffff;
+  --rusty-shadow: rgba(0, 0, 0, 0.08);
+  --rusty-font: 'Poppins', sans-serif;
+}
+
+.rusty-carousel-wrapper {
+  overflow-x: auto;
+  padding: 30px 0;
+  margin: 0 auto;
+  max-width: 1380px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rusty-carousel-track {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+  scroll-snap-align: start;
+}
+
+.rusty-slide {
+  flex: 0 0 auto;
+  width: 320px;
+  scroll-snap-align: start;
+}
+
+.rusty-card {
+  background: var(--rusty-card-bg);
+  border-radius: 24px;
+  box-shadow: 0 10px 25px var(--rusty-shadow);
+  padding: 25px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rusty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.rusty-card-image img {
+  width: 100%;
+  height: auto;
+}
+
+.rusty-card-text h3 {
+  font-family: var(--rusty-font);
+  font-size: 19px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.rusty-card-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.rusty-card-text ul li::before {
+  content: '✔️ ';
+}
+
+.rusty-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--rusty-primary);
+  color: #fff;
+  padding: 14px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin: 20px auto;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.rusty-button:hover {
+  background: #333333;
+}
+
+details summary {
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .rusty-slide {
+    width: 80%;
+  }
+
+  .rusty-carousel-track {
+    gap: 20px;
+  }
+}
+
+</style>
