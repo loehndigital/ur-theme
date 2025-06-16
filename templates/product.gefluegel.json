@@ -271,6 +271,42 @@
         "padding_bottom": 36
       }
     },
+    "highlight_product_iV7n43": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Huhn",
+        "product_description": "Die Reichhaltigkeit an Mineralstoffen unterstützt die Vitalität und sorgt für eine ausgewogene Ernährung. Erwähnenswert ist zudem der hohe Anteil an leicht verdaulichem Protein im frischen Huhn.",
+        "image_position": "right",
+        "background_color": "#d3c14c",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_97qtpX": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Kürbis",
+        "product_description": "Der im Kürbis enthaltene Beta-Carotin und Vitamin A stärkt das Immunsystem und schützt die Zellen vor oxidativem Stress. Darüber hinaus fördert er eine ausgewogene Mikronährstoffversorgung.",
+        "image_position": "right",
+        "background_color": "#ffa815",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
+    "highlight_product_CJpK8i": {
+      "type": "highlight-product",
+      "name": "UR Produktbalken",
+      "settings": {
+        "product_title": "Amaranth",
+        "product_description": "Amaranth versorgt deinen Hund mit hochwertigen Kohlenhydraten und Ballaststoffen, die eine gesunde Verdauung unterstützen. Außerdem punktet es mit einer außergewöhnlichen Fülle an Nährstoffen, darunter essenzielle Vitamine und Mineralstoffe.",
+        "image_position": "right",
+        "background_color": "#ff7016",
+        "text_color_mode": "light",
+        "padding_vertical": 24
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -512,6 +548,9 @@
     "apps_nYjf78",
     "icon_row_RbbQDB",
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
+    "highlight_product_iV7n43",
+    "highlight_product_97qtpX",
+    "highlight_product_CJpK8i",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
