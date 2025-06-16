@@ -481,7 +481,7 @@
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify://shop_images/Comp_4_v2.jpg",
+        "background_image": "shopify://shop_images/probierpaket-landschaft-min-min.jpg",
         "content": "<h1>Starte jetzt bequem und einfach mit unserer Build A Box</h1><p>Mit unserem 'Build A Box'-Modul erhältst du nicht nur eine größere Auswahl, sondern auch eine maßgeschneiderte Ernährungslösung für deinen Hund</p>",
         "button_text": "Build A Box",
         "button_link": "shopify://pages/futterbox",
@@ -489,7 +489,7 @@
         "button2_link": "shopify://pages/beratung",
         "newsletter": "false",
         "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
+        "desktop_blur": "desktop-blur"
       }
     },
     "ur_image_with_text_ty9xfT": {
