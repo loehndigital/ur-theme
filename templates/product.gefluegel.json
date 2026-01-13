@@ -66,6 +66,10 @@
             "picker_type": "button"
           }
         },
+        "judge_me_reviews_review_snippet_widget_jWMkkw": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -152,6 +156,7 @@
         "icon_with_text_PzxjHA",
         "icon_with_text_iXyyni",
         "variant_picker",
+        "judge_me_reviews_review_snippet_widget_jWMkkw",
         "quantity_selector",
         "bsub-widget",
         "buy_buttons",
@@ -180,7 +185,12 @@
       "blocks": {
         "judge_me_reviews_review_widget_km7YPt": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
         }
       },
       "block_order": [
