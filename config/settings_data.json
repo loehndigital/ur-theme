@@ -190,6 +190,13 @@
         "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
+      },
+      "13180643132867056963": {
+        "type": "shopify://apps/gdpr-legal-cookie/blocks/bc-block/e49729f0-d37d-4e24-ac65-e0e2f472ac27",
+        "disabled": false,
+        "settings": {
+          "hide_label": false
+        }
       }
     },
     "color_schemes": {
