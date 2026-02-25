@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,8 +23,9 @@
         "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
-            "hero_text": "<h1>Willkommen <br\/>in der Welt von <br\/>Uncle Rusty’s<\/h1><p>Herzlich willkommen bei Uncle Rusty's – <br\/>Deinem Partner für artgerechte und gesunde<br\/>Hundeernährung.<br\/><\/p>",
+            "hero_image": "shopify://shop_images/Comp_4_v3.jpg",
+            "hero_text": "<h1>Willkommen <br/>in der Welt von <br/>Uncle Rusty’s</h1><p>Herzlich willkommen bei Uncle Rusty's – <br/>Deinem Partner für artgerechte und gesunde<br/>Hundeernährung.<br/></p>",
+            "richtext_max_width": 450,
             "button_link": "",
             "button_label": "",
             "theme_mode": "light",
@@ -34,14 +44,14 @@
         "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Über Uns<\/strong>",
+            "heading": "<strong>Über Uns</strong>",
             "heading_size": "h1"
           }
         },
         "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Wir sind ein familiäres, ambitioniertes Unternehmen aus dem malerischen Süden Bayerns, das sich der Bereitstellung von Premium-Hundefutter verschrieben hat. Wir bieten deinem vierbeinigen Freund nur das Beste, denn Uncle Rusty's ist nicht nur eine Marke, sondern eine Herzensangelegenheit.<\/p>",
+            "text": "<p>Wir sind ein familiäres, ambitioniertes Unternehmen aus dem malerischen Süden Bayerns, das sich der Bereitstellung von Premium-Hundefutter verschrieben hat. Wir bieten deinem vierbeinigen Freund nur das Beste, denn Uncle Rusty's ist nicht nur eine Marke, sondern eine Herzensangelegenheit.</p>",
             "text_style": "body"
           }
         }
@@ -51,7 +61,7 @@
         "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/michi_1_be69c882-0f70-4bf4-b443-e01c467b73d9.jpg",
+        "image": "shopify://shop_images/michi_1_be69c882-0f70-4bf4-b443-e01c467b73d9.jpg",
         "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
@@ -80,7 +90,7 @@
         "08c049e4-4c25-495b-9ae4-cfb173f2ce96": {
           "type": "text",
           "settings": {
-            "text": "<p>Alles begann mit Rusty, unserem geliebten Familienhund, der lange Zeit mit ernährungsbedingten Problemen zu kämpfen hatte. Nachdem wir auf unserer Suche nach dem perfekten Futter oft enttäuscht wurden, begann unsere Reise in die Welt der Hundeernährung. Was als persönliche Mission begann, entwickelte sich rasch zu einer größeren Vision: Ein Futter zu schaffen, das nicht nur schmackhaft, sondern auch nährstoffreich und gesund für unseren vierbeinigen Freund ist.<br\/><\/p>",
+            "text": "<p>Alles begann mit Rusty, unserem geliebten Familienhund, der lange Zeit mit ernährungsbedingten Problemen zu kämpfen hatte. Nachdem wir auf unserer Suche nach dem perfekten Futter oft enttäuscht wurden, begann unsere Reise in die Welt der Hundeernährung. Was als persönliche Mission begann, entwickelte sich rasch zu einer größeren Vision: Ein Futter zu schaffen, das nicht nur schmackhaft, sondern auch nährstoffreich und gesund für unseren vierbeinigen Freund ist.<br/></p>",
             "text_style": "body"
           }
         }
@@ -90,7 +100,7 @@
         "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
+        "image": "shopify://shop_images/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
         "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
@@ -109,10 +119,10 @@
     "9ba19f7f-e7dd-41dd-9b92-0aad6a4b2068": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/topview0039_Kopie.png",
-        "content": "<p>Seit 2019 haben wir uns intensiv mit der Hundeernährung auseinandergesetzt. Nach unzähligen Stunden der Forschung und Entwicklung, in Zusammenarbeit mit Ernährungsexperten, wurde Uncle Rusty's geboren - eine Premium-Marke, die traditionelle Werte mit innovativen Konzepten verbindet. Unsere familiäre Herangehensweise, die Liebe zum Detail, die Leidenschaft für Qualitätund die Wertschätzung für das natürliche Gleichgewicht sind die Pfeiler, auf denen Uncle Rusty's aufbaut.<\/p>",
+        "background_image": "shopify://shop_images/topview0039_Kopie.png",
+        "content": "<p>Seit 2019 haben wir uns intensiv mit der Hundeernährung auseinandergesetzt. Nach unzähligen Stunden der Forschung und Entwicklung, in Zusammenarbeit mit Ernährungsexperten, wurde Uncle Rusty's geboren - eine Premium-Marke, die traditionelle Werte mit innovativen Konzepten verbindet. Unsere familiäre Herangehensweise, die Liebe zum Detail, die Leidenschaft für Qualitätund die Wertschätzung für das natürliche Gleichgewicht sind die Pfeiler, auf denen Uncle Rusty's aufbaut.</p>",
         "button_text": "",
-        "button_link": "shopify:\/\/pages\/questionaire",
+        "button_link": "shopify://pages/questionaire",
         "button2_text": "",
         "button2_link": "",
         "newsletter": "false",
@@ -123,8 +133,8 @@
     "cbc6b201-c42a-4b79-a678-f6d11b99ad81": {
       "type": "two-richtext",
       "settings": {
-        "richtext_left": "<h2>Qualität, die man schmecken kann...<\/h2>",
-        "richtext_right": "<p>Durch schonendes Garen bleiben die Nährstoffe erhalten, und wir verzichten vollständig auf Geschmacksverstärker, Farb-, Aroma-, und Konservierungsstoffe sowie ungesunde Bindemittel.<\/p>"
+        "richtext_left": "<h2>Qualität, die man schmecken kann...</h2>",
+        "richtext_right": "<p>Durch schonendes Garen bleiben die Nährstoffe erhalten, und wir verzichten vollständig auf Geschmacksverstärker, Farb-, Aroma-, und Konservierungsstoffe sowie ungesunde Bindemittel.</p>"
       }
     },
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8": {
@@ -140,7 +150,7 @@
         "9811a8c4-e640-4e8c-bb94-f75c7f2fa680": {
           "type": "text",
           "settings": {
-            "text": "<p>Bei Uncle Rusty's glauben wir, dass eine natürliche und artgerechte Ernährung der Schlüssel zu einem gesunden und glücklichen Hundeleben ist. Unsere Kernwerte spiegeln das Herzstück unserer Marke wider:<\/p>",
+            "text": "<p>Bei Uncle Rusty's glauben wir, dass eine natürliche und artgerechte Ernährung der Schlüssel zu einem gesunden und glücklichen Hundeleben ist. Unsere Kernwerte spiegeln das Herzstück unserer Marke wider:</p>",
             "text_style": "body"
           }
         },
@@ -150,7 +160,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Qualität",
             "show_accordion": true,
-            "richtext": "<p>Wir setzen auf höchste Qualitätsstandards, um sicherzustellen, dass jedes Produkt, das unser Haus verlässt, den Erwartungen unserer Kunden entspricht.<\/p>"
+            "richtext": "<p>Wir setzen auf höchste Qualitätsstandards, um sicherzustellen, dass jedes Produkt, das unser Haus verlässt, den Erwartungen unserer Kunden entspricht.</p>"
           }
         },
         "ada00b11-beff-4c00-a893-b77a3ff07cf5": {
@@ -159,7 +169,7 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Natürlichkeit",
             "show_accordion": true,
-            "richtext": "<p>Durch den lokalen Bezug unserer Zutaten und eine umweltfreundliche Produktionsweise tragen wir aktiv zum Umweltschutz bei.<\/p>"
+            "richtext": "<p>Durch den lokalen Bezug unserer Zutaten und eine umweltfreundliche Produktionsweise tragen wir aktiv zum Umweltschutz bei.</p>"
           }
         },
         "5efe8ec8-b721-4f5e-967e-399fbc059f58": {
@@ -168,7 +178,7 @@
             "icon_selection": "icon-region-color",
             "icon_text": "Regionalität",
             "show_accordion": true,
-            "richtext": "<p>Wir beziehen unsere Zutaten von vertrauenswürdigen lokalen Bauern, um die Nachhaltigkeit zu fördern und die Gemeinschaft zu unterstützen.<\/p>"
+            "richtext": "<p>Wir beziehen unsere Zutaten von vertrauenswürdigen lokalen Bauern, um die Nachhaltigkeit zu fördern und die Gemeinschaft zu unterstützen.</p>"
           }
         },
         "34e18e24-d994-4271-ba5f-e8ff1fff20d6": {
@@ -177,7 +187,7 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Nachhaltigkeit",
             "show_accordion": true,
-            "richtext": "<p>Wir beziehen unsere Zutaten von vertrauenswürdigen lokalen Bauern, um die Nachhaltigkeit zu fördern und die Gemeinschaft zu unterstützen.<\/p>"
+            "richtext": "<p>Wir beziehen unsere Zutaten von vertrauenswürdigen lokalen Bauern, um die Nachhaltigkeit zu fördern und die Gemeinschaft zu unterstützen.</p>"
           }
         }
       },
@@ -190,7 +200,7 @@
         "34e18e24-d994-4271-ba5f-e8ff1fff20d6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_8519f280-50fd-4fdc-990d-aae934284694.png",
+        "image": "shopify://shop_images/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_8519f280-50fd-4fdc-990d-aae934284694.png",
         "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
@@ -212,13 +222,13 @@
         "e6276927-a2cd-473e-bcbb-fb9d43bfd5b3": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Unsere Produkte<\/strong><\/p>"
+            "text": "<p><strong>Unsere Produkte</strong></p>"
           }
         },
         "6d8072e7-a7fb-480e-a14c-09637f274cb8": {
           "type": "heading",
           "settings": {
-            "heading": "Ein Fest für <\/br>alle Sinne",
+            "heading": "Ein Fest für </br>alle Sinne",
             "heading_size": "h1"
           }
         },
@@ -232,7 +242,7 @@
         "c51a6d3f-d089-4566-b101-c136cd33ff32": {
           "type": "text",
           "settings": {
-            "text": "<p>Entdecke unsere vielfältige Produktlinie, die auf die verschiedenen Bedürfnisse und Vorlieben unserer vierbeinigen Kunden zugeschnitten ist. Jedes Produkt wird in eigener Herstellung mit viel Liebe und Sorgfalt hergestellt, um die hohe Qualität und die gesundheitlichen Vorteile zu gewährleisten, die uns am Herzen liegen.<\/p>"
+            "text": "<p>Entdecke unsere vielfältige Produktlinie, die auf die verschiedenen Bedürfnisse und Vorlieben unserer vierbeinigen Kunden zugeschnitten ist. Jedes Produkt wird in eigener Herstellung mit viel Liebe und Sorgfalt hergestellt, um die hohe Qualität und die gesundheitlichen Vorteile zu gewährleisten, die uns am Herzen liegen.</p>"
           }
         }
       },
@@ -294,10 +304,10 @@
     "55616719-d47b-4159-b339-d56f13e34bbb": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/neu.jpg",
-        "content": "<h2><strong>Kostenfreie Ernährungsberatung: <br\/>Weil jeder Hund einzigartig ist<br\/><\/strong><\/h2><p>Beginne die Reise zu einer besseren Ernährung für deinen Hund mit unserem Online-Fragebogen und erhalte persönliche Menü-Vorschläge. Brauchst du zusätzliche Unterstützung? Wir stehen dir mit einer kostenlosen Ernährungsberatung zur Seite.<\/p>",
+        "background_image": "shopify://shop_images/neu.jpg",
+        "content": "<h2><strong>Kostenfreie Ernährungsberatung: <br/>Weil jeder Hund einzigartig ist<br/></strong></h2><p>Beginne die Reise zu einer besseren Ernährung für deinen Hund mit unserem Online-Fragebogen und erhalte persönliche Menü-Vorschläge. Brauchst du zusätzliche Unterstützung? Wir stehen dir mit einer kostenlosen Ernährungsberatung zur Seite.</p>",
         "button_text": "Kostenlose Ernährungsberatung",
-        "button_link": "shopify:\/\/pages\/beratung",
+        "button_link": "shopify://pages/beratung",
         "button2_text": "",
         "button2_link": "",
         "newsletter": "false",
@@ -318,7 +328,7 @@
         "eece9124-39a0-4a5b-a745-0712cf87675e": {
           "type": "text",
           "settings": {
-            "text": "<p>Tauche ein in die Welt von Uncle Rusty's und erlebe unsere Leidenschaft für Hundeernährung hautnah. Unser Produktionsvideo gibt dir einen persönlichen Einblick in unsere tägliche Arbeit, das Team hinter der Marke und die Sorgfalt, mit der wir jedes Menü zubereiten. Wir laden dich ein, die Herzlichkeit und Professionalität unseres Teams zu entdecken und gemeinsam die positiven Veränderungen zu erleben, die eine natürliche und liebevolle Ernährung im Leben deines Hundes bewirken kann.<\/p>",
+            "text": "<p>Tauche ein in die Welt von Uncle Rusty's und erlebe unsere Leidenschaft für Hundeernährung hautnah. Unser Produktionsvideo gibt dir einen persönlichen Einblick in unsere tägliche Arbeit, das Team hinter der Marke und die Sorgfalt, mit der wir jedes Menü zubereiten. Wir laden dich ein, die Herzlichkeit und Professionalität unseres Teams zu entdecken und gemeinsam die positiven Veränderungen zu erleben, die eine natürliche und liebevolle Ernährung im Leben deines Hundes bewirken kann.</p>",
             "text_style": "body"
           }
         },
@@ -326,7 +336,7 @@
           "type": "button",
           "settings": {
             "button_label": "Video Ansehen",
-            "button_link": "https:\/\/www.youtube.com\/watch?v=ddRs-hNdtjE",
+            "button_link": "https://www.youtube.com/watch?v=ddRs-hNdtjE",
             "button_style_secondary": false
           }
         }
@@ -337,7 +347,7 @@
         "f0e0f35c-14e7-4174-978f-1ebb2a11354e"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/herstellung.jpg",
+        "image": "shopify://shop_images/herstellung.jpg",
         "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
@@ -366,7 +376,7 @@
         "192942dc-a714-4be8-b72a-63588b8533e4": {
           "type": "text",
           "settings": {
-            "text": "<p>Entdecke, was Hundebesitzer über Uncle Rusty's sagen und wie unsere Menüs das Leben ihrer vierbeinigen Familienmitglieder bereichert haben.<\/p>"
+            "text": "<p>Entdecke, was Hundebesitzer über Uncle Rusty's sagen und wie unsere Menüs das Leben ihrer vierbeinigen Familienmitglieder bereichert haben.</p>"
           }
         }
       },
@@ -387,11 +397,11 @@
       "type": "apps",
       "blocks": {
         "49acadb9-68fb-4df6-a059-4810c81f0de8": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_text\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
         "fbaa2c77-a5fd-4298-93b1-e1fb3a1d5c31": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "maxwidth": 1080
           }
@@ -411,7 +421,7 @@
         "template--18562674131208__1458de64-4bc4-4f7a-80e0-58bd8d8e49c6-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Tauche in unsere <\/br>Produktwelt ein",
+            "heading": "Tauche in unsere </br>Produktwelt ein",
             "heading_size": "h1"
           }
         },
@@ -426,7 +436,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Produkte entdecken",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -441,7 +451,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "image": "shopify:\/\/shop_images\/comp2.png",
+        "image": "shopify://shop_images/comp2.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
