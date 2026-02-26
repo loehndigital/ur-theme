@@ -24,6 +24,7 @@
           "type": "hero-slide",
           "settings": {
             "hero_image": "shopify://shop_images/Comp_4_v3.jpg",
+            "hero_image_mobile": "shopify://shop_images/Comp_4_v3_mobile_98a35cfb-f30b-480e-b7f3-65c0497b1096.jpg",
             "hero_text": "<h1>Willkommen <br/>in der Welt von <br/>Uncle Rusty’s</h1><p>Herzlich willkommen bei Uncle Rusty's – <br/>Deinem Partner für artgerechte und gesunde<br/>Hundeernährung.<br/></p>",
             "richtext_max_width": 450,
             "button_link": "",
