@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,8 +23,10 @@
         "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/comp3_wide.jpg",
-            "hero_text": "<h1>Unser Herstellungs-verfahren  <\/h1><p>Entdecke, wie aus sorgfältig ausgewählten, natürlichen Zutaten unser Premium Nassfutter für Hunde entsteht. Das Geheimnis liegt in der perfekten Rezeptur und unserem liebevollen Slow-Cooking-Verfahren. <br\/><\/p>",
+            "hero_image": "shopify://shop_images/FAVORIT_1-wide-2-min_48b89e48-63fe-4b98-a760-15c5d427805f.jpg",
+            "hero_image_mobile": "shopify://shop_images/FAVORIT_1-mobile-min_59eb7797-7502-4305-9e14-fed1db4b3521.jpg",
+            "hero_text": "<h1>Unser Herstellungs-verfahren  </h1><p>Entdecke, wie aus sorgfältig ausgewählten, natürlichen Zutaten unser Premium Nassfutter für Hunde entsteht. Das Geheimnis liegt in der perfekten Rezeptur und unserem liebevollen Slow-Cooking-Verfahren. <br/></p>",
+            "richtext_max_width": 450,
             "button_link": "",
             "button_label": "",
             "theme_mode": "light",
@@ -41,7 +52,7 @@
         "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Du fütterst deinem Liebling jeden Tag Uncle Rusty's Nassfutter und interessierst dich dafür, wie unser hochwertiges Hundefutter zubereitet wird? Hier erklären wir dir Schritt für Schritt die Herstellung unserer Menüs: von den natürlichen Zutaten bis zum schmackhaften Nassfutter. <\/p>"
+            "text": "<p>Du fütterst deinem Liebling jeden Tag Uncle Rusty's Nassfutter und interessierst dich dafür, wie unser hochwertiges Hundefutter zubereitet wird? Hier erklären wir dir Schritt für Schritt die Herstellung unserer Menüs: von den natürlichen Zutaten bis zum schmackhaften Nassfutter. </p>"
           }
         }
       },
@@ -73,7 +84,7 @@
         "template--18563436642568__6051ba1d-41be-4146-903e-c6b95ae914f7-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HP3.jpg",
+            "image": "shopify://shop_images/HP3.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -110,7 +121,7 @@
         "template--18563436642568__5195c022-bd7d-4f31-bb9f-b7e18e568ba6-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Wir nehmen die richtige Portion Fleisch sowie vitalstoffreiche Innereien und kombinieren sie mit wertvollen pflanzlichen Vitalstoffen und gesunden Kohlenhydratquellen, wie z.B. Kartoffeln. Eine besonders schonende Zubereitung gelingt uns mit dem Slow-Cooking-Verfahren. So entstehen im herzlichen Bayern schmackhafte Uncle Rusty's Nassfuttersorten von höchster Qualität. <\/p>"
+            "text": "<p>Wir nehmen die richtige Portion Fleisch sowie vitalstoffreiche Innereien und kombinieren sie mit wertvollen pflanzlichen Vitalstoffen und gesunden Kohlenhydratquellen, wie z.B. Kartoffeln. Eine besonders schonende Zubereitung gelingt uns mit dem Slow-Cooking-Verfahren. So entstehen im herzlichen Bayern schmackhafte Uncle Rusty's Nassfuttersorten von höchster Qualität. </p>"
           }
         }
       },
@@ -132,10 +143,10 @@
         "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-1": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Farm-min.png",
+            "image": "shopify://shop_images/Farm-min.png",
             "caption": "",
-            "heading": "<strong>Bauernhof <\/strong>",
-            "text": "<p><em>Aus dem Herzen Bayerns <br\/>Die Quelle unserer Zutaten <\/em>Unser Streben nach Qualität beginnt bei der Auswahl der Zutaten. Wir arbeiten eng mit lokalen Landwirten zusammen, die unsere Werte von Tierschutz und nachhaltigem Anbau teilen. Ihre Hingabe ermöglicht es uns, frische und natürliche Zutaten direkt aus unserer bayerischen Heimat zu beziehen. <\/p>",
+            "heading": "<strong>Bauernhof </strong>",
+            "text": "<p><em>Aus dem Herzen Bayerns <br/>Die Quelle unserer Zutaten </em>Unser Streben nach Qualität beginnt bei der Auswahl der Zutaten. Wir arbeiten eng mit lokalen Landwirten zusammen, die unsere Werte von Tierschutz und nachhaltigem Anbau teilen. Ihre Hingabe ermöglicht es uns, frische und natürliche Zutaten direkt aus unserer bayerischen Heimat zu beziehen. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -143,10 +154,10 @@
         "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-2": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Traktor-min.png",
+            "image": "shopify://shop_images/Traktor-min.png",
             "caption": "",
-            "heading": "<strong>Anlieferung <\/strong>",
-            "text": "<p><em>Frische auf dem kurzen Weg <br\/><\/em>Die Nähe zu unseren Lieferanten ermöglicht kurze Transportwege, wodurch die Frische der Zutaten erhalten bleibt. Gleichzeitig unterstützen wir die lokale Landwirtschaft und tragen zum Umweltschutz bei. <\/p>",
+            "heading": "<strong>Anlieferung </strong>",
+            "text": "<p><em>Frische auf dem kurzen Weg <br/></em>Die Nähe zu unseren Lieferanten ermöglicht kurze Transportwege, wodurch die Frische der Zutaten erhalten bleibt. Gleichzeitig unterstützen wir die lokale Landwirtschaft und tragen zum Umweltschutz bei. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -154,10 +165,10 @@
         "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-3": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mixer-min.png",
+            "image": "shopify://shop_images/Mixer-min.png",
             "caption": "",
-            "heading": "<strong>Vorbereitung <\/strong>",
-            "text": "<p><em>Mit Sorgfalt ausgewählt und vorbereitet <br\/><\/em>Jede Zutat durchläuft eine strenge Qualitätsprüfung, bevor sie in unsere Produktionsstätte gelangt. Nach der Anlieferung werden sie sorgsam für das Slow-Cooking-Verfahren vorbereitet. <\/p>",
+            "heading": "<strong>Vorbereitung </strong>",
+            "text": "<p><em>Mit Sorgfalt ausgewählt und vorbereitet <br/></em>Jede Zutat durchläuft eine strenge Qualitätsprüfung, bevor sie in unsere Produktionsstätte gelangt. Nach der Anlieferung werden sie sorgsam für das Slow-Cooking-Verfahren vorbereitet. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -165,10 +176,10 @@
         "669ea293-88f4-4e7d-98a0-b1e67a0959fb": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/autoclav-min.png",
+            "image": "shopify://shop_images/autoclav-min.png",
             "caption": "",
-            "heading": "<strong>Slow-Cooking <\/strong>",
-            "text": "<p><em>Liebevolle Zubereitung für den Erhalt von Nährstoffen<br\/><\/em>Die ausgewählten Zutaten werden zunächst gewolft und anschließend k alt abgefüllt. Durch unser einzigartiges Slow-Cooking-Verfahren werden die Zutaten schonend gegart. Dieses behutsame Garen bewahrt die essentiellen Nährstoffe und den natürlichen Geschmack, und stellt sicher, dass dein Hund eine nährstoffreiche und schmackhafte Mahlzeit erhält. <\/p>",
+            "heading": "<strong>Slow-Cooking </strong>",
+            "text": "<p><em>Liebevolle Zubereitung für den Erhalt von Nährstoffen<br/></em>Die ausgewählten Zutaten werden zunächst gewolft und anschließend k alt abgefüllt. Durch unser einzigartiges Slow-Cooking-Verfahren werden die Zutaten schonend gegart. Dieses behutsame Garen bewahrt die essentiellen Nährstoffe und den natürlichen Geschmack, und stellt sicher, dass dein Hund eine nährstoffreiche und schmackhafte Mahlzeit erhält. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -176,10 +187,10 @@
         "1f17c6ca-710e-4e58-ab60-569c3dd609f0": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Laufband-min.png",
+            "image": "shopify://shop_images/Laufband-min.png",
             "caption": "",
-            "heading": "<strong>Abfüllung & Kühlung <\/strong>",
-            "text": "<p><em>Vom Kessel in die Dose: Frische, die man schmeckt <br\/><\/em>Nach dem Garen lassen wir das Futter in den Dosen natürlich abkühlen. Dieser Prozess stellt sicher, dass die Frische und Qualität des Futters vom ersten bis zum letzten Bissen erhalten bleiben, bevor es für den Versand vorbereitet wird. <\/p>",
+            "heading": "<strong>Abfüllung & Kühlung </strong>",
+            "text": "<p><em>Vom Kessel in die Dose: Frische, die man schmeckt <br/></em>Nach dem Garen lassen wir das Futter in den Dosen natürlich abkühlen. Dieser Prozess stellt sicher, dass die Frische und Qualität des Futters vom ersten bis zum letzten Bissen erhalten bleiben, bevor es für den Versand vorbereitet wird. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -187,10 +198,10 @@
         "41d6adcc-2c16-4a7d-a8fa-fd32300e2575": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Karton-min_1.png",
+            "image": "shopify://shop_images/Karton-min_1.png",
             "caption": "",
-            "heading": "<strong>Prüfen & Verpacken <\/strong>",
-            "text": "<p><em>Unser Qualitätsversprechen: Nur das Beste für deinen Hund <\/em>Bevor wir das Futter versenden, durchläuft jede Dose eine letzte Qualitätskontrolle. So stellen wir sicher, dass nur das Beste von Uncle Rusty's deinen Hund erreicht. <\/p>",
+            "heading": "<strong>Prüfen & Verpacken </strong>",
+            "text": "<p><em>Unser Qualitätsversprechen: Nur das Beste für deinen Hund </em>Bevor wir das Futter versenden, durchläuft jede Dose eine letzte Qualitätskontrolle. So stellen wir sicher, dass nur das Beste von Uncle Rusty's deinen Hund erreicht. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -226,7 +237,7 @@
         "template--18563436642568__5fc7db2e-8174-4297-b6e8-ab5b302b81dd-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Das ist der Weg zu Qualität, direkt aus dem bayerischen Voralpenland. <\/p>"
+            "text": "<p>Das ist der Weg zu Qualität, direkt aus dem bayerischen Voralpenland. </p>"
           }
         }
       },
@@ -246,7 +257,7 @@
       "type": "full-width-banner",
       "disabled": true,
       "settings": {
-        "content": "<h2>Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!<\/h2>",
+        "content": "<h2>Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!</h2>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
@@ -262,14 +273,14 @@
         "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Tauche in unsere <\/br>Produktwelt ein ",
+            "heading": "Tauche in unsere </br>Produktwelt ein ",
             "heading_size": "h1"
           }
         },
         "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-text-1": {
           "type": "text",
           "settings": {
-            "text": "Für jeden Hund das richtige Menü. Entdecke unser Sortiment an <\/br>liebevoll zubereiteter und nährstoffreicher Tiernahrung, die <\/br>genauso schmackhaft wie gesund ist. ",
+            "text": "Für jeden Hund das richtige Menü. Entdecke unser Sortiment an </br>liebevoll zubereiteter und nährstoffreicher Tiernahrung, die </br>genauso schmackhaft wie gesund ist. ",
             "text_style": "body"
           }
         },
@@ -277,7 +288,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Produkte entdecken ",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -291,7 +302,7 @@
         "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-buttons-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/comp2.png",
+        "image": "shopify://shop_images/comp2.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
