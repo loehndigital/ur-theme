@@ -42,7 +42,7 @@
           "type": "hero-slide",
           "settings": {
             "hero_image": "shopify://shop_images/FAVORIT_1-wide-2-min_ae525c4d-e5e8-411b-aad4-ad83a28988f2.jpg",
-            "hero_image_mobile": "shopify://shop_images/Comp-2mobile-min_2.jpg",
+            "hero_image_mobile": "shopify://shop_images/FAVORIT_3-mobile-min.jpg",
             "hero_text": "<h1>Exklusivität, <br/>die überzeugt</h1><p>Entdecke exklusive Angebote nur bei Uncle Rusty's und spüre den Unterschied.</p>",
             "richtext_max_width": 450,
             "button_link": "shopify://collections/all",
