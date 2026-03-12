@@ -555,7 +555,6 @@
         "feature_yV9RbN",
         "feature_pYyBYD"
       ],
-      "disabled": true,
       "name": "Zutaten Basis",
       "settings": {
         "badge": "✦ UNSER KONZEPT: WIE SELBST EINGEKOCHT",
@@ -585,11 +584,11 @@
         "cta1_url": "",
         "cta2_text": "",
         "cta2_url": "",
+        "bg_style": "transparent",
         "accent_color": "#c4622d",
-        "bg_color": "#1a0e05",
         "padding_mobile": 60,
         "padding_tablet": 100,
-        "padding_desktop": 120
+        "padding_desktop": 55
       }
     },
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6": {
