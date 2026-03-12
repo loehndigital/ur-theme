@@ -468,9 +468,9 @@
       <div class="sj-divl"></div>
       <div class="sj-wi">
         <div class="sj-wi-dots">
-          <div class="sj-wi-dot" style="background:hsl(30 60% 55%)"></div>
-          <div class="sj-wi-dot" style="background:hsl(30 60% 55%)"></div>
-          <div class="sj-wi-dot" style="background:hsl(30 60% 55%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(47 78% 52%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(47 78% 52%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(47 78% 52%)"></div>
         </div>
         <p class="sj-wi-lbl">3× Helles Fleisch</p>
         <p class="sj-wi-sub">Geflügel · Ente</p>
@@ -507,8 +507,8 @@
         {%- assign kat_rgb   = '180,60,60' -%}
       {%- elsif kat_slug == 'hell' -%}
         {%- assign kat_label = 'Helles Fleisch · 3× pro Woche' -%}
-        {%- assign kat_color = 'hsl(30 60% 52%)' -%}
-        {%- assign kat_rgb   = '196,130,60' -%}
+        {%- assign kat_color = 'hsl(47 72% 46%)' -%}
+        {%- assign kat_rgb   = '215,172,30' -%}
       {%- else -%}
         {%- assign kat_label = 'Fisch · 1× pro Woche' -%}
         {%- assign kat_color = 'hsl(207 45% 55%)' -%}
@@ -929,9 +929,10 @@ function buildExpanded(s, card, productImg, glassImg){
   }
 
   /* Zutaten-Zeile */
-  function irow(seg){
+  function irow(seg, ringIdx){
     var c=getColor(seg), lbl=seg.label.replace(/\s*\(.*\)/,'');
-    return '<div class="sj-irow">'
+    var ri=(ringIdx!==undefined&&ringIdx>=0)?' data-ring-idx="'+ringIdx+'"':'';
+    return '<div class="sj-irow"'+ri+'>'
       +'<div class="sj-iicon" style="background:'+c+'1a">'+getEmoji(seg)+'</div>'
       +'<div style="flex:1;min-width:0"><p class="sj-iname">'+lbl+'</p>'
       +(seg.highlight?'<p class="sj-ihigh">'+seg.highlight+'</p>':'')+'</div>'
@@ -995,7 +996,7 @@ function buildExpanded(s, card, productImg, glassImg){
       +'<div class="sj-zsm-layout">'
         +'<div class="sj-fleisch-box">'
           +'<div class="sj-box-hdr"><span class="sj-box-lbl" style="color:rgba(196,98,45,.7)">🥩 Fleisch · '+s.fleischanteil+'%</span></div>'
-          +fleisch.map(irow).join('')
+          +fleisch.map(function(seg){return irow(seg,ringIng.indexOf(seg));}).join('')
         +'</div>'
         +'<div class="sj-ring-wrap" data-ring-container>'
           +'<div class="sj-rglow"></div>'
@@ -1006,7 +1007,7 @@ function buildExpanded(s, card, productImg, glassImg){
         +'<div class="sj-pflanz-box">'
           +'<div class="sj-pflanz-inner">'
             +'<div class="sj-box-hdr"><span class="sj-box-lbl" style="color:rgba(80,160,80,.7)">🌿 Gemüse & Co · '+Math.round(pflPct)+'%</span></div>'
-            +pflanz.map(irow).join('')
+            +pflanz.map(function(seg){return irow(seg,ringIng.indexOf(seg));}).join('')
           +'</div>'
           +(extras.length?'<div class="sj-extra-inner"><div class="sj-box-hdr"><span class="sj-box-lbl" style="color:rgba(44,26,14,.45)">💧 Basis</span></div>'+extrasHTML+'</div>':'')
         +'</div>'
@@ -1088,29 +1089,46 @@ function initRingHover(container, ringIng){
       setTimeout(function(){ highlight(null); }, 1400);
     });
   });
+
+  /* Zutaten-Zeilen links/rechts → selber Ring-Highlight */
+  var body=container.closest('.sj-cbody');
+  if(body){
+    body.querySelectorAll('.sj-irow[data-ring-idx]').forEach(function(row){
+      var idx=parseInt(row.getAttribute('data-ring-idx'),10);
+      row.addEventListener('mouseenter',function(){ highlight(idx); });
+      row.addEventListener('mouseleave',function(){ highlight(null); });
+    });
+  }
 }
 
 /* ══════════════════════════════════
    ANALYTISCH EXPAND
 ══════════════════════════════════ */
 function initAnalytik(container){
+  var openRow=null;
+  function closeRow(row){
+    var d=row.querySelector('[data-adet]'), a=row.querySelector('[data-aarr]');
+    if(!d||!d.classList.contains('sj-open')) return;
+    d.style.maxHeight=d.scrollHeight+'px';
+    requestAnimationFrame(function(){
+      d.style.maxHeight='0'; d.classList.remove('sj-open');
+      a&&a.classList.remove('sj-open');
+    });
+  }
   container.querySelectorAll('[data-atrig]').forEach(function(trig){
     trig.addEventListener('click',function(){
       var row=trig.closest('.sj-arow');
       var det=row.querySelector('[data-adet]');
       var arr=row.querySelector('[data-aarr]');
+      /* Schließe offene Zeile (smooth) */
+      if(openRow&&openRow!==row){ closeRow(openRow); openRow=null; }
       if(det.classList.contains('sj-open')){
-        det.style.maxHeight=det.scrollHeight+'px';
-        requestAnimationFrame(function(){
-          det.style.maxHeight='0'; det.classList.remove('sj-open');
-          arr&&arr.classList.remove('sj-open');
-        });
+        closeRow(row); openRow=null;
       } else {
         det.classList.add('sj-open'); arr&&arr.classList.add('sj-open');
         det.style.maxHeight=det.scrollHeight+'px';
-        det.addEventListener('transitionend',function h(){
-          det.style.maxHeight='none'; det.removeEventListener('transitionend',h);
-        });
+        setTimeout(function(){ if(det.classList.contains('sj-open')) det.style.maxHeight='none'; },460);
+        openRow=row;
       }
     });
   });
