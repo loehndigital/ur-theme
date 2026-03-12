@@ -130,12 +130,13 @@
 /* ══════════════════════════════════
    SORTE CARD – KOLLABIERT
 ══════════════════════════════════ */
-.sj-card { border-radius:14px; margin-bottom:10px; overflow:hidden }
+.sj-card { border-radius:14px; margin-bottom:10px; overflow:visible }
 
 .sj-card-hdr {
   width:100%; padding:14px 18px; display:flex; align-items:center; gap:14px;
   text-align:left; background:transparent; border:none; cursor:pointer;
-  transition:background .25s; color:inherit
+  transition:background .25s; color:inherit;
+  border-radius:14px   /* eigene Rundung, da .sj-card kein overflow:hidden mehr hat */
 }
 @media(min-width:768px){ .sj-card-hdr { padding:18px 22px; gap:18px } }
 .sj-card-hdr:hover  { background:rgba(60,35,15,.04) }
@@ -420,7 +421,12 @@
     {%- else -%}
       <div class="sj-hero-img sj-img-ph" style="min-height:280px">🐕</div>
     {%- endif -%}
-    <div class="sj-hero-or"></div>
+    <div class="sj-hero-or"
+      data-vig-r="{{ vr }}"
+      data-vig-g="{{ vg }}"
+      data-vig-b="{{ vb }}"
+      data-vig-op="{{ vo }}">
+    </div>
     <div class="sj-hero-ot"></div>
     <div class="sj-hero-ob"></div>
     <div class="sj-hero-content">
@@ -1110,8 +1116,7 @@ function closeIt(card){
   var body=card.querySelector('.sj-cbody');
   var tog=card.querySelector('.sj-ctoggle');
   var btn=card.querySelector('.sj-card-hdr');
-  card.style.overflow='';          /* re-enable card clip before animating shut */
-  body.style.overflow='';          /* re-enable body clip */
+  body.style.overflow='';          /* re-enable body clip before animating shut */
   body.style.maxHeight=body.scrollHeight+'px';
   requestAnimationFrame(function(){
     body.style.transition='max-height .4s ease-in-out';
@@ -1162,8 +1167,7 @@ function openIt(card){
   body.addEventListener('transitionend',function h(){
     if(body.classList.contains('sj-open')){
       body.style.maxHeight='none';
-      body.style.overflow='visible';   /* cbody: let shadows bleed out */
-      card.style.overflow='visible';   /* .sj-card was overflow:hidden — unlock so drop-shadows escape */
+      body.style.overflow='visible';   /* cbody: let drop-shadows / orbit labels bleed out */
     }
     body.removeEventListener('transitionend',h);
   });
@@ -1177,8 +1181,7 @@ function toggle(card){
   if(openCard){
     var prev=openCard, pb=prev.querySelector('.sj-cbody');
     var pt=prev.querySelector('.sj-ctoggle'), ph=prev.querySelector('.sj-card-hdr');
-    prev.style.overflow='';        /* reset card overflow */
-    pb.style.overflow='';          /* reset body overflow */
+    pb.style.overflow='';          /* reset body overflow before instant-close */
     pb.style.transition='none'; pb.style.maxHeight='0';
     pb.classList.remove('sj-open'); pb.setAttribute('aria-hidden','true');
     ph&&ph.setAttribute('aria-expanded','false'); pt&&(pt.style.transform='');
@@ -1195,11 +1198,37 @@ function toggle(card){
 }
 
 /* ══════════════════════════════════
+   VIGNETTE (JS-driven, höchste Spezifität)
+   Liest data-vig-* Attribute aus dem DOM (Liquid-baked)
+   und setzt background direkt via inline style.
+   Funktioniert bei section re-render im Shopify Editor.
+══════════════════════════════════ */
+function applyVignette(sec){
+  var or = sec.querySelector('.sj-hero-or');
+  var ot = sec.querySelector('.sj-hero-ot');
+  if(!or) return;
+  var r  = or.getAttribute('data-vig-r')  || '30';
+  var g  = or.getAttribute('data-vig-g')  || '6';
+  var b  = or.getAttribute('data-vig-b')  || '6';
+  var op = parseFloat(or.getAttribute('data-vig-op') || '0.8');
+  var rgba = function(a){ return 'rgba('+r+','+g+','+b+','+a.toFixed(3)+')'; };
+  or.style.background = 'linear-gradient(100deg,'
+    +rgba(op*.95)+' 0%,'
+    +rgba(op*.82)+' 30%,'
+    +rgba(op*.5 )+' 55%,'
+    +rgba(op*.12)+' 78%,'
+    +'transparent 100%)';
+  if(ot) ot.style.background = 'linear-gradient(to bottom,'
+    +rgba(op*.4)+' 0%,transparent 40%)';
+}
+
+/* ══════════════════════════════════
    INIT
 ══════════════════════════════════ */
 function init(){
   var sec=document.getElementById('sj-{{ section.id }}');
   if(!sec) return;
+  applyVignette(sec);
   sec.querySelectorAll('.sj-card').forEach(function(card){
     var s=SORTEN[card.getAttribute('data-sorte-id')]; if(!s) return;
     /* Header vorab befüllen */
@@ -1214,6 +1243,13 @@ function init(){
     card.querySelector('.sj-card-hdr').addEventListener('click',function(){ toggle(card); });
   });
 }
+
+/* Shopify theme editor: re-apply vignette nach section re-render */
+document.addEventListener('shopify:section:load', function(e){
+  var sec = e.target && e.target.querySelector('#sj-{{ section.id }}');
+  if(!sec) sec = document.getElementById('sj-{{ section.id }}');
+  if(sec) applyVignette(sec);
+});
 
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',init);
