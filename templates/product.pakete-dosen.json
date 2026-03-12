@@ -354,6 +354,8 @@
           "settings": {
             "sorte_id": "gefluegel",
             "kategorie": "hell",
+            "product_image": "shopify://shop_images/gefluegel.png",
+            "glass_image": "shopify://shop_images/gefluegel-glassmall.png",
             "product_url": "",
             "name": "",
             "sub_name": "",
@@ -370,6 +372,8 @@
           "settings": {
             "sorte_id": "ente",
             "kategorie": "hell",
+            "product_image": "shopify://shop_images/ente_d9182fd9-75df-4975-8ba9-ea5ac9cef357.png",
+            "glass_image": "shopify://shop_images/ente-glassmall_429628f8-4a3b-4977-9d85-0cd87d418c3f.png",
             "product_url": "",
             "name": "",
             "sub_name": "",
@@ -386,6 +390,8 @@
           "settings": {
             "sorte_id": "lachs",
             "kategorie": "fisch",
+            "product_image": "shopify://shop_images/lachs.png",
+            "glass_image": "shopify://shop_images/lachs-glassmall.png",
             "product_url": "",
             "name": "",
             "sub_name": "",
