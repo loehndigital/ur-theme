@@ -319,9 +319,11 @@
         "image": "shopify://shop_images/warum-hero.jpg",
         "image_alt": "Uncle Rusty's Hundefutter",
         "img_label": "",
+        "img_shadow": 90,
         "image_side": "right",
+        "bg_style": "transparent",
         "accent_color": "#c4622d",
-        "bg_color": "#EBE6D9",
+        "bg_color": "#ebe6d9",
         "card_color": "#fffaf3",
         "dark_color": "#3d2510"
       }
