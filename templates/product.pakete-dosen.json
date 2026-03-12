@@ -413,7 +413,6 @@
         "produkt_VnpMpe",
         "produkt_UAbKbc"
       ],
-      "disabled": true,
       "name": "Sorten Journey",
       "settings": {
         "hero_image": "shopify://shop_images/hf_20260309_211537_491ef00a-323f-43c7-a9c2-706827b9b2b6.png",
@@ -571,6 +570,7 @@
         "slide_nJqHye",
         "slide_DryE6U"
       ],
+      "disabled": true,
       "name": "Nassfutter Produktgrid",
       "settings": {}
     },
