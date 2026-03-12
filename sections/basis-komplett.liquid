@@ -1,0 +1,1226 @@
+{%- comment -%}
+  Uncle Rusty's – Basis Komplett
+  Platzierung: sections/basis-komplett.liquid
+{%- endcomment -%}
+
+{%- assign ac  = section.settings.accent_color | default: '#c4622d' -%}
+{%- assign ar  = ac | color_extract: 'red'   -%}
+{%- assign ag  = ac | color_extract: 'green' -%}
+{%- assign ab  = ac | color_extract: 'blue'  -%}
+
+{%- assign pad_mobile  = section.settings.padding_mobile  | default: 60  -%}
+{%- assign pad_tablet  = section.settings.padding_tablet  | default: 100 -%}
+{%- assign pad_desktop = section.settings.padding_desktop | default: 120 -%}
+
+{%- assign bg_style  = section.settings.bg_style | default: 'paw_dark' -%}
+{%- assign bk_is_dark = false -%}
+{%- if bg_style == 'paw_dark' or bg_style == 'plain_dark' -%}
+  {%- assign bk_is_dark = true -%}
+{%- endif -%}
+
+<style>
+/* ╔══════════════════════════════════════╗
+   ║  UNCLE RUSTY'S – BASIS KOMPLETT     ║
+   ╚══════════════════════════════════════╝ */
+
+#bk-{{ section.id }} {
+  --bk-accent: {{ ac }};
+  --bk-blue:   #5ca3cb;
+  --bk-green:  #5a9e5a;
+  --bk-red:    #b84028;
+
+  {%- if bk_is_dark -%}
+  --bk-text:   #f5ede0;
+  --bk-text2:  #d4b896;
+  --bk-dim:    #9a7c5a;
+  --bk-muted:  rgba(245,237,224,0.38);
+  --bk-card:   rgba(245,237,224,0.06);
+  --bk-border: rgba(245,237,224,0.10);
+  --bk-row:    rgba(245,237,224,0.05);
+  {%- else -%}
+  --bk-text:   #2c1a0e;
+  --bk-text2:  #7a5c3a;
+  --bk-dim:    #9a7c5a;
+  --bk-muted:  rgba(60,35,15,0.4);
+  --bk-card:   rgba(60,35,15,0.05);
+  --bk-border: rgba(60,35,15,0.12);
+  --bk-row:    rgba(60,35,15,0.04);
+  {%- endif -%}
+
+  {%- if bg_style == 'transparent' -%}
+  background: transparent;
+  {%- elsif bg_style == 'plain_dark' or bg_style == 'paw_dark' -%}
+  background-color: #1a0e05;
+  {%- else -%}
+  background-color: #EBE6D9;
+  {%- endif -%}
+
+  position: relative;
+  overflow: hidden;
+  padding: {{ pad_mobile }}px 20px;
+  font-family: inherit;
+}
+@media(min-width:768px)  { #bk-{{ section.id }} { padding: {{ pad_tablet }}px 28px  } }
+@media(min-width:1024px) { #bk-{{ section.id }} { padding: {{ pad_desktop }}px 48px } }
+
+/* ══ Paw-Pattern ════════════════════════ */
+#bk-{{ section.id }} .bk-paws-ctn {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ══ Inner ══════════════════════════════ */
+#bk-{{ section.id }} .bk-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* ══ Badge ══════════════════════════════ */
+#bk-{{ section.id }} .bk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba({{ ar }},{{ ag }},{{ ab }},0.10);
+  border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.25);
+  color: var(--bk-accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ══ Hero Grid ══════════════════════════ */
+#bk-{{ section.id }} .bk-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media(min-width:1024px) {
+  #bk-{{ section.id }} .bk-hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    margin-bottom: 28px;
+  }
+}
+
+/* ══ Headline ═══════════════════════════ */
+#bk-{{ section.id }} .bk-headline {
+  font-size: clamp(26px,4.5vw,54px);
+  font-weight: 700;
+  line-height: 1.06;
+  color: var(--bk-text);
+  margin: 0 0 16px;
+}
+#bk-{{ section.id }} .bk-headline em {
+  display: block;
+  font-style: normal;
+  color: var(--bk-accent);
+}
+
+/* ══ Body Text ══════════════════════════ */
+#bk-{{ section.id }} .bk-body {
+  color: var(--bk-dim);
+  font-size: clamp(14px,1.2vw,16.5px);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0;
+}
+#bk-{{ section.id }} .bk-body strong { color: var(--bk-text); }
+
+/* ══ Mobile Image ═══════════════════════ */
+#bk-{{ section.id }} .bk-img-mobile {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 16px 0;
+  position: relative;
+}
+@media(min-width:1024px) { #bk-{{ section.id }} .bk-img-mobile { display: none } }
+#bk-{{ section.id }} .bk-img-mobile img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+#bk-{{ section.id }} .bk-img-mobile-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,14,5,0.5) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ══ Desktop Image ══════════════════════ */
+#bk-{{ section.id }} .bk-img-desktop {
+  display: none;
+  position: relative;
+}
+@media(min-width:1024px) { #bk-{{ section.id }} .bk-img-desktop { display: block } }
+
+#bk-{{ section.id }} .bk-img-desktop-inner {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px -20px rgba(28,14,5,0.7);
+  will-change: transform;
+}
+#bk-{{ section.id }} .bk-img-desktop img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+#bk-{{ section.id }} .bk-img-desktop-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,14,5,0.4) 0%, transparent 30%);
+  pointer-events: none;
+}
+#bk-{{ section.id }} .bk-img-desktop-glow {
+  position: absolute;
+  inset: -32px;
+  z-index: -1;
+  border-radius: 24px;
+  opacity: 0.15;
+  background: radial-gradient(ellipse at center, rgba({{ ar }},{{ ag }},{{ ab }},0.3), transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+#bk-{{ section.id }} .bk-img-ph {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 2px dashed var(--bk-border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bk-dim);
+  font-size: 32px;
+}
+
+/* ══ Facts Row ══════════════════════════ */
+#bk-{{ section.id }} .bk-facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+@media(min-width:600px) { #bk-{{ section.id }} .bk-facts { grid-template-columns: repeat(3,1fr) } }
+
+#bk-{{ section.id }} .bk-fact {
+  background: var(--bk-card);
+  border: 1px solid var(--bk-border);
+  border-radius: 12px;
+  padding: 20px 18px 18px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+}
+#bk-{{ section.id }} .bk-fact-line {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--bk-accent), transparent 70%);
+  opacity: 0.7;
+}
+#bk-{{ section.id }} .bk-fact-val-row {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+#bk-{{ section.id }} .bk-fact-val {
+  font-size: 28px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--bk-accent);
+  line-height: 1;
+}
+@media(min-width:768px) { #bk-{{ section.id }} .bk-fact-val { font-size: 38px } }
+#bk-{{ section.id }} .bk-fact-unit {
+  font-size: 11px;
+  color: var(--bk-muted);
+}
+@media(min-width:768px) { #bk-{{ section.id }} .bk-fact-unit { font-size: 13px } }
+#bk-{{ section.id }} .bk-fact-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--bk-text);
+  margin: 0 0 4px;
+}
+@media(min-width:768px) { #bk-{{ section.id }} .bk-fact-label { font-size: 13px } }
+#bk-{{ section.id }} .bk-fact-sub {
+  font-size: 11px;
+  color: var(--bk-dim);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ══ Cards Grid ═════════════════════════ */
+#bk-{{ section.id }} .bk-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+@media(min-width:768px) { #bk-{{ section.id }} .bk-cards { grid-template-columns: repeat(2,1fr) } }
+
+/* Base Card */
+#bk-{{ section.id }} .bk-card {
+  background: var(--bk-card);
+  border: 1px solid var(--bk-border);
+  border-radius: 12px;
+  padding: 20px 20px 18px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* Top Accent Line */
+#bk-{{ section.id }} .bk-card-line {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  opacity: 0.7;
+}
+#bk-{{ section.id }} .bk-card-line--amber { background: linear-gradient(90deg, var(--bk-accent), transparent 70%) }
+#bk-{{ section.id }} .bk-card-line--blue  { background: linear-gradient(90deg, var(--bk-blue),   transparent 70%) }
+
+/* Card Header (Icon + Label/Title stack) */
+#bk-{{ section.id }} .bk-card-hdr {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+#bk-{{ section.id }} .bk-card-icon { font-size: 16px; flex-shrink: 0 }
+#bk-{{ section.id }} .bk-card-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1.3;
+}
+#bk-{{ section.id }} .bk-card-label--amber { color: var(--bk-accent) }
+#bk-{{ section.id }} .bk-card-label--blue  { color: var(--bk-blue)   }
+#bk-{{ section.id }} .bk-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--bk-text);
+  line-height: 1.2;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* ── Rotation Rows ───────────────────── */
+#bk-{{ section.id }} .bk-rot-rows { display: flex; flex-direction: column; gap: 5px }
+#bk-{{ section.id }} .bk-rot-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bk-row);
+  border-radius: 7px;
+  padding: 7px 10px;
+  min-width: 0;
+}
+#bk-{{ section.id }} .bk-rot-dot   { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0 }
+#bk-{{ section.id }} .bk-rot-lbl   { font-size: 11.5px; font-weight: 600; color: var(--bk-text); flex: 1; min-width: 0 }
+#bk-{{ section.id }} .bk-rot-nutr  { font-size: 10px; color: var(--bk-muted); white-space: nowrap; flex-shrink: 0 }
+@media(max-width:479px) { #bk-{{ section.id }} .bk-rot-nutr { display: none } }
+#bk-{{ section.id }} .bk-rot-note  { font-size: 10.5px; color: var(--bk-accent); margin-top: 12px; font-family: monospace }
+
+/* ── Card Body Text ──────────────────── */
+#bk-{{ section.id }} .bk-card-body {
+  font-size: 11.5px;
+  color: var(--bk-dim);
+  line-height: 1.55;
+  margin: 0 0 10px;
+}
+#bk-{{ section.id }} .bk-card-body strong { color: var(--bk-text) }
+
+/* ── Supplement Rows ─────────────────── */
+#bk-{{ section.id }} .bk-sup-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 7px 10px;
+  margin-bottom: 5px;
+  min-width: 0;
+}
+#bk-{{ section.id }} .bk-sup-row--blue  { background: rgba(92,163,203,0.04);              border: 1px solid rgba(92,163,203,0.10)              }
+#bk-{{ section.id }} .bk-sup-row--amber { background: rgba({{ ar }},{{ ag }},{{ ab }},0.04); border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.10) }
+#bk-{{ section.id }} .bk-sup-row--green { background: rgba(90,158,90,0.04);               border: 1px solid rgba(90,158,90,0.10)               }
+#bk-{{ section.id }} .bk-sup-emoji   { font-size: 14px; flex-shrink: 0 }
+#bk-{{ section.id }} .bk-sup-name    { font-size: 12px; font-weight: 600; color: var(--bk-text); white-space: nowrap }
+#bk-{{ section.id }} .bk-sup-detail  { font-size: 10px; color: var(--bk-muted) }
+#bk-{{ section.id }} .bk-sup-examples{ font-size: 10px; color: var(--bk-dim); margin-left: auto; white-space: nowrap }
+@media(max-width:479px) { #bk-{{ section.id }} .bk-sup-examples { display: none } }
+
+/* ── Status Badge ────────────────────── */
+#bk-{{ section.id }} .bk-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+#bk-{{ section.id }} .bk-status-badge--blue {
+  background: rgba(92,163,203,0.06);
+  border: 1px solid rgba(92,163,203,0.12);
+  color: var(--bk-blue);
+}
+
+/* ── Welpen Accordion ────────────────── */
+#bk-{{ section.id }} .bk-welp-toggle {
+  width: 100%;
+  text-align: left;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--bk-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  font-family: inherit;
+  transition: color .2s;
+}
+#bk-{{ section.id }} .bk-welp-toggle:hover { color: var(--bk-text) }
+#bk-{{ section.id }} .bk-welp-arrow { display: inline-block; transition: transform .3s }
+#bk-{{ section.id }} .bk-welp-toggle.bk-open .bk-welp-arrow { transform: rotate(90deg) }
+#bk-{{ section.id }} .bk-welp-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .4s ease, opacity .3s ease;
+}
+#bk-{{ section.id }} .bk-welp-body p {
+  font-size: 10.5px;
+  color: var(--bk-dim);
+  line-height: 1.5;
+  margin: 8px 0 0;
+  padding-left: 14px;
+  border-left: 2px solid rgba(92,163,203,0.2);
+}
+
+/* ── Fazit Card ──────────────────────── */
+#bk-{{ section.id }} .bk-fazit-card {
+  background: linear-gradient(135deg, rgba({{ ar }},{{ ag }},{{ ab }},0.08) 0%, var(--bk-card) 100%) !important;
+  border-color: rgba({{ ar }},{{ ag }},{{ ab }},0.15) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#bk-{{ section.id }} .bk-fazit-glow {
+  position: absolute;
+  bottom: -24px; right: -24px;
+  width: 128px; height: 128px;
+  opacity: 0.05;
+  background: radial-gradient(circle, rgba({{ ar }},{{ ag }},{{ ab }},1), transparent 70%);
+  pointer-events: none;
+}
+#bk-{{ section.id }} .bk-fazit-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--bk-text);
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+@media(min-width:768px) { #bk-{{ section.id }} .bk-fazit-title { font-size: 19px } }
+#bk-{{ section.id }} .bk-fazit-title em { font-style: normal; color: var(--bk-accent) }
+
+#bk-{{ section.id }} .bk-check-rows { display: flex; flex-direction: column; gap: 5px }
+#bk-{{ section.id }} .bk-check-row  { display: flex; align-items: center; gap: 8px; font-size: 11.5px; color: var(--bk-dim) }
+#bk-{{ section.id }} .bk-check-tick { color: var(--bk-accent); flex-shrink: 0 }
+</style>
+
+<div id="bk-{{ section.id }}" data-bk-bg="{{ bg_style }}">
+  <!-- Paw-Pattern (via JS, nur bei paw_light / paw_dark) -->
+  <div class="bk-paws-ctn" aria-hidden="true"></div>
+
+  <div class="bk-inner">
+
+    <!-- ── Hero: Badge + Headline + Bild + Text ── -->
+    <div class="bk-hero">
+      <div class="bk-hero-text">
+
+        {%- if section.settings.badge != blank -%}
+          <div class="bk-badge">{{ section.settings.badge }}</div>
+        {%- endif -%}
+
+        <h2 class="bk-headline">
+          {{ section.settings.headline | default: 'Die perfekte Basis.' }}
+          <em>{{ section.settings.headline_acc | default: 'Für jeden Hund.' }}</em>
+        </h2>
+
+        <!-- Bild: nur Mobile (zwischen Headline und Text) -->
+        {%- if section.settings.image -%}
+          <div class="bk-img-mobile">
+            <img src="{{ section.settings.image | image_url: width: 900 }}"
+                 alt="{{ section.settings.image_alt | default: '' }}"
+                 width="{{ section.settings.image.width }}"
+                 height="{{ section.settings.image.height }}"
+                 loading="lazy" decoding="async">
+            <div class="bk-img-mobile-fade"></div>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.body != blank -%}
+          <p class="bk-body">{{ section.settings.body }}</p>
+        {%- endif -%}
+      </div>
+
+      <!-- Bild: nur Desktop (Parallax) -->
+      <div class="bk-img-desktop" data-bk-parallax="0.02">
+        {%- if section.settings.image -%}
+          <div class="bk-img-desktop-inner">
+            <img src="{{ section.settings.image | image_url: width: 1000 }}"
+                 alt="{{ section.settings.image_alt | default: '' }}"
+                 width="{{ section.settings.image.width }}"
+                 height="{{ section.settings.image.height }}"
+                 loading="lazy" decoding="async">
+            <div class="bk-img-desktop-fade"></div>
+          </div>
+          <div class="bk-img-desktop-glow"></div>
+        {%- else -%}
+          <div class="bk-img-ph">📸</div>
+        {%- endif -%}
+      </div>
+    </div><!-- /.bk-hero -->
+
+    <!-- ── Fakten-Kacheln (3 Spalten) ── -->
+    <div class="bk-facts">
+
+      <div class="bk-fact">
+        <div class="bk-fact-line"></div>
+        <div class="bk-fact-val-row">
+          <span class="bk-fact-val">{{ section.settings.fact1_value | default: '35' }}</span>
+          <span class="bk-fact-unit">{{ section.settings.fact1_unit  | default: '%' }}</span>
+        </div>
+        <p class="bk-fact-label">{{ section.settings.fact1_label | default: 'Mehr Bioverfügbarkeit' }}</p>
+        <p class="bk-fact-sub">{{ section.settings.fact1_sub | default: 'Natürliche Vitamine mit Enzymen und Co-Faktoren · kein Labor baut das nach.' }}</p>
+      </div>
+
+      <div class="bk-fact">
+        <div class="bk-fact-line"></div>
+        <div class="bk-fact-val-row">
+          <span class="bk-fact-val">{{ section.settings.fact2_value | default: '0' }}</span>
+          <span class="bk-fact-unit">{{ section.settings.fact2_unit  | default: 'Zusätze' }}</span>
+        </div>
+        <p class="bk-fact-label">{{ section.settings.fact2_label | default: 'Keine Synthetik' }}</p>
+        <p class="bk-fact-sub">{{ section.settings.fact2_sub | default: 'Kein Rohöl-Cracking, keine GVO-Bakterien. Nichts zugesetzt, nichts nötig.' }}</p>
+      </div>
+
+      <div class="bk-fact">
+        <div class="bk-fact-line"></div>
+        <div class="bk-fact-val-row">
+          <span class="bk-fact-val">{{ section.settings.fact3_value | default: '2' }}</span>
+          <span class="bk-fact-unit">{{ section.settings.fact3_unit  | default: 'Handgriffe' }}</span>
+        </div>
+        <p class="bk-fact-label">{{ section.settings.fact3_label | default: 'Vollständig bedarfsdeckend' }}</p>
+        <p class="bk-fact-sub">{{ section.settings.fact3_sub | default: 'Öl + Jod täglich. Kein Plan, keine Tabelle.' }}</p>
+      </div>
+
+    </div><!-- /.bk-facts -->
+
+    <!-- ── Info-Karten 2×2 Grid ── -->
+    <div class="bk-cards">
+
+      <!-- ─ Karte 1: Rotation ─ -->
+      <div class="bk-card">
+        <div class="bk-card-line bk-card-line--amber"></div>
+        <div class="bk-card-hdr">
+          <span class="bk-card-icon">{{ section.settings.rot_icon | default: '📅' }}</span>
+          <div>
+            <span class="bk-card-label bk-card-label--amber">{{ section.settings.rot_label | default: "SO GEHT'S" }}</span>
+            <p class="bk-card-title">{{ section.settings.rot_title | default: '3 / 3 / 1 Rotation' }}</p>
+          </div>
+        </div>
+        <div class="bk-rot-rows">
+          <div class="bk-rot-row">
+            <span class="bk-rot-dot" style="background:var(--bk-red)"></span>
+            <span class="bk-rot-lbl">{{ section.settings.rot_row1_label  | default: '3× Rotes Fleisch' }}</span>
+            <span class="bk-rot-nutr">{{ section.settings.rot_row1_nutr  | default: 'Eisen · B12 · Taurin' }}</span>
+          </div>
+          <div class="bk-rot-row">
+            <span class="bk-rot-dot" style="background:hsl(47,78%,52%)"></span>
+            <span class="bk-rot-lbl">{{ section.settings.rot_row2_label  | default: '3× Helles Fleisch' }}</span>
+            <span class="bk-rot-nutr">{{ section.settings.rot_row2_nutr  | default: 'Omega-6 · Lysin' }}</span>
+          </div>
+          <div class="bk-rot-row">
+            <span class="bk-rot-dot" style="background:var(--bk-blue)"></span>
+            <span class="bk-rot-lbl">{{ section.settings.rot_row3_label  | default: '1× Fisch' }}</span>
+            <span class="bk-rot-nutr">{{ section.settings.rot_row3_nutr  | default: 'DHA · EPA · Omega-3' }}</span>
+          </div>
+        </div>
+        {%- if section.settings.rot_note != blank -%}
+          <p class="bk-rot-note">{{ section.settings.rot_note }}</p>
+        {%- endif -%}
+      </div>
+
+      <!-- ─ Karte 2: Allergie / Sensibel ─ -->
+      <div class="bk-card">
+        <div class="bk-card-line bk-card-line--blue"></div>
+        <div class="bk-card-hdr">
+          <span class="bk-card-icon">{{ section.settings.all_icon | default: '🔄' }}</span>
+          <div>
+            <span class="bk-card-label bk-card-label--blue">{{ section.settings.all_label | default: 'ALLERGIE / SENSIBEL' }}</span>
+            <p class="bk-card-title">{{ section.settings.all_title | default: 'Nur 1 bis 2 Sorten?' }}</p>
+          </div>
+        </div>
+        <p class="bk-card-body">
+          <strong>{{ section.settings.all_body_strong | default: 'Gleiche Basis' }}</strong>
+          {{ section.settings.all_body_post | default: '· fehlende Vielfalt wird gezielt ergänzt.' }}
+        </p>
+        <div class="bk-sup-row bk-sup-row--blue">
+          <span class="bk-sup-emoji">🐟</span>
+          <span class="bk-sup-name">{{ section.settings.all_sup1_name    | default: 'Omega 3' }}</span>
+          <span class="bk-sup-detail">{{ section.settings.all_sup1_detail | default: 'wenn kein Fisch' }}</span>
+          <span class="bk-sup-examples">{{ section.settings.all_sup1_ex   | default: 'Lachsöl · Dorschlebertran' }}</span>
+        </div>
+        <div class="bk-sup-row bk-sup-row--amber">
+          <span class="bk-sup-emoji">🫒</span>
+          <span class="bk-sup-name">{{ section.settings.all_sup2_name    | default: 'Balance' }}</span>
+          <span class="bk-sup-detail">{{ section.settings.all_sup2_detail | default: 'wenig Rotation' }}</span>
+          <span class="bk-sup-examples">{{ section.settings.all_sup2_ex   | default: 'Hanf · Lein' }}</span>
+        </div>
+        {%- if section.settings.all_badge != blank -%}
+          <div class="bk-status-badge bk-status-badge--blue">{{ section.settings.all_badge }}</div>
+        {%- endif -%}
+      </div>
+
+      <!-- ─ Karte 3: Welpen ─ -->
+      <div class="bk-card">
+        <div class="bk-card-line bk-card-line--blue"></div>
+        <div class="bk-card-hdr">
+          <span class="bk-card-icon">{{ section.settings.welp_icon | default: '🐶' }}</span>
+          <div>
+            <span class="bk-card-label bk-card-label--blue">{{ section.settings.welp_label | default: 'AB 12 WOCHEN' }}</span>
+            <p class="bk-card-title">{{ section.settings.welp_title | default: 'Welpen' }}</p>
+          </div>
+        </div>
+        <p class="bk-card-body">
+          {{ section.settings.welp_body_pre | default: 'Gleiche Rotation, gleiche Ergänzungen ·' }}
+          <strong style="color:var(--bk-blue)">{{ section.settings.welp_body_acc | default: 'plus Kalzium' }}</strong>
+          {{ section.settings.welp_body_post | default: 'fürs Knochenwachstum.' }}
+        </p>
+        <div class="bk-sup-row bk-sup-row--green">
+          <span class="bk-sup-emoji">🦴</span>
+          <span class="bk-sup-name">{{ section.settings.welp_sup_name   | default: 'Kalzium' }}</span>
+          <span class="bk-sup-detail">{{ section.settings.welp_sup_detail | default: 'täglich' }}</span>
+          <span class="bk-sup-examples">{{ section.settings.welp_sup_ex  | default: 'Eierschalen · Knochenmehl' }}</span>
+        </div>
+        {%- if section.settings.welp_toggle_lbl != blank -%}
+          <button class="bk-welp-toggle" aria-expanded="false">
+            <span class="bk-welp-arrow">›</span>
+            {{ section.settings.welp_toggle_lbl | default: 'Warum Kalzium?' }}
+          </button>
+          <div class="bk-welp-body" aria-hidden="true">
+            <p>{{ section.settings.welp_toggle_txt | default: 'Wachsende Knochen brauchen ein höheres Ca:P-Verhältnis als bei ausgewachsenen Hunden.' }}</p>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- ─ Karte 4: Fazit ─ -->
+      <div class="bk-card bk-fazit-card">
+        <div class="bk-fazit-glow"></div>
+        <div>
+          <h3 class="bk-fazit-title">
+            {{ section.settings.fazit_title_pre | default: 'Die' }}
+            <em>{{ section.settings.fazit_title_acc | default: 'sauberste' }}</em>
+            {{ section.settings.fazit_title_post | default: 'Basis für deinen Hund.' }}
+          </h3>
+          <div class="bk-check-rows">
+            {%- assign checks = section.settings.fazit_checks | newline_to_br | split: '<br />' -%}
+            {%- for check in checks -%}
+              {%- assign check_clean = check | strip -%}
+              {%- unless check_clean == blank -%}
+                <div class="bk-check-row">
+                  <span class="bk-check-tick">✓</span>
+                  <span>{{ check_clean }}</span>
+                </div>
+              {%- endunless -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.bk-cards -->
+
+  </div><!-- /.bk-inner -->
+</div><!-- /#bk-{{ section.id }} -->
+
+<script>
+(function(){
+
+  /* ══ Originale Uncle Rusty's Paw-SVG-Pfade ═══════════════════════════ */
+  var PAW_OPEN  = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.51 102.33" width="100%" height="100%">';
+  var PAW_PATHS =
+    '<path d="m40.23,34.23c-2.88-.64-4.71-2.1-6.03-4.18-1.41-2.21-2.07-4.66-2.48-7.17-.36-2.15-.57-4.32-.38-6.49.15-1.71.35-3.42.55-5.13.28-2.39,1.19-4.59,2.34-6.71.34-.63.81-1.2,1.26-1.76C37.25.64,39.68-.12,42.44.01c2.24.1,4.33.76,6.25,1.87,3.65,2.11,6.09,5.18,7.8,8.81.99,2.1,1.64,4.29,1.83,6.57.12,1.4.06,2.82-.04,4.22-.14,1.92-.65,3.78-1.51,5.53-1.68,3.39-4.39,5.63-8.32,6.53-2.17.5-4.33.95-6.58.86-.65-.03-1.3-.13-1.63-.17Z"/>' +
+    '<path d="m88.66,9.84c1.13.49,2.38.92,3.51,1.55,2.25,1.25,3.34,3.18,3.6,5.62.2,1.81.17,3.59-.27,5.35-.4,1.63-.76,3.28-1.31,4.86-.79,2.29-1.9,4.47-3.21,6.54-1.78,2.81-3.83,5.43-6.78,7.28-1.87,1.17-3.91,1.69-6.18,1.49-1.57-.14-3.01-.65-4.27-1.43-1.63-1.01-3.17-2.17-4.66-3.35-1.98-1.56-3.05-3.63-3.57-6-.53-2.39-.25-4.72.45-7.03,1.45-4.76,4.48-8.48,8.67-11.4,3.05-2.12,6.45-3.47,10.27-3.65,1.21-.06,2.43.1,3.76.16Z"/>' +
+    '<path d="m84.32,64.9c-.45-3.11.14-6,1.51-8.74,1.94-3.88,4.89-6.87,9.07-8.71,1.46-.64,3.01-1.03,4.64-1.14,2.64-.19,5.04.31,7.14,1.87,1.5,1.11,2.52,2.55,3.1,4.26,1.64,4.83.39,9.2-2.46,13.28-2.08,2.97-4.86,5.21-8.41,6.48-3.78,1.35-7.48,1.33-10.84-1.1-1.68-1.22-2.8-2.83-3.35-4.77-.14-.5-.27-.99-.39-1.42Z"/>' +
+    '<path d="m.38,29c1.03-3.8,3.42-6.38,7.6-7.29,1.19-.26,2.39-.21,3.62-.07,2.03.24,3.89.92,5.57,1.93,4.65,2.78,7.46,6.79,8.53,11.86.35,1.67.34,3.36,0,5.07-.47,2.33-1.41,4.39-3.33,5.97-1.92,1.58-4.19,2.26-6.72,2.19-2.5-.06-4.77-.79-6.85-2.07-4.69-2.91-7.52-6.98-8.54-12.16-.36-1.81-.34-3.62.13-5.43Z"/>' +
+    '<path d="m46.49,85.7c-9.89-4.95-35.88,4.08-32.7-14.2,3.82-22.02,36.18-27.99,48.11-22.35,22.27,10.54,16.17,44.5,10.13,50.1-11.61,10.75-17.97-9.77-25.53-13.55Z"/>';
+  var PAW_CLOSE = '</svg>';
+
+  /* ══ Paw-Pattern spawnen ══════════════════════════════════════════════ */
+  function buildPaws(sec){
+    var style = sec.getAttribute('data-bk-bg') || '';
+    if(style !== 'paw_light' && style !== 'paw_dark') return;
+
+    var ctn = sec.querySelector('.bk-paws-ctn');
+    if(!ctn) return;
+    ctn.innerHTML = '';
+
+    var fillColor = style === 'paw_dark' ? '#f5ede0' : '#3d2510';
+
+    for(var i = 0; i < 18; i++){
+      var el  = document.createElement('div');
+      var x   = (5 + Math.random() * 85).toFixed(1);
+      var y   = (5 + Math.random() * 85).toFixed(1);
+      var rot = (Math.random() * 360).toFixed(0);
+      var sz  = (24 + Math.random() * 36).toFixed(0);
+      var op  = (0.04 + Math.random() * 0.08).toFixed(3);
+      el.style.cssText =
+        'position:absolute;left:'+x+'%;top:'+y+'%;' +
+        'width:'+sz+'px;height:'+sz+'px;' +
+        'opacity:'+op+';transform:rotate('+rot+'deg);pointer-events:none;';
+      el.innerHTML = PAW_OPEN.replace('>', ' fill="'+fillColor+'">') + PAW_PATHS + PAW_CLOSE;
+      ctn.appendChild(el);
+    }
+  }
+
+  /* ══ Parallax Produktbild (Desktop) ════════════════════════════════
+     Gleicher center-basierter Ansatz wie bei zutaten-basis.
+     factor = 0.02 (sanfter als Gläser, da es ein großes Bild ist)
+  ══════════════════════════════════════════════════════════════════ */
+  function initParallax(sec){
+    var wrap  = sec.querySelector('[data-bk-parallax]');
+    if(!wrap) return;
+    var inner = wrap.querySelector('.bk-img-desktop-inner');
+    if(!inner) return;
+
+    function update(){
+      if(window.innerWidth < 1024){
+        inner.style.transform = '';
+        return;
+      }
+      var rect   = wrap.getBoundingClientRect();
+      var center = rect.top + rect.height / 2 - window.innerHeight / 2;
+      var offset = center * 0.02;
+      inner.style.transform = 'translateY(' + offset + 'px)';
+    }
+
+    update();
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        requestAnimationFrame(function(){ update(); ticking = false; });
+        ticking = true;
+      }
+    }, {passive: true});
+    window.addEventListener('resize', update, {passive: true});
+  }
+
+  /* ══ Welpen-Accordion ═════════════════════════════════════════════ */
+  function initWelpen(sec){
+    var btn  = sec.querySelector('.bk-welp-toggle');
+    var body = sec.querySelector('.bk-welp-body');
+    if(!btn || !body) return;
+
+    btn.addEventListener('click', function(){
+      var isOpen = btn.classList.contains('bk-open');
+      if(isOpen){
+        btn.classList.remove('bk-open');
+        btn.setAttribute('aria-expanded', 'false');
+        body.style.maxHeight = '0';
+        body.style.opacity   = '0';
+        body.setAttribute('aria-hidden', 'true');
+      } else {
+        btn.classList.add('bk-open');
+        btn.setAttribute('aria-expanded', 'true');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        body.style.opacity   = '1';
+        body.setAttribute('aria-hidden', 'false');
+      }
+    });
+  }
+
+  /* ══ Init ════════════════════════════════════════════════════════ */
+  function init(){
+    var sec = document.getElementById('bk-{{ section.id }}');
+    if(!sec) return;
+    buildPaws(sec);
+    initParallax(sec);
+    initWelpen(sec);
+  }
+
+  document.addEventListener('shopify:section:load', function(e){
+    var sec = e.target && e.target.querySelector('#bk-{{ section.id }}');
+    if(!sec) sec = document.getElementById('bk-{{ section.id }}');
+    if(sec){ buildPaws(sec); initParallax(sec); initWelpen(sec); }
+  });
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Basis Komplett",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Headline & Bild"
+    },
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Section-Badge (Pill oben)",
+      "default": "✦ BEDARFSDECKUNG"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Zeile 1",
+      "default": "Die perfekte Basis."
+    },
+    {
+      "type": "text",
+      "id": "headline_acc",
+      "label": "Zeile 2 (Akzentfarbe)",
+      "default": "Für jeden Hund."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Fließtext",
+      "default": "Keine synthetischen Vitamine. Keine Zusätze. Die Rohstoffe bringen alles mit. Was darüber hinaus gebraucht wird, sind zwei Handgriffe täglich."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Produktbild (Dosen / Szene)"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Alt-Text Bild",
+      "default": "Uncle Rusty's Dosen vor Alpenkulisse"
+    },
+    {
+      "type": "header",
+      "content": "Fakten-Kacheln"
+    },
+    {
+      "type": "paragraph",
+      "content": "Kachel 1"
+    },
+    {
+      "type": "text",
+      "id": "fact1_value",
+      "label": "Zahl",
+      "default": "35"
+    },
+    {
+      "type": "text",
+      "id": "fact1_unit",
+      "label": "Einheit",
+      "default": "%"
+    },
+    {
+      "type": "text",
+      "id": "fact1_label",
+      "label": "Titel",
+      "default": "Mehr Bioverfügbarkeit"
+    },
+    {
+      "type": "textarea",
+      "id": "fact1_sub",
+      "label": "Erklärung",
+      "default": "Natürliche Vitamine mit Enzymen und Co-Faktoren · kein Labor baut das nach."
+    },
+    {
+      "type": "paragraph",
+      "content": "Kachel 2"
+    },
+    {
+      "type": "text",
+      "id": "fact2_value",
+      "label": "Zahl",
+      "default": "0"
+    },
+    {
+      "type": "text",
+      "id": "fact2_unit",
+      "label": "Einheit",
+      "default": "Zusätze"
+    },
+    {
+      "type": "text",
+      "id": "fact2_label",
+      "label": "Titel",
+      "default": "Keine Synthetik"
+    },
+    {
+      "type": "textarea",
+      "id": "fact2_sub",
+      "label": "Erklärung",
+      "default": "Kein Rohöl-Cracking, keine GVO-Bakterien. Nichts zugesetzt, nichts nötig."
+    },
+    {
+      "type": "paragraph",
+      "content": "Kachel 3"
+    },
+    {
+      "type": "text",
+      "id": "fact3_value",
+      "label": "Zahl",
+      "default": "2"
+    },
+    {
+      "type": "text",
+      "id": "fact3_unit",
+      "label": "Einheit",
+      "default": "Handgriffe"
+    },
+    {
+      "type": "text",
+      "id": "fact3_label",
+      "label": "Titel",
+      "default": "Vollständig bedarfsdeckend"
+    },
+    {
+      "type": "textarea",
+      "id": "fact3_sub",
+      "label": "Erklärung",
+      "default": "Öl + Jod täglich. Kein Plan, keine Tabelle."
+    },
+    {
+      "type": "header",
+      "content": "Karte 1 – Rotation"
+    },
+    {
+      "type": "text",
+      "id": "rot_icon",
+      "label": "Icon (Emoji)",
+      "default": "📅"
+    },
+    {
+      "type": "text",
+      "id": "rot_label",
+      "label": "Kategorie-Label (Caps)",
+      "default": "SO GEHT'S"
+    },
+    {
+      "type": "text",
+      "id": "rot_title",
+      "label": "Titel",
+      "default": "3 / 3 / 1 Rotation"
+    },
+    {
+      "type": "text",
+      "id": "rot_row1_label",
+      "label": "Zeile 1 – Label",
+      "default": "3× Rotes Fleisch"
+    },
+    {
+      "type": "text",
+      "id": "rot_row1_nutr",
+      "label": "Zeile 1 – Nährstoffe",
+      "default": "Eisen · B12 · Taurin"
+    },
+    {
+      "type": "text",
+      "id": "rot_row2_label",
+      "label": "Zeile 2 – Label",
+      "default": "3× Helles Fleisch"
+    },
+    {
+      "type": "text",
+      "id": "rot_row2_nutr",
+      "label": "Zeile 2 – Nährstoffe",
+      "default": "Omega-6 · Lysin"
+    },
+    {
+      "type": "text",
+      "id": "rot_row3_label",
+      "label": "Zeile 3 – Label",
+      "default": "1× Fisch"
+    },
+    {
+      "type": "text",
+      "id": "rot_row3_nutr",
+      "label": "Zeile 3 – Nährstoffe",
+      "default": "DHA · EPA · Omega-3"
+    },
+    {
+      "type": "text",
+      "id": "rot_note",
+      "label": "Hinweis unten (Monospace)",
+      "default": "→ Dazu täglich: Öl + Jod"
+    },
+    {
+      "type": "header",
+      "content": "Karte 2 – Allergie / Sensibel"
+    },
+    {
+      "type": "text",
+      "id": "all_icon",
+      "label": "Icon (Emoji)",
+      "default": "🔄"
+    },
+    {
+      "type": "text",
+      "id": "all_label",
+      "label": "Kategorie-Label (Caps)",
+      "default": "ALLERGIE / SENSIBEL"
+    },
+    {
+      "type": "text",
+      "id": "all_title",
+      "label": "Titel",
+      "default": "Nur 1 bis 2 Sorten?"
+    },
+    {
+      "type": "text",
+      "id": "all_body_strong",
+      "label": "Intro fett",
+      "default": "Gleiche Basis"
+    },
+    {
+      "type": "text",
+      "id": "all_body_post",
+      "label": "Intro nach fett",
+      "default": "· fehlende Vielfalt wird gezielt ergänzt."
+    },
+    {
+      "type": "text",
+      "id": "all_sup1_name",
+      "label": "Ergänzung 1 – Name",
+      "default": "Omega 3"
+    },
+    {
+      "type": "text",
+      "id": "all_sup1_detail",
+      "label": "Ergänzung 1 – Detail",
+      "default": "wenn kein Fisch"
+    },
+    {
+      "type": "text",
+      "id": "all_sup1_ex",
+      "label": "Ergänzung 1 – Beispiele",
+      "default": "Lachsöl · Dorschlebertran"
+    },
+    {
+      "type": "text",
+      "id": "all_sup2_name",
+      "label": "Ergänzung 2 – Name",
+      "default": "Balance"
+    },
+    {
+      "type": "text",
+      "id": "all_sup2_detail",
+      "label": "Ergänzung 2 – Detail",
+      "default": "wenig Rotation"
+    },
+    {
+      "type": "text",
+      "id": "all_sup2_ex",
+      "label": "Ergänzung 2 – Beispiele",
+      "default": "Hanf · Lein"
+    },
+    {
+      "type": "text",
+      "id": "all_badge",
+      "label": "Status-Badge Text",
+      "default": "✓ Auch mit 1 bis 2 Sorten komplett"
+    },
+    {
+      "type": "header",
+      "content": "Karte 3 – Welpen"
+    },
+    {
+      "type": "text",
+      "id": "welp_icon",
+      "label": "Icon (Emoji)",
+      "default": "🐶"
+    },
+    {
+      "type": "text",
+      "id": "welp_label",
+      "label": "Kategorie-Label (Caps)",
+      "default": "AB 12 WOCHEN"
+    },
+    {
+      "type": "text",
+      "id": "welp_title",
+      "label": "Titel",
+      "default": "Welpen"
+    },
+    {
+      "type": "text",
+      "id": "welp_body_pre",
+      "label": "Intro-Text vor Akzent",
+      "default": "Gleiche Rotation, gleiche Ergänzungen ·"
+    },
+    {
+      "type": "text",
+      "id": "welp_body_acc",
+      "label": "Akzent-Text (blau)",
+      "default": "plus Kalzium"
+    },
+    {
+      "type": "text",
+      "id": "welp_body_post",
+      "label": "Intro-Text nach Akzent",
+      "default": "fürs Knochenwachstum."
+    },
+    {
+      "type": "text",
+      "id": "welp_sup_name",
+      "label": "Ergänzung – Name",
+      "default": "Kalzium"
+    },
+    {
+      "type": "text",
+      "id": "welp_sup_detail",
+      "label": "Ergänzung – Detail",
+      "default": "täglich"
+    },
+    {
+      "type": "text",
+      "id": "welp_sup_ex",
+      "label": "Ergänzung – Beispiele",
+      "default": "Eierschalen · Knochenmehl"
+    },
+    {
+      "type": "text",
+      "id": "welp_toggle_lbl",
+      "label": "Accordion-Button Label",
+      "default": "Warum Kalzium?"
+    },
+    {
+      "type": "textarea",
+      "id": "welp_toggle_txt",
+      "label": "Accordion-Inhalt",
+      "default": "Wachsende Knochen brauchen ein höheres Ca:P-Verhältnis als bei ausgewachsenen Hunden."
+    },
+    {
+      "type": "header",
+      "content": "Karte 4 – Fazit"
+    },
+    {
+      "type": "text",
+      "id": "fazit_title_pre",
+      "label": "Titel – Teil vor Akzent",
+      "default": "Die"
+    },
+    {
+      "type": "text",
+      "id": "fazit_title_acc",
+      "label": "Titel – Akzent-Wort (Terracotta)",
+      "default": "sauberste"
+    },
+    {
+      "type": "text",
+      "id": "fazit_title_post",
+      "label": "Titel – Teil nach Akzent",
+      "default": "Basis für deinen Hund."
+    },
+    {
+      "type": "textarea",
+      "id": "fazit_checks",
+      "label": "Checkmarks (eine pro Zeile)",
+      "default": "Keine synthetischen Vitamine\nKeine künstlichen Zusatzstoffe\nNur 2 Ergänzungen nötig\nFlexibel bei Allergien\nAb 12 Wochen geeignet"
+    },
+    {
+      "type": "header",
+      "content": "Hintergrund"
+    },
+    {
+      "type": "select",
+      "id": "bg_style",
+      "label": "Hintergrund-Stil",
+      "info": "Pfoten Dunkel: entspricht dem Landing-Page-Design",
+      "options": [
+        { "value": "paw_dark",   "label": "✦ Pfoten + Dunkler Hintergrund (Landing-Page-Look)" },
+        { "value": "paw_light",  "label": "✦ Pfoten + Heller Hintergrund (CI-Standard)"        },
+        { "value": "plain_dark", "label": "Dunkler Hintergrund (ohne Pfoten)"                   },
+        { "value": "plain_light","label": "Heller Hintergrund (ohne Pfoten)"                    },
+        { "value": "transparent","label": "Transparent (Theme-Hintergrund)"                     }
+      ],
+      "default": "paw_dark"
+    },
+    {
+      "type": "header",
+      "content": "Farbe"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Akzentfarbe (Terracotta)",
+      "default": "#c4622d"
+    },
+    {
+      "type": "header",
+      "content": "Abstände (Padding)"
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "label": "Padding Oben/Unten (Mobil)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_tablet",
+      "label": "Padding Oben/Unten (Tablet)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "label": "Padding Oben/Unten (Desktop)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 120
+    }
+  ],
+  "presets": [
+    {
+      "name": "Basis Komplett"
+    }
+  ]
+}
+{% endschema %}
