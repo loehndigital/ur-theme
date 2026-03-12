@@ -274,10 +274,16 @@
 
 #zb-{{ section.id }} .zb-feat-header {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;      /* Kategorie-Pill darf auf neue Zeile umbrechen */
+  flex-direction: column;   /* Mobile: Icon oben, Pill darunter – immer konsistent */
+  align-items: flex-start;
   gap: 6px;
   margin-bottom: 12px;
+}
+@media(min-width:768px) {
+  #zb-{{ section.id }} .zb-feat-header {
+    flex-direction: row;    /* Tablet/Desktop: wieder nebeneinander */
+    align-items: center;
+  }
 }
 
 #zb-{{ section.id }} .zb-feat-icon-wrap {
