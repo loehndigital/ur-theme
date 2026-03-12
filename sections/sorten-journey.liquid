@@ -9,7 +9,7 @@
    ╚══════════════════════════════════╝ */
 #sj-{{ section.id }} {
   --sj-accent:   {{ section.settings.accent_color  | default: '#c4622d' }};
-  --sj-bg:       {{ section.settings.bg_color       | default: '#f5ede0' }};
+  --sj-bg:       {{ section.settings.bg_color       | default: '#EBE6D9' }};
   --sj-card:     {{ section.settings.card_color     | default: '#fffaf3' }};
   --sj-dark:     {{ section.settings.dark_color     | default: '#3d2510' }};
   --sj-text:     #2c1a0e;
@@ -18,7 +18,11 @@
   --sj-border:   rgba(60,35,15,0.12);
   --sj-border-d: rgba(245,237,224,0.12);   /* border auf dunklem Bg */
 
-  background: var(--sj-bg);
+  background-color: var(--sj-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cg transform='rotate(-12 40 40)'%3E%3Cellipse cx='40' cy='52' rx='18' ry='14' fill='%23f5ede0' opacity='0.5'/%3E%3Cellipse cx='22' cy='37' rx='9' ry='11' fill='%23f5ede0' opacity='0.5'/%3E%3Cellipse cx='35' cy='27' rx='9' ry='11' fill='%23f5ede0' opacity='0.5'/%3E%3Cellipse cx='47' cy='27' rx='9' ry='11' fill='%23f5ede0' opacity='0.5'/%3E%3Cellipse cx='60' cy='37' rx='9' ry='11' fill='%23f5ede0' opacity='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 130px;
+  background-attachment: fixed;
+  background-repeat: repeat;
   padding: 64px 0;
   max-width: 1280px;
   margin: 0 auto;
@@ -42,9 +46,9 @@
 .sj-hero-img  { width:100%; object-fit:cover; aspect-ratio:16/10; display:block }
 @media(min-width:768px){ .sj-hero-img { aspect-ratio:21/9 } }
 .sj-hero-or   { position:absolute; inset:0; pointer-events:none;
-  background: linear-gradient(to right, rgba(61,37,16,.9) 0%, rgba(61,37,16,.5) 40%, transparent 70%) }
+  background: linear-gradient(105deg, rgba(44,26,14,.88) 0%, rgba(44,26,14,.42) 48%, rgba(44,26,14,.06) 78%, transparent 100%) }
 .sj-hero-ob   { position:absolute; inset:0; pointer-events:none;
-  background: linear-gradient(to top, var(--sj-bg) 0%, transparent 30%) }
+  background: linear-gradient(to top, var(--sj-bg) 0%, transparent 22%) }
 .sj-hero-content { position:absolute; inset:0; display:flex; align-items:center; padding:0 24px }
 @media(min-width:768px) { .sj-hero-content { padding:0 40px } }
 @media(min-width:1024px){ .sj-hero-content { padding:0 56px } }
@@ -74,18 +78,18 @@
 /* ══════════════════════════════════
    WOCHEN BANNER
 ══════════════════════════════════ */
-.sj-wochen { padding:16px; border-radius:12px; display:flex; flex-wrap:wrap;
-  align-items:center; justify-content:center; gap:16px; margin-bottom:40px }
-@media(min-width:768px) { .sj-wochen { padding:24px; gap:20px; margin-bottom:56px } }
-@media(min-width:1024px){ .sj-wochen { padding:28px; gap:32px } }
+.sj-wochen { padding:10px 20px; border-radius:10px; display:flex; flex-wrap:wrap;
+  align-items:center; justify-content:center; gap:10px; margin-bottom:40px }
+@media(min-width:768px) { .sj-wochen { padding:14px 28px; gap:24px; margin-bottom:56px } }
+@media(min-width:1024px){ .sj-wochen { padding:16px 36px; gap:36px } }
 .sj-wi { text-align:center }
-.sj-wi-dots { display:flex; justify-content:center; gap:6px; margin-bottom:8px }
-.sj-wi-dot  { width:10px; height:10px; border-radius:50% }
-.sj-wi-lbl  { color:var(--sj-text); font-size:12px; font-weight:600 }
-.sj-wi-sub  { color:var(--sj-dim); font-size:11px; margin-top:2px }
-.sj-wi-tot  { font-size:24px; font-weight:700; color:var(--sj-accent) }
-.sj-wi-tot-l{ font-size:11px; font-weight:500; color:var(--sj-accent); margin-top:2px }
-.sj-wi-tot-s{ font-size:10px; color:rgba(196,98,45,.5) }
+.sj-wi-dots { display:flex; justify-content:center; gap:4px; margin-bottom:5px }
+.sj-wi-dot  { width:7px; height:7px; border-radius:50% }
+.sj-wi-lbl  { color:var(--sj-text); font-size:11px; font-weight:600 }
+.sj-wi-sub  { color:var(--sj-dim); font-size:10px; margin-top:2px }
+.sj-wi-tot  { font-size:20px; font-weight:700; color:var(--sj-accent) }
+.sj-wi-tot-l{ font-size:10px; font-weight:500; color:var(--sj-accent); margin-top:2px }
+.sj-wi-tot-s{ font-size:9px; color:rgba(196,98,45,.5) }
 .sj-divl { display:none; width:1px; height:48px;
   background: linear-gradient(to bottom, transparent, rgba(60,35,15,.15), transparent) }
 @media(min-width:768px){ .sj-divl { display:block } }
@@ -149,7 +153,7 @@
 .sj-cbody.sj-open { border-top:1px solid var(--sj-border) }
 
 /* ── EXPANDED: Hero ─────────────── */
-.sj-xhero    { position:relative; overflow:hidden; background:var(--sj-dark) }
+.sj-xhero    { position:relative; overflow:visible; background:var(--sj-dark) }
 .sj-xhero-bg { position:absolute; inset:0;
   background:linear-gradient(135deg,rgba(77,45,20,.5),var(--sj-dark)) }
 .sj-xgrid    { position:relative; z-index:1; display:grid; grid-template-columns:1fr }
@@ -211,9 +215,9 @@
 .sj-blbl { color:rgba(245,237,224,.5); font-size:11px; margin-left:8px }
 
 /* ── EXPANDED: Zusammensetzung ────── */
-.sj-zsm { padding:24px 16px; border-top:1px solid var(--sj-border-d);
+.sj-zsm { padding:24px 16px 44px; border-top:1px solid var(--sj-border-d);
   background:var(--sj-dark) }
-@media(min-width:768px){ .sj-zsm { padding:32px 40px } }
+@media(min-width:768px){ .sj-zsm { padding:32px 40px 60px } }
 .sj-zsm-ttl { text-align:center; margin-bottom:16px }
 @media(min-width:768px){ .sj-zsm-ttl { margin-bottom:24px } }
 .sj-zsm-h4  { color:#f5ede0; font-size:22px; font-weight:700 }
@@ -271,17 +275,17 @@
 
 /* ── EXPANDED: Deklaration ──────── */
 .sj-dekl {
-  margin:0 16px 24px; border-radius:16px; overflow:hidden; position:relative;
+  margin:20px 16px 28px; border-radius:16px; overflow:hidden; position:relative;
   background:linear-gradient(135deg,rgba(77,45,20,.7),rgba(61,37,16,.4));
   border:1px solid rgba(196,98,45,.25)
 }
-@media(min-width:768px) { .sj-dekl { margin:0 24px 40px } }
-@media(min-width:1024px){ .sj-dekl { margin:0 40px  40px } }
+@media(min-width:768px) { .sj-dekl { margin:24px 24px 44px } }
+@media(min-width:1024px){ .sj-dekl { margin:24px 40px 44px } }
 .sj-dekl-bar  { position:absolute; top:0; left:0; width:5px; height:100%;
   background:linear-gradient(to bottom,var(--sj-accent),rgba(196,98,45,.3)) }
-.sj-dekl-body { padding:16px 24px 16px 20px }
-@media(min-width:768px) { .sj-dekl-body { padding:24px 32px 24px 28px } }
-@media(min-width:1024px){ .sj-dekl-body { padding:32px 40px 32px 36px } }
+.sj-dekl-body { padding:18px 24px 24px 20px }
+@media(min-width:768px) { .sj-dekl-body { padding:24px 32px 32px 28px } }
+@media(min-width:1024px){ .sj-dekl-body { padding:32px 40px 40px 36px } }
 .sj-dekl-lbl  { color:var(--sj-accent); font-size:10px; font-weight:700;
   letter-spacing:.25em; text-transform:uppercase; margin-bottom:8px }
 .sj-dekl-txt  { color:#f5ede0; font-size:13px; line-height:1.85; font-weight:500 }
@@ -751,6 +755,49 @@ var TYP_COLORS = {
 function getColor(seg){ return ING_COLORS[seg.label]||TYP_COLORS[seg.typ]||'#888'; }
 
 /* ══════════════════════════════════
+   EMOJIS
+══════════════════════════════════ */
+var TYP_EMOJIS = {
+  muskelfleisch:'🥩',innereien:'❤️',gemuese:'🥦',getreide:'🌾',
+  obst:'🍎',bruehe:'🫕',mineral:'🪸'
+};
+function getEmoji(seg){
+  var lbl = seg.label.toLowerCase();
+  /* Muskelfleisch – nach Tier */
+  if(seg.typ === 'muskelfleisch'){
+    if(lbl.includes('rind'))                          return '🐄';
+    if(lbl.includes('reh')||lbl.includes('hirsch'))   return '🦌';
+    if(lbl.includes('pferd'))                         return '🐴';
+    if(lbl.includes('lamm'))                          return '🐑';
+    if(lbl.includes('huhn')||lbl.includes('gefl'))    return '🍗';
+    if(lbl.includes('ente'))                          return '🦆';
+    if(lbl.includes('lachs')||lbl.includes('fisch'))  return '🐟';
+  }
+  /* Innereien */
+  if(lbl.includes('herz'))                      return '❤️';
+  if(lbl.includes('lunge')||lbl.includes('luftröhre')) return '💨';
+  if(lbl.includes('leber'))                     return '🔴';
+  if(lbl.includes('mägen')||lbl.includes('magen')) return '🫙';
+  if(lbl.includes('hals'))                      return '🦴';
+  /* Gemüse */
+  if(lbl.includes('karotte')||lbl.includes('karotten')) return '🥕';
+  if(lbl.includes('süßkartoffel'))              return '🍠';
+  if(lbl.includes('kartoffeln'))                return '🥔';
+  if(lbl.includes('kürbis'))                    return '🎃';
+  if(lbl.includes('zucchini'))                  return '🥒';
+  if(lbl.includes('rote beete'))                return '🫑';
+  /* Obst */
+  if(lbl.includes('apfel'))                     return '🍎';
+  /* Getreide */
+  if(lbl.includes('haferkleie'))                return '🌾';
+  if(lbl.includes('quinoa')||lbl.includes('amaranth')||lbl.includes('hirse')) return '🌾';
+  /* Basis */
+  if(lbl.includes('fleischbrühe'))              return '🫕';
+  if(lbl.includes('algenkalk'))                 return '🪸';
+  return TYP_EMOJIS[seg.typ] || '🥩';
+}
+
+/* ══════════════════════════════════
    HILFSFUNKTION: Block-Text oder Fallback
 ══════════════════════════════════ */
 function getText(card, attr, fallback){
@@ -822,7 +869,7 @@ function buildExpanded(s, card, productImg, glassImg){
   function irow(seg){
     var c=getColor(seg), lbl=seg.label.replace(/\s*\(.*\)/,'');
     return '<div class="sj-irow">'
-      +'<div class="sj-iicon" style="background:'+c+'1a">🥩</div>'
+      +'<div class="sj-iicon" style="background:'+c+'1a">'+getEmoji(seg)+'</div>'
       +'<div style="flex:1;min-width:0"><p class="sj-iname">'+lbl+'</p>'
       +(seg.highlight?'<p class="sj-ihigh">'+seg.highlight+'</p>':'')+'</div>'
       +'<span class="sj-ipct">'+seg.pct+'%</span></div>';
@@ -833,7 +880,7 @@ function buildExpanded(s, card, productImg, glassImg){
     var c=getColor(seg);
     var txt=seg.typ==='bruehe'?'Kollagen & Mineralien für saftige Konsistenz. Kein Wasser.':'Natürliches Calcium aus Meeresalgen.';
     return '<div style="display:flex;align-items:flex-start;gap:10px;padding:8px 12px">'
-      +'<div style="width:28px;height:28px;border-radius:6px;background:'+c+'18;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;font-size:12px">💧</div>'
+      +'<div style="width:28px;height:28px;border-radius:6px;background:'+c+'18;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;font-size:12px">'+getEmoji(seg)+'</div>'
       +'<div style="flex:1"><div style="display:flex;align-items:center;justify-content:space-between">'
       +'<span style="color:#f5ede0;font-size:12px;font-weight:600">'+seg.label+'</span>'
       +'<span style="color:#c4622d;font-size:14px;font-weight:700">'+seg.pct+'%</span>'
