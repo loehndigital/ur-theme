@@ -138,6 +138,24 @@
             "content": "{{ product.metafields.custom.analyse | metafield_tag }}",
             "page": ""
           }
+        },
+        "collapsible_tab_KfApdL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fütterungsempfehlung",
+            "icon": "paw_print",
+            "content": "<p>Fütterungsempfehlung pro Tag:<br/>Bis 5 kg 200g | Bis 15 kg 600g | Bis 25 kg 800g | Bis 35 kg 1000g<br/><br/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung.<br/><br/><strong>Zubereitung</strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten.<br/><br/><strong>Fütterung & Lagerung:</strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_UCqJtV": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Unser Tipp",
+            "icon": "star",
+            "content": "<p>Wechsle die Sorten von Uncle Rusty’s regelmäßig durch. Damit ist der Bedarf Deines Hundes abgedeckt. Der Wechsel der Sorten ist wichtig, da dem Hund dadurch unter anderem verschiedene Vitamine und Proteinquellen zugeführt werden. (Beispiel: die Zugabe von Jod kann durch die Fütterung – 1 pro Woche das Lachsmenü automatisch gemacht werden). Unabhängig von der Futterart und Marke empfehlen wir die Zugabe (in regelmäßigen Abständen)<br/><br/>z.B.: Seealgenmehl (für Fell und Schilddrüsenfunktion)<br/>Grünlippmuschelpulver (für Herz, Knorpeln, Gelenke)<br/>Leinöl (für Fell, Haut, Stoffwechsel und Verdauung)<br/>Dorschlebertran (für Knochenbau, Wachstumsfördernd, Konstitution, Fell)<br/><br/>Bitte beachte die richtige Dosierung der Produkte! - Der Gehalt ausgewählter Nährstoffe unseres Tierfutters wird regelmäßig von einem unabhängigen und anerkannten Labor geprüft, um den hohen Qualitätsstandard zu sichern. </p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -154,7 +172,9 @@
         "buy_buttons",
         "collapsible-row-1",
         "collapsible-row-0",
-        "collapsible-row-2"
+        "collapsible-row-2",
+        "collapsible_tab_KfApdL",
+        "collapsible_tab_UCqJtV"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -177,7 +197,7 @@
         "4e0e223b-8191-412f-80a7-a090f143b0c9": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "review_data": "sample_data",
+            "review_data": "real_data",
             "max_width": 1200,
             "show_shop_reviews": false,
             "empty_state": "empty_widget"
@@ -257,6 +277,7 @@
         "e174a946-2653-47a7-966b-4e9bead73647",
         "7998b995-21a6-48bc-9bd3-54195320ca2b"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
         "height": "medium",
@@ -304,7 +325,6 @@
         "badge_g86Czp",
         "badge_cJL6Y7"
       ],
-      "disabled": true,
       "name": "Warum Hero",
       "settings": {
         "eyebrow": "+ WARUM UNCLE RUSTY'S",
