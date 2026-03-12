@@ -4,243 +4,376 @@
 {%- endcomment -%}
 
 <style>
+/* ╔══════════════════════════════════╗
+   ║  UNCLE RUSTY'S CI               ║
+   ╚══════════════════════════════════╝ */
 #sj-{{ section.id }} {
-  --sj-amber: {{ section.settings.amber_color | default: '#d4a853' }};
+  --sj-accent:   {{ section.settings.accent_color  | default: '#c4622d' }};
+  --sj-bg:       {{ section.settings.bg_color       | default: '#f5ede0' }};
+  --sj-card:     {{ section.settings.card_color     | default: '#fffaf3' }};
+  --sj-dark:     {{ section.settings.dark_color     | default: '#3d2510' }};
+  --sj-text:     #2c1a0e;
+  --sj-text2:    #7a5c3a;
+  --sj-dim:      #9a7c5a;
+  --sj-border:   rgba(60,35,15,0.12);
+  --sj-border-d: rgba(245,237,224,0.12);   /* border auf dunklem Bg */
+
+  background: var(--sj-bg);
   padding: 64px 0;
   max-width: 1280px;
   margin: 0 auto;
+  font-family: inherit;
 }
-@media(min-width:768px){#sj-{{ section.id }}{padding:96px 0}}
-@media(min-width:1024px){#sj-{{ section.id }}{padding:128px 0}}
+@media(min-width:768px) { #sj-{{ section.id }} { padding:96px 0  } }
+@media(min-width:1024px){ #sj-{{ section.id }} { padding:128px 0 } }
 
-/* Glass Card */
-.sj-glass{background:rgba(34,27,20,.7);border:1px solid rgba(212,168,83,.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+/* ── Glass Card (hell) ─────────────── */
+.sj-glass {
+  background: var(--sj-card);
+  border: 1px solid var(--sj-border);
+  box-shadow: 0 2px 12px rgba(60,35,15,.06);
+}
 
-/* Hero */
-.sj-hero{position:relative;overflow:hidden;border-radius:0;margin:0 0 40px}
-@media(min-width:768px){.sj-hero{border-radius:16px;margin:0 44px 56px}}
-.sj-hero-img{width:100%;object-fit:cover;aspect-ratio:16/10;display:block}
-@media(min-width:768px){.sj-hero-img{aspect-ratio:21/9}}
-.sj-hero-or{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(25,19,16,.92) 0%,rgba(25,19,16,.5) 40%,transparent 70%)}
-.sj-hero-ob{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,#171210 0%,transparent 30%)}
-.sj-hero-content{position:absolute;inset:0;display:flex;align-items:center;padding:0 24px}
-@media(min-width:768px){.sj-hero-content{padding:0 40px}}
-@media(min-width:1024px){.sj-hero-content{padding:0 56px}}
-.sj-badge{display:inline-block;padding:4px 12px;border-radius:999px;background:rgba(212,168,83,.1);border:1px solid rgba(212,168,83,.2);color:#d4a853;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
-.sj-h2{font-size:26px;font-weight:700;line-height:1.08;color:#f0e4cc;margin:0 0 12px}
-@media(min-width:768px){.sj-h2{font-size:44px;margin-bottom:20px}}
-@media(min-width:1024px){.sj-h2{font-size:52px}}
-.sj-h2 em{font-style:italic;color:#d4a853}
-.sj-hero-p{color:#c4a87a;font-size:13px;line-height:1.7;max-width:448px;display:none}
-@media(min-width:640px){.sj-hero-p{display:block}}
-@media(min-width:768px){.sj-hero-p{font-size:15px}}
-.sj-mobile-sub{display:block;color:#c4a87a;font-size:14px;line-height:1.7;padding:0 20px;margin-bottom:32px}
-@media(min-width:640px){.sj-mobile-sub{display:none}}
+/* ══════════════════════════════════
+   HERO BANNER
+══════════════════════════════════ */
+.sj-hero { position:relative; overflow:hidden; border-radius:0; margin:0 0 40px }
+@media(min-width:768px){ .sj-hero { border-radius:16px; margin:0 44px 56px } }
+.sj-hero-img  { width:100%; object-fit:cover; aspect-ratio:16/10; display:block }
+@media(min-width:768px){ .sj-hero-img { aspect-ratio:21/9 } }
+.sj-hero-or   { position:absolute; inset:0; pointer-events:none;
+  background: linear-gradient(to right, rgba(61,37,16,.9) 0%, rgba(61,37,16,.5) 40%, transparent 70%) }
+.sj-hero-ob   { position:absolute; inset:0; pointer-events:none;
+  background: linear-gradient(to top, var(--sj-bg) 0%, transparent 30%) }
+.sj-hero-content { position:absolute; inset:0; display:flex; align-items:center; padding:0 24px }
+@media(min-width:768px) { .sj-hero-content { padding:0 40px } }
+@media(min-width:1024px){ .sj-hero-content { padding:0 56px } }
 
-/* Inner */
-.sj-inner{padding:0 20px}
-@media(min-width:768px){.sj-inner{padding:0 44px}}
+.sj-badge {
+  display:inline-block; padding:4px 12px; border-radius:999px;
+  background: rgba(196,98,45,.12); border:1px solid rgba(196,98,45,.3);
+  color: var(--sj-accent); font-size:10px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase; margin-bottom:12px
+}
+.sj-h2 { font-size:26px; font-weight:700; line-height:1.08; color:#f5ede0; margin:0 0 12px }
+@media(min-width:768px) { .sj-h2 { font-size:44px; margin-bottom:20px } }
+@media(min-width:1024px){ .sj-h2 { font-size:52px } }
+.sj-h2 em { font-style:italic; color:var(--sj-accent) }
+.sj-hero-p { color:rgba(245,237,224,.8); font-size:13px; line-height:1.7; max-width:448px; display:none }
+@media(min-width:640px){ .sj-hero-p { display:block } }
+@media(min-width:768px){ .sj-hero-p { font-size:15px } }
+.sj-mobile-sub { display:block; color:var(--sj-text2); font-size:14px; line-height:1.7; padding:0 20px; margin-bottom:32px }
+@media(min-width:640px){ .sj-mobile-sub { display:none } }
 
-/* Wochen */
-.sj-wochen{padding:16px;border-radius:12px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;margin-bottom:40px}
-@media(min-width:768px){.sj-wochen{padding:24px;gap:20px;margin-bottom:56px}}
-@media(min-width:1024px){.sj-wochen{padding:28px;gap:32px}}
-.sj-wi{text-align:center}
-.sj-wi-dots{display:flex;justify-content:center;gap:6px;margin-bottom:8px}
-.sj-wi-dot{width:10px;height:10px;border-radius:50%}
-.sj-wi-lbl{color:#f0e4cc;font-size:12px;font-weight:500}
-.sj-wi-sub{color:#7a6448;font-size:11px;margin-top:2px}
-.sj-wi-tot{font-size:24px;font-weight:700;color:#d4a853}
-.sj-wi-tot-l{font-size:11px;font-weight:500;color:#d4a853;margin-top:2px}
-.sj-wi-tot-s{font-size:10px;color:rgba(212,168,83,.5)}
-.sj-divl{display:none;width:1px;height:48px;background:linear-gradient(to bottom,transparent,rgba(255,220,140,.1),transparent)}
-@media(min-width:768px){.sj-divl{display:block}}
+/* ══════════════════════════════════
+   INNER WRAPPER
+══════════════════════════════════ */
+.sj-inner { padding:0 20px }
+@media(min-width:768px){ .sj-inner { padding:0 44px } }
 
-/* Category Divider */
-.sj-catdiv{display:flex;align-items:center;gap:20px;margin:40px 0}
-.sj-catline{flex:1;height:1px}
-.sj-catinner{display:flex;align-items:center;gap:10px}
-.sj-catdot{width:6px;height:6px;border-radius:50%}
-.sj-cattxt{font-size:11px;letter-spacing:.05em;font-weight:500}
+/* ══════════════════════════════════
+   WOCHEN BANNER
+══════════════════════════════════ */
+.sj-wochen { padding:16px; border-radius:12px; display:flex; flex-wrap:wrap;
+  align-items:center; justify-content:center; gap:16px; margin-bottom:40px }
+@media(min-width:768px) { .sj-wochen { padding:24px; gap:20px; margin-bottom:56px } }
+@media(min-width:1024px){ .sj-wochen { padding:28px; gap:32px } }
+.sj-wi { text-align:center }
+.sj-wi-dots { display:flex; justify-content:center; gap:6px; margin-bottom:8px }
+.sj-wi-dot  { width:10px; height:10px; border-radius:50% }
+.sj-wi-lbl  { color:var(--sj-text); font-size:12px; font-weight:600 }
+.sj-wi-sub  { color:var(--sj-dim); font-size:11px; margin-top:2px }
+.sj-wi-tot  { font-size:24px; font-weight:700; color:var(--sj-accent) }
+.sj-wi-tot-l{ font-size:11px; font-weight:500; color:var(--sj-accent); margin-top:2px }
+.sj-wi-tot-s{ font-size:10px; color:rgba(196,98,45,.5) }
+.sj-divl { display:none; width:1px; height:48px;
+  background: linear-gradient(to bottom, transparent, rgba(60,35,15,.15), transparent) }
+@media(min-width:768px){ .sj-divl { display:block } }
 
-/* Card */
-.sj-card{border-radius:16px;margin-bottom:12px;overflow:hidden}
-.sj-card-hdr{width:100%;padding:16px 20px;display:flex;align-items:center;gap:12px;text-align:left;background:transparent;border:none;cursor:pointer;transition:background .3s;color:inherit}
-@media(min-width:768px){.sj-card-hdr{padding:20px 24px;gap:16px}}
-.sj-card-hdr:hover{background:rgba(42,34,24,.3)}
-.sj-card-hdr:focus{outline:none}
-.sj-card-img{width:56px;height:56px;border-radius:12px;object-fit:cover;flex-shrink:0;box-shadow:0 4px 12px rgba(0,0,0,.4)}
-@media(min-width:1024px){.sj-card-img{width:64px;height:64px}}
-.sj-cinfo{flex:1;min-width:0}
-.sj-ckat{color:#7a6448;font-size:10px;letter-spacing:.05em;margin-bottom:2px}
-@media(min-width:768px){.sj-ckat{font-size:11px}}
-.sj-cname{color:#f0e4cc;font-size:17px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-@media(min-width:768px){.sj-cname{font-size:18px}}
-@media(min-width:1024px){.sj-cname{font-size:20px}}
-.sj-csub{color:#7a6448;font-size:13px;font-weight:400}
-.sj-ctags{display:none;gap:8px}
-@media(min-width:768px){.sj-ctags{display:flex}}
-.sj-ctag{padding:4px 10px;border-radius:999px;font-size:11px;border:1px solid rgba(212,168,83,.12);color:#7a6448}
-.sj-cpreis{color:#d4a853;font-size:15px;font-weight:600;flex-shrink:0}
-@media(min-width:768px){.sj-cpreis{font-size:14px}}
-.sj-ctoggle{color:rgba(212,168,83,.7);font-size:20px;line-height:1;flex-shrink:0;transition:transform .3s;font-weight:300;background:none;border:none;cursor:pointer}
+/* ══════════════════════════════════
+   CATEGORY DIVIDER
+══════════════════════════════════ */
+.sj-catdiv { display:flex; align-items:center; gap:20px; margin:40px 0 }
+.sj-catline { flex:1; height:1px }
+.sj-catinner{ display:flex; align-items:center; gap:10px }
+.sj-catdot  { width:6px; height:6px; border-radius:50% }
+.sj-cattxt  { font-size:11px; letter-spacing:.05em; font-weight:600 }
 
-/* Card Body */
-.sj-cbody{overflow:hidden;max-height:0;transition:max-height .5s ease-in-out}
-.sj-cbody.sj-open{border-top:1px solid rgba(212,168,83,.08)}
+/* ══════════════════════════════════
+   SORTE CARD – KOLLABIERT
+══════════════════════════════════ */
+.sj-card { border-radius:14px; margin-bottom:10px; overflow:hidden }
 
-/* Expanded: Hero */
-.sj-xhero{position:relative;overflow:hidden}
-.sj-xhero-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(42,34,24,.4),rgba(25,19,16,.8))}
-.sj-xgrid{position:relative;z-index:1;display:grid;grid-template-columns:1fr}
-@media(min-width:768px){.sj-xgrid{grid-template-columns:1fr 1fr}}
-.sj-ximg-wrap{position:relative;display:flex;align-items:center;justify-content:center;padding:32px 0}
-@media(min-width:768px){.sj-ximg-wrap{padding:48px 0}}
-@media(min-width:1024px){.sj-ximg-wrap{padding:64px 0}}
-.sj-xglow{position:absolute;width:192px;height:192px;border-radius:50%;filter:blur(80px);opacity:.2;background:#d4a853}
-@media(min-width:768px){.sj-xglow{width:288px;height:288px}}
-.sj-xpimg{position:relative;z-index:2;width:112px;height:112px;object-fit:contain;filter:drop-shadow(0 25px 50px rgba(0,0,0,.5))}
-@media(min-width:768px){.sj-xpimg{width:160px;height:160px}}
-@media(min-width:1024px){.sj-xpimg{width:224px;height:224px}}
-.sj-orbit{position:absolute;z-index:3;width:160px;height:160px;pointer-events:none}
-@media(min-width:768px){.sj-orbit{width:224px;height:224px}}
-@media(min-width:1024px){.sj-orbit{width:288px;height:288px}}
-.sj-orbit-dot{position:absolute;display:none}
-@media(min-width:768px){.sj-orbit-dot{display:block}}
-.sj-orbit-star{width:20px;height:20px;border-radius:50%;background:#d4a853;box-shadow:0 0 12px rgba(212,168,83,.5),0 0 24px rgba(212,168,83,.2);display:flex;align-items:center;justify-content:center;font-size:9px;color:#171210}
-@media(min-width:768px){.sj-orbit-star{width:24px;height:24px;font-size:10px}}
-.sj-orbit-lbl{position:absolute;white-space:nowrap;padding:4px 10px;border-radius:999px;font-size:9px;font-weight:500;background:rgba(42,34,24,.8);border:1px solid rgba(212,168,83,.15);color:#f0e4cc;backdrop-filter:blur(4px)}
-@media(min-width:768px){.sj-orbit-lbl{font-size:10px}}
-.sj-xdesc{display:flex;flex-direction:column;justify-content:center;padding:24px 20px}
-@media(min-width:768px){.sj-xdesc{padding:48px 40px}}
-.sj-xkat{color:#d4a853;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
-@media(min-width:768px){.sj-xkat{font-size:11px;margin-bottom:12px}}
-.sj-xh3{color:#f0e4cc;font-size:28px;font-weight:700;margin:0 0 4px}
-@media(min-width:768px){.sj-xh3{font-size:40px}}
-@media(min-width:1024px){.sj-xh3{font-size:48px}}
-.sj-xsubname{color:rgba(212,168,83,.8);font-size:16px;margin-bottom:16px}
-@media(min-width:768px){.sj-xsubname{font-size:20px;margin-bottom:20px}}
-.sj-xbesch{color:#c4a87a;font-size:13px;line-height:1.7;margin-bottom:16px;max-width:448px}
-@media(min-width:768px){.sj-xbesch{font-size:15px;margin-bottom:24px}}
-.sj-badges{display:flex;gap:12px}
-.sj-nbadge{padding:10px 16px;border-radius:12px;background:rgba(212,168,83,.06);border:1px solid rgba(212,168,83,.12)}
-.sj-cbadge{padding:10px 16px;border-radius:12px;background:rgba(52,168,52,.06);border:1px solid rgba(52,168,52,.12)}
-.sj-nval{color:#d4a853;font-size:18px;font-weight:700}
-.sj-cval{color:#5db85d;font-size:18px;font-weight:700}
-.sj-blbl{color:#7a6448;font-size:11px;margin-left:8px}
+.sj-card-hdr {
+  width:100%; padding:14px 18px; display:flex; align-items:center; gap:14px;
+  text-align:left; background:transparent; border:none; cursor:pointer;
+  transition:background .25s; color:inherit
+}
+@media(min-width:768px){ .sj-card-hdr { padding:18px 22px; gap:18px } }
+.sj-card-hdr:hover  { background:rgba(60,35,15,.04) }
+.sj-card-hdr:focus  { outline:none }
 
-/* Zusammensetzung */
-.sj-zsm{padding:24px 16px;border-top:1px solid rgba(212,168,83,.08)}
-@media(min-width:768px){.sj-zsm{padding:32px}}
-.sj-zsm-ttl{text-align:center;margin-bottom:16px}
-@media(min-width:768px){.sj-zsm-ttl{margin-bottom:24px}}
-.sj-zsm-h4{color:#f0e4cc;font-size:22px;font-weight:700}
-@media(min-width:768px){.sj-zsm-h4{font-size:28px}}
-@media(min-width:1024px){.sj-zsm-h4{font-size:32px}}
-.sj-zsm-hint{color:#7a6448;font-size:11px;margin-top:4px}
-.sj-zsm-layout{display:flex;flex-direction:column;align-items:center;gap:16px}
-@media(min-width:768px){.sj-zsm-layout{flex-direction:row;gap:24px}}
-.sj-fleisch-box{flex:1;width:100%;order:2;border-radius:16px;padding:16px;background:rgba(180,80,70,.04);border:1px solid rgba(180,80,70,.1)}
-@media(min-width:768px){.sj-fleisch-box{order:1}}
-.sj-pflanz-box{flex:1;width:100%;order:3}
-.sj-pflanz-inner{border-radius:16px;padding:16px;background:rgba(52,168,52,.04);border:1px solid rgba(52,168,52,.1);margin-bottom:12px}
-.sj-extra-inner{border-radius:16px;padding:16px;background:rgba(42,34,24,.25);border:1px solid rgba(212,168,83,.08)}
-.sj-box-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:0 4px}
-.sj-box-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.sj-irow{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:8px;transition:background .3s;cursor:default}
-.sj-irow:hover{background:rgba(212,168,83,.06)}
-.sj-iicon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px}
-.sj-iname{color:#f0e4cc;font-size:12px;font-weight:600;line-height:1.2}
-.sj-ihigh{color:rgba(196,168,122,.4);font-size:9px}
-.sj-ipct{color:#d4a853;font-size:14px;font-weight:700;margin-left:auto;flex-shrink:0}
+/* ── Produkt-Thumbnail ───────────── */
+.sj-card-img-wrap {
+  width:60px; height:60px; border-radius:12px; overflow:hidden; flex-shrink:0;
+  background: var(--sj-bg);
+  box-shadow: 0 2px 8px rgba(60,35,15,.15);
+  display:flex; align-items:center; justify-content:center
+}
+@media(min-width:1024px){ .sj-card-img-wrap { width:68px; height:68px } }
+.sj-card-img {
+  /* FIX: contain zeigt die volle Dose ohne Clipping */
+  width:100%; height:100%; object-fit:contain; padding:4px
+}
+
+.sj-cinfo  { flex:1; min-width:0 }
+.sj-ckat   { color:var(--sj-dim); font-size:10px; letter-spacing:.05em; margin-bottom:2px }
+@media(min-width:768px){ .sj-ckat { font-size:11px } }
+.sj-cname  { color:var(--sj-text); font-size:17px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+@media(min-width:768px) { .sj-cname { font-size:18px } }
+@media(min-width:1024px){ .sj-cname { font-size:20px } }
+.sj-csub   { color:var(--sj-text2); font-size:13px; font-weight:400 }
+@media(min-width:768px){ .sj-csub { font-size:14px } }
+.sj-ctags  { display:none; gap:8px }
+@media(min-width:768px){ .sj-ctags { display:flex } }
+.sj-ctag   { padding:4px 10px; border-radius:999px; font-size:11px;
+  border:1px solid var(--sj-border); color:var(--sj-text2) }
+.sj-cpreis { color:var(--sj-accent); font-size:14px; font-weight:700; flex-shrink:0 }
+.sj-ctoggle{ color:var(--sj-accent); font-size:22px; line-height:1; flex-shrink:0;
+  transition:transform .3s; font-weight:300; background:none; border:none; cursor:pointer }
+
+/* ══════════════════════════════════
+   CARD BODY (expandiert)
+══════════════════════════════════ */
+.sj-cbody { overflow:hidden; max-height:0; transition:max-height .5s ease-in-out }
+.sj-cbody.sj-open { border-top:1px solid var(--sj-border) }
+
+/* ── EXPANDED: Hero ─────────────── */
+.sj-xhero    { position:relative; overflow:hidden; background:var(--sj-dark) }
+.sj-xhero-bg { position:absolute; inset:0;
+  background:linear-gradient(135deg,rgba(77,45,20,.5),var(--sj-dark)) }
+.sj-xgrid    { position:relative; z-index:1; display:grid; grid-template-columns:1fr }
+@media(min-width:768px){ .sj-xgrid { grid-template-columns:1fr 1fr } }
+
+.sj-ximg-wrap {
+  position:relative; display:flex; align-items:center; justify-content:center;
+  /* FIX: overflow visible damit Orbit-Dots nicht geclippt werden */
+  overflow:visible; padding:32px 0
+}
+@media(min-width:768px) { .sj-ximg-wrap { padding:48px 0 } }
+@media(min-width:1024px){ .sj-ximg-wrap { padding:64px 0 } }
+.sj-xglow { position:absolute; width:200px; height:200px; border-radius:50%;
+  filter:blur(80px); opacity:.18; background:var(--sj-accent) }
+@media(min-width:768px){ .sj-xglow { width:300px; height:300px } }
+.sj-xpimg { position:relative; z-index:2; width:110px; height:110px;
+  object-fit:contain; filter:drop-shadow(0 25px 50px rgba(0,0,0,.5)) }
+@media(min-width:768px) { .sj-xpimg { width:160px; height:160px } }
+@media(min-width:1024px){ .sj-xpimg { width:220px; height:220px } }
+
+/* Orbit – overflow:visible damit Labels nicht geclippt */
+.sj-orbit { position:absolute; z-index:3;
+  width:160px; height:160px; pointer-events:none; overflow:visible }
+@media(min-width:768px) { .sj-orbit { width:224px; height:224px } }
+@media(min-width:1024px){ .sj-orbit { width:288px; height:288px } }
+.sj-orbit-dot { position:absolute; display:none }
+@media(min-width:768px){ .sj-orbit-dot { display:block } }
+.sj-orbit-star {
+  width:22px; height:22px; border-radius:50%; background:var(--sj-accent);
+  box-shadow:0 0 12px rgba(196,98,45,.5),0 0 24px rgba(196,98,45,.2);
+  display:flex; align-items:center; justify-content:center; font-size:10px; color:#fff
+}
+.sj-orbit-lbl {
+  position:absolute; white-space:nowrap; padding:5px 11px; border-radius:999px;
+  font-size:10px; font-weight:600; backdrop-filter:blur(6px);
+  background:rgba(61,37,16,.85); border:1px solid rgba(196,98,45,.25);
+  color:#f5ede0; pointer-events:none
+}
+
+.sj-xdesc { display:flex; flex-direction:column; justify-content:center; padding:24px 20px }
+@media(min-width:768px){ .sj-xdesc { padding:48px 40px } }
+.sj-xkat     { color:var(--sj-accent); font-size:10px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase; margin-bottom:10px }
+.sj-xh3      { color:#f5ede0; font-size:30px; font-weight:700; margin:0 0 4px }
+@media(min-width:768px) { .sj-xh3 { font-size:40px } }
+@media(min-width:1024px){ .sj-xh3 { font-size:50px } }
+.sj-xsubname { color:rgba(245,237,224,.7); font-size:16px; margin-bottom:16px }
+@media(min-width:768px){ .sj-xsubname { font-size:20px; margin-bottom:20px } }
+.sj-xbesch   { color:rgba(245,237,224,.8); font-size:13px; line-height:1.75;
+  margin-bottom:20px; max-width:448px }
+@media(min-width:768px){ .sj-xbesch { font-size:15px } }
+.sj-badges   { display:flex; gap:12px; flex-wrap:wrap }
+.sj-nbadge   { padding:10px 16px; border-radius:12px;
+  background:rgba(196,98,45,.08); border:1px solid rgba(196,98,45,.2) }
+.sj-cbadge   { padding:10px 16px; border-radius:12px;
+  background:rgba(80,160,80,.08); border:1px solid rgba(80,160,80,.2) }
+.sj-nval { color:var(--sj-accent); font-size:18px; font-weight:700 }
+.sj-cval { color:#6db86d; font-size:18px; font-weight:700 }
+.sj-blbl { color:rgba(245,237,224,.5); font-size:11px; margin-left:8px }
+
+/* ── EXPANDED: Zusammensetzung ────── */
+.sj-zsm { padding:24px 16px; border-top:1px solid var(--sj-border-d);
+  background:var(--sj-dark) }
+@media(min-width:768px){ .sj-zsm { padding:32px 40px } }
+.sj-zsm-ttl { text-align:center; margin-bottom:16px }
+@media(min-width:768px){ .sj-zsm-ttl { margin-bottom:24px } }
+.sj-zsm-h4  { color:#f5ede0; font-size:22px; font-weight:700 }
+@media(min-width:768px) { .sj-zsm-h4 { font-size:28px } }
+@media(min-width:1024px){ .sj-zsm-h4 { font-size:32px } }
+.sj-zsm-hint{ color:rgba(245,237,224,.4); font-size:11px; margin-top:4px }
+
+.sj-zsm-layout { display:flex; flex-direction:column; align-items:center; gap:16px }
+@media(min-width:768px){ .sj-zsm-layout { flex-direction:row; gap:24px } }
+
+.sj-fleisch-box {
+  flex:1; width:100%; order:2; border-radius:16px; padding:16px;
+  background:rgba(196,98,45,.05); border:1px solid rgba(196,98,45,.15)
+}
+@media(min-width:768px){ .sj-fleisch-box { order:1 } }
+.sj-pflanz-box   { flex:1; width:100%; order:3 }
+.sj-pflanz-inner { border-radius:16px; padding:16px; margin-bottom:12px;
+  background:rgba(80,160,80,.05); border:1px solid rgba(80,160,80,.15) }
+.sj-extra-inner  { border-radius:16px; padding:16px;
+  background:rgba(255,255,255,.03); border:1px solid var(--sj-border-d) }
+.sj-box-hdr { display:flex; align-items:center; gap:8px; margin-bottom:8px; padding:0 4px }
+.sj-box-lbl { font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase }
+
+.sj-irow { display:flex; align-items:center; gap:8px; padding:6px 10px;
+  border-radius:8px; transition:background .25s; cursor:default }
+.sj-irow:hover { background:rgba(196,98,45,.07) }
+.sj-iicon  { width:28px; height:28px; border-radius:6px; display:flex;
+  align-items:center; justify-content:center; flex-shrink:0; font-size:12px }
+.sj-iname  { color:#f5ede0; font-size:12px; font-weight:600; line-height:1.2 }
+.sj-ihigh  { color:rgba(245,237,224,.35); font-size:9px }
+.sj-ipct   { color:var(--sj-accent); font-size:14px; font-weight:700;
+  margin-left:auto; flex-shrink:0 }
 
 /* Ring */
-.sj-ring-wrap{position:relative;order:1;flex-shrink:0;width:176px;height:176px;display:flex;align-items:center;justify-content:center}
-@media(min-width:768px){.sj-ring-wrap{order:2;width:224px;height:224px}}
-@media(min-width:1024px){.sj-ring-wrap{width:288px;height:288px}}
-.sj-rglow{position:absolute;width:100%;height:100%;border-radius:50%;filter:blur(50px);opacity:.1;background:#d4a853}
-.sj-rsvg{position:absolute;inset:0;width:100%;height:100%}
-.sj-rglass{position:relative;z-index:2;width:96px;height:auto;filter:drop-shadow(0 12px 35px rgba(0,0,0,.4))}
-@media(min-width:768px){.sj-rglass{width:128px}}
-@media(min-width:1024px){.sj-rglass{width:176px}}
-.sj-rtip{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);z-index:10;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap;color:white;display:none;pointer-events:none}
+.sj-ring-wrap {
+  position:relative; order:1; flex-shrink:0;
+  width:176px; height:176px; display:flex; align-items:center; justify-content:center;
+  /* FIX: overflow:visible damit Tooltip nicht geclipt */
+  overflow:visible
+}
+@media(min-width:768px) { .sj-ring-wrap { order:2; width:224px; height:224px } }
+@media(min-width:1024px){ .sj-ring-wrap { width:288px; height:288px } }
+.sj-rglow  { position:absolute; width:100%; height:100%; border-radius:50%;
+  filter:blur(50px); opacity:.12; background:var(--sj-accent) }
+.sj-rsvg   { position:absolute; inset:0; width:100%; height:100% }
+.sj-rglass { position:relative; z-index:2; width:96px; height:auto;
+  filter:drop-shadow(0 12px 35px rgba(0,0,0,.4)) }
+@media(min-width:768px) { .sj-rglass { width:128px } }
+@media(min-width:1024px){ .sj-rglass { width:176px } }
+.sj-rtip {
+  position:absolute; bottom:-28px; left:50%; transform:translateX(-50%);
+  z-index:20; padding:5px 14px; border-radius:999px; font-size:11px;
+  font-weight:700; white-space:nowrap; color:#fff; display:none; pointer-events:none
+}
 
-/* Deklaration */
-.sj-dekl{margin:0 16px 24px;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,rgba(42,34,24,.6),rgba(34,27,20,.2));border:1px solid rgba(212,168,83,.18);position:relative}
-@media(min-width:768px){.sj-dekl{margin:0 24px 40px}}
-@media(min-width:1024px){.sj-dekl{margin:0 40px 40px}}
-.sj-dekl-bar{position:absolute;top:0;left:0;width:6px;height:100%;background:linear-gradient(to bottom,#d4a853,rgba(212,168,83,.4))}
-.sj-dekl-body{padding:16px 24px 16px 20px}
-@media(min-width:768px){.sj-dekl-body{padding:24px 32px 24px 28px}}
-@media(min-width:1024px){.sj-dekl-body{padding:32px 40px 32px 36px}}
-.sj-dekl-lbl{color:#d4a853;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;margin-bottom:8px}
-.sj-dekl-txt{color:#f0e4cc;font-size:13px;line-height:1.8;font-weight:500}
-@media(min-width:768px){.sj-dekl-txt{font-size:14px;line-height:1.9}}
+/* ── EXPANDED: Deklaration ──────── */
+.sj-dekl {
+  margin:0 16px 24px; border-radius:16px; overflow:hidden; position:relative;
+  background:linear-gradient(135deg,rgba(77,45,20,.7),rgba(61,37,16,.4));
+  border:1px solid rgba(196,98,45,.25)
+}
+@media(min-width:768px) { .sj-dekl { margin:0 24px 40px } }
+@media(min-width:1024px){ .sj-dekl { margin:0 40px  40px } }
+.sj-dekl-bar  { position:absolute; top:0; left:0; width:5px; height:100%;
+  background:linear-gradient(to bottom,var(--sj-accent),rgba(196,98,45,.3)) }
+.sj-dekl-body { padding:16px 24px 16px 20px }
+@media(min-width:768px) { .sj-dekl-body { padding:24px 32px 24px 28px } }
+@media(min-width:1024px){ .sj-dekl-body { padding:32px 40px 32px 36px } }
+.sj-dekl-lbl  { color:var(--sj-accent); font-size:10px; font-weight:700;
+  letter-spacing:.25em; text-transform:uppercase; margin-bottom:8px }
+.sj-dekl-txt  { color:#f5ede0; font-size:13px; line-height:1.85; font-weight:500 }
+@media(min-width:768px){ .sj-dekl-txt { font-size:14px } }
 
-/* Bottom grid */
-.sj-botgrid{display:grid;grid-template-columns:1fr;border-top:1px solid rgba(212,168,83,.08)}
-@media(min-width:768px){.sj-botgrid{grid-template-columns:1fr 1fr}}
-.sj-anal{padding:24px 16px;border-bottom:1px solid rgba(212,168,83,.08)}
-@media(min-width:768px){.sj-anal{padding:40px;border-bottom:none;border-right:1px solid rgba(212,168,83,.08)}}
-.sj-bens{padding:24px 16px}
-@media(min-width:768px){.sj-bens{padding:40px}}
-.sj-sec-h4{color:#f0e4cc;font-size:18px;font-weight:700;margin-bottom:4px}
-@media(min-width:768px){.sj-sec-h4{font-size:22px}}
-.sj-sec-hint{color:#7a6448;font-size:11px;margin-bottom:16px}
-@media(min-width:768px){.sj-sec-hint{margin-bottom:24px}}
-.sj-sec-hint-a{color:#d4a853;font-weight:600}
+/* ── EXPANDED: Nährwerte + Benefits */
+.sj-botgrid {
+  display:grid; grid-template-columns:1fr;
+  border-top:1px solid var(--sj-border-d); background:var(--sj-dark)
+}
+@media(min-width:768px){ .sj-botgrid { grid-template-columns:1fr 1fr } }
+.sj-anal { padding:24px 16px; border-bottom:1px solid var(--sj-border-d) }
+@media(min-width:768px){
+  .sj-anal { padding:40px; border-bottom:none; border-right:1px solid var(--sj-border-d) }
+}
+.sj-bens { padding:24px 16px }
+@media(min-width:768px){ .sj-bens { padding:40px } }
+.sj-sec-h4  { color:#f5ede0; font-size:18px; font-weight:700; margin-bottom:4px }
+@media(min-width:768px){ .sj-sec-h4 { font-size:22px } }
+.sj-sec-hint{ color:rgba(245,237,224,.4); font-size:11px; margin-bottom:16px }
+@media(min-width:768px){ .sj-sec-hint { margin-bottom:24px } }
+.sj-sec-hint-a { color:var(--sj-accent); font-weight:600 }
 
 /* Analytisch Row */
-.sj-arow{border-bottom:1px solid rgba(212,168,83,.08)}
-.sj-arow:last-child{border-bottom:none}
-.sj-atrig{width:100%;display:flex;align-items:center;justify-content:space-between;padding:12px 4px;background:none;border:none;cursor:pointer;text-align:left;border-radius:4px;transition:background .2s;color:inherit}
-.sj-atrig:hover{background:rgba(42,34,24,.2)}
-.sj-albl{color:#c4a87a;font-size:13px}
-.sj-aright{display:flex;align-items:center;gap:10px}
-.sj-aval{color:#f0e4cc;font-size:13px;font-weight:500}
-.sj-aarr{color:rgba(122,100,72,.4);font-size:9px;transition:transform .3s;display:inline-block}
-.sj-aarr.sj-open{transform:rotate(180deg)}
-.sj-adet{overflow:hidden;max-height:0;opacity:0;transition:max-height .35s cubic-bezier(.4,0,.2,1),opacity .25s ease}
-.sj-adet.sj-open{opacity:1}
-.sj-atxt{color:#7a6448;font-size:12px;line-height:1.6;padding-bottom:14px;padding-left:4px}
-.sj-nosynth{color:rgba(122,100,72,.5);font-size:10px;margin-top:16px;font-style:italic}
+.sj-arow { border-bottom:1px solid var(--sj-border-d) }
+.sj-arow:last-child { border-bottom:none }
+.sj-atrig {
+  width:100%; display:flex; align-items:center; justify-content:space-between;
+  padding:12px 4px; background:none; border:none; cursor:pointer;
+  text-align:left; border-radius:4px; transition:background .2s; color:inherit
+}
+.sj-atrig:hover { background:rgba(196,98,45,.06) }
+.sj-albl   { color:rgba(245,237,224,.7); font-size:13px }
+.sj-aright { display:flex; align-items:center; gap:10px }
+.sj-aval   { color:#f5ede0; font-size:13px; font-weight:600 }
+.sj-aarr   { color:rgba(245,237,224,.3); font-size:9px;
+  transition:transform .3s; display:inline-block }
+.sj-aarr.sj-open { transform:rotate(180deg) }
+.sj-adet   { overflow:hidden; max-height:0; opacity:0;
+  transition:max-height .35s cubic-bezier(.4,0,.2,1),opacity .25s ease }
+.sj-adet.sj-open { opacity:1 }
+.sj-atxt   { color:rgba(245,237,224,.5); font-size:12px; line-height:1.6;
+  padding-bottom:14px; padding-left:4px }
+.sj-nosynth{ color:rgba(245,237,224,.3); font-size:10px; margin-top:16px; font-style:italic }
 
 /* Benefits */
-.sj-bengrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}
-@media(min-width:768px){.sj-bengrid{margin-bottom:32px}}
-.sj-benitem{display:flex;align-items:flex-start;gap:8px;padding:10px 12px;border-radius:12px;background:rgba(212,168,83,.04);border:1px solid rgba(212,168,83,.1)}
-.sj-benstar{color:#d4a853;font-size:12px;margin-top:1px}
-.sj-bentxt{color:#f0e4cc;font-size:12px;font-weight:500;line-height:1.4}
-.sj-wusstest{border-radius:16px;padding:20px;margin-bottom:16px;background:linear-gradient(135deg,rgba(212,168,83,.06),rgba(212,168,83,.02));border:1px solid rgba(212,168,83,.12)}
-.sj-wuss-ttl{color:#d4a853;font-size:14px;font-weight:700;margin-bottom:8px}
-.sj-wuss-txt{color:#c4a87a;font-size:13px;line-height:1.6}
-.sj-empt{padding:16px;border-radius:12px;background:rgba(52,168,52,.06);border:1px solid rgba(52,168,52,.12)}
-.sj-empt-txt{color:#5db85d;font-size:12px;font-weight:700}
+.sj-bengrid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:24px }
+@media(min-width:768px){ .sj-bengrid { margin-bottom:32px } }
+.sj-benitem {
+  display:flex; align-items:flex-start; gap:8px; padding:10px 12px;
+  border-radius:12px; background:rgba(196,98,45,.06); border:1px solid rgba(196,98,45,.14)
+}
+.sj-benstar{ color:var(--sj-accent); font-size:12px; margin-top:1px; flex-shrink:0 }
+.sj-bentxt { color:#f5ede0; font-size:12px; font-weight:500; line-height:1.4 }
 
-/* Placeholder image */
-.sj-img-ph{background:rgba(42,34,24,.6);display:flex;align-items:center;justify-content:center;color:#7a6448;font-size:24px}
+.sj-wusstest {
+  border-radius:14px; padding:20px; margin-bottom:16px;
+  background:rgba(196,98,45,.06); border:1px solid rgba(196,98,45,.15)
+}
+.sj-wuss-ttl { color:var(--sj-accent); font-size:14px; font-weight:700; margin-bottom:8px }
+.sj-wuss-txt { color:rgba(245,237,224,.75); font-size:13px; line-height:1.65 }
+.sj-empt     { padding:14px 18px; border-radius:12px;
+  background:rgba(80,160,80,.07); border:1px solid rgba(80,160,80,.2) }
+.sj-empt-txt { color:#6db86d; font-size:12px; font-weight:700 }
+
+/* Placeholder */
+.sj-img-ph {
+  background:rgba(196,98,45,.08); display:flex;
+  align-items:center; justify-content:center; color:var(--sj-dim); font-size:24px
+}
 </style>
 
-<section id="sj-{{ section.id }}">
+{%- assign sid = section.id -%}
+<section id="sj-{{ sid }}">
 
-  {%- comment -%} Hero Banner {%- endcomment -%}
+  {%- comment -%} ═══ HERO BANNER ═══ {%- endcomment -%}
   <div class="sj-hero">
     {%- if section.settings.hero_image != blank -%}
       <img
         src="{{ section.settings.hero_image | image_url: width: 1600 }}"
         alt="{{ section.settings.hero_image.alt | escape | default: 'Alle Sorten im Überblick' }}"
-        class="sj-hero-img"
-        loading="lazy"
+        class="sj-hero-img" loading="lazy"
         width="{{ section.settings.hero_image.width }}"
         height="{{ section.settings.hero_image.height }}"
       >
     {%- else -%}
-      <div class="sj-hero-img sj-img-ph" style="min-height:300px">🐕</div>
+      <div class="sj-hero-img sj-img-ph" style="min-height:280px">🐕</div>
     {%- endif -%}
     <div class="sj-hero-or"></div>
     <div class="sj-hero-ob"></div>
     <div class="sj-hero-content">
-      <div style="max-width:512px">
+      <div style="max-width:520px">
         <span class="sj-badge">{{ section.settings.badge_text | default: '✦ 7 SORTEN' }}</span>
         <h2 class="sj-h2">
           {{ section.settings.headline | default: 'Die perfekte Woche' }}<br>
@@ -255,13 +388,13 @@
 
   <div class="sj-inner">
 
-    {%- comment -%} Wochen Banner {%- endcomment -%}
+    {%- comment -%} ═══ WOCHEN BANNER ═══ {%- endcomment -%}
     <div class="sj-wochen sj-glass">
       <div class="sj-wi">
         <div class="sj-wi-dots">
-          <div class="sj-wi-dot" style="background:hsl(350 35% 52%)"></div>
-          <div class="sj-wi-dot" style="background:hsl(350 35% 52%)"></div>
-          <div class="sj-wi-dot" style="background:hsl(350 35% 52%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(350 50% 45%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(350 50% 45%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(350 50% 45%)"></div>
         </div>
         <p class="sj-wi-lbl">3× Rotes Fleisch</p>
         <p class="sj-wi-sub">Rind · Wild · Pferd · Lamm</p>
@@ -269,9 +402,9 @@
       <div class="sj-divl"></div>
       <div class="sj-wi">
         <div class="sj-wi-dots">
-          <div class="sj-wi-dot" style="background:hsl(38 55% 55%)"></div>
-          <div class="sj-wi-dot" style="background:hsl(38 55% 55%)"></div>
-          <div class="sj-wi-dot" style="background:hsl(38 55% 55%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(30 60% 55%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(30 60% 55%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(30 60% 55%)"></div>
         </div>
         <p class="sj-wi-lbl">3× Helles Fleisch</p>
         <p class="sj-wi-sub">Geflügel · Ente</p>
@@ -279,7 +412,7 @@
       <div class="sj-divl"></div>
       <div class="sj-wi">
         <div class="sj-wi-dots">
-          <div class="sj-wi-dot" style="background:hsl(207 45% 58%)"></div>
+          <div class="sj-wi-dot" style="background:hsl(207 45% 55%)"></div>
         </div>
         <p class="sj-wi-lbl">1× Fisch</p>
         <p class="sj-wi-sub">Lachs · Omega 3</p>
@@ -292,33 +425,89 @@
       </div>
     </div>
 
-    {%- comment -%} Rotes Fleisch {%- endcomment -%}
-    {%- assign has_rot = false -%}
-    {%- for block in section.blocks -%}{%- if block.settings.kategorie == 'rot' -%}{%- assign has_rot = true -%}{%- break -%}{%- endif -%}{%- endfor -%}
-    {%- if has_rot -%}
-    <div class="sj-catdiv">
-      <div class="sj-catline" style="background:linear-gradient(to right,transparent,rgba(180,80,70,.3),transparent)"></div>
-      <div class="sj-catinner">
-        <div class="sj-catdot" style="background:hsl(350 35% 52%)"></div>
-        <span class="sj-cattxt" style="color:hsl(350 35% 52%)">Rotes Fleisch · 3× pro Woche</span>
+    {%- comment -%} ═══ KATEGORIEN + KARTEN ═══ {%- endcomment -%}
+
+    {%- assign kat_slugs = 'rot,hell,fisch' | split: ',' -%}
+    {%- for kat_slug in kat_slugs -%}
+      {%- assign has_kat = false -%}
+      {%- for b in section.blocks -%}
+        {%- if b.settings.kategorie == kat_slug -%}{%- assign has_kat = true -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if has_kat == false -%}{%- continue -%}{%- endif -%}
+
+      {%- if kat_slug == 'rot' -%}
+        {%- assign kat_label = 'Rotes Fleisch · 3× pro Woche' -%}
+        {%- assign kat_color = 'hsl(350 50% 45%)' -%}
+        {%- assign kat_rgb   = '180,60,60' -%}
+      {%- elsif kat_slug == 'hell' -%}
+        {%- assign kat_label = 'Helles Fleisch · 3× pro Woche' -%}
+        {%- assign kat_color = 'hsl(30 60% 52%)' -%}
+        {%- assign kat_rgb   = '196,130,60' -%}
+      {%- else -%}
+        {%- assign kat_label = 'Fisch · 1× pro Woche' -%}
+        {%- assign kat_color = 'hsl(207 45% 55%)' -%}
+        {%- assign kat_rgb   = '60,120,180' -%}
+      {%- endif -%}
+
+      <div class="sj-catdiv">
+        <div class="sj-catline" style="background:linear-gradient(to right,transparent,rgba({{ kat_rgb }},.25),transparent)"></div>
+        <div class="sj-catinner">
+          <div class="sj-catdot" style="background:{{ kat_color }}"></div>
+          <span class="sj-cattxt" style="color:{{ kat_color }}">{{ kat_label }}</span>
+        </div>
+        <div class="sj-catline" style="background:linear-gradient(to right,transparent,rgba({{ kat_rgb }},.25),transparent)"></div>
       </div>
-      <div class="sj-catline" style="background:linear-gradient(to right,transparent,rgba(180,80,70,.3),transparent)"></div>
-    </div>
-    {%- for block in section.blocks -%}
-      {%- if block.settings.kategorie == 'rot' -%}
-        {%- assign sorte_id = block.settings.sorte_id -%}
-        {%- assign prod_img = block.settings.product_image | image_url: width: 600 -%}
-        {%- assign glass_img = block.settings.glass_image | image_url: width: 400 -%}
-        <div class="sj-card sj-glass" data-sorte-id="{{ sorte_id }}" data-product-image="{{ prod_img }}" data-glass-image="{{ glass_img }}" data-product-url="{{ block.settings.product_url }}" data-preis="{{ block.settings.preis }}" {{ block.shopify_attributes }}>
+
+      {%- for block in section.blocks -%}
+        {%- if block.settings.kategorie != kat_slug -%}{%- continue -%}{%- endif -%}
+
+        {%- assign sorte_id  = block.settings.sorte_id -%}
+        {%- assign prod_img  = '' -%}
+        {%- assign glass_img = '' -%}
+        {%- if block.settings.product_image != blank -%}
+          {%- assign prod_img = block.settings.product_image | image_url: width: 600 -%}
+        {%- endif -%}
+        {%- if block.settings.glass_image != blank -%}
+          {%- assign glass_img = block.settings.glass_image | image_url: width: 400 -%}
+        {%- endif -%}
+
+        {%- assign kat_display = 'Rotes Fleisch' -%}
+        {%- if kat_slug == 'hell' -%}{%- assign kat_display = 'Helles Fleisch' -%}{%- endif -%}
+        {%- if kat_slug == 'fisch' -%}{%- assign kat_display = 'Fisch' -%}{%- endif -%}
+
+        <div class="sj-card sj-glass"
+          data-sorte-id="{{ sorte_id }}"
+          data-product-image="{{ prod_img }}"
+          data-glass-image="{{ glass_img }}"
+          data-product-url="{{ block.settings.product_url }}"
+          data-preis="{{ block.settings.preis }}"
+          data-name="{{ block.settings.name }}"
+          data-subname="{{ block.settings.sub_name }}"
+          data-beschreibung="{{ block.settings.beschreibung | escape }}"
+          data-deklaration="{{ block.settings.deklaration | escape }}"
+          data-benefits="{{ block.settings.benefits | escape }}"
+          data-wusstest="{{ block.settings.wusstest | escape }}"
+          data-empfehlung="{{ block.settings.empfehlung }}"
+          {{ block.shopify_attributes }}
+        >
           <button class="sj-card-hdr" aria-expanded="false">
-            {%- if block.settings.product_image != blank -%}
-              <img src="{{ prod_img }}" alt="{{ block.settings.product_image.alt | escape | default: block.settings.sorte_id }}" class="sj-card-img" loading="lazy" width="64" height="64">
-            {%- else -%}
-              <div class="sj-card-img sj-img-ph">🥩</div>
-            {%- endif -%}
+            <div class="sj-card-img-wrap">
+              {%- if block.settings.product_image != blank -%}
+                <img
+                  src="{{ prod_img }}"
+                  alt="{{ block.settings.product_image.alt | escape | default: sorte_id }}"
+                  class="sj-card-img" loading="lazy" width="68" height="68"
+                >
+              {%- else -%}
+                <div class="sj-card-img sj-img-ph" style="width:100%;height:100%">🥩</div>
+              {%- endif -%}
+            </div>
             <div class="sj-cinfo">
-              <p class="sj-ckat" data-kat-label>Rotes Fleisch</p>
-              <p class="sj-cname"><span data-sorte-name>{{ block.settings.sorte_id | capitalize }}</span> <span class="sj-csub" data-sorte-subname></span></p>
+              <p class="sj-ckat">{{ kat_display }}</p>
+              <p class="sj-cname">
+                <span data-sorte-name>{{ block.settings.name | default: sorte_id | capitalize }}</span>
+                <span class="sj-csub" data-sorte-subname>{{ block.settings.sub_name }}</span>
+              </p>
             </div>
             <div class="sj-ctags" data-tags-wrap></div>
             <span class="sj-cpreis" data-preis-display>{{ block.settings.preis }}</span>
@@ -326,100 +515,24 @@
           </button>
           <div class="sj-cbody" aria-hidden="true"></div>
         </div>
-      {%- endif -%}
-    {%- endfor -%}
-    {%- endif -%}
 
-    {%- comment -%} Helles Fleisch {%- endcomment -%}
-    {%- assign has_hell = false -%}
-    {%- for block in section.blocks -%}{%- if block.settings.kategorie == 'hell' -%}{%- assign has_hell = true -%}{%- break -%}{%- endif -%}{%- endfor -%}
-    {%- if has_hell -%}
-    <div class="sj-catdiv">
-      <div class="sj-catline" style="background:linear-gradient(to right,transparent,rgba(200,150,60,.3),transparent)"></div>
-      <div class="sj-catinner">
-        <div class="sj-catdot" style="background:hsl(38 55% 55%)"></div>
-        <span class="sj-cattxt" style="color:hsl(38 55% 55%)">Helles Fleisch · 3× pro Woche</span>
-      </div>
-      <div class="sj-catline" style="background:linear-gradient(to right,transparent,rgba(200,150,60,.3),transparent)"></div>
-    </div>
-    {%- for block in section.blocks -%}
-      {%- if block.settings.kategorie == 'hell' -%}
-        {%- assign sorte_id = block.settings.sorte_id -%}
-        {%- assign prod_img = block.settings.product_image | image_url: width: 600 -%}
-        {%- assign glass_img = block.settings.glass_image | image_url: width: 400 -%}
-        <div class="sj-card sj-glass" data-sorte-id="{{ sorte_id }}" data-product-image="{{ prod_img }}" data-glass-image="{{ glass_img }}" data-product-url="{{ block.settings.product_url }}" data-preis="{{ block.settings.preis }}" {{ block.shopify_attributes }}>
-          <button class="sj-card-hdr" aria-expanded="false">
-            {%- if block.settings.product_image != blank -%}
-              <img src="{{ prod_img }}" alt="{{ block.settings.product_image.alt | escape | default: block.settings.sorte_id }}" class="sj-card-img" loading="lazy" width="64" height="64">
-            {%- else -%}
-              <div class="sj-card-img sj-img-ph">🍗</div>
-            {%- endif -%}
-            <div class="sj-cinfo">
-              <p class="sj-ckat" data-kat-label>Helles Fleisch</p>
-              <p class="sj-cname"><span data-sorte-name>{{ block.settings.sorte_id | capitalize }}</span> <span class="sj-csub" data-sorte-subname></span></p>
-            </div>
-            <div class="sj-ctags" data-tags-wrap></div>
-            <span class="sj-cpreis" data-preis-display>{{ block.settings.preis }}</span>
-            <span class="sj-ctoggle" aria-hidden="true">+</span>
-          </button>
-          <div class="sj-cbody" aria-hidden="true"></div>
-        </div>
-      {%- endif -%}
+      {%- endfor -%}
     {%- endfor -%}
-    {%- endif -%}
 
-    {%- comment -%} Fisch {%- endcomment -%}
-    {%- assign has_fisch = false -%}
-    {%- for block in section.blocks -%}{%- if block.settings.kategorie == 'fisch' -%}{%- assign has_fisch = true -%}{%- break -%}{%- endif -%}{%- endfor -%}
-    {%- if has_fisch -%}
-    <div class="sj-catdiv">
-      <div class="sj-catline" style="background:linear-gradient(to right,transparent,rgba(60,120,180,.3),transparent)"></div>
-      <div class="sj-catinner">
-        <div class="sj-catdot" style="background:hsl(207 45% 58%)"></div>
-        <span class="sj-cattxt" style="color:hsl(207 45% 58%)">Fisch · 1× pro Woche</span>
-      </div>
-      <div class="sj-catline" style="background:linear-gradient(to right,transparent,rgba(60,120,180,.3),transparent)"></div>
-    </div>
-    {%- for block in section.blocks -%}
-      {%- if block.settings.kategorie == 'fisch' -%}
-        {%- assign sorte_id = block.settings.sorte_id -%}
-        {%- assign prod_img = block.settings.product_image | image_url: width: 600 -%}
-        {%- assign glass_img = block.settings.glass_image | image_url: width: 400 -%}
-        <div class="sj-card sj-glass" data-sorte-id="{{ sorte_id }}" data-product-image="{{ prod_img }}" data-glass-image="{{ glass_img }}" data-product-url="{{ block.settings.product_url }}" data-preis="{{ block.settings.preis }}" {{ block.shopify_attributes }}>
-          <button class="sj-card-hdr" aria-expanded="false">
-            {%- if block.settings.product_image != blank -%}
-              <img src="{{ prod_img }}" alt="{{ block.settings.product_image.alt | escape | default: block.settings.sorte_id }}" class="sj-card-img" loading="lazy" width="64" height="64">
-            {%- else -%}
-              <div class="sj-card-img sj-img-ph">🐟</div>
-            {%- endif -%}
-            <div class="sj-cinfo">
-              <p class="sj-ckat" data-kat-label>Fisch</p>
-              <p class="sj-cname"><span data-sorte-name>{{ block.settings.sorte_id | capitalize }}</span> <span class="sj-csub" data-sorte-subname></span></p>
-            </div>
-            <div class="sj-ctags" data-tags-wrap></div>
-            <span class="sj-cpreis" data-preis-display>{{ block.settings.preis }}</span>
-            <span class="sj-ctoggle" aria-hidden="true">+</span>
-          </button>
-          <div class="sj-cbody" aria-hidden="true"></div>
-        </div>
-      {%- endif -%}
-    {%- endfor -%}
-    {%- endif -%}
-
-  </div>
+  </div><!-- /.sj-inner -->
 </section>
 
 <script>
 (function(){
 'use strict';
 
-/* ═══════════════════════════════════
-   PRODUKT DATEN
-════════════════════════════════════ */
+/* ══════════════════════════════════
+   SORTEN-DATEN (Fallback wenn kein Block-Text)
+══════════════════════════════════ */
 var SORTEN = {
-  rind: {
-    id:'rind', kategorie:'rot', name:'Rind', subName:'mit Kartoffeln & Karotten',
-    preis:'ab 2,99 €', tags:['Bestseller','58% Fleisch'], fleischanteil:58,
+  rind:{
+    id:'rind',kategorie:'rot',name:'Rind',subName:'mit Kartoffeln & Karotten',
+    preis:'ab 2,99 €',tags:['Bestseller','58% Fleisch'],fleischanteil:58,
     beschreibung:'Kräftiges bayerisches Rindfleisch trifft auf Kartoffeln und Karotten. Ein ehrliches, sättigendes Menü mit Herz, Lunge und Leber für das volle Nährstoffspektrum. Algenkalk rundet die Calcium Versorgung ab.',
     deklaration:'58% Fleisch vom Rind (40% Muskelfleisch, 7% Herz, 7% Lunge, 4% Leber), 11% Kartoffeln, 11% Karotten, 0,47% Algenkalk. Enthält 19,53% Fleischbrühe.',
     zusammensetzung:[
@@ -445,9 +558,9 @@ var SORTEN = {
     wusstest:'Rinderherz und Rinderlunge gelten ernährungsrechtlich als Muskelfleisch. Das Herz enthält bis zu 10× mehr Taurin und CoQ10 als normales Muskelfleisch. Bei Uncle Rusty\'s steht jede Zutat einzeln auf der Dose.',
     empfehlung:'Empfohlen 2 bis 3× pro Woche als rotes Fleisch'
   },
-  wild: {
-    id:'wild', kategorie:'rot', name:'Wild', subName:'mit Süßkartoffeln & Zucchini',
-    preis:'ab 2,99 €', tags:['Reh & Hirsch','60% Fleisch'], fleischanteil:60,
+  wild:{
+    id:'wild',kategorie:'rot',name:'Wild',subName:'mit Süßkartoffeln & Zucchini',
+    preis:'ab 2,99 €',tags:['Reh & Hirsch','60% Fleisch'],fleischanteil:60,
     beschreibung:'Eine kraftvolle Kombination aus Reh, Hirsch und Rind. Mit Süßkartoffeln und Zucchini für eine besonders leichte Verdauung. Die Kombination zweier Fleischquellen liefert ein breites Aminosäurespektrum.',
     deklaration:'35% Fleisch vom Reh und Hirsch (20% Muskelfleisch, 10% Lunge und Luftröhre, 5% Leber), 25% Fleisch vom Rind (15% Muskelfleisch, 5% Herz, 5% Lunge), 13% Süßkartoffeln, 10% Zucchini, 0,29% Algenkalk. Enthält 16,71% Fleischbrühe.',
     zusammensetzung:[
@@ -467,17 +580,17 @@ var SORTEN = {
       {label:'Rohfett',val:'5,40%',erklaerung:'Wildfleisch ist von Natur aus mager. Der moderate Fettgehalt stammt komplett aus dem Fleisch selbst.'},
       {label:'Rohasche',val:'1,20%',erklaerung:'Sehr niedriger Wert. Zeigt, dass keine künstlichen Mineralstoffe zugesetzt wurden.'},
       {label:'Rohfaser',val:'1,00%',erklaerung:'Gesunde Ballaststoffe aus Süßkartoffeln und Zucchini. Unterstützt eine geregelte Verdauung.'},
-      {label:'Feuchtigkeit',val:'80,20%',erklaerung:'Höchster Feuchtigkeitsgehalt in der Range. Perfekt für Hunde die wenig trinken.'},
+      {label:'Feuchtigkeit',val:'80,20%',erklaerung:'Höchster Feuchtigkeitsgehalt. Perfekt für Hunde die wenig trinken.'},
       {label:'Calcium',val:'0,13%',erklaerung:'Natürliches Calcium aus Algenkalk.'},
       {label:'Phosphor',val:'0,10%',erklaerung:'Ausgewogenes Ca:P Verhältnis.'}
     ],
     benefits:['Breites Aminosäurespektrum','Natürlich fettarm','Unterstützt die Nieren','Ideal bei Übergewicht','Mehr Ausdauer'],
-    wusstest:'Das Wildmenü kombiniert Reh & Hirsch mit Rind. Eine bewusste Entscheidung. Wild allein wäre zu mager. Die Kombination liefert ein breites Spektrum an Aminosäuren, das einzelne Fleischquellen nicht bieten können.',
+    wusstest:'Das Wildmenü kombiniert Reh & Hirsch mit Rind. Wild allein wäre zu mager. Die Kombination liefert ein breites Spektrum an Aminosäuren, das einzelne Fleischquellen nicht bieten können.',
     empfehlung:'Ideal als Proteinrotation und für Hunde die wenig trinken'
   },
-  pferd: {
-    id:'pferd', kategorie:'rot', name:'Pferd', subName:'mit Karotte & Quinoa',
-    preis:'ab 3,69 €', tags:['Hypoallergen','57% Fleisch'], fleischanteil:57,
+  pferd:{
+    id:'pferd',kategorie:'rot',name:'Pferd',subName:'mit Karotte & Quinoa',
+    preis:'ab 3,69 €',tags:['Hypoallergen','57% Fleisch'],fleischanteil:57,
     beschreibung:'Pferdefleisch. Die pureste, hypoallergenste Proteinquelle. Mit Quinoa als einzigem Pseudogetreide mit vollständigem Aminosäureprofil. Herz, Lunge und Leber ergänzen das Muskelfleisch perfekt.',
     deklaration:'57% Fleisch vom Pferd (40% Muskelfleisch, 6% Herz, 6% Lunge, 5% Leber), 16% Karotte, 8% Quinoa, 0,37% Algenkalk. Enthält 18,63% Fleischbrühe.',
     zusammensetzung:[
@@ -491,8 +604,8 @@ var SORTEN = {
       {label:'Algenkalk',pct:0.37,typ:'mineral'}
     ],
     analytisch:[
-      {label:'Rohprotein',val:'12,10%',erklaerung:'Einer der höchsten Proteinwerte im Sortiment. Pferdefleisch ist von Natur aus proteinreicher als die meisten anderen Fleischsorten.'},
-      {label:'Rohfett',val:'2,20%',erklaerung:'Das magerste Menü im gesamten Sortiment. Ideal für Hunde mit Gewichtsproblemen oder Pankreatitis Neigung.'},
+      {label:'Rohprotein',val:'12,10%',erklaerung:'Einer der höchsten Proteinwerte. Pferdefleisch ist von Natur aus proteinreicher als die meisten anderen Fleischsorten.'},
+      {label:'Rohfett',val:'2,20%',erklaerung:'Das magerste Menü im gesamten Sortiment. Ideal für Hunde mit Gewichtsproblemen.'},
       {label:'Rohasche',val:'1,60%',erklaerung:'Natürlicher Mineralstoffgehalt ohne Premix.'},
       {label:'Rohfaser',val:'0,80%',erklaerung:'Gesunde Fasern aus Karotte und Quinoa. Quinoa muss in Fleischbrühe quellen.'},
       {label:'Feuchtigkeit',val:'75,90%',erklaerung:'Natürliche Feuchtigkeit durch Fleischbrühe und frisches Gemüse.'},
@@ -500,12 +613,12 @@ var SORTEN = {
       {label:'Phosphor',val:'0,13%',erklaerung:'Optimales Verhältnis für Knochengesundheit.'}
     ],
     benefits:['Für Allergiker gemacht','Stärkster Muskelaufbau','Schlanke Linie halten','Alle 9 Aminosäuren','Kein Allergierisiko'],
-    wusstest:'Pferdefleisch hat 40% mehr Protein als Rind bei deutlich weniger Fett. Quinoa ist das einzige Pseudogetreide mit allen 9 essenziellen Aminosäuren. Es muss in Flüssigkeit quellen können. Deshalb enthält das Rezept Fleischbrühe.',
+    wusstest:'Pferdefleisch hat 40% mehr Protein als Rind bei deutlich weniger Fett. Quinoa ist das einzige Pseudogetreide mit allen 9 essenziellen Aminosäuren und muss in Flüssigkeit quellen.',
     empfehlung:'Ideal für Allergiker, aktive und gewichtsreduzierte Hunde'
   },
-  lamm: {
-    id:'lamm', kategorie:'rot', name:'Lamm', subName:'mit Rote Beete, Haferkleie & Apfel',
-    preis:'ab 3,69 €', tags:['Sanft','55% Fleisch'], fleischanteil:55,
+  lamm:{
+    id:'lamm',kategorie:'rot',name:'Lamm',subName:'mit Rote Beete, Haferkleie & Apfel',
+    preis:'ab 3,69 €',tags:['Sanft','55% Fleisch'],fleischanteil:55,
     beschreibung:'Zartes Lammfleisch mit Rote Beete, Haferkleie und Apfel. Das sanfteste Menü für empfindliche Mägen. Rote Beete liefert natürliche Nitrate für die Durchblutung, Haferkleie Beta Glucan für die Darmgesundheit.',
     deklaration:'55% Fleisch vom Lamm (40% Muskelfleisch, 5% Lunge, 5% Herz, 5% Leber), 15% Rote Beete, 10% Haferkleie, 8% Apfel. Enthält 12% Fleischbrühe.',
     zusammensetzung:[
@@ -521,19 +634,19 @@ var SORTEN = {
     analytisch:[
       {label:'Rohprotein',val:'10,40%',erklaerung:'Zartes Lammprotein. Besonders gut verträglich und schonend für die Verdauung.'},
       {label:'Rohfett',val:'8,70%',erklaerung:'Etwas höherer natürlicher Fettgehalt durch Lammfleisch. Liefert Energie und unterstützt die Aufnahme fettlöslicher Vitamine.'},
-      {label:'Rohasche',val:'3,00%',erklaerung:'Höherer natürlicher Mineralgehalt durch Rote Beete und Lamm. Trotzdem: Alles natürlich, kein Premix.'},
+      {label:'Rohasche',val:'3,00%',erklaerung:'Höherer natürlicher Mineralgehalt durch Rote Beete und Lamm. Kein Premix.'},
       {label:'Rohfaser',val:'0,60%',erklaerung:'Sanfte Ballaststoffe aus Haferkleie. Enthält Beta Glucan für eine gesunde Darmflora.'},
-      {label:'Feuchtigkeit',val:'68,20%',erklaerung:'Etwas weniger Flüssigkeit durch den geringeren Brüheanteil. Dafür höherer Nährstoffgehalt pro Gramm.'},
+      {label:'Feuchtigkeit',val:'68,20%',erklaerung:'Etwas weniger Flüssigkeit. Dafür höherer Nährstoffgehalt pro Gramm.'},
       {label:'Calcium',val:'1,32%',erklaerung:'Natürlich hoher Calciumgehalt aus Lammknochen und Innereien.'},
       {label:'Phosphor',val:'0,72%',erklaerung:'Natürliches Ca:P Verhältnis aus dem Lamm selbst.'}
     ],
     benefits:['Schont den Magen','Stärkt die Darmflora','Bessere Durchblutung','Ideal nach Krankheit','Beruhigt die Verdauung'],
-    wusstest:'Lammfleisch gilt als verträglichstes Fleischprotein überhaupt. Rote Beete enthält natürliche Nitrate, die die Muskeldurchblutung verbessern. Haferkleie liefert Beta Glucan, einen der wenigen wissenschaftlich belegten natürlichen Regulatoren.',
+    wusstest:'Lammfleisch gilt als verträglichstes Fleischprotein. Rote Beete enthält natürliche Nitrate, die die Muskeldurchblutung verbessern. Haferkleie liefert Beta Glucan für Darmgesundheit.',
     empfehlung:'Besonders geeignet nach Antibiotika, bei Verdauungsproblemen oder für sensible Hunde'
   },
-  gefluegel: {
-    id:'gefluegel', kategorie:'hell', name:'Geflügel', subName:'mit Kürbis & Amaranth',
-    preis:'ab 2,99 €', tags:['Leicht verdaulich','63% Fleisch'], fleischanteil:63,
+  gefluegel:{
+    id:'gefluegel',kategorie:'hell',name:'Geflügel',subName:'mit Kürbis & Amaranth',
+    preis:'ab 2,99 €',tags:['Leicht verdaulich','63% Fleisch'],fleischanteil:63,
     beschreibung:'Hühnerfleisch mit Herz, Mägen und Leber. Der höchste Fleischanteil im Sortiment. Kürbis wirkt präbiotisch, Amaranth liefert als eines der wenigen Pflanzenproteine alle essenziellen Aminosäuren.',
     deklaration:'63% Fleisch vom Huhn (38% Muskelfleisch, 10% Herz, 10% Mägen, 5% Leber), 10% Kürbis, 7% Bio Amaranth. Enthält 20% Fleischbrühe.',
     zusammensetzung:[
@@ -546,22 +659,22 @@ var SORTEN = {
       {label:'Fleischbrühe',pct:20,typ:'bruehe'}
     ],
     analytisch:[
-      {label:'Rohprotein',val:'11,60%',erklaerung:'Hochwertiges Geflügelprotein. Leicht verdaulich und besonders gut verwertbar für den Hundekörper.'},
-      {label:'Rohfett',val:'3,00%',erklaerung:'Sehr fettarm. Ideal für Hunde mit empfindlichem Magen oder Pankreatitis Neigung.'},
-      {label:'Rohasche',val:'2,80%',erklaerung:'Natürlicher Mineralgehalt aus Geflügelinnereien und Kürbis. Kein synthetischer Premix.'},
+      {label:'Rohprotein',val:'11,60%',erklaerung:'Hochwertiges Geflügelprotein. Leicht verdaulich und besonders gut verwertbar.'},
+      {label:'Rohfett',val:'3,00%',erklaerung:'Sehr fettarm. Ideal für Hunde mit empfindlichem Magen.'},
+      {label:'Rohasche',val:'2,80%',erklaerung:'Natürlicher Mineralgehalt aus Geflügelinnereien und Kürbis.'},
       {label:'Rohfaser',val:'1,00%',erklaerung:'Gesunde Fasern aus Kürbis und Amaranth. Kürbis wirkt stark präbiotisch.'},
-      {label:'Feuchtigkeit',val:'75,10%',erklaerung:'Natürliche Feuchtigkeit durch 20% Fleischbrühe. Die höchste Brühemenge im Sortiment.'},
+      {label:'Feuchtigkeit',val:'75,10%',erklaerung:'Natürliche Feuchtigkeit durch 20% Fleischbrühe. Damit Amaranth richtig quellen kann.'},
       {label:'Calcium',val:'0,53%',erklaerung:'Natürliches Calcium aus den Geflügelinnereien.'},
       {label:'Phosphor',val:'0,39%',erklaerung:'Ausgewogenes Ca:P Verhältnis.'}
     ],
     benefits:['63% pures Fleisch','Perfekt für Welpen','Sanft zum Magen','Präbiotisch wirksam','Für Senioren geeignet'],
-    wusstest:'Amaranth ist eines der wenigen Pflanzenproteine mit vollständigem Aminosäureprofil. Es muss in Flüssigkeit quellen. Deshalb hat dieses Menü mit 20% den höchsten Fleischbrühe Anteil.',
+    wusstest:'Amaranth ist eines der wenigen Pflanzenproteine mit vollständigem Aminosäureprofil. Es muss in Flüssigkeit quellen. Deshalb hat dieses Menü den höchsten Fleischbrühe Anteil.',
     empfehlung:'Perfekt für empfindliche Mägen, Welpen und ältere Hunde'
   },
-  ente: {
-    id:'ente', kategorie:'hell', name:'Ente', subName:'mit Karotten & Hirse',
-    preis:'ab 2,99 €', tags:['Fellglanz','65% Fleisch'], fleischanteil:65,
-    beschreibung:'Entenfleisch mit Entenhälsen und Entenherzen. Eine vollwertige Proteinquelle reich an Omega 6. Hirse liefert natürliche Kieselsäure für sichtbar besseres Fell.',
+  ente:{
+    id:'ente',kategorie:'hell',name:'Ente',subName:'mit Karotten & Hirse',
+    preis:'ab 2,99 €',tags:['Fellglanz','65% Fleisch'],fleischanteil:65,
+    beschreibung:'Entenfleisch mit Entenhälsen und Entenherzen. Eine vollwertige Proteinquelle reich an Omega 6. Hirse liefert natürliche Kieselsäure für sichtbar besseres Fell. Karotten runden das Nährstoffprofil ab.',
     deklaration:'50% Muskelfleisch von der Ente, 10% Entenhälse, 5% Entenherzen, 10% Karotten, 10% Hirse. Enthält 15% Fleischbrühe.',
     zusammensetzung:[
       {label:'Muskelfleisch (Ente)',pct:50,typ:'muskelfleisch'},
@@ -574,19 +687,19 @@ var SORTEN = {
     analytisch:[
       {label:'Rohprotein',val:'12,70%',erklaerung:'Einer der höchsten Proteinwerte. Entenfleisch liefert hochwertiges, gut verwertbares Protein.'},
       {label:'Rohfett',val:'6,80%',erklaerung:'Natürlicher Fettgehalt mit hohem Omega 6 Anteil. Essenziell für gesunde Haut und glänzendes Fell.'},
-      {label:'Rohasche',val:'2,60%',erklaerung:'Natürlicher Mineralgehalt durch Entenhälse und Karotten. Entenhälse liefern natürliches Calcium und Phosphor.'},
-      {label:'Rohfaser',val:'0,40%',erklaerung:'Geringe, sanfte Fasern. Ideal für Hunde mit sehr empfindlicher Verdauung.'},
+      {label:'Rohasche',val:'2,60%',erklaerung:'Natürlicher Mineralgehalt durch Entenhälse. Kein Premix.'},
+      {label:'Rohfaser',val:'0,40%',erklaerung:'Geringe, sanfte Fasern. Ideal für sehr empfindliche Verdauung.'},
       {label:'Feuchtigkeit',val:'69,50%',erklaerung:'Guter Feuchtigkeitsgehalt. Hirse muss in Fleischbrühe quellen können.'},
       {label:'Calcium',val:'0,78%',erklaerung:'Natürliches Calcium aus den Entenhälsen. Eine der besten natürlichen Calciumquellen überhaupt.'},
       {label:'Phosphor',val:'0,54%',erklaerung:'Optimales Ca:P Verhältnis durch natürliche Knochensubstanz.'}
     ],
     benefits:['Sichtbar glänzendes Fell','Gesunde Haut','Natürliches Calcium','Kräftigt die Krallen','Weniger Haaren'],
-    wusstest:'Hirse enthält natürliche Kieselsäure. Das Mineral, das sichtbar die Fellstruktur verbessert. Entenhälse sind eine der besten natürlichen Calciumquellen.',
+    wusstest:'Hirse enthält natürliche Kieselsäure, das Mineral das sichtbar die Fellstruktur verbessert. Entenhälse sind eine der besten natürlichen Calciumquellen.',
     empfehlung:'Ideal als zweites helles Fleisch für optimale Fell und Hautgesundheit'
   },
-  lachs: {
-    id:'lachs', kategorie:'fisch', name:'Lachs', subName:'mit Kürbis, Haferkleie & Apfel',
-    preis:'ab 2,99 €', tags:['Omega-3 Pflicht','1× pro Woche'], fleischanteil:50,
+  lachs:{
+    id:'lachs',kategorie:'fisch',name:'Lachs',subName:'mit Kürbis, Haferkleie & Apfel',
+    preis:'ab 2,99 €',tags:['Omega-3 Pflicht','1× pro Woche'],fleischanteil:50,
     beschreibung:'Wildlachs als reine Omega 3 Quelle mit Kürbis, Haferkleie und Apfel. DHA und EPA kann ein Hund nicht selbst bilden. Dieses Menü ist keine Option, sondern Notwendigkeit.',
     deklaration:'50% Muskelfleisch vom Lachs, 15% Kürbis, 12% Haferkleie, 8% Apfel, 0,47% Algenkalk. Enthält 14,53% Fleischbrühe.',
     zusammensetzung:[
@@ -598,11 +711,11 @@ var SORTEN = {
       {label:'Algenkalk',pct:0.47,typ:'mineral'}
     ],
     analytisch:[
-      {label:'Rohprotein',val:'12,10%',erklaerung:'Hochwertiges Fischprotein. Besonders leicht verdaulich und gut vom Hundekörper verwertbar.'},
-      {label:'Rohfett',val:'13,50%',erklaerung:'Höchster Fettgehalt im Sortiment. Das sind die wertvollen Omega 3 Fettsäuren DHA & EPA.'},
-      {label:'Rohasche',val:'1,30%',erklaerung:'Sehr niedrig. Zeigt: Keine synthetischen Vitaminpremixe. Alle Mineralien kommen aus Lachs und Algenkalk.'},
+      {label:'Rohprotein',val:'12,10%',erklaerung:'Hochwertiges Fischprotein. Besonders leicht verdaulich.'},
+      {label:'Rohfett',val:'13,50%',erklaerung:'Höchster Fettgehalt. Das sind die wertvollen Omega 3 Fettsäuren DHA & EPA.'},
+      {label:'Rohasche',val:'1,30%',erklaerung:'Sehr niedrig. Keine synthetischen Vitaminpremixe. Alle Mineralien kommen aus Lachs und Algenkalk.'},
       {label:'Rohfaser',val:'0,40%',erklaerung:'Sanfte Fasern aus Haferkleie und Kürbis. Beta Glucan reguliert Blutzucker und Cholesterin.'},
-      {label:'Feuchtigkeit',val:'60,80%',erklaerung:'Niedrigster Feuchtigkeitsgehalt. Dadurch höchste Nährstoffdichte pro Gramm im gesamten Sortiment.'},
+      {label:'Feuchtigkeit',val:'60,80%',erklaerung:'Niedrigster Feuchtigkeitsgehalt. Dadurch höchste Nährstoffdichte pro Gramm im Sortiment.'},
       {label:'Calcium',val:'0,27%',erklaerung:'Natürliches Calcium aus Algenkalk.'},
       {label:'Phosphor',val:'0,21%',erklaerung:'Optimales Ca:P Verhältnis.'}
     ],
@@ -612,443 +725,370 @@ var SORTEN = {
   }
 };
 
-/* ═══════════════════════════════════
-   FARBEN
-════════════════════════════════════ */
+/* ══════════════════════════════════
+   FARBEN (lebensmittelpassend)
+══════════════════════════════════ */
+var ING_COLORS = {
+  'Muskelfleisch (Rind)':'hsl(5 45% 40%)','Muskelfleisch (Reh & Hirsch)':'hsl(355 35% 34%)',
+  'Muskelfleisch (Pferd)':'hsl(0 38% 36%)','Muskelfleisch (Lamm)':'hsl(350 30% 38%)',
+  'Muskelfleisch (Huhn)':'hsl(35 40% 58%)','Muskelfleisch (Ente)':'hsl(15 35% 42%)',
+  'Muskelfleisch (Lachs)':'hsl(12 65% 56%)','Herz':'hsl(350 50% 32%)',
+  'Herz (Rind)':'hsl(350 50% 32%)','Lunge':'hsl(345 25% 44%)','Lunge (Rind)':'hsl(345 25% 44%)',
+  'Leber':'hsl(15 40% 30%)','Leber (Wild)':'hsl(15 40% 30%)',
+  'Lunge & Luftröhre (Wild)':'hsl(345 25% 40%)','Mägen':'hsl(340 20% 40%)',
+  'Entenhälse':'hsl(30 25% 47%)','Entenherzen':'hsl(350 50% 32%)',
+  'Kartoffeln':'hsl(45 55% 56%)','Süßkartoffeln':'hsl(25 70% 50%)','Karotten':'hsl(28 85% 50%)',
+  'Karotte':'hsl(28 85% 50%)','Zucchini':'hsl(100 35% 43%)','Rote Beete':'hsl(350 55% 40%)',
+  'Kürbis':'hsl(32 75% 48%)','Hirse':'hsl(45 60% 53%)','Quinoa':'hsl(42 35% 53%)',
+  'Haferkleie':'hsl(40 40% 50%)','Bio Amaranth':'hsl(38 30% 43%)','Apfel':'hsl(95 45% 46%)',
+  'Fleischbrühe':'hsla(35,30%,42%,0.5)','Algenkalk':'hsla(165,25%,48%,0.65)'
+};
 var TYP_COLORS = {
-  muskelfleisch:'hsl(350 35% 52%)',
-  innereien:'hsl(340 28% 38%)',
-  gemuese:'hsl(142 28% 42%)',
-  getreide:'hsl(38 50% 52%)',
-  obst:'hsl(22 55% 52%)',
-  bruehe:'hsla(32,25%,55%,0.45)',
-  mineral:'hsla(175,25%,48%,0.6)'
+  muskelfleisch:'hsl(350 35% 50%)',innereien:'hsl(340 28% 36%)',
+  gemuese:'hsl(142 28% 40%)',getreide:'hsl(38 50% 50%)',
+  obst:'hsl(22 55% 50%)',bruehe:'hsla(32,25%,52%,0.4)',mineral:'hsla(175,25%,46%,0.55)'
 };
+function getColor(seg){ return ING_COLORS[seg.label]||TYP_COLORS[seg.typ]||'#888'; }
 
-var INGREDIENT_COLORS = {
-  'Muskelfleisch (Rind)':'hsl(5 45% 38%)','Muskelfleisch (Reh & Hirsch)':'hsl(355 35% 32%)',
-  'Muskelfleisch (Rind & Pferd)':'hsl(5 40% 36%)','Muskelfleisch (Pferd)':'hsl(0 38% 34%)',
-  'Muskelfleisch (Lamm)':'hsl(350 30% 36%)','Muskelfleisch (Huhn)':'hsl(35 40% 60%)',
-  'Muskelfleisch (Ente)':'hsl(15 35% 40%)','Muskelfleisch (Lachs)':'hsl(12 65% 58%)',
-  'Herz':'hsl(350 50% 30%)','Herz (Rind)':'hsl(350 50% 30%)','Lunge':'hsl(345 25% 42%)',
-  'Lunge (Rind)':'hsl(345 25% 42%)','Leber':'hsl(15 40% 28%)','Leber (Wild)':'hsl(15 40% 28%)',
-  'Lunge & Luftröhre (Wild)':'hsl(345 25% 38%)','Mägen':'hsl(340 20% 38%)',
-  'Entenhälse':'hsl(30 25% 45%)','Entenherzen':'hsl(350 50% 30%)',
-  'Kartoffeln':'hsl(45 55% 58%)','Süßkartoffeln':'hsl(25 70% 48%)','Karotten':'hsl(28 85% 52%)',
-  'Karotte':'hsl(28 85% 52%)','Zucchini':'hsl(100 35% 45%)','Rote Beete':'hsl(350 55% 38%)',
-  'Kürbis':'hsl(32 75% 50%)','Hirse':'hsl(45 60% 55%)','Quinoa':'hsl(42 35% 55%)',
-  'Haferkleie':'hsl(40 40% 52%)','Bio Amaranth':'hsl(38 30% 45%)','Apfel':'hsl(95 45% 48%)',
-  'Fleischbrühe':'hsla(35,30%,40%,0.6)','Algenkalk':'hsla(165,25%,50%,0.7)'
-};
-
-function getColor(seg){
-  return INGREDIENT_COLORS[seg.label] || TYP_COLORS[seg.typ] || '#888';
+/* ══════════════════════════════════
+   HILFSFUNKTION: Block-Text oder Fallback
+══════════════════════════════════ */
+function getText(card, attr, fallback){
+  var v = card.getAttribute(attr)||'';
+  return v.trim() ? v : (fallback||'');
+}
+function getBenefits(card, fallback){
+  var raw = (card.getAttribute('data-benefits')||'').trim();
+  if(raw){ return raw.split('\n').map(function(l){return l.trim();}).filter(Boolean).slice(0,5); }
+  return fallback||[];
 }
 
-function getKatLabel(kat){
-  return kat==='rot'?'Rotes Fleisch':kat==='hell'?'Helles Fleisch':'Fisch';
-}
-
-/* ═══════════════════════════════════
+/* ══════════════════════════════════
    RING SVG
-════════════════════════════════════ */
-function buildRingSVG(ringIngredients, hoveredIdx){
-  var C = 2 * Math.PI * 44;
-  var total = ringIngredients.reduce(function(s,z){return s+z.pct;},0);
-  var offset = 0;
-  var segments = '';
-  for(var i=0;i<ringIngredients.length;i++){
-    var seg = ringIngredients[i];
-    var segLen = (seg.pct/total)*C;
-    var gap = 1.5;
-    var actual = Math.max(segLen-gap,0);
-    var color = getColor(seg);
-    var isHov = hoveredIdx===i;
-    var op = hoveredIdx===null?0.7:isHov?1:0.2;
-    var sw = isHov?8:5;
-    var filt = isHov?'drop-shadow(0 0 8px '+color+')':'none';
-    segments += '<circle cx="50" cy="50" r="44" fill="none"'
-      +' stroke="'+color+'"'
-      +' stroke-width="'+sw+'"'
-      +' stroke-linecap="round"'
-      +' stroke-dasharray="'+actual+' '+(C-actual)+'"'
-      +' stroke-dashoffset="'+(-(offset))+'"'
-      +' style="opacity:'+op+';filter:'+filt+';transition:all 0.3s;cursor:pointer"'
-      +' data-ring-idx="'+i+'"'
-      +'/>';
-    offset += segLen;
+══════════════════════════════════ */
+function buildRingSVG(ringIng, hov){
+  var C = 2*Math.PI*44, tot = ringIng.reduce(function(s,z){return s+z.pct;},0);
+  var offset=0, segs='';
+  for(var i=0;i<ringIng.length;i++){
+    var seg=ringIng[i], len=(seg.pct/tot)*C, act=Math.max(len-1.5,0);
+    var c=getColor(seg), isH=(hov===i);
+    var op = hov===null?0.75:isH?1:0.18;
+    var sw = isH?8:5, flt=isH?'drop-shadow(0 0 8px '+c+')':'none';
+    segs+='<circle cx="50" cy="50" r="44" fill="none" stroke="'+c+'" stroke-width="'+sw+'"'
+      +' stroke-linecap="round" stroke-dasharray="'+act+' '+(C-act)+'"'
+      +' stroke-dashoffset="'+(-(offset))+'" data-ring-idx="'+i+'"'
+      +' style="opacity:'+op+';filter:'+flt+';transition:all .3s;cursor:pointer"/>';
+    offset+=len;
   }
   return '<svg viewBox="0 0 100 100" class="sj-rsvg" style="transform:rotate(-90deg)">'
-    +'<circle cx="50" cy="50" r="44" fill="none" stroke="rgba(212,168,83,0.12)" stroke-width="5"/>'
-    +segments+'</svg>';
+    +'<circle cx="50" cy="50" r="44" fill="none" stroke="rgba(245,237,224,0.08)" stroke-width="5"/>'
+    +segs+'</svg>';
 }
 
-/* ═══════════════════════════════════
-   EXPANDED HTML
-════════════════════════════════════ */
-function buildExpandedHTML(s, productImg, glassImg){
-  var ringIngredients = s.zusammensetzung.filter(function(z){return z.typ!=='bruehe'&&z.typ!=='mineral';});
-  var fleisch = ringIngredients.filter(function(z){return z.typ==='muskelfleisch'||z.typ==='innereien';});
-  var pflanzlich = ringIngredients.filter(function(z){return z.typ==='gemuese'||z.typ==='getreide'||z.typ==='obst';});
-  var extras = s.zusammensetzung.filter(function(z){return z.typ==='bruehe'||z.typ==='mineral';});
-  var pflPct = pflanzlich.reduce(function(sum,z){return sum+z.pct;},0);
+/* ══════════════════════════════════
+   EXPANDED HTML BUILDER
+══════════════════════════════════ */
+function buildExpanded(s, card, productImg, glassImg){
+  var ringIng = s.zusammensetzung.filter(function(z){return z.typ!=='bruehe'&&z.typ!=='mineral';});
+  var fleisch  = ringIng.filter(function(z){return z.typ==='muskelfleisch'||z.typ==='innereien';});
+  var pflanz   = ringIng.filter(function(z){return z.typ==='gemuese'||z.typ==='getreide'||z.typ==='obst';});
+  var extras   = s.zusammensetzung.filter(function(z){return z.typ==='bruehe'||z.typ==='mineral';});
+  var pflPct   = pflanz.reduce(function(a,z){return a+z.pct;},0);
 
+  /* Texte: Block-Settings haben Vorrang, sonst JS-Daten */
+  var beschreibung = getText(card,'data-beschreibung',s.beschreibung);
+  var deklaration  = getText(card,'data-deklaration', s.deklaration);
+  var wusstest     = getText(card,'data-wusstest',    s.wusstest);
+  var empfehlung   = getText(card,'data-empfehlung',  s.empfehlung);
+  var benefits     = getBenefits(card, s.benefits);
   var katDot = s.kategorie==='rot'?'● Rotes Fleisch':s.kategorie==='hell'?'● Helles Fleisch':'● Fisch';
 
-  /* Benefit orbit stars */
-  var orbitHTML = '';
-  var bens = s.benefits.slice(0,5);
-  for(var bi=0;bi<bens.length;bi++){
-    var total_b = bens.length;
-    var angle = (-90 + (bi*360)/total_b) * (Math.PI/180);
-    var x = 50 + 46*Math.cos(angle);
-    var y = 50 + 46*Math.sin(angle);
-    var lblLeft = x>55?'110%':x<45?'auto':'50%';
-    var lblRight = x<45?'110%':'auto';
-    var lblTop = (x>=45&&x<=55)?(y<50?'auto':'110%'):'50%';
-    var lblBottom = (x>=45&&x<=55&&y<50)?'110%':'auto';
-    var lblTransform = (x>=45&&x<=55)?'translateX(-50%)':'translateY(-50%)';
-    orbitHTML += '<div class="sj-orbit-dot" style="position:absolute;left:'+x+'%;top:'+y+'%;transform:translate(-50%,-50%)">'
+  /* Orbit */
+  var orbitHTML='';
+  for(var bi=0;bi<benefits.length;bi++){
+    var ang=(-90+(bi*360)/benefits.length)*(Math.PI/180);
+    var x=50+46*Math.cos(ang), y=50+46*Math.sin(ang);
+    var lL=x>55?'110%':x<45?'auto':'50%', lR=x<45?'110%':'auto';
+    var lT=(x>=45&&x<=55)?(y<50?'auto':'110%'):'50%';
+    var lB=(x>=45&&x<=55&&y<50)?'110%':'auto';
+    var lX=(x>=45&&x<=55)?'translateX(-50%)':'translateY(-50%)';
+    orbitHTML+='<div class="sj-orbit-dot" style="left:'+x+'%;top:'+y+'%;transform:translate(-50%,-50%)">'
       +'<div class="sj-orbit-star">✦</div>'
-      +'<div class="sj-orbit-lbl" style="left:'+lblLeft+';right:'+lblRight+';top:'+lblTop+';bottom:'+lblBottom+';transform:'+lblTransform+'">'+bens[bi]+'</div>'
+      +'<div class="sj-orbit-lbl" style="left:'+lL+';right:'+lR+';top:'+lT+';bottom:'+lB+';transform:'+lX+'">'+benefits[bi]+'</div>'
       +'</div>';
   }
 
-  /* Ingredient rows */
-  function irowHTML(seg){
-    var c = getColor(seg);
-    var lbl = seg.label.replace(/\s*\(.*\)/,'');
-    return '<div class="sj-irow" data-irow>'
-      +'<div class="sj-iicon" style="background:'+c+'18">🥩</div>'
-      +'<div style="flex:1;min-width:0"><p class="sj-iname">'+lbl+'</p>'+(seg.highlight?'<p class="sj-ihigh">'+seg.highlight+'</p>':'')+'</div>'
-      +'<span class="sj-ipct">'+seg.pct+'%</span>'
-      +'</div>';
+  /* Zutaten-Zeile */
+  function irow(seg){
+    var c=getColor(seg), lbl=seg.label.replace(/\s*\(.*\)/,'');
+    return '<div class="sj-irow">'
+      +'<div class="sj-iicon" style="background:'+c+'1a">🥩</div>'
+      +'<div style="flex:1;min-width:0"><p class="sj-iname">'+lbl+'</p>'
+      +(seg.highlight?'<p class="sj-ihigh">'+seg.highlight+'</p>':'')+'</div>'
+      +'<span class="sj-ipct">'+seg.pct+'%</span></div>';
   }
 
-  var fleischRows = fleisch.map(irowHTML).join('');
-  var pflanzRows = pflanzlich.map(irowHTML).join('');
-
-  var extrasHTML = extras.map(function(seg){
-    var c = getColor(seg);
-    var txt = seg.typ==='bruehe'?'Kollagen & Mineralien für saftige Konsistenz.':'Natürliches Calcium aus Meeresalgen.';
+  /* Extras (Brühe, Mineral) */
+  var extrasHTML=extras.map(function(seg){
+    var c=getColor(seg);
+    var txt=seg.typ==='bruehe'?'Kollagen & Mineralien für saftige Konsistenz. Kein Wasser.':'Natürliches Calcium aus Meeresalgen.';
     return '<div style="display:flex;align-items:flex-start;gap:10px;padding:8px 12px">'
-      +'<div style="width:28px;height:28px;border-radius:6px;background:'+c+'15;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:12px">💧</div>'
-      +'<div style="flex:1">'
-      +'<div style="display:flex;align-items:center;justify-content:space-between">'
-      +'<span style="color:#f0e4cc;font-size:12px;font-weight:600">'+seg.label+'</span>'
-      +'<span style="color:#d4a853;font-size:14px;font-weight:700">'+seg.pct+'%</span>'
-      +'</div>'
-      +'<p style="color:#7a6448;font-size:9px;line-height:1.5;margin-top:2px">'+txt+'</p>'
-      +'</div></div>';
+      +'<div style="width:28px;height:28px;border-radius:6px;background:'+c+'18;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;font-size:12px">💧</div>'
+      +'<div style="flex:1"><div style="display:flex;align-items:center;justify-content:space-between">'
+      +'<span style="color:#f5ede0;font-size:12px;font-weight:600">'+seg.label+'</span>'
+      +'<span style="color:#c4622d;font-size:14px;font-weight:700">'+seg.pct+'%</span>'
+      +'</div><p style="color:rgba(245,237,224,.4);font-size:9px;line-height:1.5;margin-top:2px">'+txt+'</p></div></div>';
   }).join('');
 
-  /* Analytisch rows */
-  var analRows = s.analytisch.map(function(a){
+  /* Analytisch */
+  var analRows=s.analytisch.map(function(a){
     return '<div class="sj-arow">'
       +'<button class="sj-atrig" data-atrig>'
       +'<span class="sj-albl">'+a.label+'</span>'
-      +'<div class="sj-aright"><span class="sj-aval">'+a.val+'</span><span class="sj-aarr" data-aarr>▾</span></div>'
-      +'</button>'
+      +'<div class="sj-aright"><span class="sj-aval">'+a.val+'</span>'
+      +'<span class="sj-aarr" data-aarr>▾</span></div></button>'
       +'<div class="sj-adet" data-adet><p class="sj-atxt">'+a.erklaerung+'</p></div>'
       +'</div>';
   }).join('');
 
-  /* Benefits */
-  var benItems = s.benefits.map(function(b){
-    return '<div class="sj-benitem"><span class="sj-benstar">✦</span><span class="sj-bentxt">'+b+'</span></div>';
+  /* Benefits Grid */
+  var benGrid=benefits.map(function(b){
+    return '<div class="sj-benitem"><span class="sj-benstar">✦</span>'
+      +'<span class="sj-bentxt">'+b+'</span></div>';
   }).join('');
 
-  var glassImgHTML = glassImg
-    ? '<img src="'+glassImg+'" alt="'+s.name+' Glas" class="sj-rglass" loading="lazy">'
-    : '<img src="'+productImg+'" alt="'+s.name+'" class="sj-rglass" style="width:80px" loading="lazy">';
+  var glassTag = (glassImg||productImg)
+    ? '<img src="'+(glassImg||productImg)+'" alt="'+s.name+' Glas" class="sj-rglass" loading="lazy">'
+    : '';
 
   return ''
-    /* ─ Section 1: Hero ─ */
-    +'<div class="sj-xhero">'
-      +'<div class="sj-xhero-bg"></div>'
-      +'<div class="sj-xgrid">'
-        +'<div class="sj-ximg-wrap">'
-          +'<div class="sj-xglow"></div>'
-          +'<img src="'+productImg+'" alt="'+s.name+'" class="sj-xpimg" loading="lazy">'
-          +'<div class="sj-orbit" aria-hidden="true">'+orbitHTML+'</div>'
-        +'</div>'
-        +'<div class="sj-xdesc">'
-          +'<p class="sj-xkat">'+katDot+'</p>'
-          +'<h3 class="sj-xh3">'+s.name+'</h3>'
-          +'<p class="sj-xsubname">'+s.subName+'</p>'
-          +'<p class="sj-xbesch">'+s.beschreibung+'</p>'
-          +'<div class="sj-badges">'
-            +'<div class="sj-nbadge"><span class="sj-nval">100%</span><span class="sj-blbl">Natürlich</span></div>'
-            +'<div class="sj-cbadge"><span class="sj-cval">0%</span><span class="sj-blbl">Chemie</span></div>'
-          +'</div>'
+    +'<div class="sj-xhero"><div class="sj-xhero-bg"></div><div class="sj-xgrid">'
+      +'<div class="sj-ximg-wrap"><div class="sj-xglow"></div>'
+        +(productImg?'<img src="'+productImg+'" alt="'+s.name+'" class="sj-xpimg" loading="lazy">':'')
+        +'<div class="sj-orbit" aria-hidden="true">'+orbitHTML+'</div>'
+      +'</div>'
+      +'<div class="sj-xdesc">'
+        +'<p class="sj-xkat">'+katDot+'</p>'
+        +'<h3 class="sj-xh3">'+s.name+'</h3>'
+        +'<p class="sj-xsubname">'+s.subName+'</p>'
+        +'<p class="sj-xbesch">'+beschreibung+'</p>'
+        +'<div class="sj-badges">'
+          +'<div class="sj-nbadge"><span class="sj-nval">100%</span><span class="sj-blbl">Natürlich</span></div>'
+          +'<div class="sj-cbadge"><span class="sj-cval">0%</span><span class="sj-blbl">Chemie</span></div>'
         +'</div>'
       +'</div>'
-    +'</div>'
+    +'</div></div>'
 
-    /* ─ Section 2: Zusammensetzung ─ */
     +'<div class="sj-zsm">'
-      +'<div class="sj-zsm-ttl"><h4 class="sj-zsm-h4">Zusammensetzung</h4><p class="sj-zsm-hint">Tippe auf eine Zutat für Details.</p></div>'
+      +'<div class="sj-zsm-ttl"><h4 class="sj-zsm-h4">Zusammensetzung</h4>'
+        +'<p class="sj-zsm-hint">Tippe auf eine Zutat für Details.</p></div>'
       +'<div class="sj-zsm-layout">'
         +'<div class="sj-fleisch-box">'
-          +'<div class="sj-box-hdr"><span class="sj-box-lbl" style="color:rgba(212,168,83,.6)">🥩 Fleisch · '+s.fleischanteil+'%</span></div>'
-          +'<div>'+fleischRows+'</div>'
+          +'<div class="sj-box-hdr"><span class="sj-box-lbl" style="color:rgba(196,98,45,.7)">🥩 Fleisch · '+s.fleischanteil+'%</span></div>'
+          +fleisch.map(irow).join('')
         +'</div>'
         +'<div class="sj-ring-wrap" data-ring-container>'
           +'<div class="sj-rglow"></div>'
-          +buildRingSVG(ringIngredients,null)
-          +glassImgHTML
+          +buildRingSVG(ringIng,null)
+          +glassTag
           +'<div class="sj-rtip" data-rtip></div>'
         +'</div>'
         +'<div class="sj-pflanz-box">'
           +'<div class="sj-pflanz-inner">'
-            +'<div class="sj-box-hdr"><span class="sj-box-lbl" style="color:rgba(60,180,60,.6)">🌿 Gemüse & Co · '+Math.round(pflPct)+'%</span></div>'
-            +'<div>'+pflanzRows+'</div>'
+            +'<div class="sj-box-hdr"><span class="sj-box-lbl" style="color:rgba(80,160,80,.7)">🌿 Gemüse & Co · '+Math.round(pflPct)+'%</span></div>'
+            +pflanz.map(irow).join('')
           +'</div>'
-          +(extras.length?'<div class="sj-extra-inner"><div class="sj-box-hdr"><span class="sj-box-lbl sj-extra-header-label">💧 Basis</span></div>'+extrasHTML+'</div>':'')
+          +(extras.length?'<div class="sj-extra-inner"><div class="sj-box-hdr"><span class="sj-box-lbl" style="color:rgba(245,237,224,.4)">💧 Basis</span></div>'+extrasHTML+'</div>':'')
         +'</div>'
       +'</div>'
     +'</div>'
 
-    /* ─ Section 3: Deklaration ─ */
-    +'<div class="sj-dekl">'
-      +'<div class="sj-dekl-bar"></div>'
-      +'<div class="sj-dekl-body">'
-        +'<p class="sj-dekl-lbl">Vollständige Deklaration</p>'
-        +'<p class="sj-dekl-txt">'+s.deklaration+'</p>'
-      +'</div>'
-    +'</div>'
+    +'<div class="sj-dekl"><div class="sj-dekl-bar"></div><div class="sj-dekl-body">'
+      +'<p class="sj-dekl-lbl">Vollständige Deklaration</p>'
+      +'<p class="sj-dekl-txt">'+deklaration+'</p>'
+    +'</div></div>'
 
-    /* ─ Section 4: Analytik + Benefits ─ */
     +'<div class="sj-botgrid">'
-      +'<div class="sj-anal">'
-        +'<h4 class="sj-sec-h4">Nährwerte</h4>'
+      +'<div class="sj-anal"><h4 class="sj-sec-h4">Nährwerte</h4>'
         +'<p class="sj-sec-hint">Tippe für <span class="sj-sec-hint-a">Details</span></p>'
-        +'<div>'+analRows+'</div>'
+        +analRows
         +'<p class="sj-nosynth">Keine synthetischen Premixe</p>'
       +'</div>'
-      +'<div class="sj-bens">'
-        +'<h4 class="sj-sec-h4">Das kann dieses Menü.</h4>'
+      +'<div class="sj-bens"><h4 class="sj-sec-h4">Das kann dieses Menü.</h4>'
         +'<p class="sj-sec-hint">Vorteile auf einen Blick</p>'
-        +'<div class="sj-bengrid">'+benItems+'</div>'
-        +'<div class="sj-wusstest"><p class="sj-wuss-ttl">🐾 Wusstest du?</p><p class="sj-wuss-txt">'+s.wusstest+'</p></div>'
-        +'<div class="sj-empt"><p class="sj-empt-txt">✓ '+s.empfehlung+'</p></div>'
+        +'<div class="sj-bengrid">'+benGrid+'</div>'
+        +'<div class="sj-wusstest"><p class="sj-wuss-ttl">🐾 Wusstest du?</p><p class="sj-wuss-txt">'+wusstest+'</p></div>'
+        +'<div class="sj-empt"><p class="sj-empt-txt">✓ '+empfehlung+'</p></div>'
       +'</div>'
     +'</div>';
 }
 
-/* ═══════════════════════════════════
+/* ══════════════════════════════════
    RING HOVER
-════════════════════════════════════ */
-function initRingHover(container, ringIngredients){
-  var svg = container.querySelector('[data-ring-idx]') ? container.querySelector('.sj-rsvg') : null;
+══════════════════════════════════ */
+function initRingHover(container, ringIng){
+  var svg = container.querySelector('.sj-rsvg');
   var tip = container.querySelector('[data-rtip]');
   if(!svg||!tip) return;
 
   function redraw(idx){
-    var newSVG = buildRingSVG(ringIngredients, idx);
-    var tmp = document.createElement('div');
-    tmp.innerHTML = newSVG;
-    var newEl = tmp.firstChild;
-    svg.parentNode.replaceChild(newEl, svg);
-    svg = newEl;
-    attachHandlers();
-    if(idx!==null && ringIngredients[idx]){
-      var seg = ringIngredients[idx];
-      var lbl = seg.label.replace(/\s*\(.*\)/,'');
-      tip.textContent = lbl+' · '+seg.pct+'%';
-      tip.style.background = getColor(seg);
-      tip.style.display = 'block';
-    } else {
-      tip.style.display = 'none';
-    }
+    var newSVG = buildRingSVG(ringIng, idx);
+    var tmp=document.createElement('div'); tmp.innerHTML=newSVG;
+    var newEl=tmp.firstChild;
+    svg.parentNode.replaceChild(newEl, svg); svg=newEl; attach();
+    if(idx!==null && ringIng[idx]){
+      var s=ringIng[idx], lbl=s.label.replace(/\s*\(.*\)/,'');
+      tip.textContent=lbl+' · '+s.pct+'%';
+      tip.style.background=getColor(s); tip.style.display='block';
+    } else { tip.style.display='none'; }
   }
 
-  function attachHandlers(){
-    var circles = svg.querySelectorAll('[data-ring-idx]');
-    circles.forEach(function(c){
-      var i = parseInt(c.getAttribute('data-ring-idx'),10);
+  function attach(){
+    svg.querySelectorAll('[data-ring-idx]').forEach(function(c){
+      var i=parseInt(c.getAttribute('data-ring-idx'),10);
       c.addEventListener('mouseenter',function(){redraw(i);});
       c.addEventListener('mouseleave',function(){redraw(null);});
-      c.addEventListener('click',function(){redraw(i);setTimeout(function(){redraw(null);},1200);});
+      c.addEventListener('click',function(){redraw(i);setTimeout(function(){redraw(null);},1400);});
     });
   }
-
-  attachHandlers();
+  attach();
 }
 
-/* ═══════════════════════════════════
-   ANALYTISCH ROWS
-════════════════════════════════════ */
-function initAnalytikRows(container){
-  var trigs = container.querySelectorAll('[data-atrig]');
-  trigs.forEach(function(trig){
+/* ══════════════════════════════════
+   ANALYTISCH EXPAND
+══════════════════════════════════ */
+function initAnalytik(container){
+  container.querySelectorAll('[data-atrig]').forEach(function(trig){
     trig.addEventListener('click',function(){
-      var row = trig.closest('.sj-arow');
-      var det = row.querySelector('[data-adet]');
-      var arr = row.querySelector('[data-aarr]');
-      var isOpen = det.classList.contains('sj-open');
-      if(isOpen){
-        det.style.maxHeight = det.scrollHeight+'px';
+      var row=trig.closest('.sj-arow');
+      var det=row.querySelector('[data-adet]');
+      var arr=row.querySelector('[data-aarr]');
+      if(det.classList.contains('sj-open')){
+        det.style.maxHeight=det.scrollHeight+'px';
         requestAnimationFrame(function(){
-          det.style.maxHeight = '0';
-          det.classList.remove('sj-open');
-          arr && arr.classList.remove('sj-open');
+          det.style.maxHeight='0'; det.classList.remove('sj-open');
+          arr&&arr.classList.remove('sj-open');
         });
       } else {
-        det.classList.add('sj-open');
-        arr && arr.classList.add('sj-open');
-        det.style.maxHeight = det.scrollHeight+'px';
-        det.addEventListener('transitionend',function onEnd(){
-          det.style.maxHeight = 'none';
-          det.removeEventListener('transitionend',onEnd);
+        det.classList.add('sj-open'); arr&&arr.classList.add('sj-open');
+        det.style.maxHeight=det.scrollHeight+'px';
+        det.addEventListener('transitionend',function h(){
+          det.style.maxHeight='none'; det.removeEventListener('transitionend',h);
         });
       }
     });
   });
 }
 
-/* ═══════════════════════════════════
+/* ══════════════════════════════════
    ACCORDION
-════════════════════════════════════ */
-var currentOpen = null;
+══════════════════════════════════ */
+var openCard=null;
 
-function closeCard(card){
-  var body = card.querySelector('.sj-cbody');
-  var btn = card.querySelector('.sj-card-hdr');
-  var tog = card.querySelector('.sj-ctoggle');
-  body.style.maxHeight = body.scrollHeight+'px';
+function closeIt(card){
+  var body=card.querySelector('.sj-cbody');
+  var tog=card.querySelector('.sj-ctoggle');
+  var btn=card.querySelector('.sj-card-hdr');
+  body.style.maxHeight=body.scrollHeight+'px';
   requestAnimationFrame(function(){
-    body.style.maxHeight = '0';
+    body.style.transition='max-height .4s ease-in-out';
+    body.style.maxHeight='0';
     body.classList.remove('sj-open');
-    btn && btn.setAttribute('aria-expanded','false');
-    tog && (tog.style.transform = '');
     body.setAttribute('aria-hidden','true');
+    btn&&btn.setAttribute('aria-expanded','false');
+    tog&&(tog.style.transform='');
   });
-  currentOpen = null;
+  openCard=null;
 }
 
-function openCard(card, instant){
+function openIt(card){
   var sorteId = card.getAttribute('data-sorte-id');
-  var s = SORTEN[sorteId];
-  if(!s) return;
+  var s = SORTEN[sorteId]; if(!s) return;
 
-  var productImg = card.getAttribute('data-product-image') || '';
-  var glassImg = card.getAttribute('data-glass-image') || '';
-  var preis = card.getAttribute('data-preis') || s.preis;
+  var body=card.querySelector('.sj-cbody');
+  var tog=card.querySelector('.sj-ctoggle');
+  var btn=card.querySelector('.sj-card-hdr');
 
-  var body = card.querySelector('.sj-cbody');
-  var btn = card.querySelector('.sj-card-hdr');
-  var tog = card.querySelector('.sj-ctoggle');
+  /* Collapsed header befüllen */
+  var nameEl=card.querySelector('[data-sorte-name]');
+  var subEl =card.querySelector('[data-sorte-subname]');
+  var tagsEl=card.querySelector('[data-tags-wrap]');
+  var preisEl=card.querySelector('[data-preis-display]');
+  if(nameEl) nameEl.textContent = getText(card,'data-name',s.name);
+  if(subEl)  subEl.textContent  = getText(card,'data-subname',s.subName);
+  if(tagsEl) tagsEl.innerHTML   = s.tags.map(function(t){return '<span class="sj-ctag">'+t+'</span>';}).join('');
+  if(preisEl&&!preisEl.textContent.trim()) preisEl.textContent = getText(card,'data-preis',s.preis);
 
-  /* Populate header data */
-  var nameEl = card.querySelector('[data-sorte-name]');
-  var subEl = card.querySelector('[data-sorte-subname]');
-  var tagsEl = card.querySelector('[data-tags-wrap]');
-  var preisEl = card.querySelector('[data-preis-display]');
-  if(nameEl) nameEl.textContent = s.name;
-  if(subEl) subEl.textContent = s.subName;
-  if(tagsEl) tagsEl.innerHTML = s.tags.map(function(t){return '<span class="sj-ctag">'+t+'</span>';}).join('');
-  if(preisEl) preisEl.textContent = preis || s.preis;
-
-  /* Build expanded if empty */
+  /* Expanded HTML einmalig aufbauen */
   if(!body.getAttribute('data-built')){
-    body.innerHTML = buildExpandedHTML(s, productImg, glassImg);
+    var pImg = card.getAttribute('data-product-image')||'';
+    var gImg = card.getAttribute('data-glass-image')||'';
+    body.innerHTML = buildExpanded(s, card, pImg, gImg);
     body.setAttribute('data-built','1');
-    initAnalytikRows(body);
-    var ringContainer = body.querySelector('[data-ring-container]');
-    if(ringContainer){
-      var ringIng = s.zusammensetzung.filter(function(z){return z.typ!=='bruehe'&&z.typ!=='mineral';});
-      initRingHover(ringContainer, ringIng);
-    }
+    initAnalytik(body);
+    var rc = body.querySelector('[data-ring-container]');
+    if(rc){ var ri=s.zusammensetzung.filter(function(z){return z.typ!=='bruehe'&&z.typ!=='mineral';}); initRingHover(rc,ri); }
   }
 
   body.classList.add('sj-open');
-  btn && btn.setAttribute('aria-expanded','true');
-  tog && (tog.style.transform = 'rotate(45deg)');
   body.setAttribute('aria-hidden','false');
-
-  body.style.transition = instant?'none':'max-height 0.5s ease-in-out';
-  body.style.maxHeight = body.scrollHeight+'px';
-  body.addEventListener('transitionend', function onEnd(){
-    if(body.classList.contains('sj-open')) body.style.maxHeight = 'none';
-    body.removeEventListener('transitionend', onEnd);
+  btn&&btn.setAttribute('aria-expanded','true');
+  tog&&(tog.style.transform='rotate(45deg)');
+  body.style.transition='max-height .5s ease-in-out';
+  body.style.maxHeight=body.scrollHeight+'px';
+  body.addEventListener('transitionend',function h(){
+    if(body.classList.contains('sj-open')) body.style.maxHeight='none';
+    body.removeEventListener('transitionend',h);
   });
-
-  currentOpen = card;
+  openCard=card;
 }
 
-function handleToggle(card){
-  if(currentOpen === card){
-    closeCard(card);
-    return;
+function toggle(card){
+  if(openCard===card){ closeIt(card); return; }
+  var topBefore=card.getBoundingClientRect().top;
+  /* Vorherige Karte sofort schließen (kein Jump) */
+  if(openCard){
+    var prev=openCard, pb=prev.querySelector('.sj-cbody');
+    var pt=prev.querySelector('.sj-ctoggle'), ph=prev.querySelector('.sj-card-hdr');
+    pb.style.transition='none'; pb.style.maxHeight='0';
+    pb.classList.remove('sj-open'); pb.setAttribute('aria-hidden','true');
+    ph&&ph.setAttribute('aria-expanded','false'); pt&&(pt.style.transform='');
+    openCard=null;
   }
-
-  var clickedTop = card.getBoundingClientRect().top;
-
-  if(currentOpen){
-    /* Instant close to avoid jump */
-    var prevBody = currentOpen.querySelector('.sj-cbody');
-    var prevBtn = currentOpen.querySelector('.sj-card-hdr');
-    var prevTog = currentOpen.querySelector('.sj-ctoggle');
-    prevBody.style.transition = 'none';
-    prevBody.style.maxHeight = '0';
-    prevBody.classList.remove('sj-open');
-    prevBtn && prevBtn.setAttribute('aria-expanded','false');
-    prevTog && (prevTog.style.transform = '');
-    prevBody.setAttribute('aria-hidden','true');
-    currentOpen = null;
-  }
-
-  /* Scroll compensation */
-  var html = document.documentElement;
-  var prevBehavior = html.style.scrollBehavior;
-  html.style.scrollBehavior = 'auto';
-
-  openCard(card, false);
-
+  var html=document.documentElement, prev=html.style.scrollBehavior;
+  html.style.scrollBehavior='auto';
+  openIt(card);
   requestAnimationFrame(function(){
-    var newTop = card.getBoundingClientRect().top;
-    var drift = newTop - clickedTop;
-    if(Math.abs(drift)>2) window.scrollBy(0, drift);
-    html.style.scrollBehavior = prevBehavior;
+    var drift=card.getBoundingClientRect().top-topBefore;
+    if(Math.abs(drift)>2) window.scrollBy(0,drift);
+    html.style.scrollBehavior=prev;
   });
 }
 
-/* ═══════════════════════════════════
+/* ══════════════════════════════════
    INIT
-════════════════════════════════════ */
+══════════════════════════════════ */
 function init(){
-  var section = document.getElementById('sj-{{ section.id }}');
-  if(!section) return;
-
-  var cards = section.querySelectorAll('.sj-card');
-  cards.forEach(function(card){
-    var sorteId = card.getAttribute('data-sorte-id');
-    var s = SORTEN[sorteId];
-    if(!s) return;
-
-    /* Pre-fill collapsed header */
-    var nameEl = card.querySelector('[data-sorte-name]');
-    var subEl = card.querySelector('[data-sorte-subname]');
-    var tagsEl = card.querySelector('[data-tags-wrap]');
-    var preisEl = card.querySelector('[data-preis-display]');
-    if(nameEl) nameEl.textContent = s.name;
-    if(subEl) subEl.textContent = s.subName;
-    if(tagsEl) tagsEl.innerHTML = s.tags.map(function(t){return '<span class="sj-ctag">'+t+'</span>';}).join('');
-    if(preisEl && !preisEl.textContent.trim()) preisEl.textContent = s.preis;
-
-    var btn = card.querySelector('.sj-card-hdr');
-    if(btn){
-      btn.addEventListener('click',function(){ handleToggle(card); });
-    }
+  var sec=document.getElementById('sj-{{ section.id }}');
+  if(!sec) return;
+  sec.querySelectorAll('.sj-card').forEach(function(card){
+    var s=SORTEN[card.getAttribute('data-sorte-id')]; if(!s) return;
+    /* Header vorab befüllen */
+    var nameEl=card.querySelector('[data-sorte-name]');
+    var subEl =card.querySelector('[data-sorte-subname]');
+    var tagsEl=card.querySelector('[data-tags-wrap]');
+    var preisEl=card.querySelector('[data-preis-display]');
+    if(nameEl) nameEl.textContent = getText(card,'data-name',s.name);
+    if(subEl)  subEl.textContent  = getText(card,'data-subname',s.subName);
+    if(tagsEl) tagsEl.innerHTML   = s.tags.map(function(t){return '<span class="sj-ctag">'+t+'</span>';}).join('');
+    if(preisEl&&!preisEl.textContent.trim()) preisEl.textContent = getText(card,'data-preis',s.preis);
+    card.querySelector('.sj-card-hdr').addEventListener('click',function(){ toggle(card); });
   });
 }
 
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',init);
-} else {
-  init();
-}
+} else { init(); }
 
 })();
 </script>
@@ -1058,6 +1098,10 @@ if(document.readyState==='loading'){
   "name": "Sorten Journey",
   "tag": "div",
   "settings": [
+    {
+      "type": "header",
+      "content": "Hero Banner"
+    },
     {
       "type": "image_picker",
       "id": "hero_image",
@@ -1072,13 +1116,13 @@ if(document.readyState==='loading'){
     {
       "type": "text",
       "id": "headline",
-      "label": "Überschrift",
+      "label": "Überschrift Zeile 1",
       "default": "Die perfekte Woche"
     },
     {
       "type": "text",
       "id": "headline_highlight",
-      "label": "Überschrift (kursiv / Akzentfarbe)",
+      "label": "Überschrift Zeile 2 (kursiv)",
       "default": "für deinen Hund."
     },
     {
@@ -1088,10 +1132,32 @@ if(document.readyState==='loading'){
       "default": "7 Menüs. Jedes für sich komplett. Zusammen die Grundlage für eine natürliche, abwechslungsreiche Ernährung."
     },
     {
+      "type": "header",
+      "content": "Farben"
+    },
+    {
       "type": "color",
-      "id": "amber_color",
-      "label": "Amber Farbe",
-      "default": "#d4a853"
+      "id": "accent_color",
+      "label": "Akzentfarbe",
+      "default": "#c4622d"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Sektion Hintergrund",
+      "default": "#f5ede0"
+    },
+    {
+      "type": "color",
+      "id": "card_color",
+      "label": "Karten Hintergrund (hell)",
+      "default": "#fffaf3"
+    },
+    {
+      "type": "color",
+      "id": "dark_color",
+      "label": "Expanded Hintergrund (dunkel)",
+      "default": "#3d2510"
     }
   ],
   "blocks": [
@@ -1100,9 +1166,14 @@ if(document.readyState==='loading'){
       "name": "Produkt",
       "settings": [
         {
+          "type": "header",
+          "content": "Zuordnung & Bilder"
+        },
+        {
           "type": "select",
           "id": "sorte_id",
           "label": "Sorte (Datenbindung)",
+          "info": "Bestimmt welche Daten (Ring, Nährwerte etc.) geladen werden.",
           "options": [
             {"value":"rind","label":"Rind"},
             {"value":"wild","label":"Wild"},
@@ -1117,7 +1188,7 @@ if(document.readyState==='loading'){
         {
           "type": "select",
           "id": "kategorie",
-          "label": "Kategorie",
+          "label": "Kategorie (für Gruppierung)",
           "options": [
             {"value":"rot","label":"Rotes Fleisch"},
             {"value":"hell","label":"Helles Fleisch"},
@@ -1128,23 +1199,69 @@ if(document.readyState==='loading'){
         {
           "type": "image_picker",
           "id": "product_image",
-          "label": "Produktbild (Dose)"
+          "label": "Produktbild (Dose / Packung)"
         },
         {
           "type": "image_picker",
           "id": "glass_image",
-          "label": "Glasbild (für Ring-Visualisierung)"
+          "label": "Glasbild (für Zusammensetzungsring)"
         },
         {
           "type": "url",
           "id": "product_url",
-          "label": "Produkt URL"
+          "label": "Produkt-URL"
+        },
+        {
+          "type": "header",
+          "content": "Texte (leer = Standard-Text)"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Produktname",
+          "placeholder": "z.B. Rind"
+        },
+        {
+          "type": "text",
+          "id": "sub_name",
+          "label": "Unterbezeichnung",
+          "placeholder": "z.B. mit Kartoffeln & Karotten"
         },
         {
           "type": "text",
           "id": "preis",
-          "label": "Preis (überschreibt Standard)",
+          "label": "Preis",
           "placeholder": "z.B. ab 2,99 €"
+        },
+        {
+          "type": "textarea",
+          "id": "beschreibung",
+          "label": "Beschreibung (expandiert)",
+          "placeholder": "Leer lassen für Standard-Text"
+        },
+        {
+          "type": "textarea",
+          "id": "deklaration",
+          "label": "Vollständige Deklaration",
+          "placeholder": "Leer lassen für Standard-Text"
+        },
+        {
+          "type": "textarea",
+          "id": "benefits",
+          "label": "Benefits (1 pro Zeile, max. 5)",
+          "placeholder": "Stärkt das Herz\nMehr Energie im Alltag\nGesunde Gelenke"
+        },
+        {
+          "type": "textarea",
+          "id": "wusstest",
+          "label": "Wusstest du?",
+          "placeholder": "Leer lassen für Standard-Text"
+        },
+        {
+          "type": "text",
+          "id": "empfehlung",
+          "label": "Empfehlung (grüner Kasten)",
+          "placeholder": "Leer lassen für Standard-Text"
         }
       ]
     }
@@ -1153,13 +1270,13 @@ if(document.readyState==='loading'){
     {
       "name": "Sorten Journey",
       "blocks": [
-        {"type":"produkt","settings":{"sorte_id":"rind","kategorie":"rot"}},
-        {"type":"produkt","settings":{"sorte_id":"wild","kategorie":"rot"}},
-        {"type":"produkt","settings":{"sorte_id":"pferd","kategorie":"rot"}},
-        {"type":"produkt","settings":{"sorte_id":"lamm","kategorie":"rot"}},
+        {"type":"produkt","settings":{"sorte_id":"rind",     "kategorie":"rot"}},
+        {"type":"produkt","settings":{"sorte_id":"wild",     "kategorie":"rot"}},
+        {"type":"produkt","settings":{"sorte_id":"pferd",    "kategorie":"rot"}},
+        {"type":"produkt","settings":{"sorte_id":"lamm",     "kategorie":"rot"}},
         {"type":"produkt","settings":{"sorte_id":"gefluegel","kategorie":"hell"}},
-        {"type":"produkt","settings":{"sorte_id":"ente","kategorie":"hell"}},
-        {"type":"produkt","settings":{"sorte_id":"lachs","kategorie":"fisch"}}
+        {"type":"produkt","settings":{"sorte_id":"ente",     "kategorie":"hell"}},
+        {"type":"produkt","settings":{"sorte_id":"lachs",    "kategorie":"fisch"}}
       ]
     }
   ]
