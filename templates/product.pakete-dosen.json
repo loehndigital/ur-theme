@@ -509,6 +509,86 @@
         "padding_desktop": 120
       }
     },
+    "zutaten_basis_LygL3G": {
+      "type": "zutaten-basis",
+      "blocks": {
+        "feature_iYDxam": {
+          "type": "feature",
+          "settings": {
+            "icon": "🥩",
+            "category": "HAUPTZUTAT",
+            "title": "Muskelfleisch",
+            "text": "Hochwertiges Protein als Grundlage für Energie, Muskulatur und Vitalität."
+          }
+        },
+        "feature_YhEDjU": {
+          "type": "feature",
+          "settings": {
+            "icon": "❤️",
+            "category": "NÄHRSTOFFREICH",
+            "title": "Innereien",
+            "text": "Natürliche Nährstofflieferanten mit wichtigen Vitaminen, Mineralien und Spurenelementen."
+          }
+        },
+        "feature_yV9RbN": {
+          "type": "feature",
+          "settings": {
+            "icon": "🥕",
+            "category": "BALLASTSTOFFE",
+            "title": "Gemüse",
+            "text": "Karotten, Kürbis und mehr für Ballaststoffe, Vitamine und eine gesunde Verdauung."
+          }
+        },
+        "feature_pYyBYD": {
+          "type": "feature",
+          "settings": {
+            "icon": "🌾",
+            "category": "ENERGIEQUELLE",
+            "title": "Supergrains",
+            "text": "Hirse und Amaranth liefern komplexe Kohlenhydrate und wertvolle Nährstoffe."
+          }
+        }
+      },
+      "block_order": [
+        "feature_iYDxam",
+        "feature_YhEDjU",
+        "feature_yV9RbN",
+        "feature_pYyBYD"
+      ],
+      "disabled": true,
+      "name": "Zutaten Basis",
+      "settings": {
+        "badge": "✦ UNSER KONZEPT: WIE SELBST EINGEKOCHT",
+        "headline": "Wenige Zutaten.",
+        "headline_acc": "Maximale Wirkung.",
+        "body": "Was dein Hund täglich frisst, entscheidet über seine Gesundheit. Deshalb besteht jede unserer Rezepturen aus nur vier Bausteinen. Jede Zutat hat eine klare Aufgabe. Nichts ist zufällig, nichts ist überflüssig.",
+        "glass_1": "shopify://shop_images/lamm-glassmall.png",
+        "glass_1_alt": "Lamm",
+        "glass_2": "shopify://shop_images/gefluegel-glassmall.png",
+        "glass_2_alt": "Gelfügel",
+        "glass_3": "shopify://shop_images/lachs-glassmall.png",
+        "glass_3_alt": "Lachs",
+        "banner_label": "Gutes braucht nicht viel",
+        "banner_text_pre": "Wenn jede Zutat einen Zweck hat, reicht",
+        "banner_text_acc": "erstaunlich wenig.",
+        "banner_text_post": "Ein 16 kg Hund bekommt bei uns rund 400 g am Tag. Alles drin, was er braucht.",
+        "banner_sub": "Wer die Zutatenliste versteht, füttert anders.",
+        "banner_num": "~400g",
+        "banner_num_label": "pro Tag · 16 kg Hund",
+        "banner_img_1_alt": "",
+        "banner_img_2_alt": "",
+        "banner_img_3_alt": "",
+        "cta1_text": "",
+        "cta1_url": "",
+        "cta2_text": "",
+        "cta2_url": "",
+        "accent_color": "#c4622d",
+        "bg_color": "#1a0e05",
+        "padding_mobile": 60,
+        "padding_tablet": 100,
+        "padding_desktop": 120
+      }
+    },
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6": {
       "type": "rich-text",
       "blocks": {
@@ -1083,6 +1163,7 @@
     "1524c9a4-f315-47a6-adbc-31e43082bbc0",
     "warum_hero_VjppDx",
     "sorten_journey_jqKbAj",
+    "zutaten_basis_LygL3G",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "nassfutter_grid_84cBg3",
     "multicolumn_p4aU8N",

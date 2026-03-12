@@ -461,6 +461,8 @@
             {%- if section.settings.glass_1 -%}
               <img src="{{ section.settings.glass_1 | image_url: width: 400 }}"
                    alt="{{ section.settings.glass_1_alt | default: 'Zutat' }}"
+                   width="{{ section.settings.glass_1.width }}"
+                   height="{{ section.settings.glass_1.height }}"
                    loading="lazy" decoding="async">
             {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
           </div>
@@ -468,6 +470,8 @@
             {%- if section.settings.glass_2 -%}
               <img src="{{ section.settings.glass_2 | image_url: width: 400 }}"
                    alt="{{ section.settings.glass_2_alt | default: 'Zutat' }}"
+                   width="{{ section.settings.glass_2.width }}"
+                   height="{{ section.settings.glass_2.height }}"
                    loading="lazy" decoding="async">
             {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
           </div>
@@ -475,6 +479,8 @@
             {%- if section.settings.glass_3 -%}
               <img src="{{ section.settings.glass_3 | image_url: width: 400 }}"
                    alt="{{ section.settings.glass_3_alt | default: 'Zutat' }}"
+                   width="{{ section.settings.glass_3.width }}"
+                   height="{{ section.settings.glass_3.height }}"
                    loading="lazy" decoding="async">
             {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
           </div>
@@ -492,6 +498,8 @@
           {%- if section.settings.glass_1 -%}
             <img src="{{ section.settings.glass_1 | image_url: width: 600 }}"
                  alt="{{ section.settings.glass_1_alt | default: 'Zutat' }}"
+                 width="{{ section.settings.glass_1.width }}"
+                 height="{{ section.settings.glass_1.height }}"
                  loading="lazy" decoding="async">
           {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
         </div>
@@ -499,6 +507,8 @@
           {%- if section.settings.glass_2 -%}
             <img src="{{ section.settings.glass_2 | image_url: width: 600 }}"
                  alt="{{ section.settings.glass_2_alt | default: 'Zutat' }}"
+                 width="{{ section.settings.glass_2.width }}"
+                 height="{{ section.settings.glass_2.height }}"
                  loading="lazy" decoding="async">
           {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
         </div>
@@ -506,6 +516,8 @@
           {%- if section.settings.glass_3 -%}
             <img src="{{ section.settings.glass_3 | image_url: width: 600 }}"
                  alt="{{ section.settings.glass_3_alt | default: 'Zutat' }}"
+                 width="{{ section.settings.glass_3.width }}"
+                 height="{{ section.settings.glass_3.height }}"
                  loading="lazy" decoding="async">
           {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
         </div>
@@ -539,15 +551,24 @@
         <div class="zb-banner-imgs-mobile">
           {%- if section.settings.banner_img_1 -%}
             <img src="{{ section.settings.banner_img_1 | image_url: width: 300 }}"
-                 alt="{{ section.settings.banner_img_1_alt | default: '' }}" loading="lazy" decoding="async">
+                 alt="{{ section.settings.banner_img_1_alt | default: '' }}"
+                 width="{{ section.settings.banner_img_1.width }}"
+                 height="{{ section.settings.banner_img_1.height }}"
+                 loading="lazy" decoding="async">
           {%- endif -%}
           {%- if section.settings.banner_img_2 -%}
             <img src="{{ section.settings.banner_img_2 | image_url: width: 300 }}"
-                 alt="{{ section.settings.banner_img_2_alt | default: '' }}" loading="lazy" decoding="async">
+                 alt="{{ section.settings.banner_img_2_alt | default: '' }}"
+                 width="{{ section.settings.banner_img_2.width }}"
+                 height="{{ section.settings.banner_img_2.height }}"
+                 loading="lazy" decoding="async">
           {%- endif -%}
           {%- if section.settings.banner_img_3 -%}
             <img src="{{ section.settings.banner_img_3 | image_url: width: 300 }}"
-                 alt="{{ section.settings.banner_img_3_alt | default: '' }}" loading="lazy" decoding="async">
+                 alt="{{ section.settings.banner_img_3_alt | default: '' }}"
+                 width="{{ section.settings.banner_img_3.width }}"
+                 height="{{ section.settings.banner_img_3.height }}"
+                 loading="lazy" decoding="async">
           {%- endif -%}
         </div>
       {%- endif -%}
@@ -559,15 +580,24 @@
           <div class="zb-banner-imgs-desktop">
             {%- if section.settings.banner_img_1 -%}
               <img src="{{ section.settings.banner_img_1 | image_url: width: 300 }}"
-                   alt="{{ section.settings.banner_img_1_alt | default: '' }}" loading="lazy" decoding="async">
+                   alt="{{ section.settings.banner_img_1_alt | default: '' }}"
+                   width="{{ section.settings.banner_img_1.width }}"
+                   height="{{ section.settings.banner_img_1.height }}"
+                   loading="lazy" decoding="async">
             {%- endif -%}
             {%- if section.settings.banner_img_2 -%}
               <img src="{{ section.settings.banner_img_2 | image_url: width: 300 }}"
-                   alt="{{ section.settings.banner_img_2_alt | default: '' }}" loading="lazy" decoding="async">
+                   alt="{{ section.settings.banner_img_2_alt | default: '' }}"
+                   width="{{ section.settings.banner_img_2.width }}"
+                   height="{{ section.settings.banner_img_2.height }}"
+                   loading="lazy" decoding="async">
             {%- endif -%}
             {%- if section.settings.banner_img_3 -%}
               <img src="{{ section.settings.banner_img_3 | image_url: width: 300 }}"
-                   alt="{{ section.settings.banner_img_3_alt | default: '' }}" loading="lazy" decoding="async">
+                   alt="{{ section.settings.banner_img_3_alt | default: '' }}"
+                   width="{{ section.settings.banner_img_3.width }}"
+                   height="{{ section.settings.banner_img_3.height }}"
+                   loading="lazy" decoding="async">
             {%- endif -%}
           </div>
         {%- endif -%}
