@@ -51,15 +51,17 @@
 @media(min-width:768px){ .sj-hero { border-radius:16px; margin:0 44px 56px } }
 .sj-hero-img  { width:100%; object-fit:cover; aspect-ratio:16/10; display:block }
 @media(min-width:768px){ .sj-hero-img { aspect-ratio:21/9 } }
-.sj-hero-or   { position:absolute; inset:0; pointer-events:none; opacity:{{ vo }};
+.sj-hero-or   { position:absolute; inset:0; pointer-events:none;
+  opacity: var(--sj-vig-op, 0.8);
   background: linear-gradient(100deg,
-    rgba({{ vr }},{{ vg }},{{ vb }},.95) 0%,
-    rgba({{ vr }},{{ vg }},{{ vb }},.82) 30%,
-    rgba({{ vr }},{{ vg }},{{ vb }},.5) 55%,
-    rgba({{ vr }},{{ vg }},{{ vb }},.12) 78%,
+    rgba(var(--sj-vig-rgb),.95) 0%,
+    rgba(var(--sj-vig-rgb),.82) 30%,
+    rgba(var(--sj-vig-rgb),.5) 55%,
+    rgba(var(--sj-vig-rgb),.12) 78%,
     transparent 100%) }
-.sj-hero-ot   { position:absolute; inset:0; pointer-events:none; opacity:{{ vo }};
-  background: linear-gradient(to bottom, rgba({{ vr }},{{ vg }},{{ vb }},.4) 0%, transparent 40%) }
+.sj-hero-ot   { position:absolute; inset:0; pointer-events:none;
+  opacity: var(--sj-vig-op, 0.8);
+  background: linear-gradient(to bottom, rgba(var(--sj-vig-rgb),.4) 0%, transparent 40%) }
 .sj-hero-ob   { position:absolute; inset:0; pointer-events:none;
   background: linear-gradient(to top, var(--sj-bg) 0%, transparent 22%) }
 .sj-hero-content { position:absolute; inset:0; display:flex; align-items:center; padding:0 24px }
@@ -202,7 +204,7 @@
 @media(min-width:768px) { .sj-orbit { width:224px; height:224px } }
 @media(min-width:1024px){ .sj-orbit { width:288px; height:288px } }
 .sj-orbit-dot { position:absolute; display:none }
-@media(min-width:768px){ .sj-orbit-dot { display:block } }
+@media(min-width:1280px){ .sj-orbit-dot { display:block } }
 .sj-orbit-star {
   width:22px; height:22px; border-radius:50%; background:var(--sj-accent);
   box-shadow:0 0 12px rgba(196,98,45,.5),0 0 24px rgba(196,98,45,.2);
@@ -396,7 +398,7 @@
 </style>
 
 {%- assign sid = section.id -%}
-<section id="sj-{{ sid }}">
+<section id="sj-{{ sid }}" style="--sj-vig-rgb:{{ vr }},{{ vg }},{{ vb }};--sj-vig-op:{{ vo }}">
 
   {%- comment -%} ═══ HERO BANNER ═══ {%- endcomment -%}
   <div class="sj-hero">
