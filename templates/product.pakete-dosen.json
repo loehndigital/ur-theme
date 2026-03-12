@@ -300,6 +300,8 @@
           "settings": {
             "sorte_id": "wild",
             "kategorie": "rot",
+            "product_image": "shopify://shop_images/wild.png",
+            "glass_image": "shopify://shop_images/wild-glassmall.png",
             "product_url": "",
             "name": "",
             "sub_name": "",
@@ -316,6 +318,8 @@
           "settings": {
             "sorte_id": "pferd",
             "kategorie": "rot",
+            "product_image": "shopify://shop_images/pferd.png",
+            "glass_image": "shopify://shop_images/pferd-glassmal.png",
             "product_url": "",
             "name": "",
             "sub_name": "",
@@ -332,6 +336,8 @@
           "settings": {
             "sorte_id": "lamm",
             "kategorie": "rot",
+            "product_image": "shopify://shop_images/lamm.png",
+            "glass_image": "shopify://shop_images/lamm-glassmall.png",
             "product_url": "",
             "name": "",
             "sub_name": "",
