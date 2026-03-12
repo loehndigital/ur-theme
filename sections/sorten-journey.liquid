@@ -3,6 +3,12 @@
   Platzierung: sections/sorten-journey.liquid
 {%- endcomment -%}
 
+{%- assign vc = section.settings.vignette_color | default: '#1e1006' -%}
+{%- assign vr = vc | color_extract: 'red' -%}
+{%- assign vg = vc | color_extract: 'green' -%}
+{%- assign vb = vc | color_extract: 'blue' -%}
+{%- assign vo = section.settings.vignette_opacity | default: 80 | divided_by: 100.0 -%}
+
 <style>
 /* ╔══════════════════════════════════╗
    ║  UNCLE RUSTY'S CI               ║
@@ -45,10 +51,15 @@
 @media(min-width:768px){ .sj-hero { border-radius:16px; margin:0 44px 56px } }
 .sj-hero-img  { width:100%; object-fit:cover; aspect-ratio:16/10; display:block }
 @media(min-width:768px){ .sj-hero-img { aspect-ratio:21/9 } }
-.sj-hero-or   { position:absolute; inset:0; pointer-events:none;
-  background: linear-gradient(100deg, rgba(30,16,6,.95) 0%, rgba(30,16,6,.82) 30%, rgba(30,16,6,.5) 55%, rgba(30,16,6,.12) 78%, transparent 100%) }
-.sj-hero-ot   { position:absolute; inset:0; pointer-events:none;
-  background: linear-gradient(to bottom, rgba(30,16,6,.4) 0%, transparent 40%) }
+.sj-hero-or   { position:absolute; inset:0; pointer-events:none; opacity:{{ vo }};
+  background: linear-gradient(100deg,
+    rgba({{ vr }},{{ vg }},{{ vb }},.95) 0%,
+    rgba({{ vr }},{{ vg }},{{ vb }},.82) 30%,
+    rgba({{ vr }},{{ vg }},{{ vb }},.5) 55%,
+    rgba({{ vr }},{{ vg }},{{ vb }},.12) 78%,
+    transparent 100%) }
+.sj-hero-ot   { position:absolute; inset:0; pointer-events:none; opacity:{{ vo }};
+  background: linear-gradient(to bottom, rgba({{ vr }},{{ vg }},{{ vb }},.4) 0%, transparent 40%) }
 .sj-hero-ob   { position:absolute; inset:0; pointer-events:none;
   background: linear-gradient(to top, var(--sj-bg) 0%, transparent 22%) }
 .sj-hero-content { position:absolute; inset:0; display:flex; align-items:center; padding:0 24px }
@@ -198,13 +209,16 @@
   display:flex; align-items:center; justify-content:center; font-size:10px; color:#fff
 }
 .sj-orbit-lbl {
+  /* Labels nur ab 1280px (genug Platz damit nichts geclippt wird) */
+  display:none;
   position:absolute; white-space:nowrap; padding:5px 12px; border-radius:999px;
   font-size:10px; font-weight:600;
   backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
-  background:rgba(255,255,255,0.78); border:1px solid rgba(196,98,45,.2);
+  background:rgba(255,255,255,0.82); border:1px solid rgba(196,98,45,.2);
   box-shadow:0 2px 8px rgba(60,35,15,.1);
   color:var(--sj-dark); pointer-events:none
 }
+@media(min-width:1280px){ .sj-orbit-lbl { display:block } }
 
 .sj-xdesc { display:flex; flex-direction:column; justify-content:center; padding:24px 20px }
 @media(min-width:768px){ .sj-xdesc { padding:48px 40px } }
@@ -879,9 +893,8 @@ function buildExpanded(s, card, productImg, glassImg){
   for(var bi=0;bi<benefits.length;bi++){
     var ang=(-90+(bi*360)/benefits.length)*(Math.PI/180);
     var x=50+46*Math.cos(ang), y=50+46*Math.sin(ang);
-    /* Labels immer nach RECHTS vom Dot – verhindert Clipping am linken Kartenrand */
-    var lL = (x>=45&&x<=55) ? '50%' : '110%';
-    var lR = 'auto';
+    /* Labels nach AUSSEN vom Bildzentrum – ab 1280px via CSS eingeblendet */
+    var lL=x>55?'110%':x<45?'auto':'50%', lR=x<45?'110%':'auto';
     var lT=(x>=45&&x<=55)?(y<50?'auto':'110%'):'50%';
     var lB=(x>=45&&x<=55&&y<50)?'110%':'auto';
     var lX=(x>=45&&x<=55)?'translateX(-50%)':'translateY(-50%)';
@@ -1203,6 +1216,26 @@ if(document.readyState==='loading'){
       "id": "subtext",
       "label": "Untertext",
       "default": "7 Menüs. Jedes für sich komplett. Zusammen die Grundlage für eine natürliche, abwechslungsreiche Ernährung."
+    },
+    {
+      "type": "header",
+      "content": "Hero Vignette"
+    },
+    {
+      "type": "color",
+      "id": "vignette_color",
+      "label": "Vignette Farbe",
+      "default": "#1e1006"
+    },
+    {
+      "type": "range",
+      "id": "vignette_opacity",
+      "label": "Vignette Stärke",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 80
     },
     {
       "type": "header",
