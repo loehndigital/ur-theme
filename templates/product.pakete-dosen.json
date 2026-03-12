@@ -274,6 +274,58 @@
         "padding_bottom": 36
       }
     },
+    "warum_hero_VjppDx": {
+      "type": "warum-hero",
+      "blocks": {
+        "badge_nbK6JW": {
+          "type": "badge",
+          "settings": {
+            "icon": "📋",
+            "label": "Offene Deklaration"
+          }
+        },
+        "badge_g86Czp": {
+          "type": "badge",
+          "settings": {
+            "icon": "🌿",
+            "label": "Regionale Zutaten"
+          }
+        },
+        "badge_cJL6Y7": {
+          "type": "badge",
+          "settings": {
+            "icon": "🏠",
+            "label": "Familiengeführt"
+          }
+        }
+      },
+      "block_order": [
+        "badge_nbK6JW",
+        "badge_g86Czp",
+        "badge_cJL6Y7"
+      ],
+      "disabled": true,
+      "name": "Warum Hero",
+      "settings": {
+        "eyebrow": "+ WARUM UNCLE RUSTY'S",
+        "headline": "Gesundheit beginnt nicht beim Tierarzt.",
+        "headline_acc": "Sie beginnt im Napf.",
+        "body": "Viele Hundefutter klingen gut, aber ein Blick auf die Zutatenliste erzählt eine andere Geschichte. Unklare Deklarationen, unnötige Zusatzstoffe und schwer nachvollziehbare Rezepturen.",
+        "stmt_pre": "Darum verfolgen wir einen einfachen Ansatz:",
+        "stmt_acc": "Zutaten, die man versteht.",
+        "tagline": "Der Napf entscheidet jeden Tag über Energie, Verdauung und Wohlbefinden. Darum entwickeln wir Hundefutter, das diese Grundlage ernst nimmt.",
+        "cta_text": "",
+        "cta_url": "",
+        "image": "shopify://shop_images/warum-hero.jpg",
+        "image_alt": "Uncle Rusty's Hundefutter",
+        "img_label": "",
+        "image_side": "right",
+        "accent_color": "#c4622d",
+        "bg_color": "#EBE6D9",
+        "card_color": "#fffaf3",
+        "dark_color": "#3d2510"
+      }
+    },
     "sorten_journey_jqKbAj": {
       "type": "sorten-journey",
       "blocks": {
@@ -1000,6 +1052,7 @@
     "main",
     "1694596722fbd3b4b2",
     "1524c9a4-f315-47a6-adbc-31e43082bbc0",
+    "warum_hero_VjppDx",
     "sorten_journey_jqKbAj",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "nassfutter_grid_84cBg3",
