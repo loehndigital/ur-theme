@@ -346,7 +346,10 @@
         "accent_color": "#c4622d",
         "bg_color": "#ebe6d9",
         "card_color": "#fffaf3",
-        "dark_color": "#3d2510"
+        "dark_color": "#3d2510",
+        "padding_mobile": 60,
+        "padding_tablet": 100,
+        "padding_desktop": 120
       }
     },
     "sorten_journey_jqKbAj": {
@@ -500,7 +503,10 @@
         "accent_color": "#c4622d",
         "bg_color": "#f5ede0",
         "card_color": "#fffaf3",
-        "dark_color": "#3d2510"
+        "dark_color": "#3d2510",
+        "padding_mobile": 60,
+        "padding_tablet": 100,
+        "padding_desktop": 120
       }
     },
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6": {
