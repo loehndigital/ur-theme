@@ -1,0 +1,1011 @@
+{%- comment -%}
+  Uncle Rusty's – Zutaten Basis
+  Platzierung: sections/zutaten-basis.liquid
+{%- endcomment -%}
+
+{%- assign ac  = section.settings.accent_color | default: '#c4622d' -%}
+{%- assign ar  = ac | color_extract: 'red'   -%}
+{%- assign ag  = ac | color_extract: 'green' -%}
+{%- assign ab  = ac | color_extract: 'blue'  -%}
+
+{%- assign pad_mobile  = section.settings.padding_mobile  | default: 60  -%}
+{%- assign pad_tablet  = section.settings.padding_tablet  | default: 100 -%}
+{%- assign pad_desktop = section.settings.padding_desktop | default: 120 -%}
+
+<style>
+/* ╔══════════════════════════════════╗
+   ║  UNCLE RUSTY'S – ZUTATEN BASIS  ║
+   ╚══════════════════════════════════╝ */
+
+#zb-{{ section.id }} {
+  --zb-accent:  {{ section.settings.accent_color | default: '#c4622d' }};
+  --zb-bg:      {{ section.settings.bg_color     | default: '#1a0e05' }};
+  --zb-text:    #f5ede0;
+  --zb-text2:   #d4b896;
+  --zb-dim:     #9a7c5a;
+  --zb-border:  rgba(245,237,224,0.10);
+  --zb-card:    rgba(245,237,224,0.06);
+  --zb-glow:    rgba({{ ar }},{{ ag }},{{ ab }},0.15);
+
+  background-color: var(--zb-bg);
+  padding: {{ pad_mobile }}px 20px;
+  font-family: inherit;
+}
+@media(min-width:768px)  { #zb-{{ section.id }} { padding: {{ pad_tablet }}px 28px  } }
+@media(min-width:1024px) { #zb-{{ section.id }} { padding: {{ pad_desktop }}px 48px } }
+
+/* ══ Inner ════════════════════════════════ */
+#zb-{{ section.id }} .zb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ══ Section Badge ════════════════════════ */
+#zb-{{ section.id }} .zb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba({{ ar }},{{ ag }},{{ ab }},0.10);
+  border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.25);
+  color: var(--zb-accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* ══ Hero Grid ════════════════════════════ */
+#zb-{{ section.id }} .zb-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+@media(min-width:1024px) {
+  #zb-{{ section.id }} .zb-hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    margin-bottom: 60px;
+  }
+}
+
+/* ══ Text-Spalte ══════════════════════════ */
+#zb-{{ section.id }} .zb-headline {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--zb-text);
+  margin: 0 0 20px;
+}
+@media(min-width:768px)  { #zb-{{ section.id }} .zb-headline { font-size: 50px } }
+@media(min-width:1024px) { #zb-{{ section.id }} .zb-headline { font-size: 58px } }
+
+#zb-{{ section.id }} .zb-headline em {
+  display: block;
+  font-style: italic;
+  color: var(--zb-accent);
+}
+
+#zb-{{ section.id }} .zb-body {
+  color: var(--zb-text2);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-body { font-size: 16px } }
+
+/* ══ Gläser: Mobile (flex, nebeneinander) ═ */
+#zb-{{ section.id }} .zb-glasses-mobile {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  margin: 28px 0;
+}
+@media(min-width:1024px) { #zb-{{ section.id }} .zb-glasses-mobile { display: none } }
+
+#zb-{{ section.id }} .zb-glasses-mobile .zb-glow-mobile {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+#zb-{{ section.id }} .zb-glasses-mobile .zb-glow-mobile span {
+  display: block;
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--zb-glow), transparent);
+  filter: blur(60px);
+}
+
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-1,
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-3 { width: 32%; position: relative; z-index: 10 }
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-2 { width: 34%; position: relative; z-index: 20 }
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-1 { margin-right: -6% }
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-3 { margin-left: -6% }
+
+#zb-{{ section.id }} .zb-glasses-mobile img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 16px 32px rgba(0,0,0,0.5));
+}
+
+/* ══ Gläser: Desktop (absolut, überlappend) */
+#zb-{{ section.id }} .zb-glasses-desktop {
+  display: none;
+  position: relative;
+  min-height: 320px;
+}
+@media(min-width:1024px) {
+  #zb-{{ section.id }} .zb-glasses-desktop {
+    display: flex;
+    min-height: 380px;
+  }
+}
+
+/* Amber-Glow hinter den Gläsern */
+#zb-{{ section.id }} .zb-glasses-desktop .zb-glow-desktop {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; height: 60%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--zb-glow), transparent);
+  filter: blur(100px);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#zb-{{ section.id }} .zb-gd-1,
+#zb-{{ section.id }} .zb-gd-2,
+#zb-{{ section.id }} .zb-gd-3 {
+  position: absolute;
+  bottom: 0;
+  width: 54%;
+  will-change: transform;
+}
+#zb-{{ section.id }} .zb-gd-1 { left: 0;   z-index: 10 }
+#zb-{{ section.id }} .zb-gd-2 { left: 50%; z-index: 20; transform: translateX(-50%) }
+#zb-{{ section.id }} .zb-gd-3 { right: 0;  z-index: 10 }
+
+/* Glas 2 Mitte leicht angehoben */
+#zb-{{ section.id }} .zb-gd-2 { bottom: 5% }
+
+#zb-{{ section.id }} .zb-glasses-desktop img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.55));
+}
+
+/* Placeholder (kein Bild gesetzt) */
+#zb-{{ section.id }} .zb-glass-ph {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 2px dashed rgba(245,237,224,0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(245,237,224,0.2);
+  font-size: 24px;
+}
+
+/* ══ Feature-Karten ═══════════════════════ */
+#zb-{{ section.id }} .zb-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+@media(min-width:768px)  { #zb-{{ section.id }} .zb-features { gap: 14px } }
+@media(min-width:1024px) { #zb-{{ section.id }} .zb-features { grid-template-columns: repeat(4,1fr); gap: 18px; margin-bottom: 18px } }
+
+#zb-{{ section.id }} .zb-feat-card {
+  background: var(--zb-card);
+  border: 1px solid var(--zb-border);
+  border-radius: 18px;
+  padding: 18px 14px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: border-color .3s;
+  position: relative;
+  overflow: hidden;
+}
+#zb-{{ section.id }} .zb-feat-card:hover { border-color: rgba({{ ar }},{{ ag }},{{ ab }},0.35) }
+@media(min-width:768px) { #zb-{{ section.id }} .zb-feat-card { padding: 26px 22px } }
+
+/* Subtiler Glow-Akzent in der Ecke */
+#zb-{{ section.id }} .zb-feat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 96px; height: 96px;
+  background: radial-gradient(circle at top right, rgba({{ ar }},{{ ag }},{{ ab }},0.08), transparent 70%);
+  pointer-events: none;
+}
+
+#zb-{{ section.id }} .zb-feat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+#zb-{{ section.id }} .zb-feat-icon-wrap {
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  background: rgba({{ ar }},{{ ag }},{{ ab }},0.10);
+  border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.20);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: transform .3s;
+}
+#zb-{{ section.id }} .zb-feat-card:hover .zb-feat-icon-wrap { transform: scale(1.1) }
+
+#zb-{{ section.id }} .zb-feat-cat {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba({{ ar }},{{ ag }},{{ ab }},0.7);
+  background: rgba({{ ar }},{{ ag }},{{ ab }},0.06);
+  border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.12);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+#zb-{{ section.id }} .zb-feat-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--zb-text);
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-feat-title { font-size: 21px } }
+
+#zb-{{ section.id }} .zb-feat-text {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--zb-dim);
+  margin: 0;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-feat-text { font-size: 13px } }
+
+/* ══ Bottom Banner ════════════════════════ */
+#zb-{{ section.id }} .zb-banner {
+  background: var(--zb-card);
+  border: 1px solid var(--zb-border);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 24px 20px;
+  margin-bottom: 48px;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-banner { padding: 28px 32px } }
+@media(min-width:1024px) { #zb-{{ section.id }} .zb-banner { padding: 32px 44px } }
+
+/* Mobile: Bilder nebeneinander oben */
+#zb-{{ section.id }} .zb-banner-imgs-mobile {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-banner-imgs-mobile { display: none } }
+
+#zb-{{ section.id }} .zb-banner-imgs-mobile img {
+  width: calc(33.33% - 6px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Desktop: Grid 3 Spalten */
+#zb-{{ section.id }} .zb-banner-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media(min-width:768px) {
+  #zb-{{ section.id }} .zb-banner-grid {
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+  }
+}
+@media(min-width:1024px) { #zb-{{ section.id }} .zb-banner-grid { gap: 40px } }
+
+/* Desktop Bilder-Strip */
+#zb-{{ section.id }} .zb-banner-imgs-desktop {
+  display: none;
+  gap: 8px;
+  flex-shrink: 0;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-banner-imgs-desktop { display: flex } }
+
+#zb-{{ section.id }} .zb-banner-imgs-desktop img {
+  width: 100px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px -8px rgba(0,0,0,0.6);
+}
+@media(min-width:1024px) { #zb-{{ section.id }} .zb-banner-imgs-desktop img { width: 120px } }
+
+/* Banner Text */
+#zb-{{ section.id }} .zb-banner-body { flex: 1; min-width: 0 }
+
+#zb-{{ section.id }} .zb-banner-label {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba({{ ar }},{{ ag }},{{ ab }},0.7);
+  background: rgba({{ ar }},{{ ag }},{{ ab }},0.06);
+  border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.12);
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+#zb-{{ section.id }} .zb-banner-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--zb-text);
+  margin: 0 0 8px;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-banner-text { font-size: 16px } }
+
+#zb-{{ section.id }} .zb-banner-text strong { color: var(--zb-accent); font-weight: 600 }
+
+#zb-{{ section.id }} .zb-banner-sub {
+  font-size: 12px;
+  color: var(--zb-dim);
+  margin: 0;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-banner-sub { font-size: 13px } }
+
+/* Banner: Große Zahl */
+#zb-{{ section.id }} .zb-banner-num {
+  flex-shrink: 0;
+  text-align: left;
+}
+@media(min-width:768px) { #zb-{{ section.id }} .zb-banner-num { text-align: right } }
+
+#zb-{{ section.id }} .zb-banner-num-val {
+  font-size: 44px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--zb-accent);
+  line-height: 1;
+}
+@media(min-width:1024px) { #zb-{{ section.id }} .zb-banner-num-val { font-size: 56px } }
+
+#zb-{{ section.id }} .zb-banner-num-label {
+  font-size: 11px;
+  color: var(--zb-dim);
+  margin-top: 5px;
+}
+
+/* ══ CTAs ═════════════════════════════════ */
+#zb-{{ section.id }} .zb-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media(min-width:640px) { #zb-{{ section.id }} .zb-ctas { flex-direction: row; align-items: center; gap: 20px } }
+
+#zb-{{ section.id }} .zb-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: var(--zb-accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+#zb-{{ section.id }} .zb-btn-primary:hover { opacity: .88 }
+
+#zb-{{ section.id }} .zb-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--zb-text2);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 14px 0;
+  transition: color .2s;
+}
+#zb-{{ section.id }} .zb-btn-secondary:hover { color: var(--zb-text) }
+#zb-{{ section.id }} .zb-btn-secondary span { color: rgba({{ ar }},{{ ag }},{{ ab }},0.6) }
+</style>
+
+<div id="zb-{{ section.id }}">
+  <div class="zb-inner">
+
+    <!-- ── Hero: Badge + Headline + Text + Gläser ── -->
+    <div class="zb-hero">
+
+      <div class="zb-text-col">
+        {%- if section.settings.badge != blank -%}
+          <div class="zb-badge">{{ section.settings.badge }}</div>
+        {%- endif -%}
+
+        <h2 class="zb-headline">
+          {{ section.settings.headline | default: 'Wenige Zutaten.' }}
+          <em>{{ section.settings.headline_acc | default: 'Maximale Wirkung.' }}</em>
+        </h2>
+
+        <!-- Gläser: nur Mobile (zwischen Headline und Text) -->
+        <div class="zb-glasses-mobile">
+          <div class="zb-glow-mobile"><span></span></div>
+          <div class="zb-gm-1" data-zb-m-parallax="-0.02">
+            {%- if section.settings.glass_1 -%}
+              <img src="{{ section.settings.glass_1 | image_url: width: 400 }}"
+                   alt="{{ section.settings.glass_1_alt | default: 'Zutat' }}"
+                   loading="lazy" decoding="async">
+            {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
+          </div>
+          <div class="zb-gm-2" data-zb-m-parallax="0.03">
+            {%- if section.settings.glass_2 -%}
+              <img src="{{ section.settings.glass_2 | image_url: width: 400 }}"
+                   alt="{{ section.settings.glass_2_alt | default: 'Zutat' }}"
+                   loading="lazy" decoding="async">
+            {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
+          </div>
+          <div class="zb-gm-3" data-zb-m-parallax="-0.018">
+            {%- if section.settings.glass_3 -%}
+              <img src="{{ section.settings.glass_3 | image_url: width: 400 }}"
+                   alt="{{ section.settings.glass_3_alt | default: 'Zutat' }}"
+                   loading="lazy" decoding="async">
+            {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
+          </div>
+        </div>
+
+        {%- if section.settings.body != blank -%}
+          <p class="zb-body">{{ section.settings.body }}</p>
+        {%- endif -%}
+      </div>
+
+      <!-- Gläser: nur Desktop (absolut positioniert, überlappend) -->
+      <div class="zb-glasses-desktop">
+        <div class="zb-glow-desktop"></div>
+        <div class="zb-gd-1" data-zb-parallax="-0.04">
+          {%- if section.settings.glass_1 -%}
+            <img src="{{ section.settings.glass_1 | image_url: width: 600 }}"
+                 alt="{{ section.settings.glass_1_alt | default: 'Zutat' }}"
+                 loading="lazy" decoding="async">
+          {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
+        </div>
+        <div class="zb-gd-2" data-zb-parallax="0.06">
+          {%- if section.settings.glass_2 -%}
+            <img src="{{ section.settings.glass_2 | image_url: width: 600 }}"
+                 alt="{{ section.settings.glass_2_alt | default: 'Zutat' }}"
+                 loading="lazy" decoding="async">
+          {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
+        </div>
+        <div class="zb-gd-3" data-zb-parallax="-0.035">
+          {%- if section.settings.glass_3 -%}
+            <img src="{{ section.settings.glass_3 | image_url: width: 600 }}"
+                 alt="{{ section.settings.glass_3_alt | default: 'Zutat' }}"
+                 loading="lazy" decoding="async">
+          {%- else -%}<div class="zb-glass-ph">🫙</div>{%- endif -%}
+        </div>
+      </div>
+
+    </div><!-- /.zb-hero -->
+
+    <!-- ── Feature-Karten (Blocks) ── -->
+    {%- if section.blocks.size > 0 -%}
+      <div class="zb-features">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'feature' -%}
+            <div class="zb-feat-card" {{ block.shopify_attributes }}>
+              <div class="zb-feat-header">
+                <div class="zb-feat-icon-wrap">{{ block.settings.icon | default: '✦' }}</div>
+                <span class="zb-feat-cat">{{ block.settings.category }}</span>
+              </div>
+              <div class="zb-feat-title">{{ block.settings.title }}</div>
+              <p class="zb-feat-text">{{ block.settings.text }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <!-- ── Bottom Banner ── -->
+    <div class="zb-banner">
+
+      <!-- Mobile: Bilder oben -->
+      {%- if section.settings.banner_img_1 or section.settings.banner_img_2 or section.settings.banner_img_3 -%}
+        <div class="zb-banner-imgs-mobile">
+          {%- if section.settings.banner_img_1 -%}
+            <img src="{{ section.settings.banner_img_1 | image_url: width: 300 }}"
+                 alt="{{ section.settings.banner_img_1_alt | default: '' }}" loading="lazy" decoding="async">
+          {%- endif -%}
+          {%- if section.settings.banner_img_2 -%}
+            <img src="{{ section.settings.banner_img_2 | image_url: width: 300 }}"
+                 alt="{{ section.settings.banner_img_2_alt | default: '' }}" loading="lazy" decoding="async">
+          {%- endif -%}
+          {%- if section.settings.banner_img_3 -%}
+            <img src="{{ section.settings.banner_img_3 | image_url: width: 300 }}"
+                 alt="{{ section.settings.banner_img_3_alt | default: '' }}" loading="lazy" decoding="async">
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="zb-banner-grid">
+
+        <!-- Desktop: Bilder-Strip links -->
+        {%- if section.settings.banner_img_1 or section.settings.banner_img_2 or section.settings.banner_img_3 -%}
+          <div class="zb-banner-imgs-desktop">
+            {%- if section.settings.banner_img_1 -%}
+              <img src="{{ section.settings.banner_img_1 | image_url: width: 300 }}"
+                   alt="{{ section.settings.banner_img_1_alt | default: '' }}" loading="lazy" decoding="async">
+            {%- endif -%}
+            {%- if section.settings.banner_img_2 -%}
+              <img src="{{ section.settings.banner_img_2 | image_url: width: 300 }}"
+                   alt="{{ section.settings.banner_img_2_alt | default: '' }}" loading="lazy" decoding="async">
+            {%- endif -%}
+            {%- if section.settings.banner_img_3 -%}
+              <img src="{{ section.settings.banner_img_3 | image_url: width: 300 }}"
+                   alt="{{ section.settings.banner_img_3_alt | default: '' }}" loading="lazy" decoding="async">
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        <!-- Text -->
+        <div class="zb-banner-body">
+          {%- if section.settings.banner_label != blank -%}
+            <div class="zb-banner-label">{{ section.settings.banner_label }}</div>
+          {%- endif -%}
+          <p class="zb-banner-text">
+            {{ section.settings.banner_text_pre }}
+            <strong>{{ section.settings.banner_text_acc }}</strong>
+            {{ section.settings.banner_text_post }}
+          </p>
+          {%- if section.settings.banner_sub != blank -%}
+            <p class="zb-banner-sub">{{ section.settings.banner_sub }}</p>
+          {%- endif -%}
+        </div>
+
+        <!-- Große Zahl -->
+        <div class="zb-banner-num">
+          <div class="zb-banner-num-val">{{ section.settings.banner_num | default: '~400g' }}</div>
+          <div class="zb-banner-num-label">{{ section.settings.banner_num_label | default: 'pro Tag · 16 kg Hund' }}</div>
+        </div>
+
+      </div>
+    </div><!-- /.zb-banner -->
+
+    <!-- ── CTAs ── -->
+    {%- if section.settings.cta1_text != blank -%}
+      <div class="zb-ctas">
+        <a href="{{ section.settings.cta1_url | default: '#' }}" class="zb-btn-primary">
+          {{ section.settings.cta1_text }} →
+        </a>
+        {%- if section.settings.cta2_text != blank -%}
+          <a href="{{ section.settings.cta2_url | default: '#' }}" class="zb-btn-secondary">
+            {{ section.settings.cta2_text }} <span>↓</span>
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+  </div><!-- /.zb-inner -->
+</div><!-- /#zb-{{ section.id }} -->
+
+<script>
+(function(){
+
+  /* ══ Parallax ════════════════════════════════════════════════════════
+     Exakt wie in der Landing Page:
+       center   = rect.top + rect.height/2 - window.innerHeight/2
+       offsetY  = center * factor
+     Desktop-Faktoren: Glas 1 = -0.04, Glas 2 = +0.06, Glas 3 = -0.035
+     Mobile-Faktoren:  Glas 1 = -0.02, Glas 2 = +0.03, Glas 3 = -0.018
+     Glas 2 Mitte hat positiven Faktor → scrollt in entgegengesetzte Richtung
+  ════════════════════════════════════════════════════════════════════ */
+  function initParallax(sec){
+
+    /* Desktop */
+    var desktopWraps = sec.querySelectorAll('.zb-gd-1,.zb-gd-2,.zb-gd-3');
+    /* Mobile */
+    var mobileWraps  = sec.querySelectorAll('[data-zb-m-parallax]');
+
+    var container    = sec.querySelector('.zb-glasses-desktop');
+
+    /* Basis-Transforms für Desktop merken (gd-2 hat translateX(-50%) vom CSS) */
+    function getBaseX(el){
+      return el.classList.contains('zb-gd-2') ? '-50%' : '0%';
+    }
+
+    function update(){
+      var isMobile = window.innerWidth < 1024;
+
+      if(desktopWraps.length){
+        var ref   = container || sec;
+        var rect  = ref.getBoundingClientRect();
+        var center = rect.top + rect.height / 2 - window.innerHeight / 2;
+
+        desktopWraps.forEach(function(w){
+          var factor = parseFloat(w.getAttribute('data-zb-parallax') || '0');
+          var offset = center * factor;
+          var bx     = getBaseX(w);
+          if(isMobile){
+            w.style.transform = bx !== '0%' ? 'translateX('+bx+')' : '';
+          } else {
+            w.style.transform = bx !== '0%'
+              ? 'translateX('+bx+') translateY('+offset+'px)'
+              : 'translateY('+offset+'px)';
+          }
+        });
+      }
+
+      if(mobileWraps.length){
+        var rect2  = sec.getBoundingClientRect();
+        var center2 = rect2.top + rect2.height / 2 - window.innerHeight / 2;
+        mobileWraps.forEach(function(w){
+          var factor = parseFloat(w.getAttribute('data-zb-m-parallax') || '0');
+          w.style.transform = isMobile ? 'translateY('+(center2*factor)+'px)' : '';
+        });
+      }
+    }
+
+    update();
+
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        requestAnimationFrame(function(){ update(); ticking = false; });
+        ticking = true;
+      }
+    }, {passive: true});
+
+    window.addEventListener('resize', function(){ update(); }, {passive: true});
+  }
+
+  /* ══ Init ════════════════════════════════════════════════════════════ */
+  function init(){
+    var sec = document.getElementById('zb-{{ section.id }}');
+    if(!sec) return;
+    initParallax(sec);
+  }
+
+  document.addEventListener('shopify:section:load', function(e){
+    var sec = e.target && e.target.querySelector('#zb-{{ section.id }}');
+    if(!sec) sec = document.getElementById('zb-{{ section.id }}');
+    if(sec) initParallax(sec);
+  });
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Zutaten Basis",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Section-Badge (Pill oben)",
+      "default": "✦ UNSER KONZEPT: WIE SELBST EINGEKOCHT"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Zeile 1",
+      "default": "Wenige Zutaten."
+    },
+    {
+      "type": "text",
+      "id": "headline_acc",
+      "label": "Zeile 2 (kursiv + Akzent)",
+      "default": "Maximale Wirkung."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Fließtext",
+      "default": "Was dein Hund täglich frisst, entscheidet über seine Gesundheit. Deshalb besteht jede unserer Rezepturen aus nur vier Bausteinen. Jede Zutat hat eine klare Aufgabe. Nichts ist zufällig, nichts ist überflüssig."
+    },
+    {
+      "type": "header",
+      "content": "Gläser (Parallax)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Glas 2 (Mitte) scrollt gegensätzlich zu Glas 1 + 3 – das erzeugt die Tiefenwirkung."
+    },
+    {
+      "type": "image_picker",
+      "id": "glass_1",
+      "label": "Glas 1 (links)"
+    },
+    {
+      "type": "text",
+      "id": "glass_1_alt",
+      "label": "Alt-Text Glas 1",
+      "default": "Muskelfleisch"
+    },
+    {
+      "type": "image_picker",
+      "id": "glass_2",
+      "label": "Glas 2 (Mitte, vorne)"
+    },
+    {
+      "type": "text",
+      "id": "glass_2_alt",
+      "label": "Alt-Text Glas 2",
+      "default": "Innereien"
+    },
+    {
+      "type": "image_picker",
+      "id": "glass_3",
+      "label": "Glas 3 (rechts)"
+    },
+    {
+      "type": "text",
+      "id": "glass_3_alt",
+      "label": "Alt-Text Glas 3",
+      "default": "Gemüse & Supergrains"
+    },
+    {
+      "type": "header",
+      "content": "Bottom Banner"
+    },
+    {
+      "type": "text",
+      "id": "banner_label",
+      "label": "Label (Caps-Pill)",
+      "default": "Gutes braucht nicht viel"
+    },
+    {
+      "type": "text",
+      "id": "banner_text_pre",
+      "label": "Text vor Akzent",
+      "default": "Wenn jede Zutat einen Zweck hat, reicht"
+    },
+    {
+      "type": "text",
+      "id": "banner_text_acc",
+      "label": "Akzent-Text (Terracotta)",
+      "default": "erstaunlich wenig."
+    },
+    {
+      "type": "text",
+      "id": "banner_text_post",
+      "label": "Text nach Akzent",
+      "default": "Ein 16 kg Hund bekommt bei uns rund 400 g am Tag. Alles drin, was er braucht."
+    },
+    {
+      "type": "text",
+      "id": "banner_sub",
+      "label": "Subtext",
+      "default": "Wer die Zutatenliste versteht, füttert anders."
+    },
+    {
+      "type": "text",
+      "id": "banner_num",
+      "label": "Große Zahl",
+      "default": "~400g"
+    },
+    {
+      "type": "text",
+      "id": "banner_num_label",
+      "label": "Label unter Zahl",
+      "default": "pro Tag · 16 kg Hund"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_img_1",
+      "label": "Banner Bild 1"
+    },
+    {
+      "type": "text",
+      "id": "banner_img_1_alt",
+      "label": "Alt-Text Bild 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_img_2",
+      "label": "Banner Bild 2"
+    },
+    {
+      "type": "text",
+      "id": "banner_img_2_alt",
+      "label": "Alt-Text Bild 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_img_3",
+      "label": "Banner Bild 3"
+    },
+    {
+      "type": "text",
+      "id": "banner_img_3_alt",
+      "label": "Alt-Text Bild 3"
+    },
+    {
+      "type": "header",
+      "content": "CTAs"
+    },
+    {
+      "type": "text",
+      "id": "cta1_text",
+      "label": "Primär-Button Text",
+      "info": "Leer lassen = Buttons ausblenden",
+      "default": "Jetzt Probierpaket entdecken"
+    },
+    {
+      "type": "url",
+      "id": "cta1_url",
+      "label": "Primär-Button Link"
+    },
+    {
+      "type": "text",
+      "id": "cta2_text",
+      "label": "Sekundär-Link Text",
+      "default": "Alle 7 Sorten ansehen"
+    },
+    {
+      "type": "url",
+      "id": "cta2_url",
+      "label": "Sekundär-Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Farben"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Akzentfarbe (Terracotta)",
+      "default": "#c4622d"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Hintergrundfarbe",
+      "default": "#1a0e05"
+    },
+    {
+      "type": "header",
+      "content": "Abstände (Padding)"
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "label": "Padding Oben/Unten (Mobil)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_tablet",
+      "label": "Padding Oben/Unten (Tablet)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "label": "Padding Oben/Unten (Desktop)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 120
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature-Karte",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (Emoji)",
+          "default": "🥩",
+          "info": "Emoji direkt einfügen, z.B. 🥩 ❤️ 🥕 🌾"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Kategorie-Label (Caps)",
+          "default": "HAUPTZUTAT"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titel",
+          "default": "Muskelfleisch"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Beschreibung",
+          "default": "Hochwertiges Protein als Grundlage für Energie, Muskulatur und Vitalität."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zutaten Basis",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "🥩",
+            "category": "HAUPTZUTAT",
+            "title": "Muskelfleisch",
+            "text": "Hochwertiges Protein als Grundlage für Energie, Muskulatur und Vitalität."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "❤️",
+            "category": "NÄHRSTOFFREICH",
+            "title": "Innereien",
+            "text": "Natürliche Nährstofflieferanten mit wichtigen Vitaminen, Mineralien und Spurenelementen."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "🥕",
+            "category": "BALLASTSTOFFE",
+            "title": "Gemüse",
+            "text": "Karotten, Kürbis und mehr für Ballaststoffe, Vitamine und eine gesunde Verdauung."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "🌾",
+            "category": "ENERGIEQUELLE",
+            "title": "Supergrains",
+            "text": "Hirse und Amaranth liefern komplexe Kohlenhydrate und wertvolle Nährstoffe."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
