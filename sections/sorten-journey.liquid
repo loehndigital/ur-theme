@@ -18,6 +18,8 @@
   --sj-bg:       {{ section.settings.bg_color       | default: '#EBE6D9' }};
   --sj-card:     {{ section.settings.card_color     | default: '#fffaf3' }};
   --sj-dark:     {{ section.settings.dark_color     | default: '#3d2510' }};
+  --sj-vig-rgb:  {{ vr }},{{ vg }},{{ vb }};
+  --sj-vig-op:   {{ vo }};
   --sj-text:     #2c1a0e;
   --sj-text2:    #7a5c3a;
   --sj-dim:      #9a7c5a;
@@ -51,17 +53,22 @@
 @media(min-width:768px){ .sj-hero { border-radius:16px; margin:0 44px 56px } }
 .sj-hero-img  { width:100%; object-fit:cover; aspect-ratio:16/10; display:block }
 @media(min-width:768px){ .sj-hero-img { aspect-ratio:21/9 } }
-.sj-hero-or   { position:absolute; inset:0; pointer-events:none;
-  opacity: var(--sj-vig-op, 0.8);
+.sj-hero-or   { position:absolute; inset:0; pointer-events:none }
+.sj-hero-ot   { position:absolute; inset:0; pointer-events:none }
+/* ── Vignette: scoped Liquid-baked RGBA (updates reliably on section re-render) ── */
+#sj-{{ section.id }} .sj-hero-or {
   background: linear-gradient(100deg,
-    rgba(var(--sj-vig-rgb),.95) 0%,
-    rgba(var(--sj-vig-rgb),.82) 30%,
-    rgba(var(--sj-vig-rgb),.5) 55%,
-    rgba(var(--sj-vig-rgb),.12) 78%,
-    transparent 100%) }
-.sj-hero-ot   { position:absolute; inset:0; pointer-events:none;
-  opacity: var(--sj-vig-op, 0.8);
-  background: linear-gradient(to bottom, rgba(var(--sj-vig-rgb),.4) 0%, transparent 40%) }
+    rgba({{ vr }},{{ vg }},{{ vb }},{{ vo | times: 0.95 }}) 0%,
+    rgba({{ vr }},{{ vg }},{{ vb }},{{ vo | times: 0.82 }}) 30%,
+    rgba({{ vr }},{{ vg }},{{ vb }},{{ vo | times: 0.5  }}) 55%,
+    rgba({{ vr }},{{ vg }},{{ vb }},{{ vo | times: 0.12 }}) 78%,
+    transparent 100%)
+}
+#sj-{{ section.id }} .sj-hero-ot {
+  background: linear-gradient(to bottom,
+    rgba({{ vr }},{{ vg }},{{ vb }},{{ vo | times: 0.4 }}) 0%,
+    transparent 40%)
+}
 .sj-hero-ob   { position:absolute; inset:0; pointer-events:none;
   background: linear-gradient(to top, var(--sj-bg) 0%, transparent 22%) }
 .sj-hero-content { position:absolute; inset:0; display:flex; align-items:center; padding:0 24px }
@@ -1103,7 +1110,8 @@ function closeIt(card){
   var body=card.querySelector('.sj-cbody');
   var tog=card.querySelector('.sj-ctoggle');
   var btn=card.querySelector('.sj-card-hdr');
-  body.style.overflow='';          /* restore clip before animating shut */
+  card.style.overflow='';          /* re-enable card clip before animating shut */
+  body.style.overflow='';          /* re-enable body clip */
   body.style.maxHeight=body.scrollHeight+'px';
   requestAnimationFrame(function(){
     body.style.transition='max-height .4s ease-in-out';
@@ -1154,7 +1162,8 @@ function openIt(card){
   body.addEventListener('transitionend',function h(){
     if(body.classList.contains('sj-open')){
       body.style.maxHeight='none';
-      body.style.overflow='visible';  /* let shadows + orbit labels bleed out */
+      body.style.overflow='visible';   /* cbody: let shadows bleed out */
+      card.style.overflow='visible';   /* .sj-card was overflow:hidden — unlock so drop-shadows escape */
     }
     body.removeEventListener('transitionend',h);
   });
@@ -1168,7 +1177,8 @@ function toggle(card){
   if(openCard){
     var prev=openCard, pb=prev.querySelector('.sj-cbody');
     var pt=prev.querySelector('.sj-ctoggle'), ph=prev.querySelector('.sj-card-hdr');
-    pb.style.overflow='';          /* reset before collapsing */
+    prev.style.overflow='';        /* reset card overflow */
+    pb.style.overflow='';          /* reset body overflow */
     pb.style.transition='none'; pb.style.maxHeight='0';
     pb.classList.remove('sj-open'); pb.setAttribute('aria-hidden','true');
     ph&&ph.setAttribute('aria-expanded','false'); pt&&(pt.style.transform='');
