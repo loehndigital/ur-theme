@@ -275,8 +275,9 @@
 #zb-{{ section.id }} .zb-feat-header {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
+  flex-wrap: wrap;      /* Kategorie-Pill darf auf neue Zeile umbrechen */
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 #zb-{{ section.id }} .zb-feat-icon-wrap {
@@ -294,22 +295,28 @@
 #zb-{{ section.id }} .zb-feat-cat {
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: .15em;
+  letter-spacing: .12em;   /* etwas enger auf Mobile */
   text-transform: uppercase;
   color: rgba({{ ar }},{{ ag }},{{ ab }},0.7);
   background: rgba({{ ar }},{{ ag }},{{ ab }},0.06);
   border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.12);
   padding: 2px 8px;
   border-radius: 999px;
+  white-space: nowrap;     /* kein Zeilenbruch innerhalb des Pills */
+  min-width: 0;
+  flex-shrink: 1;
 }
 
 #zb-{{ section.id }} .zb-feat-title {
-  font-size: 18px;
+  font-size: 16px;           /* Mobile etwas kleiner für 2-Spalten-Grid */
   font-weight: 700;
   color: var(--zb-text);
   margin: 0 0 8px;
   line-height: 1.2;
+  overflow-wrap: break-word; /* lange Wörter umbrechen statt rausschiessen */
+  word-break: break-word;
 }
+@media(min-width:480px) { #zb-{{ section.id }} .zb-feat-title { font-size: 17px } }
 @media(min-width:768px) { #zb-{{ section.id }} .zb-feat-title { font-size: 21px } }
 
 #zb-{{ section.id }} .zb-feat-text {
