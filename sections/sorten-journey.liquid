@@ -1116,6 +1116,7 @@ function closeIt(card){
   var body=card.querySelector('.sj-cbody');
   var tog=card.querySelector('.sj-ctoggle');
   var btn=card.querySelector('.sj-card-hdr');
+  if(body._sjOpenTimer){ clearTimeout(body._sjOpenTimer); body._sjOpenTimer=null; }
   body.style.overflow='';          /* re-enable body clip before animating shut */
   body.style.maxHeight=body.scrollHeight+'px';
   requestAnimationFrame(function(){
@@ -1164,13 +1165,16 @@ function openIt(card){
   tog&&(tog.style.transform='rotate(45deg)');
   body.style.transition='max-height .5s ease-in-out';
   body.style.maxHeight=body.scrollHeight+'px';
-  body.addEventListener('transitionend',function h(){
+  /* setTimeout ist zuverlässiger als transitionend:
+     transitionend feuert nicht wenn Transition gecancelt, Tab throttled
+     oder in Shopify-Iframe-Previews. 520ms > 500ms Transition-Dauer. */
+  var _t = setTimeout(function(){
     if(body.classList.contains('sj-open')){
       body.style.maxHeight='none';
-      body.style.overflow='visible';   /* cbody: let drop-shadows / orbit labels bleed out */
+      body.style.overflow='visible';
     }
-    body.removeEventListener('transitionend',h);
-  });
+  }, 520);
+  body._sjOpenTimer = _t;
   openCard=card;
 }
 
@@ -1181,6 +1185,7 @@ function toggle(card){
   if(openCard){
     var prev=openCard, pb=prev.querySelector('.sj-cbody');
     var pt=prev.querySelector('.sj-ctoggle'), ph=prev.querySelector('.sj-card-hdr');
+    if(pb._sjOpenTimer){ clearTimeout(pb._sjOpenTimer); pb._sjOpenTimer=null; }
     pb.style.overflow='';          /* reset body overflow before instant-close */
     pb.style.transition='none'; pb.style.maxHeight='0';
     pb.classList.remove('sj-open'); pb.setAttribute('aria-hidden','true');
