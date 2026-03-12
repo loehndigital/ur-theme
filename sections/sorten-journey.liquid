@@ -9,6 +9,10 @@
 {%- assign vb = vc | color_extract: 'blue' -%}
 {%- assign vo = section.settings.vignette_opacity | default: 80 | divided_by: 100.0 -%}
 
+{%- assign pad_mobile = section.settings.padding_mobile | default: 60 -%}
+{%- assign pad_tablet = section.settings.padding_tablet | default: 100 -%}
+{%- assign pad_desktop = section.settings.padding_desktop | default: 120 -%}
+
 <style>
 /* ╔══════════════════════════════════╗
    ║  UNCLE RUSTY'S CI               ║
@@ -31,13 +35,13 @@
   background-size: 130px;
   background-attachment: fixed;
   background-repeat: repeat;
-  padding: 64px 0;
+  padding: {{ pad_mobile }}px 0;
   max-width: 1280px;
   margin: 0 auto;
   font-family: inherit;
 }
-@media(min-width:768px) { #sj-{{ section.id }} { padding:96px 0  } }
-@media(min-width:1024px){ #sj-{{ section.id }} { padding:128px 0 } }
+@media(min-width:768px) { #sj-{{ section.id }} { padding:{{ pad_tablet }}px 0  } }
+@media(min-width:1024px){ #sj-{{ section.id }} { padding:{{ pad_desktop }}px 0 } }
 
 /* ── Glass Card (hell) ─────────────── */
 .sj-glass {
@@ -1375,6 +1379,40 @@ if(document.readyState==='loading'){
       "id": "dark_color",
       "label": "Expanded Hintergrund (dunkel)",
       "default": "#3d2510"
+    },
+    {
+      "type": "header",
+      "content": "Abstände (Padding)"
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "label": "Padding Oben/Unten (Mobil)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_tablet",
+      "label": "Padding Oben/Unten (Tablet)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "label": "Padding Oben/Unten (Desktop)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 120
     }
   ],
   "blocks": [
