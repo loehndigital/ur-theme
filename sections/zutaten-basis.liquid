@@ -257,6 +257,7 @@
   transition: border-color .3s;
   position: relative;
   overflow: hidden;
+  min-width: 0; /* CSS-Grid-Fix: verhindert, dass Inhalte aus der Spalte herausragen */
 }
 #zb-{{ section.id }} .zb-feat-card:hover { border-color: rgba({{ ar }},{{ ag }},{{ ab }},0.35) }
 @media(min-width:768px) { #zb-{{ section.id }} .zb-feat-card { padding: 26px 22px } }
@@ -714,10 +715,10 @@
 
     for(var i = 0; i < 18; i++){
       var el  = document.createElement('div');
-      var x   = (Math.random() * 112 - 6).toFixed(1);
-      var y   = (Math.random() * 112 - 6).toFixed(1);
+      var x   = (5 + Math.random() * 85).toFixed(1);   /* 5–90 % → kein harter Abschnitt am Rand */
+      var y   = (5 + Math.random() * 85).toFixed(1);   /* 5–90 % → kein harter Abschnitt am Rand */
       var rot = (Math.random() * 360).toFixed(0);
-      var sz  = (28 + Math.random() * 64).toFixed(0);
+      var sz  = (24 + Math.random() * 36).toFixed(0);  /* 24–60 px → weniger Überlappung */
       var op  = (0.04 + Math.random() * 0.08).toFixed(3);
       el.style.cssText =
         'position:absolute;left:'+x+'%;top:'+y+'%;' +
