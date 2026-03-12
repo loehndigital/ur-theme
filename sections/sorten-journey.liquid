@@ -161,8 +161,9 @@
 .sj-cname  { color:var(--sj-text); font-size:17px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
 @media(min-width:768px) { .sj-cname { font-size:18px } }
 @media(min-width:1024px){ .sj-cname { font-size:20px } }
-.sj-csub   { color:var(--sj-text2); font-size:13px; font-weight:400 }
-@media(min-width:768px){ .sj-csub { font-size:14px } }
+.sj-csub   { color:var(--sj-text2); font-size:11px; font-weight:400;
+  display:block; margin-top:2px; white-space:normal }   /* Mobile: eigene Zeile unter Produktname */
+@media(min-width:768px){ .sj-csub { display:inline; font-size:14px; white-space:inherit; margin-top:0 } }
 .sj-ctags  { display:none; gap:8px }
 @media(min-width:768px){ .sj-ctags { display:flex } }
 .sj-ctag   { padding:4px 10px; border-radius:999px; font-size:11px;
@@ -181,12 +182,17 @@
 .sj-xhero    {
   position:relative; overflow:visible; z-index:2;
   /* z-index:2 → .sj-xhero malt NACH .sj-zsm (z-index:auto),
-     damit der drop-shadow von .sj-xpimg über .sj-zsm-Hintergrund sichtbar bleibt */
+     damit der drop-shadow von .sj-xpimg über .sj-zsm-Hintergrund sichtbar bleibt.
+     padding-bottom → Shadow (offset 20px + blur 40px = ~60px) bleibt vollständig
+     innerhalb .sj-xhero, bevor .sj-zsm beginnt */
+  padding-bottom:70px;
   background: rgba(255,255,255,0.55);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255,255,255,0.75);
   border-bottom: 1px solid rgba(196,98,45,0.1);
 }
+@media(min-width:768px) { .sj-xhero { padding-bottom:90px } }
+@media(min-width:1024px){ .sj-xhero { padding-bottom:110px } }
 .sj-xhero-bg { position:absolute; inset:0;
   background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(245,237,224,0.15) 100%);
   border-radius: inherit; pointer-events:none }
