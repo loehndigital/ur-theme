@@ -276,7 +276,7 @@
 .sj-box-lbl { font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase }
 
 .sj-irow { display:flex; align-items:center; gap:8px; padding:6px 10px;
-  border-radius:8px; transition:background .25s; cursor:default }
+  border-radius:8px; transition:background .35s cubic-bezier(.4,0,.2,1); cursor:default }
 .sj-irow:hover { background:rgba(196,98,45,.07) }
 .sj-iicon  { width:28px; height:28px; border-radius:6px; display:flex;
   align-items:center; justify-content:center; flex-shrink:0; font-size:12px }
@@ -354,7 +354,7 @@
 .sj-atrig {
   width:100%; display:flex; align-items:center; justify-content:space-between;
   padding:12px 4px; background:none; border:none; cursor:pointer;
-  text-align:left; border-radius:4px; transition:background .2s; color:inherit
+  text-align:left; border-radius:4px; transition:background .3s ease; color:inherit
 }
 .sj-atrig:hover { background:rgba(196,98,45,.06) }
 .sj-albl   { color:var(--sj-text2); font-size:13px }
@@ -364,7 +364,7 @@
   transition:transform .3s; display:inline-block }
 .sj-aarr.sj-open { transform:rotate(180deg) }
 .sj-adet   { overflow:hidden; max-height:0; opacity:0;
-  transition:max-height .35s cubic-bezier(.4,0,.2,1),opacity .25s ease }
+  transition:max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease }
 .sj-adet.sj-open { opacity:1 }
 .sj-atxt   { color:var(--sj-text2); font-size:12px; line-height:1.6;
   padding-bottom:14px; padding-left:4px }
@@ -1019,27 +1019,53 @@ function initRingHover(container, ringIng){
   var tip = container.querySelector('[data-rtip]');
   if(!svg||!tip) return;
 
-  function redraw(idx){
-    var newSVG = buildRingSVG(ringIng, idx);
-    var tmp=document.createElement('div'); tmp.innerHTML=newSVG;
-    var newEl=tmp.firstChild;
-    svg.parentNode.replaceChild(newEl, svg); svg=newEl; attach();
-    if(idx!==null && ringIng[idx]){
-      var s=ringIng[idx], lbl=s.label.replace(/\s*\(.*\)/,'');
-      tip.textContent=lbl+' · '+s.pct+'%';
-      tip.style.background=getColor(s); tip.style.display='block';
-    } else { tip.style.display='none'; }
+  /* Collect circle elements once — never replace the SVG again */
+  var circles = {};
+  svg.querySelectorAll('[data-ring-idx]').forEach(function(c){
+    /* Enable smooth CSS transitions on each arc */
+    c.style.transition = 'opacity .3s ease, stroke-width .3s ease, filter .3s ease';
+    circles[parseInt(c.getAttribute('data-ring-idx'),10)] = c;
+  });
+
+  function highlight(idx){
+    Object.keys(circles).forEach(function(key){
+      var i = parseInt(key, 10);
+      var c = circles[i];
+      var color = getColor(ringIng[i]);
+      if(idx === null){
+        c.style.opacity     = '0.75';
+        c.style.strokeWidth = '5';
+        c.style.filter      = 'none';
+      } else if(i === idx){
+        c.style.opacity     = '1';
+        c.style.strokeWidth = '8';
+        c.style.filter      = 'drop-shadow(0 0 8px ' + color + ')';
+      } else {
+        c.style.opacity     = '0.18';
+        c.style.strokeWidth = '5';
+        c.style.filter      = 'none';
+      }
+    });
+    if(idx !== null && ringIng[idx]){
+      var s = ringIng[idx], lbl = s.label.replace(/\s*\(.*\)/,'');
+      tip.textContent      = lbl + ' · ' + s.pct + '%';
+      tip.style.background = getColor(s);
+      tip.style.display    = 'block';
+    } else {
+      tip.style.display = 'none';
+    }
   }
 
-  function attach(){
-    svg.querySelectorAll('[data-ring-idx]').forEach(function(c){
-      var i=parseInt(c.getAttribute('data-ring-idx'),10);
-      c.addEventListener('mouseenter',function(){redraw(i);});
-      c.addEventListener('mouseleave',function(){redraw(null);});
-      c.addEventListener('click',function(){redraw(i);setTimeout(function(){redraw(null);},1400);});
+  Object.keys(circles).forEach(function(key){
+    var i = parseInt(key, 10);
+    var c = circles[i];
+    c.addEventListener('mouseenter', function(){ highlight(i); });
+    c.addEventListener('mouseleave', function(){ highlight(null); });
+    c.addEventListener('click',      function(){
+      highlight(i);
+      setTimeout(function(){ highlight(null); }, 1400);
     });
-  }
-  attach();
+  });
 }
 
 /* ══════════════════════════════════
@@ -1077,6 +1103,7 @@ function closeIt(card){
   var body=card.querySelector('.sj-cbody');
   var tog=card.querySelector('.sj-ctoggle');
   var btn=card.querySelector('.sj-card-hdr');
+  body.style.overflow='';          /* restore clip before animating shut */
   body.style.maxHeight=body.scrollHeight+'px';
   requestAnimationFrame(function(){
     body.style.transition='max-height .4s ease-in-out';
@@ -1125,7 +1152,10 @@ function openIt(card){
   body.style.transition='max-height .5s ease-in-out';
   body.style.maxHeight=body.scrollHeight+'px';
   body.addEventListener('transitionend',function h(){
-    if(body.classList.contains('sj-open')) body.style.maxHeight='none';
+    if(body.classList.contains('sj-open')){
+      body.style.maxHeight='none';
+      body.style.overflow='visible';  /* let shadows + orbit labels bleed out */
+    }
     body.removeEventListener('transitionend',h);
   });
   openCard=card;
@@ -1138,6 +1168,7 @@ function toggle(card){
   if(openCard){
     var prev=openCard, pb=prev.querySelector('.sj-cbody');
     var pt=prev.querySelector('.sj-ctoggle'), ph=prev.querySelector('.sj-card-hdr');
+    pb.style.overflow='';          /* reset before collapsing */
     pb.style.transition='none'; pb.style.maxHeight='0';
     pb.classList.remove('sj-open'); pb.setAttribute('aria-hidden','true');
     ph&&ph.setAttribute('aria-expanded','false'); pt&&(pt.style.transform='');
