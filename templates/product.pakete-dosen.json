@@ -176,7 +176,12 @@
       "blocks": {
         "4e0e223b-8191-412f-80a7-a090f143b0c9": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
         }
       },
       "block_order": [
@@ -267,6 +272,149 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "sorten_journey_jqKbAj": {
+      "type": "sorten-journey",
+      "blocks": {
+        "produkt_JqNG7P": {
+          "type": "produkt",
+          "settings": {
+            "sorte_id": "rind",
+            "kategorie": "rot",
+            "product_image": "shopify://shop_images/rind.png",
+            "glass_image": "shopify://shop_images/rind-glassmall.png",
+            "product_url": "",
+            "name": "",
+            "sub_name": "",
+            "preis": "",
+            "beschreibung": "",
+            "deklaration": "",
+            "benefits": "",
+            "wusstest": "",
+            "empfehlung": ""
+          }
+        },
+        "produkt_K48qUe": {
+          "type": "produkt",
+          "settings": {
+            "sorte_id": "wild",
+            "kategorie": "rot",
+            "product_url": "",
+            "name": "",
+            "sub_name": "",
+            "preis": "",
+            "beschreibung": "",
+            "deklaration": "",
+            "benefits": "",
+            "wusstest": "",
+            "empfehlung": ""
+          }
+        },
+        "produkt_9atFX6": {
+          "type": "produkt",
+          "settings": {
+            "sorte_id": "pferd",
+            "kategorie": "rot",
+            "product_url": "",
+            "name": "",
+            "sub_name": "",
+            "preis": "",
+            "beschreibung": "",
+            "deklaration": "",
+            "benefits": "",
+            "wusstest": "",
+            "empfehlung": ""
+          }
+        },
+        "produkt_zpdJdB": {
+          "type": "produkt",
+          "settings": {
+            "sorte_id": "lamm",
+            "kategorie": "rot",
+            "product_url": "",
+            "name": "",
+            "sub_name": "",
+            "preis": "",
+            "beschreibung": "",
+            "deklaration": "",
+            "benefits": "",
+            "wusstest": "",
+            "empfehlung": ""
+          }
+        },
+        "produkt_HyqqhY": {
+          "type": "produkt",
+          "settings": {
+            "sorte_id": "gefluegel",
+            "kategorie": "hell",
+            "product_url": "",
+            "name": "",
+            "sub_name": "",
+            "preis": "",
+            "beschreibung": "",
+            "deklaration": "",
+            "benefits": "",
+            "wusstest": "",
+            "empfehlung": ""
+          }
+        },
+        "produkt_VnpMpe": {
+          "type": "produkt",
+          "settings": {
+            "sorte_id": "ente",
+            "kategorie": "hell",
+            "product_url": "",
+            "name": "",
+            "sub_name": "",
+            "preis": "",
+            "beschreibung": "",
+            "deklaration": "",
+            "benefits": "",
+            "wusstest": "",
+            "empfehlung": ""
+          }
+        },
+        "produkt_UAbKbc": {
+          "type": "produkt",
+          "settings": {
+            "sorte_id": "lachs",
+            "kategorie": "fisch",
+            "product_url": "",
+            "name": "",
+            "sub_name": "",
+            "preis": "",
+            "beschreibung": "",
+            "deklaration": "",
+            "benefits": "",
+            "wusstest": "",
+            "empfehlung": ""
+          }
+        }
+      },
+      "block_order": [
+        "produkt_JqNG7P",
+        "produkt_K48qUe",
+        "produkt_9atFX6",
+        "produkt_zpdJdB",
+        "produkt_HyqqhY",
+        "produkt_VnpMpe",
+        "produkt_UAbKbc"
+      ],
+      "disabled": true,
+      "name": "Sorten Journey",
+      "settings": {
+        "hero_image": "shopify://shop_images/hf_20260309_211537_491ef00a-323f-43c7-a9c2-706827b9b2b6.png",
+        "badge_text": "✦ 7 SORTEN",
+        "headline": "Die perfekte Woche",
+        "headline_highlight": "für deinen Hund.",
+        "subtext": "7 Menüs. Jedes für sich komplett. Zusammen die Grundlage für eine natürliche, abwechslungsreiche Ernährung.",
+        "vignette_color": "#1e1006",
+        "vignette_opacity": 80,
+        "accent_color": "#c4622d",
+        "bg_color": "#f5ede0",
+        "card_color": "#fffaf3",
+        "dark_color": "#3d2510"
       }
     },
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6": {
@@ -840,6 +988,7 @@
     "main",
     "1694596722fbd3b4b2",
     "1524c9a4-f315-47a6-adbc-31e43082bbc0",
+    "sorten_journey_jqKbAj",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "nassfutter_grid_84cBg3",
     "multicolumn_p4aU8N",
