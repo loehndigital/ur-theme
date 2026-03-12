@@ -304,7 +304,6 @@
         "badge_g86Czp",
         "badge_cJL6Y7"
       ],
-      "disabled": true,
       "name": "Warum Hero",
       "settings": {
         "eyebrow": "+ WARUM UNCLE RUSTY'S",
@@ -320,6 +319,7 @@
         "image_alt": "Uncle Rusty's Hundefutter",
         "img_label": "",
         "img_shadow": 90,
+        "mobile_image_order": "above",
         "image_side": "right",
         "bg_style": "transparent",
         "accent_color": "#c4622d",
