@@ -1,0 +1,566 @@
+{%- comment -%}
+  Uncle Rusty's – Warum Hero (Text + Bild)
+  Platzierung: sections/warum-hero.liquid
+{%- endcomment -%}
+
+{%- comment -%} Akzentfarbe → Komponenten für rgba()-Nutzung im CSS {%- endcomment -%}
+{%- assign ac = section.settings.accent_color | default: '#c4622d' -%}
+{%- assign ar = ac | color_extract: 'red'   -%}
+{%- assign ag = ac | color_extract: 'green' -%}
+{%- assign ab = ac | color_extract: 'blue'  -%}
+
+<style>
+/* ╔══════════════════════════════════╗
+   ║  UNCLE RUSTY'S – WARUM HERO     ║
+   ╚══════════════════════════════════╝ */
+
+#wh-{{ section.id }} {
+  /* ── CI-Variablen ─────────────────────── */
+  --wh-accent:  {{ section.settings.accent_color | default: '#c4622d' }};
+  --wh-bg:      {{ section.settings.bg_color     | default: '#EBE6D9' }};
+  --wh-card:    {{ section.settings.card_color   | default: '#fffaf3' }};
+  --wh-dark:    {{ section.settings.dark_color   | default: '#3d2510' }};
+  --wh-text:    #2c1a0e;
+  --wh-text2:   #7a5c3a;
+  --wh-dim:     #9a7c5a;
+  --wh-border:  rgba(60,35,15,0.12);
+
+  /* ── Hintergrund: Paw-Pattern ── */
+  background-color: var(--wh-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cg transform='rotate(-12 40 40)'%3E%3Cellipse cx='40' cy='52' rx='18' ry='14' fill='%23f5ede0' opacity='0.5'/%3E%3Cellipse cx='22' cy='37' rx='9' ry='11' fill='%23f5ede0' opacity='0.5'/%3E%3Cellipse cx='35' cy='27' rx='9' ry='11' fill='%23f5ede0' opacity='0.5'/%3E%3Cellipse cx='47' cy='27' rx='9' ry='11' fill='%23f5ede0' opacity='0.5'/%3E%3Cellipse cx='60' cy='37' rx='9' ry='11' fill='%23f5ede0' opacity='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 130px;
+  background-attachment: fixed;
+  background-repeat: repeat;
+
+  padding: 64px 20px;
+  font-family: inherit;
+}
+@media(min-width:768px)  { #wh-{{ section.id }} { padding: 96px 28px  } }
+@media(min-width:1024px) { #wh-{{ section.id }} { padding: 120px 48px } }
+
+/* ══════════════════════════════════
+   LAYOUT GRID
+══════════════════════════════════ */
+#wh-{{ section.id }} .wh-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 44px;
+  align-items: center;
+}
+@media(min-width:768px)  { #wh-{{ section.id }} .wh-inner { grid-template-columns:1fr 1fr;       gap:56px } }
+@media(min-width:1024px) { #wh-{{ section.id }} .wh-inner { grid-template-columns:55fr 45fr;     gap:80px } }
+
+/* Bild-Position: Links (optional per Editor) */
+{%- if section.settings.image_side == 'left' -%}
+@media(min-width:768px) {
+  #wh-{{ section.id }} .wh-inner   { grid-template-columns: 45fr 55fr }
+  #wh-{{ section.id }} .wh-img-col { order: -1 }
+}
+{%- endif -%}
+
+#wh-{{ section.id }} .wh-text-col { min-width:0 }
+#wh-{{ section.id }} .wh-img-col  { min-width:0; position:relative }
+
+/* ══════════════════════════════════
+   TEXT-SPALTE
+══════════════════════════════════ */
+
+/* ── Eyebrow-Pill ─────────────── */
+#wh-{{ section.id }} .wh-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba({{ ar }},{{ ag }},{{ ab }},0.10);
+  border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.28);
+  color: var(--wh-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media(min-width:768px) { #wh-{{ section.id }} .wh-eyebrow { font-size:12px; margin-bottom:28px } }
+
+/* ── Headline ─────────────────── */
+#wh-{{ section.id }} .wh-h2 {
+  color: var(--wh-dark);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+@media(min-width:768px)  { #wh-{{ section.id }} .wh-h2 { font-size: 40px } }
+@media(min-width:1024px) { #wh-{{ section.id }} .wh-h2 { font-size: 50px } }
+
+/* Zeile 2: kursiv + Akzentfarbe */
+#wh-{{ section.id }} .wh-h2-acc {
+  display: block;
+  font-style: italic;
+  color: var(--wh-accent);
+  margin-bottom: 28px;
+}
+@media(min-width:768px)  { #wh-{{ section.id }} .wh-h2-acc { margin-bottom: 36px } }
+@media(min-width:1024px) { #wh-{{ section.id }} .wh-h2-acc { margin-bottom: 40px } }
+
+/* ── Fließtext ────────────────── */
+#wh-{{ section.id }} .wh-body {
+  color: var(--wh-text2);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 20px;
+  max-width: 560px;
+}
+@media(min-width:768px) { #wh-{{ section.id }} .wh-body { font-size:16px; margin-bottom:24px } }
+
+/* ── Statement-Zeile ─────────── */
+#wh-{{ section.id }} .wh-stmt {
+  color: var(--wh-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 32px;
+  max-width: 560px;
+}
+@media(min-width:768px) { #wh-{{ section.id }} .wh-stmt { font-size:17px; margin-bottom:40px } }
+#wh-{{ section.id }} .wh-stmt-acc { color: var(--wh-accent) }
+
+/* ── USP-Badges ──────────────── */
+#wh-{{ section.id }} .wh-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+@media(min-width:768px) { #wh-{{ section.id }} .wh-badges { gap:12px; margin-bottom:40px } }
+
+#wh-{{ section.id }} .wh-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--wh-border);
+  box-shadow: 0 2px 8px rgba(60,35,15,.07);
+  color: var(--wh-text);
+  font-size: 13px;
+  font-weight: 600;
+  transition: background .25s, box-shadow .25s, transform .2s;
+}
+#wh-{{ section.id }} .wh-badge:hover {
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 4px 16px rgba(60,35,15,.12);
+  transform: translateY(-1px);
+}
+#wh-{{ section.id }} .wh-badge-icon {
+  font-size: 15px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── Tagline ─────────────────── */
+#wh-{{ section.id }} .wh-tagline {
+  color: var(--wh-dim);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.75;
+  max-width: 520px;
+  padding: 0 0 0 14px;
+  border-left: 2px solid rgba({{ ar }},{{ ag }},{{ ab }},0.28);
+  margin: 0;
+}
+@media(min-width:768px) { #wh-{{ section.id }} .wh-tagline { font-size:13px } }
+
+/* ── CTA-Button (optional) ───── */
+#wh-{{ section.id }} .wh-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: var(--wh-accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba({{ ar }},{{ ag }},{{ ab }},0.30);
+  transition: opacity .2s, transform .2s, box-shadow .2s;
+  letter-spacing: .02em;
+}
+#wh-{{ section.id }} .wh-cta:hover {
+  opacity: .9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba({{ ar }},{{ ag }},{{ ab }},0.40);
+}
+
+/* ══════════════════════════════════
+   BILD-SPALTE
+══════════════════════════════════ */
+
+/* Glow hinter dem Frame */
+#wh-{{ section.id }} .wh-glow {
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: rgba({{ ar }},{{ ag }},{{ ab }},0.14);
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+#wh-{{ section.id }} .wh-glow-b {
+  position: absolute;
+  bottom: -30px; left: -20px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: rgba({{ ar }},{{ ag }},{{ ab }},0.08);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glassmorphism-Frame */
+#wh-{{ section.id }} .wh-img-frame {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.50);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.80);
+  box-shadow:
+    0 12px 40px rgba(60,35,15,.14),
+    0 4px 12px  rgba(60,35,15,.08),
+    inset 0 1px 0 rgba(255,255,255,0.90);
+}
+
+#wh-{{ section.id }} .wh-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+@media(min-width:768px) { #wh-{{ section.id }} .wh-img { aspect-ratio: 3 / 4 } }
+
+/* Placeholder wenn kein Bild gewählt */
+#wh-{{ section.id }} .wh-img-ph {
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(135deg,
+    rgba({{ ar }},{{ ag }},{{ ab }},0.05) 0%,
+    rgba(245,237,224,0.40) 100%);
+  color: var(--wh-dim);
+  font-size: 13px;
+  font-style: italic;
+  padding: 32px;
+  text-align: center;
+}
+@media(min-width:768px) { #wh-{{ section.id }} .wh-img-ph { aspect-ratio: 3 / 4 } }
+#wh-{{ section.id }} .wh-img-ph-icon { font-size: 32px; opacity: .4 }
+
+/* Optionales Deko-Label über dem Bild */
+#wh-{{ section.id }} .wh-img-label {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba({{ ar }},{{ ag }},{{ ab }},0.20);
+  color: var(--wh-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 12px rgba(60,35,15,.10);
+}
+</style>
+
+<section id="wh-{{ section.id }}" aria-label="{{ section.settings.headline | escape }}">
+  <div class="wh-inner">
+
+    <!-- ═══════════════════════════
+         TEXT-SPALTE
+    ═══════════════════════════ -->
+    <div class="wh-text-col">
+
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="wh-eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+
+      <h2 class="wh-h2">
+        {{- section.settings.headline -}}
+        {%- if section.settings.headline_acc != blank -%}
+          <em class="wh-h2-acc">{{ section.settings.headline_acc }}</em>
+        {%- endif -%}
+      </h2>
+
+      {%- if section.settings.body != blank -%}
+        <p class="wh-body">{{ section.settings.body }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.stmt_pre != blank or section.settings.stmt_acc != blank -%}
+        <p class="wh-stmt">
+          {{- section.settings.stmt_pre -}}
+          {%- if section.settings.stmt_acc != blank -%}
+            <span class="wh-stmt-acc"> {{ section.settings.stmt_acc }}</span>
+          {%- endif -%}
+        </p>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="wh-badges">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'badge' -%}
+              <span class="wh-badge" {{ block.shopify_attributes }}>
+                {%- if block.settings.icon != blank -%}
+                  <span class="wh-badge-icon" aria-hidden="true">{{ block.settings.icon }}</span>
+                {%- endif -%}
+                {{ block.settings.label }}
+              </span>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.tagline != blank -%}
+        <p class="wh-tagline">{{ section.settings.tagline }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.cta_text != blank and section.settings.cta_url != blank -%}
+        <a href="{{ section.settings.cta_url }}" class="wh-cta">
+          {{ section.settings.cta_text }}
+          <span aria-hidden="true">→</span>
+        </a>
+      {%- endif -%}
+
+    </div><!-- /.wh-text-col -->
+
+    <!-- ═══════════════════════════
+         BILD-SPALTE
+    ═══════════════════════════ -->
+    <div class="wh-img-col">
+      <div class="wh-glow"  aria-hidden="true"></div>
+      <div class="wh-glow-b" aria-hidden="true"></div>
+
+      <div class="wh-img-frame">
+        {%- if section.settings.image != blank -%}
+          <img
+            src="{{ section.settings.image | image_url: width: 900 }}"
+            srcset="
+              {{ section.settings.image | image_url: width: 400 }}  400w,
+              {{ section.settings.image | image_url: width: 700 }}  700w,
+              {{ section.settings.image | image_url: width: 900 }}  900w,
+              {{ section.settings.image | image_url: width: 1200 }} 1200w"
+            sizes="(min-width:1024px) 45vw, (min-width:768px) 50vw, 95vw"
+            alt="{{ section.settings.image_alt | default: "Uncle Rusty's" | escape }}"
+            class="wh-img"
+            loading="lazy"
+          >
+        {%- else -%}
+          <div class="wh-img-ph">
+            <span class="wh-img-ph-icon">🖼</span>
+            Bild im Editor hinzufügen →
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.img_label != blank -%}
+          <span class="wh-img-label">{{ section.settings.img_label }}</span>
+        {%- endif -%}
+      </div>
+
+    </div><!-- /.wh-img-col -->
+
+  </div><!-- /.wh-inner -->
+</section>
+
+{% schema %}
+{
+  "name": "Warum Hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Headline & Texte"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow-Pill (über Headline)",
+      "default": "+ WARUM UNCLE RUSTY'S"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline Zeile 1",
+      "default": "Gesundheit beginnt nicht beim Tierarzt."
+    },
+    {
+      "type": "text",
+      "id": "headline_acc",
+      "label": "Headline Zeile 2 – kursiv, Akzentfarbe",
+      "default": "Sie beginnt im Napf."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Fließtext",
+      "default": "Viele Hundefutter klingen gut, aber ein Blick auf die Zutatenliste erzählt eine andere Geschichte. Unklare Deklarationen, unnötige Zusatzstoffe und schwer nachvollziehbare Rezepturen."
+    },
+    {
+      "type": "text",
+      "id": "stmt_pre",
+      "label": "Statement – normaler Teil",
+      "default": "Darum verfolgen wir einen einfachen Ansatz:"
+    },
+    {
+      "type": "text",
+      "id": "stmt_acc",
+      "label": "Statement – Akzentfarbe-Teil",
+      "default": "Zutaten, die man versteht."
+    },
+    {
+      "type": "textarea",
+      "id": "tagline",
+      "label": "Kursive Tagline (unten, mit Akzent-Linie links)",
+      "default": "Der Napf entscheidet jeden Tag über Energie, Verdauung und Wohlbefinden. Darum entwickeln wir Hundefutter, das diese Grundlage ernst nimmt."
+    },
+    {
+      "type": "header",
+      "content": "Call-to-Action (optional)"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button-Text",
+      "info": "Leer lassen = Button ausblenden"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button-Link"
+    },
+    {
+      "type": "header",
+      "content": "Bild (rechte Spalte)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Bild"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Alt-Text",
+      "default": "Uncle Rusty's Hundefutter"
+    },
+    {
+      "type": "text",
+      "id": "img_label",
+      "label": "Bild-Label (optional, unten mittig als Pill)",
+      "info": "z.B. \"Naturrein seit 2018\" – leer lassen zum Ausblenden"
+    },
+    {
+      "type": "select",
+      "id": "image_side",
+      "label": "Bild-Position (Desktop)",
+      "options": [
+        { "value": "right", "label": "Rechts (Standard)" },
+        { "value": "left",  "label": "Links"             }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Farben"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Akzentfarbe (Terracotta)",
+      "default": "#c4622d"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Hintergrundfarbe",
+      "default": "#EBE6D9"
+    },
+    {
+      "type": "color",
+      "id": "card_color",
+      "label": "Glass-Kartenfarbe",
+      "default": "#fffaf3"
+    },
+    {
+      "type": "color",
+      "id": "dark_color",
+      "label": "Dunkelfarbe (Texte / Glassmorphism-Basis)",
+      "default": "#3d2510"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "USP-Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (Emoji)",
+          "default": "✦",
+          "info": "Emoji direkt einfügen, z.B. 📋 🌿 🏠"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Badge-Text",
+          "default": "Neue Badge"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Warum Hero",
+      "blocks": [
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "📋",
+            "label": "Offene Deklaration"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "🌿",
+            "label": "Regionale Zutaten"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "🏠",
+            "label": "Familiengeführt"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
