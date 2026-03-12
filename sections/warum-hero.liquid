@@ -69,6 +69,12 @@
 @media(min-width:768px)  { #wh-{{ section.id }} .wh-inner { grid-template-columns: 1fr 1fr;   gap: 56px } }
 @media(min-width:1024px) { #wh-{{ section.id }} .wh-inner { grid-template-columns: 55fr 45fr; gap: 80px } }
 
+{%- if section.settings.mobile_image_order == 'above' -%}
+@media(max-width:767px) {
+  #wh-{{ section.id }} .wh-img-col { order: -1 }
+}
+{%- endif -%}
+
 {%- if section.settings.image_side == 'left' -%}
 @media(min-width:768px) {
   #wh-{{ section.id }} .wh-inner   { grid-template-columns: 45fr 55fr }
@@ -541,6 +547,16 @@
       "step": 5,
       "default": 65,
       "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_order",
+      "label": "Bild-Position (Mobil)",
+      "options": [
+        { "value": "below", "label": "Unter dem Inhalt (Standard)" },
+        { "value": "above", "label": "Über dem Inhalt"             }
+      ],
+      "default": "below"
     },
     {
       "type": "select",
