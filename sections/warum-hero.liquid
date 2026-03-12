@@ -13,6 +13,10 @@
 {%- assign shc = sh | times: 0.08 | round: 3 -%}
 {%- assign img_alt = section.settings.image_alt | default: 'Uncle Rustys Hundefutter' -%}
 
+{%- assign pad_mobile = section.settings.padding_mobile | default: 60 -%}
+{%- assign pad_tablet = section.settings.padding_tablet | default: 100 -%}
+{%- assign pad_desktop = section.settings.padding_desktop | default: 120 -%}
+
 <style>
 /* ╔══════════════════════════════════╗
    ║  UNCLE RUSTY'S – WARUM HERO     ║
@@ -29,7 +33,7 @@
   --wh-border: rgba(60,35,15,0.12);
 
   position: relative;      /* Pfoten-Container braucht positioned parent */
-  padding: 64px 20px;
+  padding: {{ pad_mobile }}px 20px;
   font-family: inherit;
   {%- if section.settings.bg_style == 'transparent' -%}
   background: transparent;
@@ -37,8 +41,8 @@
   background-color: var(--wh-bg);
   {%- endif -%}
 }
-@media(min-width:768px)  { #wh-{{ section.id }} { padding: 96px 28px  } }
-@media(min-width:1024px) { #wh-{{ section.id }} { padding: 120px 48px } }
+@media(min-width:768px)  { #wh-{{ section.id }} { padding: {{ pad_tablet }}px 28px  } }
+@media(min-width:1024px) { #wh-{{ section.id }} { padding: {{ pad_desktop }}px 48px } }
 
 /* ── Pfoten-Pattern Container (via JS befüllt) ── */
 #wh-{{ section.id }} .wh-paws {
@@ -611,6 +615,40 @@
       "id": "dark_color",
       "label": "Dunkelfarbe",
       "default": "#3d2510"
+    },
+    {
+      "type": "header",
+      "content": "Abstände (Padding)"
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "label": "Padding Oben/Unten (Mobil)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_tablet",
+      "label": "Padding Oben/Unten (Tablet)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "label": "Padding Oben/Unten (Desktop)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 120
     }
   ],
   "blocks": [
