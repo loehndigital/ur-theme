@@ -12,30 +12,68 @@
 {%- assign pad_tablet  = section.settings.padding_tablet  | default: 100 -%}
 {%- assign pad_desktop = section.settings.padding_desktop | default: 120 -%}
 
+{%- assign bg_style = section.settings.bg_style | default: 'paw_light' -%}
+{%- assign zb_is_dark = false -%}
+{%- if bg_style == 'paw_dark' or bg_style == 'plain_dark' -%}
+  {%- assign zb_is_dark = true -%}
+{%- endif -%}
+
 <style>
 /* ╔══════════════════════════════════╗
    ║  UNCLE RUSTY'S – ZUTATEN BASIS  ║
    ╚══════════════════════════════════╝ */
 
 #zb-{{ section.id }} {
-  --zb-accent:  {{ section.settings.accent_color | default: '#c4622d' }};
-  --zb-bg:      {{ section.settings.bg_color     | default: '#1a0e05' }};
-  --zb-text:    #f5ede0;
-  --zb-text2:   #d4b896;
-  --zb-dim:     #9a7c5a;
-  --zb-border:  rgba(245,237,224,0.10);
-  --zb-card:    rgba(245,237,224,0.06);
-  --zb-glow:    rgba({{ ar }},{{ ag }},{{ ab }},0.15);
+  --zb-accent: {{ section.settings.accent_color | default: '#c4622d' }};
+  --zb-glow:   rgba({{ ar }},{{ ag }},{{ ab }},0.15);
 
-  background-color: var(--zb-bg);
+  {%- if zb_is_dark -%}
+  /* Dunkles Design */
+  --zb-text:   #f5ede0;
+  --zb-text2:  #d4b896;
+  --zb-dim:    #9a7c5a;
+  --zb-border: rgba(245,237,224,0.10);
+  --zb-card:   rgba(245,237,224,0.06);
+  {%- else -%}
+  /* Helles Design (CI-Standard) */
+  --zb-text:   #2c1a0e;
+  --zb-text2:  #7a5c3a;
+  --zb-dim:    #9a7c5a;
+  --zb-border: rgba(60,35,15,0.12);
+  --zb-card:   rgba(60,35,15,0.05);
+  {%- endif -%}
+
+  {%- if bg_style == 'transparent' -%}
+  background: transparent;
+  {%- elsif bg_style == 'plain_dark' or bg_style == 'paw_dark' -%}
+  background-color: #1a0e05;
+  {%- elsif bg_style == 'plain_light' or bg_style == 'paw_light' -%}
+  background-color: #EBE6D9;
+  {%- else -%}
+  background-color: #EBE6D9;
+  {%- endif -%}
+
+  position: relative;
+  overflow: hidden;   /* verhindert, dass Gläser beim Parallax über den Sticky Header ragen */
   padding: {{ pad_mobile }}px 20px;
   font-family: inherit;
 }
 @media(min-width:768px)  { #zb-{{ section.id }} { padding: {{ pad_tablet }}px 28px  } }
 @media(min-width:1024px) { #zb-{{ section.id }} { padding: {{ pad_desktop }}px 48px } }
 
+/* ══ Paw-Pattern Container ════════════════ */
+#zb-{{ section.id }} .zb-paws-ctn {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* ══ Inner ════════════════════════════════ */
 #zb-{{ section.id }} .zb-inner {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -127,10 +165,10 @@
 }
 
 #zb-{{ section.id }} .zb-glasses-mobile .zb-gm-1,
-#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-3 { width: 32%; position: relative; z-index: 10 }
-#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-2 { width: 34%; position: relative; z-index: 20 }
-#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-1 { margin-right: -6% }
-#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-3 { margin-left: -6% }
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-3 { width: 42%; position: relative; z-index: 10 }
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-2 { width: 46%; position: relative; z-index: 20 }
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-1 { margin-right: -18% }
+#zb-{{ section.id }} .zb-glasses-mobile .zb-gm-3 { margin-left: -18% }
 
 #zb-{{ section.id }} .zb-glasses-mobile img {
   width: 100%;
@@ -190,12 +228,12 @@
 #zb-{{ section.id }} .zb-glass-ph {
   width: 100%;
   aspect-ratio: 3 / 4;
-  border: 2px dashed rgba(245,237,224,0.12);
+  border: 2px dashed var(--zb-border);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(245,237,224,0.2);
+  color: var(--zb-dim);
   font-size: 24px;
 }
 
@@ -438,7 +476,10 @@
 #zb-{{ section.id }} .zb-btn-secondary span { color: rgba({{ ar }},{{ ag }},{{ ab }},0.6) }
 </style>
 
-<div id="zb-{{ section.id }}">
+<div id="zb-{{ section.id }}" data-zb-bg="{{ bg_style }}">
+  <!-- Paw-Pattern (via JS, nur bei paw_light / paw_dark) -->
+  <div class="zb-paws-ctn" aria-hidden="true"></div>
+
   <div class="zb-inner">
 
     <!-- ── Hero: Badge + Headline + Text + Gläser ── -->
@@ -646,6 +687,48 @@
 <script>
 (function(){
 
+  /* ══ Originale Uncle Rusty's Paw-SVG-Pfade ══════════════════════════ */
+  var PAW_OPEN  = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.51 102.33" width="100%" height="100%">';
+  var PAW_PATHS =
+    '<path d="m40.23,34.23c-2.88-.64-4.71-2.1-6.03-4.18-1.41-2.21-2.07-4.66-2.48-7.17-.36-2.15-.57-4.32-.38-6.49.15-1.71.35-3.42.55-5.13.28-2.39,1.19-4.59,2.34-6.71.34-.63.81-1.2,1.26-1.76C37.25.64,39.68-.12,42.44.01c2.24.1,4.33.76,6.25,1.87,3.65,2.11,6.09,5.18,7.8,8.81.99,2.1,1.64,4.29,1.83,6.57.12,1.4.06,2.82-.04,4.22-.14,1.92-.65,3.78-1.51,5.53-1.68,3.39-4.39,5.63-8.32,6.53-2.17.5-4.33.95-6.58.86-.65-.03-1.3-.13-1.63-.17Z"/>' +
+    '<path d="m88.66,9.84c1.13.49,2.38.92,3.51,1.55,2.25,1.25,3.34,3.18,3.6,5.62.2,1.81.17,3.59-.27,5.35-.4,1.63-.76,3.28-1.31,4.86-.79,2.29-1.9,4.47-3.21,6.54-1.78,2.81-3.83,5.43-6.78,7.28-1.87,1.17-3.91,1.69-6.18,1.49-1.57-.14-3.01-.65-4.27-1.43-1.63-1.01-3.17-2.17-4.66-3.35-1.98-1.56-3.05-3.63-3.57-6-.53-2.39-.25-4.72.45-7.03,1.45-4.76,4.48-8.48,8.67-11.4,3.05-2.12,6.45-3.47,10.27-3.65,1.21-.06,2.43.1,3.76.16Z"/>' +
+    '<path d="m84.32,64.9c-.45-3.11.14-6,1.51-8.74,1.94-3.88,4.89-6.87,9.07-8.71,1.46-.64,3.01-1.03,4.64-1.14,2.64-.19,5.04.31,7.14,1.87,1.5,1.11,2.52,2.55,3.1,4.26,1.64,4.83.39,9.2-2.46,13.28-2.08,2.97-4.86,5.21-8.41,6.48-3.78,1.35-7.48,1.33-10.84-1.1-1.68-1.22-2.8-2.83-3.35-4.77-.14-.5-.27-.99-.39-1.42Z"/>' +
+    '<path d="m.38,29c1.03-3.8,3.42-6.38,7.6-7.29,1.19-.26,2.39-.21,3.62-.07,2.03.24,3.89.92,5.57,1.93,4.65,2.78,7.46,6.79,8.53,11.86.35,1.67.34,3.36,0,5.07-.47,2.33-1.41,4.39-3.33,5.97-1.92,1.58-4.19,2.26-6.72,2.19-2.5-.06-4.77-.79-6.85-2.07-4.69-2.91-7.52-6.98-8.54-12.16-.36-1.81-.34-3.62.13-5.43Z"/>' +
+    '<path d="m46.49,85.7c-9.89-4.95-35.88,4.08-32.7-14.2,3.82-22.02,36.18-27.99,48.11-22.35,22.27,10.54,16.17,44.5,10.13,50.1-11.61,10.75-17.97-9.77-25.53-13.55Z"/>';
+  var PAW_CLOSE = '</svg>';
+
+  /* ══ Paw-Pattern spawnen ═════════════════════════════════════════════
+     Nur bei bg_style = paw_light oder paw_dark.
+     Fill-Farbe: dunkel auf hellem Bg / hell auf dunklem Bg.
+  ════════════════════════════════════════════════════════════════════ */
+  function buildPaws(sec){
+    var style = sec.getAttribute('data-zb-bg') || '';
+    if(style !== 'paw_light' && style !== 'paw_dark') return;
+
+    var ctn = sec.querySelector('.zb-paws-ctn');
+    if(!ctn) return;
+    ctn.innerHTML = '';
+
+    /* Pfoten-Farbe: auf hellem Bg dunkel, auf dunklem Bg hell */
+    var fillColor = style === 'paw_dark' ? '#f5ede0' : '#3d2510';
+
+    for(var i = 0; i < 18; i++){
+      var el  = document.createElement('div');
+      var x   = (Math.random() * 112 - 6).toFixed(1);
+      var y   = (Math.random() * 112 - 6).toFixed(1);
+      var rot = (Math.random() * 360).toFixed(0);
+      var sz  = (28 + Math.random() * 64).toFixed(0);
+      var op  = (0.04 + Math.random() * 0.08).toFixed(3);
+      el.style.cssText =
+        'position:absolute;left:'+x+'%;top:'+y+'%;' +
+        'width:'+sz+'px;height:'+sz+'px;' +
+        'opacity:'+op+';transform:rotate('+rot+'deg);pointer-events:none;';
+      /* Fill-Farbe inline in SVG injizieren */
+      el.innerHTML = PAW_OPEN.replace('>', ' fill="'+fillColor+'">') + PAW_PATHS + PAW_CLOSE;
+      ctn.appendChild(el);
+    }
+  }
+
   /* ══ Parallax ════════════════════════════════════════════════════════
      Exakt wie in der Landing Page:
        center   = rect.top + rect.height/2 - window.innerHeight/2
@@ -717,13 +800,14 @@
   function init(){
     var sec = document.getElementById('zb-{{ section.id }}');
     if(!sec) return;
+    buildPaws(sec);
     initParallax(sec);
   }
 
   document.addEventListener('shopify:section:load', function(e){
     var sec = e.target && e.target.querySelector('#zb-{{ section.id }}');
     if(!sec) sec = document.getElementById('zb-{{ section.id }}');
-    if(sec) initParallax(sec);
+    if(sec){ buildPaws(sec); initParallax(sec); }
   });
 
   if(document.readyState === 'loading'){
@@ -912,19 +996,31 @@
     },
     {
       "type": "header",
-      "content": "Farben"
+      "content": "Hintergrund"
+    },
+    {
+      "type": "select",
+      "id": "bg_style",
+      "label": "Hintergrund-Stil",
+      "info": "Pfoten-Hell (CI-Standard): passt zu allen anderen Sektionen",
+      "options": [
+        { "value": "paw_light",  "label": "✦ Pfoten + Heller Hintergrund (CI-Standard)" },
+        { "value": "paw_dark",   "label": "✦ Pfoten + Dunkler Hintergrund"              },
+        { "value": "plain_light","label": "Heller Hintergrund (ohne Pfoten)"            },
+        { "value": "plain_dark", "label": "Dunkler Hintergrund (ohne Pfoten)"           },
+        { "value": "transparent","label": "Transparent (Theme-Hintergrund)"             }
+      ],
+      "default": "paw_light"
+    },
+    {
+      "type": "header",
+      "content": "Farbe"
     },
     {
       "type": "color",
       "id": "accent_color",
       "label": "Akzentfarbe (Terracotta)",
       "default": "#c4622d"
-    },
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Hintergrundfarbe",
-      "default": "#1a0e05"
     },
     {
       "type": "header",
